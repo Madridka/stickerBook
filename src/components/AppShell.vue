@@ -27,9 +27,7 @@ const { t } = useI18n()
       </nav>
     </header>
     <main class="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-16">
-      <RouterView v-slot="{ Component }">
-        <Transition name="page" mode="out-in"><component :is="Component" /></Transition>
-      </RouterView>
+      <RouterView />
     </main>
   </div>
 </template>

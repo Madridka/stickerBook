@@ -8,7 +8,7 @@ const { collection }: CollectionProgress = useCollectionProgress()
 
 <template>
   <!-- Показывает сводку альбома до появления страниц и стикеров -->
-  <section>
+  <section class="mx-auto w-full">
     <div class="flex flex-wrap items-end justify-between gap-5">
       <div>
         <p class="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-coral">

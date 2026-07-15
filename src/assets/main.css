@@ -8,6 +8,12 @@
   --color-coral: 232 107 82;
   --color-mint: 185 216 194;
   --color-gold: 229 185 92;
+  --prime-surface: rgb(var(--color-paper));
+  --prime-text: rgb(var(--color-ink));
+  --prime-accent: rgb(var(--color-coral));
+  --prime-accent-soft: rgb(var(--color-coral) / 0.1);
+  --prime-border: rgb(var(--color-ink) / 0.14);
+  --prime-shadow: 0 10px 24px rgb(var(--color-ink) / 0.14);
 }
 
 [data-theme='emerald-pink'] {
@@ -16,6 +22,12 @@
   --color-coral: 236 72 153;
   --color-mint: 167 243 208;
   --color-gold: 251 191 36;
+  --prime-surface: rgb(var(--color-paper));
+  --prime-text: rgb(var(--color-ink));
+  --prime-accent: rgb(var(--color-coral));
+  --prime-accent-soft: rgb(var(--color-coral) / 0.1);
+  --prime-border: rgb(var(--color-ink) / 0.14);
+  --prime-shadow: 0 10px 24px rgb(var(--color-ink) / 0.14);
 }
 
 @layer base {
@@ -30,3 +42,79 @@
 .theme-toggle__swatch::after { background: rgb(var(--color-mint)); }
 .page-enter-active, .page-leave-active { transition: opacity 160ms ease, transform 160ms ease; }
 .page-enter-from, .page-leave-to { opacity: 0; transform: translateY(6px); }
+
+/* Приводит стандартные PrimeVue Button и Menu к визуальной системе StickerBook */
+.p-button {
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-weight: 700;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 100ms ease;
+}
+
+.p-button:not(.p-button-text):not(.p-button-outlined) {
+  background: var(--prime-text);
+  border-color: var(--prime-text);
+  color: var(--prime-surface);
+}
+
+.p-button:not(.p-button-text):not(.p-button-outlined):hover {
+  background: var(--prime-accent);
+  border-color: var(--prime-accent);
+  color: #fff;
+}
+
+.p-button.p-button-text {
+  color: var(--prime-text);
+}
+
+.p-button.p-button-text:hover {
+  background: var(--prime-accent-soft);
+  color: var(--prime-accent);
+}
+
+.app-menu-button.p-button.p-button-text:hover {
+  background: var(--prime-accent-soft) !important;
+  color: var(--prime-accent) !important;
+}
+
+.app-menu-button.p-button.p-button-text:hover .p-button-icon {
+  color: var(--prime-accent) !important;
+}
+
+.p-button:active {
+  transform: translateY(1px);
+}
+
+.p-button:focus-visible {
+  box-shadow: 0 0 0 0.2rem rgb(var(--color-coral) / 0.25);
+  outline: none;
+}
+
+.p-menu {
+  min-width: 11rem;
+  padding: 0.5rem;
+  border: 1px solid var(--prime-border);
+  border-radius: 0.25rem;
+  background: var(--prime-surface);
+  box-shadow: var(--prime-shadow);
+  color: var(--prime-text);
+}
+
+.p-menu .p-menuitem-content {
+  border-radius: 0.125rem;
+}
+
+.p-menu .p-menuitem-link {
+  gap: 0.625rem;
+  padding: 0.625rem 0.75rem;
+  color: var(--prime-text);
+}
+
+.p-menu .p-menuitem-link:hover {
+  background: var(--prime-accent-soft);
+  color: var(--prime-accent);
+}
+
+.p-menu .p-menuitem-icon {
+  color: var(--prime-accent);
+}

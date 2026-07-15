@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 <template>
   <!-- Показывает базовое состояние магазина до подключения наборов -->
-  <section class="mx-auto max-w-3xl">
+  <section class="mx-auto w-full max-w-3xl">
     <p class="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-coral">{{ t('app.shop') }}</p>
     <h1 class="text-5xl font-black tracking-tight sm:text-6xl">{{ t('shop.title') }}</h1>
     <p class="mt-5 text-lg text-ink/65">{{ t('shop.text') }}</p>

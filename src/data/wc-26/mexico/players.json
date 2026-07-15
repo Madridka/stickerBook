@@ -1,0 +1,218 @@
+[
+  {
+    "id": "mex-01",
+    "fullName": "Mexico Team Logo",
+    "image": "",
+    "type": "logo",
+    "position": "",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-02",
+    "firstName": "Luis",
+    "lastName": "Malagón",
+    "fullName": "Luis Malagón",
+    "image": "",
+    "type": "player",
+    "position": "ВРТ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-03",
+    "firstName": "Johan",
+    "lastName": "Vásquez",
+    "fullName": "Johan Vásquez",
+    "image": "",
+    "type": "player",
+    "position": "ЦЗ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-04",
+    "firstName": "Jorge",
+    "lastName": "Sánchez",
+    "fullName": "Jorge Sánchez",
+    "image": "",
+    "type": "player",
+    "position": "ПЗ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-05",
+    "firstName": "César",
+    "lastName": "Montes",
+    "fullName": "César Montes",
+    "image": "",
+    "type": "player",
+    "position": "ЦЗ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-06",
+    "firstName": "Jesús",
+    "lastName": "Gallardo",
+    "fullName": "Jesús Gallardo",
+    "image": "",
+    "type": "player",
+    "position": "ЛЗ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-07",
+    "firstName": "Israel",
+    "lastName": "Reyes",
+    "fullName": "Israel Reyes",
+    "image": "",
+    "type": "player",
+    "position": "ЦЗ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-08",
+    "firstName": "Diego",
+    "lastName": "Lainez",
+    "fullName": "Diego Lainez",
+    "image": "",
+    "type": "player",
+    "position": "ПФА",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-09",
+    "firstName": "Carlos",
+    "lastName": "Rodríguez",
+    "fullName": "Carlos Rodríguez",
+    "image": "",
+    "type": "player",
+    "position": "ЦП",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-10",
+    "firstName": "Edson",
+    "lastName": "Álvarez",
+    "fullName": "Edson Álvarez",
+    "image": "",
+    "type": "player",
+    "position": "ЦОП",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-11",
+    "firstName": "Orbelín",
+    "lastName": "Pineda",
+    "fullName": "Orbelín Pineda",
+    "image": "",
+    "type": "player",
+    "position": "ЦАП",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-12",
+    "firstName": "Marcel",
+    "lastName": "Ruiz",
+    "fullName": "Marcel Ruiz",
+    "image": "",
+    "type": "player",
+    "position": "ЦП",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-13",
+    "fullName": "Mexico Team Squad",
+    "image": "",
+    "type": "squad",
+    "position": "",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-14",
+    "firstName": "Érick",
+    "lastName": "Sánchez",
+    "fullName": "Érick Sánchez",
+    "image": "",
+    "type": "player",
+    "position": "ЦП",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-15",
+    "firstName": "Hirving",
+    "lastName": "Lozano",
+    "fullName": "Hirving Lozano",
+    "image": "",
+    "type": "player",
+    "position": "ЛФА",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-16",
+    "firstName": "Santiago",
+    "lastName": "Giménez",
+    "fullName": "Santiago Giménez",
+    "image": "",
+    "type": "player",
+    "position": "ФРВ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-17",
+    "firstName": "Raúl",
+    "lastName": "Jiménez",
+    "fullName": "Raúl Jiménez",
+    "image": "",
+    "type": "player",
+    "position": "ФРВ",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-18",
+    "firstName": "Alexis",
+    "lastName": "Vega",
+    "fullName": "Alexis Vega",
+    "image": "",
+    "type": "player",
+    "position": "ЛФА",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-19",
+    "firstName": "Roberto",
+    "lastName": "Alvarado",
+    "fullName": "Roberto Alvarado",
+    "image": "",
+    "type": "player",
+    "position": "ПФА",
+    "team": "Mexico",
+    "weight": 20
+  },
+  {
+    "id": "mex-20",
+    "firstName": "César",
+    "lastName": "Huerta",
+    "fullName": "César Huerta",
+    "image": "",
+    "type": "player",
+    "position": "ЛФА",
+    "team": "Mexico",
+    "weight": 20
+  }
+]

@@ -5,10 +5,10 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
-    "paths": { "@/*": ["src/*"] },
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,

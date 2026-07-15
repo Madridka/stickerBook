@@ -1,0 +1,62 @@
+# Change Log
+
+История разработки проекта StickerBook («Вклейка»).
+
+## 0.0.1 - Подготовка до MVP
+
+### Инициализация проекта
+
+- Создан Vite-проект на Vue 3 и TypeScript.
+- Добавлена базовая структура `src`: `assets`, `data`, `components`, `views`, `stores`, `composables`, `utils`, `db`, `lang`.
+- Создан главный документ правил `rules/development.md`.
+- Добавлен README с описанием MVP, ближайших шагов и будущих идей.
+
+### Базовая архитектура
+
+- Подключены Pinia, TailwindCSS, vue-i18n, Dexie.js и VueUse Motion.
+- Добавлен Vue Router.
+- Созданы страницы `HomeView`, `ShopView` и `AlbumView` без игровой логики.
+- Добавлены JSON-данные коллекции.
+- Добавлена база Dexie для будущего хранения найденных стикеров.
+
+### Локализация
+
+- Локализация вынесена из `locales` в `lang/ru`.
+- Создан плагин `plugins/usei18n`.
+- Переводы разделены на `app`, `home`, `album`, `shop` и `common`.
+- Пользовательские тексты страниц подключены через vue-i18n.
+
+### Store и типизация
+
+- `collection` переведен на Pinia setup-store через Composition API.
+- Удалены option-based `state` и `getters`.
+- В store добавлены типизированные `collected`, `total`, `pages` и `progress`.
+- Для `useCollectionProgress` добавлен интерфейс публичного результата.
+- Проектные функции переведены на стрелочный синтаксис.
+- Добавлена единая настройка alias `@` для локальных импортов.
+
+### Сборка и GitHub Pages
+
+- Настроен workflow `.github/workflows/deploy.yml` для GitHub Pages через Bun.
+- Добавлена настройка Vite `base` для deployment в repository Pages.
+- Router использует `import.meta.env.BASE_URL`.
+- Для SPA-маршрутов добавлено создание `dist/404.html` в workflow.
+- TypeScript typecheck переведен в режим `--noEmit`.
+- Удалены сгенерированные `.js` и `.d.ts` файлы из исходных каталогов.
+- Добавлен `skipLibCheck` для несовместимых деклараций внешних зависимостей.
+
+### Навигация
+
+- Для MVP-маршрутов сохранены lazy-import компонентов.
+- `AppShell` использует простой `RouterView` без ручного прокидывания `v-slot` и `component`.
+
+### Темизация
+
+- Основные цвета Tailwind переведены на CSS-переменные.
+- Добавлена изумрудно-розовая тема.
+- Создан `useTheme` с сохранением выбора в `localStorage`.
+- В навигацию добавлена кнопка переключения темы.
+
+### Версионность
+
+- Публичная версия подготовки проекта установлена как `0.1.0`.

@@ -1,51 +1,55 @@
 <script setup lang="ts">
+import { ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { RouterLink } from 'vue-router'
-import { formatPercent } from '@/utils/format'
-import { useCollectionProgress, type CollectionProgress } from '@/composables/useCollectionProgress'
+import ClickArea from '@/components/Clicker/ClickArea.vue'
+import ScoreDisplay from '@/components/Clicker/ScoreDisplay.vue'
+import { usePlayerStore } from '@/stores/player'
+
+interface ClickEffectItem {
+  id: number
+  x: number
+  y: number
+}
 
 const { t } = useI18n()
-const { collection, foundLabel }: CollectionProgress = useCollectionProgress()
+const player = usePlayerStore()
+const effects: Ref<ClickEffectItem[]> = ref([])
+let nextEffectId: number = 0
+
+// Начисляет очко и размещает короткий визуальный эффект в месте клика
+const handleClick = (event: MouseEvent): void => {
+  const target: HTMLElement = event.currentTarget as HTMLElement
+  const area: DOMRect =
+    target.parentElement?.getBoundingClientRect() ?? target.getBoundingClientRect()
+  const effect: ClickEffectItem = {
+    id: nextEffectId++,
+    x: event.clientX - area.left,
+    y: event.clientY - area.top,
+  }
+
+  player.addCoin()
+  effects.value = [...effects.value, effect]
+  window.setTimeout((): void => {
+    effects.value = effects.value.filter(({ id }: ClickEffectItem): boolean => id !== effect.id)
+  }, 700)
+}
 </script>
 
 <template>
-  <!-- Показывает стартовый экран и текущий прогресс коллекции -->
-  <section class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-    <div v-motion :initial="{ opacity: 0, y: 18 }" :enter="{ opacity: 1, y: 0 }" class="max-w-2xl">
-      <p class="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-coral">
+  <section
+    class="mx-auto flex h-full min-h-0 max-w-3xl flex-1 flex-col items-center justify-center py-0"
+  >
+    <div class="mb-2 text-center sm:mb-3">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-coral sm:text-sm">
         {{ t('home.eyebrow') }}
       </p>
-      <h1 class="text-5xl font-black leading-[0.95] tracking-tight sm:text-7xl">
-        {{ t('home.title') }}
+      <h1 class="mt-1 text-3xl font-black tracking-tight sm:text-5xl">
+        {{ t('home.clickTitle') }}
       </h1>
-      <p class="mt-7 max-w-lg text-lg leading-8 text-ink/65">{{ t('home.text') }}</p>
-      <div class="mt-9 flex flex-wrap gap-3">
-        <RouterLink
-          to="/album"
-          class="bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-coral"
-          >{{ t('home.openAlbum') }}</RouterLink
-        >
-        <RouterLink
-          to="/shop"
-          class="border border-ink/20 px-5 py-3 text-sm font-bold transition hover:border-coral hover:text-coral"
-          >{{ t('home.visitShop') }}</RouterLink
-        >
-      </div>
+      <p class="mt-1 text-sm text-ink/60 sm:text-base">{{ t('home.clickDescription') }}</p>
     </div>
-    <div class="border border-ink/10 bg-white p-7 shadow-[8px_8px_0_#b9d8c2] sm:p-10">
-      <div class="mb-12 flex items-start justify-between">
-        <span class="text-sm font-bold uppercase tracking-[0.14em] text-ink/50">{{
-          t('home.progress')
-        }}</span>
-        <span class="text-4xl font-black text-coral">{{ formatPercent(collection.progress) }}</span>
-      </div>
-      <div class="h-3 bg-paper">
-        <div class="h-full bg-coral transition-all" :style="{ width: `${collection.progress}%` }" />
-      </div>
-      <div class="mt-4 flex justify-between text-sm font-semibold text-ink/55">
-        <span>{{ foundLabel }} {{ t('home.found') }}</span
-        ><span>{{ t('home.next') }}</span>
-      </div>
-    </div>
+    <ScoreDisplay :score="player.formattedCoins" />
+    <ClickArea :effects="effects" @click="handleClick" />
+    <p class="-mt-1 text-xs font-semibold text-ink/50 sm:text-sm">{{ t('home.clickPrompt') }}</p>
   </section>
 </template>

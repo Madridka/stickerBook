@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useCollectionProgress } from '../composables/useCollectionProgress'
+import { useCollectionProgress, type CollectionProgress } from '@/composables/useCollectionProgress'
 
 const { t } = useI18n()
-const { collection } = useCollectionProgress()
+const { collection }: CollectionProgress = useCollectionProgress()
 </script>
 
 <template>

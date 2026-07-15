@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
-import { useCollectionProgress } from '../composables/useCollectionProgress'
-import { formatPercent } from '../utils/format'
+import { formatPercent } from '@/utils/format'
+import { useCollectionProgress, type CollectionProgress } from '@/composables/useCollectionProgress'
 
 const { t } = useI18n()
-const { collection, foundLabel } = useCollectionProgress()
+const { collection, foundLabel }: CollectionProgress = useCollectionProgress()
 </script>
 
 <template>

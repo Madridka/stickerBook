@@ -1,3 +1,3 @@
-export function formatPercent(value: number) {
+export const formatPercent = (value: number): string => {
   return `${value}%`
 }

@@ -19,6 +19,68 @@ StickerBook
 - Dexie.js
 - vue-i18n
 
+## Plugins
+
+Локализация подключается через плагин:
+
+`src/plugins/usei18n/usei18n.ts`
+
+Плагин `usei18n` должен:
+
+- создавать и экспортировать экземпляр vue-i18n;
+- собирать переводы из JSON-файлов в `src/lang/{locale}/`;
+- подключаться в `main.ts` до монтирования приложения.
+
+# Stores
+
+Использовать Pinia setup stores на основе Composition API:
+
+```ts
+export const useCollectionStore = defineStore('collection', () => {
+  const value = ref(0)
+  const total = computed(() => value.value + 1)
+
+  return { value, total }
+})
+```
+
+Запрещено использовать в stores:
+
+- `state` option;
+- `getters` option;
+- store со всей логикой приложения.
+
+Состояние, вычисления и действия возвращать явно из setup-функции store.
+
+# TypeScript
+
+Использовать строгую типизацию.
+
+Обязательно:
+
+- описывать интерфейсами публичные контракты composables и сервисов;
+- указывать типы параметров и возвращаемых значений публичных функций;
+- использовать `type` для импортов типов;
+- не использовать `any` без обоснованной необходимости.
+
+Для `vue-i18n` использовать простую деструктуризацию без дополнительной аннотации:
+
+```ts
+const { t } = useI18n()
+```
+
+# Code Style
+
+Все функции создавать в виде стрелочных функций.
+
+Использовать:
+
+```ts
+const formatValue = (value: string): string => value.trim()
+```
+
+Не использовать объявления вида `function formatValue() {}`.
+
 # Components
 
 Не создавать большие компоненты.

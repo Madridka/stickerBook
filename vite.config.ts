@@ -14,6 +14,6 @@ export default defineConfig({
     cors: {
       preflightContinue: true,
     },
-    port: 5173,
+    port: 4040,
   },
 })

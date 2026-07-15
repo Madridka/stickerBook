@@ -1,14 +1,34 @@
+import i18n from '@/plugins/usei18n/usei18n'
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ShopView from '../views/ShopView.vue'
-import AlbumView from '../views/AlbumView.vue'
+import type { Router } from 'vue-router'
 
-const router = createRouter({
+const router: Router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', name: 'home', component: HomeView },
-    { path: '/shop', name: 'shop', component: ShopView },
-    { path: '/album', name: 'album', component: AlbumView },
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('@/views/HomeView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('app.home'),
+      },
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import('@/views/ShopView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('app.shop'),
+      },
+    },
+    {
+      path: '/album',
+      name: 'album',
+      component: () => import('@/views/AlbumView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('app.album'),
+      },
+    },
   ],
 })
 

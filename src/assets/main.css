@@ -2,11 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-paper: 247 243 235;
+  --color-ink: 23 33 43;
+  --color-coral: 232 107 82;
+  --color-mint: 185 216 194;
+  --color-gold: 229 185 92;
+}
+
+[data-theme='emerald-pink'] {
+  --color-paper: 239 250 246;
+  --color-ink: 17 52 45;
+  --color-coral: 236 72 153;
+  --color-mint: 167 243 208;
+  --color-gold: 251 191 36;
+}
+
 @layer base {
   html { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
   body { margin: 0; min-width: 320px; }
   * { box-sizing: border-box; }
 }
 
+.theme-toggle__swatch { display: inline-flex; width: 1.25rem; height: 1.25rem; overflow: hidden; border: 2px solid currentColor; border-radius: 9999px; }
+.theme-toggle__swatch::before, .theme-toggle__swatch::after { content: ''; flex: 1; }
+.theme-toggle__swatch::before { background: rgb(var(--color-coral)); }
+.theme-toggle__swatch::after { background: rgb(var(--color-mint)); }
 .page-enter-active, .page-leave-active { transition: opacity 160ms ease, transform 160ms ease; }
 .page-enter-from, .page-leave-to { opacity: 0; transform: translateY(6px); }

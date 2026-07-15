@@ -1,4 +1,7 @@
 {
   "back": "На главную",
-  "language": "Язык"
+  "language": "Язык",
+  "theme": "Переключить тему",
+  "themeDefault": "Стандартная тема",
+  "themeEmeraldPink": "Изумрудно-розовая тема"
 }

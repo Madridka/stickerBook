@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView } from 'vue-router'
+import { useTheme } from '@/composables/useTheme'
 
 const { t } = useI18n()
+const { isEmeraldPink, toggleTheme } = useTheme()
 </script>
 
 <template>
@@ -23,6 +25,16 @@ const { t } = useI18n()
           <RouterLink class="transition-colors hover:text-coral" to="/shop">{{
             t('app.shop')
           }}</RouterLink>
+          <button
+            class="theme-toggle__button inline-flex items-center justify-center"
+            type="button"
+            :aria-label="t('common.theme')"
+            :title="t('common.theme')"
+            @click="toggleTheme"
+          >
+            <span class="theme-toggle__swatch" aria-hidden="true" />
+            <span class="sr-only">{{ isEmeraldPink ? t('common.themeEmeraldPink') : t('common.themeDefault') }}</span>
+          </button>
         </div>
       </nav>
     </header>

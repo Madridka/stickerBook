@@ -7,7 +7,10 @@ export interface CollectionProgress {
 }
 
 export const useCollectionProgress = (): CollectionProgress => {
+  // Подключает состояние коллекции к компоненту
   const collection: ReturnType<typeof useCollectionStore> = useCollectionStore()
+
+  // Формирует компактную подпись прогресса для интерфейса
   const foundLabel: ComputedRef<string> = computed(
     (): string => `${collection.collected.length} / ${collection.total}`,
   )

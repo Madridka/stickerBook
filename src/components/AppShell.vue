@@ -12,6 +12,7 @@ const { isEmeraldPink, toggleTheme } = useTheme()
 const player = usePlayerStore()
 const menuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 
+// Формирует команды выпадающего меню приложения
 const menuItems = computed(() => [
   {
     label: t('app.resetScore'),
@@ -20,19 +21,24 @@ const menuItems = computed(() => [
   },
 ])
 
+// Открывает или закрывает меню по нажатию на кнопку
 const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
 </script>
 
 <template>
+  <!-- Общая оболочка с фиксированной высотой viewport -->
   <div class="flex h-dvh flex-col overflow-hidden bg-paper text-ink">
+    <!-- Верхняя навигационная панель -->
     <header class="border-b border-ink/10 bg-paper/90">
       <nav
         class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8 sm:py-4"
         aria-label="Main navigation"
       >
+        <!-- Логотип и ссылка на главный экран -->
         <RouterLink to="/" class="text-xl font-black tracking-tight">{{
           t('app.title')
         }}</RouterLink>
+        <!-- Навигация, переключатель темы и меню -->
         <div class="flex items-center gap-4 text-sm font-semibold sm:gap-7">
           <RouterLink class="transition-colors hover:text-coral" to="/album">{{
             t('app.album')
@@ -54,11 +60,22 @@ const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
               isEmeraldPink ? t('common.themeEmeraldPink') : t('common.themeDefault')
             }}</span>
           </Button>
-          <Button class="app-menu-button" text :label="t('app.menu')" icon="pi pi-bars" type="button" @click="toggleMenu" />
+
+          <Button
+            class="app-menu-button"
+            text
+            :label="t('app.menu')"
+            icon="pi pi-bars"
+            type="button"
+            @click="toggleMenu"
+          />
+
           <Menu ref="menuRef" :model="menuItems" :popup="true" />
         </div>
       </nav>
     </header>
+
+    <!-- Область отображения текущего маршрута -->
     <main
       class="mx-auto flex min-h-0 w-full max-w-6xl flex-1 items-center overflow-hidden px-5 py-4 sm:px-8 sm:py-6"
     >

@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath } from 'node:url'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), vueDevTools()],
   base: process.env.GITHUB_ACTIONS
     ? process.env.GITHUB_REPOSITORY?.endsWith('.github.io')
       ? '/'

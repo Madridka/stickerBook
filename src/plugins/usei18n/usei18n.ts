@@ -5,7 +5,7 @@ import common from '@/lang/ru/common.json'
 import home from '@/lang/ru/home.json'
 import shop from '@/lang/ru/shop.json'
 
-// Собирает русские сообщения из отдельных файлов lang
+// Объединяет локализационные JSON-файлы в единый словарь приложения
 const messages: {
   ru: {
     album: typeof album
@@ -18,6 +18,7 @@ const messages: {
   ru: { album, app, common, home, shop },
 }
 
+// Создаёт экземпляр vue-i18n с Composition API
 export const i18n: I18n = createI18n({
   legacy: false,
   warnHtmlMessage: false,

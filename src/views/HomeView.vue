@@ -13,6 +13,7 @@ interface ClickEffectItem {
 
 const { t } = useI18n()
 const player = usePlayerStore()
+// Хранит активные эффекты до завершения их анимации
 const effects: Ref<ClickEffectItem[]> = ref([])
 let nextEffectId: number = 0
 
@@ -36,9 +37,11 @@ const handleClick = (event: MouseEvent): void => {
 </script>
 
 <template>
+  <!-- Главный экран clicker-а -->
   <section
     class="mx-auto flex h-full min-h-0 max-w-3xl flex-1 flex-col items-center justify-center py-0"
   >
+    <!-- Заголовок и инструкция для игрока -->
     <div class="mb-2 text-center sm:mb-3">
       <p class="text-xs font-bold uppercase tracking-[0.22em] text-coral sm:text-sm">
         {{ t('home.eyebrow') }}
@@ -48,8 +51,13 @@ const handleClick = (event: MouseEvent): void => {
       </h1>
       <p class="mt-1 text-sm text-ink/60 sm:text-base">{{ t('home.clickDescription') }}</p>
     </div>
+    <!-- Текущий баланс игрока -->
     <ScoreDisplay :score="player.formattedCoins" />
+
+    <!-- Центральная зона получения coins -->
     <ClickArea :effects="effects" @click="handleClick" />
+
+    <!-- Подсказка действия -->
     <p class="-mt-1 text-xs font-semibold text-ink/50 sm:text-sm">{{ t('home.clickPrompt') }}</p>
   </section>
 </template>

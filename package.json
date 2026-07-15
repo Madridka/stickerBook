@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.5.4",
+    "@vue/devtools": "^8.1.5",
     "@vueuse/motion": "^2.0.0",
     "dexie": "^4.0.8",
     "pinia": "^2.2.6",
     "primeicons": "^7.0.0",
     "primevue": "^4.5.5",
+    "vite-plugin-vue-devtools": "^8.1.5",
     "vue": "^3.5.12",
     "vue-i18n": "^10.0.5",
     "vue-router": "^4.4.5"

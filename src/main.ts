@@ -9,6 +9,7 @@ import i18n from '@/plugins/usei18n/usei18n'
 import '@/assets/main.css'
 import 'primeicons/primeicons.css'
 
+// Создаёт приложение и подключает глобальные плагины перед монтированием
 createApp(App)
   .use(createPinia())
   .use(router)

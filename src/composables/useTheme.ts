@@ -11,6 +11,7 @@ export interface ThemeControls {
 const THEME_STORAGE_KEY: string = 'sticker-book-theme'
 
 const applyTheme = (theme: ThemeName): void => {
+  // Синхронизирует выбранную тему с атрибутом корневого элемента
   if (theme === 'default') {
     document.documentElement.removeAttribute('data-theme')
     return
@@ -21,9 +22,13 @@ const applyTheme = (theme: ThemeName): void => {
 
 export const useTheme = (): ThemeControls => {
   const theme: Ref<ThemeName> = ref<ThemeName>('default')
+
+  // Определяет, включена ли альтернативная цветовая схема
   const isEmeraldPink: ComputedRef<boolean> = computed(
     (): boolean => theme.value === 'emerald-pink',
   )
+
+  // Переключает тему и сохраняет выбор пользователя
   const toggleTheme: () => void = (): void => {
     theme.value = isEmeraldPink.value ? 'default' : 'emerald-pink'
     applyTheme(theme.value)

@@ -5,10 +5,12 @@ interface ClickEffectProps {
   y: number
 }
 
+// Получает координаты и идентификатор конкретного эффекта
 defineProps<ClickEffectProps>()
 </script>
 
 <template>
+  <!-- Одноразовый визуальный эффект начисления монеты -->
   <span
     :key="id"
     class="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 select-none text-2xl font-black text-coral"

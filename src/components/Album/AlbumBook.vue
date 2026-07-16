@@ -132,19 +132,27 @@ onBeforeUnmount((): void => {
 }
 
 .album-book__spread {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   width: 100%;
-  height: min(calc(100dvh - 25rem), 52rem);
 }
 
 .album-book__spread :deep(article) {
-  min-width: 0;
-  flex: 1 1 50%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
 }
 
 @media (min-width: 768px) {
   .album-book__spread {
-    height: min(calc(100dvh - 20rem), 52rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    aspect-ratio: 3 / 1;
+  }
+
+  .album-book__spread :deep(article) {
+    height: 100%;
+    aspect-ratio: auto;
   }
 }
 

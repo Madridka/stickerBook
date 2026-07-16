@@ -1,0 +1,42 @@
+{
+  "id": "wc-26-mexico",
+  "stickerRatio": { "width": 2, "height": 3 },
+  "pages": [
+    {
+      "id": "mexico-left",
+      "image": "page-04-stickers-left.png",
+      "width": 1536,
+      "height": 1024,
+      "slots": [
+        { "id": "mex-01", "playerId": "mex-01", "name": "mex-01", "x": 539, "y": 289, "width": 140 },
+        { "id": "mex-02", "playerId": "mex-02", "name": "mex-02", "x": 829, "y": 289, "width": 140 },
+        { "id": "mex-03", "playerId": "mex-03", "name": "mex-03", "x": 335, "y": 517, "width": 140 },
+        { "id": "mex-04", "playerId": "mex-04", "name": "mex-04", "x": 559, "y": 517, "width": 140 },
+        { "id": "mex-05", "playerId": "mex-05", "name": "mex-05", "x": 784, "y": 517, "width": 140 },
+        { "id": "mex-06", "playerId": "mex-06", "name": "mex-06", "x": 1009, "y": 517, "width": 140 },
+        { "id": "mex-07", "playerId": "mex-07", "name": "mex-07", "x": 335, "y": 743, "width": 140 },
+        { "id": "mex-08", "playerId": "mex-08", "name": "mex-08", "x": 559, "y": 743, "width": 140 },
+        { "id": "mex-09", "playerId": "mex-09", "name": "mex-09", "x": 784, "y": 743, "width": 140 },
+        { "id": "mex-10", "playerId": "mex-10", "name": "mex-10", "x": 1009, "y": 743, "width": 140 }
+      ]
+    },
+    {
+      "id": "mexico-right",
+      "image": "page-05-stickers-right.png",
+      "width": 1536,
+      "height": 1024,
+      "slots": [
+        { "id": "mex-11", "playerId": "mex-11", "name": "mex-11", "x": 851, "y": 160, "width": 140 },
+        { "id": "mex-12", "playerId": "mex-12", "name": "mex-12", "x": 1071, "y": 160, "width": 140 },
+        { "id": "mex-13", "playerId": "mex-13", "name": "mex-13", "x": 630, "y": 450, "width": 140 },
+        { "id": "mex-14", "playerId": "mex-14", "name": "mex-14", "x": 847, "y": 450, "width": 140 },
+        { "id": "mex-15", "playerId": "mex-15", "name": "mex-15", "x": 1068, "y": 450, "width": 140 },
+        { "id": "mex-16", "playerId": "mex-16", "name": "mex-16", "x": 1285, "y": 450, "width": 140 },
+        { "id": "mex-17", "playerId": "mex-17", "name": "mex-17", "x": 630, "y": 725, "width": 140 },
+        { "id": "mex-18", "playerId": "mex-18", "name": "mex-18", "x": 847, "y": 725, "width": 140 },
+        { "id": "mex-19", "playerId": "mex-19", "name": "mex-19", "x": 1068, "y": 725, "width": 140 },
+        { "id": "mex-20", "playerId": "mex-20", "name": "mex-20", "x": 1285, "y": 725, "width": 140 }
+      ]
+    }
+  ]
+}

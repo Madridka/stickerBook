@@ -1,5 +1,6 @@
 export type PlayerPosition = 'GK' | 'DF' | 'MF' | 'FW'
 export type CardType = 'logo' | 'player' | 'squad'
+export type StickerLocation = 'inventory' | 'collection' | 'album' | 'duplicate'
 
 export interface PlayerCard {
   id: string
@@ -17,7 +18,7 @@ export interface StickerInstance {
   id: string
   playerId: string
   quality: number
-  location: string
+  location: StickerLocation
   placement?: StickerPlacement
 }
 
@@ -26,6 +27,7 @@ export interface StickerPlacement {
   x: number
   y: number
   rotation: number
+  accuracy?: number
 }
 
 export interface AlbumGeometrySlot {
@@ -39,9 +41,38 @@ export interface AlbumGeometrySlot {
 
 export interface AlbumGeometryPage {
   id: string
+  image: string
   width: number
   height: number
   slots: AlbumGeometrySlot[]
+}
+
+export interface AlbumGeometryData {
+  id: string
+  stickerRatio: {
+    width: number
+    height: number
+  }
+  pages: AlbumGeometryPage[]
+}
+
+export type StickerDropGrade = 'perfect' | 'near' | 'far'
+
+export interface StickerDropResult {
+  instanceId: string
+  playerId: string
+  slotId: string
+  x: number
+  y: number
+  distance: number
+  accuracy: number
+  quality: number
+  grade: StickerDropGrade
+}
+
+export interface StickerTrayItem {
+  card: PlayerCard
+  instance: StickerInstance
 }
 
 export interface CollectionItem {

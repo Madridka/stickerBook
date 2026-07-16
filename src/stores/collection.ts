@@ -25,13 +25,15 @@ export const useCollectionStore = defineStore('collection', () => {
 
   // Добавляет карточку в коллекцию и не создаёт лишнюю запись при повторном выпадении
   const addCard = async (playerId: string): Promise<StickerInstance> => {
-    const instance: StickerInstance = { id: crypto.randomUUID(), playerId, quality: 100, location: 'collection' }
+    const instance: StickerInstance = { id: crypto.randomUUID(), playerId, quality: 100, location: 'inventory' }
+    let storedInstance: StickerInstance = instance
     const isDuplicate: boolean = await database.transaction(
       'rw', database.cards, database.duplicates,
       async (): Promise<boolean> => {
         const card: StickerInstance | undefined = await database.cards.where('playerId').equals(playerId).first()
         if (card) {
-          await database.duplicates.add(instance)
+          storedInstance = { ...instance, location: 'duplicate' }
+          await database.duplicates.add(storedInstance)
           return true
         }
         await database.cards.add(instance)
@@ -45,7 +47,7 @@ export const useCollectionStore = defineStore('collection', () => {
     } else {
       items.value = [...items.value, { instance, duplicateCount: 0 }]
     }
-    return instance
+    return storedInstance
   }
 
   // Сохраняет качество и положение выбранного экземпляра наклейки в коллекции
@@ -77,6 +79,9 @@ export const useCollectionStore = defineStore('collection', () => {
     total,
     pages,
     progress,
+    stickerInventory: computed((): CollectionItem[] =>
+      items.value.filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location)),
+    ),
     addCard,
     updateCard,
   }

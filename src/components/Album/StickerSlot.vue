@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useAlbumStore } from '@/stores/album'
 import type { AlbumGeometryPage, AlbumGeometrySlot, PlayerCard, StickerPlacement } from '@/types'
 
 interface Props {
@@ -9,17 +10,11 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-const stickerAspectRatio: number = 2 / 3
+const album = useAlbumStore()
+const isDebug: boolean = import.meta.env.DEV
 
-// Переводит координаты страницы альбома в относительные CSS-координаты слота.
-const slotStyle = (): Record<string, string> => ({
-  left: `${(props.slot.x / props.page.width) * 100}%`,
-  top: `${(props.slot.y / props.page.height) * 100}%`,
-  width: `${(props.slot.width / props.page.width) * 100}%`,
-  aspectRatio: `${stickerAspectRatio}`,
-})
+const slotStyle = (): Record<string, string> => album.geometry.getSlotStyle(props.slot, props.page)
 
-// Применяет сохранённое смещение и угол наклейки внутри ячейки альбома.
 const cardStyle = (): Record<string, string> => ({
   transform: `translate(${(props.placement?.x ?? 0) * 100}%, ${(props.placement?.y ?? 0) * 100}%) rotate(${props.placement?.rotation ?? 0}deg)`,
 })
@@ -27,23 +22,31 @@ const cardStyle = (): Record<string, string> => ({
 
 <template>
   <div
-    class="absolute overflow-visible rounded-[2px] border-2 border-gold/80 bg-[#0d4f42] shadow-inner"
+    class="absolute rounded-sm border border-gold/75 bg-paper/90 shadow-inner"
+    :class="{ 'outline outline-2 outline-coral outline-offset-1': isDebug }"
     :style="slotStyle()"
     :aria-label="slot.name"
     :data-player-id="slot.playerId"
     :data-sticker-slot="slot.id"
+    :data-occupied="Boolean(card)"
     role="group"
   >
-    <!-- Карточка рисуется поверх рамки слота и закрывает её при точном совпадении размеров. -->
+    <!-- Debug-плашка показывает координаты только в development-сборке. -->
+    <span
+      v-if="isDebug"
+      class="pointer-events-none absolute -top-5 left-0 z-20 whitespace-nowrap rounded bg-ink/90 px-1 text-[8px] leading-4 text-paper"
+    >
+      {{ slot.id }} · {{ slot.x }},{{ slot.y }} · {{ slot.width }}×{{ album.geometry.getSlotHeight(slot) }}
+    </span>
+    <span class="pointer-events-none absolute inset-0 flex items-center justify-center text-[clamp(0.45rem,1vw,0.7rem)] font-black text-ink/45">
+      {{ slot.id }}
+    </span>
     <img
       v-if="card"
-      class="absolute inset-0 z-10 h-full w-full object-fill transition-transform"
+      class="absolute inset-0 z-10 h-full w-full object-fill"
       :src="card.image"
       :alt="card.fullName"
       :style="cardStyle()"
     />
-    <span v-else class="pointer-events-none absolute inset-0 flex items-center justify-center text-[clamp(0.45rem,1.6vw,0.75rem)] font-black text-gold/90">
-      {{ slot.name }}
-    </span>
   </div>
 </template>

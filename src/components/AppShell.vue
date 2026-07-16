@@ -12,6 +12,7 @@ const { isEmeraldPink, toggleTheme } = useTheme()
 const player = usePlayerStore()
 const route = useRoute()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
+const isAlbum = computed((): boolean => route.name === 'album')
 const menuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 
 // Формирует команды выпадающего меню приложения
@@ -78,7 +79,8 @@ const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
 
     <!-- Область отображения текущего маршрута -->
     <main
-      class="mx-auto flex min-h-0 w-full max-w-6xl flex-1 items-center overflow-hidden px-5 py-4 sm:px-8 sm:py-6"
+      class="flex min-h-0 w-full flex-1 items-center overflow-hidden"
+      :class="isAlbum ? 'max-w-none p-0' : 'mx-auto max-w-6xl px-5 py-4 sm:px-8 sm:py-6'"
     >
       <RouterView />
     </main>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, ref, type Ref } from 'vue'
+import { computed, onBeforeUnmount, ref, type Ref } from 'vue'
 import Button from 'primevue/button'
 import { useI18n } from 'vue-i18n'
 import AlbumPage, { type AlbumPageData } from '@/components/Album/AlbumPage.vue'
@@ -19,6 +19,10 @@ interface Emits {
 
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
+const visiblePageIndexes = computed((): number[] =>
+  [props.currentPage, props.currentPage + 1].filter((pageIndex: number): boolean => pageIndex < props.pages.length),
+)
+const isSpreadOnly = computed((): boolean => props.pages.length === 2)
 const { t } = useI18n()
 type TurnDirection = 'forward' | 'backward'
 type TurnAction = keyof Emits
@@ -45,12 +49,12 @@ const turnTo = (targetPage: number, direction: TurnDirection, action: TurnAction
 const openBook = (): void => turnTo(1, 'forward', 'open')
 
 // Перелистывает страницу вперёд
-const nextPage = (): void => turnTo(props.currentPage + 1, 'forward', 'next')
+const nextPage = (): void => turnTo(props.currentPage + 2, 'forward', 'next')
 
 // Перелистывает страницу назад или закрывает альбом с первой страницы
 const previousPage = (): void => {
-  const action: TurnAction = props.currentPage === 1 ? 'close' : 'previous'
-  turnTo(props.currentPage - 1, 'backward', action)
+  const action: TurnAction = props.currentPage <= 1 ? 'close' : 'previous'
+  turnTo(props.currentPage - 2, 'backward', action)
 }
 
 // Закрывает альбом с финальной страницы плавным возвратом к обложке
@@ -62,13 +66,18 @@ onBeforeUnmount((): void => {
 </script>
 
 <template>
-  <div class="flex min-h-0 w-full max-w-[min(29rem,calc(100dvw-2.5rem))] flex-col items-center">
+  <div class="flex min-h-0 w-full flex-col items-center">
     <div
       class="relative [perspective:1800px]"
-      :class="isOpen ? 'album-book__page--open' : 'album-book__page--closed'"
+      :class="isOpen || isSpreadOnly ? 'album-book__spread' : 'album-book__page--closed'"
     >
-      <AlbumPage :page="pages[currentPage]">
-        <slot v-if="!isTurning" />
+      <template v-if="isOpen">
+        <AlbumPage v-for="pageIndex in visiblePageIndexes" :key="pageIndex" :page="pages[pageIndex]" :fill="true">
+          <slot v-if="!isTurning" :page-index="pageIndex" />
+        </AlbumPage>
+      </template>
+      <AlbumPage v-else :page="pages[currentPage]">
+        <slot v-if="!isTurning" :page-index="currentPage" />
       </AlbumPage>
 
       <div
@@ -80,7 +89,7 @@ onBeforeUnmount((): void => {
       </div>
     </div>
 
-    <div class="mt-4 flex min-h-10 items-center justify-center gap-2">
+    <div v-if="!isSpreadOnly" class="mt-4 flex min-h-10 items-center justify-center gap-2">
       <Button
         v-if="!isOpen"
         :label="t('album.open')"
@@ -96,7 +105,7 @@ onBeforeUnmount((): void => {
           type="button"
           @click="previousPage"
         />
-        <span class="px-2 text-sm font-bold text-ink/60">{{ currentPage }} / {{ pages.length - 1 }}</span>
+        <span class="px-2 text-sm font-bold text-ink/60">{{ Math.ceil(currentPage / 2) }} / {{ Math.ceil((pages.length - 1) / 2) }}</span>
         <Button
           v-if="currentPage < pages.length - 1"
           :label="t('album.next')"
@@ -122,8 +131,21 @@ onBeforeUnmount((): void => {
   height: min(calc(100dvh - 17rem), 52rem);
 }
 
-.album-book__page--open :deep(article) {
-  height: min(calc(100dvh - 27rem), 52rem);
+.album-book__spread {
+  display: flex;
+  width: 100%;
+  height: min(calc(100dvh - 25rem), 52rem);
+}
+
+.album-book__spread :deep(article) {
+  min-width: 0;
+  flex: 1 1 50%;
+}
+
+@media (min-width: 768px) {
+  .album-book__spread {
+    height: min(calc(100dvh - 20rem), 52rem);
+  }
 }
 
 .album-page-turn--forward,

@@ -28,6 +28,22 @@ export interface StickerPlacement {
   rotation: number
 }
 
+export interface AlbumGeometrySlot {
+  id: string
+  playerId: string
+  name: string
+  x: number
+  y: number
+  width: number
+}
+
+export interface AlbumGeometryPage {
+  id: string
+  width: number
+  height: number
+  slots: AlbumGeometrySlot[]
+}
+
 export interface CollectionItem {
   instance: StickerInstance
   duplicateCount: number

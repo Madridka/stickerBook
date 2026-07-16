@@ -73,6 +73,13 @@ const finishPeel = (): void => {
   isPeelOpen.value = false
 }
 
+// Сбрасывает незавершённую подготовку, если пользователь закрыл окно карточки.
+const resetPeel = (): void => {
+  peelCardId.value = undefined
+  peelStartX.value = undefined
+  peelProgress.value = 0
+}
+
 // Находит ячейку под пальцем и передаёт в альбом точное положение отпускания
 const dropCard = (event: PointerEvent, cardId: string): void => {
   draggingCardId.value = undefined
@@ -123,7 +130,7 @@ const endDrag = (event: PointerEvent): void => {
       <button
         v-for="item in props.cards"
         :key="item.instance.id"
-        class="sticker-tray__card relative h-28 w-20 shrink-0 cursor-grab overflow-hidden rounded border-2 border-ink/20 bg-white p-1 shadow-md active:cursor-grabbing"
+        class="sticker-tray__card relative h-36 w-24 shrink-0 cursor-grab overflow-hidden rounded border-2 border-ink/20 bg-white p-1 shadow-md active:cursor-grabbing"
         :class="{ 'sticker-tray__card--dragging': draggingCardId === item.card.id }"
         type="button"
         :aria-label="item.card.fullName"
@@ -133,6 +140,9 @@ const endDrag = (event: PointerEvent): void => {
         @pointercancel="endDrag"
       >
         <img class="h-full w-full object-contain" :src="item.card.image" :alt="item.card.fullName" draggable="false" />
+        <span class="absolute left-1 top-1 rounded bg-ink/85 px-1 text-[10px] font-black text-paper">
+          {{ item.card.id }}
+        </span>
         <span class="absolute bottom-1 left-1 rounded bg-ink/80 px-1 text-[9px] font-bold text-paper">
           {{ item.instance.quality }}%
         </span>
@@ -143,7 +153,7 @@ const endDrag = (event: PointerEvent): void => {
     </p>
   </section>
 
-  <Dialog v-model:visible="isPeelOpen" modal :header="t('stickerTray.peelTitle')" :style="{ width: 'min(26rem, calc(100vw - 2rem))' }">
+  <Dialog v-model:visible="isPeelOpen" modal :header="t('stickerTray.peelTitle')" :style="{ width: 'min(26rem, calc(100vw - 2rem))' }" @hide="resetPeel">
     <p class="text-sm text-ink/65">{{ t('stickerTray.peelText') }}</p>
     <div class="mt-5 overflow-hidden rounded border-2 border-ink bg-white p-3">
       <img v-if="peelCard" class="mx-auto h-48 w-full object-contain" :src="peelCard.card.image" :alt="peelCard.card.fullName" />

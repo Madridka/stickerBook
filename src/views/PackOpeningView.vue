@@ -76,7 +76,7 @@ const handleAnimationComplete = (): void => {
 const handleNextCard = async (): Promise<void> => {
   const card: PlayerCard | undefined = drawnCards.value[currentIndex.value]
   if (!card) return
-  await collection.addSticker(card.id)
+  await collection.addCard(card.id)
   currentIndex.value += 1
 }
 

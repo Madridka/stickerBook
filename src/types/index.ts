@@ -16,6 +16,11 @@ export interface PlayerCard {
 export interface StickerInstance {
   id: string
   playerId: string
-  quality: string
+  quality: number
   location: string
+}
+
+export interface CollectionItem {
+  instance: StickerInstance
+  duplicateCount: number
 }

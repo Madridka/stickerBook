@@ -59,7 +59,7 @@ const getCard = (playerId: string): PlayerCard | undefined =>
       </div>
     </div>
 
-    <Tabs v-model:value="activeTab" class="collection-tabs flex min-h-0 flex-1 flex-col" value="collection">
+    <Tabs v-model:value="activeTab" class="collection-tabs flex min-h-0 flex-1 flex-col">
       <TabList class="shrink-0">
         <Tab value="collection">
           <span class="flex items-center gap-2">

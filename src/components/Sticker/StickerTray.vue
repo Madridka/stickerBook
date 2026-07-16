@@ -44,7 +44,7 @@ const closePreparation = (): void => {
 
 <template>
   <section
-    class="flex max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper p-3 lg:h-full lg:max-h-none lg:w-80 lg:border-l lg:border-t-0"
+    class="flex h-52 max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper p-3"
     :aria-label="t('stickerTray.title')"
   >
     <div class="mb-2 flex items-end justify-between gap-3">
@@ -57,7 +57,7 @@ const closePreparation = (): void => {
 
     <div
       v-if="cards.length"
-      class="sticker-tray flex min-h-0 gap-3 overflow-x-auto pb-3 lg:flex-1 lg:flex-col lg:items-center lg:overflow-x-hidden lg:overflow-y-auto lg:pb-0"
+      class="sticker-tray flex min-h-0 flex-1 gap-3 overflow-x-auto pb-3"
     >
       <StickerDraggable
         v-for="item in cards"
@@ -89,9 +89,4 @@ const closePreparation = (): void => {
   touch-action: pan-x;
 }
 
-@media (min-width: 1024px) {
-  .sticker-tray {
-    touch-action: pan-y;
-  }
-}
 </style>

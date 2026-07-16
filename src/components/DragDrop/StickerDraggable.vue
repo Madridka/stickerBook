@@ -60,7 +60,7 @@ const finishDrag = (event: PointerEvent): void => {
 
 <template>
   <button
-    class="group flex h-32 w-60 shrink-0 touch-none cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral lg:w-full"
+    class="group flex h-32 w-60 shrink-0 touch-none cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral"
     :class="{ 'border-mint ring-2 ring-mint/50': prepared, 'opacity-50': isDragging }"
     type="button"
     :aria-label="card.fullName"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, type ComputedRef, type Ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AlbumBook from '@/components/Album/AlbumBook.vue'
 import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
@@ -27,11 +27,13 @@ const { t } = useI18n()
 const album = useAlbumStore()
 const collection = useCollectionStore()
 const currentPage: Ref<number> = ref(0)
+const isDesktopSpread: Ref<boolean> = ref(false)
 const activeTargetId: Ref<string | undefined> = ref(undefined)
 const pendingDrop: Ref<StickerDropResult | undefined> = ref(undefined)
 const confirmationKind: Ref<'wrong' | 'far'> = ref('far')
 const isConfirmOpen: Ref<boolean> = ref(false)
 const lastGrade: Ref<StickerDropGrade | undefined> = ref(undefined)
+let desktopMediaQuery: MediaQueryList | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
   '../../assets/game/wc-26/mexico/album/*.png',
@@ -48,16 +50,44 @@ const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
   })),
 )
 
-const visibleGeometry: ComputedRef<AlbumGeometryPage> = computed(
-  (): AlbumGeometryPage => pages.value[currentPage.value].geometry,
+const displayMode: ComputedRef<'spread' | 'page'> = computed(
+  (): 'spread' | 'page' => isDesktopSpread.value ? 'spread' : 'page',
 )
-const placedOnPage: ComputedRef<number> = computed((): number =>
-  visibleGeometry.value.slots.filter(({ id }): boolean => Boolean(getPlacedCard(id))).length,
+const pageStep: ComputedRef<number> = computed((): number => isDesktopSpread.value ? 2 : 1)
+const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] =>
+  Array.from({ length: pageStep.value }, (_value: unknown, offset: number): number => currentPage.value + offset)
+    .filter((pageIndex: number): boolean => pageIndex < pages.value.length),
+)
+const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed(
+  (): AlbumGeometryPage[] => visiblePageIndexes.value.map(
+    (pageIndex: number): AlbumGeometryPage => pages.value[pageIndex].geometry,
+  ),
+)
+const visiblePageLabel: ComputedRef<string> = computed((): string =>
+  visibleGeometries.value
+    .map(({ number }): string => String(number).padStart(2, '0'))
+    .join('–'),
+)
+const visibleSlotTotal: ComputedRef<number> = computed((): number =>
+  visibleGeometries.value.reduce((total: number, page: AlbumGeometryPage): number => total + page.slots.length, 0),
+)
+const placedOnVisiblePages: ComputedRef<number> = computed((): number =>
+  visibleGeometries.value.reduce(
+    (total: number, page: AlbumGeometryPage): number =>
+      total + page.slots.filter(({ id }): boolean => Boolean(getPlacedCard(id))).length,
+    0,
+  ),
 )
 
 const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
 const getCard = (playerId: string): PlayerCard | undefined =>
   cards.find(({ id }): boolean => id === playerId)
+
+// Синхронизирует режим одной страницы и полного разворота с Tailwind breakpoint lg.
+const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void => {
+  isDesktopSpread.value = event.matches
+  if (event.matches) currentPage.value = Math.floor(currentPage.value / 2) * 2
+}
 
 // Возвращает уже вклеенную карточку с поддержкой старых идентификаторов слотов.
 const getPlacedCard = (slotId: string): { card: PlayerCard; placement: StickerPlacement } | undefined => {
@@ -84,8 +114,18 @@ const focusCardTarget = (playerId: string): void => {
   const pageIndex: number = pages.value.findIndex(({ geometry }): boolean =>
     geometry.slots.some((slot): boolean => slot.playerId === playerId),
   )
-  if (pageIndex >= 0) currentPage.value = pageIndex
+  if (pageIndex >= 0) {
+    currentPage.value = isDesktopSpread.value ? Math.floor(pageIndex / 2) * 2 : pageIndex
+  }
   activeTargetId.value = playerId
+}
+
+const previousPage = (): void => {
+  currentPage.value = Math.max(0, currentPage.value - pageStep.value)
+}
+
+const nextPage = (): void => {
+  currentPage.value = Math.min(pages.value.length - 1, currentPage.value + pageStep.value)
 }
 
 const updatePreparationQuality = async (instanceId: string, quality: number): Promise<void> => {
@@ -141,6 +181,16 @@ const cancelDrop = (): void => {
   pendingDrop.value = undefined
   isConfirmOpen.value = false
 }
+
+onMounted((): void => {
+  desktopMediaQuery = window.matchMedia('(min-width: 1024px)')
+  syncDesktopSpread(desktopMediaQuery)
+  desktopMediaQuery.addEventListener('change', syncDesktopSpread)
+})
+
+onBeforeUnmount((): void => {
+  desktopMediaQuery?.removeEventListener('change', syncDesktopSpread)
+})
 </script>
 
 <template>
@@ -149,25 +199,25 @@ const cancelDrop = (): void => {
       <div>
         <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-gold">{{ t('app.album') }}</p>
         <h1 class="text-lg font-black leading-tight">
-          {{ t('album.spreadTitle', { page: String(visibleGeometry.number).padStart(2, '0') }) }}
+          {{ t(isDesktopSpread ? 'album.spreadRangeTitle' : 'album.spreadTitle', { page: visiblePageLabel, pages: visiblePageLabel }) }}
         </h1>
       </div>
       <div class="text-right text-xs font-semibold text-paper/65">
-        <strong class="block text-base font-black text-paper">{{ placedOnPage }} / {{ visibleGeometry.slots.length }}</strong>
-        {{ t('album.spreadProgress', { placed: placedOnPage, total: visibleGeometry.slots.length }) }}
+        <strong class="block text-base font-black text-paper">{{ placedOnVisiblePages }} / {{ visibleSlotTotal }}</strong>
+        {{ t('album.spreadProgress', { placed: placedOnVisiblePages, total: visibleSlotTotal }) }}
       </div>
     </header>
 
-    <div class="flex min-h-0 flex-1 flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_20rem]">
-      <div class="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden p-2 lg:p-3">
+    <div class="flex min-h-0 flex-1 flex-col">
+      <div class="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden">
         <AlbumBook
           class="h-full min-h-0 w-full"
           :pages="pages"
           :current-page="currentPage"
           :is-open="true"
-          display-mode="page"
-          @previous="currentPage = Math.max(0, currentPage - 1)"
-          @next="currentPage = Math.min(pages.length - 1, currentPage + 1)"
+          :display-mode="displayMode"
+          @previous="previousPage"
+          @next="nextPage"
         >
           <template #default="{ pageIndex }">
             <StickerSlot

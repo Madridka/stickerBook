@@ -31,7 +31,7 @@ const isSpreadOnly: ComputedRef<boolean> = computed(
   (): boolean => props.displayMode === 'spread' && props.pages.length === 2,
 )
 type TurnDirection = 'forward' | 'backward'
-type TurnAction = keyof Emits
+type TurnAction = 'previous' | 'next'
 const isTurning: Ref<boolean> = ref(false)
 const turnDirection: Ref<TurnDirection> = ref('forward')
 const turningPage: Ref<AlbumPageData | undefined> = ref(undefined)
@@ -44,7 +44,8 @@ const turnTo = (targetPage: number, direction: TurnDirection, action: TurnAction
   turnDirection.value = direction
   isTurning.value = true
   turnTimer = setTimeout((): void => {
-    emit(action)
+    if (action === 'next') emit('next')
+    else emit('previous')
     isTurning.value = false
     turningPage.value = undefined
   }, 420)
@@ -61,7 +62,7 @@ onBeforeUnmount((): void => {
 </script>
 
 <template>
-  <div class="flex h-full min-h-0 w-full flex-col items-center gap-2">
+  <div class="flex h-full min-h-0 w-full flex-col items-center justify-center gap-2">
     <div
       class="album-book__viewport relative min-h-0 [perspective:1800px]"
       :class="displayMode === 'page' ? 'album-book__page-focus' : 'album-book__spread'"
@@ -135,14 +136,14 @@ onBeforeUnmount((): void => {
 
 <style scoped>
 .album-book__viewport {
-  flex: 1 1 auto;
   max-width: 100%;
 }
 
 .album-book__page-focus {
+  flex: 1 1 auto;
   height: 100%;
   width: auto;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 32 / 25;
 }
 
 .album-book__page-focus :deep(article) {
@@ -152,13 +153,16 @@ onBeforeUnmount((): void => {
 
 .album-book__spread {
   display: grid;
-  width: 100%;
+  flex: 0 1 auto;
+  width: min(100%, calc((100dvh - 21rem) * 2.56));
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 64 / 25;
+  box-shadow: 0 18px 50px rgb(var(--color-ink) / 0.24);
 }
 
 .album-book__spread :deep(article) {
   height: 100%;
+  box-shadow: none;
 }
 
 .album-page-turn--forward,

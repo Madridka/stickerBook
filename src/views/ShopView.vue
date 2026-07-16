@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 import ShopItem from '@/components/Shop/ShopItem.vue'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
-import shopData from '@/data/shop.json'
+import packData from '@/data/mainConst.json'
 
 const { t } = useI18n()
 const player = usePlayerStore()
@@ -12,11 +12,10 @@ const inventory = useInventoryStore()
 const router = useRouter()
 
 // Берёт цену Pack из игровых данных магазина
-const packPrice: number = shopData.items[0].price
 
 // Списывает coins и добавляет новый Pack в инвентарь
 const buyPack = async (): Promise<void> => {
-  if (player.spendCoins(packPrice)) {
+  if (player.spendCoins(packData.price)) {
     await inventory.addPack()
     await router.push({ name: 'pack-opening' })
   }
@@ -48,8 +47,8 @@ const buyPack = async (): Promise<void> => {
     <!-- Доступные товары магазина -->
     <ShopItem
       class="mt-10"
-      :price="packPrice"
-      :can-buy="player.coins >= packPrice"
+      :price="packData.price"
+      :can-buy="player.coins >= packData.price"
       @purchase="buyPack"
     />
   </section>

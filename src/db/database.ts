@@ -3,6 +3,8 @@ import Dexie, { type Table } from 'dexie'
 export interface CollectedSticker {
   // Уникальный идентификатор найденного стикера
   id: string
+  // Идентификатор карточки из каталога игровых данных
+  stickerId: string
   // Время добавления стикера в коллекцию
   collectedAt: number
 }

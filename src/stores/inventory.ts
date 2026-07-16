@@ -28,7 +28,17 @@ export const useInventoryStore = defineStore('inventory', () => {
   // Добавляет новый Pack через общий механизм предметов
   const addPack = (): Promise<InventoryItem> => addItem('pack')
 
+  // Удаляет один открываемый Pack из локального инвентаря
+  const removePack = async (): Promise<boolean> => {
+    const pack: InventoryItem | undefined = items.value.find(({ type }) => type === 'pack')
+    if (!pack) return false
+
+    await database.inventory.delete(pack.id)
+    items.value = items.value.filter(({ id }) => id !== pack.id)
+    return true
+  }
+
   void load()
 
-  return { items, isLoaded, packCount, addPack }
+  return { items, isLoaded, packCount, addPack, removePack }
 })

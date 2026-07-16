@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import Button from 'primevue/button'
 import Menu from 'primevue/menu'
 import { useTheme } from '@/composables/useTheme'
@@ -10,6 +10,8 @@ import { usePlayerStore } from '@/stores/player'
 const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()
 const player = usePlayerStore()
+const route = useRoute()
+const isPackOpening = computed((): boolean => route.meta.packOpening === true)
 const menuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 
 // Формирует команды выпадающего меню приложения
@@ -35,31 +37,30 @@ const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
         aria-label="Main navigation"
       >
         <!-- Логотип и ссылка на главный экран -->
-        <RouterLink to="/" class="text-xl font-black tracking-tight">{{
+        <RouterLink v-if="!isPackOpening" to="/" class="text-xl font-black tracking-tight">{{
           t('app.title')
         }}</RouterLink>
+        <span v-else class="text-xl font-black tracking-tight">{{ t('app.title') }}</span>
         <!-- Навигация, переключатель темы и меню -->
-        <div class="flex items-center gap-4 text-sm font-semibold sm:gap-7">
+        <div v-if="!isPackOpening" class="flex items-center gap-4 text-sm font-semibold sm:gap-7">
           <RouterLink class="transition-colors hover:text-coral" to="/album">{{
             t('app.album')
           }}</RouterLink>
           <RouterLink class="transition-colors hover:text-coral" to="/shop">{{
             t('app.shop')
           }}</RouterLink>
-          <Button
+          <button
             class="theme-toggle__button"
-            text
-            rounded
             type="button"
-            icon="pi pi-palette"
             :aria-label="t('common.theme')"
             :title="t('common.theme')"
             @click="toggleTheme"
           >
+            <span class="theme-toggle__swatch" aria-hidden="true" />
             <span class="sr-only">{{
               isEmeraldPink ? t('common.themeEmeraldPink') : t('common.themeDefault')
             }}</span>
-          </Button>
+          </button>
 
           <Button
             class="app-menu-button"

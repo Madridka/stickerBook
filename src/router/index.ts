@@ -30,6 +30,15 @@ const router: Router = createRouter({
         title: (i18n.global.t as (key: string) => string)('app.album'),
       },
     },
+    {
+      path: '/pack-opening',
+      name: 'pack-opening',
+      component: () => import('@/views/PackOpeningView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('packOpening.title'),
+        packOpening: true,
+      },
+    },
   ],
 })
 

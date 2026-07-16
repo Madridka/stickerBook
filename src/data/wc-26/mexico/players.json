@@ -2,7 +2,7 @@
   {
     "id": "mex-01",
     "fullName": "Mexico Team Logo",
-    "image": "/game/wc-26/mexico/stickers/mex-01.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-01.png",
     "type": "logo",
     "team": "Mexico",
     "weight": 20
@@ -12,7 +12,7 @@
     "firstName": "Luis",
     "lastName": "Malagón",
     "fullName": "Luis Malagón",
-    "image": "/game/wc-26/mexico/stickers/mex-02.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-02.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -22,7 +22,7 @@
     "firstName": "Johan",
     "lastName": "Vásquez",
     "fullName": "Johan Vásquez",
-    "image": "/game/wc-26/mexico/stickers/mex-03.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-03.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Jorge",
     "lastName": "Sánchez",
     "fullName": "Jorge Sánchez",
-    "image": "/game/wc-26/mexico/stickers/mex-04.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-04.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "César",
     "lastName": "Montes",
     "fullName": "César Montes",
-    "image": "/game/wc-26/mexico/stickers/mex-05.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-05.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Jesús",
     "lastName": "Gallardo",
     "fullName": "Jesús Gallardo",
-    "image": "/game/wc-26/mexico/stickers/mex-06.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-06.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Israel",
     "lastName": "Reyes",
     "fullName": "Israel Reyes",
-    "image": "/game/wc-26/mexico/stickers/mex-07.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-07.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Diego",
     "lastName": "Lainez",
     "fullName": "Diego Lainez",
-    "image": "/game/wc-26/mexico/stickers/mex-08.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-08.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Carlos",
     "lastName": "Rodríguez",
     "fullName": "Carlos Rodríguez",
-    "image": "/game/wc-26/mexico/stickers/mex-09.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-09.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Edson",
     "lastName": "Álvarez",
     "fullName": "Edson Álvarez",
-    "image": "/game/wc-26/mexico/stickers/mex-10.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-10.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Orbelín",
     "lastName": "Pineda",
     "fullName": "Orbelín Pineda",
-    "image": "/game/wc-26/mexico/stickers/mex-11.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-11.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Marcel",
     "lastName": "Ruiz",
     "fullName": "Marcel Ruiz",
-    "image": "/game/wc-26/mexico/stickers/mex-12.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-12.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -120,7 +120,7 @@
   {
     "id": "mex-13",
     "fullName": "Mexico Team Squad",
-    "image": "/game/wc-26/mexico/stickers/mex-13.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-13.png",
     "type": "squad",
     "team": "Mexico",
     "weight": 20
@@ -130,7 +130,7 @@
     "firstName": "Érick",
     "lastName": "Sánchez",
     "fullName": "Érick Sánchez",
-    "image": "/game/wc-26/mexico/stickers/mex-14.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-14.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -140,7 +140,7 @@
     "firstName": "Hirving",
     "lastName": "Lozano",
     "fullName": "Hirving Lozano",
-    "image": "/game/wc-26/mexico/stickers/mex-15.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-15.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -150,7 +150,7 @@
     "firstName": "Santiago",
     "lastName": "Giménez",
     "fullName": "Santiago Giménez",
-    "image": "/game/wc-26/mexico/stickers/mex-16.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-16.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -160,7 +160,7 @@
     "firstName": "Raúl",
     "lastName": "Jiménez",
     "fullName": "Raúl Jiménez",
-    "image": "/game/wc-26/mexico/stickers/mex-17.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-17.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -170,7 +170,7 @@
     "firstName": "Alexis",
     "lastName": "Vega",
     "fullName": "Alexis Vega",
-    "image": "/game/wc-26/mexico/stickers/mex-18.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-18.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -180,7 +180,7 @@
     "firstName": "Roberto",
     "lastName": "Alvarado",
     "fullName": "Roberto Alvarado",
-    "image": "/game/wc-26/mexico/stickers/mex-19.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-19.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -190,7 +190,7 @@
     "firstName": "César",
     "lastName": "Huerta",
     "fullName": "César Huerta",
-    "image": "/game/wc-26/mexico/stickers/mex-20.webp",
+    "image": "/game/wc-26/mexico/stickers/mex-20.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20

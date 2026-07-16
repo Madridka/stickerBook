@@ -41,6 +41,7 @@ export interface AlbumGeometrySlot {
 
 export interface AlbumGeometryPage {
   id: string
+  number: number
   image: string
   width: number
   height: number

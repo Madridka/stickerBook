@@ -8,6 +8,7 @@ interface Props {
   card: PlayerCard
   index: number
   total: number
+  duplicate?: boolean
 }
 
 const props: Props = defineProps<Props>()
@@ -53,12 +54,18 @@ const handleCardClick = (): void => {
     >
       <div v-if="isRevealed" class="flex h-full min-h-0 flex-col overflow-hidden bg-white p-2">
         <div class="min-h-0 flex-1">
-          <img class="h-full w-full object-contain" :src="card.image" :alt="card.fullName" />
+          <div class="relative h-full">
+            <img class="h-full w-full object-contain" :src="card.image" :alt="card.fullName" />
+            <span v-if="duplicate" class="absolute right-2 top-2 rounded bg-coral px-2 py-1 text-xs font-black uppercase tracking-wide text-white shadow">
+              {{ t('packOpening.duplicateLabel') }}
+            </span>
+          </div>
         </div>
         <div class="shrink-0 border-t-2 border-ink pt-2">
           <p class="text-xs font-bold uppercase tracking-[0.14em] text-coral">{{ card.type }}</p>
           <p class="mt-1 text-xl font-black leading-tight">{{ card.fullName }}</p>
           <p class="text-sm font-semibold text-ink/60">{{ card.team }}</p>
+          <p v-if="duplicate" class="mt-1 text-xs font-bold text-coral">{{ t('packOpening.duplicateStorageHint') }}</p>
         </div>
       </div>
       <div v-else class="flex h-full flex-col items-center justify-center bg-ink text-paper">

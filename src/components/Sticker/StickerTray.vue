@@ -10,6 +10,7 @@ interface Props {
 }
 
 interface Emits {
+  focus: [playerId: string]
   ready: [instanceId: string, quality: number]
   drop: [result: StickerDropResult]
 }
@@ -24,8 +25,9 @@ const selectedItem: ComputedRef<StickerTrayItem | undefined> = computed((): Stic
   props.cards.find(({ instance }): boolean => instance.id === selectedInstanceId.value),
 )
 
-const prepareSticker = (instanceId: string): void => {
-  selectedInstanceId.value = instanceId
+const prepareSticker = (item: StickerTrayItem): void => {
+  selectedInstanceId.value = item.instance.id
+  emit('focus', item.instance.playerId)
   isPeelOpen.value = true
 }
 
@@ -42,7 +44,7 @@ const closePreparation = (): void => {
 
 <template>
   <section
-    class="flex max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper p-3 lg:h-full lg:max-h-none lg:w-72 lg:border-l lg:border-t-0"
+    class="flex max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper p-3 lg:h-full lg:max-h-none lg:w-80 lg:border-l lg:border-t-0"
     :aria-label="t('stickerTray.title')"
   >
     <div class="mb-2 flex items-end justify-between gap-3">
@@ -63,7 +65,7 @@ const closePreparation = (): void => {
         :card="item.card"
         :instance="item.instance"
         :prepared="preparedIds.has(item.instance.id)"
-        @prepare="prepareSticker"
+        @prepare="prepareSticker(item)"
         @drop="emit('drop', $event)"
       />
     </div>

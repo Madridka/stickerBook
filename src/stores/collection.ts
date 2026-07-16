@@ -6,6 +6,7 @@ import collectionData from '@/data/collection.json'
 
 export const useCollectionStore = defineStore('collection', () => {
   const items: Ref<CollectionItem[]> = ref([])
+  const duplicates: Ref<StickerInstance[]> = ref([])
   const isLoaded: Ref<boolean> = ref(false)
 
   // Загружает общие параметры коллекции из JSON-данных
@@ -15,10 +16,10 @@ export const useCollectionStore = defineStore('collection', () => {
   // Восстанавливает уже открытые карточки из локальной коллекции
   const load = async (): Promise<void> => {
     const cards: StickerInstance[] = await database.cards.toArray()
-    const duplicates: StickerInstance[] = await database.duplicates.toArray()
+    duplicates.value = await database.duplicates.toArray()
     items.value = cards.map((instance: StickerInstance): CollectionItem => ({
       instance,
-      duplicateCount: duplicates.filter(({ playerId }): boolean => playerId === instance.playerId).length,
+      duplicateCount: duplicates.value.filter(({ playerId }): boolean => playerId === instance.playerId).length,
     }))
     isLoaded.value = true
   }
@@ -41,6 +42,7 @@ export const useCollectionStore = defineStore('collection', () => {
       },
     )
     if (isDuplicate) {
+      duplicates.value = [...duplicates.value, storedInstance]
       items.value = items.value.map((item: CollectionItem): CollectionItem =>
         item.instance.playerId === playerId ? { ...item, duplicateCount: item.duplicateCount + 1 } : item,
       )
@@ -74,7 +76,9 @@ export const useCollectionStore = defineStore('collection', () => {
 
   return {
     items,
+    duplicates,
     collected: computed((): string[] => items.value.map(({ instance }): string => instance.playerId)),
+    duplicateTotal: computed((): number => duplicates.value.length),
     isLoaded,
     total,
     pages,

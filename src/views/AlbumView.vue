@@ -26,6 +26,8 @@ interface AlbumPageView extends AlbumPageData {
 const { t } = useI18n()
 const album = useAlbumStore()
 const collection = useCollectionStore()
+const currentPage: Ref<number> = ref(0)
+const activeTargetId: Ref<string | undefined> = ref(undefined)
 const pendingDrop: Ref<StickerDropResult | undefined> = ref(undefined)
 const confirmationKind: Ref<'wrong' | 'far'> = ref('far')
 const isConfirmOpen: Ref<boolean> = ref(false)
@@ -35,26 +37,27 @@ const albumImages: Record<string, string> = import.meta.glob(
   '../../assets/game/wc-26/mexico/album/*.png',
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
-const stickerImages: Record<string, string> = import.meta.glob(
-  '../assets/game/wc-26/mexico/stickers/*.png',
-  { eager: true, import: 'default', query: '?url' },
-) as Record<string, string>
-
-const cards: PlayerCard[] = (cardsData as PlayerCard[]).map((card: PlayerCard): PlayerCard => ({
-  ...card,
-  image: stickerImages[`../assets/game/wc-26/mexico/stickers/${card.id}.png`] ?? card.image,
-}))
+const cards: PlayerCard[] = cardsData as PlayerCard[]
 
 const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
   album.pages.map((page: AlbumGeometryPage): AlbumPageView => ({
     id: page.id,
-    title: t('album.page'),
+    title: t('album.spreadTitle', { page: String(page.number).padStart(2, '0') }),
     image: albumImages[`../../assets/game/wc-26/mexico/album/${page.image}`],
     geometry: page,
   })),
 )
 
+const visibleGeometry: ComputedRef<AlbumGeometryPage> = computed(
+  (): AlbumGeometryPage => pages.value[currentPage.value].geometry,
+)
+const placedOnPage: ComputedRef<number> = computed((): number =>
+  visibleGeometry.value.slots.filter(({ id }): boolean => Boolean(getPlacedCard(id))).length,
+)
+
 const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
+const getCard = (playerId: string): PlayerCard | undefined =>
+  cards.find(({ id }): boolean => id === playerId)
 
 // Возвращает уже вклеенную карточку с поддержкой старых идентификаторов слотов.
 const getPlacedCard = (slotId: string): { card: PlayerCard; placement: StickerPlacement } | undefined => {
@@ -62,7 +65,7 @@ const getPlacedCard = (slotId: string): { card: PlayerCard; placement: StickerPl
     ({ instance }): boolean => normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
   )
   if (!item?.instance.placement) return undefined
-  const card: PlayerCard | undefined = cards.find(({ id }): boolean => id === item.instance.playerId)
+  const card: PlayerCard | undefined = getCard(item.instance.playerId)
   return card ? { card, placement: item.instance.placement } : undefined
 }
 
@@ -70,14 +73,25 @@ const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[]
   collection.items
     .filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location))
     .map(({ instance }): StickerTrayItem | undefined => {
-      const card: PlayerCard | undefined = cards.find(({ id }): boolean => id === instance.playerId)
+      const card: PlayerCard | undefined = getCard(instance.playerId)
       return card ? { card, instance } : undefined
     })
     .filter((item: StickerTrayItem | undefined): item is StickerTrayItem => Boolean(item)),
 )
 
+// Открывает страницу выбранного игрока и подсвечивает единственную подходящую ячейку.
+const focusCardTarget = (playerId: string): void => {
+  const pageIndex: number = pages.value.findIndex(({ geometry }): boolean =>
+    geometry.slots.some((slot): boolean => slot.playerId === playerId),
+  )
+  if (pageIndex >= 0) currentPage.value = pageIndex
+  activeTargetId.value = playerId
+}
+
 const updatePreparationQuality = async (instanceId: string, quality: number): Promise<void> => {
-  const item: CollectionItem | undefined = collection.items.find(({ instance }): boolean => instance.id === instanceId)
+  const item: CollectionItem | undefined = collection.items.find(
+    ({ instance }): boolean => instance.id === instanceId,
+  )
   if (item) await collection.updateCard(instanceId, { quality: Math.min(item.instance.quality, quality) })
 }
 
@@ -99,10 +113,11 @@ const saveDrop = async (drop: StickerDropResult): Promise<void> => {
     location: 'album',
     placement,
   })
+  activeTargetId.value = undefined
   lastGrade.value = drop.grade
 }
 
-// Отвечает за проверку попадания карточки в слот и запрос подтверждения плохой вклейки.
+// Проверяет попадание в слот и запрашивает подтверждение намеренно плохой вклейки.
 const handleDrop = (drop: StickerDropResult): void => {
   const slot = album.geometry.getSlot(drop.slotId)
   const isWrongSlot: boolean = slot?.playerId !== drop.playerId
@@ -129,31 +144,61 @@ const cancelDrop = (): void => {
 </script>
 
 <template>
-  <section class="flex h-full min-h-0 w-full flex-col overflow-hidden bg-ink lg:grid lg:grid-cols-[minmax(0,1fr)_18rem]">
-    <div class="relative flex min-h-0 flex-1 items-center overflow-hidden bg-ink lg:h-full">
-      <AlbumBook class="w-full min-h-0" :pages="pages" :current-page="0" :is-open="true">
-        <template #default="{ pageIndex }">
-          <StickerSlot
-            v-for="slot in pages[pageIndex].geometry.slots"
-            :key="slot.id"
-            :slot="slot"
-            :page="pages[pageIndex].geometry"
-            :card="getPlacedCard(slot.id)?.card"
-            :placement="getPlacedCard(slot.id)?.placement"
-          />
-        </template>
-      </AlbumBook>
+  <section class="flex h-full min-h-0 w-full flex-col overflow-hidden bg-ink">
+    <header class="flex h-14 shrink-0 items-center justify-between border-b border-paper/10 px-4 text-paper">
+      <div>
+        <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-gold">{{ t('app.album') }}</p>
+        <h1 class="text-lg font-black leading-tight">
+          {{ t('album.spreadTitle', { page: String(visibleGeometry.number).padStart(2, '0') }) }}
+        </h1>
+      </div>
+      <div class="text-right text-xs font-semibold text-paper/65">
+        <strong class="block text-base font-black text-paper">{{ placedOnPage }} / {{ visibleGeometry.slots.length }}</strong>
+        {{ t('album.spreadProgress', { placed: placedOnPage, total: visibleGeometry.slots.length }) }}
+      </div>
+    </header>
 
-      <p
-        v-if="lastGrade"
-        class="absolute bottom-2 left-1/2 z-30 -translate-x-1/2 rounded bg-mint px-3 py-1 text-xs font-bold text-ink shadow"
-        aria-live="polite"
-      >
-        {{ t(`stickerTray.result.${lastGrade}`) }}
-      </p>
+    <div class="flex min-h-0 flex-1 flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <div class="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden p-2 lg:p-3">
+        <AlbumBook
+          class="h-full min-h-0 w-full"
+          :pages="pages"
+          :current-page="currentPage"
+          :is-open="true"
+          display-mode="page"
+          @previous="currentPage = Math.max(0, currentPage - 1)"
+          @next="currentPage = Math.min(pages.length - 1, currentPage + 1)"
+        >
+          <template #default="{ pageIndex }">
+            <StickerSlot
+              v-for="slot in pages[pageIndex].geometry.slots"
+              :key="slot.id"
+              :slot="slot"
+              :page="pages[pageIndex].geometry"
+              :target-card="getCard(slot.playerId)"
+              :card="getPlacedCard(slot.id)?.card"
+              :placement="getPlacedCard(slot.id)?.placement"
+              :highlighted="activeTargetId === slot.playerId"
+            />
+          </template>
+        </AlbumBook>
+
+        <p
+          v-if="lastGrade"
+          class="absolute bottom-2 left-1/2 z-30 -translate-x-1/2 rounded bg-mint px-3 py-1 text-xs font-bold text-ink shadow"
+          aria-live="polite"
+        >
+          {{ t(`stickerTray.result.${lastGrade}`) }}
+        </p>
+      </div>
+
+      <StickerTray
+        :cards="trayCards"
+        @focus="focusCardTarget"
+        @ready="updatePreparationQuality"
+        @drop="handleDrop"
+      />
     </div>
-
-    <StickerTray :cards="trayCards" @ready="updatePreparationQuality" @drop="handleDrop" />
 
     <AlbumDropConfirm
       v-model:visible="isConfirmOpen"

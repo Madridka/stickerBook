@@ -23,17 +23,13 @@ const isFinished: ComputedRef<boolean> = computed(() => currentIndex.value >= pa
 const currentCard: ComputedRef<PlayerCard | undefined> = computed(
   () => drawnCards.value[currentIndex.value],
 )
-const isOpening: Ref<boolean> = ref(false)
-const stickerImages: Record<string, string> = import.meta.glob(
-  '../assets/game/wc-26/mexico/stickers/*.png',
-  { eager: true, import: 'default', query: '?url' },
-) as Record<string, string>
-const cards: PlayerCard[] = (cardsData as PlayerCard[]).map(
-  (card: PlayerCard): PlayerCard => ({
-    ...card,
-    image: stickerImages[`../assets/game/wc-26/mexico/stickers/${card.id}.png`] ?? card.image,
-  }),
+const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
+  Boolean(currentCard.value) && collection.items.some(
+    ({ instance }): boolean => instance.playerId === currentCard.value?.id,
+  ),
 )
+const isOpening: Ref<boolean> = ref(false)
+const cards: PlayerCard[] = cardsData as PlayerCard[]
 
 // Формирует пять карточек по весам из JSON перед началом показа
 const drawCards = (): void => {
@@ -81,7 +77,7 @@ const handleNextCard = async (): Promise<void> => {
 }
 
 // После полного просмотра возвращает игрока к выбранному разделу
-const navigateTo = async (name: 'home' | 'shop' | 'album'): Promise<void> => {
+const navigateTo = async (name: 'home' | 'shop' | 'album' | 'collection'): Promise<void> => {
   await router.push({ name })
 }
 
@@ -108,6 +104,7 @@ onMounted(consumePack)
       <StickerReveal
         :key="currentCard.id + currentIndex"
         :card="currentCard"
+        :duplicate="isCurrentDuplicate"
         :index="currentIndex"
         :total="packData.cardsPerPack"
         @next="handleNextCard"
@@ -147,6 +144,13 @@ onMounted(consumePack)
           outlined
           type="button"
           @click="navigateTo('album')"
+        />
+        <Button
+          :label="t('app.collection')"
+          icon="pi pi-inbox"
+          outlined
+          type="button"
+          @click="navigateTo('collection')"
         />
       </div>
     </div>

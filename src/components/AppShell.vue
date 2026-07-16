@@ -34,7 +34,7 @@ const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
     <!-- Верхняя навигационная панель -->
     <header class="border-b border-ink/10 bg-paper/90">
       <nav
-        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8 sm:py-4"
+        class="mx-auto flex w-full max-w-[90rem] items-center justify-between px-5 py-3 sm:px-8 sm:py-4"
         aria-label="Main navigation"
       >
         <!-- Логотип и ссылка на главный экран -->
@@ -46,6 +46,9 @@ const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
         <div v-if="!isPackOpening" class="flex items-center gap-4 text-sm font-semibold sm:gap-7">
           <RouterLink class="transition-colors hover:text-coral" to="/album">{{
             t('app.album')
+          }}</RouterLink>
+          <RouterLink class="transition-colors hover:text-coral" to="/collection">{{
+            t('app.collection')
           }}</RouterLink>
           <RouterLink class="transition-colors hover:text-coral" to="/shop">{{
             t('app.shop')

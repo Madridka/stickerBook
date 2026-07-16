@@ -1,7 +1,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database } from '@/db/database'
-import type { CollectionItem, StickerInstance } from '@/types'
+import type { CollectionItem, StickerInstance, StickerPlacement } from '@/types'
 import collectionData from '@/data/collection.json'
 
 export const useCollectionStore = defineStore('collection', () => {
@@ -48,6 +48,21 @@ export const useCollectionStore = defineStore('collection', () => {
     return instance
   }
 
+  // Сохраняет качество и положение выбранного экземпляра наклейки в коллекции
+  const updateCard = async (
+    instanceId: string,
+    changes: Partial<Pick<StickerInstance, 'quality' | 'location'>> & {
+      placement?: StickerPlacement
+    },
+  ): Promise<void> => {
+    await database.cards.update(instanceId, changes)
+    items.value = items.value.map((item: CollectionItem): CollectionItem =>
+      item.instance.id === instanceId
+        ? { ...item, instance: { ...item.instance, ...changes } }
+        : item,
+    )
+  }
+
   // Вычисляет процент найденных стикеров текущей коллекции
   const progress: ComputedRef<number> = computed((): number =>
     Math.round((items.value.length / total) * 100),
@@ -63,5 +78,6 @@ export const useCollectionStore = defineStore('collection', () => {
     pages,
     progress,
     addCard,
+    updateCard,
   }
 })

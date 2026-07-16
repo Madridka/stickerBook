@@ -18,6 +18,14 @@ export interface StickerInstance {
   playerId: string
   quality: number
   location: string
+  placement?: StickerPlacement
+}
+
+export interface StickerPlacement {
+  slotId: string
+  x: number
+  y: number
+  rotation: number
 }
 
 export interface CollectionItem {

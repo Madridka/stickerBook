@@ -5,6 +5,7 @@ import common from '@/lang/ru/common.json'
 import home from '@/lang/ru/home.json'
 import packOpening from '@/lang/ru/packOpening.json'
 import shop from '@/lang/ru/shop.json'
+import stickerTray from '@/lang/ru/stickerTray.json'
 
 // Объединяет локализационные JSON-файлы в единый словарь приложения
 const messages: {
@@ -15,9 +16,10 @@ const messages: {
     home: typeof home
     packOpening: typeof packOpening
     shop: typeof shop
+    stickerTray: typeof stickerTray
   }
 } = {
-  ru: { album, app, common, home, packOpening, shop },
+  ru: { album, app, common, home, packOpening, shop, stickerTray },
 }
 
 // Создаёт экземпляр vue-i18n с Composition API

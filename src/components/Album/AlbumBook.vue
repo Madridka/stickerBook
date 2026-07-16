@@ -63,7 +63,10 @@ onBeforeUnmount((): void => {
 
 <template>
   <div class="flex min-h-0 w-full max-w-[min(29rem,calc(100dvw-2.5rem))] flex-col items-center">
-    <div class="relative [perspective:1800px]">
+    <div
+      class="relative [perspective:1800px]"
+      :class="isOpen ? 'album-book__page--open' : 'album-book__page--closed'"
+    >
       <AlbumPage :page="pages[currentPage]">
         <slot v-if="!isTurning" />
       </AlbumPage>
@@ -115,6 +118,14 @@ onBeforeUnmount((): void => {
 </template>
 
 <style scoped>
+.album-book__page--closed :deep(article) {
+  height: min(calc(100dvh - 17rem), 52rem);
+}
+
+.album-book__page--open :deep(article) {
+  height: min(calc(100dvh - 27rem), 52rem);
+}
+
 .album-page-turn--forward,
 .album-page-turn--backward {
   transform-origin: left center;

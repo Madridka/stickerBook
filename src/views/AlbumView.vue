@@ -190,8 +190,8 @@ const nextPage = (): void => {
 </script>
 
 <template>
-  <section class="flex h-full min-h-0 w-full flex-col items-center justify-center gap-3 py-1">
-    <div class="w-full text-center">
+  <section class="flex h-full min-h-0 w-full flex-col items-center gap-2 py-1">
+    <div class="w-full shrink-0 text-center">
       <p class="text-sm font-bold uppercase tracking-[0.18em] text-coral">
         {{ t('app.collection') }}
       </p>
@@ -199,6 +199,7 @@ const nextPage = (): void => {
     </div>
 
     <AlbumBook
+      class="min-h-0 shrink"
       :pages="pages"
       :current-page="currentPage"
       :is-open="isOpen"
@@ -218,6 +219,7 @@ const nextPage = (): void => {
 
     <StickerTray
       v-if="isOpen && activePage.slots.length"
+      class="min-h-0 shrink-0"
       :cards="trayCards"
       @ready="updateQuality"
       @drop="handleDrop"

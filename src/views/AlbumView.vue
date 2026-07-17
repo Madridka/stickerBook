@@ -276,18 +276,18 @@ onBeforeUnmount((): void => {
 
 <template>
   <section class="flex h-full min-h-0 w-full flex-col overflow-hidden bg-ink">
-    <header class="flex h-14 shrink-0 items-center justify-between border-b border-paper/10 px-4 text-paper">
+    <header class="album-view__header flex h-14 shrink-0 items-center justify-between border-b border-paper/10 px-4 text-paper">
       <div>
-        <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-gold">{{ t('app.album') }}</p>
-        <h1 class="text-lg font-black leading-tight">
+        <p class="album-view__eyebrow text-[10px] font-bold uppercase tracking-[0.18em] text-gold">{{ t('app.album') }}</p>
+        <h1 class="album-view__title text-lg font-black leading-tight">
           {{ t(isBookOpen && isDesktopSpread ? 'album.spreadRangeTitle' : 'album.spreadTitle', { page: visiblePageLabel, pages: visiblePageLabel }) }}
         </h1>
       </div>
-      <div v-if="visibleSlotTotal > 0" class="text-right text-xs font-semibold text-paper/65">
+      <div v-if="visibleSlotTotal > 0" class="album-view__status text-right text-xs font-semibold text-paper/65">
         <strong class="block text-base font-black text-paper">{{ placedOnVisiblePages }} / {{ visibleSlotTotal }}</strong>
         {{ t('album.spreadProgress', { placed: placedOnVisiblePages, total: visibleSlotTotal }) }}
       </div>
-      <div v-else class="text-right text-[10px] font-bold uppercase tracking-[0.16em] text-paper/55">
+      <div v-else class="album-view__status text-right text-[10px] font-bold uppercase tracking-[0.16em] text-paper/55">
         <strong class="block text-base font-black tracking-normal text-paper">{{ visiblePageLabel }}</strong>
         {{ isBookOpen ? 'О проекте' : 'Обложка' }}
       </div>
@@ -353,3 +353,29 @@ onBeforeUnmount((): void => {
     />
   </section>
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .album-view__header {
+    height: 2.75rem;
+    padding-inline: 0.75rem;
+  }
+
+  .album-view__eyebrow {
+    font-size: 0.48rem;
+    letter-spacing: 0.14em;
+  }
+
+  .album-view__title {
+    font-size: 0.8rem;
+  }
+
+  .album-view__status {
+    font-size: 0.52rem;
+  }
+
+  .album-view__status strong {
+    font-size: 0.75rem;
+  }
+}
+</style>

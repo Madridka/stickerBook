@@ -43,17 +43,17 @@ const closePreparation = (): void => {
 
 <template>
   <section
-    class="flex h-52 max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper p-3"
+    class="sticker-tray-shell flex h-52 max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper p-3"
     :aria-label="t('stickerTray.title')"
   >
-    <div class="mb-2 flex items-end justify-between gap-3">
+    <div class="sticker-tray__header mb-2 flex items-end justify-between gap-3">
       <div>
-        <p class="text-xs font-bold uppercase tracking-[0.16em] text-coral">
+        <p class="sticker-tray__title text-xs font-bold uppercase tracking-[0.16em] text-coral">
           {{ t('stickerTray.title') }}
         </p>
-        <p class="mt-1 text-xs text-ink/55">{{ t('stickerTray.hint') }}</p>
+        <p class="sticker-tray__hint mt-1 text-xs text-ink/55">{{ t('stickerTray.hint') }}</p>
       </div>
-      <span class="shrink-0 text-xs font-bold text-ink/55">{{ cards.length }}</span>
+      <span class="sticker-tray__count shrink-0 text-xs font-bold text-ink/55">{{ cards.length }}</span>
     </div>
 
     <div v-if="cards.length" class="sticker-tray flex min-h-0 flex-1 gap-3 pb-3">
@@ -70,7 +70,7 @@ const closePreparation = (): void => {
     </div>
     <p
       v-else
-      class="rounded border border-dashed border-ink/20 px-4 py-5 text-center text-sm text-ink/55"
+      class="sticker-tray__empty rounded border border-dashed border-ink/20 px-4 py-5 text-center text-sm text-ink/55"
     >
       {{ t('stickerTray.empty') }}
     </p>
@@ -89,5 +89,42 @@ const closePreparation = (): void => {
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--color-coral) / 0.55) transparent;
   touch-action: pan-x;
+}
+
+@media (max-width: 767px) {
+  .sticker-tray-shell {
+    height: 8.5rem;
+    max-height: 8.5rem;
+    padding: 0.5rem;
+  }
+
+  .sticker-tray__header {
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .sticker-tray__title,
+  .sticker-tray__count {
+    font-size: 0.55rem;
+  }
+
+  .sticker-tray__title {
+    letter-spacing: 0.12em;
+  }
+
+  .sticker-tray__hint {
+    display: none;
+  }
+
+  .sticker-tray {
+    gap: 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .sticker-tray__empty {
+    padding: 0.75rem;
+    font-size: 0.7rem;
+  }
 }
 </style>

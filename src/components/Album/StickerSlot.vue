@@ -84,4 +84,16 @@ const cardStyle = (): Record<string, string> => ({
   from { transform: scale(1); }
   to { transform: scale(1.055); }
 }
+
+@media (max-width: 767px) {
+  .sticker-slot > div > span:first-child {
+    padding: 0.1rem 0.25rem;
+    font-size: clamp(0.25rem, 1.1vw, 0.4rem);
+  }
+
+  .sticker-slot > div > span:last-child {
+    padding: 0.15rem 0.25rem;
+    font-size: clamp(0.28rem, 1.3vw, 0.48rem);
+  }
+}
 </style>

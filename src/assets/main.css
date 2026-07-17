@@ -130,3 +130,12 @@
 .p-menu .p-menuitem-icon {
   color: var(--prime-accent);
 }
+
+.mobile-app-menu.p-menu {
+  width: min(17rem, calc(100vw - 2rem));
+}
+
+.mobile-app-menu .p-menu-separator {
+  margin: 0.5rem 0;
+  border-top: 1px solid var(--prime-border);
+}

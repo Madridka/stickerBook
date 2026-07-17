@@ -419,4 +419,56 @@ defineProps<Props>()
   right: 12.3%;
   left: 7.5%;
 }
+
+@media (max-width: 767px) {
+  .cover-page__edition {
+    font-size: clamp(4px, 1.02cqw, 7px);
+  }
+
+  .cover-page__brand > p {
+    font-size: clamp(6px, 1.6cqw, 9px);
+  }
+
+  .cover-page__caption span {
+    font-size: clamp(4px, 0.95cqw, 7px);
+  }
+
+  .cover-page__caption strong {
+    font-size: clamp(6px, 1.45cqw, 10px);
+  }
+
+  .cover-page__footer,
+  .editorial-kicker,
+  .info-block__index,
+  .paper-page-number {
+    font-size: clamp(4px, 0.9cqw, 7px);
+  }
+
+  .editorial-header h2 {
+    font-size: clamp(12px, 3.8cqw, 19px);
+  }
+
+  .editorial-header p,
+  .editorial-header--changelog p {
+    font-size: clamp(4.5px, 1.18cqw, 7px);
+  }
+
+  .info-block h3,
+  .release-note h3 {
+    font-size: clamp(5.5px, 1.38cqw, 9px);
+  }
+
+  .info-block li,
+  .release-note li {
+    font-size: clamp(4.5px, 0.98cqw, 7px);
+  }
+
+  .paper-page-number strong {
+    font-size: clamp(6px, 1.45cqw, 10px);
+  }
+
+  .release-note__version {
+    font-size: clamp(6px, 1.62cqw, 10px);
+  }
+}
 </style>

@@ -275,6 +275,7 @@ onBeforeUnmount((): void => {
 
 @media (max-width: 767px) {
   .album-book__page-focus {
+    flex: 0 0 auto;
     height: auto;
     width: 100%;
   }

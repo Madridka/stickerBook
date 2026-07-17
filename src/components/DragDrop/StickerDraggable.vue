@@ -62,7 +62,7 @@ const finishDrag = (event: PointerEvent): void => {
 
 <template>
   <button
-    class="group flex h-32 w-60 shrink-0 touch-none cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral"
+    class="sticker-tray-card group flex h-32 w-60 shrink-0 touch-none cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral"
     :class="{ 'border-mint ring-2 ring-mint/50': prepared, 'opacity-50': isDragging }"
     type="button"
     :aria-label="card.fullName"
@@ -71,14 +71,14 @@ const finishDrag = (event: PointerEvent): void => {
     @pointerup="finishDrag"
     @pointercancel="finishDrag"
   >
-    <div class="h-28 w-[4.7rem] shrink-0 overflow-hidden rounded border border-ink/10">
+    <div class="sticker-tray-card__preview h-28 w-[4.7rem] shrink-0 overflow-hidden rounded border border-ink/10">
       <StickerThumbnail :card="card" :instance="instance" />
     </div>
     <div class="min-w-0 flex-1">
-      <span class="text-[10px] font-black uppercase tracking-[0.14em] text-coral">{{ card.id }}</span>
-      <strong class="mt-1 block text-sm font-black leading-tight">{{ card.fullName }}</strong>
+      <span class="sticker-tray-card__id text-[10px] font-black uppercase tracking-[0.14em] text-coral">{{ card.id }}</span>
+      <strong class="sticker-tray-card__name mt-1 block text-sm font-black leading-tight">{{ card.fullName }}</strong>
       <span
-        class="mt-3 inline-flex items-center gap-1 rounded px-2 py-1 text-[10px] font-black uppercase tracking-wide"
+        class="sticker-tray-card__action mt-3 inline-flex items-center gap-1 rounded px-2 py-1 text-[10px] font-black uppercase tracking-wide"
         :class="prepared ? 'bg-mint text-ink' : 'bg-ink/10 text-ink/60'"
       >
         <i :class="prepared ? 'pi pi-arrows-alt' : 'pi pi-sparkles'" />
@@ -90,10 +90,54 @@ const finishDrag = (event: PointerEvent): void => {
   <Teleport to="body">
     <div
       v-if="isDragging"
-      class="pointer-events-none fixed z-[9999] h-48 w-32 -translate-x-1/2 -translate-y-1/2 rotate-2 rounded border-2 border-mint bg-white shadow-2xl"
+      class="sticker-drag-preview pointer-events-none fixed z-[9999] h-48 w-32 -translate-x-1/2 -translate-y-1/2 rotate-2 rounded border-2 border-mint bg-white shadow-2xl"
       :style="{ left: `${pointerX}px`, top: `${pointerY}px` }"
     >
       <StickerThumbnail :card="card" :instance="instance" />
     </div>
   </Teleport>
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .sticker-tray-card {
+    width: 10.75rem;
+    height: 6rem;
+    gap: 0.5rem;
+    padding: 0.375rem;
+    border-width: 1px;
+  }
+
+  .sticker-tray-card__preview {
+    width: 3.33rem;
+    height: 5rem;
+  }
+
+  .sticker-tray-card__id {
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+  }
+
+  .sticker-tray-card__name {
+    margin-top: 0.125rem;
+    font-size: 0.68rem;
+  }
+
+  .sticker-tray-card__action {
+    gap: 0.2rem;
+    margin-top: 0.375rem;
+    padding: 0.2rem 0.35rem;
+    font-size: 0.45rem;
+    letter-spacing: 0.04em;
+  }
+
+  .sticker-tray-card__action i {
+    font-size: 0.55rem;
+  }
+
+  .sticker-drag-preview {
+    width: 5.33rem;
+    height: 8rem;
+  }
+}
+</style>

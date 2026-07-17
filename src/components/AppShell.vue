@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import Menu from 'primevue/menu'
@@ -11,25 +11,58 @@ import { useTheme } from '@/composables/useTheme'
 const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()
 const route = useRoute()
+const router = useRouter()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
 const isAlbum = computed((): boolean => route.name === 'album')
-const menuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
+const desktopMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
+const mobileMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const isResetConfirmOpen: Ref<boolean> = ref(false)
 const isResetting: Ref<boolean> = ref(false)
 
-// Формирует команды выпадающего меню приложения
-const menuItems = computed(() => [
+const resetProgressItem = computed(() => ({
+  label: t('app.resetProgress'),
+  icon: 'pi pi-trash',
+  command: (): void => {
+    isResetConfirmOpen.value = true
+  },
+}))
+
+const desktopMenuItems = computed(() => [resetProgressItem.value])
+
+// На мобильном экране объединяет основную навигацию и административный сброс.
+const mobileMenuItems = computed(() => [
   {
-    label: t('app.resetProgress'),
-    icon: 'pi pi-trash',
+    label: t('app.album'),
+    icon: 'pi pi-book',
     command: (): void => {
-      isResetConfirmOpen.value = true
+      void router.push('/album')
     },
   },
+  {
+    label: t('app.collection'),
+    icon: 'pi pi-images',
+    command: (): void => {
+      void router.push('/collection')
+    },
+  },
+  {
+    label: t('app.shop'),
+    icon: 'pi pi-shopping-bag',
+    command: (): void => {
+      void router.push('/shop')
+    },
+  },
+  {
+    label: t('common.theme'),
+    icon: 'pi pi-palette',
+    command: toggleTheme,
+  },
+  { separator: true },
+  resetProgressItem.value,
 ])
 
-// Открывает или закрывает меню по нажатию на кнопку
-const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
+const toggleDesktopMenu = (event: MouseEvent): void => desktopMenuRef.value?.toggle(event)
+const toggleMobileMenu = (event: MouseEvent): void => mobileMenuRef.value?.toggle(event)
 
 const resetProgress = async (): Promise<void> => {
   if (isResetting.value) return
@@ -60,7 +93,7 @@ const resetProgress = async (): Promise<void> => {
         }}</RouterLink>
         <span v-else class="text-xl font-black tracking-tight">{{ t('app.title') }}</span>
         <!-- Навигация, переключатель темы и меню -->
-        <div v-if="!isPackOpening" class="flex items-center gap-4 text-sm font-semibold sm:gap-7">
+        <div v-if="!isPackOpening" class="hidden items-center gap-4 text-sm font-semibold md:flex md:gap-7">
           <RouterLink class="transition-colors hover:text-coral" to="/album">{{
             t('app.album')
           }}</RouterLink>
@@ -89,10 +122,28 @@ const resetProgress = async (): Promise<void> => {
             :label="t('app.menu')"
             icon="pi pi-bars"
             type="button"
-            @click="toggleMenu"
+            @click="toggleDesktopMenu"
           />
 
-          <Menu ref="menuRef" :model="menuItems" :popup="true" />
+          <Menu ref="desktopMenuRef" :model="desktopMenuItems" :popup="true" />
+        </div>
+
+        <div v-if="!isPackOpening" class="flex items-center md:hidden">
+          <Button
+            class="app-menu-button"
+            text
+            :label="t('app.menu')"
+            icon="pi pi-bars"
+            type="button"
+            @click="toggleMobileMenu"
+          />
+
+          <Menu
+            ref="mobileMenuRef"
+            class="mobile-app-menu"
+            :model="mobileMenuItems"
+            :popup="true"
+          />
         </div>
       </nav>
     </header>

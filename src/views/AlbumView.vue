@@ -12,7 +12,7 @@ import cardsData from '@/data/wc-26/mexico/players.json'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
 import projectReadme from '../../README.md?raw'
-import projectLogo from '../../assets/game/wc-26/main/logo.png?url'
+import projectLogo from '../../assets/game/wc-26/main/sticker-book-logo.png?url'
 import type {
   AlbumGeometryPage,
   CollectionItem,
@@ -339,13 +339,15 @@ onBeforeUnmount((): void => {
         </p>
       </div>
 
-      <StickerTray
-        v-if="showStickerTray"
-        :cards="trayCards"
-        @focus="focusCardTarget"
-        @ready="updatePreparationQuality"
-        @drop="handleDrop"
-      />
+      <div v-if="isBookOpen" class="h-52 max-h-52 w-full shrink-0">
+        <StickerTray
+          v-if="showStickerTray"
+          :cards="trayCards"
+          @focus="focusCardTarget"
+          @ready="updatePreparationQuality"
+          @drop="handleDrop"
+        />
+      </div>
     </div>
 
     <AlbumDropConfirm

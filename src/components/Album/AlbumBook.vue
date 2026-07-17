@@ -25,14 +25,15 @@ const props = withDefaults(defineProps<Props>(), {
 })
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
-const pageStep: ComputedRef<number> = computed((): number => props.displayMode === 'page' ? 1 : 2)
+const pageStep: ComputedRef<number> = computed((): number => (props.displayMode === 'page' ? 1 : 2))
 const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] => {
   if (props.displayMode === 'page') return [props.currentPage]
-  return [props.currentPage, props.currentPage + 1]
-    .filter((pageIndex: number): boolean => pageIndex < props.pages.length)
+  return [props.currentPage, props.currentPage + 1].filter(
+    (pageIndex: number): boolean => pageIndex < props.pages.length,
+  )
 })
-const isSpreadOnly: ComputedRef<boolean> = computed(
-  (): boolean => props.displayMode === 'spread' && props.pages.length === 2,
+const visiblePageLabel: ComputedRef<string> = computed((): string =>
+  visiblePageIndexes.value.map((pageIndex: number): number => pageIndex + 1).join('–'),
 )
 type TurnDirection = 'forward' | 'backward'
 type TurnAction = 'previous' | 'next'
@@ -43,7 +44,8 @@ let turnTimer: ReturnType<typeof setTimeout> | undefined
 
 // Запускает переворот одной страницы и синхронизирует индекс после анимации.
 const turnTo = (targetPage: number, direction: TurnDirection, action: TurnAction): void => {
-  if (isTurning.value || targetPage < props.openStartPage || targetPage >= props.pages.length) return
+  if (isTurning.value || targetPage < props.openStartPage || targetPage >= props.pages.length)
+    return
   turningPage.value = props.pages[targetPage]
   turnDirection.value = direction
   isTurning.value = true
@@ -88,13 +90,40 @@ onBeforeUnmount((): void => {
       <div
         v-if="isTurning && turningPage"
         class="pointer-events-none absolute inset-0 z-10 [transform-style:preserve-3d]"
-        :class="turnDirection === 'forward' ? 'album-page-turn--forward' : 'album-page-turn--backward'"
+        :class="
+          turnDirection === 'forward' ? 'album-page-turn--forward' : 'album-page-turn--backward'
+        "
       >
         <AlbumPage :page="turningPage" :fill="true" />
       </div>
+
+      <template v-if="isOpen">
+        <Button
+          v-if="currentPage > openStartPage"
+          class="album-book__edge-button album-book__edge-button--previous"
+          icon="pi pi-chevron-left"
+          rounded
+          type="button"
+          :aria-label="t('album.previous')"
+          :title="t('album.previous')"
+          :disabled="isTurning"
+          @click.stop="previousPage"
+        />
+        <Button
+          v-if="currentPage < pages.length - pageStep"
+          class="album-book__edge-button album-book__edge-button--next"
+          icon="pi pi-chevron-right"
+          rounded
+          type="button"
+          :aria-label="t('album.next')"
+          :title="t('album.next')"
+          :disabled="isTurning"
+          @click.stop="nextPage"
+        />
+      </template>
     </div>
 
-    <div v-if="displayMode === 'page' || !isSpreadOnly" class="flex h-10 shrink-0 items-center justify-center gap-2">
+    <div class="flex h-10 shrink-0 items-center justify-center gap-2">
       <Button
         v-if="!isOpen"
         :label="t('album.open')"
@@ -104,31 +133,15 @@ onBeforeUnmount((): void => {
         @click="openBook"
       />
       <template v-else>
-        <Button
-          v-if="currentPage > openStartPage"
-          :label="t('album.previous')"
-          icon="pi pi-arrow-left"
-          outlined
-          size="small"
-          type="button"
-          @click="previousPage"
-        />
         <span class="min-w-16 px-2 text-center text-sm font-bold text-paper/70">
-          {{ currentPage + 1 }} / {{ pages.length }}
+          {{ visiblePageLabel }} / {{ pages.length }}
         </span>
         <Button
-          v-if="currentPage < pages.length - pageStep"
-          :label="t('album.next')"
-          icon="pi pi-arrow-right"
-          icon-pos="right"
-          size="small"
-          type="button"
-          @click="nextPage"
-        />
-        <Button
-          v-else
-          :label="t('album.close')"
+          :aria-label="t('album.close')"
+          :title="t('album.close')"
           icon="pi pi-times"
+          rounded
+          text
           size="small"
           type="button"
           @click="closeBook"
@@ -169,6 +182,53 @@ onBeforeUnmount((): void => {
   box-shadow: none;
 }
 
+.album-book__edge-button {
+  position: absolute;
+  top: 50%;
+  z-index: 30;
+  display: grid;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgb(247 243 235 / 42%);
+  border-radius: 50%;
+  background: rgb(23 33 43 / 88%);
+  box-shadow: 0 8px 22px rgb(23 33 43 / 30%);
+  color: #f7f3eb;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+  backdrop-filter: blur(5px);
+}
+
+.album-book__edge-button--previous {
+  left: clamp(0.35rem, 1cqw, 0.75rem);
+}
+.album-book__edge-button--next {
+  right: clamp(0.35rem, 1cqw, 0.75rem);
+}
+
+.album-book__edge-button:hover:not(:disabled) {
+  background: #e5b95c;
+  color: #17212b;
+  transform: translateY(-50%) scale(1.06);
+}
+
+.album-book__edge-button:focus-visible {
+  outline: 3px solid #e5b95c;
+  outline-offset: 3px;
+}
+
+.album-book__edge-button:disabled {
+  cursor: wait;
+  opacity: 0.56;
+}
+
 .album-page-turn--forward,
 .album-page-turn--backward {
   transform-origin: left center;
@@ -178,7 +238,9 @@ onBeforeUnmount((): void => {
   transform-style: preserve-3d;
 }
 
-.album-page-turn--forward { animation-name: album-page-turn-forward; }
+.album-page-turn--forward {
+  animation-name: album-page-turn-forward;
+}
 .album-page-turn--backward {
   transform-origin: right center;
   animation-name: album-page-turn-backward;
@@ -191,19 +253,39 @@ onBeforeUnmount((): void => {
 }
 
 @keyframes album-page-turn-forward {
-  from { transform: rotateY(-100deg); }
-  to { transform: rotateY(0deg); }
+  from {
+    transform: rotateY(-100deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
 
 @keyframes album-page-turn-backward {
-  from { transform: rotateY(100deg); }
-  to { transform: rotateY(0deg); }
+  from {
+    transform: rotateY(100deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
 
 @media (max-width: 767px) {
   .album-book__page-focus {
     height: auto;
     width: 100%;
+  }
+
+  .album-book__edge-button {
+    width: 2.25rem;
+    min-width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .album-book__edge-button {
+    transition: none;
   }
 }
 </style>

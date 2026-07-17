@@ -23,11 +23,8 @@ defineProps<Props>()
   <div class="editorial-page" :class="`editorial-page--${pageNumber}`">
     <section v-if="pageNumber === 1" class="cover-page" aria-label="Обложка StickerBook">
       <div class="cover-page__brand">
-        <div class="cover-page__edition">
-          <img class="cover-page__logo" :src="logo" alt="" />
-          <span>Digital collector's edition</span>
-        </div>
-        <h2>Sticker<br />Book</h2>
+        <img class="cover-page__logo" :src="logo" alt="" />
+        <span class="cover-page__edition">Digital collector's edition</span>
         <p>Собирай. Вклеивай.<br />Храни историю.</p>
       </div>
 
@@ -140,15 +137,14 @@ defineProps<Props>()
 
 .cover-page__brand {
   position: absolute;
-  left: 6.2%;
-  top: 8.5%;
-  width: 39%;
+  left: 3.5%;
+  top: 5.2%;
+  width: 45%;
 }
 
 .cover-page__edition {
-  display: flex;
-  align-items: center;
-  gap: 1.4cqw;
+  display: block;
+  margin: -4.2cqw 0 1.5cqw 2.7cqw;
   color: #e5b95c;
   font-size: clamp(7px, 1.02cqw, 15px);
   font-weight: 800;
@@ -157,24 +153,14 @@ defineProps<Props>()
 }
 
 .cover-page__logo {
-  width: 5.8cqw;
-  height: 5.8cqw;
+  display: block;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  filter: grayscale(1) brightness(0) invert(91%) sepia(23%) saturate(591%);
-  opacity: 0.92;
-}
-
-.cover-page h2 {
-  margin: 4.3cqw 0 2.2cqw;
-  font-size: clamp(34px, 8.4cqw, 126px);
-  font-weight: 950;
-  letter-spacing: -0.075em;
-  line-height: 0.78;
-  text-transform: uppercase;
 }
 
 .cover-page__brand > p {
-  margin: 0;
+  margin: 0 0 0 2.7cqw;
   color: #b9d8c2;
   font-size: clamp(9px, 1.6cqw, 24px);
   font-weight: 750;

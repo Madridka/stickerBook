@@ -1,5 +1,6 @@
 import mexicoPages from './mexico/pages.json'
 import croatiaPages from './croatia/pages.json'
+import portugalPages from './portugal/pages.json'
 
 export default {
   id: 'world-cup-2026',
@@ -31,5 +32,6 @@ export default {
     },
     ...mexicoPages,
     ...croatiaPages,
+    ...portugalPages,
   ],
 }

@@ -2,7 +2,7 @@
   {
     "id": "mex-01",
     "fullName": "Mexico Team Logo",
-    "image": "/cards/mexico/MEX-01-team-logo.webp",
+    "image": "/cards/mexico/MEX-01-team-logo.png",
     "type": "logo",
     "team": "Mexico",
     "weight": 20
@@ -22,7 +22,7 @@
     "firstName": "Johan",
     "lastName": "Vásquez",
     "fullName": "Johan Vásquez",
-    "image": "/cards/mexico/MEX-03-johan-vasquez.webp",
+    "image": "/cards/mexico/MEX-03-johan-vasquez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Jorge",
     "lastName": "Sánchez",
     "fullName": "Jorge Sánchez",
-    "image": "/cards/mexico/MEX-04-jorge-sanchez.webp",
+    "image": "/cards/mexico/MEX-04-jorge-sanchez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "César",
     "lastName": "Montes",
     "fullName": "César Montes",
-    "image": "/cards/mexico/MEX-05-cesar-montes.webp",
+    "image": "/cards/mexico/MEX-05-cesar-montes.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Jesús",
     "lastName": "Gallardo",
     "fullName": "Jesús Gallardo",
-    "image": "/cards/mexico/MEX-06-jesus-gallardo.webp",
+    "image": "/cards/mexico/MEX-06-jesus-gallardo.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Israel",
     "lastName": "Reyes",
     "fullName": "Israel Reyes",
-    "image": "/cards/mexico/MEX-07-israel-reyes.webp",
+    "image": "/cards/mexico/MEX-07-israel-reyes.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Diego",
     "lastName": "Lainez",
     "fullName": "Diego Lainez",
-    "image": "/cards/mexico/MEX-08-diego-lainez.webp",
+    "image": "/cards/mexico/MEX-08-diego-lainez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Carlos",
     "lastName": "Rodríguez",
     "fullName": "Carlos Rodríguez",
-    "image": "/cards/mexico/MEX-09-carlos-rodriguez.webp",
+    "image": "/cards/mexico/MEX-09-carlos-rodriguez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Edson",
     "lastName": "Álvarez",
     "fullName": "Edson Álvarez",
-    "image": "/cards/mexico/MEX-10-edson-alvarez.webp",
+    "image": "/cards/mexico/MEX-10-edson-alvarez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Orbelín",
     "lastName": "Pineda",
     "fullName": "Orbelín Pineda",
-    "image": "/cards/mexico/MEX-11-orbelin-pineda.webp",
+    "image": "/cards/mexico/MEX-11-orbelin-pineda.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Marcel",
     "lastName": "Ruiz",
     "fullName": "Marcel Ruiz",
-    "image": "/cards/mexico/MEX-12-marcel-ruiz.webp",
+    "image": "/cards/mexico/MEX-12-marcel-ruiz.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -120,7 +120,7 @@
   {
     "id": "mex-13",
     "fullName": "Mexico Team Squad",
-    "image": "/cards/mexico/MEX-13-team-photo.webp",
+    "image": "/cards/mexico/MEX-13-team-photo.png",
     "type": "squad",
     "team": "Mexico",
     "weight": 20
@@ -130,7 +130,7 @@
     "firstName": "Érick",
     "lastName": "Sánchez",
     "fullName": "Érick Sánchez",
-    "image": "/cards/mexico/MEX-14-erick-sanchez.webp",
+    "image": "/cards/mexico/MEX-14-erick-sanchez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -150,7 +150,7 @@
     "firstName": "Santiago",
     "lastName": "Giménez",
     "fullName": "Santiago Giménez",
-    "image": "/cards/mexico/MEX-16-santiago-gimenez.webp",
+    "image": "/cards/mexico/MEX-16-santiago-gimenez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -170,7 +170,7 @@
     "firstName": "Alexis",
     "lastName": "Vega",
     "fullName": "Alexis Vega",
-    "image": "/cards/mexico/MEX-18-alexis-vega.webp",
+    "image": "/cards/mexico/MEX-18-alexis-vega.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -180,7 +180,7 @@
     "firstName": "Roberto",
     "lastName": "Alvarado",
     "fullName": "Roberto Alvarado",
-    "image": "/cards/mexico/MEX-19-roberto-alvarado.webp",
+    "image": "/cards/mexico/MEX-19-roberto-alvarado.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -190,7 +190,7 @@
     "firstName": "César",
     "lastName": "Huerta",
     "fullName": "César Huerta",
-    "image": "/cards/mexico/MEX-20-cesar-huerta.webp",
+    "image": "/cards/mexico/MEX-20-cesar-huerta.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20

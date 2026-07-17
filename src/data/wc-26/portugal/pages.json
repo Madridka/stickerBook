@@ -1,0 +1,40 @@
+[
+  {
+    "id": "portugal-left",
+    "number": 8,
+    "image": "page-08-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "por-01", "playerId": "por-01", "name": "por-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "por-02", "playerId": "por-02", "name": "por-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "por-03", "playerId": "por-03", "name": "por-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "por-04", "playerId": "por-04", "name": "por-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "por-05", "playerId": "por-05", "name": "por-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "por-06", "playerId": "por-06", "name": "por-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "por-07", "playerId": "por-07", "name": "por-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "por-08", "playerId": "por-08", "name": "por-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "por-09", "playerId": "por-09", "name": "por-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "por-10", "playerId": "por-10", "name": "por-10", "x": 1176, "y": 800, "width": 200 }
+    ]
+  },
+  {
+    "id": "portugal-right",
+    "number": 9,
+    "image": "page-09-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "por-11", "playerId": "por-11", "name": "por-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "por-12", "playerId": "por-12", "name": "por-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "por-13", "playerId": "por-13", "name": "por-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "por-14", "playerId": "por-14", "name": "por-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "por-15", "playerId": "por-15", "name": "por-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "por-16", "playerId": "por-16", "name": "por-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "por-17", "playerId": "por-17", "name": "por-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "por-18", "playerId": "por-18", "name": "por-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "por-19", "playerId": "por-19", "name": "por-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "por-20", "playerId": "por-20", "name": "por-20", "x": 1176, "y": 800, "width": 200 }
+    ]
+  }
+]

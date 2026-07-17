@@ -1,0 +1,198 @@
+[
+  {
+    "id": "por-01",
+    "fullName": "Portugal Team Logo",
+    "image": "/cards/portugal/POR-01-team-logo.png",
+    "type": "logo",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-02",
+    "firstName": "Diogo",
+    "lastName": "Costa",
+    "fullName": "Diogo Costa",
+    "image": "/cards/portugal/POR-02-diogo-costa.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-03",
+    "firstName": "José",
+    "lastName": "Sá",
+    "fullName": "José Sá",
+    "image": "/cards/portugal/POR-03-jose-sa.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-04",
+    "firstName": "Rúben",
+    "lastName": "Dias",
+    "fullName": "Rúben Dias",
+    "image": "/cards/portugal/POR-04-ruben-dias.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-05",
+    "firstName": "João",
+    "lastName": "Cancelo",
+    "fullName": "João Cancelo",
+    "image": "/cards/portugal/POR-05-joao-cancelo.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-06",
+    "firstName": "Diogo",
+    "lastName": "Dalot",
+    "fullName": "Diogo Dalot",
+    "image": "/cards/portugal/POR-06-diogo-dalot.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-07",
+    "firstName": "Nuno",
+    "lastName": "Mendes",
+    "fullName": "Nuno Mendes",
+    "image": "/cards/portugal/POR-07-nuno-mendes.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-08",
+    "firstName": "Gonçalo",
+    "lastName": "Inácio",
+    "fullName": "Gonçalo Inácio",
+    "image": "/cards/portugal/POR-08-goncalo-inacio.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-09",
+    "firstName": "Bernardo",
+    "lastName": "Silva",
+    "fullName": "Bernardo Silva",
+    "image": "/cards/portugal/POR-09-bernardo-silva.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-10",
+    "firstName": "Bruno",
+    "lastName": "Fernandes",
+    "fullName": "Bruno Fernandes",
+    "image": "/cards/portugal/POR-10-bruno-fernandes.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-11",
+    "firstName": "Rúben",
+    "lastName": "Neves",
+    "fullName": "Rúben Neves",
+    "image": "/cards/portugal/POR-11-ruben-neves.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-12",
+    "firstName": "Vitinha",
+    "lastName": "",
+    "fullName": "Vitinha",
+    "image": "/cards/portugal/POR-12-vitinha.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-13",
+    "fullName": "Portugal Team Squad",
+    "image": "/cards/portugal/POR-13-team-photo.png",
+    "type": "squad",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-14",
+    "firstName": "João",
+    "lastName": "Neves",
+    "fullName": "João Neves",
+    "image": "/cards/portugal/POR-14-joao-neves.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-15",
+    "firstName": "Cristiano",
+    "lastName": "Ronaldo",
+    "fullName": "Cristiano Ronaldo",
+    "image": "/cards/portugal/POR-15-cristiano-ronaldo.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 100
+  },
+  {
+    "id": "por-16",
+    "firstName": "Francisco",
+    "lastName": "Trincão",
+    "fullName": "Francisco Trincão",
+    "image": "/cards/portugal/POR-16-francisco-trincao.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-17",
+    "firstName": "João",
+    "lastName": "Félix",
+    "fullName": "João Félix",
+    "image": "/cards/portugal/POR-17-joao-felix.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-18",
+    "firstName": "Gonçalo",
+    "lastName": "Ramos",
+    "fullName": "Gonçalo Ramos",
+    "image": "/cards/portugal/POR-18-goncalo-ramos.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-19",
+    "firstName": "Pedro",
+    "lastName": "Neto",
+    "fullName": "Pedro Neto",
+    "image": "/cards/portugal/POR-19-pedro-neto.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  },
+  {
+    "id": "por-20",
+    "firstName": "Rafael",
+    "lastName": "Leão",
+    "fullName": "Rafael Leão",
+    "image": "/cards/portugal/POR-20-rafael-leao.png",
+    "type": "player",
+    "team": "Portugal",
+    "weight": 20
+  }
+]

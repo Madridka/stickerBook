@@ -5,28 +5,29 @@
     "image": "/cards/mexico/MEX-01-team-logo.png",
     "type": "logo",
     "team": "Mexico",
-    "weight": 20
+    "weight": 15
   },
   {
     "id": "mex-02",
-    "firstName": "Guillermo",
-    "lastName": "Ochoa",
-    "fullName": "Guillermo Ochoa",
-    "image": "/cards/mexico/MEX-02-guillermo-ochoa.png",
-    "type": "player",
+    "firstName": "Rafael",
+    "lastName": "Marquez",
+    "fullName": "Rafael Marquez",
+    "image": "/cards/mexico/MEX-02-rafael-marquez.png",
+    "type": "head coach",
     "team": "Mexico",
-    "weight": 20
+    "weight": 10
   },
   {
     "id": "mex-03",
-    "firstName": "Johan",
-    "lastName": "Vásquez",
-    "fullName": "Johan Vásquez",
-    "image": "/cards/mexico/MEX-03-johan-vasquez.png",
+    "firstName": "Guillermo",
+    "lastName": "Ochoa",
+    "fullName": "Guillermo Ochoa",
+    "image": "/cards/mexico/MEX-03-guillermo-ochoa.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
   },
+
   {
     "id": "mex-04",
     "firstName": "Jorge",
@@ -69,10 +70,10 @@
   },
   {
     "id": "mex-08",
-    "firstName": "Diego",
-    "lastName": "Lainez",
-    "fullName": "Diego Lainez",
-    "image": "/cards/mexico/MEX-08-diego-lainez.png",
+    "firstName": "Johan",
+    "lastName": "Vásquez",
+    "fullName": "Johan Vásquez",
+    "image": "/cards/mexico/MEX-08-johan-vasquez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -119,9 +120,11 @@
   },
   {
     "id": "mex-13",
-    "fullName": "Mexico Team Squad",
-    "image": "/cards/mexico/MEX-13-team-photo.png",
-    "type": "squad",
+    "firstName": "Diego",
+    "lastName": "Lainez",
+    "fullName": "Diego Lainez",
+    "image": "/cards/mexico/MEX-13-diego-lainez.png",
+    "type": "player",
     "team": "Mexico",
     "weight": 20
   },

@@ -7,11 +7,13 @@ import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
 import type { AlbumPageData } from '@/components/Album/AlbumPage.vue'
 import StickerSlot from '@/components/Album/StickerSlot.vue'
 import StickerTray from '@/components/Sticker/StickerTray.vue'
+import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 import { resolveStickerPlacement } from '@/components/DragDrop/dropGeometry'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import cards from '@/data/wc-26/players'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
+import { useDeletedCardsStore } from '@/stores/deletedCards'
 import projectReadme from '../../README.md?raw'
 import projectLogo from '../../assets/game/wc-26/main/sticker-book-logo.png?url'
 import type {
@@ -21,6 +23,7 @@ import type {
   StickerDropResult,
   StickerPlacement,
   StickerPreparation,
+  StickerInstance,
   StickerTrayItem,
 } from '@/types'
 
@@ -90,6 +93,7 @@ const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
 const { t } = useI18n()
 const album = useAlbumStore()
 const collection = useCollectionStore()
+const deletedCards = useDeletedCardsStore()
 const currentPage: Ref<number> = ref(0)
 const isBookOpen: Ref<boolean> = ref(false)
 const isDesktopSpread: Ref<boolean> = ref(false)
@@ -97,6 +101,8 @@ const activeTargetId: Ref<string | undefined> = ref(undefined)
 const pendingDrop: Ref<StickerDropResult | undefined> = ref(undefined)
 const confirmationKind: Ref<'wrong' | 'far'> = ref('far')
 const isConfirmOpen: Ref<boolean> = ref(false)
+const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
+const isPreviewOpen: Ref<boolean> = ref(false)
 let desktopMediaQuery: MediaQueryList | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
@@ -164,18 +170,22 @@ const getPlacedCard = (
 ):
   | {
       card: PlayerCard
+      instance: StickerInstance
       placement: StickerPlacement
       preparation?: StickerPreparation
     }
   | undefined => {
   const item: CollectionItem | undefined = collection.items.find(
-    ({ instance }): boolean => normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
+    ({ instance }): boolean =>
+      instance.location === 'album' &&
+      normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
   )
   if (!item?.instance.placement) return undefined
   const card: PlayerCard | undefined = getCard(item.instance.playerId)
   return card
     ? {
         card,
+        instance: item.instance,
         placement: item.instance.placement,
         preparation: item.instance.preparation,
       }
@@ -191,6 +201,22 @@ const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[]
     })
     .filter((item: StickerTrayItem | undefined): item is StickerTrayItem => Boolean(item)),
 )
+
+const openPreview = (instance: StickerInstance): void => {
+  const card: PlayerCard | undefined = getCard(instance.playerId)
+  if (!card) return
+  previewItem.value = { card, instance }
+  isPreviewOpen.value = true
+}
+
+const removeCard = async (instanceId: string): Promise<void> => {
+  const item: CollectionItem | undefined = collection.items.find(
+    ({ instance }): boolean => instance.id === instanceId,
+  )
+  if (!item) return
+  await deletedCards.removeCard(item.instance)
+  await collection.updateCard(instanceId, { location: 'deleted' })
+}
 
 // Открывает страницу выбранного игрока и подсвечивает единственную подходящую ячейку.
 const focusCardTarget = (playerId: string): void => {
@@ -372,9 +398,11 @@ onBeforeUnmount((): void => {
                 :page="pages[pageIndex].geometry"
                 :target-card="getCard(slot.playerId)"
                 :card="getPlacedCard(slot.id)?.card"
+                :instance="getPlacedCard(slot.id)?.instance"
                 :placement="getPlacedCard(slot.id)?.placement"
                 :preparation="getPlacedCard(slot.id)?.preparation"
                 :highlighted="activeTargetId === slot.playerId"
+                @preview="openPreview"
               />
             </template>
           </template>
@@ -388,6 +416,7 @@ onBeforeUnmount((): void => {
         @drag-start="prepareDropPage"
         @ready="savePreparation"
         @drop="handleDrop"
+        @remove="removeCard"
       />
     </div>
 
@@ -396,6 +425,12 @@ onBeforeUnmount((): void => {
       :kind="confirmationKind"
       @confirm="confirmDrop"
       @cancel="cancelDrop"
+    />
+    <StickerPreviewDialog
+      v-model:visible="isPreviewOpen"
+      :card="previewItem?.card"
+      :instance="previewItem?.instance"
+      @remove="removeCard($event.id)"
     />
   </section>
 </template>

@@ -13,6 +13,7 @@ interface Props {
 
 interface Emits {
   prepare: [instanceId: string]
+  preview: []
   'drag-start': [playerId: string]
   drop: [result: StickerDropResult]
 }
@@ -65,10 +66,13 @@ const finishDrag = (event: PointerEvent): void => {
   )
 
   if (!props.prepared) {
-    if (movement < dragThreshold) emit('prepare', props.instance.id)
+    if (movement < dragThreshold) emit('preview')
     return
   }
-  if (!isDragging.value) return
+  if (!isDragging.value) {
+    emit('preview')
+    return
+  }
   isDragging.value = false
   const result: StickerDropResult | undefined = evaluateStickerDrop(
     { x: event.clientX, y: event.clientY },
@@ -83,7 +87,7 @@ const cancelDrag = (): void => {
 }
 
 const handleKeyboardClick = (event: MouseEvent): void => {
-  if (event.detail === 0 && !props.prepared) emit('prepare', props.instance.id)
+  if (event.detail === 0) emit('preview')
 }
 </script>
 

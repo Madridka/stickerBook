@@ -8,6 +8,7 @@ import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
 import cards from '@/data/wc-26/players'
 import { useCollectionStore } from '@/stores/collection'
+import { useDeletedCardsStore } from '@/stores/deletedCards'
 import type { CollectionItem, PlayerCard, StickerInstance } from '@/types'
 
 interface DuplicateGroup {
@@ -17,12 +18,23 @@ interface DuplicateGroup {
 
 const { t } = useI18n()
 const collection = useCollectionStore()
+const deletedCards = useDeletedCardsStore()
 const activeTab: Ref<string> = ref('collection')
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
   collection.items.filter((item: CollectionItem): boolean =>
+    item.instance.location !== 'deleted' &&
     cards.some(({ id }): boolean => id === item.instance.playerId),
   ),
+)
+
+// Сохраняет порядок журнала удаления и связывает его с исходными экземплярами карточек.
+const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
+  deletedCards.items
+    .map(({ instanceId }): CollectionItem | undefined =>
+      collection.items.find(({ instance }): boolean => instance.id === instanceId),
+    )
+    .filter((item: CollectionItem | undefined): item is CollectionItem => Boolean(item)),
 )
 
 // Группирует физические экземпляры повторов по карточке для отображения в хранилище.
@@ -53,7 +65,7 @@ const getCard = (playerId: string): PlayerCard | undefined =>
       <div class="flex gap-6 text-right text-xs font-semibold text-ink/55">
         <div>
           <strong class="block text-2xl font-black text-ink"
-            >{{ collection.items.length }} / {{ collection.total }}</strong
+            >{{ collectedItems.length }} / {{ collection.total }}</strong
           >
           {{ t('album.uniqueFound') }}
         </div>
@@ -83,6 +95,15 @@ const getCard = (playerId: string): PlayerCard | undefined =>
             {{ t('album.duplicatesTab') }}
             <span class="rounded-full bg-coral/15 px-2 py-0.5 text-xs text-coral">{{
               collection.duplicateTotal
+            }}</span>
+          </span>
+        </Tab>
+        <Tab value="deleted">
+          <span class="flex items-center gap-2">
+            <i class="pi pi-trash" />
+            {{ t('album.deletedTab') }}
+            <span class="rounded-full bg-ink/10 px-2 py-0.5 text-xs">{{
+              deletedItems.length
             }}</span>
           </span>
         </Tab>
@@ -161,6 +182,47 @@ const getCard = (playerId: string): PlayerCard | undefined =>
             <i class="pi pi-inbox text-4xl text-ink/25" />
             <strong class="mt-4 text-lg">{{ t('album.duplicatesEmptyTitle') }}</strong>
             <p class="mt-1 max-w-sm text-sm text-ink/55">{{ t('album.duplicatesEmptyText') }}</p>
+          </div>
+        </TabPanel>
+
+        <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="deleted">
+          <div
+            v-if="deletedItems.length"
+            class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"
+          >
+            <article
+              v-for="item in deletedItems"
+              :key="item.instance.id"
+              class="border-2 border-ink/40 bg-paper p-2 opacity-75 shadow-[4px_4px_0_rgb(var(--color-ink)/0.12)]"
+            >
+              <img
+                v-if="getCard(item.instance.playerId)"
+                class="aspect-[2/3] w-full bg-white object-cover grayscale"
+                :src="getCard(item.instance.playerId)?.image"
+                :alt="getCard(item.instance.playerId)?.fullName"
+              />
+              <div class="mt-2 flex items-start justify-between gap-2">
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-black">
+                    {{ getCard(item.instance.playerId)?.fullName }}
+                  </p>
+                  <p class="text-[11px] font-semibold text-ink/50">
+                    {{ t('album.location.deleted') }}
+                  </p>
+                </div>
+                <span class="rounded bg-ink/10 px-1.5 py-0.5 text-[10px] font-black"
+                  >{{ item.instance.quality }}%</span
+                >
+              </div>
+            </article>
+          </div>
+          <div
+            v-else
+            class="flex h-full min-h-56 flex-col items-center justify-center border border-dashed border-ink/20 p-8 text-center"
+          >
+            <i class="pi pi-trash text-4xl text-ink/25" />
+            <strong class="mt-4 text-lg">{{ t('album.deletedEmptyTitle') }}</strong>
+            <p class="mt-1 max-w-sm text-sm text-ink/55">{{ t('album.deletedEmptyText') }}</p>
           </div>
         </TabPanel>
       </TabPanels>

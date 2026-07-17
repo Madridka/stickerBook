@@ -32,6 +32,13 @@ const desktopMenuItems = computed(() => [resetProgressItem.value])
 // На мобильном экране объединяет основную навигацию и административный сброс.
 const mobileMenuItems = computed(() => [
   {
+    label: t('app.home'),
+    icon: 'pi pi-home',
+    command: (): void => {
+      void router.push('/')
+    },
+  },
+  {
     label: t('app.album'),
     icon: 'pi pi-book',
     command: (): void => {
@@ -97,6 +104,9 @@ const resetProgress = async (): Promise<void> => {
           v-if="!isPackOpening"
           class="hidden items-center gap-4 text-sm font-semibold md:flex md:gap-7"
         >
+          <RouterLink class="transition-colors hover:text-coral" to="/">{{
+            t('app.home')
+          }}</RouterLink>
           <RouterLink class="transition-colors hover:text-coral" to="/album">{{
             t('app.album')
           }}</RouterLink>

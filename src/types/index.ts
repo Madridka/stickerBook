@@ -1,6 +1,6 @@
 export type PlayerPosition = 'GK' | 'DF' | 'MF' | 'FW'
 export type CardType = 'logo' | 'player' | 'squad'
-export type StickerLocation = 'inventory' | 'collection' | 'album' | 'duplicate'
+export type StickerLocation = 'inventory' | 'collection' | 'album' | 'duplicate' | 'deleted'
 
 export interface PlayerCard {
   id: string
@@ -21,6 +21,13 @@ export interface StickerInstance {
   location: StickerLocation
   preparation?: StickerPreparation
   placement?: StickerPlacement
+}
+
+export interface DeletedCard {
+  id: string
+  instanceId: string
+  playerId: string
+  deletedAt: number
 }
 
 export interface StickerPreparation {

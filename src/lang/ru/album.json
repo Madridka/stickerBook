@@ -12,9 +12,12 @@
   "duplicatesStored": "повторок",
   "uniqueTab": "Основная коллекция",
   "duplicatesTab": "Хранилище повторов",
+  "deletedTab": "Удалённые",
   "inDuplicateStorage": "Повтор · хранится отдельно",
   "duplicatesEmptyTitle": "Хранилище пока пусто",
   "duplicatesEmptyText": "Повторная карточка из набора автоматически появится здесь и не займёт место оригинала.",
+  "deletedEmptyTitle": "Удалённых карточек нет",
+  "deletedEmptyText": "Удалённые карточки останутся здесь в истории и не будут занимать места в альбоме.",
   "spreadTitle": "Чемпионат мира 2026 · страница {page}",
   "spreadRangeTitle": "Чемпионат мира 2026 · разворот {pages}",
   "spreadProgress": "Вклеено {placed} из {total}",
@@ -23,7 +26,8 @@
     "inventory": "Готова к вклейке",
     "collection": "В коллекции",
     "album": "Вклеена в альбом",
-    "duplicate": "В хранилище повторов"
+    "duplicate": "В хранилище повторов",
+    "deleted": "Удалена"
   },
   "open": "Открыть альбом",
   "previous": "Назад",

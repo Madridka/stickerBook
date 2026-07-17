@@ -46,6 +46,7 @@ export const useCollectionStore = defineStore('collection', () => {
         const card: StickerInstance | undefined = await database.cards
           .where('playerId')
           .equals(playerId)
+          .filter(({ location }: StickerInstance): boolean => location !== 'deleted')
           .first()
         if (card) {
           storedInstance = { ...instance, location: 'duplicate' }
@@ -88,7 +89,11 @@ export const useCollectionStore = defineStore('collection', () => {
 
   // Вычисляет процент найденных стикеров текущей коллекции
   const progress: ComputedRef<number> = computed((): number =>
-    Math.round((items.value.length / total) * 100),
+    Math.round(
+      (items.value.filter(({ instance }): boolean => instance.location !== 'deleted').length /
+        total) *
+        100,
+    ),
   )
 
   void load()
@@ -97,7 +102,9 @@ export const useCollectionStore = defineStore('collection', () => {
     items,
     duplicates,
     collected: computed((): string[] =>
-      items.value.map(({ instance }): string => instance.playerId),
+      items.value
+        .filter(({ instance }): boolean => instance.location !== 'deleted')
+        .map(({ instance }): string => instance.playerId),
     ),
     duplicateTotal: computed((): number => duplicates.value.length),
     isLoaded,

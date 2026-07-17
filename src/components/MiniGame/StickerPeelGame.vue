@@ -283,7 +283,7 @@ onBeforeUnmount(clearPeelTimer)
           />
           <div class="absolute inset-2 rounded border border-dashed border-ink/25 bg-white/75" />
           <span
-            class="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center text-[10px] font-black uppercase tracking-widest text-ink/45"
+            class="absolute inset-x-0 top-1/2 -translate-y-1/2 scale-x-[-1] text-center text-[10px] font-black uppercase tracking-widest text-ink/45"
           >
             {{ t('stickerTray.protectiveLayer') }}
           </span>

@@ -3,6 +3,7 @@ import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import StickerDraggable from '@/components/DragDrop/StickerDraggable.vue'
 import StickerPeelGame from '@/components/MiniGame/StickerPeelGame.vue'
+import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 import type { StickerDropResult, StickerPreparation, StickerTrayItem } from '@/types'
 
 interface Props {
@@ -15,6 +16,7 @@ interface Emits {
   'drag-start': [playerId: string]
   ready: [instanceId: string, preparation: StickerPreparation]
   drop: [result: StickerDropResult]
+  remove: [instanceId: string]
 }
 
 const props = defineProps<Props>()
@@ -23,6 +25,8 @@ const { t } = useI18n()
 const selectedInstanceId: Ref<string | undefined> = ref(undefined)
 const isPeelOpen: Ref<boolean> = ref(false)
 const isPreparationCompleted: Ref<boolean> = ref(false)
+const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
+const isPreviewOpen: Ref<boolean> = ref(false)
 const selectedItem: ComputedRef<StickerTrayItem | undefined> = computed(
   (): StickerTrayItem | undefined =>
     props.cards.find(({ instance }): boolean => instance.id === selectedInstanceId.value),
@@ -33,6 +37,16 @@ const prepareSticker = (item: StickerTrayItem): void => {
   isPreparationCompleted.value = false
   emit('focus', item.instance.playerId)
   isPeelOpen.value = true
+}
+
+const openPreview = (item: StickerTrayItem): void => {
+  previewItem.value = item
+  isPreviewOpen.value = true
+}
+
+const preparePreviewedSticker = (): void => {
+  if (!previewItem.value) return
+  prepareSticker(previewItem.value)
 }
 
 // Сохраняет результат мини-игры и разрешает перенос конкретного экземпляра.
@@ -100,6 +114,7 @@ const closePreparation = (): void => {
         :instance="item.instance"
         :prepared="Boolean(item.instance.preparation)"
         @prepare="prepareSticker(item)"
+        @preview="openPreview(item)"
         @drag-start="emit('drag-start', $event)"
         @drop="emit('drop', $event)"
       />
@@ -117,5 +132,12 @@ const closePreparation = (): void => {
     :item="selectedItem"
     @complete="completePreparation"
     @closed="closePreparation"
+  />
+  <StickerPreviewDialog
+    v-model:visible="isPreviewOpen"
+    :card="previewItem?.card"
+    :instance="previewItem?.instance"
+    @prepare="preparePreviewedSticker"
+    @remove="emit('remove', $event.id)"
   />
 </template>

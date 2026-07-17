@@ -1,5 +1,5 @@
 import Dexie, { type Table } from 'dexie'
-import type { StickerInstance } from '@/types'
+import type { DeletedCard, StickerInstance } from '@/types'
 
 export interface CollectedSticker {
   // Уникальный идентификатор найденного стикера
@@ -34,6 +34,7 @@ interface StickerBookDatabase extends Dexie {
   inventory: Table<InventoryItem, string>
   cards: Table<StickerInstance, string>
   duplicates: Table<StickerInstance, string>
+  deletedCards: Table<DeletedCard, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -51,4 +52,12 @@ database.version(4).stores({
   inventory: 'id, type, createdAt',
   cards: 'id, playerId, location',
   duplicates: 'id, playerId, location',
+})
+database.version(5).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
 })

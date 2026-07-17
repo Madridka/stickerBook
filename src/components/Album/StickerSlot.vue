@@ -7,6 +7,7 @@ import type {
   AlbumGeometryPage,
   AlbumGeometrySlot,
   PlayerCard,
+  StickerInstance,
   StickerPlacement,
   StickerPreparation,
 } from '@/types'
@@ -16,12 +17,14 @@ interface Props {
   page: AlbumGeometryPage
   targetCard?: PlayerCard
   card?: PlayerCard
+  instance?: StickerInstance
   placement?: StickerPlacement
   preparation?: StickerPreparation
   highlighted?: boolean
 }
 
 const props = defineProps<Props>()
+const emit = defineEmits<{ preview: [instance: StickerInstance] }>()
 const { t } = useI18n()
 const album = useAlbumStore()
 const targetName: ComputedRef<string> = computed(
@@ -53,6 +56,10 @@ const cardStyle = (): Record<string, string> => {
       ? 'none'
       : `translate(${x * 100}%, ${y * 100}%) rotate(${rotation}deg)`,
   }
+}
+
+const previewCard = (): void => {
+  if (props.instance) emit('preview', props.instance)
 }
 </script>
 
@@ -90,10 +97,11 @@ const cardStyle = (): Record<string, string> => {
     </div>
     <img
       v-if="card"
-      class="absolute inset-0 z-10 h-full w-full object-fill"
+      class="absolute inset-0 z-10 h-full w-full cursor-pointer object-fill"
       :src="card.image"
       :alt="card.fullName"
       :style="cardStyle()"
+      @click="previewCard"
     />
   </div>
 </template>

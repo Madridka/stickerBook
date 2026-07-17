@@ -5,34 +5,32 @@
     "image": "/cards/portugal/POR-01-team-logo.png",
     "type": "logo",
     "team": "Portugal",
-    "weight": 20
+    "weight": 15
   },
   {
     "id": "por-02",
-    "firstName": "Diogo",
-    "lastName": "Costa",
-    "fullName": "Diogo Costa",
-    "image": "/cards/portugal/POR-02-diogo-costa.png",
-    "type": "player",
+    "fullName": "Roberto Martinez",
+    "image": "/cards/portugal/POR-02-roberto-martinez.png",
+    "type": "head coach",
     "team": "Portugal",
-    "weight": 20
+    "weight": 10
   },
   {
     "id": "por-03",
-    "firstName": "José",
-    "lastName": "Sá",
-    "fullName": "José Sá",
-    "image": "/cards/portugal/POR-03-jose-sa.png",
+    "firstName": "Diogo",
+    "lastName": "Costa",
+    "fullName": "Diogo Costa",
+    "image": "/cards/portugal/POR-03-diogo-costa.png",
     "type": "player",
     "team": "Portugal",
     "weight": 20
   },
   {
     "id": "por-04",
-    "firstName": "Rúben",
-    "lastName": "Dias",
-    "fullName": "Rúben Dias",
-    "image": "/cards/portugal/POR-04-ruben-dias.png",
+    "firstName": "José",
+    "lastName": "Sá",
+    "fullName": "José Sá",
+    "image": "/cards/portugal/POR-04-jose-sa.png",
     "type": "player",
     "team": "Portugal",
     "weight": 20
@@ -79,10 +77,10 @@
   },
   {
     "id": "por-09",
-    "firstName": "Bernardo",
-    "lastName": "Silva",
-    "fullName": "Bernardo Silva",
-    "image": "/cards/portugal/POR-09-bernardo-silva.png",
+    "firstName": "Rúben",
+    "lastName": "Dias",
+    "fullName": "Rúben Dias",
+    "image": "/cards/portugal/POR-09-ruben-dias.png",
     "type": "player",
     "team": "Portugal",
     "weight": 20
@@ -119,9 +117,11 @@
   },
   {
     "id": "por-13",
-    "fullName": "Portugal Team Squad",
-    "image": "/cards/portugal/POR-13-team-photo.png",
-    "type": "squad",
+    "firstName": "Bernardo",
+    "lastName": "Silva",
+    "fullName": "Bernardo Silva",
+    "image": "/cards/portugal/POR-13-bernardo-silva.png",
+    "type": "player",
     "team": "Portugal",
     "weight": 20
   },
@@ -143,7 +143,7 @@
     "image": "/cards/portugal/POR-15-cristiano-ronaldo.png",
     "type": "player",
     "team": "Portugal",
-    "weight": 100
+    "weight": 5
   },
   {
     "id": "por-16",

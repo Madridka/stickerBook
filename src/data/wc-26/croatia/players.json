@@ -5,24 +5,24 @@
     "image": "/cards/croatia/CRO-01-team-logo.png",
     "type": "logo",
     "team": "Croatia",
-    "weight": 20
+    "weight": 15
   },
   {
     "id": "cro-02",
-    "firstName": "Dominik",
-    "lastName": "Livaković",
-    "fullName": "Dominik Livaković",
-    "image": "/cards/croatia/CRO-02-dominik-livakovic.png",
-    "type": "player",
+    "firstName": "Zlatko",
+    "lastName": "Dalić",
+    "fullName": "Zlatko Dalić",
+    "image": "/cards/croatia/CRO-02-zlatko-dalic.png",
+    "type": "head coach",
     "team": "Croatia",
-    "weight": 20
+    "weight": 10
   },
   {
     "id": "cro-03",
-    "firstName": "Duje",
-    "lastName": "Ćaleta-Car",
-    "fullName": "Duje Ćaleta-Car",
-    "image": "/cards/croatia/CRO-03-duje-caleta-car.png",
+    "firstName": "Dominik",
+    "lastName": "Livaković",
+    "fullName": "Dominik Livaković",
+    "image": "/cards/croatia/CRO-03-dominik-livakovic.png",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -69,10 +69,10 @@
   },
   {
     "id": "cro-08",
-    "firstName": "Kristijan",
-    "lastName": "Jakić",
-    "fullName": "Kristijan Jakić",
-    "image": "/cards/croatia/CRO-08-kristijan-jakic.png",
+    "firstName": "Duje",
+    "lastName": "Ćaleta-Car",
+    "fullName": "Duje Ćaleta-Car",
+    "image": "/cards/croatia/CRO-08-duje-caleta-car.png",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -85,7 +85,7 @@
     "image": "/cards/croatia/CRO-09-luka-modric.png",
     "type": "player",
     "team": "Croatia",
-    "weight": 100
+    "weight": 5
   },
   {
     "id": "cro-10",
@@ -119,9 +119,11 @@
   },
   {
     "id": "cro-13",
-    "fullName": "Croatia Team Squad",
-    "image": "/cards/croatia/CRO-13-team-photo.png",
-    "type": "squad",
+    "firstName": "Kristijan",
+    "lastName": "Jakić",
+    "fullName": "Kristijan Jakić",
+    "image": "/cards/croatia/CRO-13-kristijan-jakic.png",
+    "type": "player",
     "team": "Croatia",
     "weight": 20
   },

@@ -9,7 +9,7 @@ import StickerSlot from '@/components/Album/StickerSlot.vue'
 import StickerTray from '@/components/Sticker/StickerTray.vue'
 import { resolveStickerPlacement } from '@/components/DragDrop/dropGeometry'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
-import cardsData from '@/data/wc-26/mexico/players.json'
+import cards from '@/data/wc-26/players'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
 import projectReadme from '../../README.md?raw'
@@ -100,17 +100,16 @@ const isConfirmOpen: Ref<boolean> = ref(false)
 let desktopMediaQuery: MediaQueryList | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
-  '../../assets/game/wc-26/mexico/album/*.png',
+  '../../assets/game/wc-26/main/album/*.png',
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
-const cards: PlayerCard[] = cardsData as PlayerCard[]
 
 const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
   album.pages.map(
     (page: AlbumGeometryPage): AlbumPageView => ({
       id: page.id,
       title: t('album.spreadTitle', { page: String(page.number).padStart(2, '0') }),
-      image: albumImages[`../../assets/game/wc-26/mexico/album/${page.image}`],
+      image: albumImages[`../../assets/game/wc-26/main/album/${page.image}`],
       geometry: page,
     }),
   ),

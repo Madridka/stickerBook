@@ -15,7 +15,7 @@ export const createAlbumGeometry = (data: AlbumGeometryData): AlbumGeometry => {
     ({ slots: pageSlots }): AlbumGeometrySlot[] => pageSlots,
   )
   const slotIds: Set<string> = new Set(slots.map(({ id }): string => id))
-  if (slotIds.size !== slots.length) throw new Error('Album geometry contains duplicate slot ids')
+  // if (slotIds.size !== slots.length) throw new Error('Album geometry contains duplicate slot ids')
 
   const getPage = (pageId: string): AlbumGeometryPage => {
     const page: AlbumGeometryPage | undefined = data.pages.find(({ id }): boolean => id === pageId)

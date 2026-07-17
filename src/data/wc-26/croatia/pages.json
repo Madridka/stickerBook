@@ -1,0 +1,40 @@
+[
+  {
+    "id": "croatia-left",
+    "number": 6,
+    "image": "page-06-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "cro-01", "playerId": "cro-01", "name": "cro-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "cro-02", "playerId": "cro-02", "name": "cro-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "cro-03", "playerId": "cro-03", "name": "cro-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "cro-04", "playerId": "cro-04", "name": "cro-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "cro-05", "playerId": "cro-05", "name": "cro-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "cro-06", "playerId": "cro-06", "name": "cro-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "cro-07", "playerId": "cro-07", "name": "cro-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "cro-08", "playerId": "cro-08", "name": "cro-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "cro-09", "playerId": "cro-09", "name": "cro-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "cro-10", "playerId": "cro-10", "name": "cro-10", "x": 1176, "y": 800, "width": 200 }
+    ]
+  },
+  {
+    "id": "croatia-right",
+    "number": 7,
+    "image": "page-07-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "cro-11", "playerId": "cro-11", "name": "cro-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "cro-12", "playerId": "cro-12", "name": "cro-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "cro-13", "playerId": "cro-13", "name": "cro-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "cro-14", "playerId": "cro-14", "name": "cro-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "cro-15", "playerId": "cro-15", "name": "cro-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "cro-16", "playerId": "cro-16", "name": "cro-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "cro-17", "playerId": "cro-17", "name": "cro-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "cro-18", "playerId": "cro-18", "name": "cro-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "cro-19", "playerId": "cro-19", "name": "cro-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "cro-20", "playerId": "cro-20", "name": "cro-20", "x": 1176, "y": 800, "width": 200 }
+    ]
+  }
+]

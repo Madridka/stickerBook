@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 import PackAnimation from '@/components/PackAnimation.vue'
 import StickerReveal from '@/components/StickerReveal.vue'
-import cardsData from '@/data/wc-26/mexico/players.json'
+import cards from '@/data/wc-26/players'
 import packData from '@/data/mainConst.json'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
@@ -29,7 +29,6 @@ const isCurrentDuplicate: ComputedRef<boolean> = computed(
     collection.items.some(({ instance }): boolean => instance.playerId === currentCard.value?.id),
 )
 const isOpening: Ref<boolean> = ref(false)
-const cards: PlayerCard[] = cardsData as PlayerCard[]
 
 // Формирует пять карточек по весам из JSON перед началом показа
 const drawCards = (): void => {

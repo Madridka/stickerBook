@@ -6,7 +6,7 @@ import TabList from 'primevue/tablist'
 import TabPanel from 'primevue/tabpanel'
 import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
-import cardsData from '@/data/wc-26/mexico/players.json'
+import cards from '@/data/wc-26/players'
 import { useCollectionStore } from '@/stores/collection'
 import type { CollectionItem, PlayerCard, StickerInstance } from '@/types'
 
@@ -18,7 +18,6 @@ interface DuplicateGroup {
 const { t } = useI18n()
 const collection = useCollectionStore()
 const activeTab: Ref<string> = ref('collection')
-const cards: PlayerCard[] = cardsData as PlayerCard[]
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
   collection.items.filter((item: CollectionItem): boolean =>

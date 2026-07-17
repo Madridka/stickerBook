@@ -30,8 +30,8 @@ const cardStyle = (): Record<string, string> => ({
 
 <template>
   <div
-    class="sticker-slot absolute rounded-[2px] border border-gold/80 shadow-inner"
-    :class="{ 'sticker-slot--highlighted': highlighted && !card }"
+    class="absolute rounded-[2px] border border-gold/80 bg-[rgb(250_245_231/0.92)] shadow-inner transition-[box-shadow,transform,background-color] duration-[180ms] ease-[ease] before:pointer-events-none before:absolute before:inset-[3%] before:border before:border-gold/[0.58] before:content-['']"
+    :class="{ 'z-[15] animate-target-pulse bg-[rgb(var(--color-mint)/0.92)] shadow-[0_0_0_3px_rgb(var(--color-paper)),0_0_0_7px_rgb(var(--color-coral)),0_0_26px_rgb(var(--color-coral)/0.8)]': highlighted && !card }"
     :style="slotStyle()"
     :aria-label="t('album.slotTarget', { name: targetName })"
     :title="targetName"
@@ -42,10 +42,10 @@ const cardStyle = (): Record<string, string> => ({
   >
     <!-- Пустой слот показывает номер и имя игрока вместо служебных координат. -->
     <div v-if="!card" class="pointer-events-none absolute inset-0 flex flex-col items-center justify-between p-[6%] text-center">
-      <span class="rounded bg-ink/90 px-1.5 py-0.5 text-[clamp(0.38rem,0.55vw,0.65rem)] font-black text-paper">
+      <span class="rounded bg-ink/90 px-1.5 py-0.5 text-[clamp(0.38rem,0.55vw,0.65rem)] font-black text-paper max-md:px-1 max-md:py-[0.1rem] max-md:text-[clamp(0.25rem,1.1vw,0.4rem)]">
         {{ slotCode }}
       </span>
-      <span class="w-full bg-paper/90 px-1 py-1 text-[clamp(0.42rem,0.68vw,0.76rem)] font-black leading-tight text-ink">
+      <span class="w-full bg-paper/90 px-1 py-1 text-[clamp(0.42rem,0.68vw,0.76rem)] font-black leading-tight text-ink max-md:py-[0.15rem] max-md:text-[clamp(0.28rem,1.3vw,0.48rem)]">
         {{ targetName }}
       </span>
     </div>
@@ -58,42 +58,3 @@ const cardStyle = (): Record<string, string> => ({
     />
   </div>
 </template>
-
-<style scoped>
-.sticker-slot {
-  background: rgb(250 245 231 / 0.92);
-  transition: box-shadow 180ms ease, transform 180ms ease, background-color 180ms ease;
-}
-
-.sticker-slot::before {
-  content: '';
-  position: absolute;
-  inset: 3%;
-  pointer-events: none;
-  border: 1px solid rgb(var(--color-gold) / 0.58);
-}
-
-.sticker-slot--highlighted {
-  z-index: 15;
-  background: rgb(var(--color-mint) / 0.92);
-  box-shadow: 0 0 0 3px rgb(var(--color-paper)), 0 0 0 7px rgb(var(--color-coral)), 0 0 26px rgb(var(--color-coral) / 0.8);
-  animation: target-pulse 950ms ease-in-out infinite alternate;
-}
-
-@keyframes target-pulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.055); }
-}
-
-@media (max-width: 767px) {
-  .sticker-slot > div > span:first-child {
-    padding: 0.1rem 0.25rem;
-    font-size: clamp(0.25rem, 1.1vw, 0.4rem);
-  }
-
-  .sticker-slot > div > span:last-child {
-    padding: 0.15rem 0.25rem;
-    font-size: clamp(0.28rem, 1.3vw, 0.48rem);
-  }
-}
-</style>

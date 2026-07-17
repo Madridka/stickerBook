@@ -24,8 +24,7 @@ interface PointerOrigin {
 }
 
 interface PressZone {
-  left: string
-  top: string
+  className: string
 }
 
 const props = defineProps<Props>()
@@ -45,10 +44,10 @@ const alignmentDistance: ComputedRef<number> = computed(
   (): number => Math.round(Math.hypot(alignX.value, alignY.value)),
 )
 const pressZones: PressZone[] = [
-  { left: '8%', top: '8%' },
-  { left: '72%', top: '8%' },
-  { left: '72%', top: '76%' },
-  { left: '8%', top: '76%' },
+  { className: 'left-[8%] top-[8%]' },
+  { className: 'left-[72%] top-[8%]' },
+  { className: 'left-[72%] top-[76%]' },
+  { className: 'left-[8%] top-[76%]' },
 ]
 const stepTranslationKeys: string[] = [
   'stickerTray.stepPeel',
@@ -156,8 +155,8 @@ const handleHide = (): void => emit('closed')
   <Dialog
     :visible="visible"
     modal
+    class="w-[min(34rem,calc(100vw-1.5rem))]"
     :header="t('stickerTray.peelTitle')"
-    :style="{ width: 'min(34rem, calc(100vw - 1.5rem))' }"
     @update:visible="updateVisible"
     @hide="handleHide"
   >
@@ -246,8 +245,7 @@ const handleHide = (): void => emit('closed')
           v-for="(zone, index) in pressZones"
           :key="index"
           class="absolute flex h-10 w-10 items-center justify-center rounded-full border-2 text-sm font-black shadow transition"
-          :class="index < pressedCount ? 'border-mint bg-mint text-ink' : index === pressedCount ? 'border-coral bg-coral text-white ring-4 ring-coral/25' : 'border-white/80 bg-ink/65 text-white'"
-          :style="{ left: zone.left, top: zone.top }"
+          :class="[zone.className, index < pressedCount ? 'border-mint bg-mint text-ink' : index === pressedCount ? 'border-coral bg-coral text-white ring-4 ring-coral/25' : 'border-white/80 bg-ink/65 text-white']"
           type="button"
           @click="pressCorner(index)"
         >

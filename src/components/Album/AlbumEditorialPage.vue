@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 interface AlbumReleaseNote {
   version: string
   title: string
@@ -17,458 +19,235 @@ interface Props {
 }
 
 defineProps<Props>()
+const { t } = useI18n()
 </script>
 
 <template>
-  <div class="editorial-page" :class="`editorial-page--${pageNumber}`">
-    <section v-if="pageNumber === 1" class="cover-page" aria-label="Обложка StickerBook">
-      <div class="cover-page__brand">
-        <img class="cover-page__logo" :src="logo" alt="" />
-        <span class="cover-page__edition">Digital collector's edition</span>
-        <p>Собирай. Вклеивай.<br />Храни историю.</p>
+  <div
+    class="editorial-page absolute inset-0 overflow-hidden text-[#17212b] [container-type:inline-size] [font-family:Inter,ui-sans-serif,system-ui,sans-serif] [&_*]:box-border [&_*::after]:box-border [&_*::before]:box-border"
+    :class="`editorial-page--${pageNumber}`"
+  >
+    <section
+      v-if="pageNumber === 1"
+      class="cover-page relative h-full w-full text-[#f7f3eb]"
+      :aria-label="t('album.editorial.coverAria')"
+    >
+      <div class="cover-page__brand absolute left-[3.5%] top-[5.2%] w-[45%]">
+        <img class="cover-page__logo block h-auto w-full object-contain" :src="logo" alt="" />
+        <span
+          class="cover-page__edition block [margin:-4.2cqw_0_1.5cqw_2.7cqw] text-[clamp(7px,1.02cqw,15px)] font-extrabold uppercase tracking-[0.2em] text-[#e5b95c] max-md:text-[clamp(4px,1.02cqw,7px)]"
+          >{{ t('album.editorial.edition') }}</span
+        >
+        <p
+          class="[margin:0_0_0_2.7cqw] text-[clamp(9px,1.6cqw,24px)] [font-weight:750] leading-[1.35] tracking-[0.025em] text-[#b9d8c2] max-md:text-[clamp(6px,1.6cqw,9px)]"
+        >
+          {{ t('album.editorial.mottoFirst') }}<br />{{ t('album.editorial.mottoSecond') }}
+        </p>
       </div>
 
-      <div class="cover-page__caption">
-        <span>World Cup 2026</span>
-        <strong>Интерактивный альбом</strong>
+      <div
+        class="cover-page__caption absolute bottom-[12.2%] left-[6.2%] grid w-[31%] gap-[0.55cqw] text-[#17212b]"
+      >
+        <span
+          class="text-[clamp(7px,0.95cqw,14px)] font-black uppercase tracking-[0.17em] text-[#e86b52] max-md:text-[clamp(4px,0.95cqw,7px)]"
+          >{{ t('album.title') }}</span
+        >
+        <strong
+          class="text-[clamp(10px,1.45cqw,22px)] leading-[1.15] max-md:text-[clamp(6px,1.45cqw,10px)]"
+          >{{ t('album.editorial.interactiveAlbum') }}</strong
+        >
       </div>
 
-      <footer class="cover-page__footer">
-        <span>Vue 3 · TypeScript</span>
-        <span>Volume 01</span>
+      <footer
+        class="cover-page__footer absolute bottom-[3.6%] left-[6.2%] right-[4.4%] flex justify-between text-[clamp(6px,0.78cqw,12px)] font-extrabold uppercase tracking-[0.15em] text-[#e5b95c] max-md:text-[clamp(4px,0.9cqw,7px)]"
+      >
+        <span>{{ t('album.editorial.collectionEdition') }}</span>
+        <span>{{ t('album.editorial.volume') }}</span>
       </footer>
     </section>
 
-    <section v-else-if="pageNumber === 2" class="info-page" aria-label="О проекте StickerBook">
-      <header class="editorial-header">
-        <span class="editorial-kicker">02 / О проекте</span>
-        <h2>Альбом, который<br />живёт вместе с коллекцией.</h2>
-        <p>{{ projectIntro }}</p>
+    <section
+      v-else-if="pageNumber === 2"
+      class="info-page h-full w-full [padding:13.3%_6.8%_5.4%_13.2%]"
+      :aria-label="t('album.editorial.infoAria')"
+    >
+      <header
+        class="editorial-header grid grid-cols-[1.18fr_0.82fr] items-end gap-[5cqw] border-b-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_28%)] pb-[3.2cqw]"
+      >
+        <span
+          class="editorial-kicker col-span-full text-[clamp(7px,0.92cqw,14px)] font-black uppercase tracking-[0.2em] text-[#e86b52] max-md:text-[clamp(4px,0.9cqw,7px)]"
+          >{{ t('album.editorial.infoKicker') }}</span
+        >
+        <h2
+          class="m-0 text-[clamp(19px,3.8cqw,58px)] [font-weight:950] leading-[0.95] tracking-[-0.055em] max-md:text-[clamp(12px,3.8cqw,19px)]"
+        >
+          {{ t('album.editorial.infoTitleFirst') }}<br />{{
+            t('album.editorial.infoTitleSecond')
+          }}
+        </h2>
+        <p
+          class="m-0 text-[clamp(7px,1.18cqw,18px)] [font-weight:560] leading-[1.5] max-md:text-[clamp(4.5px,1.18cqw,7px)]"
+        >
+          {{ projectIntro }}
+        </p>
       </header>
 
-      <div class="info-page__grid">
-        <article class="info-block info-block--primary">
-          <span class="info-block__index">A</span>
+      <div
+        class="info-page__grid mt-[3.4cqw] grid grid-cols-[1.05fr_0.95fr] gap-[2.6cqw_4.8cqw]"
+      >
+        <article
+          class="info-block info-block--primary grid min-w-0 row-span-2 grid-cols-[2.5cqw_1fr] gap-[1.5cqw] border-r-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_22%)] pr-[4.4cqw]"
+        >
+          <span
+            class="info-block__index grid h-[2.4cqw] w-[2.4cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] [font-weight:950] text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
+            >{{ t('album.editorial.currentIndex') }}</span
+          >
           <div>
-            <h3>Текущий MVP</h3>
-            <ul>
-              <li v-for="item in currentItems" :key="item">{{ item }}</li>
+            <h3
+              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
+            >
+              {{ t('album.editorial.currentMvp') }}
+            </h3>
+            <ul class="grid list-none gap-[0.72cqw] [margin:1.25cqw_0_0] p-0">
+              <li
+                v-for="item in currentItems"
+                :key="item"
+                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#e86b52] before:content-[''] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
+              >
+                {{ item }}
+              </li>
             </ul>
           </div>
         </article>
 
-        <article class="info-block">
-          <span class="info-block__index">B</span>
+        <article class="info-block grid min-w-0 grid-cols-[2.5cqw_1fr] gap-[1.5cqw]">
+          <span
+            class="info-block__index grid h-[2.4cqw] w-[2.4cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] [font-weight:950] text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
+            >{{ t('album.editorial.nextIndex') }}</span
+          >
           <div>
-            <h3>Ближайшие шаги</h3>
-            <ul>
-              <li v-for="item in nextItems" :key="item">{{ item }}</li>
+            <h3
+              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
+            >
+              {{ t('album.editorial.nextSteps') }}
+            </h3>
+            <ul class="grid list-none gap-[0.72cqw] [margin:1.25cqw_0_0] p-0">
+              <li
+                v-for="item in nextItems"
+                :key="item"
+                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#e86b52] before:content-[''] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
+              >
+                {{ item }}
+              </li>
             </ul>
           </div>
         </article>
 
-        <article class="info-block">
-          <span class="info-block__index">C</span>
+        <article class="info-block grid min-w-0 grid-cols-[2.5cqw_1fr] gap-[1.5cqw]">
+          <span
+            class="info-block__index grid h-[2.4cqw] w-[2.4cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] [font-weight:950] text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
+            >{{ t('album.editorial.futureIndex') }}</span
+          >
           <div>
-            <h3>Будущие идеи</h3>
-            <ul>
-              <li v-for="item in futureItems" :key="item">{{ item }}</li>
+            <h3
+              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
+            >
+              {{ t('album.editorial.futureIdeas') }}
+            </h3>
+            <ul class="grid list-none gap-[0.72cqw] [margin:1.25cqw_0_0] p-0">
+              <li
+                v-for="item in futureItems"
+                :key="item"
+                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#e86b52] before:content-[''] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
+              >
+                {{ item }}
+              </li>
             </ul>
           </div>
         </article>
       </div>
 
-      <footer class="paper-page-number">StickerBook <strong>02</strong></footer>
+      <footer
+        class="paper-page-number absolute bottom-[3.1%] left-[13.2%] right-[6.8%] flex items-baseline justify-between text-[clamp(6px,0.72cqw,11px)] font-extrabold uppercase tracking-[0.17em] text-[rgb(23_33_43_/_54%)] max-md:text-[clamp(4px,0.9cqw,7px)]"
+      >
+        {{ t('app.title') }}
+        <strong
+          class="text-[clamp(10px,1.45cqw,22px)] tracking-[-0.03em] text-[#e86b52] max-md:text-[clamp(6px,1.45cqw,10px)]"
+          >02</strong
+        >
+      </footer>
     </section>
 
-    <section v-else-if="pageNumber === 3" class="changelog-page" aria-label="Последние изменения StickerBook">
-      <header class="editorial-header editorial-header--changelog">
-        <span class="editorial-kicker">03 / Build log</span>
+    <section
+      v-else-if="pageNumber === 3"
+      class="changelog-page h-full w-full [padding:13.3%_12.3%_5.4%_7.5%]"
+      :aria-label="t('album.editorial.changelogAria')"
+    >
+      <header
+        class="editorial-header editorial-header--changelog grid grid-cols-[0.62fr_1.38fr] items-start gap-[5cqw] border-b-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_28%)] pb-[3.2cqw]"
+      >
+        <span
+          class="editorial-kicker col-auto pt-[0.45cqw] text-[clamp(7px,0.92cqw,14px)] font-black uppercase tracking-[0.2em] text-[#e86b52] max-md:text-[clamp(4px,0.9cqw,7px)]"
+          >{{ t('album.editorial.changelogKicker') }}</span
+        >
         <div>
-          <h2>Последние<br />изменения.</h2>
-          <p>Ветка {{ releaseSeries }} · три свежих патча</p>
+          <h2
+            class="m-0 text-[clamp(19px,3.8cqw,58px)] [font-weight:950] leading-[0.95] tracking-[-0.055em] max-md:text-[clamp(12px,3.8cqw,19px)]"
+          >
+            {{ t('album.editorial.changelogTitleFirst') }}<br />{{
+              t('album.editorial.changelogTitleSecond')
+            }}
+          </h2>
+          <p
+            class="mb-0 ml-0 mr-0 mt-[1.2cqw] text-[clamp(7px,0.92cqw,14px)] font-extrabold uppercase leading-[1.5] tracking-[0.08em] text-[rgb(23_33_43_/_60%)] max-md:text-[clamp(4.5px,1.18cqw,7px)]"
+          >
+            {{ t('album.editorial.releaseSummary', { series: releaseSeries }) }}
+          </p>
         </div>
       </header>
 
-      <div class="release-list">
-        <article v-for="release in releases" :key="release.version" class="release-note">
-          <div class="release-note__version">v{{ release.version }}</div>
-          <div class="release-note__body">
-            <h3>{{ release.title }}</h3>
-            <ul>
-              <li v-for="item in release.items.slice(0, 2)" :key="item">{{ item }}</li>
+      <div
+        class="release-list relative mt-[3cqw] grid gap-[2.15cqw] pl-[2.5cqw] before:absolute before:bottom-[0.7cqw] before:left-0 before:top-[0.7cqw] before:w-[max(1px,0.12cqw)] before:bg-[#e5b95c] before:content-['']"
+      >
+        <article
+          v-for="release in releases"
+          :key="release.version"
+          class="release-note relative grid grid-cols-[12cqw_1fr] gap-[3.4cqw] before:absolute before:left-[-3.05cqw] before:top-[0.45cqw] before:h-[1.15cqw] before:w-[1.15cqw] before:rounded-full before:border-[max(1px,0.14cqw)] before:border-solid before:border-[#e5b95c] before:bg-[#f7f3eb] before:content-['']"
+        >
+          <div
+            class="release-note__version text-[clamp(10px,1.62cqw,25px)] [font-weight:950] tracking-[-0.04em] text-[#e86b52] max-md:text-[clamp(6px,1.62cqw,10px)]"
+          >
+            v{{ release.version }}
+          </div>
+          <div class="release-note__body min-w-0">
+            <h3
+              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
+            >
+              {{ release.title }}
+            </h3>
+            <ul
+              class="grid list-none grid-cols-2 gap-[1.3cqw_2.5cqw] [margin:1.25cqw_0_0] p-0"
+            >
+              <li
+                v-for="item in release.items.slice(0, 2)"
+                :key="item"
+                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#b9d8c2] before:content-[''] before:[box-shadow:inset_0_0_0_max(1px,0.08cqw)_rgb(23_33_43_/_20%)] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
+              >
+                {{ item }}
+              </li>
             </ul>
           </div>
         </article>
       </div>
 
-      <footer class="paper-page-number paper-page-number--right">CHANGELOG.md <strong>03</strong></footer>
+      <footer
+        class="paper-page-number paper-page-number--right paper-page-number--number-only absolute bottom-[3.1%] left-[7.5%] right-[12.3%] flex items-baseline justify-end text-[clamp(6px,0.72cqw,11px)] font-extrabold uppercase tracking-[0.17em] text-[rgb(23_33_43_/_54%)] max-md:text-[clamp(4px,0.9cqw,7px)]"
+      >
+        <strong
+          class="text-[clamp(10px,1.45cqw,22px)] tracking-[-0.03em] text-[#e86b52] max-md:text-[clamp(6px,1.45cqw,10px)]"
+          >03</strong
+        >
+      </footer>
     </section>
   </div>
 </template>
-
-<style scoped>
-.editorial-page {
-  container-type: inline-size;
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  color: #17212b;
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-}
-
-.editorial-page *,
-.editorial-page *::before,
-.editorial-page *::after {
-  box-sizing: border-box;
-}
-
-.cover-page,
-.info-page,
-.changelog-page {
-  height: 100%;
-  width: 100%;
-}
-
-.cover-page {
-  position: relative;
-  color: #f7f3eb;
-}
-
-.cover-page__brand {
-  position: absolute;
-  left: 3.5%;
-  top: 5.2%;
-  width: 45%;
-}
-
-.cover-page__edition {
-  display: block;
-  margin: -4.2cqw 0 1.5cqw 2.7cqw;
-  color: #e5b95c;
-  font-size: clamp(7px, 1.02cqw, 15px);
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.cover-page__logo {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.cover-page__brand > p {
-  margin: 0 0 0 2.7cqw;
-  color: #b9d8c2;
-  font-size: clamp(9px, 1.6cqw, 24px);
-  font-weight: 750;
-  letter-spacing: 0.025em;
-  line-height: 1.35;
-}
-
-.cover-page__caption {
-  position: absolute;
-  bottom: 12.2%;
-  left: 6.2%;
-  display: grid;
-  gap: 0.55cqw;
-  width: 31%;
-  color: #17212b;
-}
-
-.cover-page__caption span {
-  color: #e86b52;
-  font-size: clamp(7px, 0.95cqw, 14px);
-  font-weight: 900;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
-}
-
-.cover-page__caption strong {
-  font-size: clamp(10px, 1.45cqw, 22px);
-  line-height: 1.15;
-}
-
-.cover-page__footer {
-  position: absolute;
-  right: 4.4%;
-  bottom: 3.6%;
-  left: 6.2%;
-  display: flex;
-  justify-content: space-between;
-  color: #e5b95c;
-  font-size: clamp(6px, 0.78cqw, 12px);
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.info-page {
-  padding: 13.3% 6.8% 5.4% 13.2%;
-}
-
-.changelog-page {
-  padding: 13.3% 12.3% 5.4% 7.5%;
-}
-
-.editorial-header {
-  display: grid;
-  grid-template-columns: 1.18fr 0.82fr;
-  align-items: end;
-  gap: 5cqw;
-  padding-bottom: 3.2cqw;
-  border-bottom: max(1px, 0.1cqw) solid rgb(23 33 43 / 28%);
-}
-
-.editorial-kicker {
-  grid-column: 1 / -1;
-  color: #e86b52;
-  font-size: clamp(7px, 0.92cqw, 14px);
-  font-weight: 900;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.editorial-header h2 {
-  margin: 0;
-  font-size: clamp(19px, 3.8cqw, 58px);
-  font-weight: 950;
-  letter-spacing: -0.055em;
-  line-height: 0.95;
-}
-
-.editorial-header p {
-  margin: 0;
-  font-size: clamp(7px, 1.18cqw, 18px);
-  font-weight: 560;
-  line-height: 1.5;
-}
-
-.info-page__grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 2.6cqw 4.8cqw;
-  margin-top: 3.4cqw;
-}
-
-.info-block {
-  display: grid;
-  grid-template-columns: 2.5cqw 1fr;
-  gap: 1.5cqw;
-  min-width: 0;
-}
-
-.info-block--primary {
-  grid-row: span 2;
-  padding-right: 4.4cqw;
-  border-right: max(1px, 0.1cqw) solid rgb(23 33 43 / 22%);
-}
-
-.info-block__index {
-  display: grid;
-  width: 2.4cqw;
-  height: 2.4cqw;
-  place-items: center;
-  border-radius: 50%;
-  background: #e5b95c;
-  color: #17212b;
-  font-size: clamp(6px, 0.78cqw, 12px);
-  font-weight: 950;
-}
-
-.info-block h3,
-.release-note h3 {
-  margin: 0;
-  font-size: clamp(9px, 1.38cqw, 21px);
-  font-weight: 900;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-}
-
-.info-block ul,
-.release-note ul {
-  display: grid;
-  gap: 0.72cqw;
-  margin: 1.25cqw 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.info-block li,
-.release-note li {
-  position: relative;
-  padding-left: 1.4cqw;
-  font-size: clamp(7px, 0.98cqw, 15px);
-  font-weight: 570;
-  line-height: 1.35;
-}
-
-.info-block li::before,
-.release-note li::before {
-  position: absolute;
-  top: 0.54em;
-  left: 0;
-  width: 0.45cqw;
-  height: 0.45cqw;
-  border-radius: 50%;
-  background: #e86b52;
-  content: '';
-}
-
-.paper-page-number {
-  position: absolute;
-  right: 6.8%;
-  bottom: 3.1%;
-  left: 13.2%;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  color: rgb(23 33 43 / 54%);
-  font-size: clamp(6px, 0.72cqw, 11px);
-  font-weight: 800;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
-}
-
-.paper-page-number strong {
-  color: #e86b52;
-  font-size: clamp(10px, 1.45cqw, 22px);
-  letter-spacing: -0.03em;
-}
-
-.editorial-header--changelog {
-  grid-template-columns: 0.62fr 1.38fr;
-  align-items: start;
-}
-
-.editorial-header--changelog .editorial-kicker {
-  grid-column: auto;
-  padding-top: 0.45cqw;
-}
-
-.editorial-header--changelog p {
-  margin-top: 1.2cqw;
-  color: rgb(23 33 43 / 60%);
-  font-size: clamp(7px, 0.92cqw, 14px);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.release-list {
-  position: relative;
-  display: grid;
-  gap: 2.15cqw;
-  margin-top: 3cqw;
-  padding-left: 2.5cqw;
-}
-
-.release-list::before {
-  position: absolute;
-  top: 0.7cqw;
-  bottom: 0.7cqw;
-  left: 0;
-  width: max(1px, 0.12cqw);
-  background: #e5b95c;
-  content: '';
-}
-
-.release-note {
-  position: relative;
-  display: grid;
-  grid-template-columns: 12cqw 1fr;
-  gap: 3.4cqw;
-}
-
-.release-note::before {
-  position: absolute;
-  top: 0.45cqw;
-  left: -3.05cqw;
-  width: 1.15cqw;
-  height: 1.15cqw;
-  border: max(1px, 0.14cqw) solid #e5b95c;
-  border-radius: 50%;
-  background: #f7f3eb;
-  content: '';
-}
-
-.release-note__version {
-  color: #e86b52;
-  font-size: clamp(10px, 1.62cqw, 25px);
-  font-weight: 950;
-  letter-spacing: -0.04em;
-}
-
-.release-note__body {
-  min-width: 0;
-}
-
-.release-note ul {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.3cqw 2.5cqw;
-}
-
-.release-note li::before {
-  background: #b9d8c2;
-  box-shadow: inset 0 0 0 max(1px, 0.08cqw) rgb(23 33 43 / 20%);
-}
-
-.paper-page-number--right {
-  right: 12.3%;
-  left: 7.5%;
-}
-
-@media (max-width: 767px) {
-  .cover-page__edition {
-    font-size: clamp(4px, 1.02cqw, 7px);
-  }
-
-  .cover-page__brand > p {
-    font-size: clamp(6px, 1.6cqw, 9px);
-  }
-
-  .cover-page__caption span {
-    font-size: clamp(4px, 0.95cqw, 7px);
-  }
-
-  .cover-page__caption strong {
-    font-size: clamp(6px, 1.45cqw, 10px);
-  }
-
-  .cover-page__footer,
-  .editorial-kicker,
-  .info-block__index,
-  .paper-page-number {
-    font-size: clamp(4px, 0.9cqw, 7px);
-  }
-
-  .editorial-header h2 {
-    font-size: clamp(12px, 3.8cqw, 19px);
-  }
-
-  .editorial-header p,
-  .editorial-header--changelog p {
-    font-size: clamp(4.5px, 1.18cqw, 7px);
-  }
-
-  .info-block h3,
-  .release-note h3 {
-    font-size: clamp(5.5px, 1.38cqw, 9px);
-  }
-
-  .info-block li,
-  .release-note li {
-    font-size: clamp(4.5px, 0.98cqw, 7px);
-  }
-
-  .paper-page-number strong {
-    font-size: clamp(6px, 1.45cqw, 10px);
-  }
-
-  .release-note__version {
-    font-size: clamp(6px, 1.62cqw, 10px);
-  }
-}
-</style>

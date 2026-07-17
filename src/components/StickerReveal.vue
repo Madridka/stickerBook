@@ -46,8 +46,8 @@ const handleCardClick = (): void => {
       {{ t('packOpening.cardNumber', { current: index + 1, total }) }}
     </p>
     <button
-      class="sticker-card mt-5 h-[min(65dvh,32rem)] w-full max-w-sm overflow-hidden border-4 border-ink bg-paper p-3 text-left shadow-[10px_10px_0_rgb(var(--color-ink)/0.14)]"
-      :class="{ 'sticker-card--revealed': isRevealed }"
+      class="mt-5 h-[min(65dvh,32rem)] w-full max-w-sm overflow-hidden border-4 border-ink bg-paper p-3 text-left shadow-[10px_10px_0_rgb(var(--color-ink)/0.14)] transition-[transform,box-shadow] duration-[220ms] ease-[ease]"
+      :class="isRevealed ? '' : 'hover:-translate-x-0.5 hover:-translate-y-0.5 hover:-rotate-1 hover:shadow-[12px_12px_0_rgb(var(--color-ink)/0.14)]'"
       type="button"
       :aria-label="isRevealed ? card.fullName : t('packOpening.reveal')"
       @click="handleCardClick"
@@ -91,18 +91,3 @@ const handleCardClick = (): void => {
     />
   </div>
 </template>
-
-<style scoped>
-.sticker-card {
-  transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.sticker-card:hover {
-  transform: translate(-2px, -2px) rotate(-1deg);
-  box-shadow: 12px 12px 0 rgb(var(--color-ink) / 0.14);
-}
-
-.sticker-card--revealed:hover {
-  transform: none;
-}
-</style>

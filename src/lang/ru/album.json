@@ -33,5 +33,31 @@
   "info": "Информационная страница",
   "page": "Страница альбома",
   "statistics": "Статистическая страница",
-  "back": "Задняя обложка альбома"
+  "back": "Задняя обложка альбома",
+  "editorial": {
+    "coverAria": "Обложка «Вклейки»",
+    "coverLabel": "Обложка",
+    "edition": "Цифровое коллекционное издание",
+    "mottoFirst": "Собирай. Вклеивай.",
+    "mottoSecond": "Храни историю.",
+    "interactiveAlbum": "Интерактивный альбом",
+    "collectionEdition": "Коллекционное издание",
+    "volume": "Выпуск 01",
+    "infoAria": "О проекте «Вклейка»",
+    "infoLabel": "О проекте",
+    "infoKicker": "02 / О проекте",
+    "infoTitleFirst": "Альбом, который",
+    "infoTitleSecond": "живёт вместе с коллекцией.",
+    "currentIndex": "A",
+    "currentMvp": "Текущий MVP",
+    "nextIndex": "B",
+    "nextSteps": "Ближайшие шаги",
+    "futureIndex": "C",
+    "futureIdeas": "Будущие идеи",
+    "changelogAria": "Последние изменения «Вклейки»",
+    "changelogKicker": "03 / История версий",
+    "changelogTitleFirst": "Последние",
+    "changelogTitleSecond": "изменения.",
+    "releaseSummary": "Ветка {series} · альфа-версия"
+  }
 }

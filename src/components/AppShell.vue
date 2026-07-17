@@ -85,7 +85,7 @@ const resetProgress = async (): Promise<void> => {
     <header class="border-b border-ink/10 bg-paper/90">
       <nav
         class="mx-auto flex w-full max-w-[90rem] items-center justify-between px-5 py-3 sm:px-8 sm:py-4"
-        aria-label="Main navigation"
+        :aria-label="t('app.mainNavigation')"
       >
         <!-- Логотип и ссылка на главный экран -->
         <RouterLink v-if="!isPackOpening" to="/" class="text-xl font-black tracking-tight">{{
@@ -159,9 +159,9 @@ const resetProgress = async (): Promise<void> => {
     <Dialog
       v-model:visible="isResetConfirmOpen"
       modal
+      class="w-[min(28rem,calc(100vw-2rem))]"
       :closable="!isResetting"
       :header="t('app.resetProgressTitle')"
-      :style="{ width: 'min(28rem, calc(100vw - 2rem))' }"
     >
       <p class="text-sm leading-relaxed text-ink/70">
         {{ t('app.resetProgressText') }}

@@ -23,8 +23,8 @@ const { t } = useI18n()
   <Dialog
     :visible="visible"
     modal
+    class="w-[min(25rem,calc(100vw-2rem))]"
     :header="t(`stickerTray.${kind}Title`)"
-    :style="{ width: 'min(25rem, calc(100vw - 2rem))' }"
     @update:visible="emit('update:visible', $event)"
   >
     <p class="text-sm leading-relaxed text-ink/70">{{ t(`stickerTray.${kind}Text`) }}</p>

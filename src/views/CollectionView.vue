@@ -59,7 +59,7 @@ const getCard = (playerId: string): PlayerCard | undefined =>
       </div>
     </div>
 
-    <Tabs v-model:value="activeTab" class="collection-tabs flex min-h-0 flex-1 flex-col">
+    <Tabs v-model:value="activeTab" class="flex min-h-0 flex-1 flex-col">
       <TabList class="shrink-0">
         <Tab value="collection">
           <span class="flex items-center gap-2">
@@ -78,7 +78,7 @@ const getCard = (playerId: string): PlayerCard | undefined =>
       </TabList>
 
       <TabPanels class="min-h-0 flex-1 overflow-hidden bg-transparent px-0 pb-0 pt-4">
-        <TabPanel class="h-full overflow-y-auto pr-2" value="collection">
+        <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="collection">
           <div v-if="collectedItems.length" class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             <article
               v-for="item in collectedItems"
@@ -107,7 +107,7 @@ const getCard = (playerId: string): PlayerCard | undefined =>
           </div>
         </TabPanel>
 
-        <TabPanel class="h-full overflow-y-auto pr-2" value="duplicates">
+        <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="duplicates">
           <div v-if="duplicateGroups.length" class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             <article
               v-for="group in duplicateGroups"
@@ -137,10 +137,3 @@ const getCard = (playerId: string): PlayerCard | undefined =>
     </Tabs>
   </section>
 </template>
-
-<style scoped>
-.collection-tabs :deep(.p-tabpanels),
-.collection-tabs :deep(.p-tabpanel) {
-  min-height: 0;
-}
-</style>

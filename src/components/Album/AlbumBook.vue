@@ -67,8 +67,12 @@ onBeforeUnmount((): void => {
 <template>
   <div class="flex h-full min-h-0 w-full flex-col items-center justify-center">
     <div
-      class="album-book__viewport relative min-h-0 [perspective:1800px]"
-      :class="!isOpen || displayMode === 'page' ? 'album-book__page-focus' : 'album-book__spread'"
+      class="relative min-h-0 max-w-full [perspective:1800px]"
+      :class="
+        !isOpen || displayMode === 'page'
+          ? 'h-full w-auto flex-auto aspect-[32/25] [&_article]:h-full [&_article]:w-full max-md:h-auto max-md:w-full max-md:flex-none'
+          : 'grid w-[min(100%,calc((100dvh-20.5rem)*2.56))] flex-initial grid-cols-2 aspect-[64/25] shadow-[0_18px_50px_rgb(var(--color-ink)/0.24)] [&_article]:h-full [&_article]:shadow-none'
+      "
     >
       <template v-if="isOpen">
         <AlbumPage
@@ -86,9 +90,11 @@ onBeforeUnmount((): void => {
 
       <div
         v-if="isTurning && turningPage"
-        class="pointer-events-none absolute inset-0 z-10 [transform-style:preserve-3d]"
+        class="pointer-events-none absolute inset-0 z-10 [transform-style:preserve-3d] [&_article]:[backface-visibility:hidden] [&_article]:shadow-[-14px_0_24px_rgb(var(--color-ink)/0.22)]"
         :class="
-          turnDirection === 'forward' ? 'album-page-turn--forward' : 'album-page-turn--backward'
+          turnDirection === 'forward'
+            ? 'origin-left animate-album-page-turn-forward'
+            : 'origin-right animate-album-page-turn-backward'
         "
       >
         <AlbumPage :page="turningPage" :fill="true" />
@@ -97,7 +103,7 @@ onBeforeUnmount((): void => {
       <template v-if="isOpen">
         <Button
           v-if="currentPage > openStartPage"
-          class="album-book__edge-button album-book__edge-button--previous"
+          class="absolute left-[clamp(0.35rem,1cqw,0.75rem)] top-1/2 z-30 !grid !h-10 !min-w-10 !w-10 !-translate-y-1/2 !cursor-pointer !place-items-center !rounded-full !border !border-[rgb(247_243_235/42%)] !bg-[rgb(23_33_43/88%)] !text-[#f7f3eb] !shadow-[0_8px_22px_rgb(23_33_43/30%)] !backdrop-blur-[5px] !transition-[background-color,color,transform] !duration-[160ms] !ease-[ease] [&:hover:not(:disabled)]:!scale-[1.06] [&:hover:not(:disabled)]:!bg-[#e5b95c] [&:hover:not(:disabled)]:!text-[#17212b] focus-visible:!outline focus-visible:!outline-[3px] focus-visible:!outline-offset-[3px] focus-visible:!outline-[#e5b95c] disabled:!cursor-wait disabled:!opacity-[0.56] motion-reduce:!transition-none max-md:!h-9 max-md:!min-w-9 max-md:!w-9"
           icon="pi pi-chevron-left"
           rounded
           type="button"
@@ -108,7 +114,7 @@ onBeforeUnmount((): void => {
         />
         <Button
           v-if="currentPage < pages.length - pageStep"
-          class="album-book__edge-button album-book__edge-button--next"
+          class="absolute right-[clamp(0.35rem,1cqw,0.75rem)] top-1/2 z-30 !grid !h-10 !min-w-10 !w-10 !-translate-y-1/2 !cursor-pointer !place-items-center !rounded-full !border !border-[rgb(247_243_235/42%)] !bg-[rgb(23_33_43/88%)] !text-[#f7f3eb] !shadow-[0_8px_22px_rgb(23_33_43/30%)] !backdrop-blur-[5px] !transition-[background-color,color,transform] !duration-[160ms] !ease-[ease] [&:hover:not(:disabled)]:!scale-[1.06] [&:hover:not(:disabled)]:!bg-[#e5b95c] [&:hover:not(:disabled)]:!text-[#17212b] focus-visible:!outline focus-visible:!outline-[3px] focus-visible:!outline-offset-[3px] focus-visible:!outline-[#e5b95c] disabled:!cursor-wait disabled:!opacity-[0.56] motion-reduce:!transition-none max-md:!h-9 max-md:!min-w-9 max-md:!w-9"
           icon="pi pi-chevron-right"
           rounded
           type="button"
@@ -120,7 +126,7 @@ onBeforeUnmount((): void => {
       </template>
 
       <Button
-        class="album-book__corner-button"
+        class="absolute right-[clamp(0.45rem,1cqw,0.75rem)] top-[clamp(0.45rem,1cqw,0.75rem)] z-40 !grid !h-10 !min-w-10 !w-10 !place-items-center !rounded-full !border !border-[rgb(247_243_235/42%)] !bg-[rgb(23_33_43/88%)] !text-[#f7f3eb] !shadow-[0_8px_22px_rgb(23_33_43/30%)] !backdrop-blur-[5px] focus-visible:!outline focus-visible:!outline-[3px] focus-visible:!outline-offset-[3px] focus-visible:!outline-[#e5b95c] max-md:!h-9 max-md:!min-w-9 max-md:!w-9"
         :aria-label="t(isOpen ? 'album.close' : 'album.open')"
         :title="t(isOpen ? 'album.close' : 'album.open')"
         :icon="isOpen ? 'pi pi-times' : 'pi pi-book'"
@@ -131,171 +137,3 @@ onBeforeUnmount((): void => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.album-book__viewport {
-  max-width: 100%;
-}
-
-.album-book__page-focus {
-  flex: 1 1 auto;
-  height: 100%;
-  width: auto;
-  aspect-ratio: 32 / 25;
-}
-
-.album-book__page-focus :deep(article) {
-  height: 100%;
-  width: 100%;
-}
-
-.album-book__spread {
-  display: grid;
-  flex: 0 1 auto;
-  width: min(100%, calc((100dvh - 20.5rem) * 2.56));
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  aspect-ratio: 64 / 25;
-  box-shadow: 0 18px 50px rgb(var(--color-ink) / 0.24);
-}
-
-.album-book__spread :deep(article) {
-  height: 100%;
-  box-shadow: none;
-}
-
-.album-book__edge-button {
-  position: absolute;
-  top: 50%;
-  z-index: 30;
-  display: grid;
-  width: 2.5rem;
-  min-width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  border: 1px solid rgb(247 243 235 / 42%);
-  border-radius: 50%;
-  background: rgb(23 33 43 / 88%);
-  box-shadow: 0 8px 22px rgb(23 33 43 / 30%);
-  color: #f7f3eb;
-  cursor: pointer;
-  transform: translateY(-50%);
-  transition:
-    background-color 160ms ease,
-    color 160ms ease,
-    transform 160ms ease;
-  backdrop-filter: blur(5px);
-}
-
-.album-book__edge-button--previous {
-  left: clamp(0.35rem, 1cqw, 0.75rem);
-}
-.album-book__edge-button--next {
-  right: clamp(0.35rem, 1cqw, 0.75rem);
-}
-
-.album-book__edge-button:hover:not(:disabled) {
-  background: #e5b95c;
-  color: #17212b;
-  transform: translateY(-50%) scale(1.06);
-}
-
-.album-book__edge-button:focus-visible {
-  outline: 3px solid #e5b95c;
-  outline-offset: 3px;
-}
-
-.album-book__edge-button:disabled {
-  cursor: wait;
-  opacity: 0.56;
-}
-
-.album-book__corner-button {
-  position: absolute;
-  top: clamp(0.45rem, 1cqw, 0.75rem);
-  right: clamp(0.45rem, 1cqw, 0.75rem);
-  z-index: 40;
-  display: grid;
-  width: 2.5rem;
-  min-width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  border: 1px solid rgb(247 243 235 / 42%);
-  border-radius: 50%;
-  background: rgb(23 33 43 / 88%);
-  box-shadow: 0 8px 22px rgb(23 33 43 / 30%);
-  color: #f7f3eb;
-  backdrop-filter: blur(5px);
-}
-
-.album-book__corner-button:focus-visible {
-  outline: 3px solid #e5b95c;
-  outline-offset: 3px;
-}
-
-.album-page-turn--forward,
-.album-page-turn--backward {
-  transform-origin: left center;
-  animation-duration: 420ms;
-  animation-timing-function: cubic-bezier(0.22, 0.72, 0.22, 1);
-  animation-fill-mode: both;
-  transform-style: preserve-3d;
-}
-
-.album-page-turn--forward {
-  animation-name: album-page-turn-forward;
-}
-.album-page-turn--backward {
-  transform-origin: right center;
-  animation-name: album-page-turn-backward;
-}
-
-.album-page-turn--forward :deep(article),
-.album-page-turn--backward :deep(article) {
-  backface-visibility: hidden;
-  box-shadow: -14px 0 24px rgb(var(--color-ink) / 0.22);
-}
-
-@keyframes album-page-turn-forward {
-  from {
-    transform: rotateY(-100deg);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
-}
-
-@keyframes album-page-turn-backward {
-  from {
-    transform: rotateY(100deg);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
-}
-
-@media (max-width: 767px) {
-  .album-book__page-focus {
-    flex: 0 0 auto;
-    height: auto;
-    width: 100%;
-  }
-
-  .album-book__edge-button {
-    width: 2.25rem;
-    min-width: 2.25rem;
-    height: 2.25rem;
-  }
-
-  .album-book__corner-button {
-    width: 2.25rem;
-    min-width: 2.25rem;
-    height: 2.25rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .album-book__edge-button {
-    transition: none;
-  }
-}
-</style>

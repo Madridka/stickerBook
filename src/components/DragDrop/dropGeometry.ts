@@ -63,9 +63,7 @@ export const resolveStickerPlacement = (
     slotId: drop.slotId,
     x,
     y,
-    rotation: isCoarseMiss
-      ? Math.round(Math.max(-0.45, Math.min(0.45, drop.x)) * 18)
-      : 0,
+    rotation: isCoarseMiss ? Math.round(Math.max(-0.45, Math.min(0.45, drop.x)) * 18) : 0,
     accuracy: Math.max(0, Math.round(100 - Math.hypot(x, y) * 100)),
   }
 }

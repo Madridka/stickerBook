@@ -17,21 +17,35 @@ export const useCollectionStore = defineStore('collection', () => {
   const load = async (): Promise<void> => {
     const cards: StickerInstance[] = await database.cards.toArray()
     duplicates.value = await database.duplicates.toArray()
-    items.value = cards.map((instance: StickerInstance): CollectionItem => ({
-      instance,
-      duplicateCount: duplicates.value.filter(({ playerId }): boolean => playerId === instance.playerId).length,
-    }))
+    items.value = cards.map(
+      (instance: StickerInstance): CollectionItem => ({
+        instance,
+        duplicateCount: duplicates.value.filter(
+          ({ playerId }): boolean => playerId === instance.playerId,
+        ).length,
+      }),
+    )
     isLoaded.value = true
   }
 
   // Добавляет карточку в коллекцию и не создаёт лишнюю запись при повторном выпадении
   const addCard = async (playerId: string): Promise<StickerInstance> => {
-    const instance: StickerInstance = { id: crypto.randomUUID(), playerId, quality: 100, location: 'inventory' }
+    const instance: StickerInstance = {
+      id: crypto.randomUUID(),
+      playerId,
+      quality: 100,
+      location: 'inventory',
+    }
     let storedInstance: StickerInstance = instance
     const isDuplicate: boolean = await database.transaction(
-      'rw', database.cards, database.duplicates,
+      'rw',
+      database.cards,
+      database.duplicates,
       async (): Promise<boolean> => {
-        const card: StickerInstance | undefined = await database.cards.where('playerId').equals(playerId).first()
+        const card: StickerInstance | undefined = await database.cards
+          .where('playerId')
+          .equals(playerId)
+          .first()
         if (card) {
           storedInstance = { ...instance, location: 'duplicate' }
           await database.duplicates.add(storedInstance)
@@ -43,8 +57,11 @@ export const useCollectionStore = defineStore('collection', () => {
     )
     if (isDuplicate) {
       duplicates.value = [...duplicates.value, storedInstance]
-      items.value = items.value.map((item: CollectionItem): CollectionItem =>
-        item.instance.playerId === playerId ? { ...item, duplicateCount: item.duplicateCount + 1 } : item,
+      items.value = items.value.map(
+        (item: CollectionItem): CollectionItem =>
+          item.instance.playerId === playerId
+            ? { ...item, duplicateCount: item.duplicateCount + 1 }
+            : item,
       )
     } else {
       items.value = [...items.value, { instance, duplicateCount: 0 }]
@@ -60,10 +77,11 @@ export const useCollectionStore = defineStore('collection', () => {
     },
   ): Promise<void> => {
     await database.cards.update(instanceId, changes)
-    items.value = items.value.map((item: CollectionItem): CollectionItem =>
-      item.instance.id === instanceId
-        ? { ...item, instance: { ...item.instance, ...changes } }
-        : item,
+    items.value = items.value.map(
+      (item: CollectionItem): CollectionItem =>
+        item.instance.id === instanceId
+          ? { ...item, instance: { ...item.instance, ...changes } }
+          : item,
     )
   }
 
@@ -77,14 +95,18 @@ export const useCollectionStore = defineStore('collection', () => {
   return {
     items,
     duplicates,
-    collected: computed((): string[] => items.value.map(({ instance }): string => instance.playerId)),
+    collected: computed((): string[] =>
+      items.value.map(({ instance }): string => instance.playerId),
+    ),
     duplicateTotal: computed((): number => duplicates.value.length),
     isLoaded,
     total,
     pages,
     progress,
     stickerInventory: computed((): CollectionItem[] =>
-      items.value.filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location)),
+      items.value.filter(({ instance }): boolean =>
+        ['inventory', 'collection'].includes(instance.location),
+      ),
     ),
     addCard,
     updateCard,

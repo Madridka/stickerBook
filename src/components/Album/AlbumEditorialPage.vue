@@ -81,9 +81,7 @@ const { t } = useI18n()
         <h2
           class="m-0 text-[clamp(19px,3.8cqw,58px)] [font-weight:950] leading-[0.95] tracking-[-0.055em] max-md:text-[clamp(12px,3.8cqw,19px)]"
         >
-          {{ t('album.editorial.infoTitleFirst') }}<br />{{
-            t('album.editorial.infoTitleSecond')
-          }}
+          {{ t('album.editorial.infoTitleFirst') }}<br />{{ t('album.editorial.infoTitleSecond') }}
         </h2>
         <p
           class="m-0 text-[clamp(7px,1.18cqw,18px)] [font-weight:560] leading-[1.5] max-md:text-[clamp(4.5px,1.18cqw,7px)]"
@@ -92,9 +90,7 @@ const { t } = useI18n()
         </p>
       </header>
 
-      <div
-        class="info-page__grid mt-[3.4cqw] grid grid-cols-[1.05fr_0.95fr] gap-[2.6cqw_4.8cqw]"
-      >
+      <div class="info-page__grid mt-[3.4cqw] grid grid-cols-[1.05fr_0.95fr] gap-[2.6cqw_4.8cqw]">
         <article
           class="info-block info-block--primary grid min-w-0 row-span-2 grid-cols-[2.5cqw_1fr] gap-[1.5cqw] border-r-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_22%)] pr-[4.4cqw]"
         >
@@ -225,9 +221,7 @@ const { t } = useI18n()
             >
               {{ release.title }}
             </h3>
-            <ul
-              class="grid list-none grid-cols-2 gap-[1.3cqw_2.5cqw] [margin:1.25cqw_0_0] p-0"
-            >
+            <ul class="grid list-none grid-cols-2 gap-[1.3cqw_2.5cqw] [margin:1.25cqw_0_0] p-0">
               <li
                 v-for="item in release.items.slice(0, 2)"
                 :key="item"

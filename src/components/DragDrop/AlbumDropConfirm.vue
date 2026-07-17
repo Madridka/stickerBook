@@ -30,7 +30,12 @@ const { t } = useI18n()
     <p class="text-sm leading-relaxed text-ink/70">{{ t(`stickerTray.${kind}Text`) }}</p>
     <template #footer>
       <Button :label="t('stickerTray.cancel')" text type="button" @click="emit('cancel')" />
-      <Button :label="t('stickerTray.confirm')" icon="pi pi-check" type="button" @click="emit('confirm')" />
+      <Button
+        :label="t('stickerTray.confirm')"
+        icon="pi pi-check"
+        type="button"
+        @click="emit('confirm')"
+      />
     </template>
   </Dialog>
 </template>

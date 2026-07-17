@@ -71,12 +71,20 @@ const finishDrag = (event: PointerEvent): void => {
     @pointerup="finishDrag"
     @pointercancel="finishDrag"
   >
-    <div class="h-28 w-[4.7rem] shrink-0 overflow-hidden rounded border border-ink/10 max-md:h-20 max-md:w-[3.33rem]">
+    <div
+      class="h-28 w-[4.7rem] shrink-0 overflow-hidden rounded border border-ink/10 max-md:h-20 max-md:w-[3.33rem]"
+    >
       <StickerThumbnail :card="card" :instance="instance" />
     </div>
     <div class="min-w-0 flex-1">
-      <span class="text-[10px] font-black uppercase tracking-[0.14em] text-coral max-md:text-[0.48rem] max-md:tracking-[0.1em]">{{ card.id }}</span>
-      <strong class="mt-1 block text-sm font-black leading-tight max-md:mt-0.5 max-md:text-[0.68rem]">{{ card.fullName }}</strong>
+      <span
+        class="text-[10px] font-black uppercase tracking-[0.14em] text-coral max-md:text-[0.48rem] max-md:tracking-[0.1em]"
+        >{{ card.id }}</span
+      >
+      <strong
+        class="mt-1 block text-sm font-black leading-tight max-md:mt-0.5 max-md:text-[0.68rem]"
+        >{{ card.fullName }}</strong
+      >
       <span
         class="mt-3 inline-flex items-center gap-1 rounded px-2 py-1 text-[10px] font-black uppercase tracking-wide max-md:mt-1.5 max-md:gap-[0.2rem] max-md:px-[0.35rem] max-md:py-[0.2rem] max-md:text-[0.45rem] max-md:tracking-[0.04em] max-md:[&_i]:text-[0.55rem]"
         :class="prepared ? 'bg-mint text-ink' : 'bg-ink/10 text-ink/60'"

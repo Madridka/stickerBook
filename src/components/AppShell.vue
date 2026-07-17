@@ -93,7 +93,10 @@ const resetProgress = async (): Promise<void> => {
         }}</RouterLink>
         <span v-else class="text-xl font-black tracking-tight">{{ t('app.title') }}</span>
         <!-- Навигация, переключатель темы и меню -->
-        <div v-if="!isPackOpening" class="hidden items-center gap-4 text-sm font-semibold md:flex md:gap-7">
+        <div
+          v-if="!isPackOpening"
+          class="hidden items-center gap-4 text-sm font-semibold md:flex md:gap-7"
+        >
           <RouterLink class="transition-colors hover:text-coral" to="/album">{{
             t('app.album')
           }}</RouterLink>

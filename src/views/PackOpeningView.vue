@@ -23,10 +23,10 @@ const isFinished: ComputedRef<boolean> = computed(() => currentIndex.value >= pa
 const currentCard: ComputedRef<PlayerCard | undefined> = computed(
   () => drawnCards.value[currentIndex.value],
 )
-const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
-  Boolean(currentCard.value) && collection.items.some(
-    ({ instance }): boolean => instance.playerId === currentCard.value?.id,
-  ),
+const isCurrentDuplicate: ComputedRef<boolean> = computed(
+  (): boolean =>
+    Boolean(currentCard.value) &&
+    collection.items.some(({ instance }): boolean => instance.playerId === currentCard.value?.id),
 )
 const isOpening: Ref<boolean> = ref(false)
 const cards: PlayerCard[] = cardsData as PlayerCard[]

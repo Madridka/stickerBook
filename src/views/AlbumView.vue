@@ -34,15 +34,18 @@ interface AlbumReleaseNote {
   items: string[]
 }
 
-const toPlainText = (value: string): string => value
-  .replace(/\[([^\]]+)]\([^)]+\)/g, '$1')
-  .replace(/`([^`]+)`/g, '$1')
-  .replace(/\*\*([^*]+)\*\*/g, '$1')
-  .trim()
+const toPlainText = (value: string): string =>
+  value
+    .replace(/\[([^\]]+)]\([^)]+\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .trim()
 
 const readMarkdownList = (markdown: string, sectionTitle: string): string[] => {
   const lines: string[] = markdown.split(/\r?\n/)
-  const sectionStart: number = lines.findIndex((line: string): boolean => line.trim() === `## ${sectionTitle}`)
+  const sectionStart: number = lines.findIndex(
+    (line: string): boolean => line.trim() === `## ${sectionTitle}`,
+  )
   if (sectionStart < 0) return []
   const sectionEnd: number = lines.findIndex(
     (line: string, index: number): boolean => index > sectionStart && line.startsWith('## '),
@@ -70,13 +73,16 @@ const parseReleaseNotes = (markdown: string): AlbumReleaseNote[] => {
 }
 
 const projectIntro: string = toPlainText(
-  projectReadme.split(/\r?\n/).find((line: string): boolean => Boolean(line.trim()) && !line.startsWith('#')) ?? '',
+  projectReadme
+    .split(/\r?\n/)
+    .find((line: string): boolean => Boolean(line.trim()) && !line.startsWith('#')) ?? '',
 )
 const currentMvpItems: string[] = readMarkdownList(projectReadme, 'Текущий MVP')
 const nextStepItems: string[] = readMarkdownList(projectReadme, 'Ближайшие шаги')
 const futureIdeaItems: string[] = readMarkdownList(projectReadme, 'Будущие идеи')
 const allReleaseNotes: AlbumReleaseNote[] = parseReleaseNotes(changelogMarkdown)
-const latestReleaseSeries: string = allReleaseNotes[0]?.version.split('.').slice(0, 2).join('.') ?? '0.0'
+const latestReleaseSeries: string =
+  allReleaseNotes[0]?.version.split('.').slice(0, 2).join('.') ?? '0.0'
 const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
   .filter(({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`))
   .slice(0, 3)
@@ -100,37 +106,39 @@ const albumImages: Record<string, string> = import.meta.glob(
 const cards: PlayerCard[] = cardsData as PlayerCard[]
 
 const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
-  album.pages.map((page: AlbumGeometryPage): AlbumPageView => ({
-    id: page.id,
-    title: t('album.spreadTitle', { page: String(page.number).padStart(2, '0') }),
-    image: albumImages[`../../assets/game/wc-26/mexico/album/${page.image}`],
-    geometry: page,
-  })),
+  album.pages.map(
+    (page: AlbumGeometryPage): AlbumPageView => ({
+      id: page.id,
+      title: t('album.spreadTitle', { page: String(page.number).padStart(2, '0') }),
+      image: albumImages[`../../assets/game/wc-26/mexico/album/${page.image}`],
+      geometry: page,
+    }),
+  ),
 )
 
-const displayMode: ComputedRef<'spread' | 'page'> = computed(
-  (): 'spread' | 'page' => isDesktopSpread.value ? 'spread' : 'page',
+const displayMode: ComputedRef<'spread' | 'page'> = computed((): 'spread' | 'page' =>
+  isDesktopSpread.value ? 'spread' : 'page',
 )
-const pageStep: ComputedRef<number> = computed((): number => isDesktopSpread.value ? 2 : 1)
+const pageStep: ComputedRef<number> = computed((): number => (isDesktopSpread.value ? 2 : 1))
 const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] =>
   Array.from(
     { length: isBookOpen.value ? pageStep.value : 1 },
     (_value: unknown, offset: number): number => currentPage.value + offset,
-  )
-    .filter((pageIndex: number): boolean => pageIndex < pages.value.length),
+  ).filter((pageIndex: number): boolean => pageIndex < pages.value.length),
 )
-const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed(
-  (): AlbumGeometryPage[] => visiblePageIndexes.value.map(
+const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed((): AlbumGeometryPage[] =>
+  visiblePageIndexes.value.map(
     (pageIndex: number): AlbumGeometryPage => pages.value[pageIndex].geometry,
   ),
 )
 const visiblePageLabel: ComputedRef<string> = computed((): string =>
-  visibleGeometries.value
-    .map(({ number }): string => String(number).padStart(2, '0'))
-    .join('–'),
+  visibleGeometries.value.map(({ number }): string => String(number).padStart(2, '0')).join('–'),
 )
 const visibleSlotTotal: ComputedRef<number> = computed((): number =>
-  visibleGeometries.value.reduce((total: number, page: AlbumGeometryPage): number => total + page.slots.length, 0),
+  visibleGeometries.value.reduce(
+    (total: number, page: AlbumGeometryPage): number => total + page.slots.length,
+    0,
+  ),
 )
 const placedOnVisiblePages: ComputedRef<number> = computed((): number =>
   visibleGeometries.value.reduce(
@@ -152,7 +160,9 @@ const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void =>
 }
 
 // Возвращает уже вклеенную карточку с поддержкой старых идентификаторов слотов.
-const getPlacedCard = (slotId: string): { card: PlayerCard; placement: StickerPlacement } | undefined => {
+const getPlacedCard = (
+  slotId: string,
+): { card: PlayerCard; placement: StickerPlacement } | undefined => {
   const item: CollectionItem | undefined = collection.items.find(
     ({ instance }): boolean => normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
   )
@@ -276,19 +286,40 @@ onBeforeUnmount((): void => {
 
 <template>
   <section class="flex h-full min-h-0 w-full flex-col overflow-hidden bg-ink">
-    <header class="flex h-14 shrink-0 items-center justify-between border-b border-paper/10 px-4 text-paper max-md:h-11 max-md:px-3">
+    <header
+      class="flex h-14 shrink-0 items-center justify-between border-b border-paper/10 px-4 text-paper max-md:h-11 max-md:px-3"
+    >
       <div>
-        <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-gold max-md:text-[0.48rem] max-md:tracking-[0.14em]">{{ t('app.album') }}</p>
+        <p
+          class="text-[10px] font-bold uppercase tracking-[0.18em] text-gold max-md:text-[0.48rem] max-md:tracking-[0.14em]"
+        >
+          {{ t('app.album') }}
+        </p>
         <h1 class="text-lg font-black leading-tight max-md:text-[0.8rem]">
-          {{ t(isBookOpen && isDesktopSpread ? 'album.spreadRangeTitle' : 'album.spreadTitle', { page: visiblePageLabel, pages: visiblePageLabel }) }}
+          {{
+            t(isBookOpen && isDesktopSpread ? 'album.spreadRangeTitle' : 'album.spreadTitle', {
+              page: visiblePageLabel,
+              pages: visiblePageLabel,
+            })
+          }}
         </h1>
       </div>
-      <div v-if="visibleSlotTotal > 0" class="text-right text-xs font-semibold text-paper/65 max-md:text-[0.52rem]">
-        <strong class="block text-base font-black text-paper max-md:text-xs">{{ placedOnVisiblePages }} / {{ visibleSlotTotal }}</strong>
+      <div
+        v-if="visibleSlotTotal > 0"
+        class="text-right text-xs font-semibold text-paper/65 max-md:text-[0.52rem]"
+      >
+        <strong class="block text-base font-black text-paper max-md:text-xs"
+          >{{ placedOnVisiblePages }} / {{ visibleSlotTotal }}</strong
+        >
         {{ t('album.spreadProgress', { placed: placedOnVisiblePages, total: visibleSlotTotal }) }}
       </div>
-      <div v-else class="text-right text-[10px] font-bold uppercase tracking-[0.16em] text-paper/55 max-md:text-[0.52rem]">
-        <strong class="block text-base font-black tracking-normal text-paper max-md:text-xs">{{ visiblePageLabel }}</strong>
+      <div
+        v-else
+        class="text-right text-[10px] font-bold uppercase tracking-[0.16em] text-paper/55 max-md:text-[0.52rem]"
+      >
+        <strong class="block text-base font-black tracking-normal text-paper max-md:text-xs">{{
+          visiblePageLabel
+        }}</strong>
         {{ t(isBookOpen ? 'album.editorial.infoLabel' : 'album.editorial.coverLabel') }}
       </div>
     </header>
@@ -333,7 +364,6 @@ onBeforeUnmount((): void => {
             </template>
           </template>
         </AlbumBook>
-
       </div>
 
       <StickerTray

@@ -6,8 +6,12 @@ import type { AlbumGeometryData, AlbumGeometryPage, AlbumGeometrySlot } from '@/
 
 export const useAlbumStore = defineStore('album', () => {
   const geometry: AlbumGeometry = createAlbumGeometry(albumData as AlbumGeometryData)
-  const pages: ComputedRef<AlbumGeometryPage[]> = computed((): AlbumGeometryPage[] => geometry.pages)
-  const slots: ComputedRef<AlbumGeometrySlot[]> = computed((): AlbumGeometrySlot[] => geometry.slots)
+  const pages: ComputedRef<AlbumGeometryPage[]> = computed(
+    (): AlbumGeometryPage[] => geometry.pages,
+  )
+  const slots: ComputedRef<AlbumGeometrySlot[]> = computed(
+    (): AlbumGeometrySlot[] => geometry.slots,
+  )
 
   return { geometry, pages, slots }
 })

@@ -46,14 +46,20 @@ const closePreparation = (): void => {
     class="flex h-52 max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper p-3 max-md:h-[8.5rem] max-md:max-h-[8.5rem] max-md:p-2"
     :aria-label="t('stickerTray.title')"
   >
-    <div class="mb-2 flex items-end justify-between gap-3 max-md:mb-1 max-md:items-center max-md:gap-2">
+    <div
+      class="mb-2 flex items-end justify-between gap-3 max-md:mb-1 max-md:items-center max-md:gap-2"
+    >
       <div>
-        <p class="text-xs font-bold uppercase tracking-[0.16em] text-coral max-md:text-[0.55rem] max-md:tracking-[0.12em]">
+        <p
+          class="text-xs font-bold uppercase tracking-[0.16em] text-coral max-md:text-[0.55rem] max-md:tracking-[0.12em]"
+        >
           {{ t('stickerTray.title') }}
         </p>
         <p class="mt-1 text-xs text-ink/55 max-md:hidden">{{ t('stickerTray.hint') }}</p>
       </div>
-      <span class="shrink-0 text-xs font-bold text-ink/55 max-md:text-[0.55rem]">{{ cards.length }}</span>
+      <span class="shrink-0 text-xs font-bold text-ink/55 max-md:text-[0.55rem]">{{
+        cards.length
+      }}</span>
     </div>
 
     <div

@@ -11,7 +11,9 @@ export interface AlbumGeometry {
 
 // Создаёт независимую от PNG систему координат альбома и проверяет уникальность слотов.
 export const createAlbumGeometry = (data: AlbumGeometryData): AlbumGeometry => {
-  const slots: AlbumGeometrySlot[] = data.pages.flatMap(({ slots: pageSlots }): AlbumGeometrySlot[] => pageSlots)
+  const slots: AlbumGeometrySlot[] = data.pages.flatMap(
+    ({ slots: pageSlots }): AlbumGeometrySlot[] => pageSlots,
+  )
   const slotIds: Set<string> = new Set(slots.map(({ id }): string => id))
   if (slotIds.size !== slots.length) throw new Error('Album geometry contains duplicate slot ids')
 
@@ -28,7 +30,10 @@ export const createAlbumGeometry = (data: AlbumGeometryData): AlbumGeometry => {
     slot.width * (data.stickerRatio.height / data.stickerRatio.width)
 
   // Переводит координаты JSON в проценты относительно HTML-слоя страницы.
-  const getSlotStyle = (slot: AlbumGeometrySlot, page: AlbumGeometryPage): Record<string, string> => ({
+  const getSlotStyle = (
+    slot: AlbumGeometrySlot,
+    page: AlbumGeometryPage,
+  ): Record<string, string> => ({
     left: `${(slot.x / page.width) * 100}%`,
     top: `${(slot.y / page.height) * 100}%`,
     width: `${(slot.width / page.width) * 100}%`,

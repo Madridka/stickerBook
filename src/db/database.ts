@@ -42,7 +42,9 @@ export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as
 // Настраивает локальную таблицу найденных стикеров
 database.version(1).stores({ stickers: 'id, collectedAt' })
 database.version(2).stores({ stickers: 'id, collectedAt', player: 'id' })
-database.version(3).stores({ stickers: 'id, collectedAt', player: 'id', inventory: 'id, type, createdAt' })
+database
+  .version(3)
+  .stores({ stickers: 'id, collectedAt', player: 'id', inventory: 'id, type, createdAt' })
 database.version(4).stores({
   stickers: 'id, collectedAt',
   player: 'id',

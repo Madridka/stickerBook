@@ -17,9 +17,12 @@ const { t } = useI18n()
 const isRevealed: Ref<boolean> = ref(false)
 
 // Сбрасывает состояние просмотра при переходе к следующей карточке
-watch(() => props.card.id, (): void => {
-  isRevealed.value = false
-})
+watch(
+  () => props.card.id,
+  (): void => {
+    isRevealed.value = false
+  },
+)
 
 // Разрешает переход только после явного просмотра текущей карточки
 const reveal = (): void => {
@@ -47,7 +50,11 @@ const handleCardClick = (): void => {
     </p>
     <button
       class="mt-5 h-[min(65dvh,32rem)] w-full max-w-sm overflow-hidden border-4 border-ink bg-paper p-3 text-left shadow-[10px_10px_0_rgb(var(--color-ink)/0.14)] transition-[transform,box-shadow] duration-[220ms] ease-[ease]"
-      :class="isRevealed ? '' : 'hover:-translate-x-0.5 hover:-translate-y-0.5 hover:-rotate-1 hover:shadow-[12px_12px_0_rgb(var(--color-ink)/0.14)]'"
+      :class="
+        isRevealed
+          ? ''
+          : 'hover:-translate-x-0.5 hover:-translate-y-0.5 hover:-rotate-1 hover:shadow-[12px_12px_0_rgb(var(--color-ink)/0.14)]'
+      "
       type="button"
       :aria-label="isRevealed ? card.fullName : t('packOpening.reveal')"
       @click="handleCardClick"
@@ -56,7 +63,10 @@ const handleCardClick = (): void => {
         <div class="min-h-0 flex-1">
           <div class="relative h-full">
             <img class="h-full w-full object-contain" :src="card.image" :alt="card.fullName" />
-            <span v-if="duplicate" class="absolute right-2 top-2 rounded bg-coral px-2 py-1 text-xs font-black uppercase tracking-wide text-white shadow">
+            <span
+              v-if="duplicate"
+              class="absolute right-2 top-2 rounded bg-coral px-2 py-1 text-xs font-black uppercase tracking-wide text-white shadow"
+            >
               {{ t('packOpening.duplicateLabel') }}
             </span>
           </div>
@@ -65,12 +75,16 @@ const handleCardClick = (): void => {
           <p class="text-xs font-bold uppercase tracking-[0.14em] text-coral">{{ card.type }}</p>
           <p class="mt-1 text-xl font-black leading-tight">{{ card.fullName }}</p>
           <p class="text-sm font-semibold text-ink/60">{{ card.team }}</p>
-          <p v-if="duplicate" class="mt-1 text-xs font-bold text-coral">{{ t('packOpening.duplicateStorageHint') }}</p>
+          <p v-if="duplicate" class="mt-1 text-xs font-bold text-coral">
+            {{ t('packOpening.duplicateStorageHint') }}
+          </p>
         </div>
       </div>
       <div v-else class="flex h-full flex-col items-center justify-center bg-ink text-paper">
         <span class="text-6xl font-black">?</span>
-        <span class="mt-4 text-sm font-bold uppercase tracking-[0.18em]">{{ t('packOpening.reveal') }}</span>
+        <span class="mt-4 text-sm font-bold uppercase tracking-[0.18em]">{{
+          t('packOpening.reveal')
+        }}</span>
       </div>
     </button>
     <Button

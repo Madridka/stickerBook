@@ -32,7 +32,8 @@ onBeforeUnmount((): void => {
       :class="{
         'scale-90 opacity-0': animationStep === 0,
         'scale-100 opacity-100': animationStep === 1,
-        '[clip-path:polygon(0_0,100%_0,96%_45%,100%_100%,0_100%,4%_53%)] -rotate-[4deg] scale-105': animationStep === 2,
+        '[clip-path:polygon(0_0,100%_0,96%_45%,100%_100%,0_100%,4%_53%)] -rotate-[4deg] scale-105':
+          animationStep === 2,
         'scale-110 opacity-0': animationStep === 3,
       }"
     >

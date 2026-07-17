@@ -171,7 +171,6 @@ onBeforeUnmount((): void => {
   width: 2.5rem;
   min-width: 2.5rem;
   height: 2.5rem;
-  padding: 0;
   place-items: center;
   border: 1px solid rgb(247 243 235 / 42%);
   border-radius: 50%;
@@ -219,7 +218,6 @@ onBeforeUnmount((): void => {
   width: 2.5rem;
   min-width: 2.5rem;
   height: 2.5rem;
-  padding: 0;
   place-items: center;
   border: 1px solid rgb(247 243 235 / 42%);
   border-radius: 50%;

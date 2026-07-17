@@ -59,7 +59,7 @@
 /* PrimeIcons visually sit slightly above the center of their font line. */
 .p-button .p-button-icon {
   position: relative;
-  top: 10px;
+  top: 1px;
   line-height: 1;
 }
 

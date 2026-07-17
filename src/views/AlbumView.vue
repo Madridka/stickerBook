@@ -7,6 +7,7 @@ import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
 import type { AlbumPageData } from '@/components/Album/AlbumPage.vue'
 import StickerSlot from '@/components/Album/StickerSlot.vue'
 import StickerTray from '@/components/Sticker/StickerTray.vue'
+import { resolveStickerPlacement } from '@/components/DragDrop/dropGeometry'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import cardsData from '@/data/wc-26/mexico/players.json'
 import { useAlbumStore } from '@/stores/album'
@@ -17,9 +18,9 @@ import type {
   AlbumGeometryPage,
   CollectionItem,
   PlayerCard,
-  StickerDropGrade,
   StickerDropResult,
   StickerPlacement,
+  StickerPreparation,
   StickerTrayItem,
 } from '@/types'
 
@@ -90,7 +91,6 @@ const activeTargetId: Ref<string | undefined> = ref(undefined)
 const pendingDrop: Ref<StickerDropResult | undefined> = ref(undefined)
 const confirmationKind: Ref<'wrong' | 'far'> = ref('far')
 const isConfirmOpen: Ref<boolean> = ref(false)
-const lastGrade: Ref<StickerDropGrade | undefined> = ref(undefined)
 let desktopMediaQuery: MediaQueryList | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
@@ -139,10 +139,6 @@ const placedOnVisiblePages: ComputedRef<number> = computed((): number =>
     0,
   ),
 )
-const showStickerTray: ComputedRef<boolean> = computed(
-  (): boolean => isBookOpen.value && visibleSlotTotal.value > 0,
-)
-
 const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
 const getCard = (playerId: string): PlayerCard | undefined =>
   cards.find(({ id }): boolean => id === playerId)
@@ -181,9 +177,15 @@ const focusCardTarget = (playerId: string): void => {
     geometry.slots.some((slot): boolean => slot.playerId === playerId),
   )
   if (pageIndex >= 0) {
+    isBookOpen.value = true
     currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
   }
   activeTargetId.value = playerId
+}
+
+// Переводит к целевой странице только тогда, когда текущий разворот вообще не принимает наклейки.
+const prepareDropPage = (playerId: string): void => {
+  if (visibleSlotTotal.value === 0) focusCardTarget(playerId)
 }
 
 const openBook = (): void => {
@@ -205,11 +207,19 @@ const nextPage = (): void => {
   currentPage.value = Math.min(pages.value.length - 1, currentPage.value + pageStep.value)
 }
 
-const updatePreparationQuality = async (instanceId: string, quality: number): Promise<void> => {
+const savePreparation = async (
+  instanceId: string,
+  preparation: StickerPreparation,
+): Promise<void> => {
   const item: CollectionItem | undefined = collection.items.find(
     ({ instance }): boolean => instance.id === instanceId,
   )
-  if (item) await collection.updateCard(instanceId, { quality: Math.min(item.instance.quality, quality) })
+  if (!item) return
+  const quality: number = Math.min(item.instance.quality, preparation.quality)
+  await collection.updateCard(instanceId, {
+    quality,
+    preparation: { ...preparation, quality },
+  })
 }
 
 // Сохраняет точность позиции и итоговое качество конкретного экземпляра наклейки.
@@ -218,20 +228,14 @@ const saveDrop = async (drop: StickerDropResult): Promise<void> => {
     ({ instance }): boolean => instance.id === drop.instanceId,
   )
   if (!item) return
-  const placement: StickerPlacement = {
-    slotId: drop.slotId,
-    x: drop.x,
-    y: drop.y,
-    rotation: drop.grade === 'perfect' ? 0 : Math.round(Math.max(-0.45, Math.min(0.45, drop.x)) * 18),
-    accuracy: drop.accuracy,
-  }
+  const placement: StickerPlacement = resolveStickerPlacement(drop, item.instance.preparation)
+  const dropQuality: number = drop.grade === 'far' ? drop.quality : 100
   await collection.updateCard(drop.instanceId, {
-    quality: Math.min(item.instance.quality, drop.quality),
+    quality: Math.min(item.instance.quality, dropQuality),
     location: 'album',
     placement,
   })
   activeTargetId.value = undefined
-  lastGrade.value = drop.grade
 }
 
 // Проверяет попадание в слот и запрашивает подтверждение намеренно плохой вклейки.
@@ -330,24 +334,15 @@ onBeforeUnmount((): void => {
           </template>
         </AlbumBook>
 
-        <p
-          v-if="lastGrade"
-          class="absolute bottom-2 left-1/2 z-30 -translate-x-1/2 rounded bg-mint px-3 py-1 text-xs font-bold text-ink shadow"
-          aria-live="polite"
-        >
-          {{ t(`stickerTray.result.${lastGrade}`) }}
-        </p>
       </div>
 
-      <div v-if="isBookOpen" class="h-52 max-h-52 w-full shrink-0">
-        <StickerTray
-          v-if="showStickerTray"
-          :cards="trayCards"
-          @focus="focusCardTarget"
-          @ready="updatePreparationQuality"
-          @drop="handleDrop"
-        />
-      </div>
+      <StickerTray
+        :cards="trayCards"
+        @focus="focusCardTarget"
+        @drag-start="prepareDropPage"
+        @ready="savePreparation"
+        @drop="handleDrop"
+      />
     </div>
 
     <AlbumDropConfirm

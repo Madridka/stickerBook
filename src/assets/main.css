@@ -56,6 +56,13 @@
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 100ms ease;
 }
 
+/* PrimeIcons visually sit slightly above the center of their font line. */
+.p-button .p-button-icon {
+  position: relative;
+  top: 10px;
+  line-height: 1;
+}
+
 .p-button:not(.p-button-text):not(.p-button-outlined) {
   background: var(--prime-text);
   border-color: var(--prime-text);

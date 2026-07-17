@@ -32,9 +32,6 @@ const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] => {
     (pageIndex: number): boolean => pageIndex < props.pages.length,
   )
 })
-const visiblePageLabel: ComputedRef<string> = computed((): string =>
-  visiblePageIndexes.value.map((pageIndex: number): number => pageIndex + 1).join('–'),
-)
 type TurnDirection = 'forward' | 'backward'
 type TurnAction = 'previous' | 'next'
 const isTurning: Ref<boolean> = ref(false)
@@ -68,7 +65,7 @@ onBeforeUnmount((): void => {
 </script>
 
 <template>
-  <div class="flex h-full min-h-0 w-full flex-col items-center justify-center gap-2">
+  <div class="flex h-full min-h-0 w-full flex-col items-center justify-center">
     <div
       class="album-book__viewport relative min-h-0 [perspective:1800px]"
       :class="!isOpen || displayMode === 'page' ? 'album-book__page-focus' : 'album-book__spread'"
@@ -121,32 +118,16 @@ onBeforeUnmount((): void => {
           @click.stop="nextPage"
         />
       </template>
-    </div>
 
-    <div class="flex h-10 shrink-0 items-center justify-center gap-2">
       <Button
-        v-if="!isOpen"
-        :label="t('album.open')"
-        icon="pi pi-book"
-        size="small"
+        class="album-book__corner-button"
+        :aria-label="t(isOpen ? 'album.close' : 'album.open')"
+        :title="t(isOpen ? 'album.close' : 'album.open')"
+        :icon="isOpen ? 'pi pi-times' : 'pi pi-book'"
+        rounded
         type="button"
-        @click="openBook"
+        @click="isOpen ? closeBook() : openBook()"
       />
-      <template v-else>
-        <span class="min-w-16 px-2 text-center text-sm font-bold text-paper/70">
-          {{ visiblePageLabel }} / {{ pages.length }}
-        </span>
-        <Button
-          :aria-label="t('album.close')"
-          :title="t('album.close')"
-          icon="pi pi-times"
-          rounded
-          text
-          size="small"
-          type="button"
-          @click="closeBook"
-        />
-      </template>
     </div>
   </div>
 </template>
@@ -171,7 +152,7 @@ onBeforeUnmount((): void => {
 .album-book__spread {
   display: grid;
   flex: 0 1 auto;
-  width: min(100%, calc((100dvh - 21rem) * 2.56));
+  width: min(100%, calc((100dvh - 20.5rem) * 2.56));
   grid-template-columns: repeat(2, minmax(0, 1fr));
   aspect-ratio: 64 / 25;
   box-shadow: 0 18px 50px rgb(var(--color-ink) / 0.24);
@@ -229,6 +210,30 @@ onBeforeUnmount((): void => {
   opacity: 0.56;
 }
 
+.album-book__corner-button {
+  position: absolute;
+  top: clamp(0.45rem, 1cqw, 0.75rem);
+  right: clamp(0.45rem, 1cqw, 0.75rem);
+  z-index: 40;
+  display: grid;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgb(247 243 235 / 42%);
+  border-radius: 50%;
+  background: rgb(23 33 43 / 88%);
+  box-shadow: 0 8px 22px rgb(23 33 43 / 30%);
+  color: #f7f3eb;
+  backdrop-filter: blur(5px);
+}
+
+.album-book__corner-button:focus-visible {
+  outline: 3px solid #e5b95c;
+  outline-offset: 3px;
+}
+
 .album-page-turn--forward,
 .album-page-turn--backward {
   transform-origin: left center;
@@ -277,6 +282,12 @@ onBeforeUnmount((): void => {
   }
 
   .album-book__edge-button {
+    width: 2.25rem;
+    min-width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .album-book__corner-button {
     width: 2.25rem;
     min-width: 2.25rem;
     height: 2.25rem;

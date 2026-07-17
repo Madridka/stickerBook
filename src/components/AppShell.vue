@@ -3,29 +3,46 @@ import { computed, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import Button from 'primevue/button'
+import Dialog from 'primevue/dialog'
 import Menu from 'primevue/menu'
+import { database } from '@/db/database'
 import { useTheme } from '@/composables/useTheme'
-import { usePlayerStore } from '@/stores/player'
 
 const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()
-const player = usePlayerStore()
 const route = useRoute()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
 const isAlbum = computed((): boolean => route.name === 'album')
 const menuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
+const isResetConfirmOpen: Ref<boolean> = ref(false)
+const isResetting: Ref<boolean> = ref(false)
 
 // Формирует команды выпадающего меню приложения
 const menuItems = computed(() => [
   {
-    label: t('app.resetScore'),
-    icon: 'pi pi-refresh',
-    command: (): void => player.resetCoins(),
+    label: t('app.resetProgress'),
+    icon: 'pi pi-trash',
+    command: (): void => {
+      isResetConfirmOpen.value = true
+    },
   },
 ])
 
 // Открывает или закрывает меню по нажатию на кнопку
 const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
+
+const resetProgress = async (): Promise<void> => {
+  if (isResetting.value) return
+
+  isResetting.value = true
+
+  try {
+    await database.delete()
+    window.location.reload()
+  } finally {
+    isResetting.value = false
+  }
+}
 </script>
 
 <template>
@@ -87,5 +104,35 @@ const toggleMenu = (event: MouseEvent): void => menuRef.value?.toggle(event)
     >
       <RouterView />
     </main>
+
+    <Dialog
+      v-model:visible="isResetConfirmOpen"
+      modal
+      :closable="!isResetting"
+      :header="t('app.resetProgressTitle')"
+      :style="{ width: 'min(28rem, calc(100vw - 2rem))' }"
+    >
+      <p class="text-sm leading-relaxed text-ink/70">
+        {{ t('app.resetProgressText') }}
+      </p>
+
+      <template #footer>
+        <Button
+          :label="t('app.cancel')"
+          text
+          type="button"
+          :disabled="isResetting"
+          @click="isResetConfirmOpen = false"
+        />
+        <Button
+          :label="t('app.resetProgressConfirm')"
+          icon="pi pi-trash"
+          severity="danger"
+          type="button"
+          :loading="isResetting"
+          @click="resetProgress"
+        />
+      </template>
+    </Dialog>
   </div>
 </template>

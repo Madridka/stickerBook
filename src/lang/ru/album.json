@@ -1,5 +1,5 @@
 {
-  "title": "Альбом",
+  "title": "Чемпионат мира 2026",
   "text": "Здесь будут собраны все найденные карточки.",
   "empty": "В альбоме пока нет карточек.",
   "collection": "Коллекция",
@@ -15,8 +15,8 @@
   "inDuplicateStorage": "Повтор · хранится отдельно",
   "duplicatesEmptyTitle": "Хранилище пока пусто",
   "duplicatesEmptyText": "Повторная карточка из набора автоматически появится здесь и не займёт место оригинала.",
-  "spreadTitle": "Mexico · страница {page}",
-  "spreadRangeTitle": "Mexico · разворот {pages}",
+  "spreadTitle": "Чемпионат мира 2026 · страница {page}",
+  "spreadRangeTitle": "Чемпионат мира 2026 · разворот {pages}",
   "spreadProgress": "Вклеено {placed} из {total}",
   "slotTarget": "Место для {name}",
   "location": {

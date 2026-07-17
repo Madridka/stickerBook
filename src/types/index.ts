@@ -19,7 +19,14 @@ export interface StickerInstance {
   playerId: string
   quality: number
   location: StickerLocation
+  preparation?: StickerPreparation
   placement?: StickerPlacement
+}
+
+export interface StickerPreparation {
+  quality: number
+  alignmentX: number
+  alignmentY: number
 }
 
 export interface StickerPlacement {

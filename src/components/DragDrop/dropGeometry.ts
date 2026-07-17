@@ -1,4 +1,9 @@
-import type { StickerDropGrade, StickerDropResult } from '@/types'
+import type {
+  StickerDropGrade,
+  StickerDropResult,
+  StickerPlacement,
+  StickerPreparation,
+} from '@/types'
 
 interface DropCardIdentity {
   instanceId: string
@@ -43,5 +48,24 @@ export const evaluateStickerDrop = (
     accuracy,
     quality,
     grade,
+  }
+}
+
+// Сохраняет точную центровку из подготовки, а ручное смещение применяет только к намеренно далёкому броску.
+export const resolveStickerPlacement = (
+  drop: StickerDropResult,
+  preparation?: StickerPreparation,
+): StickerPlacement => {
+  const isCoarseMiss: boolean = drop.grade === 'far'
+  const x: number = (preparation?.alignmentX ?? 0) + (isCoarseMiss ? drop.x : 0)
+  const y: number = (preparation?.alignmentY ?? 0) + (isCoarseMiss ? drop.y : 0)
+  return {
+    slotId: drop.slotId,
+    x,
+    y,
+    rotation: isCoarseMiss
+      ? Math.round(Math.max(-0.45, Math.min(0.45, drop.x)) * 18)
+      : 0,
+    accuracy: Math.max(0, Math.round(100 - Math.hypot(x, y) * 100)),
   }
 }

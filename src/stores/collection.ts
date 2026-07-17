@@ -55,7 +55,7 @@ export const useCollectionStore = defineStore('collection', () => {
   // Сохраняет качество и положение выбранного экземпляра наклейки в коллекции
   const updateCard = async (
     instanceId: string,
-    changes: Partial<Pick<StickerInstance, 'quality' | 'location'>> & {
+    changes: Partial<Pick<StickerInstance, 'quality' | 'location' | 'preparation'>> & {
       placement?: StickerPlacement
     },
   ): Promise<void> => {

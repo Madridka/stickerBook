@@ -3,7 +3,7 @@ import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import StickerDraggable from '@/components/DragDrop/StickerDraggable.vue'
 import StickerPeelGame from '@/components/MiniGame/StickerPeelGame.vue'
-import type { StickerDropResult, StickerTrayItem } from '@/types'
+import type { StickerDropResult, StickerPreparation, StickerTrayItem } from '@/types'
 
 interface Props {
   cards: StickerTrayItem[]
@@ -11,18 +11,19 @@ interface Props {
 
 interface Emits {
   focus: [playerId: string]
-  ready: [instanceId: string, quality: number]
+  'drag-start': [playerId: string]
+  ready: [instanceId: string, preparation: StickerPreparation]
   drop: [result: StickerDropResult]
 }
 
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
-const preparedIds: Ref<Set<string>> = ref(new Set())
 const selectedInstanceId: Ref<string | undefined> = ref(undefined)
 const isPeelOpen: Ref<boolean> = ref(false)
-const selectedItem: ComputedRef<StickerTrayItem | undefined> = computed((): StickerTrayItem | undefined =>
-  props.cards.find(({ instance }): boolean => instance.id === selectedInstanceId.value),
+const selectedItem: ComputedRef<StickerTrayItem | undefined> = computed(
+  (): StickerTrayItem | undefined =>
+    props.cards.find(({ instance }): boolean => instance.id === selectedInstanceId.value),
 )
 
 const prepareSticker = (item: StickerTrayItem): void => {
@@ -32,10 +33,8 @@ const prepareSticker = (item: StickerTrayItem): void => {
 }
 
 // Сохраняет результат мини-игры и разрешает перенос конкретного экземпляра.
-const completePreparation = (instanceId: string, quality: number): void => {
-  preparedIds.value = new Set([...preparedIds.value, instanceId])
-  emit('ready', instanceId, quality)
-}
+const completePreparation = (instanceId: string, preparation: StickerPreparation): void =>
+  emit('ready', instanceId, preparation)
 
 const closePreparation = (): void => {
   selectedInstanceId.value = undefined
@@ -49,27 +48,30 @@ const closePreparation = (): void => {
   >
     <div class="mb-2 flex items-end justify-between gap-3">
       <div>
-        <p class="text-xs font-bold uppercase tracking-[0.16em] text-coral">{{ t('stickerTray.title') }}</p>
+        <p class="text-xs font-bold uppercase tracking-[0.16em] text-coral">
+          {{ t('stickerTray.title') }}
+        </p>
         <p class="mt-1 text-xs text-ink/55">{{ t('stickerTray.hint') }}</p>
       </div>
       <span class="shrink-0 text-xs font-bold text-ink/55">{{ cards.length }}</span>
     </div>
 
-    <div
-      v-if="cards.length"
-      class="sticker-tray flex min-h-0 flex-1 gap-3 overflow-x-auto pb-3"
-    >
+    <div v-if="cards.length" class="sticker-tray flex min-h-0 flex-1 gap-3 pb-3">
       <StickerDraggable
         v-for="item in cards"
         :key="item.instance.id"
         :card="item.card"
         :instance="item.instance"
-        :prepared="preparedIds.has(item.instance.id)"
+        :prepared="Boolean(item.instance.preparation)"
         @prepare="prepareSticker(item)"
+        @drag-start="emit('drag-start', $event)"
         @drop="emit('drop', $event)"
       />
     </div>
-    <p v-else class="rounded border border-dashed border-ink/20 px-4 py-5 text-center text-sm text-ink/55">
+    <p
+      v-else
+      class="rounded border border-dashed border-ink/20 px-4 py-5 text-center text-sm text-ink/55"
+    >
       {{ t('stickerTray.empty') }}
     </p>
   </section>
@@ -88,5 +90,4 @@ const closePreparation = (): void => {
   scrollbar-color: rgb(var(--color-coral) / 0.55) transparent;
   touch-action: pan-x;
 }
-
 </style>

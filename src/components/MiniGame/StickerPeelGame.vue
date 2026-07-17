@@ -3,7 +3,7 @@ import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import { useI18n } from 'vue-i18n'
-import type { StickerTrayItem } from '@/types'
+import type { StickerPreparation, StickerTrayItem } from '@/types'
 
 interface Props {
   visible: boolean
@@ -12,7 +12,7 @@ interface Props {
 
 interface Emits {
   'update:visible': [visible: boolean]
-  complete: [instanceId: string, quality: number]
+  complete: [instanceId: string, preparation: StickerPreparation]
   closed: []
 }
 
@@ -55,6 +55,8 @@ const stepTranslationKeys: string[] = [
   'stickerTray.stepAlign',
   'stickerTray.stepPress',
 ]
+const alignmentCardWidth: number = 112
+const alignmentCardHeight: number = 168
 
 watch((): boolean => props.visible, (visible: boolean): void => {
   if (!visible) return
@@ -138,7 +140,12 @@ const completePreparation = (): void => {
   const alignmentQuality: number = Math.max(90, 100 - Math.round(alignmentDistance.value / 2))
   const pressQuality: number = Math.max(80, 100 - pressMistakes.value * 5)
   const quality: number = Math.min(peelQuality, alignmentQuality, pressQuality)
-  emit('complete', props.item.instance.id, quality)
+  const preparation: StickerPreparation = {
+    quality,
+    alignmentX: Number((alignX.value / alignmentCardWidth).toFixed(4)),
+    alignmentY: Number((alignY.value / alignmentCardHeight).toFixed(4)),
+  }
+  emit('complete', props.item.instance.id, preparation)
   emit('update:visible', false)
 }
 

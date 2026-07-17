@@ -13,6 +13,7 @@ interface Props {
 
 interface Emits {
   prepare: [instanceId: string]
+  'drag-start': [playerId: string]
   drop: [result: StickerDropResult]
 }
 
@@ -31,6 +32,7 @@ const startDrag = (event: PointerEvent): void => {
     emit('prepare', props.instance.id)
     return
   }
+  emit('drag-start', props.instance.playerId)
   isDragging.value = true
   pointerX.value = event.clientX
   pointerY.value = event.clientY

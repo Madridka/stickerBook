@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import { database } from '@/db/database'
 import type { CollectionItem, StickerInstance, StickerPlacement } from '@/types'
 import collectionData from '@/data/collection.json'
+import { createId } from '@/utils/createId'
 
 export const useCollectionStore = defineStore('collection', () => {
   const items: Ref<CollectionItem[]> = ref([])
@@ -31,7 +32,7 @@ export const useCollectionStore = defineStore('collection', () => {
   // Добавляет карточку в коллекцию и не создаёт лишнюю запись при повторном выпадении
   const addCard = async (playerId: string): Promise<StickerInstance> => {
     const instance: StickerInstance = {
-      id: crypto.randomUUID(),
+      id: createId(),
       playerId,
       quality: 100,
       location: 'inventory',

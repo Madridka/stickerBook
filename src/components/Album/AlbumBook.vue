@@ -84,6 +84,15 @@ onBeforeUnmount((): void => {
         <slot v-if="!isTurning" :page-index="currentPage" />
       </AlbumPage>
 
+      <button
+        v-if="!isOpen"
+        class="absolute inset-0 z-20 cursor-pointer bg-transparent focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-gold"
+        type="button"
+        :aria-label="t('album.open')"
+        :title="t('album.open')"
+        @click="openBook"
+      ></button>
+
       <div
         v-if="isTurning && turningPage"
         class="pointer-events-none absolute inset-0 z-10 [transform-style:preserve-3d]"

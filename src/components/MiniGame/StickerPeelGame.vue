@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
+import { computed, onBeforeUnmount, ref, watch, type ComputedRef, type Ref } from 'vue'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import { useI18n } from 'vue-i18n'
@@ -23,6 +23,14 @@ interface PointerOrigin {
   offsetY: number
 }
 
+interface PeelOrigin {
+  x: number
+  position: number
+  trackWidth: number
+}
+
+type PeelResult = 'playing' | 'success' | 'failure'
+
 interface PressZone {
   className: string
 }
@@ -31,17 +39,27 @@ const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
 const step: Ref<number> = ref(0)
-const progress: Ref<number> = ref(0)
-const startX: Ref<number | undefined> = ref(undefined)
-const lastX: Ref<number | undefined> = ref(undefined)
-const reversals: Ref<number> = ref(0)
+const peelPosition: Ref<number> = ref(12)
+const peelTargetPosition: Ref<number> = ref(70)
+const peelTargetDuration: Ref<number> = ref(900)
+const peelResult: Ref<PeelResult> = ref('playing')
+const peelOrigin: Ref<PeelOrigin | undefined> = ref(undefined)
+const peelTrackRef: Ref<HTMLElement | undefined> = ref(undefined)
+const peelTargetRef: Ref<HTMLElement | undefined> = ref(undefined)
+const peelHandleRef: Ref<HTMLElement | undefined> = ref(undefined)
 const alignX: Ref<number> = ref(38)
 const alignY: Ref<number> = ref(-30)
 const alignOrigin: Ref<PointerOrigin | undefined> = ref(undefined)
 const pressedCount: Ref<number> = ref(0)
 const pressMistakes: Ref<number> = ref(0)
+const alignmentOffset: ComputedRef<number> = computed((): number =>
+  Math.hypot(alignX.value, alignY.value),
+)
 const alignmentDistance: ComputedRef<number> = computed((): number =>
-  Math.round(Math.hypot(alignX.value, alignY.value)),
+  Math.round(alignmentOffset.value),
+)
+const alignmentAccuracy: ComputedRef<number> = computed((): number =>
+  Math.max(0, 100 - Math.round(alignmentOffset.value / 2)),
 )
 const pressZones: PressZone[] = [
   { className: 'left-[8%] top-[8%]' },
@@ -56,16 +74,45 @@ const stepTranslationKeys: string[] = [
 ]
 const alignmentCardWidth: number = 112
 const alignmentCardHeight: number = 168
+const alignmentPerfectAccuracy: number = 95
+const alignmentMaxX: number = 128
+const alignmentMaxY: number = 144
+let peelTimer: ReturnType<typeof setTimeout> | undefined
+
+const clearPeelTimer = (): void => {
+  if (peelTimer) clearTimeout(peelTimer)
+  peelTimer = undefined
+}
+
+const randomBetween = (min: number, max: number): number =>
+  Math.round(min + Math.random() * (max - min))
+
+const movePeelTarget = (): void => {
+  if (!props.visible || step.value !== 0 || peelResult.value !== 'playing') return
+  peelTargetDuration.value = randomBetween(650, 1250)
+  peelTargetPosition.value = randomBetween(22, 78)
+  peelTimer = setTimeout(movePeelTarget, peelTargetDuration.value + randomBetween(180, 520))
+}
+
+const resetPeel = (): void => {
+  clearPeelTimer()
+  peelPosition.value = 12
+  peelTargetPosition.value = randomBetween(38, 72)
+  peelTargetDuration.value = 0
+  peelResult.value = 'playing'
+  peelOrigin.value = undefined
+  peelTimer = setTimeout(movePeelTarget, 180)
+}
 
 watch(
   (): boolean => props.visible,
   (visible: boolean): void => {
-    if (!visible) return
+    if (!visible) {
+      clearPeelTimer()
+      return
+    }
     step.value = 0
-    progress.value = 0
-    startX.value = undefined
-    lastX.value = undefined
-    reversals.value = 0
+    resetPeel()
     alignX.value = 38
     alignY.value = -30
     alignOrigin.value = undefined
@@ -74,26 +121,52 @@ watch(
   },
 )
 
+watch(step, (currentStep: number): void => {
+  if (currentStep === 0 && props.visible && peelResult.value === 'playing') {
+    clearPeelTimer()
+    peelTimer = setTimeout(movePeelTarget, 180)
+    return
+  }
+  clearPeelTimer()
+})
+
 const updateVisible = (visible: boolean): void => emit('update:visible', visible)
 
 const startPeel = (event: PointerEvent): void => {
-  startX.value = event.clientX
-  lastX.value = event.clientX
+  if (peelResult.value !== 'playing' || !peelTrackRef.value) return
+  peelOrigin.value = {
+    x: event.clientX,
+    position: peelPosition.value,
+    trackWidth: peelTrackRef.value.getBoundingClientRect().width,
+  }
   ;(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId)
 }
 
-// Учитывает плавность снятия основы и штрафует обратные движения руки.
+// Ведёт ползунок за указателем, пока движущаяся зона успеха меняет ритм независимо от игрока.
 const movePeel = (event: PointerEvent): void => {
-  if (startX.value === undefined) return
-  if (lastX.value !== undefined && event.clientX < lastX.value - 3) reversals.value += 1
-  lastX.value = event.clientX
-  const nextProgress: number = ((event.clientX - startX.value) / 260) * 100
-  progress.value = Math.max(0, Math.min(100, Math.round(nextProgress)))
+  if (!peelOrigin.value) return
+  const delta: number = ((event.clientX - peelOrigin.value.x) / peelOrigin.value.trackWidth) * 100
+  peelPosition.value = Math.max(7, Math.min(93, peelOrigin.value.position + delta))
 }
 
 const finishPeel = (): void => {
-  startX.value = undefined
-  lastX.value = undefined
+  if (!peelOrigin.value) return
+  peelOrigin.value = undefined
+
+  const trackBounds: DOMRect | undefined = peelTrackRef.value?.getBoundingClientRect()
+  const targetBounds: DOMRect | undefined = peelTargetRef.value?.getBoundingClientRect()
+  const handleBounds: DOMRect | undefined = peelHandleRef.value?.getBoundingClientRect()
+  if (!trackBounds || !targetBounds || !handleBounds) return
+
+  const handleCenter: number = handleBounds.left + handleBounds.width / 2
+  const isHit: boolean = handleCenter >= targetBounds.left && handleCenter <= targetBounds.right
+  peelResult.value = isHit ? 'success' : 'failure'
+  clearPeelTimer()
+
+  if (isHit) {
+    const targetCenter: number = targetBounds.left + targetBounds.width / 2
+    peelPosition.value = ((targetCenter - trackBounds.left) / trackBounds.width) * 100
+  }
 }
 
 const startAlignment = (event: PointerEvent): void => {
@@ -110,12 +183,12 @@ const startAlignment = (event: PointerEvent): void => {
 const moveAlignment = (event: PointerEvent): void => {
   if (!alignOrigin.value) return
   alignX.value = Math.max(
-    -58,
-    Math.min(58, alignOrigin.value.offsetX + event.clientX - alignOrigin.value.x),
+    -alignmentMaxX,
+    Math.min(alignmentMaxX, alignOrigin.value.offsetX + event.clientX - alignOrigin.value.x),
   )
   alignY.value = Math.max(
-    -72,
-    Math.min(72, alignOrigin.value.offsetY + event.clientY - alignOrigin.value.y),
+    -alignmentMaxY,
+    Math.min(alignmentMaxY, alignOrigin.value.offsetY + event.clientY - alignOrigin.value.y),
   )
 }
 
@@ -132,8 +205,7 @@ const pressCorner = (index: number): void => {
 }
 
 const nextStep = (): void => {
-  if (step.value === 0 && progress.value < 90) return
-  if (step.value === 1 && alignmentDistance.value > 14) return
+  if (step.value === 0 && peelResult.value !== 'success') return
   step.value = Math.min(2, step.value + 1)
 }
 
@@ -144,8 +216,8 @@ const previousStep = (): void => {
 // Объединяет качество снятия, совмещения и разглаживания в итог экземпляра.
 const completePreparation = (): void => {
   if (!props.item || pressedCount.value < pressZones.length) return
-  const peelQuality: number = reversals.value <= 1 && progress.value >= 98 ? 100 : 94
-  const alignmentQuality: number = Math.max(90, 100 - Math.round(alignmentDistance.value / 2))
+  const peelQuality: number = 100
+  const alignmentQuality: number = alignmentAccuracy.value
   const pressQuality: number = Math.max(80, 100 - pressMistakes.value * 5)
   const quality: number = Math.min(peelQuality, alignmentQuality, pressQuality)
   const preparation: StickerPreparation = {
@@ -158,6 +230,8 @@ const completePreparation = (): void => {
 }
 
 const handleHide = (): void => emit('closed')
+
+onBeforeUnmount(clearPeelTimer)
 </script>
 
 <template>
@@ -168,12 +242,15 @@ const handleHide = (): void => emit('closed')
     :header="t('stickerTray.peelTitle')"
     @update:visible="updateVisible"
     @hide="handleHide"
+    pt:header:class="!pb-0 max-md:!px-3 max-md:!pt-3"
+    pt:content:class="max-md:!px-3 max-md:!pb-1"
+    pt:footer:class="max-md:!px-3 max-md:!pb-2 max-md:!pt-1"
   >
-    <div class="mb-5 grid grid-cols-3 gap-2">
+    <div class="mb-5 grid grid-cols-3 gap-2 max-md:mb-2 max-md:gap-1">
       <div
         v-for="index in 3"
         :key="index"
-        class="rounded border px-2 py-2 text-center text-[10px] font-black uppercase tracking-wide"
+        class="rounded border px-2 py-2 text-center text-[10px] font-black uppercase tracking-wide max-md:py-1"
         :class="
           index - 1 === step
             ? 'border-coral bg-coral text-white'
@@ -214,46 +291,82 @@ const handleHide = (): void => emit('closed')
       </div>
 
       <div class="mt-5 rounded bg-ink/10 p-1">
-        <div class="relative h-12 overflow-hidden rounded bg-paper">
+        <div ref="peelTrackRef" class="relative h-14 overflow-hidden rounded bg-paper">
           <div
-            class="absolute inset-y-0 left-0 bg-mint transition-[width]"
-            :style="{ width: `${progress}%` }"
+            ref="peelTargetRef"
+            class="pointer-events-none absolute inset-y-1 w-[38%] rounded border-2 border-emerald-700/50 bg-mint/80 shadow-[0_0_18px_rgb(var(--color-mint)/0.75)] transition-[left] ease-linear"
+            :style="{
+              left: `calc(${peelTargetPosition}% - 19%)`,
+              transitionDuration: `${peelTargetDuration}ms`,
+            }"
           />
           <div
             class="pointer-events-none absolute inset-x-3 top-1/2 border-t-2 border-dashed border-ink/30"
           />
           <button
-            class="absolute inset-y-1 w-12 touch-none cursor-ew-resize rounded bg-coral text-sm font-black text-white shadow"
-            :style="{ left: `clamp(0.25rem, calc(${progress}% - 1.5rem), calc(100% - 3.25rem))` }"
+            ref="peelHandleRef"
+            class="absolute inset-y-1 z-10 w-12 -translate-x-1/2 touch-none cursor-grab rounded bg-coral text-sm font-black text-white shadow active:cursor-grabbing disabled:cursor-default"
+            :class="{
+              '!bg-emerald-700': peelResult === 'success',
+              '!bg-red-600': peelResult === 'failure',
+            }"
+            :style="{ left: `${peelPosition}%` }"
             type="button"
             :aria-label="t('stickerTray.protectiveLayer')"
+            :disabled="peelResult !== 'playing'"
             @pointerdown="startPeel"
             @pointermove="movePeel"
             @pointerup="finishPeel"
             @pointercancel="finishPeel"
           >
-            →
+            ↔
           </button>
         </div>
       </div>
-      <p class="mt-2 text-center text-xs font-bold text-ink/55">
-        {{ t('stickerTray.peelProgress', { progress }) }}
+      <p
+        class="mt-2 text-center text-xs font-bold"
+        :class="{
+          'text-ink/55': peelResult === 'playing',
+          'text-emerald-700': peelResult === 'success',
+          'text-red-600': peelResult === 'failure',
+        }"
+      >
+        {{
+          t(
+            peelResult === 'success'
+              ? 'stickerTray.peelSuccess'
+              : peelResult === 'failure'
+                ? 'stickerTray.peelMiss'
+                : 'stickerTray.peelTimingHint',
+          )
+        }}
       </p>
+      <div v-if="peelResult === 'failure'" class="mt-3 text-center">
+        <Button
+          :label="t('stickerTray.retry')"
+          icon="pi pi-refresh"
+          severity="secondary"
+          type="button"
+          @click="resetPeel"
+        />
+      </div>
     </template>
 
     <template v-else-if="step === 1">
       <h2 class="mt-1 text-xl font-black">{{ t('stickerTray.alignTitle') }}</h2>
-      <p class="mt-1 text-sm text-ink/65">{{ t('stickerTray.alignText') }}</p>
+      <p class="mt-1 text-sm text-ink/65 max-md:text-xs max-md:leading-snug">
+        {{ t('stickerTray.alignText') }}
+      </p>
 
       <div
-        class="relative mx-auto mt-5 h-72 w-64 overflow-hidden rounded-lg bg-ink/10 shadow-inner"
+        class="relative mx-auto mt-5 h-72 w-64 overflow-hidden rounded-lg bg-ink/10 shadow-inner max-md:mt-2 max-md:h-64"
       >
         <div
           class="absolute left-1/2 top-1/2 aspect-[2/3] w-28 -translate-x-1/2 -translate-y-1/2 rounded border-2 border-dashed border-coral bg-paper/55"
         />
         <button
-          class="absolute left-1/2 top-1/2 aspect-[2/3] w-28 touch-none overflow-hidden rounded border-2 border-ink bg-white shadow-xl"
-          :class="alignmentDistance <= 14 ? 'ring-4 ring-mint' : ''"
+          class="absolute left-1/2 top-1/2 aspect-[2/3] w-28 touch-none select-none overflow-hidden rounded border-2 border-ink bg-white shadow-xl cursor-grab active:cursor-grabbing"
+          :class="alignmentAccuracy > alignmentPerfectAccuracy ? 'ring-4 ring-mint' : ''"
           :style="{ transform: `translate(calc(-50% + ${alignX}px), calc(-50% + ${alignY}px))` }"
           type="button"
           :aria-label="t('stickerTray.alignTitle')"
@@ -264,20 +377,24 @@ const handleHide = (): void => emit('closed')
         >
           <img
             v-if="item"
-            class="h-full w-full object-cover"
+            class="pointer-events-none h-full w-full select-none object-cover"
             :src="item.card.image"
             :alt="item.card.fullName"
+            draggable="false"
           />
         </button>
       </div>
       <p
-        class="mt-3 text-center text-xs font-black"
-        :class="alignmentDistance <= 14 ? 'text-emerald-700' : 'text-ink/55'"
+        class="mt-3 text-center text-xs font-black max-md:mt-2"
+        :class="alignmentAccuracy > alignmentPerfectAccuracy ? 'text-emerald-700' : 'text-ink/55'"
       >
         {{
-          alignmentDistance <= 14
-            ? t('stickerTray.alignmentReady')
-            : t('stickerTray.alignment', { distance: alignmentDistance })
+          alignmentAccuracy > alignmentPerfectAccuracy
+            ? t('stickerTray.alignmentReady', { accuracy: alignmentAccuracy })
+            : t('stickerTray.alignment', {
+                accuracy: alignmentAccuracy,
+                distance: alignmentDistance,
+              })
         }}
       </p>
     </template>
@@ -333,7 +450,7 @@ const handleHide = (): void => emit('closed')
         icon="pi pi-arrow-right"
         icon-pos="right"
         type="button"
-        :disabled="step === 0 ? progress < 90 : alignmentDistance > 14"
+        :disabled="step === 0 && peelResult !== 'success'"
         @click="nextStep"
       />
       <Button

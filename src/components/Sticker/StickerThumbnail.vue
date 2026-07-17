@@ -17,11 +17,6 @@ defineProps<Props>()
       :alt="card.fullName"
       draggable="false"
     />
-    <span
-      class="absolute left-1 top-1 rounded bg-ink/90 px-1.5 py-0.5 text-[10px] font-black text-paper"
-    >
-      {{ card.id }}
-    </span>
     <span class="absolute bottom-1 left-1 rounded bg-ink/85 px-1 text-[9px] font-bold text-paper">
       {{ instance.quality }}%
     </span>

@@ -6,9 +6,10 @@ import Button from 'primevue/button'
 interface Props {
   price: number
   canBuy: boolean
+  purchasing?: boolean
 }
 
-const props: Props = defineProps<Props>()
+const props: Props = withDefaults(defineProps<Props>(), { purchasing: false })
 const emit = defineEmits<{ purchase: [] }>()
 const { t } = useI18n()
 
@@ -39,7 +40,8 @@ const handlePurchase = (): void => emit('purchase')
       <Button
         :label="t('shop.buy')"
         icon="pi pi-shopping-bag"
-        :disabled="!canBuy"
+        :disabled="!canBuy || purchasing"
+        :loading="purchasing"
         type="button"
         @click="handlePurchase"
       />

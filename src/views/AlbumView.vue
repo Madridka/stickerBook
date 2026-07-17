@@ -162,13 +162,25 @@ const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void =>
 // Возвращает уже вклеенную карточку с поддержкой старых идентификаторов слотов.
 const getPlacedCard = (
   slotId: string,
-): { card: PlayerCard; placement: StickerPlacement } | undefined => {
+):
+  | {
+      card: PlayerCard
+      placement: StickerPlacement
+      preparation?: StickerPreparation
+    }
+  | undefined => {
   const item: CollectionItem | undefined = collection.items.find(
     ({ instance }): boolean => normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
   )
   if (!item?.instance.placement) return undefined
   const card: PlayerCard | undefined = getCard(item.instance.playerId)
-  return card ? { card, placement: item.instance.placement } : undefined
+  return card
+    ? {
+        card,
+        placement: item.instance.placement,
+        preparation: item.instance.preparation,
+      }
+    : undefined
 }
 
 const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[] =>
@@ -191,6 +203,10 @@ const focusCardTarget = (playerId: string): void => {
     currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
   }
   activeTargetId.value = playerId
+}
+
+const clearCardTarget = (): void => {
+  activeTargetId.value = undefined
 }
 
 // Переводит к целевой странице только тогда, когда текущий разворот вообще не принимает наклейки.
@@ -323,7 +339,6 @@ onBeforeUnmount((): void => {
         {{ t(isBookOpen ? 'album.editorial.infoLabel' : 'album.editorial.coverLabel') }}
       </div>
     </header>
-
     <div class="flex min-h-0 flex-1 flex-col">
       <div class="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden">
         <AlbumBook
@@ -359,6 +374,7 @@ onBeforeUnmount((): void => {
                 :target-card="getCard(slot.playerId)"
                 :card="getPlacedCard(slot.id)?.card"
                 :placement="getPlacedCard(slot.id)?.placement"
+                :preparation="getPlacedCard(slot.id)?.preparation"
                 :highlighted="activeTargetId === slot.playerId"
               />
             </template>
@@ -369,6 +385,7 @@ onBeforeUnmount((): void => {
       <StickerTray
         :cards="trayCards"
         @focus="focusCardTarget"
+        @clear-focus="clearCardTarget"
         @drag-start="prepareDropPage"
         @ready="savePreparation"
         @drop="handleDrop"

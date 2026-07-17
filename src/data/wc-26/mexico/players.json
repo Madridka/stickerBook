@@ -9,10 +9,10 @@
   },
   {
     "id": "mex-02",
-    "firstName": "Luis",
-    "lastName": "Malagón",
-    "fullName": "Luis Malagón",
-    "image": "/cards/mexico/MEX-02-luis-malagon.webp",
+    "firstName": "Guillermo",
+    "lastName": "Ochoa",
+    "fullName": "Guillermo Ochoa",
+    "image": "/cards/mexico/MEX-02-guillermo-ochoa.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -140,7 +140,7 @@
     "firstName": "Hirving",
     "lastName": "Lozano",
     "fullName": "Hirving Lozano",
-    "image": "/cards/mexico/MEX-15-hirving-lozano.webp",
+    "image": "/cards/mexico/MEX-15-hirving-lozano.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20
@@ -160,7 +160,7 @@
     "firstName": "Raúl",
     "lastName": "Jiménez",
     "fullName": "Raúl Jiménez",
-    "image": "/cards/mexico/MEX-17-raul-jimenez.webp",
+    "image": "/cards/mexico/MEX-17-raul-jimenez.png",
     "type": "player",
     "team": "Mexico",
     "weight": 20

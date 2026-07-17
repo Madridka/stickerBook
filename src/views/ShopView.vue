@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import ShopItem from '@/components/Shop/ShopItem.vue'
@@ -10,14 +11,33 @@ const { t } = useI18n()
 const player = usePlayerStore()
 const inventory = useInventoryStore()
 const router = useRouter()
+const isPurchasing: Ref<boolean> = ref(false)
+const hasPurchaseError: Ref<boolean> = ref(false)
 
 // Берёт цену Pack из игровых данных магазина
 
-// Списывает coins и добавляет новый Pack в инвентарь
+// Сначала сохраняет Pack и только после успешной записи списывает coins.
 const buyPack = async (): Promise<void> => {
-  if (player.spendCoins(packData.price)) {
-    await inventory.addPack()
-    await router.push({ name: 'pack-opening' })
+  if (isPurchasing.value || player.coins < packData.price) return
+
+  isPurchasing.value = true
+  hasPurchaseError.value = false
+  try {
+    try {
+      await inventory.addPack()
+    } catch {
+      hasPurchaseError.value = true
+      return
+    }
+
+    if (!player.spendCoins(packData.price)) return
+    try {
+      await router.push({ name: 'pack-opening' })
+    } catch {
+      window.location.assign(router.resolve({ name: 'pack-opening' }).href)
+    }
+  } finally {
+    isPurchasing.value = false
   }
 }
 </script>
@@ -49,7 +69,11 @@ const buyPack = async (): Promise<void> => {
       class="mt-10"
       :price="packData.price"
       :can-buy="player.coins >= packData.price"
+      :purchasing="isPurchasing"
       @purchase="buyPack"
     />
+    <p v-if="hasPurchaseError" class="mt-4 text-sm font-bold text-coral" role="alert">
+      {{ t('shop.purchaseError') }}
+    </p>
   </section>
 </template>

@@ -20,20 +20,18 @@ interface Emits {
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
+const isPointerActive: Ref<boolean> = ref(false)
 const isDragging: Ref<boolean> = ref(false)
 const pointerX: Ref<number> = ref(0)
 const pointerY: Ref<number> = ref(0)
 const dragStartX: Ref<number> = ref(0)
 const dragStartY: Ref<number> = ref(0)
+const dragThreshold: number = 10
 
 // Первый выбор открывает подготовку, повторный захват переносит готовую наклейку.
 const startDrag = (event: PointerEvent): void => {
-  if (!props.prepared) {
-    emit('prepare', props.instance.id)
-    return
-  }
-  emit('drag-start', props.instance.playerId)
-  isDragging.value = true
+  if (event.button !== 0) return
+  isPointerActive.value = true
   pointerX.value = event.clientX
   pointerY.value = event.clientY
   dragStartX.value = event.clientX
@@ -42,34 +40,64 @@ const startDrag = (event: PointerEvent): void => {
 }
 
 const moveDrag = (event: PointerEvent): void => {
-  if (!isDragging.value) return
+  if (!isPointerActive.value) return
   pointerX.value = event.clientX
   pointerY.value = event.clientY
+
+  if (!props.prepared || isDragging.value) return
+  const deltaX: number = event.clientX - dragStartX.value
+  const deltaY: number = event.clientY - dragStartY.value
+  if (Math.hypot(deltaX, deltaY) < dragThreshold) return
+
+  // Горизонтальный жест пальцем прокручивает трей, вертикальный начинает перенос наклейки.
+  if (event.pointerType === 'touch' && Math.abs(deltaX) > Math.abs(deltaY)) return
+  emit('drag-start', props.instance.playerId)
+  isDragging.value = true
 }
 
 // Завершает перенос и передаёт оценку ближайшего слота в игровой слой альбома.
 const finishDrag = (event: PointerEvent): void => {
+  if (!isPointerActive.value) return
+  isPointerActive.value = false
+  const movement: number = Math.hypot(
+    event.clientX - dragStartX.value,
+    event.clientY - dragStartY.value,
+  )
+
+  if (!props.prepared) {
+    if (movement < dragThreshold) emit('prepare', props.instance.id)
+    return
+  }
   if (!isDragging.value) return
   isDragging.value = false
-  if (Math.hypot(event.clientX - dragStartX.value, event.clientY - dragStartY.value) < 10) return
   const result: StickerDropResult | undefined = evaluateStickerDrop(
     { x: event.clientX, y: event.clientY },
     { instanceId: props.instance.id, playerId: props.instance.playerId },
   )
   if (result) emit('drop', result)
 }
+
+const cancelDrag = (): void => {
+  isPointerActive.value = false
+  isDragging.value = false
+}
+
+const handleKeyboardClick = (event: MouseEvent): void => {
+  if (event.detail === 0 && !props.prepared) emit('prepare', props.instance.id)
+}
 </script>
 
 <template>
   <button
-    class="group flex h-32 w-60 shrink-0 touch-none cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral max-md:h-24 max-md:w-[10.75rem] max-md:gap-2 max-md:border max-md:p-1.5"
+    class="group flex h-32 w-60 shrink-0 touch-pan-x cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral max-md:h-24 max-md:w-[10.75rem] max-md:gap-2 max-md:border max-md:p-1.5"
     :class="{ 'border-mint ring-2 ring-mint/50': prepared, 'opacity-50': isDragging }"
     type="button"
     :aria-label="card.fullName"
     @pointerdown="startDrag"
     @pointermove="moveDrag"
     @pointerup="finishDrag"
-    @pointercancel="finishDrag"
+    @pointercancel="cancelDrag"
+    @click="handleKeyboardClick"
   >
     <div
       class="h-28 w-[4.7rem] shrink-0 overflow-hidden rounded border border-ink/10 max-md:h-20 max-md:w-[3.33rem]"

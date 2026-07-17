@@ -10,6 +10,22 @@ interface DropCardIdentity {
   playerId: string
 }
 
+const alignmentCardWidth: number = 112
+const alignmentCardHeight: number = 168
+const alignmentSnapAccuracy: number = 95
+
+export const getStickerAlignmentAccuracy = (x: number, y: number): number =>
+  Math.max(
+    0,
+    100 -
+      Math.round(
+        Math.hypot(x * alignmentCardWidth, y * alignmentCardHeight) / 2,
+      ),
+  )
+
+export const shouldSnapStickerAlignment = (x: number, y: number): boolean =>
+  getStickerAlignmentAccuracy(x, y) > alignmentSnapAccuracy
+
 const gradeDrop = (distance: number): { grade: StickerDropGrade; quality: number } => {
   if (distance <= 0.16) return { grade: 'perfect', quality: 100 }
   if (distance <= 0.55) return { grade: 'near', quality: 85 }
@@ -57,13 +73,18 @@ export const resolveStickerPlacement = (
   preparation?: StickerPreparation,
 ): StickerPlacement => {
   const isCoarseMiss: boolean = drop.grade === 'far'
-  const x: number = (preparation?.alignmentX ?? 0) + (isCoarseMiss ? drop.x : 0)
-  const y: number = (preparation?.alignmentY ?? 0) + (isCoarseMiss ? drop.y : 0)
+  const preparedX: number = preparation?.alignmentX ?? 0
+  const preparedY: number = preparation?.alignmentY ?? 0
+  const isPreparedAlignmentPerfect: boolean = shouldSnapStickerAlignment(preparedX, preparedY)
+  const alignmentX: number = isPreparedAlignmentPerfect ? 0 : preparedX
+  const alignmentY: number = isPreparedAlignmentPerfect ? 0 : preparedY
+  const x: number = alignmentX + (isCoarseMiss ? drop.x : 0)
+  const y: number = alignmentY + (isCoarseMiss ? drop.y : 0)
   return {
     slotId: drop.slotId,
     x,
     y,
     rotation: isCoarseMiss ? Math.round(Math.max(-0.45, Math.min(0.45, drop.x)) * 18) : 0,
-    accuracy: Math.max(0, Math.round(100 - Math.hypot(x, y) * 100)),
+    accuracy: getStickerAlignmentAccuracy(x, y),
   }
 }

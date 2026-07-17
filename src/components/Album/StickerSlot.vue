@@ -2,7 +2,14 @@
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useAlbumStore } from '@/stores/album'
-import type { AlbumGeometryPage, AlbumGeometrySlot, PlayerCard, StickerPlacement } from '@/types'
+import { shouldSnapStickerAlignment } from '@/components/DragDrop/dropGeometry'
+import type {
+  AlbumGeometryPage,
+  AlbumGeometrySlot,
+  PlayerCard,
+  StickerPlacement,
+  StickerPreparation,
+} from '@/types'
 
 interface Props {
   slot: AlbumGeometrySlot
@@ -10,6 +17,7 @@ interface Props {
   targetCard?: PlayerCard
   card?: PlayerCard
   placement?: StickerPlacement
+  preparation?: StickerPreparation
   highlighted?: boolean
 }
 
@@ -23,9 +31,29 @@ const slotCode: ComputedRef<string> = computed((): string =>
   props.slot.id.toUpperCase().replace('-', ' '),
 )
 const slotStyle = (): Record<string, string> => album.geometry.getSlotStyle(props.slot, props.page)
-const cardStyle = (): Record<string, string> => ({
-  transform: `translate(${(props.placement?.x ?? 0) * 100}%, ${(props.placement?.y ?? 0) * 100}%) rotate(${props.placement?.rotation ?? 0}deg)`,
-})
+const cardStyle = (): Record<string, string> => {
+  let x: number = props.placement?.x ?? 0
+  let y: number = props.placement?.y ?? 0
+  const rotation: number = props.placement?.rotation ?? 0
+  const wasIncorrectlySnapped: boolean =
+    x === 0 &&
+    y === 0 &&
+    rotation === 0 &&
+    Boolean(props.preparation) &&
+    !shouldSnapStickerAlignment(
+      props.preparation?.alignmentX ?? 0,
+      props.preparation?.alignmentY ?? 0,
+    )
+  if (wasIncorrectlySnapped) {
+    x = props.preparation?.alignmentX ?? 0
+    y = props.preparation?.alignmentY ?? 0
+  }
+  return {
+    transform: x === 0 && y === 0 && rotation === 0
+      ? 'none'
+      : `translate(${x * 100}%, ${y * 100}%) rotate(${rotation}deg)`,
+  }
+}
 </script>
 
 <template>
@@ -34,6 +62,7 @@ const cardStyle = (): Record<string, string> => ({
     :class="{
       'z-[15] animate-target-pulse bg-[rgb(var(--color-mint)/0.92)] shadow-[0_0_0_3px_rgb(var(--color-paper)),0_0_0_7px_rgb(var(--color-coral)),0_0_26px_rgb(var(--color-coral)/0.8)]':
         highlighted && !card,
+      '!border-0 !bg-transparent !shadow-none before:hidden': card,
     }"
     :style="slotStyle()"
     :aria-label="t('album.slotTarget', { name: targetName })"

@@ -9,6 +9,7 @@ interface Props {
   currentPage: number
   isOpen: boolean
   displayMode?: 'spread' | 'page'
+  openStartPage?: number
 }
 
 interface Emits {
@@ -18,7 +19,10 @@ interface Emits {
   next: []
 }
 
-const props = withDefaults(defineProps<Props>(), { displayMode: 'spread' })
+const props = withDefaults(defineProps<Props>(), {
+  displayMode: 'spread',
+  openStartPage: 0,
+})
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
 const pageStep: ComputedRef<number> = computed((): number => props.displayMode === 'page' ? 1 : 2)
@@ -39,7 +43,7 @@ let turnTimer: ReturnType<typeof setTimeout> | undefined
 
 // Запускает переворот одной страницы и синхронизирует индекс после анимации.
 const turnTo = (targetPage: number, direction: TurnDirection, action: TurnAction): void => {
-  if (isTurning.value || targetPage < 0 || targetPage >= props.pages.length) return
+  if (isTurning.value || targetPage < props.openStartPage || targetPage >= props.pages.length) return
   turningPage.value = props.pages[targetPage]
   turnDirection.value = direction
   isTurning.value = true
@@ -65,7 +69,7 @@ onBeforeUnmount((): void => {
   <div class="flex h-full min-h-0 w-full flex-col items-center justify-center gap-2">
     <div
       class="album-book__viewport relative min-h-0 [perspective:1800px]"
-      :class="displayMode === 'page' ? 'album-book__page-focus' : 'album-book__spread'"
+      :class="!isOpen || displayMode === 'page' ? 'album-book__page-focus' : 'album-book__spread'"
     >
       <template v-if="isOpen">
         <AlbumPage
@@ -101,7 +105,7 @@ onBeforeUnmount((): void => {
       />
       <template v-else>
         <Button
-          v-if="currentPage > 0"
+          v-if="currentPage > openStartPage"
           :label="t('album.previous')"
           icon="pi pi-arrow-left"
           outlined
@@ -122,7 +126,7 @@ onBeforeUnmount((): void => {
           @click="nextPage"
         />
         <Button
-          v-else-if="displayMode === 'spread'"
+          v-else
           :label="t('album.close')"
           icon="pi pi-times"
           size="small"

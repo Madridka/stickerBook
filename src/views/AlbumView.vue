@@ -2,13 +2,17 @@
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AlbumBook from '@/components/Album/AlbumBook.vue'
+import AlbumEditorialPage from '@/components/Album/AlbumEditorialPage.vue'
 import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
 import type { AlbumPageData } from '@/components/Album/AlbumPage.vue'
 import StickerSlot from '@/components/Album/StickerSlot.vue'
 import StickerTray from '@/components/Sticker/StickerTray.vue'
+import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import cardsData from '@/data/wc-26/mexico/players.json'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
+import projectReadme from '../../README.md?raw'
+import projectLogo from '../../assets/game/wc-26/main/logo.png?url'
 import type {
   AlbumGeometryPage,
   CollectionItem,
@@ -23,10 +27,64 @@ interface AlbumPageView extends AlbumPageData {
   geometry: AlbumGeometryPage
 }
 
+interface AlbumReleaseNote {
+  version: string
+  title: string
+  items: string[]
+}
+
+const toPlainText = (value: string): string => value
+  .replace(/\[([^\]]+)]\([^)]+\)/g, '$1')
+  .replace(/`([^`]+)`/g, '$1')
+  .replace(/\*\*([^*]+)\*\*/g, '$1')
+  .trim()
+
+const readMarkdownList = (markdown: string, sectionTitle: string): string[] => {
+  const lines: string[] = markdown.split(/\r?\n/)
+  const sectionStart: number = lines.findIndex((line: string): boolean => line.trim() === `## ${sectionTitle}`)
+  if (sectionStart < 0) return []
+  const sectionEnd: number = lines.findIndex(
+    (line: string, index: number): boolean => index > sectionStart && line.startsWith('## '),
+  )
+  return lines
+    .slice(sectionStart + 1, sectionEnd < 0 ? lines.length : sectionEnd)
+    .filter((line: string): boolean => /^-\s+/.test(line))
+    .map((line: string): string => toPlainText(line.replace(/^-\s+/, '')))
+}
+
+const parseReleaseNotes = (markdown: string): AlbumReleaseNote[] => {
+  const headings: RegExpMatchArray[] = Array.from(
+    markdown.matchAll(/^##\s+(\d+\.\d+\.\d+)\s+—\s+(.+)$/gm),
+  )
+  return headings.map((heading: RegExpMatchArray, index: number): AlbumReleaseNote => {
+    const contentStart: number = (heading.index ?? 0) + heading[0].length
+    const contentEnd: number = headings[index + 1]?.index ?? markdown.length
+    const items: string[] = markdown
+      .slice(contentStart, contentEnd)
+      .split(/\r?\n/)
+      .filter((line: string): boolean => /^-\s+/.test(line))
+      .map((line: string): string => toPlainText(line.replace(/^-\s+/, '')))
+    return { version: heading[1], title: toPlainText(heading[2]), items }
+  })
+}
+
+const projectIntro: string = toPlainText(
+  projectReadme.split(/\r?\n/).find((line: string): boolean => Boolean(line.trim()) && !line.startsWith('#')) ?? '',
+)
+const currentMvpItems: string[] = readMarkdownList(projectReadme, 'Текущий MVP')
+const nextStepItems: string[] = readMarkdownList(projectReadme, 'Ближайшие шаги')
+const futureIdeaItems: string[] = readMarkdownList(projectReadme, 'Будущие идеи')
+const allReleaseNotes: AlbumReleaseNote[] = parseReleaseNotes(changelogMarkdown)
+const latestReleaseSeries: string = allReleaseNotes[0]?.version.split('.').slice(0, 2).join('.') ?? '0.0'
+const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
+  .filter(({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`))
+  .slice(0, 3)
+
 const { t } = useI18n()
 const album = useAlbumStore()
 const collection = useCollectionStore()
 const currentPage: Ref<number> = ref(0)
+const isBookOpen: Ref<boolean> = ref(false)
 const isDesktopSpread: Ref<boolean> = ref(false)
 const activeTargetId: Ref<string | undefined> = ref(undefined)
 const pendingDrop: Ref<StickerDropResult | undefined> = ref(undefined)
@@ -55,7 +113,10 @@ const displayMode: ComputedRef<'spread' | 'page'> = computed(
 )
 const pageStep: ComputedRef<number> = computed((): number => isDesktopSpread.value ? 2 : 1)
 const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] =>
-  Array.from({ length: pageStep.value }, (_value: unknown, offset: number): number => currentPage.value + offset)
+  Array.from(
+    { length: isBookOpen.value ? pageStep.value : 1 },
+    (_value: unknown, offset: number): number => currentPage.value + offset,
+  )
     .filter((pageIndex: number): boolean => pageIndex < pages.value.length),
 )
 const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed(
@@ -78,6 +139,9 @@ const placedOnVisiblePages: ComputedRef<number> = computed((): number =>
     0,
   ),
 )
+const showStickerTray: ComputedRef<boolean> = computed(
+  (): boolean => isBookOpen.value && visibleSlotTotal.value > 0,
+)
 
 const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
 const getCard = (playerId: string): PlayerCard | undefined =>
@@ -86,7 +150,9 @@ const getCard = (playerId: string): PlayerCard | undefined =>
 // Синхронизирует режим одной страницы и полного разворота с Tailwind breakpoint lg.
 const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void => {
   isDesktopSpread.value = event.matches
-  if (event.matches) currentPage.value = Math.floor(currentPage.value / 2) * 2
+  if (event.matches && isBookOpen.value) {
+    currentPage.value = 1 + Math.floor((currentPage.value - 1) / 2) * 2
+  }
 }
 
 // Возвращает уже вклеенную карточку с поддержкой старых идентификаторов слотов.
@@ -115,13 +181,24 @@ const focusCardTarget = (playerId: string): void => {
     geometry.slots.some((slot): boolean => slot.playerId === playerId),
   )
   if (pageIndex >= 0) {
-    currentPage.value = isDesktopSpread.value ? Math.floor(pageIndex / 2) * 2 : pageIndex
+    currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
   }
   activeTargetId.value = playerId
 }
 
+const openBook = (): void => {
+  currentPage.value = 1
+  isBookOpen.value = true
+}
+
+const closeBook = (): void => {
+  currentPage.value = 0
+  isBookOpen.value = false
+  activeTargetId.value = undefined
+}
+
 const previousPage = (): void => {
-  currentPage.value = Math.max(0, currentPage.value - pageStep.value)
+  currentPage.value = Math.max(1, currentPage.value - pageStep.value)
 }
 
 const nextPage = (): void => {
@@ -199,12 +276,16 @@ onBeforeUnmount((): void => {
       <div>
         <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-gold">{{ t('app.album') }}</p>
         <h1 class="text-lg font-black leading-tight">
-          {{ t(isDesktopSpread ? 'album.spreadRangeTitle' : 'album.spreadTitle', { page: visiblePageLabel, pages: visiblePageLabel }) }}
+          {{ t(isBookOpen && isDesktopSpread ? 'album.spreadRangeTitle' : 'album.spreadTitle', { page: visiblePageLabel, pages: visiblePageLabel }) }}
         </h1>
       </div>
-      <div class="text-right text-xs font-semibold text-paper/65">
+      <div v-if="visibleSlotTotal > 0" class="text-right text-xs font-semibold text-paper/65">
         <strong class="block text-base font-black text-paper">{{ placedOnVisiblePages }} / {{ visibleSlotTotal }}</strong>
         {{ t('album.spreadProgress', { placed: placedOnVisiblePages, total: visibleSlotTotal }) }}
+      </div>
+      <div v-else class="text-right text-[10px] font-bold uppercase tracking-[0.16em] text-paper/55">
+        <strong class="block text-base font-black tracking-normal text-paper">{{ visiblePageLabel }}</strong>
+        {{ isBookOpen ? 'О проекте' : 'Обложка' }}
       </div>
     </header>
 
@@ -214,22 +295,38 @@ onBeforeUnmount((): void => {
           class="h-full min-h-0 w-full"
           :pages="pages"
           :current-page="currentPage"
-          :is-open="true"
+          :is-open="isBookOpen"
           :display-mode="displayMode"
+          :open-start-page="1"
+          @open="openBook"
+          @close="closeBook"
           @previous="previousPage"
           @next="nextPage"
         >
           <template #default="{ pageIndex }">
-            <StickerSlot
-              v-for="slot in pages[pageIndex].geometry.slots"
-              :key="slot.id"
-              :slot="slot"
-              :page="pages[pageIndex].geometry"
-              :target-card="getCard(slot.playerId)"
-              :card="getPlacedCard(slot.id)?.card"
-              :placement="getPlacedCard(slot.id)?.placement"
-              :highlighted="activeTargetId === slot.playerId"
+            <AlbumEditorialPage
+              v-if="pages[pageIndex].geometry.number <= 3"
+              :page-number="pages[pageIndex].geometry.number"
+              :logo="projectLogo"
+              :project-intro="projectIntro"
+              :current-items="currentMvpItems"
+              :next-items="nextStepItems"
+              :future-items="futureIdeaItems"
+              :release-series="latestReleaseSeries"
+              :releases="recentReleaseNotes"
             />
+            <template v-else>
+              <StickerSlot
+                v-for="slot in pages[pageIndex].geometry.slots"
+                :key="slot.id"
+                :slot="slot"
+                :page="pages[pageIndex].geometry"
+                :target-card="getCard(slot.playerId)"
+                :card="getPlacedCard(slot.id)?.card"
+                :placement="getPlacedCard(slot.id)?.placement"
+                :highlighted="activeTargetId === slot.playerId"
+              />
+            </template>
           </template>
         </AlbumBook>
 
@@ -243,6 +340,7 @@ onBeforeUnmount((): void => {
       </div>
 
       <StickerTray
+        v-if="showStickerTray"
         :cards="trayCards"
         @focus="focusCardTarget"
         @ready="updatePreparationQuality"

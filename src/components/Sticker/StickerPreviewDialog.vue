@@ -43,22 +43,31 @@ const prepare = (): void => {
 </script>
 
 <template>
-  <Dialog :visible="visible" modal :header="t('stickerPreview.title')" class="w-[min(92vw,28rem)]" @update:visible="emit('update:visible', $event)">
+  <Dialog
+    :visible="visible"
+    modal
+    :header="t('stickerPreview.title')"
+    class="w-[min(94vw,42rem)]"
+    @update:visible="emit('update:visible', $event)"
+  >
     <div v-if="card && instance" class="flex flex-col items-center gap-4">
       <button class="[perspective:1000px]" type="button" :aria-label="t('stickerPreview.flip')" @click="toggleFlip">
-        <div class="relative aspect-[2/3] w-52 transition-transform duration-500 [transform-style:preserve-3d]" :class="{ '[transform:rotateY(180deg)]': isFlipped }">
+        <div
+          class="relative aspect-[2/3] w-52 transition-transform duration-500 [transform-style:preserve-3d] md:w-72 2xl:w-80"
+          :class="{ '[transform:rotateY(180deg)]': isFlipped }"
+        >
           <img class="absolute inset-0 h-full w-full rounded-lg object-cover shadow-xl [backface-visibility:hidden]" :src="card.image" :alt="card.fullName" />
-          <div class="absolute inset-0 flex flex-col justify-between rounded-lg bg-ink p-5 text-paper shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
-            <p class="text-xs font-bold uppercase tracking-[0.16em] text-gold">{{ card.id }}</p>
+          <div class="absolute inset-0 flex flex-col justify-between rounded-lg bg-ink p-5 text-paper shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-7">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-gold md:text-sm">{{ card.id }}</p>
             <div>
-              <p class="text-xs uppercase tracking-wide text-paper/55">{{ t('stickerPreview.player') }}</p>
-              <strong class="mt-1 block text-xl leading-tight">{{ card.fullName }}</strong>
-              <p class="mt-4 text-xs uppercase tracking-wide text-paper/55">{{ t('stickerPreview.quality') }}</p>
-              <strong class="mt-1 block text-lg">{{ instance.quality }}%</strong>
-              <p class="mt-4 text-xs uppercase tracking-wide text-paper/55">{{ t('stickerPreview.status') }}</p>
-              <strong class="mt-1 block text-sm">{{ t(`album.location.${instance.location}`) }}</strong>
+              <p class="text-xs uppercase tracking-wide text-paper/55 md:text-sm">{{ t('stickerPreview.player') }}</p>
+              <strong class="mt-1 block text-xl leading-tight md:text-3xl">{{ card.fullName }}</strong>
+              <p class="mt-4 text-xs uppercase tracking-wide text-paper/55 md:mt-6 md:text-sm">{{ t('stickerPreview.quality') }}</p>
+              <strong class="mt-1 block text-lg md:text-2xl">{{ instance.quality }}%</strong>
+              <p class="mt-4 text-xs uppercase tracking-wide text-paper/55 md:mt-6 md:text-sm">{{ t('stickerPreview.status') }}</p>
+              <strong class="mt-1 block text-sm md:text-lg">{{ t(`album.location.${instance.location}`) }}</strong>
             </div>
-            <p class="text-center text-xs text-paper/55">{{ t('stickerPreview.flip') }}</p>
+            <p class="text-center text-xs text-paper/55 md:text-sm">{{ t('stickerPreview.flip') }}</p>
           </div>
         </div>
       </button>

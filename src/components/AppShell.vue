@@ -13,7 +13,7 @@ const { isEmeraldPink, toggleTheme } = useTheme()
 const route = useRoute()
 const router = useRouter()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
-const isAlbum = computed((): boolean => route.name === 'album')
+const isAlbumWorkspace = computed((): boolean => route.meta.albumWorkspace === true)
 const desktopMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const mobileMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const isResetConfirmOpen: Ref<boolean> = ref(false)
@@ -164,7 +164,7 @@ const resetProgress = async (): Promise<void> => {
     <!-- Область отображения текущего маршрута -->
     <main
       class="flex min-h-0 w-full flex-1 items-center overflow-hidden"
-      :class="isAlbum ? 'max-w-none p-0' : 'mx-auto max-w-6xl px-5 py-4 sm:px-8 sm:py-6'"
+      :class="isAlbumWorkspace ? 'max-w-none p-0' : 'mx-auto max-w-6xl px-5 py-4 sm:px-8 sm:py-6'"
     >
       <RouterView />
     </main>

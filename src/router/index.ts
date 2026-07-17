@@ -24,11 +24,28 @@ const router: Router = createRouter({
     },
     {
       path: '/album',
-      name: 'album',
-      component: () => import('@/views/AlbumView.vue'),
-      meta: {
-        title: (i18n.global.t as (key: string) => string)('app.album'),
-      },
+      component: () => import('@/views/AlbumRouteView.vue'),
+      children: [
+        {
+          path: '',
+          name: 'album',
+          component: () => import('@/views/AlbumLibraryView.vue'),
+          meta: {
+            title: (i18n.global.t as (key: string) => string)('app.album'),
+          },
+        },
+        {
+          path: 'wc-26',
+          name: 'album-wc-26',
+          component: () => import('@/views/AlbumView.vue'),
+          meta: {
+            title: (i18n.global.t as (key: string) => string)(
+              'album.library.items.wc-26.title',
+            ),
+            albumWorkspace: true,
+          },
+        },
+      ],
     },
     {
       path: '/collection',

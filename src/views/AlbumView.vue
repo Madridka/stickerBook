@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 import AlbumBook from '@/components/Album/AlbumBook.vue'
 import AlbumEditorialPage from '@/components/Album/AlbumEditorialPage.vue'
 import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
@@ -91,11 +92,12 @@ const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
   .slice(0, 3)
 
 const { t } = useI18n()
+const router = useRouter()
 const album = useAlbumStore()
 const collection = useCollectionStore()
 const deletedCards = useDeletedCardsStore()
 const currentPage: Ref<number> = ref(0)
-const isBookOpen: Ref<boolean> = ref(false)
+const isBookOpen: Ref<boolean> = ref(true)
 const isDesktopSpread: Ref<boolean> = ref(false)
 const activeTargetId: Ref<string | undefined> = ref(undefined)
 const pendingDrop: Ref<StickerDropResult | undefined> = ref(undefined)
@@ -124,10 +126,13 @@ const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
 const displayMode: ComputedRef<'spread' | 'page'> = computed((): 'spread' | 'page' =>
   isDesktopSpread.value ? 'spread' : 'page',
 )
+const isDesktopSpreadVisible: ComputedRef<boolean> = computed(
+  (): boolean => isDesktopSpread.value && currentPage.value >= 1,
+)
 const pageStep: ComputedRef<number> = computed((): number => (isDesktopSpread.value ? 2 : 1))
 const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] =>
   Array.from(
-    { length: isBookOpen.value ? pageStep.value : 1 },
+    { length: isDesktopSpreadVisible.value ? pageStep.value : 1 },
     (_value: unknown, offset: number): number => currentPage.value + offset,
   ).filter((pageIndex: number): boolean => pageIndex < pages.value.length),
 )
@@ -159,7 +164,7 @@ const getCard = (playerId: string): PlayerCard | undefined =>
 // Синхронизирует режим одной страницы и полного разворота с Tailwind breakpoint lg.
 const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void => {
   isDesktopSpread.value = event.matches
-  if (event.matches && isBookOpen.value) {
+  if (event.matches && currentPage.value >= 1) {
     currentPage.value = 1 + Math.floor((currentPage.value - 1) / 2) * 2
   }
 }
@@ -245,17 +250,19 @@ const openBook = (): void => {
 }
 
 const closeBook = (): void => {
-  currentPage.value = 0
-  isBookOpen.value = false
   activeTargetId.value = undefined
+  void router.push('/album')
 }
 
 const previousPage = (): void => {
-  currentPage.value = Math.max(1, currentPage.value - pageStep.value)
+  currentPage.value = currentPage.value === 1 ? 0 : Math.max(1, currentPage.value - pageStep.value)
 }
 
 const nextPage = (): void => {
-  currentPage.value = Math.min(pages.value.length - 1, currentPage.value + pageStep.value)
+  currentPage.value =
+    currentPage.value === 0
+      ? 1
+      : Math.min(pages.value.length - 1, currentPage.value + pageStep.value)
 }
 
 const savePreparation = async (
@@ -338,7 +345,7 @@ onBeforeUnmount((): void => {
         </p>
         <h1 class="text-lg font-black leading-tight max-md:text-[0.8rem]">
           {{
-            t(isBookOpen && isDesktopSpread ? 'album.spreadRangeTitle' : 'album.spreadTitle', {
+            t(isDesktopSpreadVisible ? 'album.spreadRangeTitle' : 'album.spreadTitle', {
               page: visiblePageLabel,
               pages: visiblePageLabel,
             })
@@ -361,7 +368,7 @@ onBeforeUnmount((): void => {
         <strong class="block text-base font-black tracking-normal text-paper max-md:text-xs">{{
           visiblePageLabel
         }}</strong>
-        {{ t(isBookOpen ? 'album.editorial.infoLabel' : 'album.editorial.coverLabel') }}
+        {{ t(currentPage === 0 ? 'album.editorial.coverLabel' : 'album.editorial.infoLabel') }}
       </div>
     </header>
     <div class="flex min-h-0 flex-1 flex-col">

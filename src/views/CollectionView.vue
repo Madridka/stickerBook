@@ -80,28 +80,40 @@ const getCard = (playerId: string): PlayerCard | undefined =>
 
     <Tabs v-model:value="activeTab" class="flex min-h-0 flex-1 flex-col">
       <TabList class="shrink-0">
-        <Tab value="collection">
+        <Tab
+          value="collection"
+          class="max-sm:flex-1 max-sm:justify-center max-sm:px-2"
+          :aria-label="t('album.uniqueTab')"
+        >
           <span class="flex items-center gap-2">
             <i class="pi pi-images" />
-            {{ t('album.uniqueTab') }}
+            <span class="hidden sm:inline">{{ t('album.uniqueTab') }}</span>
             <span class="rounded-full bg-ink/10 px-2 py-0.5 text-xs">{{
               collectedItems.length
             }}</span>
           </span>
         </Tab>
-        <Tab value="duplicates">
+        <Tab
+          value="duplicates"
+          class="max-sm:flex-1 max-sm:justify-center max-sm:px-2"
+          :aria-label="t('album.duplicatesTab')"
+        >
           <span class="flex items-center gap-2">
             <i class="pi pi-inbox" />
-            {{ t('album.duplicatesTab') }}
+            <span class="hidden sm:inline">{{ t('album.duplicatesTab') }}</span>
             <span class="rounded-full bg-coral/15 px-2 py-0.5 text-xs text-coral">{{
               collection.duplicateTotal
             }}</span>
           </span>
         </Tab>
-        <Tab value="deleted">
+        <Tab
+          value="deleted"
+          class="max-sm:flex-1 max-sm:justify-center max-sm:px-2"
+          :aria-label="t('album.deletedTab')"
+        >
           <span class="flex items-center gap-2">
             <i class="pi pi-trash" />
-            {{ t('album.deletedTab') }}
+            <span class="hidden sm:inline">{{ t('album.deletedTab') }}</span>
             <span class="rounded-full bg-ink/10 px-2 py-0.5 text-xs">{{
               deletedItems.length
             }}</span>

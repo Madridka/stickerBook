@@ -3,4 +3,9 @@ import croatiaPlayers from './croatia/players.json'
 import portugalPlayers from './portugal/players.json'
 import type { PlayerCard } from '@/types'
 
-export default [...mexicoPlayers, ...croatiaPlayers, ...portugalPlayers] as PlayerCard[]
+const players = [...mexicoPlayers, ...croatiaPlayers, ...portugalPlayers] as PlayerCard[]
+
+export default players.map((player) => ({
+  ...player,
+  image: `${import.meta.env.BASE_URL}${player.image.replace(/^\/+/, '')}`,
+}))

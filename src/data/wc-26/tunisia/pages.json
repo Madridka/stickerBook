@@ -1,0 +1,180 @@
+[
+  {
+    "id": "tunisia-left",
+    "number": 54,
+    "image": "page-54-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "tun-01",
+        "playerId": "tun-01",
+        "name": "tun-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tun-02",
+        "playerId": "tun-02",
+        "name": "tun-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tun-03",
+        "playerId": "tun-03",
+        "name": "tun-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-04",
+        "playerId": "tun-04",
+        "name": "tun-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-05",
+        "playerId": "tun-05",
+        "name": "tun-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-06",
+        "playerId": "tun-06",
+        "name": "tun-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-07",
+        "playerId": "tun-07",
+        "name": "tun-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tun-08",
+        "playerId": "tun-08",
+        "name": "tun-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tun-09",
+        "playerId": "tun-09",
+        "name": "tun-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tun-10",
+        "playerId": "tun-10",
+        "name": "tun-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "tunisia-right",
+    "number": 55,
+    "image": "page-55-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "tun-11",
+        "playerId": "tun-11",
+        "name": "tun-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tun-12",
+        "playerId": "tun-12",
+        "name": "tun-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tun-13",
+        "playerId": "tun-13",
+        "name": "tun-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-14",
+        "playerId": "tun-14",
+        "name": "tun-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-15",
+        "playerId": "tun-15",
+        "name": "tun-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-16",
+        "playerId": "tun-16",
+        "name": "tun-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tun-17",
+        "playerId": "tun-17",
+        "name": "tun-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tun-18",
+        "playerId": "tun-18",
+        "name": "tun-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tun-19",
+        "playerId": "tun-19",
+        "name": "tun-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tun-20",
+        "playerId": "tun-20",
+        "name": "tun-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

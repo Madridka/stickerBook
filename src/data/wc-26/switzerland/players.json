@@ -1,0 +1,200 @@
+[
+  {
+    "id": "sui-01",
+    "fullName": "Switzerland Team Logo",
+    "image": "/cards/switzerland/SUI-01-team-logo.png",
+    "type": "logo",
+    "team": "Switzerland",
+    "weight": 15
+  },
+  {
+    "id": "sui-02",
+    "firstName": "Murat",
+    "lastName": "Yakin",
+    "fullName": "Murat Yakin",
+    "image": "/cards/switzerland/SUI-02-murat-yakin.png",
+    "type": "head coach",
+    "team": "Switzerland",
+    "weight": 10
+  },
+  {
+    "id": "sui-03",
+    "firstName": "Gregor",
+    "lastName": "Kobel",
+    "fullName": "Gregor Kobel",
+    "image": "/cards/switzerland/SUI-03-gregor-kobel.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-04",
+    "firstName": "Miro",
+    "lastName": "Muheim",
+    "fullName": "Miro Muheim",
+    "image": "/cards/switzerland/SUI-04-miro-muheim.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-05",
+    "firstName": "Silvan",
+    "lastName": "Widmer",
+    "fullName": "Silvan Widmer",
+    "image": "/cards/switzerland/SUI-05-silvan-widmer.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-06",
+    "firstName": "Nico",
+    "lastName": "Elvedi",
+    "fullName": "Nico Elvedi",
+    "image": "/cards/switzerland/SUI-06-nico-elvedi.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-07",
+    "firstName": "Manuel",
+    "lastName": "Akanji",
+    "fullName": "Manuel Akanji",
+    "image": "/cards/switzerland/SUI-07-manuel-akanji.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-08",
+    "firstName": "Denis",
+    "lastName": "Zakaria",
+    "fullName": "Denis Zakaria",
+    "image": "/cards/switzerland/SUI-08-denis-zakaria.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-09",
+    "firstName": "Breel",
+    "lastName": "Embolo",
+    "fullName": "Breel Embolo",
+    "image": "/cards/switzerland/SUI-09-breel-embolo.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-10",
+    "firstName": "Remo",
+    "lastName": "Freuler",
+    "fullName": "Remo Freuler",
+    "image": "/cards/switzerland/SUI-10-remo-freuler.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-11",
+    "firstName": "Johan",
+    "lastName": "Manzambi",
+    "fullName": "Johan Manzambi",
+    "image": "/cards/switzerland/SUI-11-johan-manzambi.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-12",
+    "firstName": "Granit",
+    "lastName": "Xhaka",
+    "fullName": "Granit Xhaka",
+    "image": "/cards/switzerland/SUI-12-granit-xhaka.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-13",
+    "firstName": "Dan",
+    "lastName": "Ndoye",
+    "fullName": "Dan Ndoye",
+    "image": "/cards/switzerland/SUI-13-dan-ndoye.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-14",
+    "firstName": "Yvon",
+    "lastName": "Mvogo",
+    "fullName": "Yvon Mvogo",
+    "image": "/cards/switzerland/SUI-14-yvon-mvogo.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-15",
+    "firstName": "Ricardo",
+    "lastName": "Rodriguez",
+    "fullName": "Ricardo Rodriguez",
+    "image": "/cards/switzerland/SUI-15-ricardo-rodriguez.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-16",
+    "firstName": "Ardon",
+    "lastName": "Jashari",
+    "fullName": "Ardon Jashari",
+    "image": "/cards/switzerland/SUI-16-ardon-jashari.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-17",
+    "firstName": "Djibril",
+    "lastName": "Sow",
+    "fullName": "Djibril Sow",
+    "image": "/cards/switzerland/SUI-17-djibril-sow.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-18",
+    "firstName": "Christian",
+    "lastName": "Fassnacht",
+    "fullName": "Christian Fassnacht",
+    "image": "/cards/switzerland/SUI-18-christian-fassnacht.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-19",
+    "firstName": "Ruben",
+    "lastName": "Vargas",
+    "fullName": "Ruben Vargas",
+    "image": "/cards/switzerland/SUI-19-ruben-vargas.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  },
+  {
+    "id": "sui-20",
+    "firstName": "Eray",
+    "lastName": "Coemert",
+    "fullName": "Eray Coemert",
+    "image": "/cards/switzerland/SUI-20-eray-coemert.png",
+    "type": "player",
+    "team": "Switzerland",
+    "weight": 20
+  }
+]

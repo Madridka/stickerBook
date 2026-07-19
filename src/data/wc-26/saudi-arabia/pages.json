@@ -1,0 +1,180 @@
+[
+  {
+    "id": "saudi-arabia-left",
+    "number": 68,
+    "image": "page-68-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "ksa-01",
+        "playerId": "ksa-01",
+        "name": "ksa-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ksa-02",
+        "playerId": "ksa-02",
+        "name": "ksa-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ksa-03",
+        "playerId": "ksa-03",
+        "name": "ksa-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-04",
+        "playerId": "ksa-04",
+        "name": "ksa-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-05",
+        "playerId": "ksa-05",
+        "name": "ksa-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-06",
+        "playerId": "ksa-06",
+        "name": "ksa-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-07",
+        "playerId": "ksa-07",
+        "name": "ksa-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ksa-08",
+        "playerId": "ksa-08",
+        "name": "ksa-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ksa-09",
+        "playerId": "ksa-09",
+        "name": "ksa-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ksa-10",
+        "playerId": "ksa-10",
+        "name": "ksa-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "saudi-arabia-right",
+    "number": 69,
+    "image": "page-69-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "ksa-11",
+        "playerId": "ksa-11",
+        "name": "ksa-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ksa-12",
+        "playerId": "ksa-12",
+        "name": "ksa-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ksa-13",
+        "playerId": "ksa-13",
+        "name": "ksa-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-14",
+        "playerId": "ksa-14",
+        "name": "ksa-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-15",
+        "playerId": "ksa-15",
+        "name": "ksa-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-16",
+        "playerId": "ksa-16",
+        "name": "ksa-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ksa-17",
+        "playerId": "ksa-17",
+        "name": "ksa-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ksa-18",
+        "playerId": "ksa-18",
+        "name": "ksa-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ksa-19",
+        "playerId": "ksa-19",
+        "name": "ksa-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ksa-20",
+        "playerId": "ksa-20",
+        "name": "ksa-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

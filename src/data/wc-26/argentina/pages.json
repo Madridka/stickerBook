@@ -1,0 +1,40 @@
+[
+  {
+    "id": "argentina-left",
+    "number": 80,
+    "image": "page-80-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "arg-01", "playerId": "arg-01", "name": "arg-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "arg-02", "playerId": "arg-02", "name": "arg-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "arg-03", "playerId": "arg-03", "name": "arg-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "arg-04", "playerId": "arg-04", "name": "arg-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "arg-05", "playerId": "arg-05", "name": "arg-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "arg-06", "playerId": "arg-06", "name": "arg-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "arg-07", "playerId": "arg-07", "name": "arg-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "arg-08", "playerId": "arg-08", "name": "arg-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "arg-09", "playerId": "arg-09", "name": "arg-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "arg-10", "playerId": "arg-10", "name": "arg-10", "x": 1176, "y": 800, "width": 200 }
+    ]
+  },
+  {
+    "id": "argentina-right",
+    "number": 81,
+    "image": "page-81-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "arg-11", "playerId": "arg-11", "name": "arg-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "arg-12", "playerId": "arg-12", "name": "arg-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "arg-13", "playerId": "arg-13", "name": "arg-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "arg-14", "playerId": "arg-14", "name": "arg-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "arg-15", "playerId": "arg-15", "name": "arg-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "arg-16", "playerId": "arg-16", "name": "arg-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "arg-17", "playerId": "arg-17", "name": "arg-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "arg-18", "playerId": "arg-18", "name": "arg-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "arg-19", "playerId": "arg-19", "name": "arg-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "arg-20", "playerId": "arg-20", "name": "arg-20", "x": 1176, "y": 800, "width": 200 }
+    ]
+  }
+]

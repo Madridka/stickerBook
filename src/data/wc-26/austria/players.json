@@ -1,0 +1,200 @@
+[
+  {
+    "id": "aut-01",
+    "fullName": "Austria Team Logo",
+    "image": "/cards/austria/AUT-01-team-logo.png",
+    "type": "logo",
+    "team": "Austria",
+    "weight": 15
+  },
+  {
+    "id": "aut-02",
+    "firstName": "Ralf",
+    "lastName": "Rangnick",
+    "fullName": "Ralf Rangnick",
+    "image": "/cards/austria/AUT-02-ralf-rangnick.png",
+    "type": "head coach",
+    "team": "Austria",
+    "weight": 10
+  },
+  {
+    "id": "aut-03",
+    "firstName": "Alexander",
+    "lastName": "Schlager",
+    "fullName": "Alexander Schlager",
+    "image": "/cards/austria/AUT-03-alexander-schlager.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-04",
+    "firstName": "David",
+    "lastName": "Affengruber",
+    "fullName": "David Affengruber",
+    "image": "/cards/austria/AUT-04-david-affengruber.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-05",
+    "firstName": "Kevin",
+    "lastName": "Danso",
+    "fullName": "Kevin Danso",
+    "image": "/cards/austria/AUT-05-kevin-danso.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-06",
+    "firstName": "Xaver",
+    "lastName": "Schlager",
+    "fullName": "Xaver Schlager",
+    "image": "/cards/austria/AUT-06-xaver-schlager.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-07",
+    "firstName": "Stefan",
+    "lastName": "Posch",
+    "fullName": "Stefan Posch",
+    "image": "/cards/austria/AUT-07-stefan-posch.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-08",
+    "firstName": "Nicolas",
+    "lastName": "Seiwald",
+    "fullName": "Nicolas Seiwald",
+    "image": "/cards/austria/AUT-08-nicolas-seiwald.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-09",
+    "firstName": "Marko",
+    "lastName": "Arnautovic",
+    "fullName": "Marko Arnautovic",
+    "image": "/cards/austria/AUT-09-marko-arnautovic.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-10",
+    "firstName": "David",
+    "lastName": "Alaba",
+    "fullName": "David Alaba",
+    "image": "/cards/austria/AUT-10-david-alaba.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-11",
+    "firstName": "Marcel",
+    "lastName": "Sabitzer",
+    "fullName": "Marcel Sabitzer",
+    "image": "/cards/austria/AUT-11-marcel-sabitzer.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-12",
+    "firstName": "Florian",
+    "lastName": "Grillitsch",
+    "fullName": "Florian Grillitsch",
+    "image": "/cards/austria/AUT-12-florian-grillitsch.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-13",
+    "firstName": "Michael",
+    "lastName": "Gregoritsch",
+    "fullName": "Michael Gregoritsch",
+    "image": "/cards/austria/AUT-13-michael-gregoritsch.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-14",
+    "firstName": "Florian",
+    "lastName": "Wiegele",
+    "fullName": "Florian Wiegele",
+    "image": "/cards/austria/AUT-14-florian-wiegele.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-15",
+    "firstName": "Patrick",
+    "lastName": "Pentz",
+    "fullName": "Patrick Pentz",
+    "image": "/cards/austria/AUT-15-patrick-pentz.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-16",
+    "firstName": "Sasa",
+    "lastName": "Kalajdzic",
+    "fullName": "Sasa Kalajdzic",
+    "image": "/cards/austria/AUT-16-sasa-kalajdzic.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-17",
+    "firstName": "Philipp",
+    "lastName": "Lienhart",
+    "fullName": "Philipp Lienhart",
+    "image": "/cards/austria/AUT-17-philipp-lienhart.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-18",
+    "firstName": "Phillip",
+    "lastName": "Mwene",
+    "fullName": "Phillip Mwene",
+    "image": "/cards/austria/AUT-18-phillip-mwene.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-19",
+    "firstName": "Carney",
+    "lastName": "Chukwuemeka",
+    "fullName": "Carney Chukwuemeka",
+    "image": "/cards/austria/AUT-19-carney-chukwuemeka.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  },
+  {
+    "id": "aut-20",
+    "firstName": "Romano",
+    "lastName": "Schmid",
+    "fullName": "Romano Schmid",
+    "image": "/cards/austria/AUT-20-romano-schmid.png",
+    "type": "player",
+    "team": "Austria",
+    "weight": 20
+  }
+]

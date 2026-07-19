@@ -1,0 +1,180 @@
+[
+  {
+    "id": "japan-left",
+    "number": 50,
+    "image": "page-50-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "jpn-01",
+        "playerId": "jpn-01",
+        "name": "jpn-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "jpn-02",
+        "playerId": "jpn-02",
+        "name": "jpn-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "jpn-03",
+        "playerId": "jpn-03",
+        "name": "jpn-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-04",
+        "playerId": "jpn-04",
+        "name": "jpn-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-05",
+        "playerId": "jpn-05",
+        "name": "jpn-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-06",
+        "playerId": "jpn-06",
+        "name": "jpn-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-07",
+        "playerId": "jpn-07",
+        "name": "jpn-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "jpn-08",
+        "playerId": "jpn-08",
+        "name": "jpn-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "jpn-09",
+        "playerId": "jpn-09",
+        "name": "jpn-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "jpn-10",
+        "playerId": "jpn-10",
+        "name": "jpn-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "japan-right",
+    "number": 51,
+    "image": "page-51-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "jpn-11",
+        "playerId": "jpn-11",
+        "name": "jpn-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "jpn-12",
+        "playerId": "jpn-12",
+        "name": "jpn-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "jpn-13",
+        "playerId": "jpn-13",
+        "name": "jpn-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-14",
+        "playerId": "jpn-14",
+        "name": "jpn-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-15",
+        "playerId": "jpn-15",
+        "name": "jpn-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-16",
+        "playerId": "jpn-16",
+        "name": "jpn-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "jpn-17",
+        "playerId": "jpn-17",
+        "name": "jpn-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "jpn-18",
+        "playerId": "jpn-18",
+        "name": "jpn-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "jpn-19",
+        "playerId": "jpn-19",
+        "name": "jpn-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "jpn-20",
+        "playerId": "jpn-20",
+        "name": "jpn-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

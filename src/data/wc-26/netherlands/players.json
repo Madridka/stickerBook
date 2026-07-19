@@ -1,0 +1,200 @@
+[
+  {
+    "id": "ned-01",
+    "fullName": "Netherlands Team Logo",
+    "image": "/cards/netherlands/NED-01-team-logo.png",
+    "type": "logo",
+    "team": "Netherlands",
+    "weight": 15
+  },
+  {
+    "id": "ned-02",
+    "firstName": "Ronald",
+    "lastName": "Koeman",
+    "fullName": "Ronald Koeman",
+    "image": "/cards/netherlands/NED-02-ronald-koeman.png",
+    "type": "head coach",
+    "team": "Netherlands",
+    "weight": 10
+  },
+  {
+    "id": "ned-03",
+    "firstName": "Bart",
+    "lastName": "Verbruggen",
+    "fullName": "Bart Verbruggen",
+    "image": "/cards/netherlands/NED-03-bart-verbruggen.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-04",
+    "firstName": "Lutsharel",
+    "lastName": "Geertruida",
+    "fullName": "Lutsharel Geertruida",
+    "image": "/cards/netherlands/NED-04-lutsharel-geertruida.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-05",
+    "firstName": "Marten",
+    "lastName": "De Roon",
+    "fullName": "Marten De Roon",
+    "image": "/cards/netherlands/NED-05-marten-de-roon.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-06",
+    "firstName": "Virgil",
+    "lastName": "Van Dijk",
+    "fullName": "Virgil Van Dijk",
+    "image": "/cards/netherlands/NED-06-virgil-van-dijk.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-07",
+    "firstName": "Nathan",
+    "lastName": "Ake",
+    "fullName": "Nathan Ake",
+    "image": "/cards/netherlands/NED-07-nathan-ake.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-08",
+    "firstName": "Jan",
+    "lastName": "Van Hecke",
+    "fullName": "Jan Van Hecke",
+    "image": "/cards/netherlands/NED-08-jan-van-hecke.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-09",
+    "firstName": "Justin",
+    "lastName": "Kluivert",
+    "fullName": "Justin Kluivert",
+    "image": "/cards/netherlands/NED-09-justin-kluivert.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-10",
+    "firstName": "Ryan",
+    "lastName": "Gravenberch",
+    "fullName": "Ryan Gravenberch",
+    "image": "/cards/netherlands/NED-10-ryan-gravenberch.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-11",
+    "firstName": "Wout",
+    "lastName": "Weghorst",
+    "fullName": "Wout Weghorst",
+    "image": "/cards/netherlands/NED-11-wout-weghorst.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-12",
+    "firstName": "Memphis",
+    "lastName": "Depay",
+    "fullName": "Memphis Depay",
+    "image": "/cards/netherlands/NED-12-memphis-depay.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-13",
+    "firstName": "Cody",
+    "lastName": "Gakpo",
+    "fullName": "Cody Gakpo",
+    "image": "/cards/netherlands/NED-13-cody-gakpo.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-14",
+    "firstName": "Mats",
+    "lastName": "Wieffer",
+    "fullName": "Mats Wieffer",
+    "image": "/cards/netherlands/NED-14-mats-wieffer.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-15",
+    "firstName": "Robin",
+    "lastName": "Roefs",
+    "fullName": "Robin Roefs",
+    "image": "/cards/netherlands/NED-15-robin-roefs.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-16",
+    "firstName": "Tijjani",
+    "lastName": "Reijnders",
+    "fullName": "Tijjani Reijnders",
+    "image": "/cards/netherlands/NED-16-tijjani-reijnders.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-17",
+    "firstName": "Micky",
+    "lastName": "Van De Ven",
+    "fullName": "Micky Van De Ven",
+    "image": "/cards/netherlands/NED-17-micky-van-de-ven.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-18",
+    "firstName": "Guus",
+    "lastName": "Til",
+    "fullName": "Guus Til",
+    "image": "/cards/netherlands/NED-18-guus-til.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-19",
+    "firstName": "Noa",
+    "lastName": "Lang",
+    "fullName": "Noa Lang",
+    "image": "/cards/netherlands/NED-19-noa-lang.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  },
+  {
+    "id": "ned-20",
+    "firstName": "Donyell",
+    "lastName": "Malen",
+    "fullName": "Donyell Malen",
+    "image": "/cards/netherlands/NED-20-donyell-malen.png",
+    "type": "player",
+    "team": "Netherlands",
+    "weight": 20
+  }
+]

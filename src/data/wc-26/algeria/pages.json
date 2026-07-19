@@ -1,0 +1,180 @@
+[
+  {
+    "id": "algeria-left",
+    "number": 82,
+    "image": "page-82-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "alg-01",
+        "playerId": "alg-01",
+        "name": "alg-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "alg-02",
+        "playerId": "alg-02",
+        "name": "alg-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "alg-03",
+        "playerId": "alg-03",
+        "name": "alg-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-04",
+        "playerId": "alg-04",
+        "name": "alg-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-05",
+        "playerId": "alg-05",
+        "name": "alg-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-06",
+        "playerId": "alg-06",
+        "name": "alg-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-07",
+        "playerId": "alg-07",
+        "name": "alg-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "alg-08",
+        "playerId": "alg-08",
+        "name": "alg-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "alg-09",
+        "playerId": "alg-09",
+        "name": "alg-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "alg-10",
+        "playerId": "alg-10",
+        "name": "alg-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "algeria-right",
+    "number": 83,
+    "image": "page-83-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "alg-11",
+        "playerId": "alg-11",
+        "name": "alg-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "alg-12",
+        "playerId": "alg-12",
+        "name": "alg-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "alg-13",
+        "playerId": "alg-13",
+        "name": "alg-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-14",
+        "playerId": "alg-14",
+        "name": "alg-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-15",
+        "playerId": "alg-15",
+        "name": "alg-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-16",
+        "playerId": "alg-16",
+        "name": "alg-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "alg-17",
+        "playerId": "alg-17",
+        "name": "alg-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "alg-18",
+        "playerId": "alg-18",
+        "name": "alg-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "alg-19",
+        "playerId": "alg-19",
+        "name": "alg-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "alg-20",
+        "playerId": "alg-20",
+        "name": "alg-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

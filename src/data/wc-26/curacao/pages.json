@@ -1,0 +1,180 @@
+[
+  {
+    "id": "curacao-left",
+    "number": 42,
+    "image": "page-42-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "cuw-01",
+        "playerId": "cuw-01",
+        "name": "cuw-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cuw-02",
+        "playerId": "cuw-02",
+        "name": "cuw-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cuw-03",
+        "playerId": "cuw-03",
+        "name": "cuw-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-04",
+        "playerId": "cuw-04",
+        "name": "cuw-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-05",
+        "playerId": "cuw-05",
+        "name": "cuw-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-06",
+        "playerId": "cuw-06",
+        "name": "cuw-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-07",
+        "playerId": "cuw-07",
+        "name": "cuw-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cuw-08",
+        "playerId": "cuw-08",
+        "name": "cuw-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cuw-09",
+        "playerId": "cuw-09",
+        "name": "cuw-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cuw-10",
+        "playerId": "cuw-10",
+        "name": "cuw-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "curacao-right",
+    "number": 43,
+    "image": "page-43-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "cuw-11",
+        "playerId": "cuw-11",
+        "name": "cuw-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cuw-12",
+        "playerId": "cuw-12",
+        "name": "cuw-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cuw-13",
+        "playerId": "cuw-13",
+        "name": "cuw-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-14",
+        "playerId": "cuw-14",
+        "name": "cuw-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-15",
+        "playerId": "cuw-15",
+        "name": "cuw-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-16",
+        "playerId": "cuw-16",
+        "name": "cuw-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cuw-17",
+        "playerId": "cuw-17",
+        "name": "cuw-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cuw-18",
+        "playerId": "cuw-18",
+        "name": "cuw-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cuw-19",
+        "playerId": "cuw-19",
+        "name": "cuw-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cuw-20",
+        "playerId": "cuw-20",
+        "name": "cuw-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

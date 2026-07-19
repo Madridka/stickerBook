@@ -1,0 +1,40 @@
+[
+  {
+    "id": "germany-left",
+    "number": 40,
+    "image": "page-40-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "ger-01", "playerId": "ger-01", "name": "ger-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "ger-02", "playerId": "ger-02", "name": "ger-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "ger-03", "playerId": "ger-03", "name": "ger-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "ger-04", "playerId": "ger-04", "name": "ger-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "ger-05", "playerId": "ger-05", "name": "ger-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "ger-06", "playerId": "ger-06", "name": "ger-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "ger-07", "playerId": "ger-07", "name": "ger-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "ger-08", "playerId": "ger-08", "name": "ger-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "ger-09", "playerId": "ger-09", "name": "ger-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "ger-10", "playerId": "ger-10", "name": "ger-10", "x": 1176, "y": 800, "width": 200 }
+    ]
+  },
+  {
+    "id": "germany-right",
+    "number": 41,
+    "image": "page-41-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "ger-11", "playerId": "ger-11", "name": "ger-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "ger-12", "playerId": "ger-12", "name": "ger-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "ger-13", "playerId": "ger-13", "name": "ger-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "ger-14", "playerId": "ger-14", "name": "ger-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "ger-15", "playerId": "ger-15", "name": "ger-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "ger-16", "playerId": "ger-16", "name": "ger-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "ger-17", "playerId": "ger-17", "name": "ger-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "ger-18", "playerId": "ger-18", "name": "ger-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "ger-19", "playerId": "ger-19", "name": "ger-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "ger-20", "playerId": "ger-20", "name": "ger-20", "x": 1176, "y": 800, "width": 200 }
+    ]
+  }
+]

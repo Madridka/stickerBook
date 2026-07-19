@@ -1,0 +1,180 @@
+[
+  {
+    "id": "colombia-left",
+    "number": 94,
+    "image": "page-94-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "col-01",
+        "playerId": "col-01",
+        "name": "col-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "col-02",
+        "playerId": "col-02",
+        "name": "col-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "col-03",
+        "playerId": "col-03",
+        "name": "col-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-04",
+        "playerId": "col-04",
+        "name": "col-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-05",
+        "playerId": "col-05",
+        "name": "col-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-06",
+        "playerId": "col-06",
+        "name": "col-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-07",
+        "playerId": "col-07",
+        "name": "col-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "col-08",
+        "playerId": "col-08",
+        "name": "col-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "col-09",
+        "playerId": "col-09",
+        "name": "col-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "col-10",
+        "playerId": "col-10",
+        "name": "col-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "colombia-right",
+    "number": 95,
+    "image": "page-95-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "col-11",
+        "playerId": "col-11",
+        "name": "col-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "col-12",
+        "playerId": "col-12",
+        "name": "col-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "col-13",
+        "playerId": "col-13",
+        "name": "col-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-14",
+        "playerId": "col-14",
+        "name": "col-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-15",
+        "playerId": "col-15",
+        "name": "col-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-16",
+        "playerId": "col-16",
+        "name": "col-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "col-17",
+        "playerId": "col-17",
+        "name": "col-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "col-18",
+        "playerId": "col-18",
+        "name": "col-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "col-19",
+        "playerId": "col-19",
+        "name": "col-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "col-20",
+        "playerId": "col-20",
+        "name": "col-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

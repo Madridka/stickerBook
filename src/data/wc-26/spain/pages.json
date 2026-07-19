@@ -1,0 +1,40 @@
+[
+  {
+    "id": "spain-left",
+    "number": 64,
+    "image": "page-64-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "esp-01", "playerId": "esp-01", "name": "esp-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "esp-02", "playerId": "esp-02", "name": "esp-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "esp-03", "playerId": "esp-03", "name": "esp-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "esp-04", "playerId": "esp-04", "name": "esp-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "esp-05", "playerId": "esp-05", "name": "esp-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "esp-06", "playerId": "esp-06", "name": "esp-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "esp-07", "playerId": "esp-07", "name": "esp-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "esp-08", "playerId": "esp-08", "name": "esp-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "esp-09", "playerId": "esp-09", "name": "esp-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "esp-10", "playerId": "esp-10", "name": "esp-10", "x": 1176, "y": 800, "width": 200 }
+    ]
+  },
+  {
+    "id": "spain-right",
+    "number": 65,
+    "image": "page-65-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "esp-11", "playerId": "esp-11", "name": "esp-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "esp-12", "playerId": "esp-12", "name": "esp-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "esp-13", "playerId": "esp-13", "name": "esp-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "esp-14", "playerId": "esp-14", "name": "esp-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "esp-15", "playerId": "esp-15", "name": "esp-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "esp-16", "playerId": "esp-16", "name": "esp-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "esp-17", "playerId": "esp-17", "name": "esp-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "esp-18", "playerId": "esp-18", "name": "esp-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "esp-19", "playerId": "esp-19", "name": "esp-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "esp-20", "playerId": "esp-20", "name": "esp-20", "x": 1176, "y": 800, "width": 200 }
+    ]
+  }
+]

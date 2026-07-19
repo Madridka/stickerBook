@@ -1,0 +1,180 @@
+[
+  {
+    "id": "turkiye-left",
+    "number": 38,
+    "image": "page-38-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "tur-01",
+        "playerId": "tur-01",
+        "name": "tur-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tur-02",
+        "playerId": "tur-02",
+        "name": "tur-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tur-03",
+        "playerId": "tur-03",
+        "name": "tur-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-04",
+        "playerId": "tur-04",
+        "name": "tur-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-05",
+        "playerId": "tur-05",
+        "name": "tur-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-06",
+        "playerId": "tur-06",
+        "name": "tur-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-07",
+        "playerId": "tur-07",
+        "name": "tur-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tur-08",
+        "playerId": "tur-08",
+        "name": "tur-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tur-09",
+        "playerId": "tur-09",
+        "name": "tur-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tur-10",
+        "playerId": "tur-10",
+        "name": "tur-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "turkiye-right",
+    "number": 39,
+    "image": "page-39-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "tur-11",
+        "playerId": "tur-11",
+        "name": "tur-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tur-12",
+        "playerId": "tur-12",
+        "name": "tur-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "tur-13",
+        "playerId": "tur-13",
+        "name": "tur-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-14",
+        "playerId": "tur-14",
+        "name": "tur-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-15",
+        "playerId": "tur-15",
+        "name": "tur-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-16",
+        "playerId": "tur-16",
+        "name": "tur-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "tur-17",
+        "playerId": "tur-17",
+        "name": "tur-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tur-18",
+        "playerId": "tur-18",
+        "name": "tur-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tur-19",
+        "playerId": "tur-19",
+        "name": "tur-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "tur-20",
+        "playerId": "tur-20",
+        "name": "tur-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

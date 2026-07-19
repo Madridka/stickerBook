@@ -1,0 +1,180 @@
+[
+  {
+    "id": "egypt-left",
+    "number": 58,
+    "image": "page-58-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "egy-01",
+        "playerId": "egy-01",
+        "name": "egy-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "egy-02",
+        "playerId": "egy-02",
+        "name": "egy-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "egy-03",
+        "playerId": "egy-03",
+        "name": "egy-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-04",
+        "playerId": "egy-04",
+        "name": "egy-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-05",
+        "playerId": "egy-05",
+        "name": "egy-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-06",
+        "playerId": "egy-06",
+        "name": "egy-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-07",
+        "playerId": "egy-07",
+        "name": "egy-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "egy-08",
+        "playerId": "egy-08",
+        "name": "egy-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "egy-09",
+        "playerId": "egy-09",
+        "name": "egy-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "egy-10",
+        "playerId": "egy-10",
+        "name": "egy-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "egypt-right",
+    "number": 59,
+    "image": "page-59-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "egy-11",
+        "playerId": "egy-11",
+        "name": "egy-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "egy-12",
+        "playerId": "egy-12",
+        "name": "egy-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "egy-13",
+        "playerId": "egy-13",
+        "name": "egy-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-14",
+        "playerId": "egy-14",
+        "name": "egy-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-15",
+        "playerId": "egy-15",
+        "name": "egy-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-16",
+        "playerId": "egy-16",
+        "name": "egy-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "egy-17",
+        "playerId": "egy-17",
+        "name": "egy-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "egy-18",
+        "playerId": "egy-18",
+        "name": "egy-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "egy-19",
+        "playerId": "egy-19",
+        "name": "egy-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "egy-20",
+        "playerId": "egy-20",
+        "name": "egy-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

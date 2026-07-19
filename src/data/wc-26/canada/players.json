@@ -1,0 +1,200 @@
+[
+  {
+    "id": "can-01",
+    "fullName": "Canada Team Logo",
+    "image": "/cards/canada/CAN-01-team-logo.png",
+    "type": "logo",
+    "team": "Canada",
+    "weight": 15
+  },
+  {
+    "id": "can-02",
+    "firstName": "Jesse",
+    "lastName": "Marsch",
+    "fullName": "Jesse Marsch",
+    "image": "/cards/canada/CAN-02-jesse-marsch.png",
+    "type": "head coach",
+    "team": "Canada",
+    "weight": 10
+  },
+  {
+    "id": "can-03",
+    "firstName": "Dayne",
+    "lastName": "St. Clair",
+    "fullName": "Dayne St. Clair",
+    "image": "/cards/canada/CAN-03-dayne-st-clair.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-04",
+    "firstName": "Alistair",
+    "lastName": "Johnston",
+    "fullName": "Alistair Johnston",
+    "image": "/cards/canada/CAN-04-alistair-johnston.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-05",
+    "firstName": "Alfie",
+    "lastName": "Jones",
+    "fullName": "Alfie Jones",
+    "image": "/cards/canada/CAN-05-alfie-jones.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-06",
+    "firstName": "Luc",
+    "lastName": "De Fougerolles",
+    "fullName": "Luc De Fougerolles",
+    "image": "/cards/canada/CAN-06-luc-de-fougerolles.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-07",
+    "firstName": "Joel",
+    "lastName": "Waterman",
+    "fullName": "Joel Waterman",
+    "image": "/cards/canada/CAN-07-joel-waterman.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-08",
+    "firstName": "Mathieu",
+    "lastName": "Choiniere",
+    "fullName": "Mathieu Choiniere",
+    "image": "/cards/canada/CAN-08-mathieu-choiniere.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-09",
+    "firstName": "Stephen",
+    "lastName": "Eustaquio",
+    "fullName": "Stephen Eustaquio",
+    "image": "/cards/canada/CAN-09-stephen-eustaquio.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-10",
+    "firstName": "Ismael",
+    "lastName": "Kone",
+    "fullName": "Ismael Kone",
+    "image": "/cards/canada/CAN-10-ismael-kone.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-11",
+    "firstName": "Cyle",
+    "lastName": "Larin",
+    "fullName": "Cyle Larin",
+    "image": "/cards/canada/CAN-11-cyle-larin.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-12",
+    "firstName": "Jonathan",
+    "lastName": "David",
+    "fullName": "Jonathan David",
+    "image": "/cards/canada/CAN-12-jonathan-david.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-13",
+    "firstName": "Liam",
+    "lastName": "Millar",
+    "fullName": "Liam Millar",
+    "image": "/cards/canada/CAN-13-liam-millar.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-14",
+    "firstName": "Tani",
+    "lastName": "Oluwaseyi",
+    "fullName": "Tani Oluwaseyi",
+    "image": "/cards/canada/CAN-14-tani-oluwaseyi.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-15",
+    "firstName": "Derek",
+    "lastName": "Cornelius",
+    "fullName": "Derek Cornelius",
+    "image": "/cards/canada/CAN-15-derek-cornelius.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-16",
+    "firstName": "Jacob",
+    "lastName": "Shaffelburg",
+    "fullName": "Jacob Shaffelburg",
+    "image": "/cards/canada/CAN-16-jacob-shaffelburg.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-17",
+    "firstName": "Moise",
+    "lastName": "Bombito",
+    "fullName": "Moise Bombito",
+    "image": "/cards/canada/CAN-17-moise-bombito.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-18",
+    "firstName": "Maxime",
+    "lastName": "Crepeau",
+    "fullName": "Maxime Crepeau",
+    "image": "/cards/canada/CAN-18-maxime-crepeau.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-19",
+    "firstName": "Tajon",
+    "lastName": "Buchanan",
+    "fullName": "Tajon Buchanan",
+    "image": "/cards/canada/CAN-19-tajon-buchanan.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  },
+  {
+    "id": "can-20",
+    "firstName": "Owen",
+    "lastName": "Goodman",
+    "fullName": "Owen Goodman",
+    "image": "/cards/canada/CAN-20-owen-goodman.png",
+    "type": "player",
+    "team": "Canada",
+    "weight": 20
+  }
+]

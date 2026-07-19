@@ -1,0 +1,180 @@
+[
+  {
+    "id": "uruguay-left",
+    "number": 70,
+    "image": "page-70-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "uru-01",
+        "playerId": "uru-01",
+        "name": "uru-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uru-02",
+        "playerId": "uru-02",
+        "name": "uru-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uru-03",
+        "playerId": "uru-03",
+        "name": "uru-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-04",
+        "playerId": "uru-04",
+        "name": "uru-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-05",
+        "playerId": "uru-05",
+        "name": "uru-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-06",
+        "playerId": "uru-06",
+        "name": "uru-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-07",
+        "playerId": "uru-07",
+        "name": "uru-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uru-08",
+        "playerId": "uru-08",
+        "name": "uru-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uru-09",
+        "playerId": "uru-09",
+        "name": "uru-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uru-10",
+        "playerId": "uru-10",
+        "name": "uru-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "uruguay-right",
+    "number": 71,
+    "image": "page-71-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "uru-11",
+        "playerId": "uru-11",
+        "name": "uru-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uru-12",
+        "playerId": "uru-12",
+        "name": "uru-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uru-13",
+        "playerId": "uru-13",
+        "name": "uru-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-14",
+        "playerId": "uru-14",
+        "name": "uru-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-15",
+        "playerId": "uru-15",
+        "name": "uru-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-16",
+        "playerId": "uru-16",
+        "name": "uru-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uru-17",
+        "playerId": "uru-17",
+        "name": "uru-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uru-18",
+        "playerId": "uru-18",
+        "name": "uru-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uru-19",
+        "playerId": "uru-19",
+        "name": "uru-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uru-20",
+        "playerId": "uru-20",
+        "name": "uru-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

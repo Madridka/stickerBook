@@ -1,0 +1,200 @@
+[
+  {
+    "id": "swe-01",
+    "fullName": "Sweden Team Logo",
+    "image": "/cards/sweden/SWE-01-team-logo.png",
+    "type": "logo",
+    "team": "Sweden",
+    "weight": 15
+  },
+  {
+    "id": "swe-02",
+    "firstName": "Graham",
+    "lastName": "Potter",
+    "fullName": "Graham Potter",
+    "image": "/cards/sweden/SWE-02-graham-potter.png",
+    "type": "head coach",
+    "team": "Sweden",
+    "weight": 10
+  },
+  {
+    "id": "swe-03",
+    "firstName": "Jacob",
+    "lastName": "Widell Zetterstrom",
+    "fullName": "Jacob Widell Zetterstrom",
+    "image": "/cards/sweden/SWE-03-jacob-widell-zetterstrom.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-04",
+    "firstName": "Gustaf",
+    "lastName": "Lagerbielke",
+    "fullName": "Gustaf Lagerbielke",
+    "image": "/cards/sweden/SWE-04-gustaf-lagerbielke.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-05",
+    "firstName": "Victor",
+    "lastName": "Lindelof",
+    "fullName": "Victor Lindelof",
+    "image": "/cards/sweden/SWE-05-victor-lindelof.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-06",
+    "firstName": "Isak",
+    "lastName": "Hien",
+    "fullName": "Isak Hien",
+    "image": "/cards/sweden/SWE-06-isak-hien.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-07",
+    "firstName": "Gabriel",
+    "lastName": "Gudmundsson",
+    "fullName": "Gabriel Gudmundsson",
+    "image": "/cards/sweden/SWE-07-gabriel-gudmundsson.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-08",
+    "firstName": "Herman",
+    "lastName": "Johansson",
+    "fullName": "Herman Johansson",
+    "image": "/cards/sweden/SWE-08-herman-johansson.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-09",
+    "firstName": "Lucas",
+    "lastName": "Bergvall",
+    "fullName": "Lucas Bergvall",
+    "image": "/cards/sweden/SWE-09-lucas-bergvall.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-10",
+    "firstName": "Daniel",
+    "lastName": "Svensson",
+    "fullName": "Daniel Svensson",
+    "image": "/cards/sweden/SWE-10-daniel-svensson.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-11",
+    "firstName": "Alexander",
+    "lastName": "Isak",
+    "fullName": "Alexander Isak",
+    "image": "/cards/sweden/SWE-11-alexander-isak.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-12",
+    "firstName": "Benjamin",
+    "lastName": "Nygren",
+    "fullName": "Benjamin Nygren",
+    "image": "/cards/sweden/SWE-12-benjamin-nygren.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-13",
+    "firstName": "Anthony",
+    "lastName": "Elanga",
+    "fullName": "Anthony Elanga",
+    "image": "/cards/sweden/SWE-13-anthony-elanga.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-14",
+    "firstName": "Viktor",
+    "lastName": "Johansson",
+    "fullName": "Viktor Johansson",
+    "image": "/cards/sweden/SWE-14-viktor-johansson.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-15",
+    "firstName": "Ken",
+    "lastName": "Sema",
+    "fullName": "Ken Sema",
+    "image": "/cards/sweden/SWE-15-ken-sema.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-16",
+    "firstName": "Hjalmar",
+    "lastName": "Ekdal",
+    "fullName": "Hjalmar Ekdal",
+    "image": "/cards/sweden/SWE-16-hjalmar-ekdal.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-17",
+    "firstName": "Carl",
+    "lastName": "Starfelt",
+    "fullName": "Carl Starfelt",
+    "image": "/cards/sweden/SWE-17-carl-starfelt.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-18",
+    "firstName": "Jesper",
+    "lastName": "Karlstrom",
+    "fullName": "Jesper Karlstrom",
+    "image": "/cards/sweden/SWE-18-jesper-karlstrom.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-19",
+    "firstName": "Viktor",
+    "lastName": "Gyokeres",
+    "fullName": "Viktor Gyokeres",
+    "image": "/cards/sweden/SWE-19-viktor-gyokeres.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  },
+  {
+    "id": "swe-20",
+    "firstName": "Yasin",
+    "lastName": "Ayari",
+    "fullName": "Yasin Ayari",
+    "image": "/cards/sweden/SWE-20-yasin-ayari.png",
+    "type": "player",
+    "team": "Sweden",
+    "weight": 20
+  }
+]

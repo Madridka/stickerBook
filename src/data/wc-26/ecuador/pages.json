@@ -1,0 +1,180 @@
+[
+  {
+    "id": "ecuador-left",
+    "number": 46,
+    "image": "page-46-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "ecu-01",
+        "playerId": "ecu-01",
+        "name": "ecu-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ecu-02",
+        "playerId": "ecu-02",
+        "name": "ecu-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ecu-03",
+        "playerId": "ecu-03",
+        "name": "ecu-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-04",
+        "playerId": "ecu-04",
+        "name": "ecu-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-05",
+        "playerId": "ecu-05",
+        "name": "ecu-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-06",
+        "playerId": "ecu-06",
+        "name": "ecu-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-07",
+        "playerId": "ecu-07",
+        "name": "ecu-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ecu-08",
+        "playerId": "ecu-08",
+        "name": "ecu-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ecu-09",
+        "playerId": "ecu-09",
+        "name": "ecu-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ecu-10",
+        "playerId": "ecu-10",
+        "name": "ecu-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "ecuador-right",
+    "number": 47,
+    "image": "page-47-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "ecu-11",
+        "playerId": "ecu-11",
+        "name": "ecu-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ecu-12",
+        "playerId": "ecu-12",
+        "name": "ecu-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ecu-13",
+        "playerId": "ecu-13",
+        "name": "ecu-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-14",
+        "playerId": "ecu-14",
+        "name": "ecu-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-15",
+        "playerId": "ecu-15",
+        "name": "ecu-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-16",
+        "playerId": "ecu-16",
+        "name": "ecu-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ecu-17",
+        "playerId": "ecu-17",
+        "name": "ecu-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ecu-18",
+        "playerId": "ecu-18",
+        "name": "ecu-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ecu-19",
+        "playerId": "ecu-19",
+        "name": "ecu-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ecu-20",
+        "playerId": "ecu-20",
+        "name": "ecu-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

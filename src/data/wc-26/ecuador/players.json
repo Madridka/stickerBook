@@ -1,0 +1,200 @@
+[
+  {
+    "id": "ecu-01",
+    "fullName": "Ecuador Team Logo",
+    "image": "/cards/ecuador/ECU-01-team-logo.png",
+    "type": "logo",
+    "team": "Ecuador",
+    "weight": 15
+  },
+  {
+    "id": "ecu-02",
+    "firstName": "Sebastian",
+    "lastName": "Beccacece",
+    "fullName": "Sebastian Beccacece",
+    "image": "/cards/ecuador/ECU-02-sebastian-beccacece.png",
+    "type": "head coach",
+    "team": "Ecuador",
+    "weight": 10
+  },
+  {
+    "id": "ecu-03",
+    "firstName": "Hernan",
+    "lastName": "Galindez",
+    "fullName": "Hernan Galindez",
+    "image": "/cards/ecuador/ECU-03-hernan-galindez.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-04",
+    "firstName": "Felix",
+    "lastName": "Torres",
+    "fullName": "Felix Torres",
+    "image": "/cards/ecuador/ECU-04-felix-torres.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-05",
+    "firstName": "Piero",
+    "lastName": "Hincapie",
+    "fullName": "Piero Hincapie",
+    "image": "/cards/ecuador/ECU-05-piero-hincapie.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-06",
+    "firstName": "Joel",
+    "lastName": "Ordonez",
+    "fullName": "Joel Ordonez",
+    "image": "/cards/ecuador/ECU-06-joel-ordonez.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-07",
+    "firstName": "Jordy",
+    "lastName": "Alcivar",
+    "fullName": "Jordy Alcivar",
+    "image": "/cards/ecuador/ECU-07-jordy-alcivar.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-08",
+    "firstName": "Willian",
+    "lastName": "Pacho",
+    "fullName": "Willian Pacho",
+    "image": "/cards/ecuador/ECU-08-willian-pacho.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-09",
+    "firstName": "Pervis",
+    "lastName": "Estupinan",
+    "fullName": "Pervis Estupinan",
+    "image": "/cards/ecuador/ECU-09-pervis-estupinan.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-10",
+    "firstName": "Anthony",
+    "lastName": "Valencia",
+    "fullName": "Anthony Valencia",
+    "image": "/cards/ecuador/ECU-10-anthony-valencia.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-11",
+    "firstName": "John",
+    "lastName": "Yeboah",
+    "fullName": "John Yeboah",
+    "image": "/cards/ecuador/ECU-11-john-yeboah.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-12",
+    "firstName": "Kendry",
+    "lastName": "Paez",
+    "fullName": "Kendry Paez",
+    "image": "/cards/ecuador/ECU-12-kendry-paez.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-13",
+    "firstName": "Kevin",
+    "lastName": "Rodriguez",
+    "fullName": "Kevin Rodriguez",
+    "image": "/cards/ecuador/ECU-13-kevin-rodriguez.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-14",
+    "firstName": "Moises",
+    "lastName": "Ramirez",
+    "fullName": "Moises Ramirez",
+    "image": "/cards/ecuador/ECU-14-moises-ramirez.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-15",
+    "firstName": "Enner",
+    "lastName": "Valencia",
+    "fullName": "Enner Valencia",
+    "image": "/cards/ecuador/ECU-15-enner-valencia.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-16",
+    "firstName": "Alan",
+    "lastName": "Minda",
+    "fullName": "Alan Minda",
+    "image": "/cards/ecuador/ECU-16-alan-minda.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-17",
+    "firstName": "Pedro",
+    "lastName": "Vite",
+    "fullName": "Pedro Vite",
+    "image": "/cards/ecuador/ECU-17-pedro-vite.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-18",
+    "firstName": "Jordy",
+    "lastName": "Caicedo",
+    "fullName": "Jordy Caicedo",
+    "image": "/cards/ecuador/ECU-18-jordy-caicedo.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-19",
+    "firstName": "Angelo",
+    "lastName": "Preciado",
+    "fullName": "Angelo Preciado",
+    "image": "/cards/ecuador/ECU-19-angelo-preciado.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  },
+  {
+    "id": "ecu-20",
+    "firstName": "Denil",
+    "lastName": "Castillo",
+    "fullName": "Denil Castillo",
+    "image": "/cards/ecuador/ECU-20-denil-castillo.png",
+    "type": "player",
+    "team": "Ecuador",
+    "weight": 20
+  }
+]

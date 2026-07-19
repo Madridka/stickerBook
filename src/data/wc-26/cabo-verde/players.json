@@ -1,0 +1,200 @@
+[
+  {
+    "id": "cpv-01",
+    "fullName": "Cabo Verde Team Logo",
+    "image": "/cards/cabo-verde/CPV-01-team-logo.png",
+    "type": "logo",
+    "team": "Cabo Verde",
+    "weight": 15
+  },
+  {
+    "id": "cpv-02",
+    "firstName": "Bubista",
+    "lastName": "",
+    "fullName": "Bubista",
+    "image": "/cards/cabo-verde/CPV-02-bubista.png",
+    "type": "head coach",
+    "team": "Cabo Verde",
+    "weight": 10
+  },
+  {
+    "id": "cpv-03",
+    "firstName": "Vozinha",
+    "lastName": "",
+    "fullName": "Vozinha",
+    "image": "/cards/cabo-verde/CPV-03-vozinha.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-04",
+    "firstName": "Márcio",
+    "lastName": "Rosa",
+    "fullName": "Márcio Rosa",
+    "image": "/cards/cabo-verde/CPV-04-marcio-rosa.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-05",
+    "firstName": "Roberto",
+    "lastName": "Lopes",
+    "fullName": "Roberto Lopes",
+    "image": "/cards/cabo-verde/CPV-05-roberto-lopes.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 10
+  },
+  {
+    "id": "cpv-06",
+    "firstName": "Logan",
+    "lastName": "Costa",
+    "fullName": "Logan Costa",
+    "image": "/cards/cabo-verde/CPV-06-logan-costa.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-07",
+    "firstName": "Steven",
+    "lastName": "Moreira",
+    "fullName": "Steven Moreira",
+    "image": "/cards/cabo-verde/CPV-07-steven-moreira.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-08",
+    "firstName": "Wagner",
+    "lastName": "Pina",
+    "fullName": "Wagner Pina",
+    "image": "/cards/cabo-verde/CPV-08-wagner-pina.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-09",
+    "firstName": "João Paulo",
+    "lastName": "Fernandes",
+    "fullName": "João Paulo Fernandes",
+    "image": "/cards/cabo-verde/CPV-09-joao-paulo-fernandes.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-10",
+    "firstName": "Ianique",
+    "lastName": "Tavares",
+    "fullName": "Stopira Tavares",
+    "image": "/cards/cabo-verde/CPV-10-stopira-tavares.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-11",
+    "firstName": "Telmo",
+    "lastName": "Arcanjo",
+    "fullName": "Telmo Arcanjo",
+    "image": "/cards/cabo-verde/CPV-11-telmo-arcanjo.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-12",
+    "firstName": "Laros",
+    "lastName": "Duarte",
+    "fullName": "Laros Duarte",
+    "image": "/cards/cabo-verde/CPV-12-laros-duarte.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-13",
+    "firstName": "Deroy",
+    "lastName": "Duarte",
+    "fullName": "Deroy Duarte",
+    "image": "/cards/cabo-verde/CPV-13-deroy-duarte.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-14",
+    "firstName": "Jamiro",
+    "lastName": "Monteiro",
+    "fullName": "Jamiro Monteiro",
+    "image": "/cards/cabo-verde/CPV-14-jamiro-monteiro.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-15",
+    "firstName": "Kevin",
+    "lastName": "Pina",
+    "fullName": "Kevin Pina",
+    "image": "/cards/cabo-verde/CPV-15-kevin-pina.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-16",
+    "firstName": "Ryan",
+    "lastName": "Mendes",
+    "fullName": "Ryan Mendes",
+    "image": "/cards/cabo-verde/CPV-16-ryan-mendes.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 5
+  },
+  {
+    "id": "cpv-17",
+    "firstName": "Dailon",
+    "lastName": "Livramento",
+    "fullName": "Dailon Livramento",
+    "image": "/cards/cabo-verde/CPV-17-dailon-livramento.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 10
+  },
+  {
+    "id": "cpv-18",
+    "firstName": "Garry",
+    "lastName": "Rodrigues",
+    "fullName": "Garry Rodrigues",
+    "image": "/cards/cabo-verde/CPV-18-garry-rodrigues.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-19",
+    "firstName": "Jovane",
+    "lastName": "Cabral",
+    "fullName": "Jovane Cabral",
+    "image": "/cards/cabo-verde/CPV-19-jovane-cabral.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  },
+  {
+    "id": "cpv-20",
+    "firstName": "Hélio",
+    "lastName": "Varela",
+    "fullName": "Hélio Varela",
+    "image": "/cards/cabo-verde/CPV-20-helio-varela.png",
+    "type": "player",
+    "team": "Cabo Verde",
+    "weight": 20
+  }
+]

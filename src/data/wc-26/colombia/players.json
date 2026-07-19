@@ -1,0 +1,200 @@
+[
+  {
+    "id": "col-01",
+    "fullName": "Colombia Team Logo",
+    "image": "/cards/colombia/COL-01-team-logo.png",
+    "type": "logo",
+    "team": "Colombia",
+    "weight": 15
+  },
+  {
+    "id": "col-02",
+    "firstName": "Nestor",
+    "lastName": "Lorenzo",
+    "fullName": "Nestor Lorenzo",
+    "image": "/cards/colombia/COL-02-nestor-lorenzo.png",
+    "type": "head coach",
+    "team": "Colombia",
+    "weight": 10
+  },
+  {
+    "id": "col-03",
+    "firstName": "David",
+    "lastName": "Ospina",
+    "fullName": "David Ospina",
+    "image": "/cards/colombia/COL-03-david-ospina.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-04",
+    "firstName": "Daniel",
+    "lastName": "Munoz",
+    "fullName": "Daniel Munoz",
+    "image": "/cards/colombia/COL-04-daniel-munoz.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-05",
+    "firstName": "Jhon",
+    "lastName": "Lucumi",
+    "fullName": "Jhon Lucumi",
+    "image": "/cards/colombia/COL-05-jhon-lucumi.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-06",
+    "firstName": "Santiago",
+    "lastName": "Arias",
+    "fullName": "Santiago Arias",
+    "image": "/cards/colombia/COL-06-santiago-arias.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-07",
+    "firstName": "Kevin",
+    "lastName": "Castano",
+    "fullName": "Kevin Castano",
+    "image": "/cards/colombia/COL-07-kevin-castano.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-08",
+    "firstName": "Richard",
+    "lastName": "Rios",
+    "fullName": "Richard Rios",
+    "image": "/cards/colombia/COL-08-richard-rios.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-09",
+    "firstName": "Luis",
+    "lastName": "Diaz",
+    "fullName": "Luis Diaz",
+    "image": "/cards/colombia/COL-09-luis-diaz.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-10",
+    "firstName": "Jorge",
+    "lastName": "Carrascal",
+    "fullName": "Jorge Carrascal",
+    "image": "/cards/colombia/COL-10-jorge-carrascal.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-11",
+    "firstName": "Jhon",
+    "lastName": "Cordoba",
+    "fullName": "Jhon Cordoba",
+    "image": "/cards/colombia/COL-11-jhon-cordoba.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-12",
+    "firstName": "James",
+    "lastName": "Rodriguez",
+    "fullName": "James Rodriguez",
+    "image": "/cards/colombia/COL-12-james-rodriguez.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-13",
+    "firstName": "Jhon",
+    "lastName": "Arias",
+    "fullName": "Jhon Arias",
+    "image": "/cards/colombia/COL-13-jhon-arias.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-14",
+    "firstName": "Camilo",
+    "lastName": "Vargas",
+    "fullName": "Camilo Vargas",
+    "image": "/cards/colombia/COL-14-camilo-vargas.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-15",
+    "firstName": "Yerry",
+    "lastName": "Mina",
+    "fullName": "Yerry Mina",
+    "image": "/cards/colombia/COL-15-yerry-mina.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-16",
+    "firstName": "Gustavo",
+    "lastName": "Puerta",
+    "fullName": "Gustavo Puerta",
+    "image": "/cards/colombia/COL-16-gustavo-puerta.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-17",
+    "firstName": "Juan",
+    "lastName": "Portilla",
+    "fullName": "Juan Portilla",
+    "image": "/cards/colombia/COL-17-juan-portilla.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-18",
+    "firstName": "Jefferson",
+    "lastName": "Lerma",
+    "fullName": "Jefferson Lerma",
+    "image": "/cards/colombia/COL-18-jefferson-lerma.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-19",
+    "firstName": "Johan",
+    "lastName": "Mojica",
+    "fullName": "Johan Mojica",
+    "image": "/cards/colombia/COL-19-johan-mojica.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  },
+  {
+    "id": "col-20",
+    "firstName": "Willer",
+    "lastName": "Ditta",
+    "fullName": "Willer Ditta",
+    "image": "/cards/colombia/COL-20-willer-ditta.png",
+    "type": "player",
+    "team": "Colombia",
+    "weight": 20
+  }
+]

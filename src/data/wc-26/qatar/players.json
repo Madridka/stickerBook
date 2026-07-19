@@ -1,0 +1,200 @@
+[
+  {
+    "id": "qat-01",
+    "fullName": "Qatar Team Logo",
+    "image": "/cards/qatar/QAT-01-team-logo.png",
+    "type": "logo",
+    "team": "Qatar",
+    "weight": 15
+  },
+  {
+    "id": "qat-02",
+    "firstName": "Julen",
+    "lastName": "Lopetegui",
+    "fullName": "Julen Lopetegui",
+    "image": "/cards/qatar/QAT-02-julen-lopetegui.png",
+    "type": "head coach",
+    "team": "Qatar",
+    "weight": 10
+  },
+  {
+    "id": "qat-03",
+    "firstName": "Mahmoud",
+    "lastName": "Abunada",
+    "fullName": "Mahmoud Abunada",
+    "image": "/cards/qatar/QAT-03-mahmoud-abunada.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-04",
+    "firstName": "Pedro",
+    "lastName": "Miguel",
+    "fullName": "Pedro Miguel",
+    "image": "/cards/qatar/QAT-04-pedro-miguel.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-05",
+    "firstName": "Lucas",
+    "lastName": "Mendes",
+    "fullName": "Lucas Mendes",
+    "image": "/cards/qatar/QAT-05-lucas-mendes.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-06",
+    "firstName": "Gueye",
+    "lastName": "Issa Laye",
+    "fullName": "Gueye Issa Laye",
+    "image": "/cards/qatar/QAT-06-gueye-issa-laye.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-07",
+    "firstName": "Jassem",
+    "lastName": "Gaber",
+    "fullName": "Jassem Gaber",
+    "image": "/cards/qatar/QAT-07-jassem-gaber.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-08",
+    "firstName": "Abdelaziz",
+    "lastName": "Abdulaziz Hatem",
+    "fullName": "Abdelaziz Abdulaziz Hatem",
+    "image": "/cards/qatar/QAT-08-abdelaziz-abdulaziz-hatem.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-09",
+    "firstName": "Ahmed",
+    "lastName": "Alaaeldin",
+    "fullName": "Ahmed Alaaeldin",
+    "image": "/cards/qatar/QAT-09-ahmed-alaaeldin.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-10",
+    "firstName": "Edmilson",
+    "lastName": "Junior",
+    "fullName": "Edmilson Junior",
+    "image": "/cards/qatar/QAT-10-edmilson-junior.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-11",
+    "firstName": "Mohammed",
+    "lastName": "Muntari",
+    "fullName": "Mohammed Muntari",
+    "image": "/cards/qatar/QAT-11-mohammed-muntari.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-12",
+    "firstName": "Hasan",
+    "lastName": "Hassan Alhaydos",
+    "fullName": "Hasan Hassan Alhaydos",
+    "image": "/cards/qatar/QAT-12-hasan-hassan-alhaydos.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-13",
+    "firstName": "Akram",
+    "lastName": "Afif",
+    "fullName": "Akram Afif",
+    "image": "/cards/qatar/QAT-13-akram-afif.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-14",
+    "firstName": "Karim",
+    "lastName": "Boudiaf",
+    "fullName": "Karim Boudiaf",
+    "image": "/cards/qatar/QAT-14-karim-boudiaf.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-15",
+    "firstName": "Ayoub",
+    "lastName": "Aloui",
+    "fullName": "Ayoub Aloui",
+    "image": "/cards/qatar/QAT-15-ayoub-aloui.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-16",
+    "firstName": "Homam",
+    "lastName": "Ahmed",
+    "fullName": "Homam Ahmed",
+    "image": "/cards/qatar/QAT-16-homam-ahmed.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-17",
+    "firstName": "Yusuf",
+    "lastName": "Abdurisag",
+    "fullName": "Yusuf Abdurisag",
+    "image": "/cards/qatar/QAT-17-yusuf-abdurisag.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-18",
+    "firstName": "Boualem",
+    "lastName": "Khoukhi",
+    "fullName": "Boualem Khoukhi",
+    "image": "/cards/qatar/QAT-18-boualem-khoukhi.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-19",
+    "firstName": "Ahmed",
+    "lastName": "Alganehi",
+    "fullName": "Ahmed Alganehi",
+    "image": "/cards/qatar/QAT-19-ahmed-alganehi.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  },
+  {
+    "id": "qat-20",
+    "firstName": "Sultan",
+    "lastName": "Albrake",
+    "fullName": "Sultan Albrake",
+    "image": "/cards/qatar/QAT-20-sultan-albrake.png",
+    "type": "player",
+    "team": "Qatar",
+    "weight": 20
+  }
+]

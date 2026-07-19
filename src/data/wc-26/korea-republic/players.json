@@ -1,0 +1,200 @@
+[
+  {
+    "id": "kor-01",
+    "fullName": "Korea Republic Team Logo",
+    "image": "/cards/korea-republic/KOR-01-team-logo.png",
+    "type": "logo",
+    "team": "Korea Republic",
+    "weight": 15
+  },
+  {
+    "id": "kor-02",
+    "firstName": "Myungbo",
+    "lastName": "Hong",
+    "fullName": "Myungbo Hong",
+    "image": "/cards/korea-republic/KOR-02-myungbo-hong.png",
+    "type": "head coach",
+    "team": "Korea Republic",
+    "weight": 10
+  },
+  {
+    "id": "kor-03",
+    "firstName": "Seunggyu",
+    "lastName": "Kim",
+    "fullName": "Seunggyu Kim",
+    "image": "/cards/korea-republic/KOR-03-seunggyu-kim.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-04",
+    "firstName": "Hanbeom",
+    "lastName": "Lee",
+    "fullName": "Hanbeom Lee",
+    "image": "/cards/korea-republic/KOR-04-hanbeom-lee.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-05",
+    "firstName": "Gihyuk",
+    "lastName": "Lee",
+    "fullName": "Gihyuk Lee",
+    "image": "/cards/korea-republic/KOR-05-gihyuk-lee.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-06",
+    "firstName": "Minjae",
+    "lastName": "Kim",
+    "fullName": "Minjae Kim",
+    "image": "/cards/korea-republic/KOR-06-minjae-kim.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-07",
+    "firstName": "Taehyeon",
+    "lastName": "Kim",
+    "fullName": "Taehyeon Kim",
+    "image": "/cards/korea-republic/KOR-07-taehyeon-kim.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-08",
+    "firstName": "Inbeom",
+    "lastName": "Hwang",
+    "fullName": "Inbeom Hwang",
+    "image": "/cards/korea-republic/KOR-08-inbeom-hwang.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-09",
+    "firstName": "Heungmin",
+    "lastName": "Son",
+    "fullName": "Heungmin Son",
+    "image": "/cards/korea-republic/KOR-09-heungmin-son.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-10",
+    "firstName": "Seungho",
+    "lastName": "Paik",
+    "fullName": "Seungho Paik",
+    "image": "/cards/korea-republic/KOR-10-seungho-paik.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-11",
+    "firstName": "Guesung",
+    "lastName": "Cho",
+    "fullName": "Guesung Cho",
+    "image": "/cards/korea-republic/KOR-11-guesung-cho.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-12",
+    "firstName": "Jaesung",
+    "lastName": "Lee",
+    "fullName": "Jaesung Lee",
+    "image": "/cards/korea-republic/KOR-12-jaesung-lee.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-13",
+    "firstName": "Heechan",
+    "lastName": "Hwang",
+    "fullName": "Heechan Hwang",
+    "image": "/cards/korea-republic/KOR-13-heechan-hwang.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-14",
+    "firstName": "Bumkeun",
+    "lastName": "Song",
+    "fullName": "Bumkeun Song",
+    "image": "/cards/korea-republic/KOR-14-bumkeun-song.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-15",
+    "firstName": "Taeseok",
+    "lastName": "Lee",
+    "fullName": "Taeseok Lee",
+    "image": "/cards/korea-republic/KOR-15-taeseok-lee.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-16",
+    "firstName": "Wije",
+    "lastName": "Cho",
+    "fullName": "Wije Cho",
+    "image": "/cards/korea-republic/KOR-16-wije-cho.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-17",
+    "firstName": "Moonhwan",
+    "lastName": "Kim",
+    "fullName": "Moonhwan Kim",
+    "image": "/cards/korea-republic/KOR-17-moonhwan-kim.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-18",
+    "firstName": "Jinseob",
+    "lastName": "Park",
+    "fullName": "Jinseob Park",
+    "image": "/cards/korea-republic/KOR-18-jinseob-park.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-19",
+    "firstName": "Junho",
+    "lastName": "Bae",
+    "fullName": "Junho Bae",
+    "image": "/cards/korea-republic/KOR-19-junho-bae.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  },
+  {
+    "id": "kor-20",
+    "firstName": "Hyeongyu",
+    "lastName": "Oh",
+    "fullName": "Hyeongyu Oh",
+    "image": "/cards/korea-republic/KOR-20-hyeongyu-oh.png",
+    "type": "player",
+    "team": "Korea Republic",
+    "weight": 20
+  }
+]

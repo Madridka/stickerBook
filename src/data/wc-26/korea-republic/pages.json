@@ -1,0 +1,180 @@
+[
+  {
+    "id": "korea-republic-left",
+    "number": 12,
+    "image": "page-12-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "kor-01",
+        "playerId": "kor-01",
+        "name": "kor-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "kor-02",
+        "playerId": "kor-02",
+        "name": "kor-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "kor-03",
+        "playerId": "kor-03",
+        "name": "kor-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-04",
+        "playerId": "kor-04",
+        "name": "kor-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-05",
+        "playerId": "kor-05",
+        "name": "kor-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-06",
+        "playerId": "kor-06",
+        "name": "kor-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-07",
+        "playerId": "kor-07",
+        "name": "kor-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "kor-08",
+        "playerId": "kor-08",
+        "name": "kor-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "kor-09",
+        "playerId": "kor-09",
+        "name": "kor-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "kor-10",
+        "playerId": "kor-10",
+        "name": "kor-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "korea-republic-right",
+    "number": 13,
+    "image": "page-13-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "kor-11",
+        "playerId": "kor-11",
+        "name": "kor-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "kor-12",
+        "playerId": "kor-12",
+        "name": "kor-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "kor-13",
+        "playerId": "kor-13",
+        "name": "kor-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-14",
+        "playerId": "kor-14",
+        "name": "kor-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-15",
+        "playerId": "kor-15",
+        "name": "kor-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-16",
+        "playerId": "kor-16",
+        "name": "kor-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "kor-17",
+        "playerId": "kor-17",
+        "name": "kor-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "kor-18",
+        "playerId": "kor-18",
+        "name": "kor-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "kor-19",
+        "playerId": "kor-19",
+        "name": "kor-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "kor-20",
+        "playerId": "kor-20",
+        "name": "kor-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

@@ -1,12 +1,200 @@
 [
   {
     "id": "eng-01",
+    "fullName": "England Team Logo",
+    "image": "/cards/england/ENG-01-team-logo.png",
+    "type": "logo",
+    "team": "England",
+    "weight": 15
+  },
+  {
+    "id": "eng-02",
+    "firstName": "Thomas",
+    "lastName": "Tuchel",
+    "fullName": "Thomas Tuchel",
+    "image": "/cards/england/ENG-02-thomas-tuchel.png",
+    "type": "head coach",
+    "team": "England",
+    "weight": 10
+  },
+  {
+    "id": "eng-03",
+    "firstName": "Jordan",
+    "lastName": "Pickford",
+    "fullName": "Jordan Pickford",
+    "image": "/cards/england/ENG-03-jordan-pickford.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-04",
+    "firstName": "Dean",
+    "lastName": "Henderson",
+    "fullName": "Dean Henderson",
+    "image": "/cards/england/ENG-04-dean-henderson.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-05",
+    "firstName": "John",
+    "lastName": "Stones",
+    "fullName": "John Stones",
+    "image": "/cards/england/ENG-05-john-stones.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-06",
+    "firstName": "Marc",
+    "lastName": "Guéhi",
+    "fullName": "Marc Guéhi",
+    "image": "/cards/england/ENG-06-marc-guehi.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-07",
+    "firstName": "Reece",
+    "lastName": "James",
+    "fullName": "Reece James",
+    "image": "/cards/england/ENG-07-reece-james.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-08",
+    "firstName": "Ezri",
+    "lastName": "Konsa",
+    "fullName": "Ezri Konsa",
+    "image": "/cards/england/ENG-08-ezri-konsa.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-09",
+    "firstName": "Trevoh",
+    "lastName": "Chalobah",
+    "fullName": "Trevoh Chalobah",
+    "image": "/cards/england/ENG-09-trevoh-chalobah.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-10",
+    "firstName": "Declan",
+    "lastName": "Rice",
+    "fullName": "Declan Rice",
+    "image": "/cards/england/ENG-10-declan-rice.png",
+    "type": "player",
+    "team": "England",
+    "weight": 10
+  },
+  {
+    "id": "eng-11",
     "firstName": "Jude",
     "lastName": "Bellingham",
     "fullName": "Jude Bellingham",
-    "image": "/cards/england/ENG-01-jude-bellingham.png",
+    "image": "/cards/england/ENG-11-jude-bellingham.png",
     "type": "player",
     "team": "England",
-    "weight": 500
+    "weight": 5
+  },
+  {
+    "id": "eng-12",
+    "firstName": "Elliot",
+    "lastName": "Anderson",
+    "fullName": "Elliot Anderson",
+    "image": "/cards/england/ENG-12-elliot-anderson.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-13",
+    "firstName": "Eberechi",
+    "lastName": "Eze",
+    "fullName": "Eberechi Eze",
+    "image": "/cards/england/ENG-13-eberechi-eze.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-14",
+    "firstName": "Kobbie",
+    "lastName": "Mainoo",
+    "fullName": "Kobbie Mainoo",
+    "image": "/cards/england/ENG-14-kobbie-mainoo.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-15",
+    "firstName": "Morgan",
+    "lastName": "Rogers",
+    "fullName": "Morgan Rogers",
+    "image": "/cards/england/ENG-15-morgan-rogers.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-16",
+    "firstName": "Bukayo",
+    "lastName": "Saka",
+    "fullName": "Bukayo Saka",
+    "image": "/cards/england/ENG-16-bukayo-saka.png",
+    "type": "player",
+    "team": "England",
+    "weight": 10
+  },
+  {
+    "id": "eng-17",
+    "firstName": "Harry",
+    "lastName": "Kane",
+    "fullName": "Harry Kane",
+    "image": "/cards/england/ENG-17-harry-kane.png",
+    "type": "player",
+    "team": "England",
+    "weight": 5
+  },
+  {
+    "id": "eng-18",
+    "firstName": "Marcus",
+    "lastName": "Rashford",
+    "fullName": "Marcus Rashford",
+    "image": "/cards/england/ENG-18-marcus-rashford.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-19",
+    "firstName": "Anthony",
+    "lastName": "Gordon",
+    "fullName": "Anthony Gordon",
+    "image": "/cards/england/ENG-19-anthony-gordon.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
+  },
+  {
+    "id": "eng-20",
+    "firstName": "Ollie",
+    "lastName": "Watkins",
+    "fullName": "Ollie Watkins",
+    "image": "/cards/england/ENG-20-ollie-watkins.png",
+    "type": "player",
+    "team": "England",
+    "weight": 20
   }
 ]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": "hai-01",
+    "fullName": "Haiti Team Logo",
+    "image": "/cards/haiti/HAI-01-team-logo.png",
+    "type": "logo",
+    "team": "Haiti",
+    "weight": 15
+  },
+  {
+    "id": "hai-02",
+    "firstName": "Sebastien",
+    "lastName": "Migne",
+    "fullName": "Sebastien Migne",
+    "image": "/cards/haiti/HAI-02-sebastien-migne.png",
+    "type": "head coach",
+    "team": "Haiti",
+    "weight": 10
+  },
+  {
+    "id": "hai-03",
+    "firstName": "Johny",
+    "lastName": "Placide",
+    "fullName": "Johny Placide",
+    "image": "/cards/haiti/HAI-03-johny-placide.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-04",
+    "firstName": "Carlens",
+    "lastName": "Arcus",
+    "fullName": "Carlens Arcus",
+    "image": "/cards/haiti/HAI-04-carlens-arcus.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-05",
+    "firstName": "Keeto",
+    "lastName": "Thermoncy",
+    "fullName": "Keeto Thermoncy",
+    "image": "/cards/haiti/HAI-05-keeto-thermoncy.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-06",
+    "firstName": "Ricardo",
+    "lastName": "Ade",
+    "fullName": "Ricardo Ade",
+    "image": "/cards/haiti/HAI-06-ricardo-ade.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-07",
+    "firstName": "Hannes",
+    "lastName": "Delcroix",
+    "fullName": "Hannes Delcroix",
+    "image": "/cards/haiti/HAI-07-hannes-delcroix.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-08",
+    "firstName": "Carl",
+    "lastName": "Sainte",
+    "fullName": "Carl Sainte",
+    "image": "/cards/haiti/HAI-08-carl-sainte.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-09",
+    "firstName": "Derrick",
+    "lastName": "Etienne",
+    "fullName": "Derrick Etienne",
+    "image": "/cards/haiti/HAI-09-derrick-etienne.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-10",
+    "firstName": "Martin",
+    "lastName": "Experience",
+    "fullName": "Martin Experience",
+    "image": "/cards/haiti/HAI-10-martin-experience.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-11",
+    "firstName": "Duckens",
+    "lastName": "Nazon",
+    "fullName": "Duckens Nazon",
+    "image": "/cards/haiti/HAI-11-duckens-nazon.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-12",
+    "firstName": "Jean-Ricner",
+    "lastName": "Bellegarde",
+    "fullName": "Jean-Ricner Bellegarde",
+    "image": "/cards/haiti/HAI-12-jean-ricner-bellegarde.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-13",
+    "firstName": "Louicius",
+    "lastName": "Deedson",
+    "fullName": "Louicius Deedson",
+    "image": "/cards/haiti/HAI-13-louicius-deedson.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-14",
+    "firstName": "Alexandre",
+    "lastName": "Pierre",
+    "fullName": "Alexandre Pierre",
+    "image": "/cards/haiti/HAI-14-alexandre-pierre.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-15",
+    "firstName": "Markhus",
+    "lastName": "Lacroix",
+    "fullName": "Markhus Lacroix",
+    "image": "/cards/haiti/HAI-15-markhus-lacroix.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-16",
+    "firstName": "Garven",
+    "lastName": "Metusala",
+    "fullName": "Garven Metusala",
+    "image": "/cards/haiti/HAI-16-garven-metusala.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-17",
+    "firstName": "Ruben",
+    "lastName": "Providence",
+    "fullName": "Ruben Providence",
+    "image": "/cards/haiti/HAI-17-ruben-providence.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-18",
+    "firstName": "Lenny",
+    "lastName": "Joseph",
+    "fullName": "Lenny Joseph",
+    "image": "/cards/haiti/HAI-18-lenny-joseph.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-19",
+    "firstName": "Danley",
+    "lastName": "Jean Jacques",
+    "fullName": "Danley Jean Jacques",
+    "image": "/cards/haiti/HAI-19-danley-jean-jacques.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  },
+  {
+    "id": "hai-20",
+    "firstName": "Wilson",
+    "lastName": "Isidor",
+    "fullName": "Wilson Isidor",
+    "image": "/cards/haiti/HAI-20-wilson-isidor.png",
+    "type": "player",
+    "team": "Haiti",
+    "weight": 20
+  }
+]

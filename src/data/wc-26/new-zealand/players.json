@@ -1,0 +1,200 @@
+[
+  {
+    "id": "nzl-01",
+    "fullName": "New Zealand Team Logo",
+    "image": "/cards/new-zealand/NZL-01-team-logo.png",
+    "type": "logo",
+    "team": "New Zealand",
+    "weight": 15
+  },
+  {
+    "id": "nzl-02",
+    "firstName": "Darren",
+    "lastName": "Bazeley",
+    "fullName": "Darren Bazeley",
+    "image": "/cards/new-zealand/NZL-02-darren-bazeley.png",
+    "type": "head coach",
+    "team": "New Zealand",
+    "weight": 10
+  },
+  {
+    "id": "nzl-03",
+    "firstName": "Max",
+    "lastName": "Crocombe",
+    "fullName": "Max Crocombe",
+    "image": "/cards/new-zealand/NZL-03-max-crocombe.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-04",
+    "firstName": "Tim",
+    "lastName": "Payne",
+    "fullName": "Tim Payne",
+    "image": "/cards/new-zealand/NZL-04-tim-payne.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-05",
+    "firstName": "Francis",
+    "lastName": "De Vries",
+    "fullName": "Francis De Vries",
+    "image": "/cards/new-zealand/NZL-05-francis-de-vries.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-06",
+    "firstName": "Tyler",
+    "lastName": "Bindon",
+    "fullName": "Tyler Bindon",
+    "image": "/cards/new-zealand/NZL-06-tyler-bindon.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-07",
+    "firstName": "Michael",
+    "lastName": "Boxall",
+    "fullName": "Michael Boxall",
+    "image": "/cards/new-zealand/NZL-07-michael-boxall.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-08",
+    "firstName": "Joe",
+    "lastName": "Bell",
+    "fullName": "Joe Bell",
+    "image": "/cards/new-zealand/NZL-08-joe-bell.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-09",
+    "firstName": "Logan",
+    "lastName": "Rogerson",
+    "fullName": "Logan Rogerson",
+    "image": "/cards/new-zealand/NZL-09-logan-rogerson.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-10",
+    "firstName": "Marko",
+    "lastName": "Stamenic",
+    "fullName": "Marko Stamenic",
+    "image": "/cards/new-zealand/NZL-10-marko-stamenic.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-11",
+    "firstName": "Chris",
+    "lastName": "Wood",
+    "fullName": "Chris Wood",
+    "image": "/cards/new-zealand/NZL-11-chris-wood.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-12",
+    "firstName": "Sarpreet",
+    "lastName": "Singh",
+    "fullName": "Sarpreet Singh",
+    "image": "/cards/new-zealand/NZL-12-sarpreet-singh.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-13",
+    "firstName": "Elijah",
+    "lastName": "Just",
+    "fullName": "Elijah Just",
+    "image": "/cards/new-zealand/NZL-13-elijah-just.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-14",
+    "firstName": "Alex",
+    "lastName": "Paulsen",
+    "fullName": "Alex Paulsen",
+    "image": "/cards/new-zealand/NZL-14-alex-paulsen.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-15",
+    "firstName": "Liberato",
+    "lastName": "Cacace",
+    "fullName": "Liberato Cacace",
+    "image": "/cards/new-zealand/NZL-15-liberato-cacace.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-16",
+    "firstName": "Alex",
+    "lastName": "Rufer",
+    "fullName": "Alex Rufer",
+    "image": "/cards/new-zealand/NZL-16-alex-rufer.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-17",
+    "firstName": "Nando",
+    "lastName": "Pijnaker",
+    "fullName": "Nando Pijnaker",
+    "image": "/cards/new-zealand/NZL-17-nando-pijnaker.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-18",
+    "firstName": "Finn",
+    "lastName": "Surman",
+    "fullName": "Finn Surman",
+    "image": "/cards/new-zealand/NZL-18-finn-surman.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-19",
+    "firstName": "Kosta",
+    "lastName": "Barbarouses",
+    "fullName": "Kosta Barbarouses",
+    "image": "/cards/new-zealand/NZL-19-kosta-barbarouses.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  },
+  {
+    "id": "nzl-20",
+    "firstName": "Ben",
+    "lastName": "Waine",
+    "fullName": "Ben Waine",
+    "image": "/cards/new-zealand/NZL-20-ben-waine.png",
+    "type": "player",
+    "team": "New Zealand",
+    "weight": 20
+  }
+]

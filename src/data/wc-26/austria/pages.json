@@ -1,0 +1,180 @@
+[
+  {
+    "id": "austria-left",
+    "number": 84,
+    "image": "page-84-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "aut-01",
+        "playerId": "aut-01",
+        "name": "aut-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aut-02",
+        "playerId": "aut-02",
+        "name": "aut-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aut-03",
+        "playerId": "aut-03",
+        "name": "aut-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-04",
+        "playerId": "aut-04",
+        "name": "aut-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-05",
+        "playerId": "aut-05",
+        "name": "aut-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-06",
+        "playerId": "aut-06",
+        "name": "aut-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-07",
+        "playerId": "aut-07",
+        "name": "aut-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aut-08",
+        "playerId": "aut-08",
+        "name": "aut-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aut-09",
+        "playerId": "aut-09",
+        "name": "aut-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aut-10",
+        "playerId": "aut-10",
+        "name": "aut-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "austria-right",
+    "number": 85,
+    "image": "page-85-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "aut-11",
+        "playerId": "aut-11",
+        "name": "aut-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aut-12",
+        "playerId": "aut-12",
+        "name": "aut-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aut-13",
+        "playerId": "aut-13",
+        "name": "aut-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-14",
+        "playerId": "aut-14",
+        "name": "aut-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-15",
+        "playerId": "aut-15",
+        "name": "aut-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-16",
+        "playerId": "aut-16",
+        "name": "aut-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aut-17",
+        "playerId": "aut-17",
+        "name": "aut-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aut-18",
+        "playerId": "aut-18",
+        "name": "aut-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aut-19",
+        "playerId": "aut-19",
+        "name": "aut-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aut-20",
+        "playerId": "aut-20",
+        "name": "aut-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

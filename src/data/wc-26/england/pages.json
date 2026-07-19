@@ -1,27 +1,40 @@
 [
   {
     "id": "england-left",
-    "number": 12,
+    "number": 96,
     "image": "page-12-stickers-left.png",
     "width": 1536,
     "height": 1200,
     "slots": [
-      {
-        "id": "eng-01",
-        "playerId": "eng-01",
-        "name": "eng-01",
-        "x": 500,
-        "y": 130,
-        "width": 200
-      }
+      { "id": "eng-01", "playerId": "eng-01", "name": "eng-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "eng-02", "playerId": "eng-02", "name": "eng-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "eng-03", "playerId": "eng-03", "name": "eng-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "eng-04", "playerId": "eng-04", "name": "eng-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "eng-05", "playerId": "eng-05", "name": "eng-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "eng-06", "playerId": "eng-06", "name": "eng-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "eng-07", "playerId": "eng-07", "name": "eng-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "eng-08", "playerId": "eng-08", "name": "eng-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "eng-09", "playerId": "eng-09", "name": "eng-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "eng-10", "playerId": "eng-10", "name": "eng-10", "x": 1176, "y": 800, "width": 200 }
     ]
   },
   {
     "id": "england-right",
-    "number": 13,
+    "number": 97,
     "image": "page-13-stickers-right.png",
     "width": 1536,
     "height": 1200,
-    "slots": []
+    "slots": [
+      { "id": "eng-11", "playerId": "eng-11", "name": "eng-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "eng-12", "playerId": "eng-12", "name": "eng-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "eng-13", "playerId": "eng-13", "name": "eng-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "eng-14", "playerId": "eng-14", "name": "eng-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "eng-15", "playerId": "eng-15", "name": "eng-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "eng-16", "playerId": "eng-16", "name": "eng-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "eng-17", "playerId": "eng-17", "name": "eng-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "eng-18", "playerId": "eng-18", "name": "eng-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "eng-19", "playerId": "eng-19", "name": "eng-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "eng-20", "playerId": "eng-20", "name": "eng-20", "x": 1176, "y": 800, "width": 200 }
+    ]
   }
 ]

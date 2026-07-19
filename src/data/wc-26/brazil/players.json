@@ -1,0 +1,193 @@
+[
+  {
+    "id": "bra-01",
+    "fullName": "Brazil Team Logo",
+    "image": "/cards/brazil/BRA-01-team-logo.png",
+    "type": "logo",
+    "team": "Brazil",
+    "weight": 15
+  },
+  {
+    "id": "bra-02",
+    "firstName": "Carlo",
+    "lastName": "Ancelotti",
+    "fullName": "Carlo Ancelotti",
+    "image": "/cards/brazil/BRA-02-carlo-ancelotti.png",
+    "type": "head coach",
+    "team": "Brazil",
+    "weight": 10
+  },
+  {
+    "id": "bra-03",
+    "firstName": "Alisson",
+    "fullName": "Alisson",
+    "image": "/cards/brazil/BRA-03-alisson.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-04",
+    "firstName": "Ederson",
+    "fullName": "Ederson",
+    "image": "/cards/brazil/BRA-04-ederson.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-05",
+    "firstName": "Gabriel",
+    "lastName": "Magalhaes",
+    "fullName": "Gabriel Magalhaes",
+    "image": "/cards/brazil/BRA-05-gabriel-magalhaes.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-06",
+    "firstName": "Marcos",
+    "lastName": "Marquinhos",
+    "fullName": "Marcos Marquinhos",
+    "image": "/cards/brazil/BRA-06-marcos-marquinhos.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-07",
+    "firstName": "Casemiro",
+    "fullName": "Casemiro",
+    "image": "/cards/brazil/BRA-07-casemiro.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-08",
+    "firstName": "Alex",
+    "lastName": "Sandro",
+    "fullName": "Alex Sandro",
+    "image": "/cards/brazil/BRA-08-alex-sandro.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-09",
+    "firstName": "Vinicius",
+    "lastName": "Junior",
+    "fullName": "Vinicius Junior",
+    "image": "/cards/brazil/BRA-09-vinicius-junior.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-10",
+    "firstName": "Bruno",
+    "lastName": "Guimaraes",
+    "fullName": "Bruno Guimaraes",
+    "image": "/cards/brazil/BRA-10-bruno-guimaraes.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-11",
+    "firstName": "Matheus",
+    "lastName": "Cunha",
+    "fullName": "Matheus Cunha",
+    "image": "/cards/brazil/BRA-11-matheus-cunha.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-12",
+    "firstName": "Neymar",
+    "lastName": "Jr",
+    "fullName": "Neymar Jr",
+    "image": "/cards/brazil/BRA-12-neymar-jr.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-13",
+    "firstName": "Raphinha",
+    "fullName": "Raphinha",
+    "image": "/cards/brazil/BRA-13-raphinha.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-14",
+    "firstName": "Weverton",
+    "fullName": "Weverton",
+    "image": "/cards/brazil/BRA-14-weverton.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-15",
+    "firstName": "Danilo",
+    "fullName": "Danilo",
+    "image": "/cards/brazil/BRA-15-danilo.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-16",
+    "firstName": "Gleison",
+    "lastName": "Bremer",
+    "fullName": "Gleison Bremer",
+    "image": "/cards/brazil/BRA-16-gleison-bremer.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-17",
+    "firstName": "Leonardo",
+    "lastName": "Leo Pereira",
+    "fullName": "Leonardo Leo Pereira",
+    "image": "/cards/brazil/BRA-17-leonardo-leo-pereira.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-18",
+    "firstName": "Douglas",
+    "lastName": "Santos",
+    "fullName": "Douglas Santos",
+    "image": "/cards/brazil/BRA-18-douglas-santos.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-19",
+    "firstName": "Fabinho",
+    "fullName": "Fabinho",
+    "image": "/cards/brazil/BRA-19-fabinho.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  },
+  {
+    "id": "bra-20",
+    "firstName": "Danilo",
+    "lastName": "Santos",
+    "fullName": "Danilo Santos",
+    "image": "/cards/brazil/BRA-20-danilo-santos.png",
+    "type": "player",
+    "team": "Brazil",
+    "weight": 20
+  }
+]

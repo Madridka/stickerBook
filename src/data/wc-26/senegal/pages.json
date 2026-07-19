@@ -1,0 +1,40 @@
+[
+  {
+    "id": "senegal-left",
+    "number": 74,
+    "image": "page-74-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "sen-01", "playerId": "sen-01", "name": "sen-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "sen-02", "playerId": "sen-02", "name": "sen-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "sen-03", "playerId": "sen-03", "name": "sen-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "sen-04", "playerId": "sen-04", "name": "sen-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "sen-05", "playerId": "sen-05", "name": "sen-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "sen-06", "playerId": "sen-06", "name": "sen-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "sen-07", "playerId": "sen-07", "name": "sen-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "sen-08", "playerId": "sen-08", "name": "sen-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "sen-09", "playerId": "sen-09", "name": "sen-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "sen-10", "playerId": "sen-10", "name": "sen-10", "x": 1176, "y": 800, "width": 200 }
+    ]
+  },
+  {
+    "id": "senegal-right",
+    "number": 75,
+    "image": "page-75-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "sen-11", "playerId": "sen-11", "name": "sen-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "sen-12", "playerId": "sen-12", "name": "sen-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "sen-13", "playerId": "sen-13", "name": "sen-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "sen-14", "playerId": "sen-14", "name": "sen-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "sen-15", "playerId": "sen-15", "name": "sen-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "sen-16", "playerId": "sen-16", "name": "sen-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "sen-17", "playerId": "sen-17", "name": "sen-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "sen-18", "playerId": "sen-18", "name": "sen-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "sen-19", "playerId": "sen-19", "name": "sen-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "sen-20", "playerId": "sen-20", "name": "sen-20", "x": 1176, "y": 800, "width": 200 }
+    ]
+  }
+]

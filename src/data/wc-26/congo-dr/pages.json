@@ -1,0 +1,180 @@
+[
+  {
+    "id": "congo-dr-left",
+    "number": 90,
+    "image": "page-90-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "cod-01",
+        "playerId": "cod-01",
+        "name": "cod-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cod-02",
+        "playerId": "cod-02",
+        "name": "cod-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cod-03",
+        "playerId": "cod-03",
+        "name": "cod-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-04",
+        "playerId": "cod-04",
+        "name": "cod-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-05",
+        "playerId": "cod-05",
+        "name": "cod-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-06",
+        "playerId": "cod-06",
+        "name": "cod-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-07",
+        "playerId": "cod-07",
+        "name": "cod-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cod-08",
+        "playerId": "cod-08",
+        "name": "cod-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cod-09",
+        "playerId": "cod-09",
+        "name": "cod-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cod-10",
+        "playerId": "cod-10",
+        "name": "cod-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "congo-dr-right",
+    "number": 91,
+    "image": "page-91-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "cod-11",
+        "playerId": "cod-11",
+        "name": "cod-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cod-12",
+        "playerId": "cod-12",
+        "name": "cod-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "cod-13",
+        "playerId": "cod-13",
+        "name": "cod-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-14",
+        "playerId": "cod-14",
+        "name": "cod-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-15",
+        "playerId": "cod-15",
+        "name": "cod-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-16",
+        "playerId": "cod-16",
+        "name": "cod-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "cod-17",
+        "playerId": "cod-17",
+        "name": "cod-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cod-18",
+        "playerId": "cod-18",
+        "name": "cod-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cod-19",
+        "playerId": "cod-19",
+        "name": "cod-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "cod-20",
+        "playerId": "cod-20",
+        "name": "cod-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

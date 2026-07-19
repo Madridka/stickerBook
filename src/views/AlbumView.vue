@@ -92,7 +92,9 @@ const latestReleaseSeries: string =
 const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
   .filter(({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`))
   .slice(0, 3)
-const contentsPageSize: number = 4
+const contentsPageSize: number = 16
+const contentsFirstPage: number = 4
+const contentsLastPage: number = 4
 
 const { t } = useI18n()
 const router = useRouter()
@@ -150,7 +152,8 @@ const visiblePageLabel: ComputedRef<string> = computed((): string =>
 const visiblePageTypeLabel: ComputedRef<string> = computed((): string => {
   if (currentPage.value === 0) return t('album.editorial.coverLabel')
   const isContents: boolean = visibleGeometries.value.some(
-    ({ number }: AlbumGeometryPage): boolean => number === 4 || number === 5,
+    ({ number }: AlbumGeometryPage): boolean =>
+      number >= contentsFirstPage && number <= contentsLastPage,
   )
   return t(isContents ? 'album.contents.label' : 'album.editorial.infoLabel')
 })
@@ -250,7 +253,7 @@ const clearCardTarget = (): void => {
 }
 
 const getContentsTeams = (pageNumber: number): AlbumContentsTeam[] => {
-  const pageOffset: number = pageNumber - 4
+  const pageOffset: number = pageNumber - contentsFirstPage
   return albumContentsTeams.slice(
     pageOffset * contentsPageSize,
     (pageOffset + 1) * contentsPageSize,
@@ -426,7 +429,7 @@ onBeforeUnmount((): void => {
               :releases="recentReleaseNotes"
             />
             <AlbumContentsPage
-              v-else-if="pages[pageIndex].geometry.number <= 5"
+              v-else-if="pages[pageIndex].geometry.number <= contentsLastPage"
               :page-number="pages[pageIndex].geometry.number"
               :teams="getContentsTeams(pages[pageIndex].geometry.number)"
               @select="openTeam"

@@ -1,0 +1,180 @@
+[
+  {
+    "id": "cote-divoire-left",
+    "number": 44,
+    "image": "page-44-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "civ-01",
+        "playerId": "civ-01",
+        "name": "civ-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "civ-02",
+        "playerId": "civ-02",
+        "name": "civ-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "civ-03",
+        "playerId": "civ-03",
+        "name": "civ-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-04",
+        "playerId": "civ-04",
+        "name": "civ-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-05",
+        "playerId": "civ-05",
+        "name": "civ-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-06",
+        "playerId": "civ-06",
+        "name": "civ-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-07",
+        "playerId": "civ-07",
+        "name": "civ-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "civ-08",
+        "playerId": "civ-08",
+        "name": "civ-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "civ-09",
+        "playerId": "civ-09",
+        "name": "civ-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "civ-10",
+        "playerId": "civ-10",
+        "name": "civ-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "cote-divoire-right",
+    "number": 45,
+    "image": "page-45-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "civ-11",
+        "playerId": "civ-11",
+        "name": "civ-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "civ-12",
+        "playerId": "civ-12",
+        "name": "civ-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "civ-13",
+        "playerId": "civ-13",
+        "name": "civ-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-14",
+        "playerId": "civ-14",
+        "name": "civ-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-15",
+        "playerId": "civ-15",
+        "name": "civ-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-16",
+        "playerId": "civ-16",
+        "name": "civ-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "civ-17",
+        "playerId": "civ-17",
+        "name": "civ-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "civ-18",
+        "playerId": "civ-18",
+        "name": "civ-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "civ-19",
+        "playerId": "civ-19",
+        "name": "civ-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "civ-20",
+        "playerId": "civ-20",
+        "name": "civ-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

@@ -1,0 +1,180 @@
+[
+  {
+    "id": "sweden-left",
+    "number": 52,
+    "image": "page-52-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "swe-01",
+        "playerId": "swe-01",
+        "name": "swe-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "swe-02",
+        "playerId": "swe-02",
+        "name": "swe-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "swe-03",
+        "playerId": "swe-03",
+        "name": "swe-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-04",
+        "playerId": "swe-04",
+        "name": "swe-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-05",
+        "playerId": "swe-05",
+        "name": "swe-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-06",
+        "playerId": "swe-06",
+        "name": "swe-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-07",
+        "playerId": "swe-07",
+        "name": "swe-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "swe-08",
+        "playerId": "swe-08",
+        "name": "swe-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "swe-09",
+        "playerId": "swe-09",
+        "name": "swe-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "swe-10",
+        "playerId": "swe-10",
+        "name": "swe-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "sweden-right",
+    "number": 53,
+    "image": "page-53-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "swe-11",
+        "playerId": "swe-11",
+        "name": "swe-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "swe-12",
+        "playerId": "swe-12",
+        "name": "swe-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "swe-13",
+        "playerId": "swe-13",
+        "name": "swe-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-14",
+        "playerId": "swe-14",
+        "name": "swe-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-15",
+        "playerId": "swe-15",
+        "name": "swe-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-16",
+        "playerId": "swe-16",
+        "name": "swe-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "swe-17",
+        "playerId": "swe-17",
+        "name": "swe-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "swe-18",
+        "playerId": "swe-18",
+        "name": "swe-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "swe-19",
+        "playerId": "swe-19",
+        "name": "swe-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "swe-20",
+        "playerId": "swe-20",
+        "name": "swe-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

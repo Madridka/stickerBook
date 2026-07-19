@@ -1,0 +1,180 @@
+[
+  {
+    "id": "usa-left",
+    "number": 32,
+    "image": "page-32-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "usa-01",
+        "playerId": "usa-01",
+        "name": "usa-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "usa-02",
+        "playerId": "usa-02",
+        "name": "usa-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "usa-03",
+        "playerId": "usa-03",
+        "name": "usa-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-04",
+        "playerId": "usa-04",
+        "name": "usa-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-05",
+        "playerId": "usa-05",
+        "name": "usa-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-06",
+        "playerId": "usa-06",
+        "name": "usa-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-07",
+        "playerId": "usa-07",
+        "name": "usa-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "usa-08",
+        "playerId": "usa-08",
+        "name": "usa-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "usa-09",
+        "playerId": "usa-09",
+        "name": "usa-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "usa-10",
+        "playerId": "usa-10",
+        "name": "usa-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "usa-right",
+    "number": 33,
+    "image": "page-33-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "usa-11",
+        "playerId": "usa-11",
+        "name": "usa-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "usa-12",
+        "playerId": "usa-12",
+        "name": "usa-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "usa-13",
+        "playerId": "usa-13",
+        "name": "usa-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-14",
+        "playerId": "usa-14",
+        "name": "usa-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-15",
+        "playerId": "usa-15",
+        "name": "usa-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-16",
+        "playerId": "usa-16",
+        "name": "usa-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "usa-17",
+        "playerId": "usa-17",
+        "name": "usa-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "usa-18",
+        "playerId": "usa-18",
+        "name": "usa-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "usa-19",
+        "playerId": "usa-19",
+        "name": "usa-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "usa-20",
+        "playerId": "usa-20",
+        "name": "usa-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

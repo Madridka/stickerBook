@@ -1,0 +1,200 @@
+[
+  {
+    "id": "gha-01",
+    "fullName": "Ghana Team Logo",
+    "image": "/cards/ghana/GHA-01-team-logo.png",
+    "type": "logo",
+    "team": "Ghana",
+    "weight": 15
+  },
+  {
+    "id": "gha-02",
+    "firstName": "Carlos",
+    "lastName": "Queiroz",
+    "fullName": "Carlos Queiroz",
+    "image": "/cards/ghana/GHA-02-carlos-queiroz.png",
+    "type": "head coach",
+    "team": "Ghana",
+    "weight": 10
+  },
+  {
+    "id": "gha-03",
+    "firstName": "Lawrence",
+    "lastName": "Zigi",
+    "fullName": "Lawrence Zigi",
+    "image": "/cards/ghana/GHA-03-lawrence-zigi.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-04",
+    "firstName": "Alidu",
+    "lastName": "Seidu",
+    "fullName": "Alidu Seidu",
+    "image": "/cards/ghana/GHA-04-alidu-seidu.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-05",
+    "firstName": "Caleb",
+    "lastName": "Yirenkyi",
+    "fullName": "Caleb Yirenkyi",
+    "image": "/cards/ghana/GHA-05-caleb-yirenkyi.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-06",
+    "firstName": "Jonas",
+    "lastName": "Adjetey",
+    "fullName": "Jonas Adjetey",
+    "image": "/cards/ghana/GHA-06-jonas-adjetey.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-07",
+    "firstName": "Thomas",
+    "lastName": "Partey",
+    "fullName": "Thomas Partey",
+    "image": "/cards/ghana/GHA-07-thomas-partey.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-08",
+    "firstName": "Abdul",
+    "lastName": "Mumin",
+    "fullName": "Abdul Mumin",
+    "image": "/cards/ghana/GHA-08-abdul-mumin.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-09",
+    "firstName": "Abdul",
+    "lastName": "Fatawu",
+    "fullName": "Abdul Fatawu",
+    "image": "/cards/ghana/GHA-09-abdul-fatawu.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-10",
+    "firstName": "Kwasi",
+    "lastName": "Sibo",
+    "fullName": "Kwasi Sibo",
+    "image": "/cards/ghana/GHA-10-kwasi-sibo.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-11",
+    "firstName": "Jordan",
+    "lastName": "Ayew",
+    "fullName": "Jordan Ayew",
+    "image": "/cards/ghana/GHA-11-jordan-ayew.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-12",
+    "firstName": "Brandon",
+    "lastName": "Thomas-Asante",
+    "fullName": "Brandon Thomas-Asante",
+    "image": "/cards/ghana/GHA-12-brandon-thomas-asante.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-13",
+    "firstName": "Antoine",
+    "lastName": "Semenyo",
+    "fullName": "Antoine Semenyo",
+    "image": "/cards/ghana/GHA-13-antoine-semenyo.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-14",
+    "firstName": "Joseph",
+    "lastName": "Anang",
+    "fullName": "Joseph Anang",
+    "image": "/cards/ghana/GHA-14-joseph-anang.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-15",
+    "firstName": "Christopher",
+    "lastName": "Bonsu Baah",
+    "fullName": "Christopher Bonsu Baah",
+    "image": "/cards/ghana/GHA-15-christopher-bonsu-baah.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-16",
+    "firstName": "Gideon",
+    "lastName": "Mensah",
+    "fullName": "Gideon Mensah",
+    "image": "/cards/ghana/GHA-16-gideon-mensah.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-17",
+    "firstName": "Elisha",
+    "lastName": "Owusu",
+    "fullName": "Elisha Owusu",
+    "image": "/cards/ghana/GHA-17-elisha-owusu.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-18",
+    "firstName": "Benjamin",
+    "lastName": "Asare",
+    "fullName": "Benjamin Asare",
+    "image": "/cards/ghana/GHA-18-benjamin-asare.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-19",
+    "firstName": "Baba",
+    "lastName": "Rahman",
+    "fullName": "Baba Rahman",
+    "image": "/cards/ghana/GHA-19-baba-rahman.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  },
+  {
+    "id": "gha-20",
+    "firstName": "Jerome",
+    "lastName": "Opoku",
+    "fullName": "Jerome Opoku",
+    "image": "/cards/ghana/GHA-20-jerome-opoku.png",
+    "type": "player",
+    "team": "Ghana",
+    "weight": 20
+  }
+]

@@ -1,0 +1,199 @@
+[
+  {
+    "id": "par-01",
+    "fullName": "Paraguay Team Logo",
+    "image": "/cards/paraguay/PAR-01-team-logo.png",
+    "type": "logo",
+    "team": "Paraguay",
+    "weight": 15
+  },
+  {
+    "id": "par-02",
+    "firstName": "Gustavo",
+    "lastName": "Alfaro",
+    "fullName": "Gustavo Alfaro",
+    "image": "/cards/paraguay/PAR-02-gustavo-alfaro.png",
+    "type": "head coach",
+    "team": "Paraguay",
+    "weight": 10
+  },
+  {
+    "id": "par-03",
+    "firstName": "Gatito",
+    "lastName": "Fernandez",
+    "fullName": "Gatito Fernandez",
+    "image": "/cards/paraguay/PAR-03-gatito-fernandez.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-04",
+    "firstName": "Gustavo",
+    "lastName": "Velazquez",
+    "fullName": "Gustavo Velazquez",
+    "image": "/cards/paraguay/PAR-04-gustavo-velazquez.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-05",
+    "firstName": "Omar",
+    "lastName": "Alderete",
+    "fullName": "Omar Alderete",
+    "image": "/cards/paraguay/PAR-05-omar-alderete.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-06",
+    "firstName": "Juan",
+    "lastName": "Caceres",
+    "fullName": "Juan Caceres",
+    "image": "/cards/paraguay/PAR-06-juan-caceres.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-07",
+    "firstName": "Fabian",
+    "lastName": "Balbuena",
+    "fullName": "Fabian Balbuena",
+    "image": "/cards/paraguay/PAR-07-fabian-balbuena.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-08",
+    "firstName": "Junior",
+    "lastName": "Alonso",
+    "fullName": "Junior Alonso",
+    "image": "/cards/paraguay/PAR-08-junior-alonso.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-09",
+    "firstName": "Ramon",
+    "lastName": "Sosa",
+    "fullName": "Ramon Sosa",
+    "image": "/cards/paraguay/PAR-09-ramon-sosa.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-10",
+    "firstName": "Diego",
+    "lastName": "Gomez",
+    "fullName": "Diego Gomez",
+    "image": "/cards/paraguay/PAR-10-diego-gomez.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-11",
+    "firstName": "Antonio",
+    "lastName": "Sanabria",
+    "fullName": "Antonio Sanabria",
+    "image": "/cards/paraguay/PAR-11-antonio-sanabria.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-12",
+    "firstName": "Miguel",
+    "lastName": "Almiron",
+    "fullName": "Miguel Almiron",
+    "image": "/cards/paraguay/PAR-12-miguel-almiron.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-13",
+    "firstName": "Mauricio",
+    "fullName": "Mauricio",
+    "image": "/cards/paraguay/PAR-13-mauricio.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-14",
+    "firstName": "Orlando",
+    "lastName": "Gill",
+    "fullName": "Orlando Gill",
+    "image": "/cards/paraguay/PAR-14-orlando-gill.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-15",
+    "firstName": "Jose",
+    "lastName": "Canale",
+    "fullName": "Jose Canale",
+    "image": "/cards/paraguay/PAR-15-jose-canale.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-16",
+    "firstName": "Andres",
+    "lastName": "Cubas",
+    "fullName": "Andres Cubas",
+    "image": "/cards/paraguay/PAR-16-andres-cubas.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-17",
+    "firstName": "Gustavo",
+    "lastName": "Gomez",
+    "fullName": "Gustavo Gomez",
+    "image": "/cards/paraguay/PAR-17-gustavo-gomez.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-18",
+    "firstName": "Damian",
+    "lastName": "Bobadilla",
+    "fullName": "Damian Bobadilla",
+    "image": "/cards/paraguay/PAR-18-damian-bobadilla.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-19",
+    "firstName": "Alejandro",
+    "lastName": "Romero Gamarra",
+    "fullName": "Alejandro Romero Gamarra",
+    "image": "/cards/paraguay/PAR-19-alejandro-romero-gamarra.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  },
+  {
+    "id": "par-20",
+    "firstName": "Alex",
+    "lastName": "Arce",
+    "fullName": "Alex Arce",
+    "image": "/cards/paraguay/PAR-20-alex-arce.png",
+    "type": "player",
+    "team": "Paraguay",
+    "weight": 20
+  }
+]

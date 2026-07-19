@@ -1,0 +1,180 @@
+[
+  {
+    "id": "qatar-left",
+    "number": 20,
+    "image": "page-20-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "qat-01",
+        "playerId": "qat-01",
+        "name": "qat-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "qat-02",
+        "playerId": "qat-02",
+        "name": "qat-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "qat-03",
+        "playerId": "qat-03",
+        "name": "qat-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-04",
+        "playerId": "qat-04",
+        "name": "qat-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-05",
+        "playerId": "qat-05",
+        "name": "qat-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-06",
+        "playerId": "qat-06",
+        "name": "qat-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-07",
+        "playerId": "qat-07",
+        "name": "qat-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "qat-08",
+        "playerId": "qat-08",
+        "name": "qat-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "qat-09",
+        "playerId": "qat-09",
+        "name": "qat-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "qat-10",
+        "playerId": "qat-10",
+        "name": "qat-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "qatar-right",
+    "number": 21,
+    "image": "page-21-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "qat-11",
+        "playerId": "qat-11",
+        "name": "qat-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "qat-12",
+        "playerId": "qat-12",
+        "name": "qat-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "qat-13",
+        "playerId": "qat-13",
+        "name": "qat-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-14",
+        "playerId": "qat-14",
+        "name": "qat-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-15",
+        "playerId": "qat-15",
+        "name": "qat-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-16",
+        "playerId": "qat-16",
+        "name": "qat-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "qat-17",
+        "playerId": "qat-17",
+        "name": "qat-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "qat-18",
+        "playerId": "qat-18",
+        "name": "qat-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "qat-19",
+        "playerId": "qat-19",
+        "name": "qat-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "qat-20",
+        "playerId": "qat-20",
+        "name": "qat-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

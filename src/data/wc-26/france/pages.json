@@ -1,0 +1,40 @@
+[
+  {
+    "id": "france-left",
+    "number": 72,
+    "image": "page-72-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "fra-01", "playerId": "fra-01", "name": "fra-01", "x": 500, "y": 130, "width": 200 },
+      { "id": "fra-02", "playerId": "fra-02", "name": "fra-02", "x": 836, "y": 130, "width": 200 },
+      { "id": "fra-03", "playerId": "fra-03", "name": "fra-03", "x": 180, "y": 465, "width": 200 },
+      { "id": "fra-04", "playerId": "fra-04", "name": "fra-04", "x": 512, "y": 465, "width": 200 },
+      { "id": "fra-05", "playerId": "fra-05", "name": "fra-05", "x": 844, "y": 465, "width": 200 },
+      { "id": "fra-06", "playerId": "fra-06", "name": "fra-06", "x": 1176, "y": 465, "width": 200 },
+      { "id": "fra-07", "playerId": "fra-07", "name": "fra-07", "x": 180, "y": 800, "width": 200 },
+      { "id": "fra-08", "playerId": "fra-08", "name": "fra-08", "x": 512, "y": 800, "width": 200 },
+      { "id": "fra-09", "playerId": "fra-09", "name": "fra-09", "x": 844, "y": 800, "width": 200 },
+      { "id": "fra-10", "playerId": "fra-10", "name": "fra-10", "x": 1176, "y": 800, "width": 200 }
+    ]
+  },
+  {
+    "id": "france-right",
+    "number": 73,
+    "image": "page-73-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      { "id": "fra-11", "playerId": "fra-11", "name": "fra-11", "x": 500, "y": 130, "width": 200 },
+      { "id": "fra-12", "playerId": "fra-12", "name": "fra-12", "x": 836, "y": 130, "width": 200 },
+      { "id": "fra-13", "playerId": "fra-13", "name": "fra-13", "x": 180, "y": 465, "width": 200 },
+      { "id": "fra-14", "playerId": "fra-14", "name": "fra-14", "x": 512, "y": 465, "width": 200 },
+      { "id": "fra-15", "playerId": "fra-15", "name": "fra-15", "x": 844, "y": 465, "width": 200 },
+      { "id": "fra-16", "playerId": "fra-16", "name": "fra-16", "x": 1176, "y": 465, "width": 200 },
+      { "id": "fra-17", "playerId": "fra-17", "name": "fra-17", "x": 180, "y": 800, "width": 200 },
+      { "id": "fra-18", "playerId": "fra-18", "name": "fra-18", "x": 512, "y": 800, "width": 200 },
+      { "id": "fra-19", "playerId": "fra-19", "name": "fra-19", "x": 844, "y": 800, "width": 200 },
+      { "id": "fra-20", "playerId": "fra-20", "name": "fra-20", "x": 1176, "y": 800, "width": 200 }
+    ]
+  }
+]

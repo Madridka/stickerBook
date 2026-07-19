@@ -1,0 +1,200 @@
+[
+  {
+    "id": "fra-01",
+    "fullName": "France Team Logo",
+    "image": "/cards/france/FRA-01-team-logo.png",
+    "type": "logo",
+    "team": "France",
+    "weight": 15
+  },
+  {
+    "id": "fra-02",
+    "firstName": "Didier",
+    "lastName": "Deschamps",
+    "fullName": "Didier Deschamps",
+    "image": "/cards/france/FRA-02-didier-deschamps.png",
+    "type": "head coach",
+    "team": "France",
+    "weight": 10
+  },
+  {
+    "id": "fra-03",
+    "firstName": "Mike",
+    "lastName": "Maignan",
+    "fullName": "Mike Maignan",
+    "image": "/cards/france/FRA-03-mike-maignan.png",
+    "type": "player",
+    "team": "France",
+    "weight": 10
+  },
+  {
+    "id": "fra-04",
+    "firstName": "Brice",
+    "lastName": "Samba",
+    "fullName": "Brice Samba",
+    "image": "/cards/france/FRA-04-brice-samba.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-05",
+    "firstName": "William",
+    "lastName": "Saliba",
+    "fullName": "William Saliba",
+    "image": "/cards/france/FRA-05-william-saliba.png",
+    "type": "player",
+    "team": "France",
+    "weight": 10
+  },
+  {
+    "id": "fra-06",
+    "firstName": "Ibrahima",
+    "lastName": "Konaté",
+    "fullName": "Ibrahima Konaté",
+    "image": "/cards/france/FRA-06-ibrahima-konate.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-07",
+    "firstName": "Jules",
+    "lastName": "Koundé",
+    "fullName": "Jules Koundé",
+    "image": "/cards/france/FRA-07-jules-kounde.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-08",
+    "firstName": "Dayot",
+    "lastName": "Upamecano",
+    "fullName": "Dayot Upamecano",
+    "image": "/cards/france/FRA-08-dayot-upamecano.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-09",
+    "firstName": "Théo",
+    "lastName": "Hernandez",
+    "fullName": "Théo Hernandez",
+    "image": "/cards/france/FRA-09-theo-hernandez.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-10",
+    "firstName": "Malo",
+    "lastName": "Gusto",
+    "fullName": "Malo Gusto",
+    "image": "/cards/france/FRA-10-malo-gusto.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-11",
+    "firstName": "Aurélien",
+    "lastName": "Tchouaméni",
+    "fullName": "Aurélien Tchouaméni",
+    "image": "/cards/france/FRA-11-aurelien-tchouameni.png",
+    "type": "player",
+    "team": "France",
+    "weight": 10
+  },
+  {
+    "id": "fra-12",
+    "firstName": "N'Golo",
+    "lastName": "Kanté",
+    "fullName": "N'Golo Kanté",
+    "image": "/cards/france/FRA-12-ngolo-kante.png",
+    "type": "player",
+    "team": "France",
+    "weight": 10
+  },
+  {
+    "id": "fra-13",
+    "firstName": "Adrien",
+    "lastName": "Rabiot",
+    "fullName": "Adrien Rabiot",
+    "image": "/cards/france/FRA-13-adrien-rabiot.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-14",
+    "firstName": "Warren",
+    "lastName": "Zaïre-Emery",
+    "fullName": "Warren Zaïre-Emery",
+    "image": "/cards/france/FRA-14-warren-zaire-emery.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-15",
+    "firstName": "Ousmane",
+    "lastName": "Dembélé",
+    "fullName": "Ousmane Dembélé",
+    "image": "/cards/france/FRA-15-ousmane-dembele.png",
+    "type": "player",
+    "team": "France",
+    "weight": 5
+  },
+  {
+    "id": "fra-16",
+    "firstName": "Kylian",
+    "lastName": "Mbappé",
+    "fullName": "Kylian Mbappé",
+    "image": "/cards/france/FRA-16-kylian-mbappe.png",
+    "type": "player",
+    "team": "France",
+    "weight": 5
+  },
+  {
+    "id": "fra-17",
+    "firstName": "Michael",
+    "lastName": "Olise",
+    "fullName": "Michael Olise",
+    "image": "/cards/france/FRA-17-michael-olise.png",
+    "type": "player",
+    "team": "France",
+    "weight": 10
+  },
+  {
+    "id": "fra-18",
+    "firstName": "Désiré",
+    "lastName": "Doué",
+    "fullName": "Désiré Doué",
+    "image": "/cards/france/FRA-18-desire-doue.png",
+    "type": "player",
+    "team": "France",
+    "weight": 10
+  },
+  {
+    "id": "fra-19",
+    "firstName": "Bradley",
+    "lastName": "Barcola",
+    "fullName": "Bradley Barcola",
+    "image": "/cards/france/FRA-19-bradley-barcola.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  },
+  {
+    "id": "fra-20",
+    "firstName": "Marcus",
+    "lastName": "Thuram",
+    "fullName": "Marcus Thuram",
+    "image": "/cards/france/FRA-20-marcus-thuram.png",
+    "type": "player",
+    "team": "France",
+    "weight": 20
+  }
+]

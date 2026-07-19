@@ -1,0 +1,180 @@
+[
+  {
+    "id": "canada-left",
+    "number": 16,
+    "image": "page-16-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "can-01",
+        "playerId": "can-01",
+        "name": "can-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "can-02",
+        "playerId": "can-02",
+        "name": "can-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "can-03",
+        "playerId": "can-03",
+        "name": "can-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-04",
+        "playerId": "can-04",
+        "name": "can-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-05",
+        "playerId": "can-05",
+        "name": "can-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-06",
+        "playerId": "can-06",
+        "name": "can-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-07",
+        "playerId": "can-07",
+        "name": "can-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "can-08",
+        "playerId": "can-08",
+        "name": "can-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "can-09",
+        "playerId": "can-09",
+        "name": "can-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "can-10",
+        "playerId": "can-10",
+        "name": "can-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "canada-right",
+    "number": 17,
+    "image": "page-17-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "can-11",
+        "playerId": "can-11",
+        "name": "can-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "can-12",
+        "playerId": "can-12",
+        "name": "can-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "can-13",
+        "playerId": "can-13",
+        "name": "can-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-14",
+        "playerId": "can-14",
+        "name": "can-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-15",
+        "playerId": "can-15",
+        "name": "can-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-16",
+        "playerId": "can-16",
+        "name": "can-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "can-17",
+        "playerId": "can-17",
+        "name": "can-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "can-18",
+        "playerId": "can-18",
+        "name": "can-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "can-19",
+        "playerId": "can-19",
+        "name": "can-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "can-20",
+        "playerId": "can-20",
+        "name": "can-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

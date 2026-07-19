@@ -1,0 +1,180 @@
+[
+  {
+    "id": "uzbekistan-left",
+    "number": 92,
+    "image": "page-92-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "uzb-01",
+        "playerId": "uzb-01",
+        "name": "uzb-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uzb-02",
+        "playerId": "uzb-02",
+        "name": "uzb-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uzb-03",
+        "playerId": "uzb-03",
+        "name": "uzb-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-04",
+        "playerId": "uzb-04",
+        "name": "uzb-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-05",
+        "playerId": "uzb-05",
+        "name": "uzb-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-06",
+        "playerId": "uzb-06",
+        "name": "uzb-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-07",
+        "playerId": "uzb-07",
+        "name": "uzb-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uzb-08",
+        "playerId": "uzb-08",
+        "name": "uzb-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uzb-09",
+        "playerId": "uzb-09",
+        "name": "uzb-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uzb-10",
+        "playerId": "uzb-10",
+        "name": "uzb-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "uzbekistan-right",
+    "number": 93,
+    "image": "page-93-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "uzb-11",
+        "playerId": "uzb-11",
+        "name": "uzb-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uzb-12",
+        "playerId": "uzb-12",
+        "name": "uzb-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "uzb-13",
+        "playerId": "uzb-13",
+        "name": "uzb-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-14",
+        "playerId": "uzb-14",
+        "name": "uzb-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-15",
+        "playerId": "uzb-15",
+        "name": "uzb-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-16",
+        "playerId": "uzb-16",
+        "name": "uzb-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "uzb-17",
+        "playerId": "uzb-17",
+        "name": "uzb-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uzb-18",
+        "playerId": "uzb-18",
+        "name": "uzb-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uzb-19",
+        "playerId": "uzb-19",
+        "name": "uzb-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "uzb-20",
+        "playerId": "uzb-20",
+        "name": "uzb-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

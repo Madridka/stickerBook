@@ -1,0 +1,180 @@
+[
+  {
+    "id": "netherlands-left",
+    "number": 48,
+    "image": "page-48-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "ned-01",
+        "playerId": "ned-01",
+        "name": "ned-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ned-02",
+        "playerId": "ned-02",
+        "name": "ned-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ned-03",
+        "playerId": "ned-03",
+        "name": "ned-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-04",
+        "playerId": "ned-04",
+        "name": "ned-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-05",
+        "playerId": "ned-05",
+        "name": "ned-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-06",
+        "playerId": "ned-06",
+        "name": "ned-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-07",
+        "playerId": "ned-07",
+        "name": "ned-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ned-08",
+        "playerId": "ned-08",
+        "name": "ned-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ned-09",
+        "playerId": "ned-09",
+        "name": "ned-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ned-10",
+        "playerId": "ned-10",
+        "name": "ned-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "netherlands-right",
+    "number": 49,
+    "image": "page-49-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "ned-11",
+        "playerId": "ned-11",
+        "name": "ned-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ned-12",
+        "playerId": "ned-12",
+        "name": "ned-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "ned-13",
+        "playerId": "ned-13",
+        "name": "ned-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-14",
+        "playerId": "ned-14",
+        "name": "ned-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-15",
+        "playerId": "ned-15",
+        "name": "ned-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-16",
+        "playerId": "ned-16",
+        "name": "ned-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "ned-17",
+        "playerId": "ned-17",
+        "name": "ned-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ned-18",
+        "playerId": "ned-18",
+        "name": "ned-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ned-19",
+        "playerId": "ned-19",
+        "name": "ned-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "ned-20",
+        "playerId": "ned-20",
+        "name": "ned-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

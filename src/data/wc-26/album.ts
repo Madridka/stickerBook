@@ -1,6 +1,13 @@
 import mexicoPages from './mexico/pages.json'
-import croatiaPages from './croatia/pages.json'
 import portugalPages from './portugal/pages.json'
+import croatiaPages from './croatia/pages.json'
+
+const visibleTeamPages = [...mexicoPages, ...portugalPages, ...croatiaPages].map(
+  (page, index) => ({
+    ...page,
+    number: index + 6,
+  }),
+)
 
 export default {
   id: 'world-cup-2026',
@@ -31,7 +38,7 @@ export default {
       slots: [],
     },
     {
-      id: 'contents-left',
+      id: 'contents',
       number: 4,
       image: 'page-02-info-left.png',
       width: 1536,
@@ -39,15 +46,13 @@ export default {
       slots: [],
     },
     {
-      id: 'contents-right',
+      id: 'contents-divider',
       number: 5,
       image: 'page-03-info-right.png',
       width: 1536,
       height: 1200,
       slots: [],
     },
-    ...mexicoPages,
-    ...croatiaPages,
-    ...portugalPages,
+    ...visibleTeamPages,
   ],
 }

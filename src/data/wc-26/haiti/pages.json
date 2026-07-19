@@ -1,0 +1,180 @@
+[
+  {
+    "id": "haiti-left",
+    "number": 28,
+    "image": "page-28-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "hai-01",
+        "playerId": "hai-01",
+        "name": "hai-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "hai-02",
+        "playerId": "hai-02",
+        "name": "hai-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "hai-03",
+        "playerId": "hai-03",
+        "name": "hai-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-04",
+        "playerId": "hai-04",
+        "name": "hai-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-05",
+        "playerId": "hai-05",
+        "name": "hai-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-06",
+        "playerId": "hai-06",
+        "name": "hai-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-07",
+        "playerId": "hai-07",
+        "name": "hai-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "hai-08",
+        "playerId": "hai-08",
+        "name": "hai-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "hai-09",
+        "playerId": "hai-09",
+        "name": "hai-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "hai-10",
+        "playerId": "hai-10",
+        "name": "hai-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "haiti-right",
+    "number": 29,
+    "image": "page-29-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "hai-11",
+        "playerId": "hai-11",
+        "name": "hai-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "hai-12",
+        "playerId": "hai-12",
+        "name": "hai-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "hai-13",
+        "playerId": "hai-13",
+        "name": "hai-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-14",
+        "playerId": "hai-14",
+        "name": "hai-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-15",
+        "playerId": "hai-15",
+        "name": "hai-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-16",
+        "playerId": "hai-16",
+        "name": "hai-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "hai-17",
+        "playerId": "hai-17",
+        "name": "hai-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "hai-18",
+        "playerId": "hai-18",
+        "name": "hai-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "hai-19",
+        "playerId": "hai-19",
+        "name": "hai-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "hai-20",
+        "playerId": "hai-20",
+        "name": "hai-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

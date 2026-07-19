@@ -1,0 +1,200 @@
+[
+  {
+    "id": "uru-01",
+    "fullName": "Uruguay Team Logo",
+    "image": "/cards/uruguay/URU-01-team-logo.png",
+    "type": "logo",
+    "team": "Uruguay",
+    "weight": 15
+  },
+  {
+    "id": "uru-02",
+    "firstName": "Marcelo",
+    "lastName": "Bielsa",
+    "fullName": "Marcelo Bielsa",
+    "image": "/cards/uruguay/URU-02-marcelo-bielsa.png",
+    "type": "head coach",
+    "team": "Uruguay",
+    "weight": 10
+  },
+  {
+    "id": "uru-03",
+    "firstName": "Sergio",
+    "lastName": "Rochet",
+    "fullName": "Sergio Rochet",
+    "image": "/cards/uruguay/URU-03-sergio-rochet.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-04",
+    "firstName": "Jose",
+    "lastName": "Gimenez",
+    "fullName": "Jose Gimenez",
+    "image": "/cards/uruguay/URU-04-jose-gimenez.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-05",
+    "firstName": "Sebastian",
+    "lastName": "Caceres",
+    "fullName": "Sebastian Caceres",
+    "image": "/cards/uruguay/URU-05-sebastian-caceres.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-06",
+    "firstName": "Ronald",
+    "lastName": "Araujo",
+    "fullName": "Ronald Araujo",
+    "image": "/cards/uruguay/URU-06-ronald-araujo.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-07",
+    "firstName": "Manuel",
+    "lastName": "Ugarte",
+    "fullName": "Manuel Ugarte",
+    "image": "/cards/uruguay/URU-07-manuel-ugarte.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-08",
+    "firstName": "Rodrigo",
+    "lastName": "Bentancur",
+    "fullName": "Rodrigo Bentancur",
+    "image": "/cards/uruguay/URU-08-rodrigo-bentancur.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-09",
+    "firstName": "Nicolas",
+    "lastName": "De La Cruz",
+    "fullName": "Nicolas De La Cruz",
+    "image": "/cards/uruguay/URU-09-nicolas-de-la-cruz.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-10",
+    "firstName": "Federico",
+    "lastName": "Valverde",
+    "fullName": "Federico Valverde",
+    "image": "/cards/uruguay/URU-10-federico-valverde.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-11",
+    "firstName": "Darwin",
+    "lastName": "Nunez",
+    "fullName": "Darwin Nunez",
+    "image": "/cards/uruguay/URU-11-darwin-nunez.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-12",
+    "firstName": "Giorgian",
+    "lastName": "De Arrascaeta",
+    "fullName": "Giorgian De Arrascaeta",
+    "image": "/cards/uruguay/URU-12-giorgian-de-arrascaeta.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-13",
+    "firstName": "Facundo",
+    "lastName": "Pellistri",
+    "fullName": "Facundo Pellistri",
+    "image": "/cards/uruguay/URU-13-facundo-pellistri.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-14",
+    "firstName": "Santiago",
+    "lastName": "Mele",
+    "fullName": "Santiago Mele",
+    "image": "/cards/uruguay/URU-14-santiago-mele.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-15",
+    "firstName": "Guillermo",
+    "lastName": "Varela",
+    "fullName": "Guillermo Varela",
+    "image": "/cards/uruguay/URU-15-guillermo-varela.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-16",
+    "firstName": "Agustin",
+    "lastName": "Canobbio",
+    "fullName": "Agustin Canobbio",
+    "image": "/cards/uruguay/URU-16-agustin-canobbio.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-17",
+    "firstName": "Emiliano",
+    "lastName": "Martinez",
+    "fullName": "Emiliano Martinez",
+    "image": "/cards/uruguay/URU-17-emiliano-martinez.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-18",
+    "firstName": "Mathias",
+    "lastName": "Olivera",
+    "fullName": "Mathias Olivera",
+    "image": "/cards/uruguay/URU-18-mathias-olivera.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-19",
+    "firstName": "Matias",
+    "lastName": "Vina",
+    "fullName": "Matias Vina",
+    "image": "/cards/uruguay/URU-19-matias-vina.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  },
+  {
+    "id": "uru-20",
+    "firstName": "Brian",
+    "lastName": "Rodriguez",
+    "fullName": "Brian Rodriguez",
+    "image": "/cards/uruguay/URU-20-brian-rodriguez.png",
+    "type": "player",
+    "team": "Uruguay",
+    "weight": 20
+  }
+]

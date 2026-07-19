@@ -1,0 +1,180 @@
+[
+  {
+    "id": "ghana-left",
+    "number": 100,
+    "image": "page-100-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "gha-01",
+        "playerId": "gha-01",
+        "name": "gha-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "gha-02",
+        "playerId": "gha-02",
+        "name": "gha-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "gha-03",
+        "playerId": "gha-03",
+        "name": "gha-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-04",
+        "playerId": "gha-04",
+        "name": "gha-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-05",
+        "playerId": "gha-05",
+        "name": "gha-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-06",
+        "playerId": "gha-06",
+        "name": "gha-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-07",
+        "playerId": "gha-07",
+        "name": "gha-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "gha-08",
+        "playerId": "gha-08",
+        "name": "gha-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "gha-09",
+        "playerId": "gha-09",
+        "name": "gha-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "gha-10",
+        "playerId": "gha-10",
+        "name": "gha-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "ghana-right",
+    "number": 101,
+    "image": "page-101-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "gha-11",
+        "playerId": "gha-11",
+        "name": "gha-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "gha-12",
+        "playerId": "gha-12",
+        "name": "gha-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "gha-13",
+        "playerId": "gha-13",
+        "name": "gha-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-14",
+        "playerId": "gha-14",
+        "name": "gha-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-15",
+        "playerId": "gha-15",
+        "name": "gha-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-16",
+        "playerId": "gha-16",
+        "name": "gha-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "gha-17",
+        "playerId": "gha-17",
+        "name": "gha-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "gha-18",
+        "playerId": "gha-18",
+        "name": "gha-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "gha-19",
+        "playerId": "gha-19",
+        "name": "gha-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "gha-20",
+        "playerId": "gha-20",
+        "name": "gha-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

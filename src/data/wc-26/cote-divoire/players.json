@@ -1,0 +1,200 @@
+[
+  {
+    "id": "civ-01",
+    "fullName": "Cote d'Ivoire Team Logo",
+    "image": "/cards/cote-divoire/CIV-01-team-logo.png",
+    "type": "logo",
+    "team": "Cote d'Ivoire",
+    "weight": 15
+  },
+  {
+    "id": "civ-02",
+    "firstName": "Emerse",
+    "lastName": "Fae",
+    "fullName": "Emerse Fae",
+    "image": "/cards/cote-divoire/CIV-02-emerse-fae.png",
+    "type": "head coach",
+    "team": "Cote d'Ivoire",
+    "weight": 10
+  },
+  {
+    "id": "civ-03",
+    "firstName": "Yahia",
+    "lastName": "Fofana",
+    "fullName": "Yahia Fofana",
+    "image": "/cards/cote-divoire/CIV-03-yahia-fofana.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-04",
+    "firstName": "Ousmane",
+    "lastName": "Diomande",
+    "fullName": "Ousmane Diomande",
+    "image": "/cards/cote-divoire/CIV-04-ousmane-diomande.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-05",
+    "firstName": "Ghislain",
+    "lastName": "Konan",
+    "fullName": "Ghislain Konan",
+    "image": "/cards/cote-divoire/CIV-05-ghislain-konan.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-06",
+    "firstName": "Jean",
+    "lastName": "Seri",
+    "fullName": "Jean Seri",
+    "image": "/cards/cote-divoire/CIV-06-jean-seri.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-07",
+    "firstName": "Wilfried",
+    "lastName": "Singo",
+    "fullName": "Wilfried Singo",
+    "image": "/cards/cote-divoire/CIV-07-wilfried-singo.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-08",
+    "firstName": "Seko",
+    "lastName": "Fofana",
+    "fullName": "Seko Fofana",
+    "image": "/cards/cote-divoire/CIV-08-seko-fofana.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-09",
+    "firstName": "Odilon",
+    "lastName": "Kossounou",
+    "fullName": "Odilon Kossounou",
+    "image": "/cards/cote-divoire/CIV-09-odilon-kossounou.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-10",
+    "firstName": "Franck",
+    "lastName": "Kessie",
+    "fullName": "Franck Kessie",
+    "image": "/cards/cote-divoire/CIV-10-franck-kessie.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-11",
+    "firstName": "Ange-Yoan",
+    "lastName": "Bonny",
+    "fullName": "Ange-Yoan Bonny",
+    "image": "/cards/cote-divoire/CIV-11-ange-yoan-bonny.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-12",
+    "firstName": "Simon",
+    "lastName": "Adingra",
+    "fullName": "Simon Adingra",
+    "image": "/cards/cote-divoire/CIV-12-simon-adingra.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-13",
+    "firstName": "Yan",
+    "lastName": "Diomande",
+    "fullName": "Yan Diomande",
+    "image": "/cards/cote-divoire/CIV-13-yan-diomande.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-14",
+    "firstName": "Elye",
+    "lastName": "Wahi",
+    "fullName": "Elye Wahi",
+    "image": "/cards/cote-divoire/CIV-14-elye-wahi.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-15",
+    "firstName": "Christopher",
+    "lastName": "Operi",
+    "fullName": "Christopher Operi",
+    "image": "/cards/cote-divoire/CIV-15-christopher-operi.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-16",
+    "firstName": "Oumar",
+    "lastName": "Diakite",
+    "fullName": "Oumar Diakite",
+    "image": "/cards/cote-divoire/CIV-16-oumar-diakite.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-17",
+    "firstName": "Amad",
+    "lastName": "Diallo",
+    "fullName": "Amad Diallo",
+    "image": "/cards/cote-divoire/CIV-17-amad-diallo.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-18",
+    "firstName": "Mohamed",
+    "lastName": "Kone",
+    "fullName": "Mohamed Kone",
+    "image": "/cards/cote-divoire/CIV-18-mohamed-kone.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-19",
+    "firstName": "Guela",
+    "lastName": "Doue",
+    "fullName": "Guela Doue",
+    "image": "/cards/cote-divoire/CIV-19-guela-doue.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  },
+  {
+    "id": "civ-20",
+    "firstName": "Ibrahim",
+    "lastName": "Sangare",
+    "fullName": "Ibrahim Sangare",
+    "image": "/cards/cote-divoire/CIV-20-ibrahim-sangare.png",
+    "type": "player",
+    "team": "Cote d'Ivoire",
+    "weight": 20
+  }
+]

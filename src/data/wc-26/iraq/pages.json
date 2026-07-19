@@ -1,0 +1,180 @@
+[
+  {
+    "id": "iraq-left",
+    "number": 76,
+    "image": "page-76-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "irq-01",
+        "playerId": "irq-01",
+        "name": "irq-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "irq-02",
+        "playerId": "irq-02",
+        "name": "irq-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "irq-03",
+        "playerId": "irq-03",
+        "name": "irq-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-04",
+        "playerId": "irq-04",
+        "name": "irq-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-05",
+        "playerId": "irq-05",
+        "name": "irq-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-06",
+        "playerId": "irq-06",
+        "name": "irq-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-07",
+        "playerId": "irq-07",
+        "name": "irq-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "irq-08",
+        "playerId": "irq-08",
+        "name": "irq-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "irq-09",
+        "playerId": "irq-09",
+        "name": "irq-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "irq-10",
+        "playerId": "irq-10",
+        "name": "irq-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "iraq-right",
+    "number": 77,
+    "image": "page-77-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "irq-11",
+        "playerId": "irq-11",
+        "name": "irq-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "irq-12",
+        "playerId": "irq-12",
+        "name": "irq-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "irq-13",
+        "playerId": "irq-13",
+        "name": "irq-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-14",
+        "playerId": "irq-14",
+        "name": "irq-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-15",
+        "playerId": "irq-15",
+        "name": "irq-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-16",
+        "playerId": "irq-16",
+        "name": "irq-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "irq-17",
+        "playerId": "irq-17",
+        "name": "irq-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "irq-18",
+        "playerId": "irq-18",
+        "name": "irq-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "irq-19",
+        "playerId": "irq-19",
+        "name": "irq-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "irq-20",
+        "playerId": "irq-20",
+        "name": "irq-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

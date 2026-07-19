@@ -1,0 +1,180 @@
+[
+  {
+    "id": "switzerland-left",
+    "number": 22,
+    "image": "page-22-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "sui-01",
+        "playerId": "sui-01",
+        "name": "sui-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sui-02",
+        "playerId": "sui-02",
+        "name": "sui-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sui-03",
+        "playerId": "sui-03",
+        "name": "sui-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-04",
+        "playerId": "sui-04",
+        "name": "sui-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-05",
+        "playerId": "sui-05",
+        "name": "sui-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-06",
+        "playerId": "sui-06",
+        "name": "sui-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-07",
+        "playerId": "sui-07",
+        "name": "sui-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sui-08",
+        "playerId": "sui-08",
+        "name": "sui-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sui-09",
+        "playerId": "sui-09",
+        "name": "sui-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sui-10",
+        "playerId": "sui-10",
+        "name": "sui-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "switzerland-right",
+    "number": 23,
+    "image": "page-23-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "sui-11",
+        "playerId": "sui-11",
+        "name": "sui-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sui-12",
+        "playerId": "sui-12",
+        "name": "sui-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sui-13",
+        "playerId": "sui-13",
+        "name": "sui-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-14",
+        "playerId": "sui-14",
+        "name": "sui-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-15",
+        "playerId": "sui-15",
+        "name": "sui-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-16",
+        "playerId": "sui-16",
+        "name": "sui-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sui-17",
+        "playerId": "sui-17",
+        "name": "sui-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sui-18",
+        "playerId": "sui-18",
+        "name": "sui-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sui-19",
+        "playerId": "sui-19",
+        "name": "sui-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sui-20",
+        "playerId": "sui-20",
+        "name": "sui-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

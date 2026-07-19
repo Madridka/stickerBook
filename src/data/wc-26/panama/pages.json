@@ -1,0 +1,180 @@
+[
+  {
+    "id": "panama-left",
+    "number": 102,
+    "image": "page-102-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "pan-01",
+        "playerId": "pan-01",
+        "name": "pan-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "pan-02",
+        "playerId": "pan-02",
+        "name": "pan-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "pan-03",
+        "playerId": "pan-03",
+        "name": "pan-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-04",
+        "playerId": "pan-04",
+        "name": "pan-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-05",
+        "playerId": "pan-05",
+        "name": "pan-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-06",
+        "playerId": "pan-06",
+        "name": "pan-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-07",
+        "playerId": "pan-07",
+        "name": "pan-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "pan-08",
+        "playerId": "pan-08",
+        "name": "pan-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "pan-09",
+        "playerId": "pan-09",
+        "name": "pan-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "pan-10",
+        "playerId": "pan-10",
+        "name": "pan-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "panama-right",
+    "number": 103,
+    "image": "page-103-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "pan-11",
+        "playerId": "pan-11",
+        "name": "pan-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "pan-12",
+        "playerId": "pan-12",
+        "name": "pan-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "pan-13",
+        "playerId": "pan-13",
+        "name": "pan-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-14",
+        "playerId": "pan-14",
+        "name": "pan-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-15",
+        "playerId": "pan-15",
+        "name": "pan-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-16",
+        "playerId": "pan-16",
+        "name": "pan-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "pan-17",
+        "playerId": "pan-17",
+        "name": "pan-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "pan-18",
+        "playerId": "pan-18",
+        "name": "pan-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "pan-19",
+        "playerId": "pan-19",
+        "name": "pan-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "pan-20",
+        "playerId": "pan-20",
+        "name": "pan-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

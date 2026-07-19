@@ -1,0 +1,200 @@
+[
+  {
+    "id": "irq-01",
+    "fullName": "Iraq Team Logo",
+    "image": "/cards/iraq/IRQ-01-team-logo.png",
+    "type": "logo",
+    "team": "Iraq",
+    "weight": 15
+  },
+  {
+    "id": "irq-02",
+    "firstName": "Graham",
+    "lastName": "Arnold",
+    "fullName": "Graham Arnold",
+    "image": "/cards/iraq/IRQ-02-graham-arnold.png",
+    "type": "head coach",
+    "team": "Iraq",
+    "weight": 10
+  },
+  {
+    "id": "irq-03",
+    "firstName": "Fahad",
+    "lastName": "Talib",
+    "fullName": "Fahad Talib",
+    "image": "/cards/iraq/IRQ-03-fahad-talib.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-04",
+    "firstName": "Rebin",
+    "lastName": "Sulaka",
+    "fullName": "Rebin Sulaka",
+    "image": "/cards/iraq/IRQ-04-rebin-sulaka.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-05",
+    "firstName": "Hussein",
+    "lastName": "Ali",
+    "fullName": "Hussein Ali",
+    "image": "/cards/iraq/IRQ-05-hussein-ali.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-06",
+    "firstName": "Zaid",
+    "lastName": "Tahseen",
+    "fullName": "Zaid Tahseen",
+    "image": "/cards/iraq/IRQ-06-zaid-tahseen.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-07",
+    "firstName": "Akam",
+    "lastName": "Hashim",
+    "fullName": "Akam Hashim",
+    "image": "/cards/iraq/IRQ-07-akam-hashim.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-08",
+    "firstName": "Munaf",
+    "lastName": "Younus",
+    "fullName": "Munaf Younus",
+    "image": "/cards/iraq/IRQ-08-munaf-younus.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-09",
+    "firstName": "Youssef",
+    "lastName": "Amyn",
+    "fullName": "Youssef Amyn",
+    "image": "/cards/iraq/IRQ-09-youssef-amyn.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-10",
+    "firstName": "Ibrahim",
+    "lastName": "Bayesh",
+    "fullName": "Ibrahim Bayesh",
+    "image": "/cards/iraq/IRQ-10-ibrahim-bayesh.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-11",
+    "firstName": "Ali",
+    "lastName": "Alhamadi",
+    "fullName": "Ali Alhamadi",
+    "image": "/cards/iraq/IRQ-11-ali-alhamadi.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-12",
+    "firstName": "Mohanad",
+    "lastName": "Ali",
+    "fullName": "Mohanad Ali",
+    "image": "/cards/iraq/IRQ-12-mohanad-ali.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-13",
+    "firstName": "Ahmed",
+    "lastName": "Qasem",
+    "fullName": "Ahmed Qasem",
+    "image": "/cards/iraq/IRQ-13-ahmed-qasem.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-14",
+    "firstName": "Jalal",
+    "lastName": "Hassan",
+    "fullName": "Jalal Hassan",
+    "image": "/cards/iraq/IRQ-14-jalal-hassan.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-15",
+    "firstName": "Ali",
+    "lastName": "Yousif",
+    "fullName": "Ali Yousif",
+    "image": "/cards/iraq/IRQ-15-ali-yousif.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-16",
+    "firstName": "Zidane",
+    "lastName": "Iqbal",
+    "fullName": "Zidane Iqbal",
+    "image": "/cards/iraq/IRQ-16-zidane-iqbal.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-17",
+    "firstName": "Ahmed",
+    "lastName": "Maknazi",
+    "fullName": "Ahmed Maknazi",
+    "image": "/cards/iraq/IRQ-17-ahmed-maknazi.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-18",
+    "firstName": "Amir",
+    "lastName": "Alammari",
+    "fullName": "Amir Alammari",
+    "image": "/cards/iraq/IRQ-18-amir-alammari.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-19",
+    "firstName": "Ali",
+    "lastName": "Jasim",
+    "fullName": "Ali Jasim",
+    "image": "/cards/iraq/IRQ-19-ali-jasim.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  },
+  {
+    "id": "irq-20",
+    "firstName": "Aymen",
+    "lastName": "Hussein",
+    "fullName": "Aymen Hussein",
+    "image": "/cards/iraq/IRQ-20-aymen-hussein.png",
+    "type": "player",
+    "team": "Iraq",
+    "weight": 20
+  }
+]

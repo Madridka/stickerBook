@@ -1,0 +1,180 @@
+[
+  {
+    "id": "australia-left",
+    "number": 36,
+    "image": "page-36-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "aus-01",
+        "playerId": "aus-01",
+        "name": "aus-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aus-02",
+        "playerId": "aus-02",
+        "name": "aus-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aus-03",
+        "playerId": "aus-03",
+        "name": "aus-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-04",
+        "playerId": "aus-04",
+        "name": "aus-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-05",
+        "playerId": "aus-05",
+        "name": "aus-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-06",
+        "playerId": "aus-06",
+        "name": "aus-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-07",
+        "playerId": "aus-07",
+        "name": "aus-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aus-08",
+        "playerId": "aus-08",
+        "name": "aus-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aus-09",
+        "playerId": "aus-09",
+        "name": "aus-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aus-10",
+        "playerId": "aus-10",
+        "name": "aus-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "australia-right",
+    "number": 37,
+    "image": "page-37-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "aus-11",
+        "playerId": "aus-11",
+        "name": "aus-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aus-12",
+        "playerId": "aus-12",
+        "name": "aus-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "aus-13",
+        "playerId": "aus-13",
+        "name": "aus-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-14",
+        "playerId": "aus-14",
+        "name": "aus-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-15",
+        "playerId": "aus-15",
+        "name": "aus-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-16",
+        "playerId": "aus-16",
+        "name": "aus-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "aus-17",
+        "playerId": "aus-17",
+        "name": "aus-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aus-18",
+        "playerId": "aus-18",
+        "name": "aus-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aus-19",
+        "playerId": "aus-19",
+        "name": "aus-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "aus-20",
+        "playerId": "aus-20",
+        "name": "aus-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

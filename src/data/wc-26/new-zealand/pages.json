@@ -1,0 +1,180 @@
+[
+  {
+    "id": "new-zealand-left",
+    "number": 62,
+    "image": "page-62-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "nzl-01",
+        "playerId": "nzl-01",
+        "name": "nzl-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nzl-02",
+        "playerId": "nzl-02",
+        "name": "nzl-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nzl-03",
+        "playerId": "nzl-03",
+        "name": "nzl-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-04",
+        "playerId": "nzl-04",
+        "name": "nzl-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-05",
+        "playerId": "nzl-05",
+        "name": "nzl-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-06",
+        "playerId": "nzl-06",
+        "name": "nzl-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-07",
+        "playerId": "nzl-07",
+        "name": "nzl-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nzl-08",
+        "playerId": "nzl-08",
+        "name": "nzl-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nzl-09",
+        "playerId": "nzl-09",
+        "name": "nzl-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nzl-10",
+        "playerId": "nzl-10",
+        "name": "nzl-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "new-zealand-right",
+    "number": 63,
+    "image": "page-63-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "nzl-11",
+        "playerId": "nzl-11",
+        "name": "nzl-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nzl-12",
+        "playerId": "nzl-12",
+        "name": "nzl-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nzl-13",
+        "playerId": "nzl-13",
+        "name": "nzl-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-14",
+        "playerId": "nzl-14",
+        "name": "nzl-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-15",
+        "playerId": "nzl-15",
+        "name": "nzl-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-16",
+        "playerId": "nzl-16",
+        "name": "nzl-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nzl-17",
+        "playerId": "nzl-17",
+        "name": "nzl-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nzl-18",
+        "playerId": "nzl-18",
+        "name": "nzl-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nzl-19",
+        "playerId": "nzl-19",
+        "name": "nzl-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nzl-20",
+        "playerId": "nzl-20",
+        "name": "nzl-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

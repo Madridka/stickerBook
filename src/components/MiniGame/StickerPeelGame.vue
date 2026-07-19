@@ -35,6 +35,24 @@ interface PressZone {
   className: string
 }
 
+const pressZonePositions: PressZone[] = [
+  { className: 'left-[8%] top-[8%]' },
+  { className: 'left-[72%] top-[8%]' },
+  { className: 'left-[72%] top-[76%]' },
+  { className: 'left-[8%] top-[76%]' },
+]
+
+const shufflePressZones = (): PressZone[] => {
+  const zones: PressZone[] = [...pressZonePositions]
+
+  for (let index: number = zones.length - 1; index > 0; index -= 1) {
+    const randomIndex: number = Math.floor(Math.random() * (index + 1))
+    ;[zones[index], zones[randomIndex]] = [zones[randomIndex]!, zones[index]!]
+  }
+
+  return zones
+}
+
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
@@ -52,6 +70,7 @@ const alignY: Ref<number> = ref(-30)
 const alignOrigin: Ref<PointerOrigin | undefined> = ref(undefined)
 const pressedCount: Ref<number> = ref(0)
 const pressMistakes: Ref<number> = ref(0)
+const pressZones: Ref<PressZone[]> = ref(shufflePressZones())
 const alignmentOffset: ComputedRef<number> = computed((): number =>
   Math.hypot(alignX.value, alignY.value),
 )
@@ -61,12 +80,6 @@ const alignmentDistance: ComputedRef<number> = computed((): number =>
 const alignmentAccuracy: ComputedRef<number> = computed((): number =>
   Math.max(0, 100 - Math.round(alignmentOffset.value / 2)),
 )
-const pressZones: PressZone[] = [
-  { className: 'left-[8%] top-[8%]' },
-  { className: 'left-[72%] top-[8%]' },
-  { className: 'left-[72%] top-[76%]' },
-  { className: 'left-[8%] top-[76%]' },
-]
 const stepTranslationKeys: string[] = [
   'stickerTray.stepPeel',
   'stickerTray.stepAlign',
@@ -118,6 +131,7 @@ watch(
     alignOrigin.value = undefined
     pressedCount.value = 0
     pressMistakes.value = 0
+    pressZones.value = shufflePressZones()
   },
 )
 
@@ -215,7 +229,7 @@ const previousStep = (): void => {
 
 // Объединяет качество снятия, совмещения и разглаживания в итог экземпляра.
 const completePreparation = (): void => {
-  if (!props.item || pressedCount.value < pressZones.length) return
+  if (!props.item || pressedCount.value < pressZones.value.length) return
   const peelQuality: number = 100
   const alignmentQuality: number = alignmentAccuracy.value
   const pressQuality: number = Math.max(80, 100 - pressMistakes.value * 5)

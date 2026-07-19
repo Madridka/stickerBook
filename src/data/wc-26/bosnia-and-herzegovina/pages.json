@@ -1,0 +1,180 @@
+[
+  {
+    "id": "bosnia-and-herzegovina-left",
+    "number": 18,
+    "image": "page-18-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "bih-01",
+        "playerId": "bih-01",
+        "name": "bih-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bih-02",
+        "playerId": "bih-02",
+        "name": "bih-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bih-03",
+        "playerId": "bih-03",
+        "name": "bih-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-04",
+        "playerId": "bih-04",
+        "name": "bih-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-05",
+        "playerId": "bih-05",
+        "name": "bih-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-06",
+        "playerId": "bih-06",
+        "name": "bih-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-07",
+        "playerId": "bih-07",
+        "name": "bih-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bih-08",
+        "playerId": "bih-08",
+        "name": "bih-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bih-09",
+        "playerId": "bih-09",
+        "name": "bih-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bih-10",
+        "playerId": "bih-10",
+        "name": "bih-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "bosnia-and-herzegovina-right",
+    "number": 19,
+    "image": "page-19-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "bih-11",
+        "playerId": "bih-11",
+        "name": "bih-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bih-12",
+        "playerId": "bih-12",
+        "name": "bih-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bih-13",
+        "playerId": "bih-13",
+        "name": "bih-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-14",
+        "playerId": "bih-14",
+        "name": "bih-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-15",
+        "playerId": "bih-15",
+        "name": "bih-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-16",
+        "playerId": "bih-16",
+        "name": "bih-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bih-17",
+        "playerId": "bih-17",
+        "name": "bih-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bih-18",
+        "playerId": "bih-18",
+        "name": "bih-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bih-19",
+        "playerId": "bih-19",
+        "name": "bih-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bih-20",
+        "playerId": "bih-20",
+        "name": "bih-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

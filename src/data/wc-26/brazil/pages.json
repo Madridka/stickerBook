@@ -1,0 +1,180 @@
+[
+  {
+    "id": "brazil-left",
+    "number": 24,
+    "image": "page-24-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "bra-01",
+        "playerId": "bra-01",
+        "name": "bra-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bra-02",
+        "playerId": "bra-02",
+        "name": "bra-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bra-03",
+        "playerId": "bra-03",
+        "name": "bra-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-04",
+        "playerId": "bra-04",
+        "name": "bra-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-05",
+        "playerId": "bra-05",
+        "name": "bra-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-06",
+        "playerId": "bra-06",
+        "name": "bra-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-07",
+        "playerId": "bra-07",
+        "name": "bra-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bra-08",
+        "playerId": "bra-08",
+        "name": "bra-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bra-09",
+        "playerId": "bra-09",
+        "name": "bra-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bra-10",
+        "playerId": "bra-10",
+        "name": "bra-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "brazil-right",
+    "number": 25,
+    "image": "page-25-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "bra-11",
+        "playerId": "bra-11",
+        "name": "bra-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bra-12",
+        "playerId": "bra-12",
+        "name": "bra-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bra-13",
+        "playerId": "bra-13",
+        "name": "bra-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-14",
+        "playerId": "bra-14",
+        "name": "bra-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-15",
+        "playerId": "bra-15",
+        "name": "bra-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-16",
+        "playerId": "bra-16",
+        "name": "bra-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bra-17",
+        "playerId": "bra-17",
+        "name": "bra-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bra-18",
+        "playerId": "bra-18",
+        "name": "bra-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bra-19",
+        "playerId": "bra-19",
+        "name": "bra-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bra-20",
+        "playerId": "bra-20",
+        "name": "bra-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

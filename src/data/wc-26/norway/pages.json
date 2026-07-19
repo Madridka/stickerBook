@@ -1,0 +1,180 @@
+[
+  {
+    "id": "norway-left",
+    "number": 78,
+    "image": "page-78-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "nor-01",
+        "playerId": "nor-01",
+        "name": "nor-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nor-02",
+        "playerId": "nor-02",
+        "name": "nor-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nor-03",
+        "playerId": "nor-03",
+        "name": "nor-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-04",
+        "playerId": "nor-04",
+        "name": "nor-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-05",
+        "playerId": "nor-05",
+        "name": "nor-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-06",
+        "playerId": "nor-06",
+        "name": "nor-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-07",
+        "playerId": "nor-07",
+        "name": "nor-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nor-08",
+        "playerId": "nor-08",
+        "name": "nor-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nor-09",
+        "playerId": "nor-09",
+        "name": "nor-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nor-10",
+        "playerId": "nor-10",
+        "name": "nor-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "norway-right",
+    "number": 79,
+    "image": "page-79-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "nor-11",
+        "playerId": "nor-11",
+        "name": "nor-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nor-12",
+        "playerId": "nor-12",
+        "name": "nor-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "nor-13",
+        "playerId": "nor-13",
+        "name": "nor-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-14",
+        "playerId": "nor-14",
+        "name": "nor-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-15",
+        "playerId": "nor-15",
+        "name": "nor-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-16",
+        "playerId": "nor-16",
+        "name": "nor-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "nor-17",
+        "playerId": "nor-17",
+        "name": "nor-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nor-18",
+        "playerId": "nor-18",
+        "name": "nor-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nor-19",
+        "playerId": "nor-19",
+        "name": "nor-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "nor-20",
+        "playerId": "nor-20",
+        "name": "nor-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

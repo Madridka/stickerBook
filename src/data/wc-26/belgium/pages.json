@@ -1,0 +1,180 @@
+[
+  {
+    "id": "belgium-left",
+    "number": 56,
+    "image": "page-56-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "bel-01",
+        "playerId": "bel-01",
+        "name": "bel-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bel-02",
+        "playerId": "bel-02",
+        "name": "bel-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bel-03",
+        "playerId": "bel-03",
+        "name": "bel-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-04",
+        "playerId": "bel-04",
+        "name": "bel-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-05",
+        "playerId": "bel-05",
+        "name": "bel-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-06",
+        "playerId": "bel-06",
+        "name": "bel-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-07",
+        "playerId": "bel-07",
+        "name": "bel-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bel-08",
+        "playerId": "bel-08",
+        "name": "bel-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bel-09",
+        "playerId": "bel-09",
+        "name": "bel-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bel-10",
+        "playerId": "bel-10",
+        "name": "bel-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "belgium-right",
+    "number": 57,
+    "image": "page-57-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "bel-11",
+        "playerId": "bel-11",
+        "name": "bel-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bel-12",
+        "playerId": "bel-12",
+        "name": "bel-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "bel-13",
+        "playerId": "bel-13",
+        "name": "bel-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-14",
+        "playerId": "bel-14",
+        "name": "bel-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-15",
+        "playerId": "bel-15",
+        "name": "bel-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-16",
+        "playerId": "bel-16",
+        "name": "bel-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "bel-17",
+        "playerId": "bel-17",
+        "name": "bel-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bel-18",
+        "playerId": "bel-18",
+        "name": "bel-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bel-19",
+        "playerId": "bel-19",
+        "name": "bel-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "bel-20",
+        "playerId": "bel-20",
+        "name": "bel-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

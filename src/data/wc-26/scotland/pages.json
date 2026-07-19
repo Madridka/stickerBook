@@ -1,0 +1,180 @@
+[
+  {
+    "id": "scotland-left",
+    "number": 30,
+    "image": "page-30-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "sco-01",
+        "playerId": "sco-01",
+        "name": "sco-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sco-02",
+        "playerId": "sco-02",
+        "name": "sco-02",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sco-03",
+        "playerId": "sco-03",
+        "name": "sco-03",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-04",
+        "playerId": "sco-04",
+        "name": "sco-04",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-05",
+        "playerId": "sco-05",
+        "name": "sco-05",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-06",
+        "playerId": "sco-06",
+        "name": "sco-06",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-07",
+        "playerId": "sco-07",
+        "name": "sco-07",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sco-08",
+        "playerId": "sco-08",
+        "name": "sco-08",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sco-09",
+        "playerId": "sco-09",
+        "name": "sco-09",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sco-10",
+        "playerId": "sco-10",
+        "name": "sco-10",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "scotland-right",
+    "number": 31,
+    "image": "page-31-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "sco-11",
+        "playerId": "sco-11",
+        "name": "sco-11",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sco-12",
+        "playerId": "sco-12",
+        "name": "sco-12",
+        "x": 836,
+        "y": 130,
+        "width": 200
+      },
+      {
+        "id": "sco-13",
+        "playerId": "sco-13",
+        "name": "sco-13",
+        "x": 180,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-14",
+        "playerId": "sco-14",
+        "name": "sco-14",
+        "x": 512,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-15",
+        "playerId": "sco-15",
+        "name": "sco-15",
+        "x": 844,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-16",
+        "playerId": "sco-16",
+        "name": "sco-16",
+        "x": 1176,
+        "y": 465,
+        "width": 200
+      },
+      {
+        "id": "sco-17",
+        "playerId": "sco-17",
+        "name": "sco-17",
+        "x": 180,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sco-18",
+        "playerId": "sco-18",
+        "name": "sco-18",
+        "x": 512,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sco-19",
+        "playerId": "sco-19",
+        "name": "sco-19",
+        "x": 844,
+        "y": 800,
+        "width": 200
+      },
+      {
+        "id": "sco-20",
+        "playerId": "sco-20",
+        "name": "sco-20",
+        "x": 1176,
+        "y": 800,
+        "width": 200
+      }
+    ]
+  }
+]

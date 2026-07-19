@@ -1,0 +1,200 @@
+[
+  {
+    "id": "mar-01",
+    "fullName": "Morocco Team Logo",
+    "image": "/cards/morocco/MAR-01-team-logo.png",
+    "type": "logo",
+    "team": "Morocco",
+    "weight": 15
+  },
+  {
+    "id": "mar-02",
+    "firstName": "Mohamed",
+    "lastName": "Ouahbi",
+    "fullName": "Mohamed Ouahbi",
+    "image": "/cards/morocco/MAR-02-mohamed-ouahbi.png",
+    "type": "head coach",
+    "team": "Morocco",
+    "weight": 10
+  },
+  {
+    "id": "mar-03",
+    "firstName": "Yassine",
+    "lastName": "Bounou",
+    "fullName": "Yassine Bounou",
+    "image": "/cards/morocco/MAR-03-yassine-bounou.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-04",
+    "firstName": "Achraf",
+    "lastName": "Hakimi",
+    "fullName": "Achraf Hakimi",
+    "image": "/cards/morocco/MAR-04-achraf-hakimi.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-05",
+    "firstName": "Noussair",
+    "lastName": "Mazraoui",
+    "fullName": "Noussair Mazraoui",
+    "image": "/cards/morocco/MAR-05-noussair-mazraoui.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-06",
+    "firstName": "Sofyan",
+    "lastName": "Amrabat",
+    "fullName": "Sofyan Amrabat",
+    "image": "/cards/morocco/MAR-06-sofyan-amrabat.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-07",
+    "firstName": "Marwane",
+    "lastName": "Saadane",
+    "fullName": "Marwane Saadane",
+    "image": "/cards/morocco/MAR-07-marwane-saadane.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-08",
+    "firstName": "Ayyoub",
+    "lastName": "Bouaddi",
+    "fullName": "Ayyoub Bouaddi",
+    "image": "/cards/morocco/MAR-08-ayyoub-bouaddi.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-09",
+    "firstName": "Chemsdine",
+    "lastName": "Talbi",
+    "fullName": "Chemsdine Talbi",
+    "image": "/cards/morocco/MAR-09-chemsdine-talbi.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-10",
+    "firstName": "Azzedine",
+    "lastName": "Ounahi",
+    "fullName": "Azzedine Ounahi",
+    "image": "/cards/morocco/MAR-10-azzedine-ounahi.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-11",
+    "firstName": "Souane",
+    "lastName": "Rahimi",
+    "fullName": "Souane Rahimi",
+    "image": "/cards/morocco/MAR-11-souane-rahimi.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-12",
+    "firstName": "Brahim",
+    "lastName": "Diaz",
+    "fullName": "Brahim Diaz",
+    "image": "/cards/morocco/MAR-12-brahim-diaz.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-13",
+    "firstName": "Ismael",
+    "lastName": "Saibari",
+    "fullName": "Ismael Saibari",
+    "image": "/cards/morocco/MAR-13-ismael-saibari.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-14",
+    "firstName": "Munir",
+    "lastName": "El Kajoui",
+    "fullName": "Munir El Kajoui",
+    "image": "/cards/morocco/MAR-14-munir-el-kajoui.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-15",
+    "firstName": "Zakaria",
+    "lastName": "El Ouahdi",
+    "fullName": "Zakaria El Ouahdi",
+    "image": "/cards/morocco/MAR-15-zakaria-el-ouahdi.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-16",
+    "firstName": "Issa",
+    "lastName": "Diop",
+    "fullName": "Issa Diop",
+    "image": "/cards/morocco/MAR-16-issa-diop.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-17",
+    "firstName": "Samir",
+    "lastName": "El Mourabet",
+    "fullName": "Samir El Mourabet",
+    "image": "/cards/morocco/MAR-17-samir-el-mourabet.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-18",
+    "firstName": "Gessime",
+    "lastName": "Yassine",
+    "fullName": "Gessime Yassine",
+    "image": "/cards/morocco/MAR-18-gessime-yassine.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-19",
+    "firstName": "Amine",
+    "lastName": "Sbai",
+    "fullName": "Amine Sbai",
+    "image": "/cards/morocco/MAR-19-amine-sbai.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  },
+  {
+    "id": "mar-20",
+    "firstName": "Chadi",
+    "lastName": "Riad",
+    "fullName": "Chadi Riad",
+    "image": "/cards/morocco/MAR-20-chadi-riad.png",
+    "type": "player",
+    "team": "Morocco",
+    "weight": 20
+  }
+]

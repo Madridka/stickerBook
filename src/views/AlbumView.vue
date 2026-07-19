@@ -3,6 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref }
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import AlbumBook from '@/components/Album/AlbumBook.vue'
+import AlbumContentsPage from '@/components/Album/AlbumContentsPage.vue'
 import AlbumEditorialPage from '@/components/Album/AlbumEditorialPage.vue'
 import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
 import type { AlbumPageData } from '@/components/Album/AlbumPage.vue'
@@ -12,6 +13,7 @@ import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 import { resolveStickerPlacement } from '@/components/DragDrop/dropGeometry'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import cards from '@/data/wc-26/players'
+import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
@@ -90,6 +92,7 @@ const latestReleaseSeries: string =
 const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
   .filter(({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`))
   .slice(0, 3)
+const contentsPageSize: number = 4
 
 const { t } = useI18n()
 const router = useRouter()
@@ -144,6 +147,13 @@ const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed((): AlbumGe
 const visiblePageLabel: ComputedRef<string> = computed((): string =>
   visibleGeometries.value.map(({ number }): string => String(number).padStart(2, '0')).join('–'),
 )
+const visiblePageTypeLabel: ComputedRef<string> = computed((): string => {
+  if (currentPage.value === 0) return t('album.editorial.coverLabel')
+  const isContents: boolean = visibleGeometries.value.some(
+    ({ number }: AlbumGeometryPage): boolean => number === 4 || number === 5,
+  )
+  return t(isContents ? 'album.contents.label' : 'album.editorial.infoLabel')
+})
 const visibleSlotTotal: ComputedRef<number> = computed((): number =>
   visibleGeometries.value.reduce(
     (total: number, page: AlbumGeometryPage): number => total + page.slots.length,
@@ -237,6 +247,24 @@ const focusCardTarget = (playerId: string): void => {
 
 const clearCardTarget = (): void => {
   activeTargetId.value = undefined
+}
+
+const getContentsTeams = (pageNumber: number): AlbumContentsTeam[] => {
+  const pageOffset: number = pageNumber - 4
+  return albumContentsTeams.slice(
+    pageOffset * contentsPageSize,
+    (pageOffset + 1) * contentsPageSize,
+  )
+}
+
+// Переходит к первому развороту сборной, сохраняя корректную левую страницу на desktop.
+const openTeam = (pageId: string): void => {
+  const pageIndex: number = pages.value.findIndex(
+    ({ geometry }: AlbumPageView): boolean => geometry.id === pageId,
+  )
+  if (pageIndex < 0) return
+  activeTargetId.value = undefined
+  currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
 }
 
 // Переводит к целевой странице только тогда, когда текущий разворот вообще не принимает наклейки.
@@ -368,7 +396,7 @@ onBeforeUnmount((): void => {
         <strong class="block text-base font-black tracking-normal text-paper max-md:text-xs">{{
           visiblePageLabel
         }}</strong>
-        {{ t(currentPage === 0 ? 'album.editorial.coverLabel' : 'album.editorial.infoLabel') }}
+        {{ visiblePageTypeLabel }}
       </div>
     </header>
     <div class="flex min-h-0 flex-1 flex-col">
@@ -396,6 +424,12 @@ onBeforeUnmount((): void => {
               :future-items="futureIdeaItems"
               :release-series="latestReleaseSeries"
               :releases="recentReleaseNotes"
+            />
+            <AlbumContentsPage
+              v-else-if="pages[pageIndex].geometry.number <= 5"
+              :page-number="pages[pageIndex].geometry.number"
+              :teams="getContentsTeams(pages[pageIndex].geometry.number)"
+              @select="openTeam"
             />
             <template v-else>
               <StickerSlot

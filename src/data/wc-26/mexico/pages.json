@@ -1,7 +1,7 @@
 [
   {
     "id": "mexico-left",
-    "number": 4,
+    "number": 6,
     "image": "page-04-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +90,7 @@
   },
   {
     "id": "mexico-right",
-    "number": 5,
+    "number": 7,
     "image": "page-05-stickers-right.png",
     "width": 1536,
     "height": 1200,

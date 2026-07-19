@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="Флаг Хорватии">
+  <path fill="#ff0000" d="M0 0h900v200H0z"/>
+  <path fill="#fff" d="M0 200h900v200H0z"/>
+  <path fill="#171796" d="M0 400h900v200H0z"/>
+  <g transform="translate(362 166)">
+    <path fill="#fff" stroke="#173d78" stroke-width="12" d="M0 18h176v166c0 97-88 127-88 127S0 281 0 184z"/>
+    <path fill="#e31b23" d="M0 18h35v35H0zm70 0h35v35H70zm70 0h36v35h-36zM35 53h35v35H35zm70 0h35v35h-35zM0 88h35v35H0zm70 0h35v35H70zm70 0h36v35h-36zM35 123h35v35H35zm70 0h35v35h-35zM0 158h35v35H0zm70 0h35v35H70zm70 0h36v35h-36zM35 193h35v35H35zm70 0h35v35h-35zM0 228h35v18H0zm70 0h35v62H70zm70 0h36v18h-36z"/>
+    <path fill="#173d78" d="M5 18-8-20l28-25 22 22 46-29 46 29 22-22 28 25-13 38z"/>
+    <circle cx="20" cy="-20" r="9" fill="#55a8dc"/>
+    <circle cx="88" cy="-28" r="9" fill="#f2c84b"/>
+    <circle cx="156" cy="-20" r="9" fill="#55a8dc"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "eng-01",
+    "firstName": "Jude",
+    "lastName": "Bellingham",
+    "fullName": "Jude Bellingham",
+    "image": "/cards/england/ENG-01-jude-bellingham.png",
+    "type": "player",
+    "team": "England",
+    "weight": 500
+  }
+]

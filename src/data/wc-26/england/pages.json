@@ -1,0 +1,27 @@
+[
+  {
+    "id": "england-left",
+    "number": 12,
+    "image": "page-12-stickers-left.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": [
+      {
+        "id": "eng-01",
+        "playerId": "eng-01",
+        "name": "eng-01",
+        "x": 500,
+        "y": 130,
+        "width": 200
+      }
+    ]
+  },
+  {
+    "id": "england-right",
+    "number": 13,
+    "image": "page-13-stickers-right.png",
+    "width": 1536,
+    "height": 1200,
+    "slots": []
+  }
+]

@@ -1,7 +1,7 @@
 [
   {
     "id": "croatia-left",
-    "number": 6,
+    "number": 8,
     "image": "page-06-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -20,7 +20,7 @@
   },
   {
     "id": "croatia-right",
-    "number": 7,
+    "number": 9,
     "image": "page-07-stickers-right.png",
     "width": 1536,
     "height": 1200,

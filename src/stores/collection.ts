@@ -1,6 +1,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database } from '@/db/database'
+import { reconcileOrphanedDuplicates } from '@/db/stickerLifecycle'
 import type { CollectionItem, StickerInstance, StickerPlacement } from '@/types'
 import collectionData from '@/data/collection.json'
 import { createId } from '@/utils/createId'
@@ -16,6 +17,7 @@ export const useCollectionStore = defineStore('collection', () => {
 
   // Восстанавливает уже открытые карточки из локальной коллекции
   const load = async (): Promise<void> => {
+    await reconcileOrphanedDuplicates()
     const cards: StickerInstance[] = await database.cards.toArray()
     duplicates.value = await database.duplicates.toArray()
     items.value = cards.map(
@@ -117,6 +119,7 @@ export const useCollectionStore = defineStore('collection', () => {
       ),
     ),
     addCard,
+    load,
     updateCard,
   }
 })

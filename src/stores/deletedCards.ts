@@ -1,6 +1,7 @@
 import { ref, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database } from '@/db/database'
+import { promoteDuplicate } from '@/db/stickerLifecycle'
 import type { DeletedCard, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 
@@ -22,10 +23,17 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
       playerId: instance.playerId,
       deletedAt: Date.now(),
     }
-    await database.transaction('rw', database.cards, database.deletedCards, async (): Promise<void> => {
-      await database.cards.update(instance.id, { location: 'deleted' })
-      await database.deletedCards.add(deletedCard)
-    })
+    await database.transaction(
+      'rw',
+      database.cards,
+      database.duplicates,
+      database.deletedCards,
+      async (): Promise<void> => {
+        await database.cards.update(instance.id, { location: 'deleted' })
+        await database.deletedCards.add(deletedCard)
+        await promoteDuplicate(instance.playerId)
+      },
+    )
     items.value = [deletedCard, ...items.value]
   }
 

@@ -220,7 +220,7 @@ const removeCard = async (instanceId: string): Promise<void> => {
   )
   if (!item) return
   await deletedCards.removeCard(item.instance)
-  await collection.updateCard(instanceId, { location: 'deleted' })
+  await collection.load()
 }
 
 // Открывает страницу выбранного игрока и подсвечивает единственную подходящую ячейку.
@@ -411,6 +411,15 @@ onBeforeUnmount((): void => {
                 :highlighted="activeTargetId === slot.playerId"
                 @preview="openPreview"
               />
+              <span
+                class="absolute bottom-[3%] z-20 min-w-8 rounded-full border border-ink/15 bg-paper/90 px-2 py-1 text-center text-[clamp(7px,1vw,15px)] font-black leading-none text-coral shadow-sm backdrop-blur-sm"
+                :class="
+                  pages[pageIndex].geometry.number % 2 === 0 ? 'left-[5%]' : 'right-[5%]'
+                "
+                aria-hidden="true"
+              >
+                {{ String(pages[pageIndex].geometry.number).padStart(2, '0') }}
+              </span>
             </template>
           </template>
         </AlbumBook>

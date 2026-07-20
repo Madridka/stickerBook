@@ -2,7 +2,7 @@
   {
     "id": "kor-01",
     "fullName": "Korea Republic Team Logo",
-    "image": "/cards/korea-republic/KOR-01-team-logo.png",
+    "image": "/cards/korea-republic/KOR-01-team-logo.webp",
     "type": "logo",
     "team": "Korea Republic",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Myungbo",
     "lastName": "Hong",
     "fullName": "Myungbo Hong",
-    "image": "/cards/korea-republic/KOR-02-myungbo-hong.png",
+    "image": "/cards/korea-republic/KOR-02-myungbo-hong.webp",
     "type": "head coach",
     "team": "Korea Republic",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Seunggyu",
     "lastName": "Kim",
     "fullName": "Seunggyu Kim",
-    "image": "/cards/korea-republic/KOR-03-seunggyu-kim.png",
+    "image": "/cards/korea-republic/KOR-03-seunggyu-kim.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Hanbeom",
     "lastName": "Lee",
     "fullName": "Hanbeom Lee",
-    "image": "/cards/korea-republic/KOR-04-hanbeom-lee.png",
+    "image": "/cards/korea-republic/KOR-04-hanbeom-lee.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Gihyuk",
     "lastName": "Lee",
     "fullName": "Gihyuk Lee",
-    "image": "/cards/korea-republic/KOR-05-gihyuk-lee.png",
+    "image": "/cards/korea-republic/KOR-05-gihyuk-lee.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Minjae",
     "lastName": "Kim",
     "fullName": "Minjae Kim",
-    "image": "/cards/korea-republic/KOR-06-minjae-kim.png",
+    "image": "/cards/korea-republic/KOR-06-minjae-kim.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Taehyeon",
     "lastName": "Kim",
     "fullName": "Taehyeon Kim",
-    "image": "/cards/korea-republic/KOR-07-taehyeon-kim.png",
+    "image": "/cards/korea-republic/KOR-07-taehyeon-kim.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Inbeom",
     "lastName": "Hwang",
     "fullName": "Inbeom Hwang",
-    "image": "/cards/korea-republic/KOR-08-inbeom-hwang.png",
+    "image": "/cards/korea-republic/KOR-08-inbeom-hwang.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Heungmin",
     "lastName": "Son",
     "fullName": "Heungmin Son",
-    "image": "/cards/korea-republic/KOR-09-heungmin-son.png",
+    "image": "/cards/korea-republic/KOR-09-heungmin-son.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Seungho",
     "lastName": "Paik",
     "fullName": "Seungho Paik",
-    "image": "/cards/korea-republic/KOR-10-seungho-paik.png",
+    "image": "/cards/korea-republic/KOR-10-seungho-paik.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Guesung",
     "lastName": "Cho",
     "fullName": "Guesung Cho",
-    "image": "/cards/korea-republic/KOR-11-guesung-cho.png",
+    "image": "/cards/korea-republic/KOR-11-guesung-cho.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Jaesung",
     "lastName": "Lee",
     "fullName": "Jaesung Lee",
-    "image": "/cards/korea-republic/KOR-12-jaesung-lee.png",
+    "image": "/cards/korea-republic/KOR-12-jaesung-lee.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Heechan",
     "lastName": "Hwang",
     "fullName": "Heechan Hwang",
-    "image": "/cards/korea-republic/KOR-13-heechan-hwang.png",
+    "image": "/cards/korea-republic/KOR-13-heechan-hwang.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Bumkeun",
     "lastName": "Song",
     "fullName": "Bumkeun Song",
-    "image": "/cards/korea-republic/KOR-14-bumkeun-song.png",
+    "image": "/cards/korea-republic/KOR-14-bumkeun-song.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Taeseok",
     "lastName": "Lee",
     "fullName": "Taeseok Lee",
-    "image": "/cards/korea-republic/KOR-15-taeseok-lee.png",
+    "image": "/cards/korea-republic/KOR-15-taeseok-lee.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Wije",
     "lastName": "Cho",
     "fullName": "Wije Cho",
-    "image": "/cards/korea-republic/KOR-16-wije-cho.png",
+    "image": "/cards/korea-republic/KOR-16-wije-cho.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Moonhwan",
     "lastName": "Kim",
     "fullName": "Moonhwan Kim",
-    "image": "/cards/korea-republic/KOR-17-moonhwan-kim.png",
+    "image": "/cards/korea-republic/KOR-17-moonhwan-kim.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Jinseob",
     "lastName": "Park",
     "fullName": "Jinseob Park",
-    "image": "/cards/korea-republic/KOR-18-jinseob-park.png",
+    "image": "/cards/korea-republic/KOR-18-jinseob-park.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Junho",
     "lastName": "Bae",
     "fullName": "Junho Bae",
-    "image": "/cards/korea-republic/KOR-19-junho-bae.png",
+    "image": "/cards/korea-republic/KOR-19-junho-bae.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Hyeongyu",
     "lastName": "Oh",
     "fullName": "Hyeongyu Oh",
-    "image": "/cards/korea-republic/KOR-20-hyeongyu-oh.png",
+    "image": "/cards/korea-republic/KOR-20-hyeongyu-oh.webp",
     "type": "player",
     "team": "Korea Republic",
     "weight": 20

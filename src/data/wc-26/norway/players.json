@@ -2,7 +2,7 @@
   {
     "id": "nor-01",
     "fullName": "Norway Team Logo",
-    "image": "/cards/norway/NOR-01-team-logo.png",
+    "image": "/cards/norway/NOR-01-team-logo.webp",
     "type": "logo",
     "team": "Norway",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Stale",
     "lastName": "Solbakken",
     "fullName": "Stale Solbakken",
-    "image": "/cards/norway/NOR-02-stale-solbakken.png",
+    "image": "/cards/norway/NOR-02-stale-solbakken.webp",
     "type": "head coach",
     "team": "Norway",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Orjan",
     "lastName": "Nyland",
     "fullName": "Orjan Nyland",
-    "image": "/cards/norway/NOR-03-orjan-nyland.png",
+    "image": "/cards/norway/NOR-03-orjan-nyland.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Morten",
     "lastName": "Thorsby",
     "fullName": "Morten Thorsby",
-    "image": "/cards/norway/NOR-04-morten-thorsby.png",
+    "image": "/cards/norway/NOR-04-morten-thorsby.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Kristoffer",
     "lastName": "Ajer",
     "fullName": "Kristoffer Ajer",
-    "image": "/cards/norway/NOR-05-kristoffer-ajer.png",
+    "image": "/cards/norway/NOR-05-kristoffer-ajer.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Leo",
     "lastName": "Ostigard",
     "fullName": "Leo Ostigard",
-    "image": "/cards/norway/NOR-06-leo-ostigard.png",
+    "image": "/cards/norway/NOR-06-leo-ostigard.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "David",
     "lastName": "Moller Wolfe",
     "fullName": "David Moller Wolfe",
-    "image": "/cards/norway/NOR-07-david-moller-wolfe.png",
+    "image": "/cards/norway/NOR-07-david-moller-wolfe.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Patrick",
     "lastName": "Berg",
     "fullName": "Patrick Berg",
-    "image": "/cards/norway/NOR-08-patrick-berg.png",
+    "image": "/cards/norway/NOR-08-patrick-berg.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Alexander",
     "lastName": "Sorloth",
     "fullName": "Alexander Sorloth",
-    "image": "/cards/norway/NOR-09-alexander-sorloth.png",
+    "image": "/cards/norway/NOR-09-alexander-sorloth.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Sander",
     "lastName": "Berge",
     "fullName": "Sander Berge",
-    "image": "/cards/norway/NOR-10-sander-berge.png",
+    "image": "/cards/norway/NOR-10-sander-berge.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Erling",
     "lastName": "Haaland",
     "fullName": "Erling Haaland",
-    "image": "/cards/norway/NOR-11-erling-haaland.png",
+    "image": "/cards/norway/NOR-11-erling-haaland.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Martin",
     "lastName": "Odegaard",
     "fullName": "Martin Odegaard",
-    "image": "/cards/norway/NOR-12-martin-odegaard.png",
+    "image": "/cards/norway/NOR-12-martin-odegaard.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Jorgen",
     "lastName": "Strand Larsen",
     "fullName": "Jorgen Strand Larsen",
-    "image": "/cards/norway/NOR-13-jorgen-strand-larsen.png",
+    "image": "/cards/norway/NOR-13-jorgen-strand-larsen.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Sander",
     "lastName": "Tangvik",
     "fullName": "Sander Tangvik",
-    "image": "/cards/norway/NOR-14-sander-tangvik.png",
+    "image": "/cards/norway/NOR-14-sander-tangvik.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Egil",
     "lastName": "Selvik",
     "fullName": "Egil Selvik",
-    "image": "/cards/norway/NOR-15-egil-selvik.png",
+    "image": "/cards/norway/NOR-15-egil-selvik.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Fredrik",
     "lastName": "Aursnes",
     "fullName": "Fredrik Aursnes",
-    "image": "/cards/norway/NOR-16-fredrik-aursnes.png",
+    "image": "/cards/norway/NOR-16-fredrik-aursnes.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Fredrik",
     "lastName": "Bjorkan",
     "fullName": "Fredrik Bjorkan",
-    "image": "/cards/norway/NOR-17-fredrik-bjorkan.png",
+    "image": "/cards/norway/NOR-17-fredrik-bjorkan.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Marcus",
     "lastName": "Holmgren Pedersen",
     "fullName": "Marcus Holmgren Pedersen",
-    "image": "/cards/norway/NOR-18-marcus-holmgren-pedersen.png",
+    "image": "/cards/norway/NOR-18-marcus-holmgren-pedersen.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Torbjorn",
     "lastName": "Heggem",
     "fullName": "Torbjorn Heggem",
-    "image": "/cards/norway/NOR-19-torbjorn-heggem.png",
+    "image": "/cards/norway/NOR-19-torbjorn-heggem.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Kristian",
     "lastName": "Thorstvedt",
     "fullName": "Kristian Thorstvedt",
-    "image": "/cards/norway/NOR-20-kristian-thorstvedt.png",
+    "image": "/cards/norway/NOR-20-kristian-thorstvedt.webp",
     "type": "player",
     "team": "Norway",
     "weight": 20

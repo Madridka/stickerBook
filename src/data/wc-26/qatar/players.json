@@ -2,7 +2,7 @@
   {
     "id": "qat-01",
     "fullName": "Qatar Team Logo",
-    "image": "/cards/qatar/QAT-01-team-logo.png",
+    "image": "/cards/qatar/QAT-01-team-logo.webp",
     "type": "logo",
     "team": "Qatar",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Julen",
     "lastName": "Lopetegui",
     "fullName": "Julen Lopetegui",
-    "image": "/cards/qatar/QAT-02-julen-lopetegui.png",
+    "image": "/cards/qatar/QAT-02-julen-lopetegui.webp",
     "type": "head coach",
     "team": "Qatar",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Mahmoud",
     "lastName": "Abunada",
     "fullName": "Mahmoud Abunada",
-    "image": "/cards/qatar/QAT-03-mahmoud-abunada.png",
+    "image": "/cards/qatar/QAT-03-mahmoud-abunada.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Pedro",
     "lastName": "Miguel",
     "fullName": "Pedro Miguel",
-    "image": "/cards/qatar/QAT-04-pedro-miguel.png",
+    "image": "/cards/qatar/QAT-04-pedro-miguel.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Lucas",
     "lastName": "Mendes",
     "fullName": "Lucas Mendes",
-    "image": "/cards/qatar/QAT-05-lucas-mendes.png",
+    "image": "/cards/qatar/QAT-05-lucas-mendes.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Gueye",
     "lastName": "Issa Laye",
     "fullName": "Gueye Issa Laye",
-    "image": "/cards/qatar/QAT-06-gueye-issa-laye.png",
+    "image": "/cards/qatar/QAT-06-gueye-issa-laye.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Jassem",
     "lastName": "Gaber",
     "fullName": "Jassem Gaber",
-    "image": "/cards/qatar/QAT-07-jassem-gaber.png",
+    "image": "/cards/qatar/QAT-07-jassem-gaber.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Abdelaziz",
     "lastName": "Abdulaziz Hatem",
     "fullName": "Abdelaziz Abdulaziz Hatem",
-    "image": "/cards/qatar/QAT-08-abdelaziz-abdulaziz-hatem.png",
+    "image": "/cards/qatar/QAT-08-abdelaziz-abdulaziz-hatem.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Ahmed",
     "lastName": "Alaaeldin",
     "fullName": "Ahmed Alaaeldin",
-    "image": "/cards/qatar/QAT-09-ahmed-alaaeldin.png",
+    "image": "/cards/qatar/QAT-09-ahmed-alaaeldin.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Edmilson",
     "lastName": "Junior",
     "fullName": "Edmilson Junior",
-    "image": "/cards/qatar/QAT-10-edmilson-junior.png",
+    "image": "/cards/qatar/QAT-10-edmilson-junior.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Mohammed",
     "lastName": "Muntari",
     "fullName": "Mohammed Muntari",
-    "image": "/cards/qatar/QAT-11-mohammed-muntari.png",
+    "image": "/cards/qatar/QAT-11-mohammed-muntari.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Hasan",
     "lastName": "Hassan Alhaydos",
     "fullName": "Hasan Hassan Alhaydos",
-    "image": "/cards/qatar/QAT-12-hasan-hassan-alhaydos.png",
+    "image": "/cards/qatar/QAT-12-hasan-hassan-alhaydos.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Akram",
     "lastName": "Afif",
     "fullName": "Akram Afif",
-    "image": "/cards/qatar/QAT-13-akram-afif.png",
+    "image": "/cards/qatar/QAT-13-akram-afif.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Karim",
     "lastName": "Boudiaf",
     "fullName": "Karim Boudiaf",
-    "image": "/cards/qatar/QAT-14-karim-boudiaf.png",
+    "image": "/cards/qatar/QAT-14-karim-boudiaf.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Ayoub",
     "lastName": "Aloui",
     "fullName": "Ayoub Aloui",
-    "image": "/cards/qatar/QAT-15-ayoub-aloui.png",
+    "image": "/cards/qatar/QAT-15-ayoub-aloui.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Homam",
     "lastName": "Ahmed",
     "fullName": "Homam Ahmed",
-    "image": "/cards/qatar/QAT-16-homam-ahmed.png",
+    "image": "/cards/qatar/QAT-16-homam-ahmed.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Yusuf",
     "lastName": "Abdurisag",
     "fullName": "Yusuf Abdurisag",
-    "image": "/cards/qatar/QAT-17-yusuf-abdurisag.png",
+    "image": "/cards/qatar/QAT-17-yusuf-abdurisag.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Boualem",
     "lastName": "Khoukhi",
     "fullName": "Boualem Khoukhi",
-    "image": "/cards/qatar/QAT-18-boualem-khoukhi.png",
+    "image": "/cards/qatar/QAT-18-boualem-khoukhi.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Ahmed",
     "lastName": "Alganehi",
     "fullName": "Ahmed Alganehi",
-    "image": "/cards/qatar/QAT-19-ahmed-alganehi.png",
+    "image": "/cards/qatar/QAT-19-ahmed-alganehi.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Sultan",
     "lastName": "Albrake",
     "fullName": "Sultan Albrake",
-    "image": "/cards/qatar/QAT-20-sultan-albrake.png",
+    "image": "/cards/qatar/QAT-20-sultan-albrake.webp",
     "type": "player",
     "team": "Qatar",
     "weight": 20

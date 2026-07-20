@@ -2,7 +2,7 @@
   {
     "id": "cro-01",
     "fullName": "Croatia Team Logo",
-    "image": "/cards/croatia/CRO-01-team-logo.png",
+    "image": "/cards/croatia/CRO-01-team-logo.webp",
     "type": "logo",
     "team": "Croatia",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Zlatko",
     "lastName": "Dalić",
     "fullName": "Zlatko Dalić",
-    "image": "/cards/croatia/CRO-02-zlatko-dalic.png",
+    "image": "/cards/croatia/CRO-02-zlatko-dalic.webp",
     "type": "head coach",
     "team": "Croatia",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Dominik",
     "lastName": "Livaković",
     "fullName": "Dominik Livaković",
-    "image": "/cards/croatia/CRO-03-dominik-livakovic.png",
+    "image": "/cards/croatia/CRO-03-dominik-livakovic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Joško",
     "lastName": "Gvardiol",
     "fullName": "Joško Gvardiol",
-    "image": "/cards/croatia/CRO-04-josko-gvardiol.png",
+    "image": "/cards/croatia/CRO-04-josko-gvardiol.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Josip",
     "lastName": "Stanišić",
     "fullName": "Josip Stanišić",
-    "image": "/cards/croatia/CRO-05-josip-stanisic.png",
+    "image": "/cards/croatia/CRO-05-josip-stanisic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Luka",
     "lastName": "Vušković",
     "fullName": "Luka Vušković",
-    "image": "/cards/croatia/CRO-06-luka-vuskovic.png",
+    "image": "/cards/croatia/CRO-06-luka-vuskovic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Josip",
     "lastName": "Šutalo",
     "fullName": "Josip Šutalo",
-    "image": "/cards/croatia/CRO-07-josip-sutalo.png",
+    "image": "/cards/croatia/CRO-07-josip-sutalo.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Duje",
     "lastName": "Ćaleta-Car",
     "fullName": "Duje Ćaleta-Car",
-    "image": "/cards/croatia/CRO-08-duje-caleta-car.png",
+    "image": "/cards/croatia/CRO-08-duje-caleta-car.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Luka",
     "lastName": "Modrić",
     "fullName": "Luka Modrić",
-    "image": "/cards/croatia/CRO-09-luka-modric.png",
+    "image": "/cards/croatia/CRO-09-luka-modric.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 5
@@ -92,7 +92,7 @@
     "firstName": "Mateo",
     "lastName": "Kovačić",
     "fullName": "Mateo Kovačić",
-    "image": "/cards/croatia/CRO-10-mateo-kovacic.png",
+    "image": "/cards/croatia/CRO-10-mateo-kovacic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Martin",
     "lastName": "Baturina",
     "fullName": "Martin Baturina",
-    "image": "/cards/croatia/CRO-11-martin-baturina.png",
+    "image": "/cards/croatia/CRO-11-martin-baturina.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Lovro",
     "lastName": "Majer",
     "fullName": "Lovro Majer",
-    "image": "/cards/croatia/CRO-12-lovro-majer.png",
+    "image": "/cards/croatia/CRO-12-lovro-majer.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Kristijan",
     "lastName": "Jakić",
     "fullName": "Kristijan Jakić",
-    "image": "/cards/croatia/CRO-13-kristijan-jakic.png",
+    "image": "/cards/croatia/CRO-13-kristijan-jakic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Mario",
     "lastName": "Pašalić",
     "fullName": "Mario Pašalić",
-    "image": "/cards/croatia/CRO-14-mario-pasalic.png",
+    "image": "/cards/croatia/CRO-14-mario-pasalic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Petar",
     "lastName": "Sučić",
     "fullName": "Petar Sučić",
-    "image": "/cards/croatia/CRO-15-petar-sucic.png",
+    "image": "/cards/croatia/CRO-15-petar-sucic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Ivan",
     "lastName": "Perišić",
     "fullName": "Ivan Perišić",
-    "image": "/cards/croatia/CRO-16-ivan-perisic.png",
+    "image": "/cards/croatia/CRO-16-ivan-perisic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Marco",
     "lastName": "Pašalić",
     "fullName": "Marco Pašalić",
-    "image": "/cards/croatia/CRO-17-marco-pasalic.png",
+    "image": "/cards/croatia/CRO-17-marco-pasalic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Ante",
     "lastName": "Budimir",
     "fullName": "Ante Budimir",
-    "image": "/cards/croatia/CRO-18-ante-budimir.png",
+    "image": "/cards/croatia/CRO-18-ante-budimir.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Andrej",
     "lastName": "Kramarić",
     "fullName": "Andrej Kramarić",
-    "image": "/cards/croatia/CRO-19-andrej-kramaric.png",
+    "image": "/cards/croatia/CRO-19-andrej-kramaric.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Franjo",
     "lastName": "Ivanović",
     "fullName": "Franjo Ivanović",
-    "image": "/cards/croatia/CRO-20-franjo-ivanovic.png",
+    "image": "/cards/croatia/CRO-20-franjo-ivanovic.webp",
     "type": "player",
     "team": "Croatia",
     "weight": 20

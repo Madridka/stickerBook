@@ -2,7 +2,7 @@
   {
     "id": "usa-01",
     "fullName": "USA Team Logo",
-    "image": "/cards/usa/USA-01-team-logo.png",
+    "image": "/cards/usa/USA-01-team-logo.webp",
     "type": "logo",
     "team": "USA",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Mauricio",
     "lastName": "Pochettino",
     "fullName": "Mauricio Pochettino",
-    "image": "/cards/usa/USA-02-mauricio-pochettino.png",
+    "image": "/cards/usa/USA-02-mauricio-pochettino.webp",
     "type": "head coach",
     "team": "USA",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Matt",
     "lastName": "Turner",
     "fullName": "Matt Turner",
-    "image": "/cards/usa/USA-03-matt-turner.png",
+    "image": "/cards/usa/USA-03-matt-turner.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Sergino",
     "lastName": "Dest",
     "fullName": "Sergino Dest",
-    "image": "/cards/usa/USA-04-sergino-dest.png",
+    "image": "/cards/usa/USA-04-sergino-dest.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Chris",
     "lastName": "Richards",
     "fullName": "Chris Richards",
-    "image": "/cards/usa/USA-05-chris-richards.png",
+    "image": "/cards/usa/USA-05-chris-richards.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Tyler",
     "lastName": "Adams",
     "fullName": "Tyler Adams",
-    "image": "/cards/usa/USA-06-tyler-adams.png",
+    "image": "/cards/usa/USA-06-tyler-adams.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Antonee",
     "lastName": "Robinson",
     "fullName": "Antonee Robinson",
-    "image": "/cards/usa/USA-07-antonee-robinson.png",
+    "image": "/cards/usa/USA-07-antonee-robinson.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Auston",
     "lastName": "Trusty",
     "fullName": "Auston Trusty",
-    "image": "/cards/usa/USA-08-auston-trusty.png",
+    "image": "/cards/usa/USA-08-auston-trusty.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Giovanni",
     "lastName": "Reyna",
     "fullName": "Giovanni Reyna",
-    "image": "/cards/usa/USA-09-giovanni-reyna.png",
+    "image": "/cards/usa/USA-09-giovanni-reyna.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Weston",
     "lastName": "McKennie",
     "fullName": "Weston McKennie",
-    "image": "/cards/usa/USA-10-weston-mckennie.png",
+    "image": "/cards/usa/USA-10-weston-mckennie.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Ricardo",
     "lastName": "Pepi",
     "fullName": "Ricardo Pepi",
-    "image": "/cards/usa/USA-11-ricardo-pepi.png",
+    "image": "/cards/usa/USA-11-ricardo-pepi.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Christian",
     "lastName": "Pulisic",
     "fullName": "Christian Pulisic",
-    "image": "/cards/usa/USA-12-christian-pulisic.png",
+    "image": "/cards/usa/USA-12-christian-pulisic.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Brenden",
     "lastName": "Aaronson",
     "fullName": "Brenden Aaronson",
-    "image": "/cards/usa/USA-13-brenden-aaronson.png",
+    "image": "/cards/usa/USA-13-brenden-aaronson.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Miles",
     "lastName": "Robinson",
     "fullName": "Miles Robinson",
-    "image": "/cards/usa/USA-14-miles-robinson.png",
+    "image": "/cards/usa/USA-14-miles-robinson.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Tim",
     "lastName": "Ream",
     "fullName": "Tim Ream",
-    "image": "/cards/usa/USA-15-tim-ream.png",
+    "image": "/cards/usa/USA-15-tim-ream.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Sebastian",
     "lastName": "Berhalter",
     "fullName": "Sebastian Berhalter",
-    "image": "/cards/usa/USA-16-sebastian-berhalter.png",
+    "image": "/cards/usa/USA-16-sebastian-berhalter.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Cristian",
     "lastName": "Roldan",
     "fullName": "Cristian Roldan",
-    "image": "/cards/usa/USA-17-cristian-roldan.png",
+    "image": "/cards/usa/USA-17-cristian-roldan.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Alex",
     "lastName": "Freeman",
     "fullName": "Alex Freeman",
-    "image": "/cards/usa/USA-18-alex-freeman.png",
+    "image": "/cards/usa/USA-18-alex-freeman.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Malik",
     "lastName": "Tillman",
     "fullName": "Malik Tillman",
-    "image": "/cards/usa/USA-19-malik-tillman.png",
+    "image": "/cards/usa/USA-19-malik-tillman.webp",
     "type": "player",
     "team": "USA",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Max",
     "lastName": "Arfsten",
     "fullName": "Max Arfsten",
-    "image": "/cards/usa/USA-20-max-arfsten.png",
+    "image": "/cards/usa/USA-20-max-arfsten.webp",
     "type": "player",
     "team": "USA",
     "weight": 20

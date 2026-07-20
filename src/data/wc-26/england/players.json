@@ -2,7 +2,7 @@
   {
     "id": "eng-01",
     "fullName": "England Team Logo",
-    "image": "/cards/england/ENG-01-team-logo.png",
+    "image": "/cards/england/ENG-01-team-logo.webp",
     "type": "logo",
     "team": "England",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Thomas",
     "lastName": "Tuchel",
     "fullName": "Thomas Tuchel",
-    "image": "/cards/england/ENG-02-thomas-tuchel.png",
+    "image": "/cards/england/ENG-02-thomas-tuchel.webp",
     "type": "head coach",
     "team": "England",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Jordan",
     "lastName": "Pickford",
     "fullName": "Jordan Pickford",
-    "image": "/cards/england/ENG-03-jordan-pickford.png",
+    "image": "/cards/england/ENG-03-jordan-pickford.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Dean",
     "lastName": "Henderson",
     "fullName": "Dean Henderson",
-    "image": "/cards/england/ENG-04-dean-henderson.png",
+    "image": "/cards/england/ENG-04-dean-henderson.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "John",
     "lastName": "Stones",
     "fullName": "John Stones",
-    "image": "/cards/england/ENG-05-john-stones.png",
+    "image": "/cards/england/ENG-05-john-stones.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Marc",
     "lastName": "Guéhi",
     "fullName": "Marc Guéhi",
-    "image": "/cards/england/ENG-06-marc-guehi.png",
+    "image": "/cards/england/ENG-06-marc-guehi.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Reece",
     "lastName": "James",
     "fullName": "Reece James",
-    "image": "/cards/england/ENG-07-reece-james.png",
+    "image": "/cards/england/ENG-07-reece-james.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Ezri",
     "lastName": "Konsa",
     "fullName": "Ezri Konsa",
-    "image": "/cards/england/ENG-08-ezri-konsa.png",
+    "image": "/cards/england/ENG-08-ezri-konsa.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Trevoh",
     "lastName": "Chalobah",
     "fullName": "Trevoh Chalobah",
-    "image": "/cards/england/ENG-09-trevoh-chalobah.png",
+    "image": "/cards/england/ENG-09-trevoh-chalobah.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Declan",
     "lastName": "Rice",
     "fullName": "Declan Rice",
-    "image": "/cards/england/ENG-10-declan-rice.png",
+    "image": "/cards/england/ENG-10-declan-rice.webp",
     "type": "player",
     "team": "England",
     "weight": 10
@@ -102,7 +102,7 @@
     "firstName": "Jude",
     "lastName": "Bellingham",
     "fullName": "Jude Bellingham",
-    "image": "/cards/england/ENG-11-jude-bellingham.png",
+    "image": "/cards/england/ENG-11-jude-bellingham.webp",
     "type": "player",
     "team": "England",
     "weight": 5
@@ -112,7 +112,7 @@
     "firstName": "Elliot",
     "lastName": "Anderson",
     "fullName": "Elliot Anderson",
-    "image": "/cards/england/ENG-12-elliot-anderson.png",
+    "image": "/cards/england/ENG-12-elliot-anderson.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Eberechi",
     "lastName": "Eze",
     "fullName": "Eberechi Eze",
-    "image": "/cards/england/ENG-13-eberechi-eze.png",
+    "image": "/cards/england/ENG-13-eberechi-eze.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Kobbie",
     "lastName": "Mainoo",
     "fullName": "Kobbie Mainoo",
-    "image": "/cards/england/ENG-14-kobbie-mainoo.png",
+    "image": "/cards/england/ENG-14-kobbie-mainoo.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Morgan",
     "lastName": "Rogers",
     "fullName": "Morgan Rogers",
-    "image": "/cards/england/ENG-15-morgan-rogers.png",
+    "image": "/cards/england/ENG-15-morgan-rogers.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Bukayo",
     "lastName": "Saka",
     "fullName": "Bukayo Saka",
-    "image": "/cards/england/ENG-16-bukayo-saka.png",
+    "image": "/cards/england/ENG-16-bukayo-saka.webp",
     "type": "player",
     "team": "England",
     "weight": 10
@@ -162,7 +162,7 @@
     "firstName": "Harry",
     "lastName": "Kane",
     "fullName": "Harry Kane",
-    "image": "/cards/england/ENG-17-harry-kane.png",
+    "image": "/cards/england/ENG-17-harry-kane.webp",
     "type": "player",
     "team": "England",
     "weight": 5
@@ -172,7 +172,7 @@
     "firstName": "Marcus",
     "lastName": "Rashford",
     "fullName": "Marcus Rashford",
-    "image": "/cards/england/ENG-18-marcus-rashford.png",
+    "image": "/cards/england/ENG-18-marcus-rashford.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Anthony",
     "lastName": "Gordon",
     "fullName": "Anthony Gordon",
-    "image": "/cards/england/ENG-19-anthony-gordon.png",
+    "image": "/cards/england/ENG-19-anthony-gordon.webp",
     "type": "player",
     "team": "England",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Ollie",
     "lastName": "Watkins",
     "fullName": "Ollie Watkins",
-    "image": "/cards/england/ENG-20-ollie-watkins.png",
+    "image": "/cards/england/ENG-20-ollie-watkins.webp",
     "type": "player",
     "team": "England",
     "weight": 20

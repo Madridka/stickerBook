@@ -2,7 +2,7 @@
   {
     "id": "jpn-01",
     "fullName": "Japan Team Logo",
-    "image": "/cards/japan/JPN-01-team-logo.png",
+    "image": "/cards/japan/JPN-01-team-logo.webp",
     "type": "logo",
     "team": "Japan",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Hajime",
     "lastName": "Moriyasu",
     "fullName": "Hajime Moriyasu",
-    "image": "/cards/japan/JPN-02-hajime-moriyasu.png",
+    "image": "/cards/japan/JPN-02-hajime-moriyasu.webp",
     "type": "head coach",
     "team": "Japan",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Zion",
     "lastName": "Suzuki",
     "fullName": "Zion Suzuki",
-    "image": "/cards/japan/JPN-03-zion-suzuki.png",
+    "image": "/cards/japan/JPN-03-zion-suzuki.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Yukinari",
     "lastName": "Sugawara",
     "fullName": "Yukinari Sugawara",
-    "image": "/cards/japan/JPN-04-yukinari-sugawara.png",
+    "image": "/cards/japan/JPN-04-yukinari-sugawara.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Shogo",
     "lastName": "Taniguchi",
     "fullName": "Shogo Taniguchi",
-    "image": "/cards/japan/JPN-05-shogo-taniguchi.png",
+    "image": "/cards/japan/JPN-05-shogo-taniguchi.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Kou",
     "lastName": "Itakura",
     "fullName": "Kou Itakura",
-    "image": "/cards/japan/JPN-06-kou-itakura.png",
+    "image": "/cards/japan/JPN-06-kou-itakura.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Yuto",
     "lastName": "Nagatomo",
     "fullName": "Yuto Nagatomo",
-    "image": "/cards/japan/JPN-07-yuto-nagatomo.png",
+    "image": "/cards/japan/JPN-07-yuto-nagatomo.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Shuto",
     "lastName": "Machino",
     "fullName": "Shuto Machino",
-    "image": "/cards/japan/JPN-08-shuto-machino.png",
+    "image": "/cards/japan/JPN-08-shuto-machino.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Ao",
     "lastName": "Tanaka",
     "fullName": "Ao Tanaka",
-    "image": "/cards/japan/JPN-09-ao-tanaka.png",
+    "image": "/cards/japan/JPN-09-ao-tanaka.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Takefusa",
     "lastName": "Kubo",
     "fullName": "Takefusa Kubo",
-    "image": "/cards/japan/JPN-10-takefusa-kubo.png",
+    "image": "/cards/japan/JPN-10-takefusa-kubo.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Keisuke",
     "lastName": "Goto",
     "fullName": "Keisuke Goto",
-    "image": "/cards/japan/JPN-11-keisuke-goto.png",
+    "image": "/cards/japan/JPN-11-keisuke-goto.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Ritsu",
     "lastName": "Doan",
     "fullName": "Ritsu Doan",
-    "image": "/cards/japan/JPN-12-ritsu-doan.png",
+    "image": "/cards/japan/JPN-12-ritsu-doan.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Daizen",
     "lastName": "Maeda",
     "fullName": "Daizen Maeda",
-    "image": "/cards/japan/JPN-13-daizen-maeda.png",
+    "image": "/cards/japan/JPN-13-daizen-maeda.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Keisuke",
     "lastName": "Osako",
     "fullName": "Keisuke Osako",
-    "image": "/cards/japan/JPN-14-keisuke-osako.png",
+    "image": "/cards/japan/JPN-14-keisuke-osako.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Keito",
     "lastName": "Nakamura",
     "fullName": "Keito Nakamura",
-    "image": "/cards/japan/JPN-15-keito-nakamura.png",
+    "image": "/cards/japan/JPN-15-keito-nakamura.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Junya",
     "lastName": "Ito",
     "fullName": "Junya Ito",
-    "image": "/cards/japan/JPN-16-junya-ito.png",
+    "image": "/cards/japan/JPN-16-junya-ito.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Daichi",
     "lastName": "Kamada",
     "fullName": "Daichi Kamada",
-    "image": "/cards/japan/JPN-17-daichi-kamada.png",
+    "image": "/cards/japan/JPN-17-daichi-kamada.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Tsuyoshi",
     "lastName": "Watanabe",
     "fullName": "Tsuyoshi Watanabe",
-    "image": "/cards/japan/JPN-18-tsuyoshi-watanabe.png",
+    "image": "/cards/japan/JPN-18-tsuyoshi-watanabe.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Yuito",
     "lastName": "Suzuki",
     "fullName": "Yuito Suzuki",
-    "image": "/cards/japan/JPN-19-yuito-suzuki.png",
+    "image": "/cards/japan/JPN-19-yuito-suzuki.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Ayase",
     "lastName": "Ueda",
     "fullName": "Ayase Ueda",
-    "image": "/cards/japan/JPN-20-ayase-ueda.png",
+    "image": "/cards/japan/JPN-20-ayase-ueda.webp",
     "type": "player",
     "team": "Japan",
     "weight": 20

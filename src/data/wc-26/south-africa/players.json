@@ -2,7 +2,7 @@
   {
     "id": "rsa-01",
     "fullName": "South Africa Team Logo",
-    "image": "/cards/south-africa/RSA-01-team-logo.png",
+    "image": "/cards/south-africa/RSA-01-team-logo.webp",
     "type": "logo",
     "team": "South Africa",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Hugo",
     "lastName": "Broos",
     "fullName": "Hugo Broos",
-    "image": "/cards/south-africa/RSA-02-hugo-broos.png",
+    "image": "/cards/south-africa/RSA-02-hugo-broos.webp",
     "type": "head coach",
     "team": "South Africa",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Ronwen",
     "lastName": "Williams",
     "fullName": "Ronwen Williams",
-    "image": "/cards/south-africa/RSA-03-ronwen-williams.png",
+    "image": "/cards/south-africa/RSA-03-ronwen-williams.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Thabang",
     "lastName": "Matuludi",
     "fullName": "Thabang Matuludi",
-    "image": "/cards/south-africa/RSA-04-thabang-matuludi.png",
+    "image": "/cards/south-africa/RSA-04-thabang-matuludi.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Khulumani",
     "lastName": "Ndamane",
     "fullName": "Khulumani Ndamane",
-    "image": "/cards/south-africa/RSA-05-khulumani-ndamane.png",
+    "image": "/cards/south-africa/RSA-05-khulumani-ndamane.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Teboho",
     "lastName": "Mokoena",
     "fullName": "Teboho Mokoena",
-    "image": "/cards/south-africa/RSA-06-teboho-mokoena.png",
+    "image": "/cards/south-africa/RSA-06-teboho-mokoena.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Thalente",
     "lastName": "Mbatha",
     "fullName": "Thalente Mbatha",
-    "image": "/cards/south-africa/RSA-07-thalente-mbatha.png",
+    "image": "/cards/south-africa/RSA-07-thalente-mbatha.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Aubrey",
     "lastName": "Modiba",
     "fullName": "Aubrey Modiba",
-    "image": "/cards/south-africa/RSA-08-aubrey-modiba.png",
+    "image": "/cards/south-africa/RSA-08-aubrey-modiba.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Oswin",
     "lastName": "Appollis",
     "fullName": "Oswin Appollis",
-    "image": "/cards/south-africa/RSA-09-oswin-appollis.png",
+    "image": "/cards/south-africa/RSA-09-oswin-appollis.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Tshepang",
     "lastName": "Moremi",
     "fullName": "Tshepang Moremi",
-    "image": "/cards/south-africa/RSA-10-tshepang-moremi.png",
+    "image": "/cards/south-africa/RSA-10-tshepang-moremi.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Lyle",
     "lastName": "Foster",
     "fullName": "Lyle Foster",
-    "image": "/cards/south-africa/RSA-11-lyle-foster.png",
+    "image": "/cards/south-africa/RSA-11-lyle-foster.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Relebohile",
     "lastName": "Mofokeng",
     "fullName": "Relebohile Mofokeng",
-    "image": "/cards/south-africa/RSA-12-relebohile-mofokeng.png",
+    "image": "/cards/south-africa/RSA-12-relebohile-mofokeng.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Themba",
     "lastName": "Zwane",
     "fullName": "Themba Zwane",
-    "image": "/cards/south-africa/RSA-13-themba-zwane.png",
+    "image": "/cards/south-africa/RSA-13-themba-zwane.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Thapelo",
     "lastName": "Maseko",
     "fullName": "Thapelo Maseko",
-    "image": "/cards/south-africa/RSA-14-thapelo-maseko.png",
+    "image": "/cards/south-africa/RSA-14-thapelo-maseko.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Sphephelo",
     "lastName": "Sithole",
     "fullName": "Sphephelo Sithole",
-    "image": "/cards/south-africa/RSA-15-sphephelo-sithole.png",
+    "image": "/cards/south-africa/RSA-15-sphephelo-sithole.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Mbekezeli",
     "lastName": "Mbokazi",
     "fullName": "Mbekezeli Mbokazi",
-    "image": "/cards/south-africa/RSA-16-mbekezeli-mbokazi.png",
+    "image": "/cards/south-africa/RSA-16-mbekezeli-mbokazi.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Iqraam",
     "lastName": "Rayners",
     "fullName": "Iqraam Rayners",
-    "image": "/cards/south-africa/RSA-17-iqraam-rayners.png",
+    "image": "/cards/south-africa/RSA-17-iqraam-rayners.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Sipho",
     "lastName": "Chaine",
     "fullName": "Sipho Chaine",
-    "image": "/cards/south-africa/RSA-18-sipho-chaine.png",
+    "image": "/cards/south-africa/RSA-18-sipho-chaine.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Evidence",
     "lastName": "Makgopa",
     "fullName": "Evidence Makgopa",
-    "image": "/cards/south-africa/RSA-19-evidence-makgopa.png",
+    "image": "/cards/south-africa/RSA-19-evidence-makgopa.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Samukele",
     "lastName": "Kabini",
     "fullName": "Samukele Kabini",
-    "image": "/cards/south-africa/RSA-20-samukele-kabini.png",
+    "image": "/cards/south-africa/RSA-20-samukele-kabini.webp",
     "type": "player",
     "team": "South Africa",
     "weight": 20

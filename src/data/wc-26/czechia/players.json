@@ -2,7 +2,7 @@
   {
     "id": "cze-01",
     "fullName": "Czechia Team Logo",
-    "image": "/cards/czechia/CZE-01-team-logo.png",
+    "image": "/cards/czechia/CZE-01-team-logo.webp",
     "type": "logo",
     "team": "Czechia",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Miroslav",
     "lastName": "Koubek",
     "fullName": "Miroslav Koubek",
-    "image": "/cards/czechia/CZE-02-miroslav-koubek.png",
+    "image": "/cards/czechia/CZE-02-miroslav-koubek.webp",
     "type": "head coach",
     "team": "Czechia",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Matej",
     "lastName": "Kovar",
     "fullName": "Matej Kovar",
-    "image": "/cards/czechia/CZE-03-matej-kovar.png",
+    "image": "/cards/czechia/CZE-03-matej-kovar.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "David",
     "lastName": "Zima",
     "fullName": "David Zima",
-    "image": "/cards/czechia/CZE-04-david-zima.png",
+    "image": "/cards/czechia/CZE-04-david-zima.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Tomas",
     "lastName": "Holes",
     "fullName": "Tomas Holes",
-    "image": "/cards/czechia/CZE-05-tomas-holes.png",
+    "image": "/cards/czechia/CZE-05-tomas-holes.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Robin",
     "lastName": "Hranac",
     "fullName": "Robin Hranac",
-    "image": "/cards/czechia/CZE-06-robin-hranac.png",
+    "image": "/cards/czechia/CZE-06-robin-hranac.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Vladimir",
     "lastName": "Coufal",
     "fullName": "Vladimir Coufal",
-    "image": "/cards/czechia/CZE-07-vladimir-coufal.png",
+    "image": "/cards/czechia/CZE-07-vladimir-coufal.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Stepan",
     "lastName": "Chaloupek",
     "fullName": "Stepan Chaloupek",
-    "image": "/cards/czechia/CZE-08-stepan-chaloupek.png",
+    "image": "/cards/czechia/CZE-08-stepan-chaloupek.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Ladislav",
     "lastName": "Krejci",
     "fullName": "Ladislav Krejci",
-    "image": "/cards/czechia/CZE-09-ladislav-krejci.png",
+    "image": "/cards/czechia/CZE-09-ladislav-krejci.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Vladimir",
     "lastName": "Darida",
     "fullName": "Vladimir Darida",
-    "image": "/cards/czechia/CZE-10-vladimir-darida.png",
+    "image": "/cards/czechia/CZE-10-vladimir-darida.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Adam",
     "lastName": "Hlozek",
     "fullName": "Adam Hlozek",
-    "image": "/cards/czechia/CZE-11-adam-hlozek.png",
+    "image": "/cards/czechia/CZE-11-adam-hlozek.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Patrik",
     "lastName": "Schick",
     "fullName": "Patrik Schick",
-    "image": "/cards/czechia/CZE-12-patrik-schick.png",
+    "image": "/cards/czechia/CZE-12-patrik-schick.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Jan",
     "lastName": "Kuchta",
     "fullName": "Jan Kuchta",
-    "image": "/cards/czechia/CZE-13-jan-kuchta.png",
+    "image": "/cards/czechia/CZE-13-jan-kuchta.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Lukas",
     "lastName": "Cerv",
     "fullName": "Lukas Cerv",
-    "image": "/cards/czechia/CZE-14-lukas-cerv.png",
+    "image": "/cards/czechia/CZE-14-lukas-cerv.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Mojmir",
     "lastName": "Chytil",
     "fullName": "Mojmir Chytil",
-    "image": "/cards/czechia/CZE-15-mojmir-chytil.png",
+    "image": "/cards/czechia/CZE-15-mojmir-chytil.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "David",
     "lastName": "Jurasek",
     "fullName": "David Jurasek",
-    "image": "/cards/czechia/CZE-16-david-jurasek.png",
+    "image": "/cards/czechia/CZE-16-david-jurasek.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Pavel",
     "lastName": "Sulc",
     "fullName": "Pavel Sulc",
-    "image": "/cards/czechia/CZE-17-pavel-sulc.png",
+    "image": "/cards/czechia/CZE-17-pavel-sulc.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Jindrich",
     "lastName": "Stanek",
     "fullName": "Jindrich Stanek",
-    "image": "/cards/czechia/CZE-18-jindrich-stanek.png",
+    "image": "/cards/czechia/CZE-18-jindrich-stanek.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Lukas",
     "lastName": "Provod",
     "fullName": "Lukas Provod",
-    "image": "/cards/czechia/CZE-19-lukas-provod.png",
+    "image": "/cards/czechia/CZE-19-lukas-provod.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Michal",
     "lastName": "Sadilek",
     "fullName": "Michal Sadilek",
-    "image": "/cards/czechia/CZE-20-michal-sadilek.png",
+    "image": "/cards/czechia/CZE-20-michal-sadilek.webp",
     "type": "player",
     "team": "Czechia",
     "weight": 20

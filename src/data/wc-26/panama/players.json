@@ -2,7 +2,7 @@
   {
     "id": "pan-01",
     "fullName": "Panama Team Logo",
-    "image": "/cards/panama/PAN-01-team-logo.png",
+    "image": "/cards/panama/PAN-01-team-logo.webp",
     "type": "logo",
     "team": "Panama",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Thomas",
     "lastName": "Christiansen",
     "fullName": "Thomas Christiansen",
-    "image": "/cards/panama/PAN-02-thomas-christiansen.png",
+    "image": "/cards/panama/PAN-02-thomas-christiansen.webp",
     "type": "head coach",
     "team": "Panama",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Luis",
     "lastName": "Mejia",
     "fullName": "Luis Mejia",
-    "image": "/cards/panama/PAN-03-luis-mejia.png",
+    "image": "/cards/panama/PAN-03-luis-mejia.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Cesar",
     "lastName": "Blackman",
     "fullName": "Cesar Blackman",
-    "image": "/cards/panama/PAN-04-cesar-blackman.png",
+    "image": "/cards/panama/PAN-04-cesar-blackman.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Jose",
     "lastName": "Cordoba",
     "fullName": "Jose Cordoba",
-    "image": "/cards/panama/PAN-05-jose-cordoba.png",
+    "image": "/cards/panama/PAN-05-jose-cordoba.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Fidel",
     "lastName": "Escobar",
     "fullName": "Fidel Escobar",
-    "image": "/cards/panama/PAN-06-fidel-escobar.png",
+    "image": "/cards/panama/PAN-06-fidel-escobar.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Edgardo",
     "lastName": "Farina",
     "fullName": "Edgardo Farina",
-    "image": "/cards/panama/PAN-07-edgardo-farina.png",
+    "image": "/cards/panama/PAN-07-edgardo-farina.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Cristian",
     "lastName": "Martinez",
     "fullName": "Cristian Martinez",
-    "image": "/cards/panama/PAN-08-cristian-martinez.png",
+    "image": "/cards/panama/PAN-08-cristian-martinez.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Jose",
     "lastName": "Rodriguez",
     "fullName": "Jose Rodriguez",
-    "image": "/cards/panama/PAN-09-jose-rodriguez.png",
+    "image": "/cards/panama/PAN-09-jose-rodriguez.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Adalberto",
     "lastName": "Carrasquilla",
     "fullName": "Adalberto Carrasquilla",
-    "image": "/cards/panama/PAN-10-adalberto-carrasquilla.png",
+    "image": "/cards/panama/PAN-10-adalberto-carrasquilla.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Tomas",
     "lastName": "Rodriguez",
     "fullName": "Tomas Rodriguez",
-    "image": "/cards/panama/PAN-11-tomas-rodriguez.png",
+    "image": "/cards/panama/PAN-11-tomas-rodriguez.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Ismael",
     "lastName": "Diaz",
     "fullName": "Ismael Diaz",
-    "image": "/cards/panama/PAN-12-ismael-diaz.png",
+    "image": "/cards/panama/PAN-12-ismael-diaz.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Edgar",
     "lastName": "Barcenas",
     "fullName": "Edgar Barcenas",
-    "image": "/cards/panama/PAN-13-edgar-barcenas.png",
+    "image": "/cards/panama/PAN-13-edgar-barcenas.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Cesar",
     "lastName": "Samudio",
     "fullName": "Cesar Samudio",
-    "image": "/cards/panama/PAN-14-cesar-samudio.png",
+    "image": "/cards/panama/PAN-14-cesar-samudio.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Jiovany",
     "lastName": "Ramos",
     "fullName": "Jiovany Ramos",
-    "image": "/cards/panama/PAN-15-jiovany-ramos.png",
+    "image": "/cards/panama/PAN-15-jiovany-ramos.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Carlos",
     "lastName": "Harvey",
     "fullName": "Carlos Harvey",
-    "image": "/cards/panama/PAN-16-carlos-harvey.png",
+    "image": "/cards/panama/PAN-16-carlos-harvey.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Eric",
     "lastName": "Davis",
     "fullName": "Eric Davis",
-    "image": "/cards/panama/PAN-17-eric-davis.png",
+    "image": "/cards/panama/PAN-17-eric-davis.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Andres",
     "lastName": "Andrade",
     "fullName": "Andres Andrade",
-    "image": "/cards/panama/PAN-18-andres-andrade.png",
+    "image": "/cards/panama/PAN-18-andres-andrade.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Jose",
     "lastName": "Fajardo",
     "fullName": "Jose Fajardo",
-    "image": "/cards/panama/PAN-19-jose-fajardo.png",
+    "image": "/cards/panama/PAN-19-jose-fajardo.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Cecilio",
     "lastName": "Waterman",
     "fullName": "Cecilio Waterman",
-    "image": "/cards/panama/PAN-20-cecilio-waterman.png",
+    "image": "/cards/panama/PAN-20-cecilio-waterman.webp",
     "type": "player",
     "team": "Panama",
     "weight": 20

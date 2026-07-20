@@ -2,7 +2,7 @@
   {
     "id": "sui-01",
     "fullName": "Switzerland Team Logo",
-    "image": "/cards/switzerland/SUI-01-team-logo.png",
+    "image": "/cards/switzerland/SUI-01-team-logo.webp",
     "type": "logo",
     "team": "Switzerland",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Murat",
     "lastName": "Yakin",
     "fullName": "Murat Yakin",
-    "image": "/cards/switzerland/SUI-02-murat-yakin.png",
+    "image": "/cards/switzerland/SUI-02-murat-yakin.webp",
     "type": "head coach",
     "team": "Switzerland",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Gregor",
     "lastName": "Kobel",
     "fullName": "Gregor Kobel",
-    "image": "/cards/switzerland/SUI-03-gregor-kobel.png",
+    "image": "/cards/switzerland/SUI-03-gregor-kobel.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Miro",
     "lastName": "Muheim",
     "fullName": "Miro Muheim",
-    "image": "/cards/switzerland/SUI-04-miro-muheim.png",
+    "image": "/cards/switzerland/SUI-04-miro-muheim.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Silvan",
     "lastName": "Widmer",
     "fullName": "Silvan Widmer",
-    "image": "/cards/switzerland/SUI-05-silvan-widmer.png",
+    "image": "/cards/switzerland/SUI-05-silvan-widmer.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Nico",
     "lastName": "Elvedi",
     "fullName": "Nico Elvedi",
-    "image": "/cards/switzerland/SUI-06-nico-elvedi.png",
+    "image": "/cards/switzerland/SUI-06-nico-elvedi.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Manuel",
     "lastName": "Akanji",
     "fullName": "Manuel Akanji",
-    "image": "/cards/switzerland/SUI-07-manuel-akanji.png",
+    "image": "/cards/switzerland/SUI-07-manuel-akanji.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Denis",
     "lastName": "Zakaria",
     "fullName": "Denis Zakaria",
-    "image": "/cards/switzerland/SUI-08-denis-zakaria.png",
+    "image": "/cards/switzerland/SUI-08-denis-zakaria.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Breel",
     "lastName": "Embolo",
     "fullName": "Breel Embolo",
-    "image": "/cards/switzerland/SUI-09-breel-embolo.png",
+    "image": "/cards/switzerland/SUI-09-breel-embolo.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Remo",
     "lastName": "Freuler",
     "fullName": "Remo Freuler",
-    "image": "/cards/switzerland/SUI-10-remo-freuler.png",
+    "image": "/cards/switzerland/SUI-10-remo-freuler.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Johan",
     "lastName": "Manzambi",
     "fullName": "Johan Manzambi",
-    "image": "/cards/switzerland/SUI-11-johan-manzambi.png",
+    "image": "/cards/switzerland/SUI-11-johan-manzambi.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Granit",
     "lastName": "Xhaka",
     "fullName": "Granit Xhaka",
-    "image": "/cards/switzerland/SUI-12-granit-xhaka.png",
+    "image": "/cards/switzerland/SUI-12-granit-xhaka.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Dan",
     "lastName": "Ndoye",
     "fullName": "Dan Ndoye",
-    "image": "/cards/switzerland/SUI-13-dan-ndoye.png",
+    "image": "/cards/switzerland/SUI-13-dan-ndoye.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Yvon",
     "lastName": "Mvogo",
     "fullName": "Yvon Mvogo",
-    "image": "/cards/switzerland/SUI-14-yvon-mvogo.png",
+    "image": "/cards/switzerland/SUI-14-yvon-mvogo.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Ricardo",
     "lastName": "Rodriguez",
     "fullName": "Ricardo Rodriguez",
-    "image": "/cards/switzerland/SUI-15-ricardo-rodriguez.png",
+    "image": "/cards/switzerland/SUI-15-ricardo-rodriguez.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Ardon",
     "lastName": "Jashari",
     "fullName": "Ardon Jashari",
-    "image": "/cards/switzerland/SUI-16-ardon-jashari.png",
+    "image": "/cards/switzerland/SUI-16-ardon-jashari.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Djibril",
     "lastName": "Sow",
     "fullName": "Djibril Sow",
-    "image": "/cards/switzerland/SUI-17-djibril-sow.png",
+    "image": "/cards/switzerland/SUI-17-djibril-sow.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Christian",
     "lastName": "Fassnacht",
     "fullName": "Christian Fassnacht",
-    "image": "/cards/switzerland/SUI-18-christian-fassnacht.png",
+    "image": "/cards/switzerland/SUI-18-christian-fassnacht.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Ruben",
     "lastName": "Vargas",
     "fullName": "Ruben Vargas",
-    "image": "/cards/switzerland/SUI-19-ruben-vargas.png",
+    "image": "/cards/switzerland/SUI-19-ruben-vargas.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Eray",
     "lastName": "Coemert",
     "fullName": "Eray Coemert",
-    "image": "/cards/switzerland/SUI-20-eray-coemert.png",
+    "image": "/cards/switzerland/SUI-20-eray-coemert.webp",
     "type": "player",
     "team": "Switzerland",
     "weight": 20

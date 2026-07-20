@@ -2,7 +2,7 @@
   {
     "id": "col-01",
     "fullName": "Colombia Team Logo",
-    "image": "/cards/colombia/COL-01-team-logo.png",
+    "image": "/cards/colombia/COL-01-team-logo.webp",
     "type": "logo",
     "team": "Colombia",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Nestor",
     "lastName": "Lorenzo",
     "fullName": "Nestor Lorenzo",
-    "image": "/cards/colombia/COL-02-nestor-lorenzo.png",
+    "image": "/cards/colombia/COL-02-nestor-lorenzo.webp",
     "type": "head coach",
     "team": "Colombia",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "David",
     "lastName": "Ospina",
     "fullName": "David Ospina",
-    "image": "/cards/colombia/COL-03-david-ospina.png",
+    "image": "/cards/colombia/COL-03-david-ospina.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Daniel",
     "lastName": "Munoz",
     "fullName": "Daniel Munoz",
-    "image": "/cards/colombia/COL-04-daniel-munoz.png",
+    "image": "/cards/colombia/COL-04-daniel-munoz.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Jhon",
     "lastName": "Lucumi",
     "fullName": "Jhon Lucumi",
-    "image": "/cards/colombia/COL-05-jhon-lucumi.png",
+    "image": "/cards/colombia/COL-05-jhon-lucumi.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Santiago",
     "lastName": "Arias",
     "fullName": "Santiago Arias",
-    "image": "/cards/colombia/COL-06-santiago-arias.png",
+    "image": "/cards/colombia/COL-06-santiago-arias.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Kevin",
     "lastName": "Castano",
     "fullName": "Kevin Castano",
-    "image": "/cards/colombia/COL-07-kevin-castano.png",
+    "image": "/cards/colombia/COL-07-kevin-castano.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Richard",
     "lastName": "Rios",
     "fullName": "Richard Rios",
-    "image": "/cards/colombia/COL-08-richard-rios.png",
+    "image": "/cards/colombia/COL-08-richard-rios.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Luis",
     "lastName": "Diaz",
     "fullName": "Luis Diaz",
-    "image": "/cards/colombia/COL-09-luis-diaz.png",
+    "image": "/cards/colombia/COL-09-luis-diaz.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Jorge",
     "lastName": "Carrascal",
     "fullName": "Jorge Carrascal",
-    "image": "/cards/colombia/COL-10-jorge-carrascal.png",
+    "image": "/cards/colombia/COL-10-jorge-carrascal.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Jhon",
     "lastName": "Cordoba",
     "fullName": "Jhon Cordoba",
-    "image": "/cards/colombia/COL-11-jhon-cordoba.png",
+    "image": "/cards/colombia/COL-11-jhon-cordoba.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "James",
     "lastName": "Rodriguez",
     "fullName": "James Rodriguez",
-    "image": "/cards/colombia/COL-12-james-rodriguez.png",
+    "image": "/cards/colombia/COL-12-james-rodriguez.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Jhon",
     "lastName": "Arias",
     "fullName": "Jhon Arias",
-    "image": "/cards/colombia/COL-13-jhon-arias.png",
+    "image": "/cards/colombia/COL-13-jhon-arias.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Camilo",
     "lastName": "Vargas",
     "fullName": "Camilo Vargas",
-    "image": "/cards/colombia/COL-14-camilo-vargas.png",
+    "image": "/cards/colombia/COL-14-camilo-vargas.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Yerry",
     "lastName": "Mina",
     "fullName": "Yerry Mina",
-    "image": "/cards/colombia/COL-15-yerry-mina.png",
+    "image": "/cards/colombia/COL-15-yerry-mina.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Gustavo",
     "lastName": "Puerta",
     "fullName": "Gustavo Puerta",
-    "image": "/cards/colombia/COL-16-gustavo-puerta.png",
+    "image": "/cards/colombia/COL-16-gustavo-puerta.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Juan",
     "lastName": "Portilla",
     "fullName": "Juan Portilla",
-    "image": "/cards/colombia/COL-17-juan-portilla.png",
+    "image": "/cards/colombia/COL-17-juan-portilla.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Jefferson",
     "lastName": "Lerma",
     "fullName": "Jefferson Lerma",
-    "image": "/cards/colombia/COL-18-jefferson-lerma.png",
+    "image": "/cards/colombia/COL-18-jefferson-lerma.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Johan",
     "lastName": "Mojica",
     "fullName": "Johan Mojica",
-    "image": "/cards/colombia/COL-19-johan-mojica.png",
+    "image": "/cards/colombia/COL-19-johan-mojica.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Willer",
     "lastName": "Ditta",
     "fullName": "Willer Ditta",
-    "image": "/cards/colombia/COL-20-willer-ditta.png",
+    "image": "/cards/colombia/COL-20-willer-ditta.webp",
     "type": "player",
     "team": "Colombia",
     "weight": 20

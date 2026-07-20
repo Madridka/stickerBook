@@ -2,7 +2,7 @@
   {
     "id": "aut-01",
     "fullName": "Austria Team Logo",
-    "image": "/cards/austria/AUT-01-team-logo.png",
+    "image": "/cards/austria/AUT-01-team-logo.webp",
     "type": "logo",
     "team": "Austria",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Ralf",
     "lastName": "Rangnick",
     "fullName": "Ralf Rangnick",
-    "image": "/cards/austria/AUT-02-ralf-rangnick.png",
+    "image": "/cards/austria/AUT-02-ralf-rangnick.webp",
     "type": "head coach",
     "team": "Austria",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Alexander",
     "lastName": "Schlager",
     "fullName": "Alexander Schlager",
-    "image": "/cards/austria/AUT-03-alexander-schlager.png",
+    "image": "/cards/austria/AUT-03-alexander-schlager.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "David",
     "lastName": "Affengruber",
     "fullName": "David Affengruber",
-    "image": "/cards/austria/AUT-04-david-affengruber.png",
+    "image": "/cards/austria/AUT-04-david-affengruber.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Kevin",
     "lastName": "Danso",
     "fullName": "Kevin Danso",
-    "image": "/cards/austria/AUT-05-kevin-danso.png",
+    "image": "/cards/austria/AUT-05-kevin-danso.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Xaver",
     "lastName": "Schlager",
     "fullName": "Xaver Schlager",
-    "image": "/cards/austria/AUT-06-xaver-schlager.png",
+    "image": "/cards/austria/AUT-06-xaver-schlager.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Stefan",
     "lastName": "Posch",
     "fullName": "Stefan Posch",
-    "image": "/cards/austria/AUT-07-stefan-posch.png",
+    "image": "/cards/austria/AUT-07-stefan-posch.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Nicolas",
     "lastName": "Seiwald",
     "fullName": "Nicolas Seiwald",
-    "image": "/cards/austria/AUT-08-nicolas-seiwald.png",
+    "image": "/cards/austria/AUT-08-nicolas-seiwald.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Marko",
     "lastName": "Arnautovic",
     "fullName": "Marko Arnautovic",
-    "image": "/cards/austria/AUT-09-marko-arnautovic.png",
+    "image": "/cards/austria/AUT-09-marko-arnautovic.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "David",
     "lastName": "Alaba",
     "fullName": "David Alaba",
-    "image": "/cards/austria/AUT-10-david-alaba.png",
+    "image": "/cards/austria/AUT-10-david-alaba.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Marcel",
     "lastName": "Sabitzer",
     "fullName": "Marcel Sabitzer",
-    "image": "/cards/austria/AUT-11-marcel-sabitzer.png",
+    "image": "/cards/austria/AUT-11-marcel-sabitzer.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Florian",
     "lastName": "Grillitsch",
     "fullName": "Florian Grillitsch",
-    "image": "/cards/austria/AUT-12-florian-grillitsch.png",
+    "image": "/cards/austria/AUT-12-florian-grillitsch.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Michael",
     "lastName": "Gregoritsch",
     "fullName": "Michael Gregoritsch",
-    "image": "/cards/austria/AUT-13-michael-gregoritsch.png",
+    "image": "/cards/austria/AUT-13-michael-gregoritsch.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Florian",
     "lastName": "Wiegele",
     "fullName": "Florian Wiegele",
-    "image": "/cards/austria/AUT-14-florian-wiegele.png",
+    "image": "/cards/austria/AUT-14-florian-wiegele.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Patrick",
     "lastName": "Pentz",
     "fullName": "Patrick Pentz",
-    "image": "/cards/austria/AUT-15-patrick-pentz.png",
+    "image": "/cards/austria/AUT-15-patrick-pentz.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Sasa",
     "lastName": "Kalajdzic",
     "fullName": "Sasa Kalajdzic",
-    "image": "/cards/austria/AUT-16-sasa-kalajdzic.png",
+    "image": "/cards/austria/AUT-16-sasa-kalajdzic.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Philipp",
     "lastName": "Lienhart",
     "fullName": "Philipp Lienhart",
-    "image": "/cards/austria/AUT-17-philipp-lienhart.png",
+    "image": "/cards/austria/AUT-17-philipp-lienhart.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Phillip",
     "lastName": "Mwene",
     "fullName": "Phillip Mwene",
-    "image": "/cards/austria/AUT-18-phillip-mwene.png",
+    "image": "/cards/austria/AUT-18-phillip-mwene.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Carney",
     "lastName": "Chukwuemeka",
     "fullName": "Carney Chukwuemeka",
-    "image": "/cards/austria/AUT-19-carney-chukwuemeka.png",
+    "image": "/cards/austria/AUT-19-carney-chukwuemeka.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Romano",
     "lastName": "Schmid",
     "fullName": "Romano Schmid",
-    "image": "/cards/austria/AUT-20-romano-schmid.png",
+    "image": "/cards/austria/AUT-20-romano-schmid.webp",
     "type": "player",
     "team": "Austria",
     "weight": 20

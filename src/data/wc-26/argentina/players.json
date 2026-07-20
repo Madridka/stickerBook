@@ -2,7 +2,7 @@
   {
     "id": "arg-01",
     "fullName": "Argentina Team Logo",
-    "image": "/cards/argentina/ARG-01-team-logo.png",
+    "image": "/cards/argentina/ARG-01-team-logo.webp",
     "type": "logo",
     "team": "Argentina",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Lionel",
     "lastName": "Scaloni",
     "fullName": "Lionel Scaloni",
-    "image": "/cards/argentina/ARG-02-lionel-scaloni.png",
+    "image": "/cards/argentina/ARG-02-lionel-scaloni.webp",
     "type": "head coach",
     "team": "Argentina",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Emiliano",
     "lastName": "Martínez",
     "fullName": "Emiliano Martínez",
-    "image": "/cards/argentina/ARG-03-emiliano-martinez.png",
+    "image": "/cards/argentina/ARG-03-emiliano-martinez.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 10
@@ -32,7 +32,7 @@
     "firstName": "Gerónimo",
     "lastName": "Rulli",
     "fullName": "Gerónimo Rulli",
-    "image": "/cards/argentina/ARG-04-geronimo-rulli.png",
+    "image": "/cards/argentina/ARG-04-geronimo-rulli.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Cristian",
     "lastName": "Romero",
     "fullName": "Cristian Romero",
-    "image": "/cards/argentina/ARG-05-cristian-romero.png",
+    "image": "/cards/argentina/ARG-05-cristian-romero.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Lisandro",
     "lastName": "Martínez",
     "fullName": "Lisandro Martínez",
-    "image": "/cards/argentina/ARG-06-lisandro-martinez.png",
+    "image": "/cards/argentina/ARG-06-lisandro-martinez.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Nicolás",
     "lastName": "Otamendi",
     "fullName": "Nicolás Otamendi",
-    "image": "/cards/argentina/ARG-07-nicolas-otamendi.png",
+    "image": "/cards/argentina/ARG-07-nicolas-otamendi.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Nahuel",
     "lastName": "Molina",
     "fullName": "Nahuel Molina",
-    "image": "/cards/argentina/ARG-08-nahuel-molina.png",
+    "image": "/cards/argentina/ARG-08-nahuel-molina.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Nicolás",
     "lastName": "Tagliafico",
     "fullName": "Nicolás Tagliafico",
-    "image": "/cards/argentina/ARG-09-nicolas-tagliafico.png",
+    "image": "/cards/argentina/ARG-09-nicolas-tagliafico.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Leonardo",
     "lastName": "Balerdi",
     "fullName": "Leonardo Balerdi",
-    "image": "/cards/argentina/ARG-10-leonardo-balerdi.png",
+    "image": "/cards/argentina/ARG-10-leonardo-balerdi.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Rodrigo",
     "lastName": "De Paul",
     "fullName": "Rodrigo De Paul",
-    "image": "/cards/argentina/ARG-11-rodrigo-de-paul.png",
+    "image": "/cards/argentina/ARG-11-rodrigo-de-paul.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 10
@@ -112,7 +112,7 @@
     "firstName": "Alexis",
     "lastName": "Mac Allister",
     "fullName": "Alexis Mac Allister",
-    "image": "/cards/argentina/ARG-12-alexis-mac-allister.png",
+    "image": "/cards/argentina/ARG-12-alexis-mac-allister.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 10
@@ -122,7 +122,7 @@
     "firstName": "Enzo",
     "lastName": "Fernández",
     "fullName": "Enzo Fernández",
-    "image": "/cards/argentina/ARG-13-enzo-fernandez.png",
+    "image": "/cards/argentina/ARG-13-enzo-fernandez.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 10
@@ -132,7 +132,7 @@
     "firstName": "Leandro",
     "lastName": "Paredes",
     "fullName": "Leandro Paredes",
-    "image": "/cards/argentina/ARG-14-leandro-paredes.png",
+    "image": "/cards/argentina/ARG-14-leandro-paredes.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Giovani",
     "lastName": "Lo Celso",
     "fullName": "Giovani Lo Celso",
-    "image": "/cards/argentina/ARG-15-giovani-lo-celso.png",
+    "image": "/cards/argentina/ARG-15-giovani-lo-celso.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Lionel",
     "lastName": "Messi",
     "fullName": "Lionel Messi",
-    "image": "/cards/argentina/ARG-16-lionel-messi.png",
+    "image": "/cards/argentina/ARG-16-lionel-messi.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 2
@@ -162,7 +162,7 @@
     "firstName": "Julián",
     "lastName": "Álvarez",
     "fullName": "Julián Álvarez",
-    "image": "/cards/argentina/ARG-17-julian-alvarez.png",
+    "image": "/cards/argentina/ARG-17-julian-alvarez.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 5
@@ -172,7 +172,7 @@
     "firstName": "Lautaro",
     "lastName": "Martínez",
     "fullName": "Lautaro Martínez",
-    "image": "/cards/argentina/ARG-18-lautaro-martinez.png",
+    "image": "/cards/argentina/ARG-18-lautaro-martinez.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 10
@@ -182,7 +182,7 @@
     "firstName": "Nico",
     "lastName": "Paz",
     "fullName": "Nico Paz",
-    "image": "/cards/argentina/ARG-19-nico-paz.png",
+    "image": "/cards/argentina/ARG-19-nico-paz.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Thiago",
     "lastName": "Almada",
     "fullName": "Thiago Almada",
-    "image": "/cards/argentina/ARG-20-thiago-almada.png",
+    "image": "/cards/argentina/ARG-20-thiago-almada.webp",
     "type": "player",
     "team": "Argentina",
     "weight": 20

@@ -2,7 +2,7 @@
   {
     "id": "ned-01",
     "fullName": "Netherlands Team Logo",
-    "image": "/cards/netherlands/NED-01-team-logo.png",
+    "image": "/cards/netherlands/NED-01-team-logo.webp",
     "type": "logo",
     "team": "Netherlands",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Ronald",
     "lastName": "Koeman",
     "fullName": "Ronald Koeman",
-    "image": "/cards/netherlands/NED-02-ronald-koeman.png",
+    "image": "/cards/netherlands/NED-02-ronald-koeman.webp",
     "type": "head coach",
     "team": "Netherlands",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Bart",
     "lastName": "Verbruggen",
     "fullName": "Bart Verbruggen",
-    "image": "/cards/netherlands/NED-03-bart-verbruggen.png",
+    "image": "/cards/netherlands/NED-03-bart-verbruggen.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Lutsharel",
     "lastName": "Geertruida",
     "fullName": "Lutsharel Geertruida",
-    "image": "/cards/netherlands/NED-04-lutsharel-geertruida.png",
+    "image": "/cards/netherlands/NED-04-lutsharel-geertruida.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Marten",
     "lastName": "De Roon",
     "fullName": "Marten De Roon",
-    "image": "/cards/netherlands/NED-05-marten-de-roon.png",
+    "image": "/cards/netherlands/NED-05-marten-de-roon.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Virgil",
     "lastName": "Van Dijk",
     "fullName": "Virgil Van Dijk",
-    "image": "/cards/netherlands/NED-06-virgil-van-dijk.png",
+    "image": "/cards/netherlands/NED-06-virgil-van-dijk.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Nathan",
     "lastName": "Ake",
     "fullName": "Nathan Ake",
-    "image": "/cards/netherlands/NED-07-nathan-ake.png",
+    "image": "/cards/netherlands/NED-07-nathan-ake.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Jan",
     "lastName": "Van Hecke",
     "fullName": "Jan Van Hecke",
-    "image": "/cards/netherlands/NED-08-jan-van-hecke.png",
+    "image": "/cards/netherlands/NED-08-jan-van-hecke.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Justin",
     "lastName": "Kluivert",
     "fullName": "Justin Kluivert",
-    "image": "/cards/netherlands/NED-09-justin-kluivert.png",
+    "image": "/cards/netherlands/NED-09-justin-kluivert.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Ryan",
     "lastName": "Gravenberch",
     "fullName": "Ryan Gravenberch",
-    "image": "/cards/netherlands/NED-10-ryan-gravenberch.png",
+    "image": "/cards/netherlands/NED-10-ryan-gravenberch.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Wout",
     "lastName": "Weghorst",
     "fullName": "Wout Weghorst",
-    "image": "/cards/netherlands/NED-11-wout-weghorst.png",
+    "image": "/cards/netherlands/NED-11-wout-weghorst.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Memphis",
     "lastName": "Depay",
     "fullName": "Memphis Depay",
-    "image": "/cards/netherlands/NED-12-memphis-depay.png",
+    "image": "/cards/netherlands/NED-12-memphis-depay.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Cody",
     "lastName": "Gakpo",
     "fullName": "Cody Gakpo",
-    "image": "/cards/netherlands/NED-13-cody-gakpo.png",
+    "image": "/cards/netherlands/NED-13-cody-gakpo.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Mats",
     "lastName": "Wieffer",
     "fullName": "Mats Wieffer",
-    "image": "/cards/netherlands/NED-14-mats-wieffer.png",
+    "image": "/cards/netherlands/NED-14-mats-wieffer.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Robin",
     "lastName": "Roefs",
     "fullName": "Robin Roefs",
-    "image": "/cards/netherlands/NED-15-robin-roefs.png",
+    "image": "/cards/netherlands/NED-15-robin-roefs.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Tijjani",
     "lastName": "Reijnders",
     "fullName": "Tijjani Reijnders",
-    "image": "/cards/netherlands/NED-16-tijjani-reijnders.png",
+    "image": "/cards/netherlands/NED-16-tijjani-reijnders.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Micky",
     "lastName": "Van De Ven",
     "fullName": "Micky Van De Ven",
-    "image": "/cards/netherlands/NED-17-micky-van-de-ven.png",
+    "image": "/cards/netherlands/NED-17-micky-van-de-ven.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Guus",
     "lastName": "Til",
     "fullName": "Guus Til",
-    "image": "/cards/netherlands/NED-18-guus-til.png",
+    "image": "/cards/netherlands/NED-18-guus-til.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Noa",
     "lastName": "Lang",
     "fullName": "Noa Lang",
-    "image": "/cards/netherlands/NED-19-noa-lang.png",
+    "image": "/cards/netherlands/NED-19-noa-lang.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Donyell",
     "lastName": "Malen",
     "fullName": "Donyell Malen",
-    "image": "/cards/netherlands/NED-20-donyell-malen.png",
+    "image": "/cards/netherlands/NED-20-donyell-malen.webp",
     "type": "player",
     "team": "Netherlands",
     "weight": 20

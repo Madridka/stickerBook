@@ -2,7 +2,7 @@
   {
     "id": "uzb-01",
     "fullName": "Uzbekistan Team Logo",
-    "image": "/cards/uzbekistan/UZB-01-team-logo.png",
+    "image": "/cards/uzbekistan/UZB-01-team-logo.webp",
     "type": "logo",
     "team": "Uzbekistan",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Fabio",
     "lastName": "Cannavaro",
     "fullName": "Fabio Cannavaro",
-    "image": "/cards/uzbekistan/UZB-02-fabio-cannavaro.png",
+    "image": "/cards/uzbekistan/UZB-02-fabio-cannavaro.webp",
     "type": "head coach",
     "team": "Uzbekistan",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Utkir",
     "lastName": "Yusupov",
     "fullName": "Utkir Yusupov",
-    "image": "/cards/uzbekistan/UZB-03-utkir-yusupov.png",
+    "image": "/cards/uzbekistan/UZB-03-utkir-yusupov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Abdukodir",
     "lastName": "Khusanov",
     "fullName": "Abdukodir Khusanov",
-    "image": "/cards/uzbekistan/UZB-04-abdukodir-khusanov.png",
+    "image": "/cards/uzbekistan/UZB-04-abdukodir-khusanov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Khojiakbar",
     "lastName": "Alijonov",
     "fullName": "Khojiakbar Alijonov",
-    "image": "/cards/uzbekistan/UZB-05-khojiakbar-alijonov.png",
+    "image": "/cards/uzbekistan/UZB-05-khojiakbar-alijonov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Farrukh",
     "lastName": "Sayfiev",
     "fullName": "Farrukh Sayfiev",
-    "image": "/cards/uzbekistan/UZB-06-farrukh-sayfiev.png",
+    "image": "/cards/uzbekistan/UZB-06-farrukh-sayfiev.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Rustam",
     "lastName": "Ashurmatov",
     "fullName": "Rustam Ashurmatov",
-    "image": "/cards/uzbekistan/UZB-07-rustam-ashurmatov.png",
+    "image": "/cards/uzbekistan/UZB-07-rustam-ashurmatov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Akmal",
     "lastName": "Mozgovoy",
     "fullName": "Akmal Mozgovoy",
-    "image": "/cards/uzbekistan/UZB-08-akmal-mozgovoy.png",
+    "image": "/cards/uzbekistan/UZB-08-akmal-mozgovoy.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Otabek",
     "lastName": "Shukurov",
     "fullName": "Otabek Shukurov",
-    "image": "/cards/uzbekistan/UZB-09-otabek-shukurov.png",
+    "image": "/cards/uzbekistan/UZB-09-otabek-shukurov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Jamshid",
     "lastName": "Iskanderov",
     "fullName": "Jamshid Iskanderov",
-    "image": "/cards/uzbekistan/UZB-10-jamshid-iskanderov.png",
+    "image": "/cards/uzbekistan/UZB-10-jamshid-iskanderov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Odiljon",
     "lastName": "Xamrobekov",
     "fullName": "Odiljon Xamrobekov",
-    "image": "/cards/uzbekistan/UZB-11-odiljon-xamrobekov.png",
+    "image": "/cards/uzbekistan/UZB-11-odiljon-xamrobekov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Ruslanbek",
     "lastName": "Jiyanov",
     "fullName": "Ruslanbek Jiyanov",
-    "image": "/cards/uzbekistan/UZB-12-ruslanbek-jiyanov.png",
+    "image": "/cards/uzbekistan/UZB-12-ruslanbek-jiyanov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Oston",
     "lastName": "Urunov",
     "fullName": "Oston Urunov",
-    "image": "/cards/uzbekistan/UZB-13-oston-urunov.png",
+    "image": "/cards/uzbekistan/UZB-13-oston-urunov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Abduvohid",
     "lastName": "Nematov",
     "fullName": "Abduvohid Nematov",
-    "image": "/cards/uzbekistan/UZB-14-abduvohid-nematov.png",
+    "image": "/cards/uzbekistan/UZB-14-abduvohid-nematov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Sherzod",
     "lastName": "Nasrullaev",
     "fullName": "Sherzod Nasrullaev",
-    "image": "/cards/uzbekistan/UZB-15-sherzod-nasrullaev.png",
+    "image": "/cards/uzbekistan/UZB-15-sherzod-nasrullaev.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Eldor",
     "lastName": "Shomurodov",
     "fullName": "Eldor Shomurodov",
-    "image": "/cards/uzbekistan/UZB-16-eldor-shomurodov.png",
+    "image": "/cards/uzbekistan/UZB-16-eldor-shomurodov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Umar",
     "lastName": "Eshmurodov",
     "fullName": "Umar Eshmurodov",
-    "image": "/cards/uzbekistan/UZB-17-umar-eshmurodov.png",
+    "image": "/cards/uzbekistan/UZB-17-umar-eshmurodov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Botirali",
     "lastName": "Ergashev",
     "fullName": "Botirali Ergashev",
-    "image": "/cards/uzbekistan/UZB-18-botirali-ergashev.png",
+    "image": "/cards/uzbekistan/UZB-18-botirali-ergashev.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Dostonbek",
     "lastName": "Khamdamov",
     "fullName": "Dostonbek Khamdamov",
-    "image": "/cards/uzbekistan/UZB-19-dostonbek-khamdamov.png",
+    "image": "/cards/uzbekistan/UZB-19-dostonbek-khamdamov.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Abdulla",
     "lastName": "Abdullaev",
     "fullName": "Abdulla Abdullaev",
-    "image": "/cards/uzbekistan/UZB-20-abdulla-abdullaev.png",
+    "image": "/cards/uzbekistan/UZB-20-abdulla-abdullaev.webp",
     "type": "player",
     "team": "Uzbekistan",
     "weight": 20

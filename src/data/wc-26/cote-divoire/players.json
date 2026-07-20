@@ -2,7 +2,7 @@
   {
     "id": "civ-01",
     "fullName": "Cote d'Ivoire Team Logo",
-    "image": "/cards/cote-divoire/CIV-01-team-logo.png",
+    "image": "/cards/cote-divoire/CIV-01-team-logo.webp",
     "type": "logo",
     "team": "Cote d'Ivoire",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Emerse",
     "lastName": "Fae",
     "fullName": "Emerse Fae",
-    "image": "/cards/cote-divoire/CIV-02-emerse-fae.png",
+    "image": "/cards/cote-divoire/CIV-02-emerse-fae.webp",
     "type": "head coach",
     "team": "Cote d'Ivoire",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Yahia",
     "lastName": "Fofana",
     "fullName": "Yahia Fofana",
-    "image": "/cards/cote-divoire/CIV-03-yahia-fofana.png",
+    "image": "/cards/cote-divoire/CIV-03-yahia-fofana.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Ousmane",
     "lastName": "Diomande",
     "fullName": "Ousmane Diomande",
-    "image": "/cards/cote-divoire/CIV-04-ousmane-diomande.png",
+    "image": "/cards/cote-divoire/CIV-04-ousmane-diomande.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Ghislain",
     "lastName": "Konan",
     "fullName": "Ghislain Konan",
-    "image": "/cards/cote-divoire/CIV-05-ghislain-konan.png",
+    "image": "/cards/cote-divoire/CIV-05-ghislain-konan.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Jean",
     "lastName": "Seri",
     "fullName": "Jean Seri",
-    "image": "/cards/cote-divoire/CIV-06-jean-seri.png",
+    "image": "/cards/cote-divoire/CIV-06-jean-seri.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Wilfried",
     "lastName": "Singo",
     "fullName": "Wilfried Singo",
-    "image": "/cards/cote-divoire/CIV-07-wilfried-singo.png",
+    "image": "/cards/cote-divoire/CIV-07-wilfried-singo.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Seko",
     "lastName": "Fofana",
     "fullName": "Seko Fofana",
-    "image": "/cards/cote-divoire/CIV-08-seko-fofana.png",
+    "image": "/cards/cote-divoire/CIV-08-seko-fofana.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Odilon",
     "lastName": "Kossounou",
     "fullName": "Odilon Kossounou",
-    "image": "/cards/cote-divoire/CIV-09-odilon-kossounou.png",
+    "image": "/cards/cote-divoire/CIV-09-odilon-kossounou.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Franck",
     "lastName": "Kessie",
     "fullName": "Franck Kessie",
-    "image": "/cards/cote-divoire/CIV-10-franck-kessie.png",
+    "image": "/cards/cote-divoire/CIV-10-franck-kessie.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Ange-Yoan",
     "lastName": "Bonny",
     "fullName": "Ange-Yoan Bonny",
-    "image": "/cards/cote-divoire/CIV-11-ange-yoan-bonny.png",
+    "image": "/cards/cote-divoire/CIV-11-ange-yoan-bonny.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Simon",
     "lastName": "Adingra",
     "fullName": "Simon Adingra",
-    "image": "/cards/cote-divoire/CIV-12-simon-adingra.png",
+    "image": "/cards/cote-divoire/CIV-12-simon-adingra.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Yan",
     "lastName": "Diomande",
     "fullName": "Yan Diomande",
-    "image": "/cards/cote-divoire/CIV-13-yan-diomande.png",
+    "image": "/cards/cote-divoire/CIV-13-yan-diomande.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Elye",
     "lastName": "Wahi",
     "fullName": "Elye Wahi",
-    "image": "/cards/cote-divoire/CIV-14-elye-wahi.png",
+    "image": "/cards/cote-divoire/CIV-14-elye-wahi.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Christopher",
     "lastName": "Operi",
     "fullName": "Christopher Operi",
-    "image": "/cards/cote-divoire/CIV-15-christopher-operi.png",
+    "image": "/cards/cote-divoire/CIV-15-christopher-operi.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Oumar",
     "lastName": "Diakite",
     "fullName": "Oumar Diakite",
-    "image": "/cards/cote-divoire/CIV-16-oumar-diakite.png",
+    "image": "/cards/cote-divoire/CIV-16-oumar-diakite.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Amad",
     "lastName": "Diallo",
     "fullName": "Amad Diallo",
-    "image": "/cards/cote-divoire/CIV-17-amad-diallo.png",
+    "image": "/cards/cote-divoire/CIV-17-amad-diallo.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Mohamed",
     "lastName": "Kone",
     "fullName": "Mohamed Kone",
-    "image": "/cards/cote-divoire/CIV-18-mohamed-kone.png",
+    "image": "/cards/cote-divoire/CIV-18-mohamed-kone.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Guela",
     "lastName": "Doue",
     "fullName": "Guela Doue",
-    "image": "/cards/cote-divoire/CIV-19-guela-doue.png",
+    "image": "/cards/cote-divoire/CIV-19-guela-doue.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Ibrahim",
     "lastName": "Sangare",
     "fullName": "Ibrahim Sangare",
-    "image": "/cards/cote-divoire/CIV-20-ibrahim-sangare.png",
+    "image": "/cards/cote-divoire/CIV-20-ibrahim-sangare.webp",
     "type": "player",
     "team": "Cote d'Ivoire",
     "weight": 20

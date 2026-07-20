@@ -2,7 +2,7 @@
   {
     "id": "can-01",
     "fullName": "Canada Team Logo",
-    "image": "/cards/canada/CAN-01-team-logo.png",
+    "image": "/cards/canada/CAN-01-team-logo.webp",
     "type": "logo",
     "team": "Canada",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Jesse",
     "lastName": "Marsch",
     "fullName": "Jesse Marsch",
-    "image": "/cards/canada/CAN-02-jesse-marsch.png",
+    "image": "/cards/canada/CAN-02-jesse-marsch.webp",
     "type": "head coach",
     "team": "Canada",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Dayne",
     "lastName": "St. Clair",
     "fullName": "Dayne St. Clair",
-    "image": "/cards/canada/CAN-03-dayne-st-clair.png",
+    "image": "/cards/canada/CAN-03-dayne-st-clair.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Alistair",
     "lastName": "Johnston",
     "fullName": "Alistair Johnston",
-    "image": "/cards/canada/CAN-04-alistair-johnston.png",
+    "image": "/cards/canada/CAN-04-alistair-johnston.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Alfie",
     "lastName": "Jones",
     "fullName": "Alfie Jones",
-    "image": "/cards/canada/CAN-05-alfie-jones.png",
+    "image": "/cards/canada/CAN-05-alfie-jones.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Luc",
     "lastName": "De Fougerolles",
     "fullName": "Luc De Fougerolles",
-    "image": "/cards/canada/CAN-06-luc-de-fougerolles.png",
+    "image": "/cards/canada/CAN-06-luc-de-fougerolles.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Joel",
     "lastName": "Waterman",
     "fullName": "Joel Waterman",
-    "image": "/cards/canada/CAN-07-joel-waterman.png",
+    "image": "/cards/canada/CAN-07-joel-waterman.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Mathieu",
     "lastName": "Choiniere",
     "fullName": "Mathieu Choiniere",
-    "image": "/cards/canada/CAN-08-mathieu-choiniere.png",
+    "image": "/cards/canada/CAN-08-mathieu-choiniere.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Stephen",
     "lastName": "Eustaquio",
     "fullName": "Stephen Eustaquio",
-    "image": "/cards/canada/CAN-09-stephen-eustaquio.png",
+    "image": "/cards/canada/CAN-09-stephen-eustaquio.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Ismael",
     "lastName": "Kone",
     "fullName": "Ismael Kone",
-    "image": "/cards/canada/CAN-10-ismael-kone.png",
+    "image": "/cards/canada/CAN-10-ismael-kone.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Cyle",
     "lastName": "Larin",
     "fullName": "Cyle Larin",
-    "image": "/cards/canada/CAN-11-cyle-larin.png",
+    "image": "/cards/canada/CAN-11-cyle-larin.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Jonathan",
     "lastName": "David",
     "fullName": "Jonathan David",
-    "image": "/cards/canada/CAN-12-jonathan-david.png",
+    "image": "/cards/canada/CAN-12-jonathan-david.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Liam",
     "lastName": "Millar",
     "fullName": "Liam Millar",
-    "image": "/cards/canada/CAN-13-liam-millar.png",
+    "image": "/cards/canada/CAN-13-liam-millar.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Tani",
     "lastName": "Oluwaseyi",
     "fullName": "Tani Oluwaseyi",
-    "image": "/cards/canada/CAN-14-tani-oluwaseyi.png",
+    "image": "/cards/canada/CAN-14-tani-oluwaseyi.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Derek",
     "lastName": "Cornelius",
     "fullName": "Derek Cornelius",
-    "image": "/cards/canada/CAN-15-derek-cornelius.png",
+    "image": "/cards/canada/CAN-15-derek-cornelius.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Jacob",
     "lastName": "Shaffelburg",
     "fullName": "Jacob Shaffelburg",
-    "image": "/cards/canada/CAN-16-jacob-shaffelburg.png",
+    "image": "/cards/canada/CAN-16-jacob-shaffelburg.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Moise",
     "lastName": "Bombito",
     "fullName": "Moise Bombito",
-    "image": "/cards/canada/CAN-17-moise-bombito.png",
+    "image": "/cards/canada/CAN-17-moise-bombito.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Maxime",
     "lastName": "Crepeau",
     "fullName": "Maxime Crepeau",
-    "image": "/cards/canada/CAN-18-maxime-crepeau.png",
+    "image": "/cards/canada/CAN-18-maxime-crepeau.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Tajon",
     "lastName": "Buchanan",
     "fullName": "Tajon Buchanan",
-    "image": "/cards/canada/CAN-19-tajon-buchanan.png",
+    "image": "/cards/canada/CAN-19-tajon-buchanan.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Owen",
     "lastName": "Goodman",
     "fullName": "Owen Goodman",
-    "image": "/cards/canada/CAN-20-owen-goodman.png",
+    "image": "/cards/canada/CAN-20-owen-goodman.webp",
     "type": "player",
     "team": "Canada",
     "weight": 20

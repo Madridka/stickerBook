@@ -2,7 +2,7 @@
   {
     "id": "fra-01",
     "fullName": "France Team Logo",
-    "image": "/cards/france/FRA-01-team-logo.png",
+    "image": "/cards/france/FRA-01-team-logo.webp",
     "type": "logo",
     "team": "France",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Didier",
     "lastName": "Deschamps",
     "fullName": "Didier Deschamps",
-    "image": "/cards/france/FRA-02-didier-deschamps.png",
+    "image": "/cards/france/FRA-02-didier-deschamps.webp",
     "type": "head coach",
     "team": "France",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Mike",
     "lastName": "Maignan",
     "fullName": "Mike Maignan",
-    "image": "/cards/france/FRA-03-mike-maignan.png",
+    "image": "/cards/france/FRA-03-mike-maignan.webp",
     "type": "player",
     "team": "France",
     "weight": 10
@@ -32,7 +32,7 @@
     "firstName": "Brice",
     "lastName": "Samba",
     "fullName": "Brice Samba",
-    "image": "/cards/france/FRA-04-brice-samba.png",
+    "image": "/cards/france/FRA-04-brice-samba.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "William",
     "lastName": "Saliba",
     "fullName": "William Saliba",
-    "image": "/cards/france/FRA-05-william-saliba.png",
+    "image": "/cards/france/FRA-05-william-saliba.webp",
     "type": "player",
     "team": "France",
     "weight": 10
@@ -52,7 +52,7 @@
     "firstName": "Ibrahima",
     "lastName": "Konaté",
     "fullName": "Ibrahima Konaté",
-    "image": "/cards/france/FRA-06-ibrahima-konate.png",
+    "image": "/cards/france/FRA-06-ibrahima-konate.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Jules",
     "lastName": "Koundé",
     "fullName": "Jules Koundé",
-    "image": "/cards/france/FRA-07-jules-kounde.png",
+    "image": "/cards/france/FRA-07-jules-kounde.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Dayot",
     "lastName": "Upamecano",
     "fullName": "Dayot Upamecano",
-    "image": "/cards/france/FRA-08-dayot-upamecano.png",
+    "image": "/cards/france/FRA-08-dayot-upamecano.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Théo",
     "lastName": "Hernandez",
     "fullName": "Théo Hernandez",
-    "image": "/cards/france/FRA-09-theo-hernandez.png",
+    "image": "/cards/france/FRA-09-theo-hernandez.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Malo",
     "lastName": "Gusto",
     "fullName": "Malo Gusto",
-    "image": "/cards/france/FRA-10-malo-gusto.png",
+    "image": "/cards/france/FRA-10-malo-gusto.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Aurélien",
     "lastName": "Tchouaméni",
     "fullName": "Aurélien Tchouaméni",
-    "image": "/cards/france/FRA-11-aurelien-tchouameni.png",
+    "image": "/cards/france/FRA-11-aurelien-tchouameni.webp",
     "type": "player",
     "team": "France",
     "weight": 10
@@ -112,7 +112,7 @@
     "firstName": "N'Golo",
     "lastName": "Kanté",
     "fullName": "N'Golo Kanté",
-    "image": "/cards/france/FRA-12-ngolo-kante.png",
+    "image": "/cards/france/FRA-12-ngolo-kante.webp",
     "type": "player",
     "team": "France",
     "weight": 10
@@ -122,7 +122,7 @@
     "firstName": "Adrien",
     "lastName": "Rabiot",
     "fullName": "Adrien Rabiot",
-    "image": "/cards/france/FRA-13-adrien-rabiot.png",
+    "image": "/cards/france/FRA-13-adrien-rabiot.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Warren",
     "lastName": "Zaïre-Emery",
     "fullName": "Warren Zaïre-Emery",
-    "image": "/cards/france/FRA-14-warren-zaire-emery.png",
+    "image": "/cards/france/FRA-14-warren-zaire-emery.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Ousmane",
     "lastName": "Dembélé",
     "fullName": "Ousmane Dembélé",
-    "image": "/cards/france/FRA-15-ousmane-dembele.png",
+    "image": "/cards/france/FRA-15-ousmane-dembele.webp",
     "type": "player",
     "team": "France",
     "weight": 5
@@ -152,7 +152,7 @@
     "firstName": "Kylian",
     "lastName": "Mbappé",
     "fullName": "Kylian Mbappé",
-    "image": "/cards/france/FRA-16-kylian-mbappe.png",
+    "image": "/cards/france/FRA-16-kylian-mbappe.webp",
     "type": "player",
     "team": "France",
     "weight": 5
@@ -162,7 +162,7 @@
     "firstName": "Michael",
     "lastName": "Olise",
     "fullName": "Michael Olise",
-    "image": "/cards/france/FRA-17-michael-olise.png",
+    "image": "/cards/france/FRA-17-michael-olise.webp",
     "type": "player",
     "team": "France",
     "weight": 10
@@ -172,7 +172,7 @@
     "firstName": "Désiré",
     "lastName": "Doué",
     "fullName": "Désiré Doué",
-    "image": "/cards/france/FRA-18-desire-doue.png",
+    "image": "/cards/france/FRA-18-desire-doue.webp",
     "type": "player",
     "team": "France",
     "weight": 10
@@ -182,7 +182,7 @@
     "firstName": "Bradley",
     "lastName": "Barcola",
     "fullName": "Bradley Barcola",
-    "image": "/cards/france/FRA-19-bradley-barcola.png",
+    "image": "/cards/france/FRA-19-bradley-barcola.webp",
     "type": "player",
     "team": "France",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Marcus",
     "lastName": "Thuram",
     "fullName": "Marcus Thuram",
-    "image": "/cards/france/FRA-20-marcus-thuram.png",
+    "image": "/cards/france/FRA-20-marcus-thuram.webp",
     "type": "player",
     "team": "France",
     "weight": 20

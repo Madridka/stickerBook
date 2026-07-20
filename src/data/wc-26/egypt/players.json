@@ -2,7 +2,7 @@
   {
     "id": "egy-01",
     "fullName": "Egypt Team Logo",
-    "image": "/cards/egypt/EGY-01-team-logo.png",
+    "image": "/cards/egypt/EGY-01-team-logo.webp",
     "type": "logo",
     "team": "Egypt",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Hossam",
     "lastName": "Hassan",
     "fullName": "Hossam Hassan",
-    "image": "/cards/egypt/EGY-02-hossam-hassan.png",
+    "image": "/cards/egypt/EGY-02-hossam-hassan.webp",
     "type": "head coach",
     "team": "Egypt",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Mohamed",
     "lastName": "Elshenawy",
     "fullName": "Mohamed Elshenawy",
-    "image": "/cards/egypt/EGY-03-mohamed-elshenawy.png",
+    "image": "/cards/egypt/EGY-03-mohamed-elshenawy.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Yasser",
     "lastName": "Ibrahim",
     "fullName": "Yasser Ibrahim",
-    "image": "/cards/egypt/EGY-04-yasser-ibrahim.png",
+    "image": "/cards/egypt/EGY-04-yasser-ibrahim.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Mohamed",
     "lastName": "Hany",
     "fullName": "Mohamed Hany",
-    "image": "/cards/egypt/EGY-05-mohamed-hany.png",
+    "image": "/cards/egypt/EGY-05-mohamed-hany.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Hossam",
     "lastName": "Abdelmaguid",
     "fullName": "Hossam Abdelmaguid",
-    "image": "/cards/egypt/EGY-06-hossam-abdelmaguid.png",
+    "image": "/cards/egypt/EGY-06-hossam-abdelmaguid.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Ramy",
     "lastName": "Rabia",
     "fullName": "Ramy Rabia",
-    "image": "/cards/egypt/EGY-07-ramy-rabia.png",
+    "image": "/cards/egypt/EGY-07-ramy-rabia.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Mohamed",
     "lastName": "Abdelmoneim",
     "fullName": "Mohamed Abdelmoneim",
-    "image": "/cards/egypt/EGY-08-mohamed-abdelmoneim.png",
+    "image": "/cards/egypt/EGY-08-mohamed-abdelmoneim.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Mahmoud",
     "lastName": "Trezeguet",
     "fullName": "Mahmoud Trezeguet",
-    "image": "/cards/egypt/EGY-09-mahmoud-trezeguet.png",
+    "image": "/cards/egypt/EGY-09-mahmoud-trezeguet.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Emam",
     "lastName": "Ashour",
     "fullName": "Emam Ashour",
-    "image": "/cards/egypt/EGY-10-emam-ashour.png",
+    "image": "/cards/egypt/EGY-10-emam-ashour.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Hamza",
     "lastName": "Abdelkarim",
     "fullName": "Hamza Abdelkarim",
-    "image": "/cards/egypt/EGY-11-hamza-abdelkarim.png",
+    "image": "/cards/egypt/EGY-11-hamza-abdelkarim.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Mohamed",
     "lastName": "Salah",
     "fullName": "Mohamed Salah",
-    "image": "/cards/egypt/EGY-12-mohamed-salah.png",
+    "image": "/cards/egypt/EGY-12-mohamed-salah.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Mostafa",
     "lastName": "Zico",
     "fullName": "Mostafa Zico",
-    "image": "/cards/egypt/EGY-13-mostafa-zico.png",
+    "image": "/cards/egypt/EGY-13-mostafa-zico.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Haissem",
     "lastName": "Hassan",
     "fullName": "Haissem Hassan",
-    "image": "/cards/egypt/EGY-14-haissem-hassan.png",
+    "image": "/cards/egypt/EGY-14-haissem-hassan.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Ahmed",
     "lastName": "Fatouh",
     "fullName": "Ahmed Fatouh",
-    "image": "/cards/egypt/EGY-15-ahmed-fatouh.png",
+    "image": "/cards/egypt/EGY-15-ahmed-fatouh.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Hamdy",
     "lastName": "Fathy",
     "fullName": "Hamdy Fathy",
-    "image": "/cards/egypt/EGY-16-hamdy-fathy.png",
+    "image": "/cards/egypt/EGY-16-hamdy-fathy.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Karim",
     "lastName": "Hafez",
     "fullName": "Karim Hafez",
-    "image": "/cards/egypt/EGY-17-karim-hafez.png",
+    "image": "/cards/egypt/EGY-17-karim-hafez.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Mahdy",
     "lastName": "Soliman",
     "fullName": "Mahdy Soliman",
-    "image": "/cards/egypt/EGY-18-mahdy-soliman.png",
+    "image": "/cards/egypt/EGY-18-mahdy-soliman.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Mohanad",
     "lastName": "Lashin",
     "fullName": "Mohanad Lashin",
-    "image": "/cards/egypt/EGY-19-mohanad-lashin.png",
+    "image": "/cards/egypt/EGY-19-mohanad-lashin.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Nabil",
     "lastName": "Donga",
     "fullName": "Nabil Donga",
-    "image": "/cards/egypt/EGY-20-nabil-donga.png",
+    "image": "/cards/egypt/EGY-20-nabil-donga.webp",
     "type": "player",
     "team": "Egypt",
     "weight": 20

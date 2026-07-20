@@ -2,7 +2,7 @@
   {
     "id": "sco-01",
     "fullName": "Scotland Team Logo",
-    "image": "/cards/scotland/SCO-01-team-logo.png",
+    "image": "/cards/scotland/SCO-01-team-logo.webp",
     "type": "logo",
     "team": "Scotland",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Steve",
     "lastName": "Clarke",
     "fullName": "Steve Clarke",
-    "image": "/cards/scotland/SCO-02-steve-clarke.png",
+    "image": "/cards/scotland/SCO-02-steve-clarke.webp",
     "type": "head coach",
     "team": "Scotland",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Angus",
     "lastName": "Gunn",
     "fullName": "Angus Gunn",
-    "image": "/cards/scotland/SCO-03-angus-gunn.png",
+    "image": "/cards/scotland/SCO-03-angus-gunn.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Aaron",
     "lastName": "Hickey",
     "fullName": "Aaron Hickey",
-    "image": "/cards/scotland/SCO-04-aaron-hickey.png",
+    "image": "/cards/scotland/SCO-04-aaron-hickey.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Andy",
     "lastName": "Robertson",
     "fullName": "Andy Robertson",
-    "image": "/cards/scotland/SCO-05-andy-robertson.png",
+    "image": "/cards/scotland/SCO-05-andy-robertson.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Scott",
     "lastName": "McTominay",
     "fullName": "Scott McTominay",
-    "image": "/cards/scotland/SCO-06-scott-mctominay.png",
+    "image": "/cards/scotland/SCO-06-scott-mctominay.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Grant",
     "lastName": "Hanley",
     "fullName": "Grant Hanley",
-    "image": "/cards/scotland/SCO-07-grant-hanley.png",
+    "image": "/cards/scotland/SCO-07-grant-hanley.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Kieran",
     "lastName": "Tierney",
     "fullName": "Kieran Tierney",
-    "image": "/cards/scotland/SCO-08-kieran-tierney.png",
+    "image": "/cards/scotland/SCO-08-kieran-tierney.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "John",
     "lastName": "McGinn",
     "fullName": "John McGinn",
-    "image": "/cards/scotland/SCO-09-john-mcginn.png",
+    "image": "/cards/scotland/SCO-09-john-mcginn.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Tyler",
     "lastName": "Fletcher",
     "fullName": "Tyler Fletcher",
-    "image": "/cards/scotland/SCO-10-tyler-fletcher.png",
+    "image": "/cards/scotland/SCO-10-tyler-fletcher.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Lyndon",
     "lastName": "Dykes",
     "fullName": "Lyndon Dykes",
-    "image": "/cards/scotland/SCO-11-lyndon-dykes.png",
+    "image": "/cards/scotland/SCO-11-lyndon-dykes.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Che",
     "lastName": "Adams",
     "fullName": "Che Adams",
-    "image": "/cards/scotland/SCO-12-che-adams.png",
+    "image": "/cards/scotland/SCO-12-che-adams.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Ryan",
     "lastName": "Christie",
     "fullName": "Ryan Christie",
-    "image": "/cards/scotland/SCO-13-ryan-christie.png",
+    "image": "/cards/scotland/SCO-13-ryan-christie.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Liam",
     "lastName": "Kelly",
     "fullName": "Liam Kelly",
-    "image": "/cards/scotland/SCO-14-liam-kelly.png",
+    "image": "/cards/scotland/SCO-14-liam-kelly.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Jack",
     "lastName": "Hendry",
     "fullName": "Jack Hendry",
-    "image": "/cards/scotland/SCO-15-jack-hendry.png",
+    "image": "/cards/scotland/SCO-15-jack-hendry.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Ross",
     "lastName": "Stewart",
     "fullName": "Ross Stewart",
-    "image": "/cards/scotland/SCO-16-ross-stewart.png",
+    "image": "/cards/scotland/SCO-16-ross-stewart.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "John",
     "lastName": "Souttar",
     "fullName": "John Souttar",
-    "image": "/cards/scotland/SCO-17-john-souttar.png",
+    "image": "/cards/scotland/SCO-17-john-souttar.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Dominic",
     "lastName": "Hyam",
     "fullName": "Dominic Hyam",
-    "image": "/cards/scotland/SCO-18-dominic-hyam.png",
+    "image": "/cards/scotland/SCO-18-dominic-hyam.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Ben",
     "lastName": "Gannon-Doak",
     "fullName": "Ben Gannon-Doak",
-    "image": "/cards/scotland/SCO-19-ben-gannon-doak.png",
+    "image": "/cards/scotland/SCO-19-ben-gannon-doak.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "George",
     "lastName": "Hirst",
     "fullName": "George Hirst",
-    "image": "/cards/scotland/SCO-20-george-hirst.png",
+    "image": "/cards/scotland/SCO-20-george-hirst.webp",
     "type": "player",
     "team": "Scotland",
     "weight": 20

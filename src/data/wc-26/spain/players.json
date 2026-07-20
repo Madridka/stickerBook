@@ -2,7 +2,7 @@
   {
     "id": "esp-01",
     "fullName": "Spain Team Logo",
-    "image": "/cards/spain/ESP-01-team-logo.png",
+    "image": "/cards/spain/ESP-01-team-logo.webp",
     "type": "logo",
     "team": "Spain",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Luis",
     "lastName": "de la Fuente",
     "fullName": "Luis de la Fuente",
-    "image": "/cards/spain/ESP-02-luis-de-la-fuente.png",
+    "image": "/cards/spain/ESP-02-luis-de-la-fuente.webp",
     "type": "head coach",
     "team": "Spain",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Unai",
     "lastName": "Simón",
     "fullName": "Unai Simón",
-    "image": "/cards/spain/ESP-03-unai-simon.png",
+    "image": "/cards/spain/ESP-03-unai-simon.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "David",
     "lastName": "Raya",
     "fullName": "David Raya",
-    "image": "/cards/spain/ESP-04-david-raya.png",
+    "image": "/cards/spain/ESP-04-david-raya.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Pedro",
     "lastName": "Porro",
     "fullName": "Pedro Porro",
-    "image": "/cards/spain/ESP-05-pedro-porro.png",
+    "image": "/cards/spain/ESP-05-pedro-porro.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Pau",
     "lastName": "Cubarsí",
     "fullName": "Pau Cubarsí",
-    "image": "/cards/spain/ESP-06-pau-cubarsi.png",
+    "image": "/cards/spain/ESP-06-pau-cubarsi.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Aymeric",
     "lastName": "Laporte",
     "fullName": "Aymeric Laporte",
-    "image": "/cards/spain/ESP-07-aymeric-laporte.png",
+    "image": "/cards/spain/ESP-07-aymeric-laporte.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Marc",
     "lastName": "Cucurella",
     "fullName": "Marc Cucurella",
-    "image": "/cards/spain/ESP-08-marc-cucurella.png",
+    "image": "/cards/spain/ESP-08-marc-cucurella.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Alejandro",
     "lastName": "Grimaldo",
     "fullName": "Alejandro Grimaldo",
-    "image": "/cards/spain/ESP-09-alejandro-grimaldo.png",
+    "image": "/cards/spain/ESP-09-alejandro-grimaldo.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Rodri",
     "lastName": "",
     "fullName": "Rodri",
-    "image": "/cards/spain/ESP-10-rodri.png",
+    "image": "/cards/spain/ESP-10-rodri.webp",
     "type": "player",
     "team": "Spain",
     "weight": 5
@@ -102,7 +102,7 @@
     "firstName": "Martín",
     "lastName": "Zubimendi",
     "fullName": "Martín Zubimendi",
-    "image": "/cards/spain/ESP-11-martin-zubimendi.png",
+    "image": "/cards/spain/ESP-11-martin-zubimendi.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Pedri",
     "lastName": "",
     "fullName": "Pedri",
-    "image": "/cards/spain/ESP-12-pedri.png",
+    "image": "/cards/spain/ESP-12-pedri.webp",
     "type": "player",
     "team": "Spain",
     "weight": 5
@@ -122,7 +122,7 @@
     "firstName": "Fabián",
     "lastName": "Ruiz",
     "fullName": "Fabián Ruiz",
-    "image": "/cards/spain/ESP-13-fabian-ruiz.png",
+    "image": "/cards/spain/ESP-13-fabian-ruiz.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Mikel",
     "lastName": "Merino",
     "fullName": "Mikel Merino",
-    "image": "/cards/spain/ESP-14-mikel-merino.png",
+    "image": "/cards/spain/ESP-14-mikel-merino.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Dani",
     "lastName": "Olmo",
     "fullName": "Dani Olmo",
-    "image": "/cards/spain/ESP-15-dani-olmo.png",
+    "image": "/cards/spain/ESP-15-dani-olmo.webp",
     "type": "player",
     "team": "Spain",
     "weight": 10
@@ -152,7 +152,7 @@
     "firstName": "Lamine",
     "lastName": "Yamal",
     "fullName": "Lamine Yamal",
-    "image": "/cards/spain/ESP-16-lamine-yamal.png",
+    "image": "/cards/spain/ESP-16-lamine-yamal.webp",
     "type": "player",
     "team": "Spain",
     "weight": 5
@@ -162,7 +162,7 @@
     "firstName": "Nico",
     "lastName": "Williams",
     "fullName": "Nico Williams",
-    "image": "/cards/spain/ESP-17-nico-williams.png",
+    "image": "/cards/spain/ESP-17-nico-williams.webp",
     "type": "player",
     "team": "Spain",
     "weight": 10
@@ -172,7 +172,7 @@
     "firstName": "Mikel",
     "lastName": "Oyarzabal",
     "fullName": "Mikel Oyarzabal",
-    "image": "/cards/spain/ESP-18-mikel-oyarzabal.png",
+    "image": "/cards/spain/ESP-18-mikel-oyarzabal.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Ferran",
     "lastName": "Torres",
     "fullName": "Ferran Torres",
-    "image": "/cards/spain/ESP-19-ferran-torres.png",
+    "image": "/cards/spain/ESP-19-ferran-torres.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Gavi",
     "lastName": "",
     "fullName": "Gavi",
-    "image": "/cards/spain/ESP-20-gavi.png",
+    "image": "/cards/spain/ESP-20-gavi.webp",
     "type": "player",
     "team": "Spain",
     "weight": 20

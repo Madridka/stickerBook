@@ -2,7 +2,7 @@
   {
     "id": "alg-01",
     "fullName": "Algeria Team Logo",
-    "image": "/cards/algeria/ALG-01-team-logo.png",
+    "image": "/cards/algeria/ALG-01-team-logo.webp",
     "type": "logo",
     "team": "Algeria",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Vladimir",
     "lastName": "Petkovic",
     "fullName": "Vladimir Petkovic",
-    "image": "/cards/algeria/ALG-02-vladimir-petkovic.png",
+    "image": "/cards/algeria/ALG-02-vladimir-petkovic.webp",
     "type": "head coach",
     "team": "Algeria",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Melvin",
     "lastName": "Mastil",
     "fullName": "Melvin Mastil",
-    "image": "/cards/algeria/ALG-03-melvin-mastil.png",
+    "image": "/cards/algeria/ALG-03-melvin-mastil.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Aissa",
     "lastName": "Mandi",
     "fullName": "Aissa Mandi",
-    "image": "/cards/algeria/ALG-04-aissa-mandi.png",
+    "image": "/cards/algeria/ALG-04-aissa-mandi.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Achref",
     "lastName": "Abada",
     "fullName": "Achref Abada",
-    "image": "/cards/algeria/ALG-05-achref-abada.png",
+    "image": "/cards/algeria/ALG-05-achref-abada.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Mohamed",
     "lastName": "Tougai",
     "fullName": "Mohamed Tougai",
-    "image": "/cards/algeria/ALG-06-mohamed-tougai.png",
+    "image": "/cards/algeria/ALG-06-mohamed-tougai.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Zineddine",
     "lastName": "Belaid",
     "fullName": "Zineddine Belaid",
-    "image": "/cards/algeria/ALG-07-zineddine-belaid.png",
+    "image": "/cards/algeria/ALG-07-zineddine-belaid.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Ramiz",
     "lastName": "Zerrouki",
     "fullName": "Ramiz Zerrouki",
-    "image": "/cards/algeria/ALG-08-ramiz-zerrouki.png",
+    "image": "/cards/algeria/ALG-08-ramiz-zerrouki.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Riyad",
     "lastName": "Mahrez",
     "fullName": "Riyad Mahrez",
-    "image": "/cards/algeria/ALG-09-riyad-mahrez.png",
+    "image": "/cards/algeria/ALG-09-riyad-mahrez.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Houssem",
     "lastName": "Aouar",
     "fullName": "Houssem Aouar",
-    "image": "/cards/algeria/ALG-10-houssem-aouar.png",
+    "image": "/cards/algeria/ALG-10-houssem-aouar.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Amine",
     "lastName": "Gouiri",
     "fullName": "Amine Gouiri",
-    "image": "/cards/algeria/ALG-11-amine-gouiri.png",
+    "image": "/cards/algeria/ALG-11-amine-gouiri.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Fares",
     "lastName": "Chaibi",
     "fullName": "Fares Chaibi",
-    "image": "/cards/algeria/ALG-12-fares-chaibi.png",
+    "image": "/cards/algeria/ALG-12-fares-chaibi.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Anis",
     "lastName": "Hadj Moussa",
     "fullName": "Anis Hadj Moussa",
-    "image": "/cards/algeria/ALG-13-anis-hadj-moussa.png",
+    "image": "/cards/algeria/ALG-13-anis-hadj-moussa.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Nadhir",
     "lastName": "Benbouali",
     "fullName": "Nadhir Benbouali",
-    "image": "/cards/algeria/ALG-14-nadhir-benbouali.png",
+    "image": "/cards/algeria/ALG-14-nadhir-benbouali.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Jaouen",
     "lastName": "Hadjam",
     "fullName": "Jaouen Hadjam",
-    "image": "/cards/algeria/ALG-15-jaouen-hadjam.png",
+    "image": "/cards/algeria/ALG-15-jaouen-hadjam.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Hicham",
     "lastName": "Boudaoui",
     "fullName": "Hicham Boudaoui",
-    "image": "/cards/algeria/ALG-16-hicham-boudaoui.png",
+    "image": "/cards/algeria/ALG-16-hicham-boudaoui.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Rayan",
     "lastName": "Ait-Nouri",
     "fullName": "Rayan Ait-Nouri",
-    "image": "/cards/algeria/ALG-17-rayan-ait-nouri.png",
+    "image": "/cards/algeria/ALG-17-rayan-ait-nouri.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Oussama",
     "lastName": "Benbot",
     "fullName": "Oussama Benbot",
-    "image": "/cards/algeria/ALG-18-oussama-benbot.png",
+    "image": "/cards/algeria/ALG-18-oussama-benbot.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Rafik",
     "lastName": "Belghali",
     "fullName": "Rafik Belghali",
-    "image": "/cards/algeria/ALG-19-rafik-belghali.png",
+    "image": "/cards/algeria/ALG-19-rafik-belghali.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Mohamed",
     "lastName": "Amoura",
     "fullName": "Mohamed Amoura",
-    "image": "/cards/algeria/ALG-20-mohamed-amoura.png",
+    "image": "/cards/algeria/ALG-20-mohamed-amoura.webp",
     "type": "player",
     "team": "Algeria",
     "weight": 20

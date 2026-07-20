@@ -2,7 +2,7 @@
   {
     "id": "hai-01",
     "fullName": "Haiti Team Logo",
-    "image": "/cards/haiti/HAI-01-team-logo.png",
+    "image": "/cards/haiti/HAI-01-team-logo.webp",
     "type": "logo",
     "team": "Haiti",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Sebastien",
     "lastName": "Migne",
     "fullName": "Sebastien Migne",
-    "image": "/cards/haiti/HAI-02-sebastien-migne.png",
+    "image": "/cards/haiti/HAI-02-sebastien-migne.webp",
     "type": "head coach",
     "team": "Haiti",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Johny",
     "lastName": "Placide",
     "fullName": "Johny Placide",
-    "image": "/cards/haiti/HAI-03-johny-placide.png",
+    "image": "/cards/haiti/HAI-03-johny-placide.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Carlens",
     "lastName": "Arcus",
     "fullName": "Carlens Arcus",
-    "image": "/cards/haiti/HAI-04-carlens-arcus.png",
+    "image": "/cards/haiti/HAI-04-carlens-arcus.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Keeto",
     "lastName": "Thermoncy",
     "fullName": "Keeto Thermoncy",
-    "image": "/cards/haiti/HAI-05-keeto-thermoncy.png",
+    "image": "/cards/haiti/HAI-05-keeto-thermoncy.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Ricardo",
     "lastName": "Ade",
     "fullName": "Ricardo Ade",
-    "image": "/cards/haiti/HAI-06-ricardo-ade.png",
+    "image": "/cards/haiti/HAI-06-ricardo-ade.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Hannes",
     "lastName": "Delcroix",
     "fullName": "Hannes Delcroix",
-    "image": "/cards/haiti/HAI-07-hannes-delcroix.png",
+    "image": "/cards/haiti/HAI-07-hannes-delcroix.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Carl",
     "lastName": "Sainte",
     "fullName": "Carl Sainte",
-    "image": "/cards/haiti/HAI-08-carl-sainte.png",
+    "image": "/cards/haiti/HAI-08-carl-sainte.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Derrick",
     "lastName": "Etienne",
     "fullName": "Derrick Etienne",
-    "image": "/cards/haiti/HAI-09-derrick-etienne.png",
+    "image": "/cards/haiti/HAI-09-derrick-etienne.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Martin",
     "lastName": "Experience",
     "fullName": "Martin Experience",
-    "image": "/cards/haiti/HAI-10-martin-experience.png",
+    "image": "/cards/haiti/HAI-10-martin-experience.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Duckens",
     "lastName": "Nazon",
     "fullName": "Duckens Nazon",
-    "image": "/cards/haiti/HAI-11-duckens-nazon.png",
+    "image": "/cards/haiti/HAI-11-duckens-nazon.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Jean-Ricner",
     "lastName": "Bellegarde",
     "fullName": "Jean-Ricner Bellegarde",
-    "image": "/cards/haiti/HAI-12-jean-ricner-bellegarde.png",
+    "image": "/cards/haiti/HAI-12-jean-ricner-bellegarde.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Louicius",
     "lastName": "Deedson",
     "fullName": "Louicius Deedson",
-    "image": "/cards/haiti/HAI-13-louicius-deedson.png",
+    "image": "/cards/haiti/HAI-13-louicius-deedson.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Alexandre",
     "lastName": "Pierre",
     "fullName": "Alexandre Pierre",
-    "image": "/cards/haiti/HAI-14-alexandre-pierre.png",
+    "image": "/cards/haiti/HAI-14-alexandre-pierre.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Markhus",
     "lastName": "Lacroix",
     "fullName": "Markhus Lacroix",
-    "image": "/cards/haiti/HAI-15-markhus-lacroix.png",
+    "image": "/cards/haiti/HAI-15-markhus-lacroix.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Garven",
     "lastName": "Metusala",
     "fullName": "Garven Metusala",
-    "image": "/cards/haiti/HAI-16-garven-metusala.png",
+    "image": "/cards/haiti/HAI-16-garven-metusala.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Ruben",
     "lastName": "Providence",
     "fullName": "Ruben Providence",
-    "image": "/cards/haiti/HAI-17-ruben-providence.png",
+    "image": "/cards/haiti/HAI-17-ruben-providence.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Lenny",
     "lastName": "Joseph",
     "fullName": "Lenny Joseph",
-    "image": "/cards/haiti/HAI-18-lenny-joseph.png",
+    "image": "/cards/haiti/HAI-18-lenny-joseph.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Danley",
     "lastName": "Jean Jacques",
     "fullName": "Danley Jean Jacques",
-    "image": "/cards/haiti/HAI-19-danley-jean-jacques.png",
+    "image": "/cards/haiti/HAI-19-danley-jean-jacques.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Wilson",
     "lastName": "Isidor",
     "fullName": "Wilson Isidor",
-    "image": "/cards/haiti/HAI-20-wilson-isidor.png",
+    "image": "/cards/haiti/HAI-20-wilson-isidor.webp",
     "type": "player",
     "team": "Haiti",
     "weight": 20

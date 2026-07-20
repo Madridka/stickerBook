@@ -2,7 +2,7 @@
   {
     "id": "cod-01",
     "fullName": "Congo DR Team Logo",
-    "image": "/cards/congo-dr/COD-01-team-logo.png",
+    "image": "/cards/congo-dr/COD-01-team-logo.webp",
     "type": "logo",
     "team": "Congo DR",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Sebastien",
     "lastName": "Desabre",
     "fullName": "Sebastien Desabre",
-    "image": "/cards/congo-dr/COD-02-sebastien-desabre.png",
+    "image": "/cards/congo-dr/COD-02-sebastien-desabre.webp",
     "type": "head coach",
     "team": "Congo DR",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Lionel",
     "lastName": "Mpasi",
     "fullName": "Lionel Mpasi",
-    "image": "/cards/congo-dr/COD-03-lionel-mpasi.png",
+    "image": "/cards/congo-dr/COD-03-lionel-mpasi.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Aaron",
     "lastName": "Wan-Bissaka",
     "fullName": "Aaron Wan-Bissaka",
-    "image": "/cards/congo-dr/COD-04-aaron-wan-bissaka.png",
+    "image": "/cards/congo-dr/COD-04-aaron-wan-bissaka.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Steve",
     "lastName": "Kapuadi",
     "fullName": "Steve Kapuadi",
-    "image": "/cards/congo-dr/COD-05-steve-kapuadi.png",
+    "image": "/cards/congo-dr/COD-05-steve-kapuadi.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Axel",
     "lastName": "Tuanzebe",
     "fullName": "Axel Tuanzebe",
-    "image": "/cards/congo-dr/COD-06-axel-tuanzebe.png",
+    "image": "/cards/congo-dr/COD-06-axel-tuanzebe.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Dylan",
     "lastName": "Batubinsika",
     "fullName": "Dylan Batubinsika",
-    "image": "/cards/congo-dr/COD-07-dylan-batubinsika.png",
+    "image": "/cards/congo-dr/COD-07-dylan-batubinsika.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Ngalayel",
     "lastName": "Mukau",
     "fullName": "Ngalayel Mukau",
-    "image": "/cards/congo-dr/COD-08-ngalayel-mukau.png",
+    "image": "/cards/congo-dr/COD-08-ngalayel-mukau.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Nathanael",
     "lastName": "Mbuku",
     "fullName": "Nathanael Mbuku",
-    "image": "/cards/congo-dr/COD-09-nathanael-mbuku.png",
+    "image": "/cards/congo-dr/COD-09-nathanael-mbuku.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Samuel",
     "lastName": "Moutoussamy",
     "fullName": "Samuel Moutoussamy",
-    "image": "/cards/congo-dr/COD-10-samuel-moutoussamy.png",
+    "image": "/cards/congo-dr/COD-10-samuel-moutoussamy.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Brian",
     "lastName": "Cipenga",
     "fullName": "Brian Cipenga",
-    "image": "/cards/congo-dr/COD-11-brian-cipenga.png",
+    "image": "/cards/congo-dr/COD-11-brian-cipenga.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Theo",
     "lastName": "Bongonda",
     "fullName": "Theo Bongonda",
-    "image": "/cards/congo-dr/COD-12-theo-bongonda.png",
+    "image": "/cards/congo-dr/COD-12-theo-bongonda.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Gael",
     "lastName": "Kakuta",
     "fullName": "Gael Kakuta",
-    "image": "/cards/congo-dr/COD-13-gael-kakuta.png",
+    "image": "/cards/congo-dr/COD-13-gael-kakuta.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Joris",
     "lastName": "Kayembe",
     "fullName": "Joris Kayembe",
-    "image": "/cards/congo-dr/COD-14-joris-kayembe.png",
+    "image": "/cards/congo-dr/COD-14-joris-kayembe.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Meschack",
     "lastName": "Elia",
     "fullName": "Meschack Elia",
-    "image": "/cards/congo-dr/COD-15-meschack-elia.png",
+    "image": "/cards/congo-dr/COD-15-meschack-elia.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Noah",
     "lastName": "Sadiki",
     "fullName": "Noah Sadiki",
-    "image": "/cards/congo-dr/COD-16-noah-sadiki.png",
+    "image": "/cards/congo-dr/COD-16-noah-sadiki.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Aaron",
     "lastName": "Tshibola",
     "fullName": "Aaron Tshibola",
-    "image": "/cards/congo-dr/COD-17-aaron-tshibola.png",
+    "image": "/cards/congo-dr/COD-17-aaron-tshibola.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Timothy",
     "lastName": "Fayulu",
     "fullName": "Timothy Fayulu",
-    "image": "/cards/congo-dr/COD-18-timothy-fayulu.png",
+    "image": "/cards/congo-dr/COD-18-timothy-fayulu.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Cedric",
     "lastName": "Bakambu",
     "fullName": "Cedric Bakambu",
-    "image": "/cards/congo-dr/COD-19-cedric-bakambu.png",
+    "image": "/cards/congo-dr/COD-19-cedric-bakambu.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Charles",
     "lastName": "Pickel",
     "fullName": "Charles Pickel",
-    "image": "/cards/congo-dr/COD-20-charles-pickel.png",
+    "image": "/cards/congo-dr/COD-20-charles-pickel.webp",
     "type": "player",
     "team": "Congo DR",
     "weight": 20

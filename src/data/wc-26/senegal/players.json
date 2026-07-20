@@ -2,7 +2,7 @@
   {
     "id": "sen-01",
     "fullName": "Senegal Team Logo",
-    "image": "/cards/senegal/SEN-01-team-logo.png",
+    "image": "/cards/senegal/SEN-01-team-logo.webp",
     "type": "logo",
     "team": "Senegal",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Pape",
     "lastName": "Thiaw",
     "fullName": "Pape Thiaw",
-    "image": "/cards/senegal/SEN-02-pape-thiaw.png",
+    "image": "/cards/senegal/SEN-02-pape-thiaw.webp",
     "type": "head coach",
     "team": "Senegal",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Édouard",
     "lastName": "Mendy",
     "fullName": "Édouard Mendy",
-    "image": "/cards/senegal/SEN-03-edouard-mendy.png",
+    "image": "/cards/senegal/SEN-03-edouard-mendy.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 10
@@ -32,7 +32,7 @@
     "firstName": "Yehvann",
     "lastName": "Diouf",
     "fullName": "Yehvann Diouf",
-    "image": "/cards/senegal/SEN-04-yehvann-diouf.png",
+    "image": "/cards/senegal/SEN-04-yehvann-diouf.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Kalidou",
     "lastName": "Koulibaly",
     "fullName": "Kalidou Koulibaly",
-    "image": "/cards/senegal/SEN-05-kalidou-koulibaly.png",
+    "image": "/cards/senegal/SEN-05-kalidou-koulibaly.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 10
@@ -52,7 +52,7 @@
     "firstName": "Mamadou",
     "lastName": "Sarr",
     "fullName": "Mamadou Sarr",
-    "image": "/cards/senegal/SEN-06-mamadou-sarr.png",
+    "image": "/cards/senegal/SEN-06-mamadou-sarr.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Moussa",
     "lastName": "Niakhaté",
     "fullName": "Moussa Niakhaté",
-    "image": "/cards/senegal/SEN-07-moussa-niakhate.png",
+    "image": "/cards/senegal/SEN-07-moussa-niakhate.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "El Hadji Malick",
     "lastName": "Diouf",
     "fullName": "El Hadji Malick Diouf",
-    "image": "/cards/senegal/SEN-08-el-hadji-malick-diouf.png",
+    "image": "/cards/senegal/SEN-08-el-hadji-malick-diouf.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Ismail",
     "lastName": "Jakobs",
     "fullName": "Ismail Jakobs",
-    "image": "/cards/senegal/SEN-09-ismail-jakobs.png",
+    "image": "/cards/senegal/SEN-09-ismail-jakobs.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Krépin",
     "lastName": "Diatta",
     "fullName": "Krépin Diatta",
-    "image": "/cards/senegal/SEN-10-krepin-diatta.png",
+    "image": "/cards/senegal/SEN-10-krepin-diatta.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Idrissa",
     "lastName": "Gueye",
     "fullName": "Idrissa Gueye",
-    "image": "/cards/senegal/SEN-11-idrissa-gueye.png",
+    "image": "/cards/senegal/SEN-11-idrissa-gueye.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 10
@@ -112,7 +112,7 @@
     "firstName": "Pape",
     "lastName": "Gueye",
     "fullName": "Pape Gueye",
-    "image": "/cards/senegal/SEN-12-pape-gueye.png",
+    "image": "/cards/senegal/SEN-12-pape-gueye.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Lamine",
     "lastName": "Camara",
     "fullName": "Lamine Camara",
-    "image": "/cards/senegal/SEN-13-lamine-camara.png",
+    "image": "/cards/senegal/SEN-13-lamine-camara.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Habib",
     "lastName": "Diarra",
     "fullName": "Habib Diarra",
-    "image": "/cards/senegal/SEN-14-habib-diarra.png",
+    "image": "/cards/senegal/SEN-14-habib-diarra.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Pape Matar",
     "lastName": "Sarr",
     "fullName": "Pape Matar Sarr",
-    "image": "/cards/senegal/SEN-15-pape-matar-sarr.png",
+    "image": "/cards/senegal/SEN-15-pape-matar-sarr.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Sadio",
     "lastName": "Mané",
     "fullName": "Sadio Mané",
-    "image": "/cards/senegal/SEN-16-sadio-mane.png",
+    "image": "/cards/senegal/SEN-16-sadio-mane.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 5
@@ -162,7 +162,7 @@
     "firstName": "Nicolas",
     "lastName": "Jackson",
     "fullName": "Nicolas Jackson",
-    "image": "/cards/senegal/SEN-17-nicolas-jackson.png",
+    "image": "/cards/senegal/SEN-17-nicolas-jackson.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 10
@@ -172,7 +172,7 @@
     "firstName": "Ismaïla",
     "lastName": "Sarr",
     "fullName": "Ismaïla Sarr",
-    "image": "/cards/senegal/SEN-18-ismaila-sarr.png",
+    "image": "/cards/senegal/SEN-18-ismaila-sarr.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Iliman",
     "lastName": "Ndiaye",
     "fullName": "Iliman Ndiaye",
-    "image": "/cards/senegal/SEN-19-iliman-ndiaye.png",
+    "image": "/cards/senegal/SEN-19-iliman-ndiaye.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Assane",
     "lastName": "Diao",
     "fullName": "Assane Diao",
-    "image": "/cards/senegal/SEN-20-assane-diao.png",
+    "image": "/cards/senegal/SEN-20-assane-diao.webp",
     "type": "player",
     "team": "Senegal",
     "weight": 20

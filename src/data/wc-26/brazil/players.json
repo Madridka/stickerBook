@@ -2,7 +2,7 @@
   {
     "id": "bra-01",
     "fullName": "Brazil Team Logo",
-    "image": "/cards/brazil/BRA-01-team-logo.png",
+    "image": "/cards/brazil/BRA-01-team-logo.webp",
     "type": "logo",
     "team": "Brazil",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Carlo",
     "lastName": "Ancelotti",
     "fullName": "Carlo Ancelotti",
-    "image": "/cards/brazil/BRA-02-carlo-ancelotti.png",
+    "image": "/cards/brazil/BRA-02-carlo-ancelotti.webp",
     "type": "head coach",
     "team": "Brazil",
     "weight": 10
@@ -21,7 +21,7 @@
     "id": "bra-03",
     "firstName": "Alisson",
     "fullName": "Alisson",
-    "image": "/cards/brazil/BRA-03-alisson.png",
+    "image": "/cards/brazil/BRA-03-alisson.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -30,7 +30,7 @@
     "id": "bra-04",
     "firstName": "Ederson",
     "fullName": "Ederson",
-    "image": "/cards/brazil/BRA-04-ederson.png",
+    "image": "/cards/brazil/BRA-04-ederson.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -40,7 +40,7 @@
     "firstName": "Gabriel",
     "lastName": "Magalhaes",
     "fullName": "Gabriel Magalhaes",
-    "image": "/cards/brazil/BRA-05-gabriel-magalhaes.png",
+    "image": "/cards/brazil/BRA-05-gabriel-magalhaes.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -50,7 +50,7 @@
     "firstName": "Marcos",
     "lastName": "Marquinhos",
     "fullName": "Marcos Marquinhos",
-    "image": "/cards/brazil/BRA-06-marcos-marquinhos.png",
+    "image": "/cards/brazil/BRA-06-marcos-marquinhos.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -59,7 +59,7 @@
     "id": "bra-07",
     "firstName": "Casemiro",
     "fullName": "Casemiro",
-    "image": "/cards/brazil/BRA-07-casemiro.png",
+    "image": "/cards/brazil/BRA-07-casemiro.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -69,7 +69,7 @@
     "firstName": "Alex",
     "lastName": "Sandro",
     "fullName": "Alex Sandro",
-    "image": "/cards/brazil/BRA-08-alex-sandro.png",
+    "image": "/cards/brazil/BRA-08-alex-sandro.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -79,7 +79,7 @@
     "firstName": "Vinicius",
     "lastName": "Junior",
     "fullName": "Vinicius Junior",
-    "image": "/cards/brazil/BRA-09-vinicius-junior.png",
+    "image": "/cards/brazil/BRA-09-vinicius-junior.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -89,7 +89,7 @@
     "firstName": "Bruno",
     "lastName": "Guimaraes",
     "fullName": "Bruno Guimaraes",
-    "image": "/cards/brazil/BRA-10-bruno-guimaraes.png",
+    "image": "/cards/brazil/BRA-10-bruno-guimaraes.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -99,7 +99,7 @@
     "firstName": "Matheus",
     "lastName": "Cunha",
     "fullName": "Matheus Cunha",
-    "image": "/cards/brazil/BRA-11-matheus-cunha.png",
+    "image": "/cards/brazil/BRA-11-matheus-cunha.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -109,7 +109,7 @@
     "firstName": "Neymar",
     "lastName": "Jr",
     "fullName": "Neymar Jr",
-    "image": "/cards/brazil/BRA-12-neymar-jr.png",
+    "image": "/cards/brazil/BRA-12-neymar-jr.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -118,7 +118,7 @@
     "id": "bra-13",
     "firstName": "Raphinha",
     "fullName": "Raphinha",
-    "image": "/cards/brazil/BRA-13-raphinha.png",
+    "image": "/cards/brazil/BRA-13-raphinha.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -127,7 +127,7 @@
     "id": "bra-14",
     "firstName": "Weverton",
     "fullName": "Weverton",
-    "image": "/cards/brazil/BRA-14-weverton.png",
+    "image": "/cards/brazil/BRA-14-weverton.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -136,7 +136,7 @@
     "id": "bra-15",
     "firstName": "Danilo",
     "fullName": "Danilo",
-    "image": "/cards/brazil/BRA-15-danilo.png",
+    "image": "/cards/brazil/BRA-15-danilo.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -146,7 +146,7 @@
     "firstName": "Gleison",
     "lastName": "Bremer",
     "fullName": "Gleison Bremer",
-    "image": "/cards/brazil/BRA-16-gleison-bremer.png",
+    "image": "/cards/brazil/BRA-16-gleison-bremer.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -156,7 +156,7 @@
     "firstName": "Leonardo",
     "lastName": "Leo Pereira",
     "fullName": "Leonardo Leo Pereira",
-    "image": "/cards/brazil/BRA-17-leonardo-leo-pereira.png",
+    "image": "/cards/brazil/BRA-17-leonardo-leo-pereira.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -166,7 +166,7 @@
     "firstName": "Douglas",
     "lastName": "Santos",
     "fullName": "Douglas Santos",
-    "image": "/cards/brazil/BRA-18-douglas-santos.png",
+    "image": "/cards/brazil/BRA-18-douglas-santos.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -175,7 +175,7 @@
     "id": "bra-19",
     "firstName": "Fabinho",
     "fullName": "Fabinho",
-    "image": "/cards/brazil/BRA-19-fabinho.png",
+    "image": "/cards/brazil/BRA-19-fabinho.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20
@@ -185,7 +185,7 @@
     "firstName": "Danilo",
     "lastName": "Santos",
     "fullName": "Danilo Santos",
-    "image": "/cards/brazil/BRA-20-danilo-santos.png",
+    "image": "/cards/brazil/BRA-20-danilo-santos.webp",
     "type": "player",
     "team": "Brazil",
     "weight": 20

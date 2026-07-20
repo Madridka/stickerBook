@@ -2,7 +2,7 @@
   {
     "id": "cpv-01",
     "fullName": "Cabo Verde Team Logo",
-    "image": "/cards/cabo-verde/CPV-01-team-logo.png",
+    "image": "/cards/cabo-verde/CPV-01-team-logo.webp",
     "type": "logo",
     "team": "Cabo Verde",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Bubista",
     "lastName": "",
     "fullName": "Bubista",
-    "image": "/cards/cabo-verde/CPV-02-bubista.png",
+    "image": "/cards/cabo-verde/CPV-02-bubista.webp",
     "type": "head coach",
     "team": "Cabo Verde",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Vozinha",
     "lastName": "",
     "fullName": "Vozinha",
-    "image": "/cards/cabo-verde/CPV-03-vozinha.png",
+    "image": "/cards/cabo-verde/CPV-03-vozinha.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Márcio",
     "lastName": "Rosa",
     "fullName": "Márcio Rosa",
-    "image": "/cards/cabo-verde/CPV-04-marcio-rosa.png",
+    "image": "/cards/cabo-verde/CPV-04-marcio-rosa.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Roberto",
     "lastName": "Lopes",
     "fullName": "Roberto Lopes",
-    "image": "/cards/cabo-verde/CPV-05-roberto-lopes.png",
+    "image": "/cards/cabo-verde/CPV-05-roberto-lopes.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 10
@@ -52,7 +52,7 @@
     "firstName": "Logan",
     "lastName": "Costa",
     "fullName": "Logan Costa",
-    "image": "/cards/cabo-verde/CPV-06-logan-costa.png",
+    "image": "/cards/cabo-verde/CPV-06-logan-costa.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Steven",
     "lastName": "Moreira",
     "fullName": "Steven Moreira",
-    "image": "/cards/cabo-verde/CPV-07-steven-moreira.png",
+    "image": "/cards/cabo-verde/CPV-07-steven-moreira.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Wagner",
     "lastName": "Pina",
     "fullName": "Wagner Pina",
-    "image": "/cards/cabo-verde/CPV-08-wagner-pina.png",
+    "image": "/cards/cabo-verde/CPV-08-wagner-pina.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "João Paulo",
     "lastName": "Fernandes",
     "fullName": "João Paulo Fernandes",
-    "image": "/cards/cabo-verde/CPV-09-joao-paulo-fernandes.png",
+    "image": "/cards/cabo-verde/CPV-09-joao-paulo-fernandes.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Ianique",
     "lastName": "Tavares",
     "fullName": "Stopira Tavares",
-    "image": "/cards/cabo-verde/CPV-10-stopira-tavares.png",
+    "image": "/cards/cabo-verde/CPV-10-stopira-tavares.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Telmo",
     "lastName": "Arcanjo",
     "fullName": "Telmo Arcanjo",
-    "image": "/cards/cabo-verde/CPV-11-telmo-arcanjo.png",
+    "image": "/cards/cabo-verde/CPV-11-telmo-arcanjo.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Laros",
     "lastName": "Duarte",
     "fullName": "Laros Duarte",
-    "image": "/cards/cabo-verde/CPV-12-laros-duarte.png",
+    "image": "/cards/cabo-verde/CPV-12-laros-duarte.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Deroy",
     "lastName": "Duarte",
     "fullName": "Deroy Duarte",
-    "image": "/cards/cabo-verde/CPV-13-deroy-duarte.png",
+    "image": "/cards/cabo-verde/CPV-13-deroy-duarte.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Jamiro",
     "lastName": "Monteiro",
     "fullName": "Jamiro Monteiro",
-    "image": "/cards/cabo-verde/CPV-14-jamiro-monteiro.png",
+    "image": "/cards/cabo-verde/CPV-14-jamiro-monteiro.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Kevin",
     "lastName": "Pina",
     "fullName": "Kevin Pina",
-    "image": "/cards/cabo-verde/CPV-15-kevin-pina.png",
+    "image": "/cards/cabo-verde/CPV-15-kevin-pina.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Ryan",
     "lastName": "Mendes",
     "fullName": "Ryan Mendes",
-    "image": "/cards/cabo-verde/CPV-16-ryan-mendes.png",
+    "image": "/cards/cabo-verde/CPV-16-ryan-mendes.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 5
@@ -162,7 +162,7 @@
     "firstName": "Dailon",
     "lastName": "Livramento",
     "fullName": "Dailon Livramento",
-    "image": "/cards/cabo-verde/CPV-17-dailon-livramento.png",
+    "image": "/cards/cabo-verde/CPV-17-dailon-livramento.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 10
@@ -172,7 +172,7 @@
     "firstName": "Garry",
     "lastName": "Rodrigues",
     "fullName": "Garry Rodrigues",
-    "image": "/cards/cabo-verde/CPV-18-garry-rodrigues.png",
+    "image": "/cards/cabo-verde/CPV-18-garry-rodrigues.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Jovane",
     "lastName": "Cabral",
     "fullName": "Jovane Cabral",
-    "image": "/cards/cabo-verde/CPV-19-jovane-cabral.png",
+    "image": "/cards/cabo-verde/CPV-19-jovane-cabral.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Hélio",
     "lastName": "Varela",
     "fullName": "Hélio Varela",
-    "image": "/cards/cabo-verde/CPV-20-helio-varela.png",
+    "image": "/cards/cabo-verde/CPV-20-helio-varela.webp",
     "type": "player",
     "team": "Cabo Verde",
     "weight": 20

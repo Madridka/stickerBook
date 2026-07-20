@@ -2,7 +2,7 @@
   {
     "id": "bel-01",
     "fullName": "Belgium Team Logo",
-    "image": "/cards/belgium/BEL-01-team-logo.png",
+    "image": "/cards/belgium/BEL-01-team-logo.webp",
     "type": "logo",
     "team": "Belgium",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Rudi",
     "lastName": "Garcia",
     "fullName": "Rudi Garcia",
-    "image": "/cards/belgium/BEL-02-rudi-garcia.png",
+    "image": "/cards/belgium/BEL-02-rudi-garcia.webp",
     "type": "head coach",
     "team": "Belgium",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Thibaut",
     "lastName": "Courtois",
     "fullName": "Thibaut Courtois",
-    "image": "/cards/belgium/BEL-03-thibaut-courtois.png",
+    "image": "/cards/belgium/BEL-03-thibaut-courtois.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Zeno",
     "lastName": "Debast",
     "fullName": "Zeno Debast",
-    "image": "/cards/belgium/BEL-04-zeno-debast.png",
+    "image": "/cards/belgium/BEL-04-zeno-debast.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Arthur",
     "lastName": "Theate",
     "fullName": "Arthur Theate",
-    "image": "/cards/belgium/BEL-05-arthur-theate.png",
+    "image": "/cards/belgium/BEL-05-arthur-theate.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Brandon",
     "lastName": "Mechele",
     "fullName": "Brandon Mechele",
-    "image": "/cards/belgium/BEL-06-brandon-mechele.png",
+    "image": "/cards/belgium/BEL-06-brandon-mechele.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Maxim",
     "lastName": "De Cuyper",
     "fullName": "Maxim De Cuyper",
-    "image": "/cards/belgium/BEL-07-maxim-de-cuyper.png",
+    "image": "/cards/belgium/BEL-07-maxim-de-cuyper.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Axel",
     "lastName": "Witsel",
     "fullName": "Axel Witsel",
-    "image": "/cards/belgium/BEL-08-axel-witsel.png",
+    "image": "/cards/belgium/BEL-08-axel-witsel.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Kevin",
     "lastName": "De Bruyne",
     "fullName": "Kevin De Bruyne",
-    "image": "/cards/belgium/BEL-09-kevin-de-bruyne.png",
+    "image": "/cards/belgium/BEL-09-kevin-de-bruyne.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Youri",
     "lastName": "Tielemans",
     "fullName": "Youri Tielemans",
-    "image": "/cards/belgium/BEL-10-youri-tielemans.png",
+    "image": "/cards/belgium/BEL-10-youri-tielemans.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Romelu",
     "lastName": "Lukaku",
     "fullName": "Romelu Lukaku",
-    "image": "/cards/belgium/BEL-11-romelu-lukaku.png",
+    "image": "/cards/belgium/BEL-11-romelu-lukaku.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Leandro",
     "lastName": "Trossard",
     "fullName": "Leandro Trossard",
-    "image": "/cards/belgium/BEL-12-leandro-trossard.png",
+    "image": "/cards/belgium/BEL-12-leandro-trossard.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Jeremy",
     "lastName": "Doku",
     "fullName": "Jeremy Doku",
-    "image": "/cards/belgium/BEL-13-jeremy-doku.png",
+    "image": "/cards/belgium/BEL-13-jeremy-doku.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Senne",
     "lastName": "Lammens",
     "fullName": "Senne Lammens",
-    "image": "/cards/belgium/BEL-14-senne-lammens.png",
+    "image": "/cards/belgium/BEL-14-senne-lammens.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Mike",
     "lastName": "Penders",
     "fullName": "Mike Penders",
-    "image": "/cards/belgium/BEL-15-mike-penders.png",
+    "image": "/cards/belgium/BEL-15-mike-penders.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Dodi",
     "lastName": "Lukebakio",
     "fullName": "Dodi Lukebakio",
-    "image": "/cards/belgium/BEL-16-dodi-lukebakio.png",
+    "image": "/cards/belgium/BEL-16-dodi-lukebakio.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Thomas",
     "lastName": "Meunier",
     "fullName": "Thomas Meunier",
-    "image": "/cards/belgium/BEL-17-thomas-meunier.png",
+    "image": "/cards/belgium/BEL-17-thomas-meunier.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Koni",
     "lastName": "De Winter",
     "fullName": "Koni De Winter",
-    "image": "/cards/belgium/BEL-18-koni-de-winter.png",
+    "image": "/cards/belgium/BEL-18-koni-de-winter.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Charles",
     "lastName": "De Ketelaere",
     "fullName": "Charles De Ketelaere",
-    "image": "/cards/belgium/BEL-19-charles-de-ketelaere.png",
+    "image": "/cards/belgium/BEL-19-charles-de-ketelaere.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Joaquin",
     "lastName": "Seys",
     "fullName": "Joaquin Seys",
-    "image": "/cards/belgium/BEL-20-joaquin-seys.png",
+    "image": "/cards/belgium/BEL-20-joaquin-seys.webp",
     "type": "player",
     "team": "Belgium",
     "weight": 20

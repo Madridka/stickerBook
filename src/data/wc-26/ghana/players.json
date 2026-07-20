@@ -2,7 +2,7 @@
   {
     "id": "gha-01",
     "fullName": "Ghana Team Logo",
-    "image": "/cards/ghana/GHA-01-team-logo.png",
+    "image": "/cards/ghana/GHA-01-team-logo.webp",
     "type": "logo",
     "team": "Ghana",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Carlos",
     "lastName": "Queiroz",
     "fullName": "Carlos Queiroz",
-    "image": "/cards/ghana/GHA-02-carlos-queiroz.png",
+    "image": "/cards/ghana/GHA-02-carlos-queiroz.webp",
     "type": "head coach",
     "team": "Ghana",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Lawrence",
     "lastName": "Zigi",
     "fullName": "Lawrence Zigi",
-    "image": "/cards/ghana/GHA-03-lawrence-zigi.png",
+    "image": "/cards/ghana/GHA-03-lawrence-zigi.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Alidu",
     "lastName": "Seidu",
     "fullName": "Alidu Seidu",
-    "image": "/cards/ghana/GHA-04-alidu-seidu.png",
+    "image": "/cards/ghana/GHA-04-alidu-seidu.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Caleb",
     "lastName": "Yirenkyi",
     "fullName": "Caleb Yirenkyi",
-    "image": "/cards/ghana/GHA-05-caleb-yirenkyi.png",
+    "image": "/cards/ghana/GHA-05-caleb-yirenkyi.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Jonas",
     "lastName": "Adjetey",
     "fullName": "Jonas Adjetey",
-    "image": "/cards/ghana/GHA-06-jonas-adjetey.png",
+    "image": "/cards/ghana/GHA-06-jonas-adjetey.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Thomas",
     "lastName": "Partey",
     "fullName": "Thomas Partey",
-    "image": "/cards/ghana/GHA-07-thomas-partey.png",
+    "image": "/cards/ghana/GHA-07-thomas-partey.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Abdul",
     "lastName": "Mumin",
     "fullName": "Abdul Mumin",
-    "image": "/cards/ghana/GHA-08-abdul-mumin.png",
+    "image": "/cards/ghana/GHA-08-abdul-mumin.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Abdul",
     "lastName": "Fatawu",
     "fullName": "Abdul Fatawu",
-    "image": "/cards/ghana/GHA-09-abdul-fatawu.png",
+    "image": "/cards/ghana/GHA-09-abdul-fatawu.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Kwasi",
     "lastName": "Sibo",
     "fullName": "Kwasi Sibo",
-    "image": "/cards/ghana/GHA-10-kwasi-sibo.png",
+    "image": "/cards/ghana/GHA-10-kwasi-sibo.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Jordan",
     "lastName": "Ayew",
     "fullName": "Jordan Ayew",
-    "image": "/cards/ghana/GHA-11-jordan-ayew.png",
+    "image": "/cards/ghana/GHA-11-jordan-ayew.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Brandon",
     "lastName": "Thomas-Asante",
     "fullName": "Brandon Thomas-Asante",
-    "image": "/cards/ghana/GHA-12-brandon-thomas-asante.png",
+    "image": "/cards/ghana/GHA-12-brandon-thomas-asante.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Antoine",
     "lastName": "Semenyo",
     "fullName": "Antoine Semenyo",
-    "image": "/cards/ghana/GHA-13-antoine-semenyo.png",
+    "image": "/cards/ghana/GHA-13-antoine-semenyo.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Joseph",
     "lastName": "Anang",
     "fullName": "Joseph Anang",
-    "image": "/cards/ghana/GHA-14-joseph-anang.png",
+    "image": "/cards/ghana/GHA-14-joseph-anang.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Christopher",
     "lastName": "Bonsu Baah",
     "fullName": "Christopher Bonsu Baah",
-    "image": "/cards/ghana/GHA-15-christopher-bonsu-baah.png",
+    "image": "/cards/ghana/GHA-15-christopher-bonsu-baah.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Gideon",
     "lastName": "Mensah",
     "fullName": "Gideon Mensah",
-    "image": "/cards/ghana/GHA-16-gideon-mensah.png",
+    "image": "/cards/ghana/GHA-16-gideon-mensah.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Elisha",
     "lastName": "Owusu",
     "fullName": "Elisha Owusu",
-    "image": "/cards/ghana/GHA-17-elisha-owusu.png",
+    "image": "/cards/ghana/GHA-17-elisha-owusu.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Benjamin",
     "lastName": "Asare",
     "fullName": "Benjamin Asare",
-    "image": "/cards/ghana/GHA-18-benjamin-asare.png",
+    "image": "/cards/ghana/GHA-18-benjamin-asare.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Baba",
     "lastName": "Rahman",
     "fullName": "Baba Rahman",
-    "image": "/cards/ghana/GHA-19-baba-rahman.png",
+    "image": "/cards/ghana/GHA-19-baba-rahman.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Jerome",
     "lastName": "Opoku",
     "fullName": "Jerome Opoku",
-    "image": "/cards/ghana/GHA-20-jerome-opoku.png",
+    "image": "/cards/ghana/GHA-20-jerome-opoku.webp",
     "type": "player",
     "team": "Ghana",
     "weight": 20

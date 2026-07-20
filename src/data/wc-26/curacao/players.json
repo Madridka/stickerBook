@@ -2,7 +2,7 @@
   {
     "id": "cuw-01",
     "fullName": "Curacao Team Logo",
-    "image": "/cards/curacao/CUW-01-team-logo.png",
+    "image": "/cards/curacao/CUW-01-team-logo.webp",
     "type": "logo",
     "team": "Curacao",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Dick",
     "lastName": "Advocaat",
     "fullName": "Dick Advocaat",
-    "image": "/cards/curacao/CUW-02-dick-advocaat.png",
+    "image": "/cards/curacao/CUW-02-dick-advocaat.webp",
     "type": "head coach",
     "team": "Curacao",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Eloy",
     "lastName": "Room",
     "fullName": "Eloy Room",
-    "image": "/cards/curacao/CUW-03-eloy-room.png",
+    "image": "/cards/curacao/CUW-03-eloy-room.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Shurandy",
     "lastName": "Sambo",
     "fullName": "Shurandy Sambo",
-    "image": "/cards/curacao/CUW-04-shurandy-sambo.png",
+    "image": "/cards/curacao/CUW-04-shurandy-sambo.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Jurien",
     "lastName": "Gaari",
     "fullName": "Jurien Gaari",
-    "image": "/cards/curacao/CUW-05-jurien-gaari.png",
+    "image": "/cards/curacao/CUW-05-jurien-gaari.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Roshon",
     "lastName": "Van Eijma",
     "fullName": "Roshon Van Eijma",
-    "image": "/cards/curacao/CUW-06-roshon-van-eijma.png",
+    "image": "/cards/curacao/CUW-06-roshon-van-eijma.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Sherel",
     "lastName": "Floranus",
     "fullName": "Sherel Floranus",
-    "image": "/cards/curacao/CUW-07-sherel-floranus.png",
+    "image": "/cards/curacao/CUW-07-sherel-floranus.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Godfried",
     "lastName": "Roemeratoe",
     "fullName": "Godfried Roemeratoe",
-    "image": "/cards/curacao/CUW-08-godfried-roemeratoe.png",
+    "image": "/cards/curacao/CUW-08-godfried-roemeratoe.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Juninho",
     "lastName": "Bacuna",
     "fullName": "Juninho Bacuna",
-    "image": "/cards/curacao/CUW-09-juninho-bacuna.png",
+    "image": "/cards/curacao/CUW-09-juninho-bacuna.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Livano",
     "lastName": "Comenencia",
     "fullName": "Livano Comenencia",
-    "image": "/cards/curacao/CUW-10-livano-comenencia.png",
+    "image": "/cards/curacao/CUW-10-livano-comenencia.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Juergen",
     "lastName": "Locadia",
     "fullName": "Juergen Locadia",
-    "image": "/cards/curacao/CUW-11-juergen-locadia.png",
+    "image": "/cards/curacao/CUW-11-juergen-locadia.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Leandro",
     "lastName": "Bacuna",
     "fullName": "Leandro Bacuna",
-    "image": "/cards/curacao/CUW-12-leandro-bacuna.png",
+    "image": "/cards/curacao/CUW-12-leandro-bacuna.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Jeremy",
     "lastName": "Antonisse",
     "fullName": "Jeremy Antonisse",
-    "image": "/cards/curacao/CUW-13-jeremy-antonisse.png",
+    "image": "/cards/curacao/CUW-13-jeremy-antonisse.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Sontje",
     "lastName": "Hansen",
     "fullName": "Sontje Hansen",
-    "image": "/cards/curacao/CUW-14-sontje-hansen.png",
+    "image": "/cards/curacao/CUW-14-sontje-hansen.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Tyrese",
     "lastName": "Noslin",
     "fullName": "Tyrese Noslin",
-    "image": "/cards/curacao/CUW-15-tyrese-noslin.png",
+    "image": "/cards/curacao/CUW-15-tyrese-noslin.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Kenji",
     "lastName": "Gorre",
     "fullName": "Kenji Gorre",
-    "image": "/cards/curacao/CUW-16-kenji-gorre.png",
+    "image": "/cards/curacao/CUW-16-kenji-gorre.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Arjany",
     "lastName": "Martha",
     "fullName": "Arjany Martha",
-    "image": "/cards/curacao/CUW-17-arjany-martha.png",
+    "image": "/cards/curacao/CUW-17-arjany-martha.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Jearl",
     "lastName": "Margaritha",
     "fullName": "Jearl Margaritha",
-    "image": "/cards/curacao/CUW-18-jearl-margaritha.png",
+    "image": "/cards/curacao/CUW-18-jearl-margaritha.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Brandley",
     "lastName": "Kuwas",
     "fullName": "Brandley Kuwas",
-    "image": "/cards/curacao/CUW-19-brandley-kuwas.png",
+    "image": "/cards/curacao/CUW-19-brandley-kuwas.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Armando",
     "lastName": "Obispo",
     "fullName": "Armando Obispo",
-    "image": "/cards/curacao/CUW-20-armando-obispo.png",
+    "image": "/cards/curacao/CUW-20-armando-obispo.webp",
     "type": "player",
     "team": "Curacao",
     "weight": 20

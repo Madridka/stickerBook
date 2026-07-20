@@ -2,7 +2,7 @@
   {
     "id": "nzl-01",
     "fullName": "New Zealand Team Logo",
-    "image": "/cards/new-zealand/NZL-01-team-logo.png",
+    "image": "/cards/new-zealand/NZL-01-team-logo.webp",
     "type": "logo",
     "team": "New Zealand",
     "weight": 15
@@ -12,7 +12,7 @@
     "firstName": "Darren",
     "lastName": "Bazeley",
     "fullName": "Darren Bazeley",
-    "image": "/cards/new-zealand/NZL-02-darren-bazeley.png",
+    "image": "/cards/new-zealand/NZL-02-darren-bazeley.webp",
     "type": "head coach",
     "team": "New Zealand",
     "weight": 10
@@ -22,7 +22,7 @@
     "firstName": "Max",
     "lastName": "Crocombe",
     "fullName": "Max Crocombe",
-    "image": "/cards/new-zealand/NZL-03-max-crocombe.png",
+    "image": "/cards/new-zealand/NZL-03-max-crocombe.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -32,7 +32,7 @@
     "firstName": "Tim",
     "lastName": "Payne",
     "fullName": "Tim Payne",
-    "image": "/cards/new-zealand/NZL-04-tim-payne.png",
+    "image": "/cards/new-zealand/NZL-04-tim-payne.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -42,7 +42,7 @@
     "firstName": "Francis",
     "lastName": "De Vries",
     "fullName": "Francis De Vries",
-    "image": "/cards/new-zealand/NZL-05-francis-de-vries.png",
+    "image": "/cards/new-zealand/NZL-05-francis-de-vries.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -52,7 +52,7 @@
     "firstName": "Tyler",
     "lastName": "Bindon",
     "fullName": "Tyler Bindon",
-    "image": "/cards/new-zealand/NZL-06-tyler-bindon.png",
+    "image": "/cards/new-zealand/NZL-06-tyler-bindon.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -62,7 +62,7 @@
     "firstName": "Michael",
     "lastName": "Boxall",
     "fullName": "Michael Boxall",
-    "image": "/cards/new-zealand/NZL-07-michael-boxall.png",
+    "image": "/cards/new-zealand/NZL-07-michael-boxall.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -72,7 +72,7 @@
     "firstName": "Joe",
     "lastName": "Bell",
     "fullName": "Joe Bell",
-    "image": "/cards/new-zealand/NZL-08-joe-bell.png",
+    "image": "/cards/new-zealand/NZL-08-joe-bell.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -82,7 +82,7 @@
     "firstName": "Logan",
     "lastName": "Rogerson",
     "fullName": "Logan Rogerson",
-    "image": "/cards/new-zealand/NZL-09-logan-rogerson.png",
+    "image": "/cards/new-zealand/NZL-09-logan-rogerson.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -92,7 +92,7 @@
     "firstName": "Marko",
     "lastName": "Stamenic",
     "fullName": "Marko Stamenic",
-    "image": "/cards/new-zealand/NZL-10-marko-stamenic.png",
+    "image": "/cards/new-zealand/NZL-10-marko-stamenic.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -102,7 +102,7 @@
     "firstName": "Chris",
     "lastName": "Wood",
     "fullName": "Chris Wood",
-    "image": "/cards/new-zealand/NZL-11-chris-wood.png",
+    "image": "/cards/new-zealand/NZL-11-chris-wood.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -112,7 +112,7 @@
     "firstName": "Sarpreet",
     "lastName": "Singh",
     "fullName": "Sarpreet Singh",
-    "image": "/cards/new-zealand/NZL-12-sarpreet-singh.png",
+    "image": "/cards/new-zealand/NZL-12-sarpreet-singh.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -122,7 +122,7 @@
     "firstName": "Elijah",
     "lastName": "Just",
     "fullName": "Elijah Just",
-    "image": "/cards/new-zealand/NZL-13-elijah-just.png",
+    "image": "/cards/new-zealand/NZL-13-elijah-just.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -132,7 +132,7 @@
     "firstName": "Alex",
     "lastName": "Paulsen",
     "fullName": "Alex Paulsen",
-    "image": "/cards/new-zealand/NZL-14-alex-paulsen.png",
+    "image": "/cards/new-zealand/NZL-14-alex-paulsen.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -142,7 +142,7 @@
     "firstName": "Liberato",
     "lastName": "Cacace",
     "fullName": "Liberato Cacace",
-    "image": "/cards/new-zealand/NZL-15-liberato-cacace.png",
+    "image": "/cards/new-zealand/NZL-15-liberato-cacace.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -152,7 +152,7 @@
     "firstName": "Alex",
     "lastName": "Rufer",
     "fullName": "Alex Rufer",
-    "image": "/cards/new-zealand/NZL-16-alex-rufer.png",
+    "image": "/cards/new-zealand/NZL-16-alex-rufer.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -162,7 +162,7 @@
     "firstName": "Nando",
     "lastName": "Pijnaker",
     "fullName": "Nando Pijnaker",
-    "image": "/cards/new-zealand/NZL-17-nando-pijnaker.png",
+    "image": "/cards/new-zealand/NZL-17-nando-pijnaker.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -172,7 +172,7 @@
     "firstName": "Finn",
     "lastName": "Surman",
     "fullName": "Finn Surman",
-    "image": "/cards/new-zealand/NZL-18-finn-surman.png",
+    "image": "/cards/new-zealand/NZL-18-finn-surman.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -182,7 +182,7 @@
     "firstName": "Kosta",
     "lastName": "Barbarouses",
     "fullName": "Kosta Barbarouses",
-    "image": "/cards/new-zealand/NZL-19-kosta-barbarouses.png",
+    "image": "/cards/new-zealand/NZL-19-kosta-barbarouses.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20
@@ -192,7 +192,7 @@
     "firstName": "Ben",
     "lastName": "Waine",
     "fullName": "Ben Waine",
-    "image": "/cards/new-zealand/NZL-20-ben-waine.png",
+    "image": "/cards/new-zealand/NZL-20-ben-waine.webp",
     "type": "player",
     "team": "New Zealand",
     "weight": 20

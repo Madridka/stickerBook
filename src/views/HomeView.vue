@@ -1,24 +1,52 @@
 <script setup lang="ts">
-import { ref, type Ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ClickArea from '@/components/Clicker/ClickArea.vue'
+import ClickEnergyPanel from '@/components/Clicker/ClickEnergyPanel.vue'
 import ScoreDisplay from '@/components/Clicker/ScoreDisplay.vue'
+import gameData from '@/data/mainConst.json'
+import { useCollectionStore } from '@/stores/collection'
 import { usePlayerStore } from '@/stores/player'
 
 interface ClickEffectItem {
   id: number
   x: number
   y: number
+  reward: string
 }
 
 const { t } = useI18n()
 const player = usePlayerStore()
+const collection = useCollectionStore()
 // Хранит активные эффекты до завершения их анимации
 const effects: Ref<ClickEffectItem[]> = ref([])
 let nextEffectId: number = 0
+let energyTimer: number | undefined
 
-// Начисляет очко и размещает короткий визуальный эффект в месте клика
+// Переводит процент заполнения журнала в линейный бонус к награде за клик.
+const clickReward: ComputedRef<number> = computed((): number => {
+  const rawReward: number = gameData.clicker.baseReward * (1 + collection.albumProgress / 100)
+  const multiplier: number = 10 ** gameData.clicker.rewardPrecision
+  return Math.round((rawReward + Number.EPSILON) * multiplier) / multiplier
+})
+const formattedClickReward: ComputedRef<string> = computed((): string =>
+  clickReward.value.toLocaleString('ru-RU', {
+    maximumFractionDigits: gameData.clicker.rewardPrecision,
+  }),
+)
+const isClickDisabled: ComputedRef<boolean> = computed(
+  (): boolean => !player.isLoaded || !collection.isLoaded || !player.canClick,
+)
+const clickLabel: ComputedRef<string> = computed((): string =>
+  player.canClick
+    ? t('home.clickPrompt', { reward: formattedClickReward.value })
+    : t('home.noEnergy'),
+)
+
+// Начисляет награду только при доступной энергии и размещает эффект в месте клика.
 const handleClick = (event: MouseEvent): void => {
+  if (!player.addCoin(clickReward.value)) return
+
   const target: HTMLElement = event.currentTarget as HTMLElement
   const area: DOMRect =
     target.parentElement?.getBoundingClientRect() ?? target.getBoundingClientRect()
@@ -26,14 +54,23 @@ const handleClick = (event: MouseEvent): void => {
     id: nextEffectId++,
     x: event.clientX - area.left,
     y: event.clientY - area.top,
+    reward: formattedClickReward.value,
   }
 
-  player.addCoin()
   effects.value = [...effects.value, effect]
   window.setTimeout((): void => {
     effects.value = effects.value.filter(({ id }: ClickEffectItem): boolean => id !== effect.id)
   }, 700)
 }
+
+onMounted((): void => {
+  player.refreshEnergy()
+  energyTimer = window.setInterval((): void => player.refreshEnergy(), 1000)
+})
+
+onBeforeUnmount((): void => {
+  if (energyTimer !== undefined) window.clearInterval(energyTimer)
+})
 </script>
 
 <template>
@@ -54,10 +91,24 @@ const handleClick = (event: MouseEvent): void => {
     <!-- Текущий баланс игрока -->
     <ScoreDisplay :score="player.formattedCoins" />
 
+    <ClickEnergyPanel
+      :current="player.availableEnergy"
+      :limit="player.energyLimit"
+      :percent="player.energyPercent"
+      :milliseconds-until-next="player.millisecondsUntilNextEnergy"
+      :collection-progress="collection.albumProgress"
+      :reward="formattedClickReward"
+    />
+
     <!-- Центральная зона получения coins -->
-    <ClickArea :effects="effects" @click="handleClick" />
+    <ClickArea
+      :effects="effects"
+      :disabled="isClickDisabled"
+      :label="clickLabel"
+      @click="handleClick"
+    />
 
     <!-- Подсказка действия -->
-    <p class="-mt-1 text-xs font-semibold text-ink/50 sm:text-sm">{{ t('home.clickPrompt') }}</p>
+    <p class="-mt-1 text-xs font-semibold text-ink/50 sm:text-sm">{{ clickLabel }}</p>
   </section>
 </template>

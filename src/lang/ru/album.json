@@ -13,7 +13,7 @@
   "uniqueTab": "Основная коллекция",
   "duplicatesTab": "Хранилище повторов",
   "deletedTab": "Удалённые",
-  "inDuplicateStorage": "Повтор · хранится отдельно",
+  "inDuplicateStorage": "Повтор",
   "duplicatesEmptyTitle": "Хранилище пока пусто",
   "duplicatesEmptyText": "Повторная карточка из набора автоматически появится здесь и не займёт место оригинала.",
   "deletedEmptyTitle": "Удалённых карточек нет",

@@ -78,7 +78,7 @@ const alignmentDistance: ComputedRef<number> = computed((): number =>
   Math.round(alignmentOffset.value),
 )
 const alignmentAccuracy: ComputedRef<number> = computed((): number =>
-  Math.max(0, 100 - Math.round(alignmentOffset.value / 2)),
+  Math.min(100, Math.max(0, 101 - Math.round(alignmentOffset.value / 2))),
 )
 const stepTranslationKeys: string[] = [
   'stickerTray.stepPeel',

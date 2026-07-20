@@ -6,18 +6,27 @@ import TabList from 'primevue/tablist'
 import TabPanel from 'primevue/tabpanel'
 import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
+import Select from 'primevue/select'
+import SelectButton from 'primevue/selectbutton'
+import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
 import cards from '@/data/wc-26/players'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
-import type { CollectionItem, PlayerCard, StickerInstance } from '@/types'
-
-interface DuplicateGroup {
-  playerId: string
-  instances: StickerInstance[]
-}
+import type { CollectionItem, PlayerCard } from '@/types'
 
 type CollectionFilter = 'all' | 'ready' | 'album'
 type CollectionSort = 'status' | 'album' | 'name'
+
+interface CollectionFilterOption {
+  value: CollectionFilter
+  label: string
+  count: number
+}
+
+interface CollectionSortOption {
+  value: CollectionSort
+  label: string
+}
 
 const { t } = useI18n()
 const collection = useCollectionStore()
@@ -48,6 +57,28 @@ const readyItemsCount: ComputedRef<number> = computed(
 const albumItemsCount: ComputedRef<number> = computed(
   (): number =>
     collectedItems.value.filter(({ instance }): boolean => instance.location === 'album').length,
+)
+const collectionFilterOptions: ComputedRef<CollectionFilterOption[]> = computed(
+  (): CollectionFilterOption[] =>
+    collectionFilters.map(
+      (filter: CollectionFilter): CollectionFilterOption => ({
+        value: filter,
+        label: t(`album.collectionControls.${filter}`),
+        count:
+          filter === 'all'
+            ? collectedItems.value.length
+            : filter === 'ready'
+              ? readyItemsCount.value
+              : albumItemsCount.value,
+      }),
+    ),
+)
+const collectionSortOptions: ComputedRef<CollectionSortOption[]> = computed(
+  (): CollectionSortOption[] => [
+    { value: 'status', label: t('album.collectionControls.sortStatus') },
+    { value: 'album', label: t('album.collectionControls.sortAlbum') },
+    { value: 'name', label: t('album.collectionControls.sortName') },
+  ],
 )
 const visibleCollectionItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] => {
   const filtered: CollectionItem[] = collectedItems.value.filter((item: CollectionItem): boolean => {
@@ -82,14 +113,6 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
     .filter((item: CollectionItem | undefined): item is CollectionItem => Boolean(item)),
 )
 
-// Группирует физические экземпляры повторов по карточке для отображения в хранилище.
-const duplicateGroups: ComputedRef<DuplicateGroup[]> = computed((): DuplicateGroup[] => {
-  const groups: Map<string, StickerInstance[]> = new Map()
-  collection.duplicates.forEach((instance: StickerInstance): void => {
-    groups.set(instance.playerId, [...(groups.get(instance.playerId) ?? []), instance])
-  })
-  return Array.from(groups, ([playerId, instances]): DuplicateGroup => ({ playerId, instances }))
-})
 </script>
 
 <template>
@@ -167,51 +190,35 @@ const duplicateGroups: ComputedRef<DuplicateGroup[]> = computed((): DuplicateGro
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="collection">
           <template v-if="collectedItems.length">
             <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
-              <div
-                class="flex flex-wrap gap-1 rounded-lg bg-ink/5 p-1"
-                role="group"
+              <SelectButton
+                v-model="collectionFilter"
+                class="collection-filter"
+                :options="collectionFilterOptions"
+                option-label="label"
+                option-value="value"
+                :allow-empty="false"
                 :aria-label="t('album.collectionControls.filterLabel')"
               >
-                <button
-                  v-for="filter in collectionFilters"
-                  :key="filter"
-                  type="button"
-                  class="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-black transition-colors"
-                  :class="
-                    collectionFilter === filter
-                      ? 'bg-ink text-paper shadow-sm'
-                      : 'text-ink/60 hover:bg-paper hover:text-ink'
-                  "
-                  :aria-pressed="collectionFilter === filter"
-                  @click="collectionFilter = filter"
-                >
-                  {{ t(`album.collectionControls.${filter}`) }}
-                  <span
-                    class="rounded-full px-1.5 py-0.5 text-[10px]"
-                    :class="collectionFilter === filter ? 'bg-paper/15' : 'bg-ink/10'"
-                  >
-                    {{
-                      filter === 'all'
-                        ? collectedItems.length
-                        : filter === 'ready'
-                          ? readyItemsCount
-                          : albumItemsCount
-                    }}
+                <template #option="{ option }">
+                  <span class="flex items-center gap-1.5 text-xs font-black">
+                    {{ option.label }}
+                    <span class="rounded-full bg-current/10 px-1.5 py-0.5 text-[10px]">
+                      {{ option.count }}
+                    </span>
                   </span>
-                </button>
-              </div>
+                </template>
+              </SelectButton>
 
               <label class="flex items-center gap-2 text-xs font-bold text-ink/55">
                 <span class="max-sm:sr-only">{{ t('album.collectionControls.sortLabel') }}</span>
-                <select
+                <Select
                   v-model="collectionSort"
-                  class="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-xs font-bold text-ink outline-none focus:border-coral focus:ring-2 focus:ring-coral/20"
+                  class="w-40 text-xs font-bold"
+                  :options="collectionSortOptions"
+                  option-label="label"
+                  option-value="value"
                   :aria-label="t('album.collectionControls.sortLabel')"
-                >
-                  <option value="status">{{ t('album.collectionControls.sortStatus') }}</option>
-                  <option value="album">{{ t('album.collectionControls.sortAlbum') }}</option>
-                  <option value="name">{{ t('album.collectionControls.sortName') }}</option>
-                </select>
+                />
               </label>
             </div>
 
@@ -273,42 +280,7 @@ const duplicateGroups: ComputedRef<DuplicateGroup[]> = computed((): DuplicateGro
         </TabPanel>
 
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="duplicates">
-          <div
-            v-if="duplicateGroups.length"
-            class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
-          >
-            <article
-              v-for="group in duplicateGroups"
-              :key="group.playerId"
-              class="relative mb-2 mr-2 border-2 border-ink bg-paper p-2 shadow-[8px_8px_0_rgb(var(--color-coral)/0.28)]"
-            >
-              <span
-                class="absolute right-3 top-3 z-10 rounded-full bg-coral px-2 py-1 text-xs font-black text-white shadow"
-              >
-                ×{{ group.instances.length }}
-              </span>
-              <img
-                v-if="getCard(group.playerId)"
-                class="aspect-[2/3] w-full bg-white object-cover"
-                :src="getCard(group.playerId)?.image"
-                :alt="getCard(group.playerId)?.fullName"
-              />
-              <p class="mt-2 truncate text-sm font-black">
-                {{ getCard(group.playerId)?.fullName }}
-              </p>
-              <p class="text-[11px] font-semibold uppercase tracking-wide text-coral">
-                {{ t('album.inDuplicateStorage') }}
-              </p>
-            </article>
-          </div>
-          <div
-            v-else
-            class="flex h-full min-h-56 flex-col items-center justify-center border border-dashed border-ink/20 p-8 text-center"
-          >
-            <i class="pi pi-inbox text-4xl text-ink/25" />
-            <strong class="mt-4 text-lg">{{ t('album.duplicatesEmptyTitle') }}</strong>
-            <p class="mt-1 max-w-sm text-sm text-ink/55">{{ t('album.duplicatesEmptyText') }}</p>
-          </div>
+          <DuplicateExchangePanel />
         </TabPanel>
 
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="deleted">

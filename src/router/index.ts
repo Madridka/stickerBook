@@ -64,6 +64,14 @@ const router: Router = createRouter({
         packOpening: true,
       },
     },
+    {
+      path: '/pack-hunt',
+      name: 'pack-hunt',
+      component: () => import('@/views/PackHuntView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('packHunt.title'),
+      },
+    },
   ],
 })
 

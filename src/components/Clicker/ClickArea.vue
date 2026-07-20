@@ -7,10 +7,13 @@ interface ClickEffectItem {
   id: number
   x: number
   y: number
+  reward: string
 }
 
 interface ClickAreaProps {
   effects: ClickEffectItem[]
+  disabled: boolean
+  label: string
 }
 
 // Получает список эффектов, которые нужно показать поверх области клика
@@ -27,7 +30,9 @@ const { t } = useI18n()
     <button
       class="group relative flex w-44 touch-manipulation select-none items-center justify-center p-4 text-center outline-none transition-transform duration-100 ease-out hover:scale-[1.03] active:translate-y-3 active:scale-[.96] focus-visible:ring-4 focus-visible:ring-coral/40 sm:w-56 sm:p-5"
       type="button"
-      :aria-label="t('home.clickPrompt')"
+      :aria-label="label"
+      :disabled="disabled"
+      :class="disabled ? 'cursor-not-allowed opacity-45 hover:scale-100 active:translate-y-0' : ''"
       @click="emit('click', $event)"
     >
       <img

@@ -15,6 +15,10 @@ export interface PlayerState {
   id: string
   // Текущий баланс coins
   coins: number
+  // Текущий восстанавливаемый запас энергии для кликов
+  energy: number
+  // Время последнего расчёта энергии
+  energyUpdatedAt: number
 }
 
 export type InventoryItemType = 'pack'
@@ -28,6 +32,22 @@ export interface InventoryItem {
   createdAt: number
 }
 
+export interface PackHuntProgress {
+  // Единственная запись дневного прогресса поиска наборов
+  id: 'daily'
+  // Локальная календарная дата, к которой относится счётчик
+  dateKey: string
+  // Количество полученных за эту дату наград
+  completed: number
+}
+
+export interface DuplicateExchange {
+  // Единственная незавершённая сдача повторок, ожидающая выбора награды.
+  id: 'pending'
+  candidatePlayerIds: string[]
+  createdAt: number
+}
+
 interface StickerBookDatabase extends Dexie {
   stickers: Table<CollectedSticker, string>
   player: Table<PlayerState, string>
@@ -35,6 +55,8 @@ interface StickerBookDatabase extends Dexie {
   cards: Table<StickerInstance, string>
   duplicates: Table<StickerInstance, string>
   deletedCards: Table<DeletedCard, string>
+  packHuntProgress: Table<PackHuntProgress, string>
+  duplicateExchanges: Table<DuplicateExchange, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -60,4 +82,23 @@ database.version(5).stores({
   cards: 'id, playerId, location',
   duplicates: 'id, playerId, location',
   deletedCards: 'id, instanceId, playerId, deletedAt',
+})
+database.version(6).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
+  packHuntProgress: 'id, dateKey',
+})
+database.version(7).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
+  packHuntProgress: 'id, dateKey',
+  duplicateExchanges: 'id, createdAt',
 })

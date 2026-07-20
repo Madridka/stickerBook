@@ -41,5 +41,5 @@ export const useInventoryStore = defineStore('inventory', () => {
 
   void load()
 
-  return { items, isLoaded, packCount, addPack, removePack }
+  return { items, isLoaded, packCount, load, addPack, removePack }
 })

@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import { ref, type Ref } from 'vue'
+import { onMounted, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import ShopItem from '@/components/Shop/ShopItem.vue'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
+import { usePackHuntStore } from '@/stores/packHunt'
 import packData from '@/data/mainConst.json'
+import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniGame'
 
 const { t } = useI18n()
 const player = usePlayerStore()
 const inventory = useInventoryStore()
+const packHunt = usePackHuntStore()
 const router = useRouter()
 const isPurchasing: Ref<boolean> = ref(false)
 const hasPurchaseError: Ref<boolean> = ref(false)
@@ -40,11 +43,26 @@ const buyPack = async (): Promise<void> => {
     isPurchasing.value = false
   }
 }
+
+const playPackHunt = async (): Promise<void> => {
+  if (!packHunt.canPlay) return
+  const game: PackMiniGameId = selectPackMiniGame()
+  await router.push({ name: 'pack-hunt', query: { game } })
+}
+
+const openOwnedPack = async (): Promise<void> => {
+  if (!inventory.isLoaded || inventory.packCount <= 0) return
+  await router.push({ name: 'pack-opening' })
+}
+
+onMounted(async (): Promise<void> => {
+  await Promise.all([packHunt.load(), inventory.load()])
+})
 </script>
 
 <template>
   <!-- Основной экран магазина -->
-  <section class="mx-auto w-full max-w-3xl">
+  <section class="mx-auto flex h-full min-h-0 w-full max-w-4xl flex-col justify-center">
     <!-- Название текущего раздела -->
     <p class="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-coral">{{ t('app.shop') }}</p>
     <!-- Заголовок магазина и текущий баланс игрока -->
@@ -70,7 +88,14 @@ const buyPack = async (): Promise<void> => {
       :price="packData.price"
       :can-buy="player.coins >= packData.price"
       :purchasing="isPurchasing"
+      :daily-remaining="packHunt.remainingToday"
+      :daily-limit="packHunt.dailyLimit"
+      :mini-game-loaded="packHunt.isLoaded"
+      :owned-packs="inventory.packCount"
+      :inventory-loaded="inventory.isLoaded"
       @purchase="buyPack"
+      @play="playPackHunt"
+      @open="openOwnedPack"
     />
     <p v-if="hasPurchaseError" class="mt-4 text-sm font-bold text-coral" role="alert">
       {{ t('shop.purchaseError') }}

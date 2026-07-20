@@ -1,4 +1,85 @@
 {
   "price": 10,
-  "cardsPerPack": 5
+  "cardsPerPack": 5,
+  "clicker": {
+    "baseReward": 1,
+    "energyLimit": 100,
+    "energyCostPerClick": 1,
+    "fullRechargeMs": 3600000,
+    "rewardPrecision": 2
+  },
+  "duplicateExchange": {
+    "tradeInCount": 5,
+    "candidateCount": 5
+  },
+  "packHunt": {
+    "dailyLimit": 5,
+    "games": [
+      { "id": "signal", "weight": 1 },
+      { "id": "rack", "weight": 1 },
+      { "id": "machine", "weight": 1 }
+    ],
+    "signalsRequired": 3,
+    "holdDurationMs": 3000,
+    "signalTransitionMs": 500,
+    "signalCompletionDelayMs": 650,
+    "detectionRadiusPercent": 11,
+    "mediumSignalRadiusPercent": 23,
+    "weakSignalRadiusPercent": 40,
+    "minimumTargetDistancePercent": 38,
+    "targetPaddingPercent": 16,
+    "scannerPaddingPercent": 4,
+    "keyboardStepPercent": 4,
+    "rack": {
+      "minimumDurationMs": 10000,
+      "stageTransitionMs": 450,
+      "stackSeparationPercent": 4,
+      "spreadTargetPercent": 24,
+      "gripDurationMs": 3500,
+      "pathTolerancePercent": 10,
+      "route": {
+        "pointCountMin": 5,
+        "pointCountMax": 7,
+        "xMinPercent": 12,
+        "xMaxPercent": 88,
+        "yMinPercent": 12,
+        "yMaxPercent": 88,
+        "startYMinPercent": 72,
+        "startYMaxPercent": 88,
+        "endYMinPercent": 12,
+        "endYMaxPercent": 28,
+        "minimumSegmentLengthPercent": 24,
+        "minimumPointSpacingPercent": 13,
+        "minimumHorizontalChangePercent": 14,
+        "candidateAttempts": 80
+      }
+    },
+    "machine": {
+      "minimumDurationMs": 10000,
+      "stageTransitionMs": 450,
+      "drumOffsetMinPercent": 28,
+      "drumOffsetMaxPercent": 38,
+      "drumAlignmentTolerancePercent": 5,
+      "timingCycleMs": 1800,
+      "timingTargetCenterPercent": 54,
+      "timingTargetWidthPercent": 24,
+      "pathTolerancePercent": 10,
+      "route": {
+        "pointCountMin": 5,
+        "pointCountMax": 7,
+        "xMinPercent": 12,
+        "xMaxPercent": 88,
+        "yMinPercent": 10,
+        "yMaxPercent": 90,
+        "startYMinPercent": 10,
+        "startYMaxPercent": 24,
+        "endYMinPercent": 76,
+        "endYMaxPercent": 90,
+        "minimumSegmentLengthPercent": 24,
+        "minimumPointSpacingPercent": 13,
+        "minimumHorizontalChangePercent": 14,
+        "candidateAttempts": 80
+      }
+    }
+  }
 }

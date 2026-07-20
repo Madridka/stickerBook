@@ -2,7 +2,7 @@
   {
     "id": "spain-left",
     "number": 64,
-    "image": "page-64-stickers-left.png",
+    "image": "page-14-stickers-left.png",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -21,7 +21,7 @@
   {
     "id": "spain-right",
     "number": 65,
-    "image": "page-65-stickers-right.png",
+    "image": "page-15-stickers-right.png",
     "width": 1536,
     "height": 1200,
     "slots": [

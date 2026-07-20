@@ -1,8 +1,9 @@
 import mexicoPages from './mexico/pages.json'
+import spainPages from './spain/pages.json'
 import portugalPages from './portugal/pages.json'
 import croatiaPages from './croatia/pages.json'
 
-const visibleTeamPages = [...mexicoPages, ...portugalPages, ...croatiaPages].map(
+const visibleTeamPages = [...mexicoPages, ...spainPages, ...portugalPages, ...croatiaPages].map(
   (page, index) => ({
     ...page,
     number: index + 6,

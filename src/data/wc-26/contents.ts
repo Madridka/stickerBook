@@ -348,6 +348,6 @@ const albumContentsTeams: AlbumContentsTeam[] = [
   },
 ]
 
-const visibleTeamIds: Set<string> = new Set(['mexico', 'portugal', 'croatia'])
+const visibleTeamIds: Set<string> = new Set(['mexico', 'spain', 'portugal', 'croatia'])
 
 export default albumContentsTeams.filter(({ id }): boolean => visibleTeamIds.has(id))

@@ -8,6 +8,7 @@ import type {
 interface DropCardIdentity {
   instanceId: string
   playerId: string
+  albumSlotId: string
 }
 
 const alignmentCardWidth: number = 112
@@ -38,7 +39,10 @@ export const evaluateStickerDrop = (
   card: DropCardIdentity,
 ): StickerDropResult | undefined => {
   const targets: HTMLElement[] = Array.from(
-    document.querySelectorAll<HTMLElement>('[data-sticker-slot]:not([data-occupied="true"])'),
+    document.querySelectorAll<HTMLElement>('[data-sticker-slot]'),
+  ).filter(
+    (element: HTMLElement): boolean =>
+      element.dataset.occupied !== 'true' || element.dataset.playerId === card.albumSlotId,
   )
   const nearest = targets
     .map((element: HTMLElement) => {
@@ -56,7 +60,8 @@ export const evaluateStickerDrop = (
   const accuracy: number = Math.max(0, Math.round(100 - nearest.distance * 100))
 
   return {
-    ...card,
+    instanceId: card.instanceId,
+    playerId: card.playerId,
     slotId: nearest.element.dataset.stickerSlot ?? '',
     x: (point.x - nearest.centerX) / nearest.bounds.width,
     y: (point.y - nearest.centerY) / nearest.bounds.height,

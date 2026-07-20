@@ -188,6 +188,40 @@ export const useCollectionStore = defineStore('collection', () => {
     )
   }
 
+  // Сохраняет одну отображаемую версию, не меняя статус остальных вклеенных карточек слота.
+  const setAlbumDisplay = async (instanceId: string, slotId: string): Promise<void> => {
+    const normalizedSlotId: string = slotId.replace(/-slot$/, '')
+    const albumItems: CollectionItem[] = items.value.filter(
+      ({ instance }): boolean =>
+        instance.location === 'album' &&
+        (instance.placement?.slotId ?? '').replace(/-slot$/, '') === normalizedSlotId,
+    )
+    if (!albumItems.some(({ instance }): boolean => instance.id === instanceId)) return
+
+    await database.transaction('rw', database.cards, async (): Promise<void> => {
+      await Promise.all(
+        albumItems.map(({ instance }): Promise<number> =>
+          database.cards.update(instance.id, { isAlbumDisplay: instance.id === instanceId }),
+        ),
+      )
+    })
+    const albumInstanceIds: Set<string> = new Set(
+      albumItems.map(({ instance }): string => instance.id),
+    )
+    items.value = items.value.map(
+      (item: CollectionItem): CollectionItem =>
+        albumInstanceIds.has(item.instance.id)
+          ? {
+              ...item,
+              instance: {
+                ...item.instance,
+                isAlbumDisplay: item.instance.id === instanceId,
+              },
+            }
+          : item,
+    )
+  }
+
   // Вычисляет процент найденных стикеров текущей коллекции
   const progress: ComputedRef<number> = computed((): number =>
     Math.round(
@@ -237,6 +271,7 @@ export const useCollectionStore = defineStore('collection', () => {
     beginDuplicateExchange,
     claimDuplicateExchange,
     load,
+    setAlbumDisplay,
     updateCard,
   }
 })

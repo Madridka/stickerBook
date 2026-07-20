@@ -21,10 +21,14 @@ interface Props {
   placement?: StickerPlacement
   preparation?: StickerPreparation
   highlighted?: boolean
+  variantCount?: number
 }
 
 const props = defineProps<Props>()
-const emit = defineEmits<{ preview: [instance: StickerInstance] }>()
+const emit = defineEmits<{
+  preview: [instance: StickerInstance]
+  'change-variant': []
+}>()
 const { t } = useI18n()
 const album = useAlbumStore()
 const targetName: ComputedRef<string> = computed(
@@ -103,5 +107,16 @@ const previewCard = (): void => {
       :style="cardStyle()"
       @click="previewCard"
     />
+    <button
+      v-if="card && (variantCount ?? 0) > 1"
+      class="absolute right-[4%] top-[3%] z-20 flex items-center gap-1 rounded-full bg-ink/85 px-1.5 py-1 text-[clamp(0.34rem,0.5vw,0.58rem)] font-black text-paper shadow-md transition hover:bg-coral focus-visible:outline focus-visible:outline-2 focus-visible:outline-paper max-md:px-1 max-md:py-0.5"
+      type="button"
+      :aria-label="t('album.changeVariantAria', { name: targetName })"
+      :title="t('album.changeVariant')"
+      @click.stop="emit('change-variant')"
+    >
+      <i class="pi pi-images" aria-hidden="true" />
+      <span>{{ variantCount }}</span>
+    </button>
   </div>
 </template>

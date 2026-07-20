@@ -35,6 +35,8 @@
   "spreadRangeTitle": "Чемпионат мира 2026 · разворот {pages}",
   "spreadProgress": "Вклеено {placed} из {total}",
   "slotTarget": "Место для {name}",
+  "changeVariant": "Сменить версию карточки",
+  "changeVariantAria": "Показать другую версию карточки {name}",
   "location": {
     "inventory": "Готова к вклейке",
     "collection": "В коллекции",

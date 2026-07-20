@@ -176,6 +176,13 @@ const getCard = (playerId: string): PlayerCard | undefined =>
 const getCardAlbumSlotId = (playerId: string): string =>
   getCard(playerId)?.albumSlotId ?? playerId
 
+type PlacedCard = {
+  card: PlayerCard
+  instance: StickerInstance
+  placement: StickerPlacement
+  preparation?: StickerPreparation
+}
+
 // Синхронизирует режим одной страницы и полного разворота с Tailwind breakpoint lg.
 const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void => {
   isDesktopSpread.value = event.matches
@@ -185,31 +192,37 @@ const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void =>
 }
 
 // Возвращает уже вклеенную карточку с поддержкой старых идентификаторов слотов.
-const getPlacedCard = (
-  slotId: string,
-):
-  | {
-      card: PlayerCard
-      instance: StickerInstance
-      placement: StickerPlacement
-      preparation?: StickerPreparation
-    }
-  | undefined => {
-  const item: CollectionItem | undefined = collection.items.find(
-    ({ instance }): boolean =>
-      instance.location === 'album' &&
-      normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
+const getPlacedCards = (slotId: string): PlacedCard[] =>
+  collection.items
+    .filter(
+      ({ instance }): boolean =>
+        instance.location === 'album' &&
+        normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
+    )
+    .map(({ instance }): PlacedCard | undefined => {
+      const card: PlayerCard | undefined = getCard(instance.playerId)
+      return card && instance.placement
+        ? { card, instance, placement: instance.placement, preparation: instance.preparation }
+        : undefined
+    })
+    .filter((item: PlacedCard | undefined): item is PlacedCard => Boolean(item))
+
+const getPlacedCard = (slotId: string): PlacedCard | undefined => {
+  const placedCards: PlacedCard[] = getPlacedCards(slotId)
+  return (
+    placedCards.find(({ instance }): boolean => instance.isAlbumDisplay === true) ?? placedCards[0]
   )
-  if (!item?.instance.placement) return undefined
-  const card: PlayerCard | undefined = getCard(item.instance.playerId)
-  return card
-    ? {
-        card,
-        instance: item.instance,
-        placement: item.instance.placement,
-        preparation: item.instance.preparation,
-      }
-    : undefined
+}
+
+const showNextPlacedCard = async (slotId: string): Promise<void> => {
+  const placedCards: PlacedCard[] = getPlacedCards(slotId)
+  if (placedCards.length < 2) return
+  const current: PlacedCard | undefined = getPlacedCard(slotId)
+  const currentIndex: number = placedCards.findIndex(
+    ({ instance }): boolean => instance.id === current?.instance.id,
+  )
+  const next: PlacedCard = placedCards[(currentIndex + 1) % placedCards.length]
+  await collection.setAlbumDisplay(next.instance.id, slotId)
 }
 
 const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[] =>
@@ -448,8 +461,10 @@ onBeforeUnmount((): void => {
                 :instance="getPlacedCard(slot.id)?.instance"
                 :placement="getPlacedCard(slot.id)?.placement"
                 :preparation="getPlacedCard(slot.id)?.preparation"
+                :variant-count="getPlacedCards(slot.id).length"
                 :highlighted="activeTargetId === slot.playerId"
                 @preview="openPreview"
+                @change-variant="showNextPlacedCard(slot.id)"
               />
               <span
                 class="absolute bottom-[3%] z-20 min-w-8 rounded-full border border-ink/15 bg-paper/90 px-2 py-1 text-center text-[clamp(7px,1vw,15px)] font-black leading-none text-coral shadow-sm backdrop-blur-sm"

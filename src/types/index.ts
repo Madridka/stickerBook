@@ -22,6 +22,7 @@ export interface StickerInstance {
   location: StickerLocation
   preparation?: StickerPreparation
   placement?: StickerPlacement
+  isAlbumDisplay?: boolean
 }
 
 export interface DeletedCard {

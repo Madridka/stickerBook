@@ -76,7 +76,11 @@ const finishDrag = (event: PointerEvent): void => {
   isDragging.value = false
   const result: StickerDropResult | undefined = evaluateStickerDrop(
     { x: event.clientX, y: event.clientY },
-    { instanceId: props.instance.id, playerId: props.instance.playerId },
+    {
+      instanceId: props.instance.id,
+      playerId: props.instance.playerId,
+      albumSlotId: props.card.albumSlotId ?? props.card.id,
+    },
   )
   if (result) emit('drop', result)
 }

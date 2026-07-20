@@ -2,7 +2,7 @@
   {
     "id": "mexico-left",
     "number": 8,
-    "image": "page-04-stickers-left.png",
+    "image": "mexico-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -91,7 +91,7 @@
   {
     "id": "mexico-right",
     "number": 9,
-    "image": "page-05-stickers-right.png",
+    "image": "mexico-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

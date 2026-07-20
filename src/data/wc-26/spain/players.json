@@ -155,7 +155,7 @@
     "image": "/cards/spain/ESP-16-lamine-yamal.webp",
     "type": "player",
     "team": "Spain",
-    "weight": 5
+    "weight": 8
   },
   {
     "id": "esp-17",
@@ -196,7 +196,7 @@
     "image": "/cards/spain/ESP-19.1-ferran-torres.png",
     "type": "player",
     "team": "Spain",
-    "weight": 1
+    "weight": 4
   },
   {
     "id": "esp-20",

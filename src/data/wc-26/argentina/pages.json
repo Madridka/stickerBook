@@ -2,7 +2,7 @@
   {
     "id": "argentina-left",
     "number": 80,
-    "image": "page-80-stickers-left.png",
+    "image": "argentina-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -21,7 +21,7 @@
   {
     "id": "argentina-right",
     "number": 81,
-    "image": "page-81-stickers-right.png",
+    "image": "argentina-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

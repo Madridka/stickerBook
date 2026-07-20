@@ -2,7 +2,7 @@
   {
     "id": "england-left",
     "number": 96,
-    "image": "page-12-stickers-left.png",
+    "image": "england-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -21,7 +21,7 @@
   {
     "id": "england-right",
     "number": 97,
-    "image": "page-13-stickers-right.png",
+    "image": "england-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

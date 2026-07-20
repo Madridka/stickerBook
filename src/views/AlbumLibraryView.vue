@@ -16,13 +16,13 @@ const { t } = useI18n()
 const collection = useCollectionStore()
 const albums: AlbumLibraryItem[] = albumCatalog.albums
 const coverImages: Record<string, string> = import.meta.glob(
-  '../../assets/game/*/main/album/page-01-cover.png',
+  '../../assets/game/*/main/album/cover.webp',
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
-const albumGeometry: Record<string, AlbumGeometryData> = import.meta.glob(
-  '../data/*/album.ts',
-  { eager: true, import: 'default' },
-) as Record<string, AlbumGeometryData>
+const albumGeometry: Record<string, AlbumGeometryData> = import.meta.glob('../data/*/album.ts', {
+  eager: true,
+  import: 'default',
+}) as Record<string, AlbumGeometryData>
 
 const getCover = (album: AlbumLibraryItem): string =>
   coverImages[`../../assets/game/${album.id}/main/album/${album.cover}`] ?? ''
@@ -60,18 +60,26 @@ const getProgress = (album: AlbumLibraryItem): number => {
       <p class="mt-1 text-sm text-ink/60">{{ t('album.library.text') }}</p>
     </header>
 
-    <div class="grid min-h-0 grid-cols-2 content-start gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <div
+      class="grid min-h-0 grid-cols-2 content-start gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+    >
       <RouterLink
         v-for="album in albums"
         :key="album.id"
         :to="album.route"
         class="group block rounded-lg p-2 outline-none transition-colors hover:bg-coral/10 focus-visible:bg-coral/10 focus-visible:ring-2 focus-visible:ring-coral"
-        :aria-label="t('album.library.openNamed', { name: t(`album.library.items.${album.id}.title`) })"
+        :aria-label="
+          t('album.library.openNamed', { name: t(`album.library.items.${album.id}.title`) })
+        "
       >
         <!-- Папка визуально отделяет каталог журналов от содержимого выбранного альбома. -->
-        <div class="relative mx-auto aspect-[4/3] w-full max-w-56 pt-[9%] transition-transform duration-200 group-hover:-translate-y-1 group-focus-visible:-translate-y-1">
+        <div
+          class="relative mx-auto aspect-[4/3] w-full max-w-56 pt-[9%] transition-transform duration-200 group-hover:-translate-y-1 group-focus-visible:-translate-y-1"
+        >
           <div class="absolute left-[3%] top-0 h-[20%] w-[42%] rounded-t-lg bg-gold" />
-          <div class="absolute inset-x-[3%] bottom-0 top-[9%] overflow-hidden rounded-lg rounded-tl-sm border-2 border-ink/20 bg-gold shadow-[5px_6px_0_rgb(var(--color-ink)/0.12)]">
+          <div
+            class="absolute inset-x-[3%] bottom-0 top-[9%] overflow-hidden rounded-lg rounded-tl-sm border-2 border-ink/20 bg-gold shadow-[5px_6px_0_rgb(var(--color-ink)/0.12)]"
+          >
             <img
               v-if="getCover(album)"
               class="h-full w-full object-cover opacity-90 transition-transform duration-300 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"

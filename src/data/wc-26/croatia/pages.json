@@ -2,7 +2,7 @@
   {
     "id": "croatia-left",
     "number": 98,
-    "image": "page-06-stickers-left.png",
+    "image": "croatia-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -21,7 +21,7 @@
   {
     "id": "croatia-right",
     "number": 99,
-    "image": "page-07-stickers-right.png",
+    "image": "croatia-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

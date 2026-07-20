@@ -2,7 +2,7 @@
   {
     "id": "portugal-left",
     "number": 88,
-    "image": "page-08-stickers-left.png",
+    "image": "portugal-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -21,7 +21,7 @@
   {
     "id": "portugal-right",
     "number": 89,
-    "image": "page-09-stickers-right.png",
+    "image": "portugal-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

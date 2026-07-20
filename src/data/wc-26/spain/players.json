@@ -188,6 +188,17 @@
     "weight": 20
   },
   {
+    "id": "esp-19.1",
+    "albumSlotId": "esp-19",
+    "firstName": "Ferran",
+    "lastName": "Torres",
+    "fullName": "Ferran Torres",
+    "image": "/cards/spain/ESP-19.1-ferran-torres.png",
+    "type": "player",
+    "team": "Spain",
+    "weight": 1
+  },
+  {
     "id": "esp-20",
     "firstName": "Gavi",
     "lastName": "",

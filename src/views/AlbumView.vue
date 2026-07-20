@@ -173,6 +173,8 @@ const placedOnVisiblePages: ComputedRef<number> = computed((): number =>
 const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
 const getCard = (playerId: string): PlayerCard | undefined =>
   cards.find(({ id }): boolean => id === playerId)
+const getCardAlbumSlotId = (playerId: string): string =>
+  getCard(playerId)?.albumSlotId ?? playerId
 
 // Синхронизирует режим одной страницы и полного разворота с Tailwind breakpoint lg.
 const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void => {
@@ -238,14 +240,15 @@ const removeCard = async (instanceId: string): Promise<void> => {
 
 // Открывает страницу выбранного игрока и подсвечивает единственную подходящую ячейку.
 const focusCardTarget = (playerId: string): void => {
+  const albumSlotId: string = getCardAlbumSlotId(playerId)
   const pageIndex: number = pages.value.findIndex(({ geometry }): boolean =>
-    geometry.slots.some((slot): boolean => slot.playerId === playerId),
+    geometry.slots.some((slot): boolean => slot.playerId === albumSlotId),
   )
   if (pageIndex >= 0) {
     isBookOpen.value = true
     currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
   }
-  activeTargetId.value = playerId
+  activeTargetId.value = albumSlotId
 }
 
 const clearCardTarget = (): void => {
@@ -330,7 +333,7 @@ const saveDrop = async (drop: StickerDropResult): Promise<void> => {
 // Проверяет попадание в слот и запрашивает подтверждение намеренно плохой вклейки.
 const handleDrop = (drop: StickerDropResult): void => {
   const slot = album.geometry.getSlot(drop.slotId)
-  const isWrongSlot: boolean = slot?.playerId !== drop.playerId
+  const isWrongSlot: boolean = slot?.playerId !== getCardAlbumSlotId(drop.playerId)
   if (isWrongSlot || drop.grade === 'far') {
     pendingDrop.value = drop
     confirmationKind.value = isWrongSlot ? 'wrong' : 'far'

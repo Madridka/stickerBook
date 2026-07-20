@@ -4,6 +4,7 @@ export type StickerLocation = 'inventory' | 'collection' | 'album' | 'duplicate'
 
 export interface PlayerCard {
   id: string
+  albumSlotId?: string
   number?: number
   firstName?: string
   lastName?: string

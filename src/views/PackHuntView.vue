@@ -18,6 +18,7 @@ import PackHuntGame from '@/components/MiniGame/PackHuntGame.vue'
 import PackMachineGame from '@/components/MiniGame/PackMachineGame.vue'
 import PackRackGame from '@/components/MiniGame/PackRackGame.vue'
 import PackShellGame from '@/components/MiniGame/PackShellGame.vue'
+import PackPuzzleGame from '@/components/MiniGame/PackPuzzleGame.vue'
 
 type HuntPhase = 'loading' | 'playing' | 'saving' | 'won' | 'cooldown' | 'error'
 
@@ -36,6 +37,7 @@ const gameComponents: Record<PackMiniGameId, Component> = {
   rack: PackRackGame,
   machine: PackMachineGame,
   shell: PackShellGame,
+  puzzle: PackPuzzleGame,
 }
 const selectedGameComponent: ComputedRef<Component> = computed(
   (): Component => gameComponents[selectedGame.value],

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import StickerThumbnail from '@/components/Sticker/StickerThumbnail.vue'
-import { evaluateStickerDrop } from '@/components/DragDrop/dropGeometry'
 import type { PlayerCard, StickerDropResult, StickerInstance } from '@/types'
+
+import { evaluateStickerDrop } from '@/components/DragDrop/dropGeometry'
+import StickerThumbnail from '@/components/Sticker/StickerThumbnail.vue'
 
 interface Props {
   card: PlayerCard

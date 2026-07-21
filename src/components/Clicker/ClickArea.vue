@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import ClickEffect from '@/components/Clicker/ClickEffect.vue'
 import logoUrl from '../../../assets/game/wc-26/main/logo.png'
+
+import ClickEffect from '@/components/Clicker/ClickEffect.vue'
 
 interface ClickEffectItem {
   id: number

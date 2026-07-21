@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch, type ComputedRef, type Ref } from 'vue'
-import Button from 'primevue/button'
-import Dialog from 'primevue/dialog'
 import { useI18n } from 'vue-i18n'
 import type { StickerPreparation, StickerTrayItem } from '@/types'
+
+import Button from 'primevue/button'
+import Dialog from 'primevue/dialog'
 
 interface Props {
   visible: boolean

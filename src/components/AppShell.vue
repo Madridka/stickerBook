@@ -2,11 +2,12 @@
 import { computed, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
-import Button from 'primevue/button'
-import Dialog from 'primevue/dialog'
-import Menu from 'primevue/menu'
 import { database } from '@/db/database'
 import { useTheme } from '@/composables/useTheme'
+
+import Menu from 'primevue/menu'
+import Dialog from 'primevue/dialog'
+import Button from 'primevue/button'
 
 const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()

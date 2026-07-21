@@ -9,12 +9,10 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Button from 'primevue/button'
 import gameData from '@/data/mainConst.json'
-import {
-  createMiniGamePath,
-  type MiniGamePoint,
-} from '@/utils/createMiniGamePath'
+import { createMiniGamePath, type MiniGamePoint } from '@/utils/createMiniGamePath'
+
+import Button from 'primevue/button'
 
 interface DrumOrigin {
   x: number
@@ -111,7 +109,8 @@ const startDrum = (event: PointerEvent): void => {
 
 const moveDrum = (event: PointerEvent): void => {
   if (!drumOrigin.value || stage.value !== 0) return
-  const delta: number = ((event.clientX - drumOrigin.value.x) / drumOrigin.value.width) * fieldPercent
+  const delta: number =
+    ((event.clientX - drumOrigin.value.x) / drumOrigin.value.width) * fieldPercent
   drumOffset.value = Math.max(
     -machineData.drumOffsetMaxPercent,
     Math.min(machineData.drumOffsetMaxPercent, drumOrigin.value.offset + delta),
@@ -162,7 +161,10 @@ const stopTimingFromClick = (): void => {
 const checkDeliveryPoint = (): void => {
   const point: MiniGamePoint | undefined = deliveryPoints[nextPointIndex.value]
   if (!point) return
-  const distance: number = Math.hypot(packPosition.value.x - point.x, packPosition.value.y - point.y)
+  const distance: number = Math.hypot(
+    packPosition.value.x - point.x,
+    packPosition.value.y - point.y,
+  )
   if (distance > machineData.pathTolerancePercent) return
   packPosition.value = { ...point }
   nextPointIndex.value += 1
@@ -191,7 +193,10 @@ const stopDelivery = (): void => {
 }
 
 const moveDeliveryWithKeyboard = (event: KeyboardEvent): void => {
-  if (stage.value !== 2 || !['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+  if (
+    stage.value !== 2 ||
+    !['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)
+  ) {
     return
   }
   event.preventDefault()
@@ -211,7 +216,9 @@ const updateTiming = (timestamp: number): void => {
     const cycleProgress: number =
       ((timestamp - timingStartedAt.value) % machineData.timingCycleMs) / machineData.timingCycleMs
     timingPosition.value =
-      cycleProgress <= 0.5 ? cycleProgress * 2 * fieldPercent : (2 - cycleProgress * 2) * fieldPercent
+      cycleProgress <= 0.5
+        ? cycleProgress * 2 * fieldPercent
+        : (2 - cycleProgress * 2) * fieldPercent
   }
   animationFrame = window.requestAnimationFrame(updateTiming)
 }
@@ -257,7 +264,9 @@ onBeforeUnmount((): void => {
       >
         <span v-for="index in 5" :key="index" class="rounded border-2 border-ink/20 bg-paper/60" />
       </div>
-      <div class="pointer-events-none absolute inset-y-6 left-1/2 w-28 -translate-x-1/2 border-4 border-coral bg-paper/10 ring-4 ring-coral/15" />
+      <div
+        class="pointer-events-none absolute inset-y-6 left-1/2 w-28 -translate-x-1/2 border-4 border-coral bg-paper/10 ring-4 ring-coral/15"
+      />
       <button
         class="absolute top-1/2 z-10 flex h-40 w-28 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-coral shadow-xl cursor-grab active:cursor-grabbing"
         :class="isDrumAligned ? 'ring-4 ring-mint' : ''"
@@ -296,7 +305,10 @@ onBeforeUnmount((): void => {
           />
         </div>
       </div>
-      <p class="mt-4 text-center text-sm font-bold" :class="timingMiss ? 'text-coral' : 'text-ink/60'">
+      <p
+        class="mt-4 text-center text-sm font-bold"
+        :class="timingMiss ? 'text-coral' : 'text-ink/60'"
+      >
         {{ timingMiss ? t('packHunt.machine.timingMiss') : t('packHunt.machine.timingHint') }}
       </p>
       <Button
@@ -316,50 +328,50 @@ onBeforeUnmount((): void => {
         class="relative h-[min(41vh,23rem)] min-h-60 overflow-hidden border-4 border-ink bg-ink/5"
       >
         <div
-        v-for="(point, index) in deliveryPoints"
-        :key="`${index}-${point.x}-${point.y}`"
-        data-machine-point
-        :data-point-index="index"
-        class="absolute flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 text-xs font-black"
-        :class="
-          index < nextPointIndex
-            ? 'border-emerald-700 bg-mint text-ink'
-            : index === nextPointIndex
-              ? 'border-coral bg-coral text-white ring-4 ring-coral/20'
-              : 'border-ink/20 bg-paper text-ink/35'
-        "
-        :style="{ left: `${point.x}%`, top: `${point.y}%` }"
-        aria-hidden="true"
-      >
-        {{ index < nextPointIndex ? '✓' : index + 1 }}
+          v-for="(point, index) in deliveryPoints"
+          :key="`${index}-${point.x}-${point.y}`"
+          data-machine-point
+          :data-point-index="index"
+          class="absolute flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 text-xs font-black"
+          :class="
+            index < nextPointIndex
+              ? 'border-emerald-700 bg-mint text-ink'
+              : index === nextPointIndex
+                ? 'border-coral bg-coral text-white ring-4 ring-coral/20'
+                : 'border-ink/20 bg-paper text-ink/35'
+          "
+          :style="{ left: `${point.x}%`, top: `${point.y}%` }"
+          aria-hidden="true"
+        >
+          {{ index < nextPointIndex ? '✓' : index + 1 }}
         </div>
         <button
-        class="absolute z-10 flex h-24 w-16 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-coral shadow-lg cursor-grab active:cursor-grabbing"
-        :class="isFinishing ? 'opacity-40' : ''"
-        :style="packStyle"
-        type="button"
-        data-machine-pack
-        :aria-label="t('packHunt.machine.deliveryTitle')"
-        @pointerdown="startDelivery"
-        @pointermove="moveDelivery"
-        @pointerup="stopDelivery"
-        @pointercancel="stopDelivery"
-        @keydown="moveDeliveryWithKeyboard"
-      >
-        <span class="-rotate-90 text-[10px] font-black uppercase tracking-wider text-paper">
-          {{ t('packHunt.packLabel') }}
-        </span>
+          class="absolute z-10 flex h-24 w-16 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-coral shadow-lg cursor-grab active:cursor-grabbing"
+          :class="isFinishing ? 'opacity-40' : ''"
+          :style="packStyle"
+          type="button"
+          data-machine-pack
+          :aria-label="t('packHunt.machine.deliveryTitle')"
+          @pointerdown="startDelivery"
+          @pointermove="moveDelivery"
+          @pointerup="stopDelivery"
+          @pointercancel="stopDelivery"
+          @keydown="moveDeliveryWithKeyboard"
+        >
+          <span class="-rotate-90 text-[10px] font-black uppercase tracking-wider text-paper">
+            {{ t('packHunt.packLabel') }}
+          </span>
         </button>
         <div
-        v-if="isFinishing"
-        class="pointer-events-none absolute inset-0 z-30 flex flex-col items-center justify-center bg-paper/90 text-center"
-        aria-live="polite"
-      >
-        <i class="pi pi-check-circle animate-pulse text-5xl text-emerald-700" />
-        <p class="mt-3 text-xl font-black">{{ t('packHunt.machine.routeComplete') }}</p>
-        <p class="mt-1 max-w-xs text-sm font-bold text-ink/60">
-          {{ t('packHunt.machine.finishing') }}
-        </p>
+          v-if="isFinishing"
+          class="pointer-events-none absolute inset-0 z-30 flex flex-col items-center justify-center bg-paper/90 text-center"
+          aria-live="polite"
+        >
+          <i class="pi pi-check-circle animate-pulse text-5xl text-emerald-700" />
+          <p class="mt-3 text-xl font-black">{{ t('packHunt.machine.routeComplete') }}</p>
+          <p class="mt-1 max-w-xs text-sm font-bold text-ink/60">
+            {{ t('packHunt.machine.finishing') }}
+          </p>
         </div>
       </div>
       <p class="mt-2 text-center text-xs font-bold text-ink/60">

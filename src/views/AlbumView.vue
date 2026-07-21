@@ -2,15 +2,6 @@
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import AlbumBook from '@/components/Album/AlbumBook.vue'
-import AlbumContentsPage from '@/components/Album/AlbumContentsPage.vue'
-import AlbumEditorialPage from '@/components/Album/AlbumEditorialPage.vue'
-import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
-import type { AlbumPageData } from '@/components/Album/AlbumPage.vue'
-import StickerSlot from '@/components/Album/StickerSlot.vue'
-import StickerTray from '@/components/Sticker/StickerTray.vue'
-import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
-import { resolveStickerPlacement } from '@/components/DragDrop/dropGeometry'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import cards from '@/data/wc-26/players'
 import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
@@ -29,6 +20,16 @@ import type {
   StickerInstance,
   StickerTrayItem,
 } from '@/types'
+
+import AlbumBook from '@/components/Album/AlbumBook.vue'
+import AlbumContentsPage from '@/components/Album/AlbumContentsPage.vue'
+import AlbumEditorialPage from '@/components/Album/AlbumEditorialPage.vue'
+import AlbumDropConfirm from '@/components/DragDrop/AlbumDropConfirm.vue'
+import type { AlbumPageData } from '@/components/Album/AlbumPage.vue'
+import StickerSlot from '@/components/Album/StickerSlot.vue'
+import StickerTray from '@/components/Sticker/StickerTray.vue'
+import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
+import { resolveStickerPlacement } from '@/components/DragDrop/dropGeometry'
 
 interface AlbumPageView extends AlbumPageData {
   geometry: AlbumGeometryPage
@@ -173,8 +174,7 @@ const placedOnVisiblePages: ComputedRef<number> = computed((): number =>
 const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
 const getCard = (playerId: string): PlayerCard | undefined =>
   cards.find(({ id }): boolean => id === playerId)
-const getCardAlbumSlotId = (playerId: string): string =>
-  getCard(playerId)?.albumSlotId ?? playerId
+const getCardAlbumSlotId = (playerId: string): string => getCard(playerId)?.albumSlotId ?? playerId
 
 type PlacedCard = {
   card: PlayerCard
@@ -468,9 +468,7 @@ onBeforeUnmount((): void => {
               />
               <span
                 class="absolute bottom-[3%] z-20 min-w-8 rounded-full border border-ink/15 bg-paper/90 px-2 py-1 text-center text-[clamp(7px,1vw,15px)] font-black leading-none text-coral shadow-sm backdrop-blur-sm"
-                :class="
-                  pages[pageIndex].geometry.number % 2 === 0 ? 'left-[5%]' : 'right-[5%]'
-                "
+                :class="pages[pageIndex].geometry.number % 2 === 0 ? 'left-[5%]' : 'right-[5%]'"
                 aria-hidden="true"
               >
                 {{ String(pages[pageIndex].geometry.number).padStart(2, '0') }}

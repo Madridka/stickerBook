@@ -2,13 +2,14 @@
 import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import ShopItem from '@/components/Shop/ShopItem.vue'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
 import packData from '@/data/mainConst.json'
 import { purchasePack, type PurchasePackResult } from '@/services/economy'
 import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniGame'
+
+import ShopItem from '@/components/Shop/ShopItem.vue'
 
 const { t } = useI18n()
 const player = usePlayerStore()

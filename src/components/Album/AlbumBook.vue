@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, type ComputedRef, type Ref } from 'vue'
-import Button from 'primevue/button'
 import { useI18n } from 'vue-i18n'
+
+import Button from 'primevue/button'
+
 import AlbumPage, { type AlbumPageData } from '@/components/Album/AlbumPage.vue'
 
 interface Props {
@@ -309,12 +311,7 @@ onBeforeUnmount((): void => {
 .album-page-turn__skeleton::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    105deg,
-    transparent 30%,
-    rgb(255 255 255 / 48%) 48%,
-    transparent 66%
-  );
+  background: linear-gradient(105deg, transparent 30%, rgb(255 255 255 / 48%) 48%, transparent 66%);
   content: '';
   animation: album-page-skeleton-shimmer 1.15s ease-in-out infinite;
   transform: translateX(-100%);

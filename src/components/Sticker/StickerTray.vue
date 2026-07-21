@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import type { StickerDropResult, StickerPreparation, StickerTrayItem } from '@/types'
+
 import StickerDraggable from '@/components/DragDrop/StickerDraggable.vue'
 import StickerPeelGame from '@/components/MiniGame/StickerPeelGame.vue'
 import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
-import type { StickerDropResult, StickerPreparation, StickerTrayItem } from '@/types'
 
 interface Props {
   cards: StickerTrayItem[]
@@ -97,9 +98,8 @@ const closePreparation = (): void => {
       </div>
       <span
         class="shrink-0 text-xs font-bold text-ink/55 max-md:text-[0.55rem] max-md:leading-none"
-        >{{
-        cards.length
-      }}</span>
+        >{{ cards.length }}</span
+      >
     </div>
 
     <div

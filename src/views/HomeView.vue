@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import ClickArea from '@/components/Clicker/ClickArea.vue'
-import ClickEnergyPanel from '@/components/Clicker/ClickEnergyPanel.vue'
-import ScoreDisplay from '@/components/Clicker/ScoreDisplay.vue'
 import gameData from '@/data/mainConst.json'
 import { useCollectionStore } from '@/stores/collection'
 import { usePlayerStore } from '@/stores/player'
+
+import ClickArea from '@/components/Clicker/ClickArea.vue'
+import ClickEnergyPanel from '@/components/Clicker/ClickEnergyPanel.vue'
+import ScoreDisplay from '@/components/Clicker/ScoreDisplay.vue'
 
 interface ClickEffectItem {
   id: number

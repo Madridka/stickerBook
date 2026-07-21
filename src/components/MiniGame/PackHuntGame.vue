@@ -9,8 +9,9 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import ProgressBar from 'primevue/progressbar'
 import gameData from '@/data/mainConst.json'
+
+import ProgressBar from 'primevue/progressbar'
 
 interface Point {
   x: number
@@ -317,16 +318,15 @@ onBeforeUnmount((): void => {
 
       <div
         class="pointer-events-none absolute z-20 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-coral bg-paper/20 shadow-[0_0_0_10px_rgb(var(--color-paper)/0.12),0_0_28px_rgb(var(--color-coral)/0.55)] transition-[width,height]"
-        :class="[
-          signalStrength === 4 ? 'h-16 w-16' : '',
-          isRelocating ? 'opacity-35' : '',
-        ]"
+        :class="[signalStrength === 4 ? 'h-16 w-16' : '', isRelocating ? 'opacity-35' : '']"
         :style="scannerStyle"
         aria-hidden="true"
       >
         <span class="absolute left-1/2 top-0 h-full border-l border-coral/70" />
         <span class="absolute left-0 top-1/2 w-full border-t border-coral/70" />
-        <span class="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral" />
+        <span
+          class="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral"
+        />
       </div>
     </div>
   </section>

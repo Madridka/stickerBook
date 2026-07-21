@@ -40,9 +40,7 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
     :aria-label="t('album.contents.aria', { page: pageNumber })"
   >
     <header class="shrink-0 text-center">
-      <p
-        class="text-[clamp(6px,0.9cqw,13px)] font-black uppercase tracking-[0.24em] text-coral"
-      >
+      <p class="text-[clamp(6px,0.9cqw,13px)] font-black uppercase tracking-[0.24em] text-coral">
         {{ String(pageNumber).padStart(2, '0') }} / {{ t('album.contents.kicker') }}
       </p>
       <h2

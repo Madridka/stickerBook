@@ -9,12 +9,10 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import ProgressBar from 'primevue/progressbar'
 import gameData from '@/data/mainConst.json'
-import {
-  createMiniGamePath,
-  type MiniGamePoint,
-} from '@/utils/createMiniGamePath'
+import { createMiniGamePath, type MiniGamePoint } from '@/utils/createMiniGamePath'
+
+import ProgressBar from 'primevue/progressbar'
 
 interface SpreadOrigin {
   x: number
@@ -57,16 +55,22 @@ const spreadTarget: number = gameData.packHunt.rack.spreadTargetPercent
 const isSpreadComplete: ComputedRef<boolean> = computed(
   (): boolean => leftSpread.value <= -spreadTarget && rightSpread.value >= spreadTarget,
 )
-const leftStackStyle: ComputedRef<CSSProperties> = computed((): CSSProperties => ({
-  left: `${50 - gameData.packHunt.rack.stackSeparationPercent + leftSpread.value}%`,
-}))
-const rightStackStyle: ComputedRef<CSSProperties> = computed((): CSSProperties => ({
-  left: `${50 + gameData.packHunt.rack.stackSeparationPercent + rightSpread.value}%`,
-}))
-const packStyle: ComputedRef<CSSProperties> = computed((): CSSProperties => ({
-  left: `${packPosition.value.x}%`,
-  top: `${packPosition.value.y}%`,
-}))
+const leftStackStyle: ComputedRef<CSSProperties> = computed(
+  (): CSSProperties => ({
+    left: `${50 - gameData.packHunt.rack.stackSeparationPercent + leftSpread.value}%`,
+  }),
+)
+const rightStackStyle: ComputedRef<CSSProperties> = computed(
+  (): CSSProperties => ({
+    left: `${50 + gameData.packHunt.rack.stackSeparationPercent + rightSpread.value}%`,
+  }),
+)
+const packStyle: ComputedRef<CSSProperties> = computed(
+  (): CSSProperties => ({
+    left: `${packPosition.value.x}%`,
+    top: `${packPosition.value.y}%`,
+  }),
+)
 
 const clampPercent = (value: number): number => Math.max(0, Math.min(fieldPercent, value))
 
@@ -110,7 +114,8 @@ const moveSpread = (event: PointerEvent, side: RackSide): void => {
   const origin: SpreadOrigin | undefined = side === 'left' ? leftOrigin.value : rightOrigin.value
   if (!origin || stage.value !== 0) return
   const delta: number = ((event.clientX - origin.x) / origin.width) * fieldPercent
-  if (side === 'left') leftSpread.value = Math.max(-spreadTarget, Math.min(0, origin.offset + delta))
+  if (side === 'left')
+    leftSpread.value = Math.max(-spreadTarget, Math.min(0, origin.offset + delta))
   else rightSpread.value = Math.min(spreadTarget, Math.max(0, origin.offset + delta))
   if (isSpreadComplete.value) moveToStage(1)
 }
@@ -149,7 +154,10 @@ const handleGripKey = (event: KeyboardEvent, active: boolean): void => {
 const checkExtractionPoint = (): void => {
   const point: MiniGamePoint | undefined = extractionPoints[nextPointIndex.value]
   if (!point) return
-  const distance: number = Math.hypot(packPosition.value.x - point.x, packPosition.value.y - point.y)
+  const distance: number = Math.hypot(
+    packPosition.value.x - point.x,
+    packPosition.value.y - point.y,
+  )
   if (distance > gameData.packHunt.rack.pathTolerancePercent) return
   packPosition.value = { ...point }
   nextPointIndex.value += 1
@@ -178,7 +186,10 @@ const stopExtraction = (): void => {
 }
 
 const moveExtractionWithKeyboard = (event: KeyboardEvent): void => {
-  if (stage.value !== 2 || !['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+  if (
+    stage.value !== 2 ||
+    !['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)
+  ) {
     return
   }
   event.preventDefault()
@@ -268,7 +279,9 @@ onBeforeUnmount((): void => {
         @pointercancel="stopSpread('left')"
         @keydown="spreadWithKeyboard($event, 'left')"
       >
-        <span class="absolute left-2 top-1/2 flex h-10 w-8 -translate-y-1/2 items-center justify-center bg-ink text-xl text-paper">
+        <span
+          class="absolute left-2 top-1/2 flex h-10 w-8 -translate-y-1/2 items-center justify-center bg-ink text-xl text-paper"
+        >
           ←
         </span>
         <span class="-rotate-6 text-center font-black uppercase text-ink/65">
@@ -286,7 +299,9 @@ onBeforeUnmount((): void => {
         @pointercancel="stopSpread('right')"
         @keydown="spreadWithKeyboard($event, 'right')"
       >
-        <span class="absolute right-2 top-1/2 flex h-10 w-8 -translate-y-1/2 items-center justify-center bg-ink text-xl text-paper">
+        <span
+          class="absolute right-2 top-1/2 flex h-10 w-8 -translate-y-1/2 items-center justify-center bg-ink text-xl text-paper"
+        >
           →
         </span>
         <span class="rotate-6 text-center font-black uppercase text-ink/65">
@@ -302,7 +317,9 @@ onBeforeUnmount((): void => {
       v-else-if="stage === 1"
       class="relative flex h-[min(45vh,25rem)] min-h-60 flex-col items-center justify-center overflow-hidden border-4 border-ink bg-gold/15"
     >
-      <div class="relative flex h-60 w-40 items-center justify-center border-2 border-ink bg-coral shadow-xl">
+      <div
+        class="relative flex h-60 w-40 items-center justify-center border-2 border-ink bg-coral shadow-xl"
+      >
         <span class="-rotate-90 text-lg font-black uppercase tracking-widest text-paper">
           {{ t('packHunt.packLabel') }}
         </span>
@@ -338,50 +355,50 @@ onBeforeUnmount((): void => {
         class="relative h-[min(41vh,23rem)] min-h-60 overflow-hidden border-4 border-ink bg-ink/5"
       >
         <div
-        v-for="(point, index) in extractionPoints"
-        :key="`${index}-${point.x}-${point.y}`"
-        data-rack-point
-        :data-point-index="index"
-        class="absolute flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 text-xs font-black"
-        :class="
-          index < nextPointIndex
-            ? 'border-emerald-700 bg-mint text-ink'
-            : index === nextPointIndex
-              ? 'border-coral bg-coral text-white ring-4 ring-coral/20'
-              : 'border-ink/20 bg-paper text-ink/35'
-        "
-        :style="{ left: `${point.x}%`, top: `${point.y}%` }"
-        aria-hidden="true"
-      >
-        {{ index < nextPointIndex ? '✓' : index + 1 }}
+          v-for="(point, index) in extractionPoints"
+          :key="`${index}-${point.x}-${point.y}`"
+          data-rack-point
+          :data-point-index="index"
+          class="absolute flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 text-xs font-black"
+          :class="
+            index < nextPointIndex
+              ? 'border-emerald-700 bg-mint text-ink'
+              : index === nextPointIndex
+                ? 'border-coral bg-coral text-white ring-4 ring-coral/20'
+                : 'border-ink/20 bg-paper text-ink/35'
+          "
+          :style="{ left: `${point.x}%`, top: `${point.y}%` }"
+          aria-hidden="true"
+        >
+          {{ index < nextPointIndex ? '✓' : index + 1 }}
         </div>
         <button
-        class="absolute z-10 flex h-24 w-16 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-coral shadow-lg cursor-grab active:cursor-grabbing"
-        :class="isFinishing ? 'opacity-40' : ''"
-        :style="packStyle"
-        type="button"
-        data-rack-pack
-        :aria-label="t('packHunt.rack.extractTitle')"
-        @pointerdown="startExtraction"
-        @pointermove="moveExtraction"
-        @pointerup="stopExtraction"
-        @pointercancel="stopExtraction"
-        @keydown="moveExtractionWithKeyboard"
-      >
-        <span class="-rotate-90 text-[10px] font-black uppercase tracking-wider text-paper">
-          {{ t('packHunt.packLabel') }}
-        </span>
+          class="absolute z-10 flex h-24 w-16 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-coral shadow-lg cursor-grab active:cursor-grabbing"
+          :class="isFinishing ? 'opacity-40' : ''"
+          :style="packStyle"
+          type="button"
+          data-rack-pack
+          :aria-label="t('packHunt.rack.extractTitle')"
+          @pointerdown="startExtraction"
+          @pointermove="moveExtraction"
+          @pointerup="stopExtraction"
+          @pointercancel="stopExtraction"
+          @keydown="moveExtractionWithKeyboard"
+        >
+          <span class="-rotate-90 text-[10px] font-black uppercase tracking-wider text-paper">
+            {{ t('packHunt.packLabel') }}
+          </span>
         </button>
         <div
-        v-if="isFinishing"
-        class="pointer-events-none absolute inset-0 z-30 flex flex-col items-center justify-center bg-paper/90 text-center"
-        aria-live="polite"
-      >
-        <i class="pi pi-check-circle animate-pulse text-5xl text-emerald-700" />
-        <p class="mt-3 text-xl font-black">{{ t('packHunt.rack.routeComplete') }}</p>
-        <p class="mt-1 max-w-xs text-sm font-bold text-ink/60">
-          {{ t('packHunt.rack.finishing') }}
-        </p>
+          v-if="isFinishing"
+          class="pointer-events-none absolute inset-0 z-30 flex flex-col items-center justify-center bg-paper/90 text-center"
+          aria-live="polite"
+        >
+          <i class="pi pi-check-circle animate-pulse text-5xl text-emerald-700" />
+          <p class="mt-3 text-xl font-black">{{ t('packHunt.rack.routeComplete') }}</p>
+          <p class="mt-1 max-w-xs text-sm font-bold text-ink/60">
+            {{ t('packHunt.rack.finishing') }}
+          </p>
         </div>
       </div>
       <p class="mt-2 text-center text-xs font-bold text-ink/60">

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref, watch, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Button from 'primevue/button'
 import type { PlayerCard } from '@/types'
+
+import Button from 'primevue/button'
 
 interface Props {
   card: PlayerCard

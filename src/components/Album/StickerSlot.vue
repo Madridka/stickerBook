@@ -2,7 +2,6 @@
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useAlbumStore } from '@/stores/album'
-import { shouldSnapStickerAlignment } from '@/components/DragDrop/dropGeometry'
 import type {
   AlbumGeometryPage,
   AlbumGeometrySlot,
@@ -11,6 +10,8 @@ import type {
   StickerPlacement,
   StickerPreparation,
 } from '@/types'
+
+import { shouldSnapStickerAlignment } from '@/components/DragDrop/dropGeometry'
 
 interface Props {
   slot: AlbumGeometrySlot
@@ -56,9 +57,10 @@ const cardStyle = (): Record<string, string> => {
     y = props.preparation?.alignmentY ?? 0
   }
   return {
-    transform: x === 0 && y === 0 && rotation === 0
-      ? 'none'
-      : `translate(${x * 100}%, ${y * 100}%) rotate(${rotation}deg)`,
+    transform:
+      x === 0 && y === 0 && rotation === 0
+        ? 'none'
+        : `translate(${x * 100}%, ${y * 100}%) rotate(${rotation}deg)`,
   }
 }
 

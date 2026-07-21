@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
+
 import ProgressBar from 'primevue/progressbar'
 
 interface ClickEnergyPanelProps {

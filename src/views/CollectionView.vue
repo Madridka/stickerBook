@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import cards from '@/data/wc-26/players'
+import { useCollectionStore } from '@/stores/collection'
+import { useDeletedCardsStore } from '@/stores/deletedCards'
+import type { CollectionItem, PlayerCard } from '@/types'
+
 import Tab from 'primevue/tab'
 import TabList from 'primevue/tablist'
 import TabPanel from 'primevue/tabpanel'
@@ -8,11 +13,8 @@ import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
 import Select from 'primevue/select'
 import SelectButton from 'primevue/selectbutton'
+
 import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
-import cards from '@/data/wc-26/players'
-import { useCollectionStore } from '@/stores/collection'
-import { useDeletedCardsStore } from '@/stores/deletedCards'
-import type { CollectionItem, PlayerCard } from '@/types'
 
 type CollectionFilter = 'all' | 'ready' | 'album'
 type CollectionSort = 'status' | 'album' | 'name'

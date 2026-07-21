@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Button from 'primevue/button'
-import Dialog from 'primevue/dialog'
 import cards from '@/data/wc-26/players'
 import gameData from '@/data/mainConst.json'
 import {
@@ -11,6 +9,9 @@ import {
   type ClaimDuplicateExchangeResult,
 } from '@/stores/collection'
 import type { PlayerCard, StickerInstance } from '@/types'
+
+import Button from 'primevue/button'
+import Dialog from 'primevue/dialog'
 
 interface DuplicateGroup {
   playerId: string

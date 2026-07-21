@@ -2,15 +2,17 @@
 import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import Button from 'primevue/button'
-import PackAnimation from '@/components/PackAnimation.vue'
-import StickerReveal from '@/components/StickerReveal.vue'
 import cards from '@/data/wc-26/players'
 import packData from '@/data/mainConst.json'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
 import type { PlayerCard } from '@/types'
+
+import Button from 'primevue/button'
+
+import PackAnimation from '@/components/PackAnimation.vue'
+import StickerReveal from '@/components/StickerReveal.vue'
 
 const { t } = useI18n()
 const router = useRouter()
@@ -31,15 +33,12 @@ const rewardTotal: ComputedRef<number> = computed(
 const isFinished: ComputedRef<boolean> = computed(
   (): boolean => currentIndex.value >= rewardTotal.value,
 )
-const currentCard: ComputedRef<PlayerCard | undefined> = computed(
-  (): PlayerCard | undefined => {
-    const playerId: string | undefined =
-      packOpening.session?.rewards[currentIndex.value]?.playerId
-    return playerId ? cardById.get(playerId) : undefined
-  },
-)
-const isCurrentDuplicate: ComputedRef<boolean> = computed(
-  (): boolean => Boolean(packOpening.session?.rewards[currentIndex.value]?.isDuplicate),
+const currentCard: ComputedRef<PlayerCard | undefined> = computed((): PlayerCard | undefined => {
+  const playerId: string | undefined = packOpening.session?.rewards[currentIndex.value]?.playerId
+  return playerId ? cardById.get(playerId) : undefined
+})
+const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
+  Boolean(packOpening.session?.rewards[currentIndex.value]?.isDuplicate),
 )
 
 // Создаёт новую сохраняемую сессию или восстанавливает незавершённый показ.

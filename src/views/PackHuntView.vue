@@ -2,11 +2,6 @@
 import { computed, onMounted, ref, type Component, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import Button from 'primevue/button'
-import ProgressSpinner from 'primevue/progressspinner'
-import PackHuntGame from '@/components/MiniGame/PackHuntGame.vue'
-import PackMachineGame from '@/components/MiniGame/PackMachineGame.vue'
-import PackRackGame from '@/components/MiniGame/PackRackGame.vue'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackHuntStore, type PackHuntClaimResult } from '@/stores/packHunt'
 import {
@@ -14,6 +9,13 @@ import {
   selectPackMiniGame,
   type PackMiniGameId,
 } from '@/utils/selectPackMiniGame'
+
+import Button from 'primevue/button'
+import ProgressSpinner from 'primevue/progressspinner'
+
+import PackHuntGame from '@/components/MiniGame/PackHuntGame.vue'
+import PackMachineGame from '@/components/MiniGame/PackMachineGame.vue'
+import PackRackGame from '@/components/MiniGame/PackRackGame.vue'
 
 type HuntPhase = 'loading' | 'playing' | 'saving' | 'won' | 'limit' | 'error'
 
@@ -77,7 +79,9 @@ onMounted(async (): Promise<void> => {
 </script>
 
 <template>
-  <section class="mx-auto flex h-full min-h-0 w-full max-w-4xl flex-col items-center justify-center">
+  <section
+    class="mx-auto flex h-full min-h-0 w-full max-w-4xl flex-col items-center justify-center"
+  >
     <div v-if="phase === 'loading'" class="flex flex-col items-center gap-4" aria-live="polite">
       <ProgressSpinner class="h-12 w-12" stroke-width="5" />
       <p class="font-bold text-ink/60">{{ t('packHunt.saving') }}</p>

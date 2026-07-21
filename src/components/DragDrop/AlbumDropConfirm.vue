@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
-import { useI18n } from 'vue-i18n'
 
 interface Props {
   visible: boolean

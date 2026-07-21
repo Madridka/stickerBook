@@ -20,8 +20,11 @@ export const useCollectionStore = defineStore('collection', () => {
   const isLoaded: Ref<boolean> = ref(false)
   const isExchanging: Ref<boolean> = ref(false)
 
-  // Загружает общие параметры коллекции из JSON-данных
-  const total: number = collectionData.total
+  // Считает размер коллекции по уникальным позициям альбома, не учитывая версии карточек.
+  const cardAlbumSlotIds: Map<string, string> = new Map(
+    cards.map(({ id, albumSlotId }): [string, string] => [id, albumSlotId ?? id]),
+  )
+  const total: number = new Set(cards.map(({ id, albumSlotId }): string => albumSlotId ?? id)).size
   const pages: number = collectionData.pages
   const albumSlotIds: Set<string> = new Set(
     albumData.pages.flatMap(({ slots }): string[] =>
@@ -222,13 +225,25 @@ export const useCollectionStore = defineStore('collection', () => {
     )
   }
 
-  // Вычисляет процент найденных стикеров текущей коллекции
+  // Объединяет обычные и особые версии карточки в одну найденную позицию альбома.
+  const collectedAlbumSlotIds: ComputedRef<Set<string>> = computed(
+    (): Set<string> =>
+      new Set(
+        items.value
+          .filter(({ instance }): boolean => instance.location !== 'deleted')
+          .map(({ instance }): string | undefined =>
+            cardAlbumSlotIds.get(instance.playerId),
+          )
+          .filter((slotId: string | undefined): slotId is string => Boolean(slotId)),
+      ),
+  )
+  const collectedTotal: ComputedRef<number> = computed(
+    (): number => collectedAlbumSlotIds.value.size,
+  )
+
+  // Вычисляет процент найденных уникальных позиций текущей коллекции.
   const progress: ComputedRef<number> = computed((): number =>
-    Math.round(
-      (items.value.filter(({ instance }): boolean => instance.location !== 'deleted').length /
-        total) *
-        100,
-    ),
+    total ? Math.min(100, Math.round((collectedTotal.value / total) * 100)) : 0,
   )
 
   // Считает бонусный прогресс только по уникальным занятым слотам текущего журнала.
@@ -256,6 +271,7 @@ export const useCollectionStore = defineStore('collection', () => {
         .map(({ instance }): string => instance.playerId),
     ),
     duplicateTotal: computed((): number => duplicates.value.length),
+    collectedTotal,
     isLoaded,
     isExchanging,
     total,

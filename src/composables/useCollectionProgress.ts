@@ -12,7 +12,7 @@ export const useCollectionProgress = (): CollectionProgress => {
 
   // Формирует компактную подпись прогресса для интерфейса
   const foundLabel: ComputedRef<string> = computed(
-    (): string => `${collection.collected.length} / ${collection.total}`,
+    (): string => `${collection.collectedTotal} / ${collection.total}`,
   )
 
   return { collection, foundLabel }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch, type ComputedRef, type Ref } from 'vue'
+import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
@@ -9,89 +9,85 @@ import cards from '@/data/wc-26/players'
 import packData from '@/data/mainConst.json'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
+import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
 import type { PlayerCard } from '@/types'
-import { weightedRandom } from '@/utils/weightedRandom'
 
 const { t } = useI18n()
 const router = useRouter()
 const inventory = useInventoryStore()
 const collection = useCollectionStore()
-const drawnCards: Ref<PlayerCard[]> = ref([])
-const currentIndex: Ref<number> = ref(0)
+const packOpening = usePackOpeningStore()
+const cardById: Map<string, PlayerCard> = new Map(
+  cards.map((card: PlayerCard): [string, PlayerCard] => [card.id, card]),
+)
 const isAnimationComplete: Ref<boolean> = ref(false)
-const isFinished: ComputedRef<boolean> = computed(() => currentIndex.value >= packData.cardsPerPack)
+const isReady: Ref<boolean> = ref(false)
+const currentIndex: ComputedRef<number> = computed(
+  (): number => packOpening.session?.currentIndex ?? 0,
+)
+const rewardTotal: ComputedRef<number> = computed(
+  (): number => packOpening.session?.rewards.length ?? packData.cardsPerPack,
+)
+const isFinished: ComputedRef<boolean> = computed(
+  (): boolean => currentIndex.value >= rewardTotal.value,
+)
 const currentCard: ComputedRef<PlayerCard | undefined> = computed(
-  () => drawnCards.value[currentIndex.value],
+  (): PlayerCard | undefined => {
+    const playerId: string | undefined =
+      packOpening.session?.rewards[currentIndex.value]?.playerId
+    return playerId ? cardById.get(playerId) : undefined
+  },
 )
 const isCurrentDuplicate: ComputedRef<boolean> = computed(
-  (): boolean =>
-    Boolean(currentCard.value) &&
-    collection.items.some(({ instance }): boolean => instance.playerId === currentCard.value?.id),
+  (): boolean => Boolean(packOpening.session?.rewards[currentIndex.value]?.isDuplicate),
 )
-const isOpening: Ref<boolean> = ref(false)
 
-// Формирует пять карточек по весам из JSON перед началом показа
-const drawCards = (): void => {
-  drawnCards.value = Array.from(
-    { length: packData.cardsPerPack },
-    (): PlayerCard => weightedRandom(cards),
-  )
-}
-
-// Списывает один Pack только после того, как данные инвентаря готовы
-const consumePack = async (): Promise<void> => {
-  if (isOpening.value) return
-  isOpening.value = true
-  if (!inventory.isLoaded) {
-    await new Promise<void>((resolve): void => {
-      const stop = watch(
-        () => inventory.isLoaded,
-        (loaded: boolean): void => {
-          if (loaded) {
-            stop()
-            resolve()
-          }
-        },
-      )
-    })
-  }
-  if (!(await inventory.removePack())) {
+// Создаёт новую сохраняемую сессию или восстанавливает незавершённый показ.
+const initializeOpening = async (): Promise<void> => {
+  const session = await packOpening.start()
+  if (!session) {
     await router.replace({ name: 'shop' })
     return
   }
-  drawCards()
+
+  isAnimationComplete.value = session.animationComplete
+  isReady.value = true
 }
 
-// Переводит сценарий из анимации Pack к первой карточке
-const handleAnimationComplete = (): void => {
+// Сохраняет переход от анимации пака к первой карточке.
+const handleAnimationComplete = async (): Promise<void> => {
+  await packOpening.markAnimationComplete()
   isAnimationComplete.value = true
 }
 
-// Сохраняет просмотренную карточку и открывает следующую
+// Сохраняет прогресс; после последней карточки атомарно выдаёт все награды.
 const handleNextCard = async (): Promise<void> => {
-  const card: PlayerCard | undefined = drawnCards.value[currentIndex.value]
-  if (!card) return
-  await collection.addCard(card.id)
-  currentIndex.value += 1
+  const result: AdvancePackOpeningResult = await packOpening.advance()
+  if (result === 'completed') {
+    await Promise.all([inventory.load(), collection.load()])
+  }
 }
 
-// После полного просмотра возвращает игрока к выбранному разделу
+// После полного просмотра возвращает игрока к выбранному разделу.
 const navigateTo = async (name: 'home' | 'shop' | 'album' | 'collection'): Promise<void> => {
   await router.push({ name })
 }
 
-onMounted(consumePack)
+onMounted(initializeOpening)
 </script>
 
 <template>
   <section
     class="mx-auto flex h-full min-h-0 w-full max-w-5xl flex-col items-center justify-center py-2"
   >
-    <div v-if="!isAnimationComplete" class="flex w-full flex-1 items-center justify-center">
+    <div
+      v-if="isReady && !isAnimationComplete"
+      class="flex w-full flex-1 items-center justify-center"
+    >
       <PackAnimation @complete="handleAnimationComplete" />
     </div>
 
-    <template v-else-if="!isFinished && currentCard">
+    <template v-else-if="isReady && !isFinished && currentCard">
       <div class="mb-2 text-center">
         <p class="hidden text-xs font-bold uppercase tracking-[0.16em] text-coral sm:block">
           {{ t('packOpening.eyebrow') }}
@@ -105,12 +101,13 @@ onMounted(consumePack)
         :card="currentCard"
         :duplicate="isCurrentDuplicate"
         :index="currentIndex"
-        :total="packData.cardsPerPack"
+        :total="rewardTotal"
+        :advancing="packOpening.isAdvancing"
         @next="handleNextCard"
       />
     </template>
 
-    <div v-else class="flex w-full flex-col items-center text-center">
+    <div v-else-if="isReady" class="flex w-full flex-col items-center text-center">
       <div
         class="flex h-20 w-20 items-center justify-center rounded-full bg-mint text-4xl text-ink"
       >

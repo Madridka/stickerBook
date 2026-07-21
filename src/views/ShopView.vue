@@ -7,6 +7,7 @@ import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
 import packData from '@/data/mainConst.json'
+import { purchasePack, type PurchasePackResult } from '@/services/economy'
 import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniGame'
 
 const { t } = useI18n()
@@ -20,9 +21,7 @@ const ownedPackIds: ComputedRef<string[]> = computed(() =>
   inventory.items.filter(({ type }) => type === 'pack').map(({ id }) => id),
 )
 
-// Берёт цену Pack из игровых данных магазина
-
-// Сначала сохраняет Pack и только после успешной записи списывает coins.
+// Покупает пак одной транзакцией и синхронизирует UI только после её фиксации.
 const buyPack = async (): Promise<void> => {
   if (isPurchasing.value || player.coins < packData.price) return
 
@@ -30,13 +29,21 @@ const buyPack = async (): Promise<void> => {
   hasPurchaseError.value = false
   try {
     try {
-      await inventory.addPack()
+      await player.flushSaves()
+      const result: PurchasePackResult = await purchasePack(packData.price)
+      if (result.status !== 'purchased') {
+        if (result.player) player.applyPersistedState(result.player)
+        hasPurchaseError.value = true
+        return
+      }
+
+      player.applyPersistedState(result.player)
+      inventory.applyPersistedItem(result.item)
     } catch {
       hasPurchaseError.value = true
       return
     }
 
-    if (!player.spendCoins(packData.price)) return
     try {
       await router.push({ name: 'pack-opening' })
     } catch {

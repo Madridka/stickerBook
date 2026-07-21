@@ -138,7 +138,7 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
       >
         <div>
           <strong class="block text-xl font-black leading-none text-ink sm:text-2xl"
-            >{{ collectedItems.length }} / {{ collection.total }}</strong
+            >{{ collection.collectedTotal }} / {{ collection.total }}</strong
           >
           {{ t('album.uniqueFound') }}
         </div>

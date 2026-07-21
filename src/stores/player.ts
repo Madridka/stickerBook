@@ -1,9 +1,8 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
-import { database, type PlayerState } from '@/db/database'
+import { database, PLAYER_STATE_ID, type PlayerState } from '@/db/database'
 import gameData from '@/data/mainConst.json'
 
-const PLAYER_ID = 'current'
 const COIN_FORMATTER: Intl.NumberFormat = new Intl.NumberFormat('ru-RU', {
   maximumFractionDigits: gameData.clicker.rewardPrecision,
 })
@@ -65,7 +64,7 @@ export const usePlayerStore = defineStore('player', () => {
 
   // Загружает сохранённые очки и энергию до первого взаимодействия с экраном.
   const load = async (): Promise<void> => {
-    const savedPlayer: PlayerState | undefined = await database.player.get(PLAYER_ID)
+    const savedPlayer: PlayerState | undefined = await database.player.get(PLAYER_STATE_ID)
 
     if (!hasLocalChanges && savedPlayer) {
       coins.value = savedPlayer.coins
@@ -80,12 +79,26 @@ export const usePlayerStore = defineStore('player', () => {
   const save = (): void => {
     saveQueue = saveQueue.then(async (): Promise<void> => {
       await database.player.put({
-        id: PLAYER_ID,
+        id: PLAYER_STATE_ID,
         coins: coins.value,
         energy: energy.value,
         energyUpdatedAt: energyUpdatedAt.value,
       })
     })
+  }
+
+  // Ожидает все более ранние начисления перед внешней экономической транзакцией.
+  const flushSaves = async (): Promise<void> => {
+    await saveQueue
+  }
+
+  // Синхронизирует Pinia с состоянием, уже зафиксированным экономическим сервисом.
+  const applyPersistedState = (player: PlayerState): void => {
+    hasLocalChanges = false
+    coins.value = player.coins
+    energy.value = player.energy
+    energyUpdatedAt.value = player.energyUpdatedAt
+    isLoaded.value = true
   }
 
   // Расходует фиксированную энергию и начисляет награду, не меняя размер запаса из-за бонуса.
@@ -109,16 +122,6 @@ export const usePlayerStore = defineStore('player', () => {
     save()
   }
 
-  // Проверяет баланс и списывает указанное количество coins
-  const spendCoins = (amount: number): boolean => {
-    if (amount <= 0 || coins.value < amount) return false
-
-    hasLocalChanges = true
-    coins.value = roundReward(coins.value - amount)
-    save()
-    return true
-  }
-
   void load()
 
   return {
@@ -132,8 +135,9 @@ export const usePlayerStore = defineStore('player', () => {
     formattedCoins,
     isLoaded,
     addCoin,
+    applyPersistedState,
+    flushSaves,
     refreshEnergy,
-    spendCoins,
     resetCoins,
   }
 })

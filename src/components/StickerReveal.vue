@@ -9,9 +9,10 @@ interface Props {
   index: number
   total: number
   duplicate?: boolean
+  advancing?: boolean
 }
 
-const props: Props = defineProps<Props>()
+const props: Props = withDefaults(defineProps<Props>(), { duplicate: false, advancing: false })
 const emit = defineEmits<{ next: [] }>()
 const { t } = useI18n()
 const isRevealed: Ref<boolean> = ref(false)
@@ -30,7 +31,9 @@ const reveal = (): void => {
   isRevealed.value = true
 }
 
-const showNext = (): void => emit('next')
+const showNext = (): void => {
+  if (!props.advancing) emit('next')
+}
 
 // Повторяет действия нижней кнопки при клике непосредственно по карточке
 const handleCardClick = (): void => {
@@ -100,6 +103,8 @@ const handleCardClick = (): void => {
       class="mt-6"
       :label="t('packOpening.next')"
       icon="pi pi-arrow-right"
+      :disabled="advancing"
+      :loading="advancing"
       type="button"
       @click="showNext"
     />

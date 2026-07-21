@@ -1,6 +1,8 @@
 import Dexie, { type Table } from 'dexie'
 import type { DeletedCard, StickerInstance } from '@/types'
 
+export const PLAYER_STATE_ID = 'current'
+
 export interface CollectedSticker {
   // Уникальный идентификатор найденного стикера
   id: string
@@ -48,6 +50,23 @@ export interface DuplicateExchange {
   createdAt: number
 }
 
+export interface PackOpeningReward {
+  // Заранее созданный идентификатор экземпляра делает итог открытия неизменяемым.
+  instanceId: string
+  playerId: string
+  isDuplicate: boolean
+}
+
+export interface PackOpeningSession {
+  // Одновременно может существовать только одно незавершённое открытие.
+  id: 'pending'
+  packId: string
+  rewards: PackOpeningReward[]
+  currentIndex: number
+  animationComplete: boolean
+  createdAt: number
+}
+
 interface StickerBookDatabase extends Dexie {
   stickers: Table<CollectedSticker, string>
   player: Table<PlayerState, string>
@@ -57,6 +76,7 @@ interface StickerBookDatabase extends Dexie {
   deletedCards: Table<DeletedCard, string>
   packHuntProgress: Table<PackHuntProgress, string>
   duplicateExchanges: Table<DuplicateExchange, string>
+  packOpeningSessions: Table<PackOpeningSession, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -101,4 +121,15 @@ database.version(7).stores({
   deletedCards: 'id, instanceId, playerId, deletedAt',
   packHuntProgress: 'id, dateKey',
   duplicateExchanges: 'id, createdAt',
+})
+database.version(8).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
+  packHuntProgress: 'id, dateKey',
+  duplicateExchanges: 'id, createdAt',
+  packOpeningSessions: 'id, packId, createdAt',
 })

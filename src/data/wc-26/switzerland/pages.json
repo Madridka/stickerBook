@@ -2,7 +2,7 @@
   {
     "id": "switzerland-left",
     "number": 22,
-    "image": "page-22-stickers-left.png",
+    "image": "switzerland-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -91,7 +91,7 @@
   {
     "id": "switzerland-right",
     "number": 23,
-    "image": "page-23-stickers-right.png",
+    "image": "switzerland-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

@@ -45,9 +45,10 @@ const getCard = (playerId: string): PlayerCard | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
-  collection.items.filter((item: CollectionItem): boolean =>
-    item.instance.location !== 'deleted' &&
-    cards.some(({ id }): boolean => id === item.instance.playerId),
+  collection.items.filter(
+    (item: CollectionItem): boolean =>
+      item.instance.location !== 'deleted' &&
+      cards.some(({ id }): boolean => id === item.instance.playerId),
   ),
 )
 
@@ -81,11 +82,13 @@ const collectionSortOptions: ComputedRef<CollectionSortOption[]> = computed(
   ],
 )
 const visibleCollectionItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] => {
-  const filtered: CollectionItem[] = collectedItems.value.filter((item: CollectionItem): boolean => {
-    if (collectionFilter.value === 'ready') return isReadyToPlace(item)
-    if (collectionFilter.value === 'album') return item.instance.location === 'album'
-    return true
-  })
+  const filtered: CollectionItem[] = collectedItems.value.filter(
+    (item: CollectionItem): boolean => {
+      if (collectionFilter.value === 'ready') return isReadyToPlace(item)
+      if (collectionFilter.value === 'album') return item.instance.location === 'album'
+      return true
+    },
+  )
 
   return [...filtered].sort((left: CollectionItem, right: CollectionItem): number => {
     const leftCard: PlayerCard | undefined = getCard(left.instance.playerId)
@@ -112,14 +115,15 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
     )
     .filter((item: CollectionItem | undefined): item is CollectionItem => Boolean(item)),
 )
-
 </script>
 
 <template>
   <section class="flex h-full min-h-0 w-full flex-col">
     <div class="flex shrink-0 items-center justify-between gap-3 pb-2">
       <div class="min-w-0">
-        <p class="text-[10px] font-bold uppercase leading-none tracking-[0.16em] text-coral max-sm:hidden">
+        <p
+          class="text-[10px] font-bold uppercase leading-none tracking-[0.16em] text-coral max-sm:hidden"
+        >
           {{ t('app.collection') }}
         </p>
         <h1 class="truncate text-2xl font-black leading-tight tracking-tight sm:mt-0.5 sm:text-3xl">
@@ -129,7 +133,9 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
           {{ t('album.collectionText') }}
         </p>
       </div>
-      <div class="flex shrink-0 gap-3 text-right text-[10px] font-semibold leading-tight text-ink/55 sm:gap-5 sm:text-xs">
+      <div
+        class="flex shrink-0 gap-3 text-right text-[10px] font-semibold leading-tight text-ink/55 sm:gap-5 sm:text-xs"
+      >
         <div>
           <strong class="block text-xl font-black leading-none text-ink sm:text-2xl"
             >{{ collectedItems.length }} / {{ collection.total }}</strong
@@ -194,17 +200,17 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
             <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
               <SelectButton
                 v-model="collectionFilter"
-                class="collection-filter"
                 :options="collectionFilterOptions"
                 option-label="label"
                 option-value="value"
+                size="small"
                 :allow-empty="false"
                 :aria-label="t('album.collectionControls.filterLabel')"
               >
                 <template #option="{ option }">
-                  <span class="flex items-center gap-1.5 text-xs font-black">
+                  <span class="flex items-center gap-1 text-xs font-black">
                     {{ option.label }}
-                    <span class="rounded-full bg-current/10 px-1.5 py-0.5 text-[10px]">
+                    <span class="rounded-full bg-current/10 px-1 py-0.5 text-[10px]">
                       {{ option.count }}
                     </span>
                   </span>
@@ -217,9 +223,15 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
                   v-model="collectionSort"
                   class="w-40 text-xs font-bold"
                   :options="collectionSortOptions"
+                  size="small"
                   option-label="label"
                   option-value="value"
                   :aria-label="t('album.collectionControls.sortLabel')"
+                  :pt="{
+                    option: {
+                      class: 'text-xs',
+                    },
+                  }"
                 />
               </label>
             </div>
@@ -276,7 +288,10 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
               {{ t('album.collectionControls.filterEmpty') }}
             </div>
           </template>
-          <div v-else class="border border-dashed border-ink/20 p-5 text-center text-sm text-ink/55">
+          <div
+            v-else
+            class="border border-dashed border-ink/20 p-5 text-center text-sm text-ink/55"
+          >
             {{ t('album.empty') }}
           </div>
         </TabPanel>

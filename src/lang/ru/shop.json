@@ -7,6 +7,7 @@
   "packDescription": "Новый пакет для будущего открытия.",
   "coins": "очков",
   "buy": "Купить",
+  "buyFor": "Купить за {price} очков",
   "purchaseError": "Не удалось сохранить набор. Очки не списаны — попробуйте ещё раз.",
   "or": "или",
   "winPack": "Выиграть в мини-игре",
@@ -15,5 +16,23 @@
   "dailyLimitReached": "Сегодня все мини-игры уже сыграны",
   "inventory": "В инвентаре",
   "inventoryCount": "Блистеры: {count}",
-  "openOwnedPack": "Открыть"
+  "openOwnedPack": "Открыть",
+  "sections": {
+    "ariaLabel": "Раздел магазина",
+    "store": "Магазин",
+    "packs": "Мои блистеры"
+  },
+  "paidKicker": "За очки",
+  "paidTitle": "Классический блистер",
+  "paidDescription": "Пять случайных наклеек для твоего альбома.",
+  "freeKicker": "Ежедневная награда",
+  "freeTitle": "Призовой блистер",
+  "packContents": "5 наклеек",
+  "getFree": "Получить бесплатно",
+  "inventoryTitle": "Мои блистеры",
+  "inventoryText": "Все полученные наборы ждут открытия здесь.",
+  "inventoryLoading": "Загружаем блистеры",
+  "ownedPackNumber": "Блистер №{number}",
+  "emptyPacksTitle": "Блистеров пока нет",
+  "emptyPacksText": "Купи набор или получи бесплатный в магазине — он появится в этом разделе."
 }

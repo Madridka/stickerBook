@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue'
+import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import ShopItem from '@/components/Shop/ShopItem.vue'
@@ -16,6 +16,9 @@ const packHunt = usePackHuntStore()
 const router = useRouter()
 const isPurchasing: Ref<boolean> = ref(false)
 const hasPurchaseError: Ref<boolean> = ref(false)
+const ownedPackIds: ComputedRef<string[]> = computed(() =>
+  inventory.items.filter(({ type }) => type === 'pack').map(({ id }) => id),
+)
 
 // Берёт цену Pack из игровых данных магазина
 
@@ -62,7 +65,7 @@ onMounted(async (): Promise<void> => {
 
 <template>
   <!-- Основной экран магазина -->
-  <section class="mx-auto flex h-full min-h-0 w-full max-w-4xl flex-col justify-center">
+  <section class="mx-auto flex h-full min-h-0 w-full max-w-4xl flex-col py-1">
     <!-- Название текущего раздела -->
     <p class="mb-1 hidden text-xs font-bold uppercase tracking-[0.16em] text-coral sm:block">
       {{ t('app.shop') }}
@@ -86,14 +89,14 @@ onMounted(async (): Promise<void> => {
 
     <!-- Доступные товары магазина -->
     <ShopItem
-      class="mt-4"
+      class="mt-3 sm:mt-4"
       :price="packData.price"
       :can-buy="player.coins >= packData.price"
       :purchasing="isPurchasing"
       :daily-remaining="packHunt.remainingToday"
       :daily-limit="packHunt.dailyLimit"
       :mini-game-loaded="packHunt.isLoaded"
-      :owned-packs="inventory.packCount"
+      :owned-pack-ids="ownedPackIds"
       :inventory-loaded="inventory.isLoaded"
       @purchase="buyPack"
       @play="playPackHunt"

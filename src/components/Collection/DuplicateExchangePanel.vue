@@ -39,13 +39,11 @@ const candidateCards: ComputedRef<PlayerCard[]> = computed((): PlayerCard[] =>
     .map((playerId: string): PlayerCard | undefined => getCard(playerId))
     .filter((card: PlayerCard | undefined): card is PlayerCard => Boolean(card)),
 )
-const rewardCard: ComputedRef<PlayerCard | undefined> = computed(
-  (): PlayerCard | undefined =>
-    rewardCardId.value ? getCard(rewardCardId.value) : undefined,
+const rewardCard: ComputedRef<PlayerCard | undefined> = computed((): PlayerCard | undefined =>
+  rewardCardId.value ? getCard(rewardCardId.value) : undefined,
 )
 const canSubmit: ComputedRef<boolean> = computed(
-  (): boolean =>
-    selectedInstanceIds.value.length === selectionLimit && !collection.isExchanging,
+  (): boolean => selectedInstanceIds.value.length === selectionLimit && !collection.isExchanging,
 )
 
 const getCard = (playerId: string): PlayerCard | undefined =>
@@ -102,8 +100,7 @@ const claimCandidate = async (): Promise<void> => {
   if (!selectedCandidateId.value) return
   const playerId: string = selectedCandidateId.value
   try {
-    const result: ClaimDuplicateExchangeResult =
-      await collection.claimDuplicateExchange(playerId)
+    const result: ClaimDuplicateExchangeResult = await collection.claimDuplicateExchange(playerId)
     if (result === 'invalid-choice') {
       hasError.value = true
       return
@@ -118,7 +115,9 @@ const claimCandidate = async (): Promise<void> => {
 
 <template>
   <section class="flex min-h-full flex-col" aria-labelledby="duplicate-exchange-title">
-    <div class="sticky top-0 z-20 mb-3 border-2 border-ink bg-paper p-2 shadow-[3px_3px_0_rgb(var(--color-gold)/0.4)]">
+    <div
+      class="sticky top-0 z-20 mb-3 border-2 border-ink bg-paper p-2 shadow-[3px_3px_0_rgb(var(--color-gold)/0.4)]"
+    >
       <div class="flex items-center justify-between gap-2">
         <div class="min-w-0">
           <h2 id="duplicate-exchange-title" class="text-sm font-black leading-tight sm:text-base">
@@ -133,7 +132,7 @@ const claimCandidate = async (): Promise<void> => {
             }}
           </p>
         </div>
-        <div class="flex shrink-0 items-center gap-2">
+        <div class="flex shrink-0 items-center gap-2 min-w-40">
           <strong class="whitespace-nowrap text-xs sm:text-sm" data-exchange-selection>
             {{
               t('duplicateExchange.selected', {
@@ -145,6 +144,7 @@ const claimCandidate = async (): Promise<void> => {
           <Button
             icon="pi pi-sparkles"
             size="small"
+            class="min-w-20"
             :disabled="!canSubmit"
             data-exchange-submit
             @click="openConfirmation"
@@ -152,7 +152,9 @@ const claimCandidate = async (): Promise<void> => {
             <span class="sm:hidden">
               {{ t('duplicateExchange.submitShort', { count: selectionLimit }) }}
             </span>
-            <span class="hidden sm:inline">{{ t('duplicateExchange.submit', { count: selectionLimit }) }}</span>
+            <span class="hidden sm:inline">{{
+              t('duplicateExchange.submit', { count: selectionLimit })
+            }}</span>
           </Button>
         </div>
       </div>
@@ -172,10 +174,7 @@ const claimCandidate = async (): Promise<void> => {
       </strong>
     </div>
 
-    <div
-      v-if="duplicateGroups.length"
-      class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6"
-    >
+    <div v-if="duplicateGroups.length" class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
       <article
         v-for="group in duplicateGroups"
         :key="group.playerId"
@@ -188,7 +187,9 @@ const claimCandidate = async (): Promise<void> => {
         data-duplicate-group
         :data-player-id="group.playerId"
       >
-        <span class="absolute right-3 top-3 z-10 rounded-full bg-coral px-2 py-1 text-xs font-black text-white shadow">
+        <span
+          class="absolute right-3 top-3 z-10 rounded-full bg-coral px-2 py-1 text-xs font-black text-white shadow"
+        >
           ×{{ group.instances.length }}
         </span>
         <img
@@ -269,7 +270,11 @@ const claimCandidate = async (): Promise<void> => {
         />
         <Button
           :label="
-            t(collection.isExchanging ? 'duplicateExchange.processing' : 'duplicateExchange.confirm')
+            t(
+              collection.isExchanging
+                ? 'duplicateExchange.processing'
+                : 'duplicateExchange.confirm',
+            )
           "
           icon="pi pi-trash"
           severity="danger"
@@ -302,7 +307,9 @@ const claimCandidate = async (): Promise<void> => {
       <p v-if="hasError" class="mb-3 text-sm font-bold text-coral" role="alert">
         {{ t('duplicateExchange.error') }}
       </p>
-      <div class="grid auto-cols-[8rem] grid-flow-col gap-2 overflow-x-auto pb-2 sm:grid-flow-row sm:grid-cols-5 sm:auto-cols-auto sm:gap-3">
+      <div
+        class="grid auto-cols-[8rem] grid-flow-col gap-2 overflow-x-auto pb-2 sm:grid-flow-row sm:grid-cols-5 sm:auto-cols-auto sm:gap-3"
+      >
         <button
           v-for="card in candidateCards"
           :key="card.id"
@@ -319,13 +326,19 @@ const claimCandidate = async (): Promise<void> => {
           :data-player-id="card.id"
           @click="selectedCandidateId = card.id"
         >
-          <img class="aspect-[2/3] w-full bg-white object-cover" :src="card.image" :alt="card.fullName" />
+          <img
+            class="aspect-[2/3] w-full bg-white object-cover"
+            :src="card.image"
+            :alt="card.fullName"
+          />
           <strong class="mt-2 block truncate text-sm">{{ card.fullName }}</strong>
           <span
             class="mt-1 inline-block text-[10px] font-black uppercase tracking-wide"
             :class="isOwned(card.id) ? 'text-coral' : 'text-emerald-700'"
           >
-            {{ t(isOwned(card.id) ? 'duplicateExchange.alreadyOwned' : 'duplicateExchange.notOwned') }}
+            {{
+              t(isOwned(card.id) ? 'duplicateExchange.alreadyOwned' : 'duplicateExchange.notOwned')
+            }}
           </span>
         </button>
       </div>

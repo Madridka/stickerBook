@@ -109,6 +109,6 @@ onBeforeUnmount((): void => {
     />
 
     <!-- Подсказка действия -->
-    <p class="-mt-1 text-xs font-semibold text-ink/50 sm:text-sm">{{ clickLabel }}</p>
+    <p class="-mt-1 mb-4 text-xs font-semibold text-ink/50 sm:text-sm">{{ clickLabel }}</p>
   </section>
 </template>

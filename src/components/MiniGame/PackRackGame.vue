@@ -258,7 +258,7 @@ onBeforeUnmount((): void => {
         </span>
       </div>
       <button
-        class="absolute top-1/2 z-10 flex h-[82%] w-[42%] -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-paper shadow-xl"
+        class="absolute top-1/2 z-10 flex h-[72%] w-[42%] -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-paper shadow-xl"
         :style="leftStackStyle"
         data-rack-side="left"
         type="button"
@@ -276,7 +276,7 @@ onBeforeUnmount((): void => {
         </span>
       </button>
       <button
-        class="absolute top-1/2 z-20 flex h-[78%] w-[42%] -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-mint shadow-xl"
+        class="absolute top-1/2 z-20 flex h-[70%] w-[42%] -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-mint shadow-xl"
         :style="rightStackStyle"
         data-rack-side="right"
         type="button"

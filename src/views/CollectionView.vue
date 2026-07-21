@@ -117,25 +117,27 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
 
 <template>
   <section class="flex h-full min-h-0 w-full flex-col">
-    <div class="flex shrink-0 flex-wrap items-end justify-between gap-4 pb-4">
-      <div>
-        <p class="text-xs font-bold uppercase tracking-[0.18em] text-coral">
+    <div class="flex shrink-0 items-center justify-between gap-3 pb-2">
+      <div class="min-w-0">
+        <p class="text-[10px] font-bold uppercase leading-none tracking-[0.16em] text-coral max-sm:hidden">
           {{ t('app.collection') }}
         </p>
-        <h1 class="mt-1 text-3xl font-black tracking-tight sm:text-4xl">
+        <h1 class="truncate text-2xl font-black leading-tight tracking-tight sm:mt-0.5 sm:text-3xl">
           {{ t('album.collectionTitle') }}
         </h1>
-        <p class="mt-1 text-sm text-ink/60">{{ t('album.collectionText') }}</p>
+        <p class="mt-0.5 hidden text-xs leading-tight text-ink/55 md:block">
+          {{ t('album.collectionText') }}
+        </p>
       </div>
-      <div class="flex gap-6 text-right text-xs font-semibold text-ink/55">
+      <div class="flex shrink-0 gap-3 text-right text-[10px] font-semibold leading-tight text-ink/55 sm:gap-5 sm:text-xs">
         <div>
-          <strong class="block text-2xl font-black text-ink"
+          <strong class="block text-xl font-black leading-none text-ink sm:text-2xl"
             >{{ collectedItems.length }} / {{ collection.total }}</strong
           >
           {{ t('album.uniqueFound') }}
         </div>
         <div>
-          <strong class="block text-2xl font-black text-coral">{{
+          <strong class="block text-xl font-black leading-none text-coral sm:text-2xl">{{
             collection.duplicateTotal
           }}</strong>
           {{ t('album.duplicatesStored') }}
@@ -186,10 +188,10 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
         </Tab>
       </TabList>
 
-      <TabPanels class="min-h-0 flex-1 overflow-hidden bg-transparent px-0 pb-0 pt-4">
+      <TabPanels class="min-h-0 flex-1 overflow-hidden bg-transparent px-0 pb-0 pt-2 sm:pt-3">
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="collection">
           <template v-if="collectedItems.length">
-            <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
               <SelectButton
                 v-model="collectionFilter"
                 class="collection-filter"
@@ -224,7 +226,7 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
 
             <div
               v-if="visibleCollectionItems.length"
-              class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"
+              class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6"
             >
               <article
                 v-for="item in visibleCollectionItems"
@@ -269,12 +271,12 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
             </div>
             <div
               v-else
-              class="border border-dashed border-ink/20 p-10 text-center text-ink/55"
+              class="border border-dashed border-ink/20 p-5 text-center text-sm text-ink/55"
             >
               {{ t('album.collectionControls.filterEmpty') }}
             </div>
           </template>
-          <div v-else class="border border-dashed border-ink/20 p-10 text-center text-ink/55">
+          <div v-else class="border border-dashed border-ink/20 p-5 text-center text-sm text-ink/55">
             {{ t('album.empty') }}
           </div>
         </TabPanel>
@@ -286,7 +288,7 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="deleted">
           <div
             v-if="deletedItems.length"
-            class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"
+            class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6"
           >
             <article
               v-for="item in deletedItems"
@@ -316,11 +318,13 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
           </div>
           <div
             v-else
-            class="flex h-full min-h-56 flex-col items-center justify-center border border-dashed border-ink/20 p-8 text-center"
+            class="flex min-h-28 flex-col items-center justify-center border border-dashed border-ink/20 p-4 text-center"
           >
-            <i class="pi pi-trash text-4xl text-ink/25" />
-            <strong class="mt-4 text-lg">{{ t('album.deletedEmptyTitle') }}</strong>
-            <p class="mt-1 max-w-sm text-sm text-ink/55">{{ t('album.deletedEmptyText') }}</p>
+            <i class="pi pi-trash text-2xl text-ink/25" />
+            <strong class="mt-2 text-sm">{{ t('album.deletedEmptyTitle') }}</strong>
+            <p class="mt-0.5 hidden max-w-sm text-xs text-ink/55 sm:block">
+              {{ t('album.deletedEmptyText') }}
+            </p>
           </div>
         </TabPanel>
       </TabPanels>

@@ -53,6 +53,7 @@ let animationFrame: number | undefined
 let startedAt: number = 0
 let stageTimer: number | undefined
 let completionTimer: number | undefined
+let lastStopPointerAt: number = Number.NEGATIVE_INFINITY
 
 const drumStyle: ComputedRef<CSSProperties> = computed(
   (): CSSProperties => ({ left: `calc(50% + ${drumOffset.value}%)` }),
@@ -143,6 +144,19 @@ const stopTiming = (): void => {
     timingPosition.value >= timingTargetStart && timingPosition.value <= timingTargetEnd
   timingMiss.value = !isHit
   if (isHit) moveToStage(2)
+}
+
+// Pointerdown даёт мгновенную реакцию на touch-экране, а временная метка
+// отсекает следующий за ним синтетический click без потери клавиатурного управления.
+const stopTimingFromPointer = (event: PointerEvent): void => {
+  event.preventDefault()
+  lastStopPointerAt = window.performance.now()
+  stopTiming()
+}
+
+const stopTimingFromClick = (): void => {
+  if (window.performance.now() - lastStopPointerAt < 700) return
+  stopTiming()
 }
 
 const checkDeliveryPoint = (): void => {
@@ -238,7 +252,9 @@ onBeforeUnmount((): void => {
       v-if="stage === 0"
       class="relative h-[min(45vh,25rem)] min-h-60 overflow-hidden border-4 border-ink bg-ink/10"
     >
-      <div class="absolute inset-x-5 top-1/2 grid h-48 -translate-y-1/2 grid-cols-5 gap-2 overflow-hidden rounded-full border-4 border-ink bg-gold/25 p-5">
+      <div
+        class="absolute left-1/2 top-1/2 grid h-[72%] min-h-52 w-[78%] max-w-2xl -translate-x-1/2 -translate-y-1/2 grid-cols-5 gap-2 overflow-hidden rounded-[50%] border-4 border-ink bg-gold/25 p-5"
+      >
         <span v-for="index in 5" :key="index" class="rounded border-2 border-ink/20 bg-paper/60" />
       </div>
       <div class="pointer-events-none absolute inset-y-6 left-1/2 w-28 -translate-x-1/2 border-4 border-coral bg-paper/10 ring-4 ring-coral/15" />
@@ -284,12 +300,13 @@ onBeforeUnmount((): void => {
         {{ timingMiss ? t('packHunt.machine.timingMiss') : t('packHunt.machine.timingHint') }}
       </p>
       <Button
-        class="mt-5"
+        class="mt-5 touch-manipulation select-none"
         :label="t('packHunt.machine.stop')"
         icon="pi pi-stop-circle"
         type="button"
         data-machine-stop
-        @click="stopTiming"
+        @pointerdown="stopTimingFromPointer"
+        @click="stopTimingFromClick"
       />
     </div>
 
@@ -316,7 +333,6 @@ onBeforeUnmount((): void => {
       >
         {{ index < nextPointIndex ? '✓' : index + 1 }}
         </div>
-        <div class="pointer-events-none absolute inset-x-10 bottom-3 h-10 border-4 border-ink bg-gold/25" />
         <button
         class="absolute z-10 flex h-24 w-16 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center border-2 border-ink bg-coral shadow-lg cursor-grab active:cursor-grabbing"
         :class="isFinishing ? 'opacity-40' : ''"

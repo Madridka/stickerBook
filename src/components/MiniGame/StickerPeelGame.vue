@@ -260,7 +260,7 @@ onBeforeUnmount(clearPeelTimer)
     pt:content:class="max-md:!px-3 max-md:!pb-1"
     pt:footer:class="max-md:!px-3 max-md:!pb-2 max-md:!pt-1"
   >
-    <div class="mb-5 grid grid-cols-3 gap-2 max-md:mb-2 max-md:gap-1">
+    <div class="mb-3 grid grid-cols-3 gap-2 max-md:mb-1.5 max-md:gap-1">
       <div
         v-for="index in 3"
         :key="index"
@@ -282,10 +282,10 @@ onBeforeUnmount(clearPeelTimer)
     </p>
 
     <template v-if="step === 0">
-      <h2 class="mt-1 text-xl font-black">{{ t('stickerTray.stepPeel') }}</h2>
-      <p class="mt-1 text-sm text-ink/65">{{ t('stickerTray.peelText') }}</p>
+      <h2 class="mt-0.5 text-lg font-black">{{ t('stickerTray.stepPeel') }}</h2>
+      <p class="mt-0.5 text-xs leading-snug text-ink/60">{{ t('stickerTray.peelText') }}</p>
 
-      <div class="mt-5 [perspective:900px]">
+      <div class="mt-3 [perspective:900px]">
         <div
           class="relative mx-auto aspect-[2/3] w-28 overflow-hidden rounded border-2 border-ink bg-[#ece8dd] shadow-lg [transform:rotateY(180deg)]"
         >
@@ -304,7 +304,7 @@ onBeforeUnmount(clearPeelTimer)
         </div>
       </div>
 
-      <div class="mt-5 rounded bg-ink/10 p-1">
+      <div class="mt-3 rounded bg-ink/10 p-1">
         <div ref="peelTrackRef" class="relative h-14 overflow-hidden rounded bg-paper">
           <div
             ref="peelTargetRef"
@@ -367,8 +367,8 @@ onBeforeUnmount(clearPeelTimer)
     </template>
 
     <template v-else-if="step === 1">
-      <h2 class="mt-1 text-xl font-black">{{ t('stickerTray.alignTitle') }}</h2>
-      <p class="mt-1 text-sm text-ink/65 max-md:text-xs max-md:leading-snug">
+      <h2 class="mt-0.5 text-lg font-black">{{ t('stickerTray.alignTitle') }}</h2>
+      <p class="mt-0.5 text-xs leading-snug text-ink/60">
         {{ t('stickerTray.alignText') }}
       </p>
 
@@ -414,11 +414,11 @@ onBeforeUnmount(clearPeelTimer)
     </template>
 
     <template v-else>
-      <h2 class="mt-1 text-xl font-black">{{ t('stickerTray.pressTitle') }}</h2>
-      <p class="mt-1 text-sm text-ink/65">{{ t('stickerTray.pressText') }}</p>
+      <h2 class="mt-0.5 text-lg font-black">{{ t('stickerTray.pressTitle') }}</h2>
+      <p class="mt-0.5 text-xs leading-snug text-ink/60">{{ t('stickerTray.pressText') }}</p>
 
       <div
-        class="relative mx-auto mt-5 aspect-[2/3] w-40 overflow-hidden rounded border-2 border-ink bg-white shadow-xl"
+        class="relative mx-auto mt-3 aspect-[2/3] w-40 overflow-hidden rounded border-2 border-ink bg-white shadow-xl"
       >
         <img
           v-if="item"

@@ -79,14 +79,14 @@ onBeforeUnmount((): void => {
     class="mx-auto flex h-full min-h-0 max-w-3xl flex-1 flex-col items-center justify-center py-0"
   >
     <!-- Заголовок и инструкция для игрока -->
-    <div class="mb-2 text-center sm:mb-3">
-      <p class="text-xs font-bold uppercase tracking-[0.22em] text-coral sm:text-sm">
+    <div class="mb-1 text-center sm:mb-2">
+      <p class="hidden text-xs font-bold uppercase tracking-[0.18em] text-coral sm:block">
         {{ t('home.eyebrow') }}
       </p>
-      <h1 class="mt-1 text-3xl font-black tracking-tight sm:text-5xl">
+      <h1 class="text-2xl font-black tracking-tight sm:mt-0.5 sm:text-4xl">
         {{ t('home.clickTitle') }}
       </h1>
-      <p class="mt-1 text-sm text-ink/60 sm:text-base">{{ t('home.clickDescription') }}</p>
+      <p class="mt-0.5 hidden text-xs text-ink/55 md:block">{{ t('home.clickDescription') }}</p>
     </div>
     <!-- Текущий баланс игрока -->
     <ScoreDisplay :score="player.formattedCoins" />

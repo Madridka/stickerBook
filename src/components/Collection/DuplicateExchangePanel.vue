@@ -118,13 +118,13 @@ const claimCandidate = async (): Promise<void> => {
 
 <template>
   <section class="flex min-h-full flex-col" aria-labelledby="duplicate-exchange-title">
-    <div class="sticky top-0 z-20 mb-4 border-2 border-ink bg-paper p-3 shadow-[4px_4px_0_rgb(var(--color-gold)/0.4)]">
-      <div class="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h2 id="duplicate-exchange-title" class="font-black">
+    <div class="sticky top-0 z-20 mb-3 border-2 border-ink bg-paper p-2 shadow-[3px_3px_0_rgb(var(--color-gold)/0.4)]">
+      <div class="flex items-center justify-between gap-2">
+        <div class="min-w-0">
+          <h2 id="duplicate-exchange-title" class="text-sm font-black leading-tight sm:text-base">
             {{ t('duplicateExchange.title') }}
           </h2>
-          <p class="mt-1 max-w-2xl text-xs text-ink/60">
+          <p class="mt-0.5 hidden max-w-2xl text-[11px] leading-tight text-ink/55 md:block">
             {{
               t('duplicateExchange.description', {
                 count: selectionLimit,
@@ -133,8 +133,8 @@ const claimCandidate = async (): Promise<void> => {
             }}
           </p>
         </div>
-        <div class="flex items-center gap-3">
-          <strong class="whitespace-nowrap text-sm" data-exchange-selection>
+        <div class="flex shrink-0 items-center gap-2">
+          <strong class="whitespace-nowrap text-xs sm:text-sm" data-exchange-selection>
             {{
               t('duplicateExchange.selected', {
                 current: selectedInstanceIds.length,
@@ -143,13 +143,17 @@ const claimCandidate = async (): Promise<void> => {
             }}
           </strong>
           <Button
-            :label="t('duplicateExchange.submit', { count: selectionLimit })"
             icon="pi pi-sparkles"
             size="small"
             :disabled="!canSubmit"
             data-exchange-submit
             @click="openConfirmation"
-          />
+          >
+            <span class="sm:hidden">
+              {{ t('duplicateExchange.submitShort', { count: selectionLimit }) }}
+            </span>
+            <span class="hidden sm:inline">{{ t('duplicateExchange.submit', { count: selectionLimit }) }}</span>
+          </Button>
         </div>
       </div>
       <p v-if="hasError" class="mt-2 text-xs font-bold text-coral" role="alert">
@@ -159,30 +163,27 @@ const claimCandidate = async (): Promise<void> => {
 
     <div
       v-if="rewardCard"
-      class="mb-4 flex items-center gap-3 border border-emerald-700 bg-mint/35 p-3"
+      class="mb-3 flex items-center gap-2 border border-emerald-700 bg-mint/35 px-2 py-1.5"
       aria-live="polite"
     >
-      <i class="pi pi-check-circle text-2xl text-emerald-700" />
-      <div>
-        <strong>{{ t('duplicateExchange.rewardTitle') }}</strong>
-        <p class="text-xs text-ink/65">
-          {{ t('duplicateExchange.rewardText', { name: rewardCard.fullName }) }}
-        </p>
-      </div>
+      <i class="pi pi-check-circle text-base text-emerald-700" />
+      <strong class="min-w-0 truncate text-sm">
+        {{ t('duplicateExchange.rewardTitle') }} · {{ rewardCard.fullName }}
+      </strong>
     </div>
 
     <div
       v-if="duplicateGroups.length"
-      class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
+      class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6"
     >
       <article
         v-for="group in duplicateGroups"
         :key="group.playerId"
-        class="relative mb-2 mr-2 border-2 bg-paper p-2 transition-colors"
+        class="relative mb-1 mr-1 border-2 bg-paper p-1.5 transition-colors sm:p-2"
         :class="
           selectedCount(group) > 0
-            ? 'border-coral shadow-[8px_8px_0_rgb(var(--color-coral)/0.35)]'
-            : 'border-ink shadow-[8px_8px_0_rgb(var(--color-coral)/0.2)]'
+            ? 'border-coral shadow-[5px_5px_0_rgb(var(--color-coral)/0.35)]'
+            : 'border-ink shadow-[5px_5px_0_rgb(var(--color-coral)/0.2)]'
         "
         data-duplicate-group
         :data-player-id="group.playerId"
@@ -196,11 +197,13 @@ const claimCandidate = async (): Promise<void> => {
           :src="getCard(group.playerId)?.image"
           :alt="getCard(group.playerId)?.fullName"
         />
-        <p class="mt-2 truncate text-sm font-black">{{ getCard(group.playerId)?.fullName }}</p>
+        <p class="mt-1 truncate text-xs font-black sm:text-sm">
+          {{ getCard(group.playerId)?.fullName }}
+        </p>
         <p class="text-[11px] font-semibold uppercase tracking-wide text-coral">
           {{ t('duplicateExchange.selectedInGroup', { count: selectedCount(group) }) }}
         </p>
-        <div class="mt-2 grid grid-cols-2 gap-2">
+        <div class="mt-1 grid grid-cols-2 gap-1.5">
           <Button
             icon="pi pi-minus"
             size="small"
@@ -227,12 +230,11 @@ const claimCandidate = async (): Promise<void> => {
     </div>
     <div
       v-else
-      class="flex min-h-56 flex-1 flex-col items-center justify-center border border-dashed border-ink/20 p-8 text-center"
+      class="flex min-h-28 flex-col items-center justify-center border border-dashed border-ink/20 p-4 text-center"
     >
-      <i class="pi pi-inbox text-4xl text-ink/25" />
-      <strong class="mt-4 text-lg">{{ t('album.duplicatesEmptyTitle') }}</strong>
-      <p class="mt-1 max-w-sm text-sm text-ink/55">{{ t('album.duplicatesEmptyText') }}</p>
-      <p class="mt-3 text-xs font-bold text-coral">
+      <i class="pi pi-inbox text-2xl text-ink/25" />
+      <strong class="mt-2 text-sm">{{ t('album.duplicatesEmptyTitle') }}</strong>
+      <p class="mt-1 text-xs font-bold text-coral">
         {{ t('duplicateExchange.notEnough', { count: selectionLimit }) }}
       </p>
     </div>
@@ -294,13 +296,13 @@ const claimCandidate = async (): Promise<void> => {
           <h2 class="mt-1 text-2xl font-black">{{ t('duplicateExchange.pickTitle') }}</h2>
         </div>
       </template>
-      <p class="mb-4 text-sm text-ink/60">
+      <p class="mb-3 hidden text-xs text-ink/60 sm:block">
         {{ t('duplicateExchange.pickText', { count: candidateCount }) }}
       </p>
       <p v-if="hasError" class="mb-3 text-sm font-bold text-coral" role="alert">
         {{ t('duplicateExchange.error') }}
       </p>
-      <div class="grid auto-cols-[9rem] grid-flow-col gap-3 overflow-x-auto pb-3 sm:grid-flow-row sm:grid-cols-5 sm:auto-cols-auto">
+      <div class="grid auto-cols-[8rem] grid-flow-col gap-2 overflow-x-auto pb-2 sm:grid-flow-row sm:grid-cols-5 sm:auto-cols-auto sm:gap-3">
         <button
           v-for="card in candidateCards"
           :key="card.id"

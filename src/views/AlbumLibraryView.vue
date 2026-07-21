@@ -50,24 +50,24 @@ const getProgress = (album: AlbumLibraryItem): number => {
 <template>
   <!-- Каталог оставляет свободное рабочее пространство для будущих журналов. -->
   <section class="flex h-full min-h-0 w-full flex-col bg-paper">
-    <header class="shrink-0 pb-6">
-      <p class="text-xs font-bold uppercase tracking-[0.18em] text-coral">
+    <header class="shrink-0 pb-3">
+      <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-coral max-sm:hidden">
         {{ t('app.album') }}
       </p>
-      <h1 class="mt-1 text-3xl font-black tracking-tight sm:text-4xl">
+      <h1 class="text-2xl font-black tracking-tight sm:mt-0.5 sm:text-3xl">
         {{ t('album.library.title') }}
       </h1>
-      <p class="mt-1 text-sm text-ink/60">{{ t('album.library.text') }}</p>
+      <p class="mt-0.5 hidden text-xs text-ink/55 md:block">{{ t('album.library.text') }}</p>
     </header>
 
     <div
-      class="grid min-h-0 grid-cols-2 content-start gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+      class="grid min-h-0 grid-cols-2 content-start gap-x-4 gap-y-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
     >
       <RouterLink
         v-for="album in albums"
         :key="album.id"
         :to="album.route"
-        class="group block rounded-lg p-2 outline-none transition-colors hover:bg-coral/10 focus-visible:bg-coral/10 focus-visible:ring-2 focus-visible:ring-coral"
+        class="group block rounded-lg p-1.5 outline-none transition-colors hover:bg-coral/10 focus-visible:bg-coral/10 focus-visible:ring-2 focus-visible:ring-coral sm:p-2"
         :aria-label="
           t('album.library.openNamed', { name: t(`album.library.items.${album.id}.title`) })
         "

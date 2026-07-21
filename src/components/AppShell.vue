@@ -91,7 +91,7 @@ const resetProgress = async (): Promise<void> => {
     <!-- Верхняя навигационная панель -->
     <header class="border-b border-ink/10 bg-paper/90">
       <nav
-        class="mx-auto flex w-full max-w-[90rem] items-center justify-between px-5 py-3 sm:px-8 sm:py-4"
+        class="mx-auto flex w-full max-w-[90rem] items-center justify-between px-5 py-2 sm:px-8 sm:py-3"
         :aria-label="t('app.mainNavigation')"
       >
         <!-- Логотип и ссылка на главный экран -->
@@ -164,7 +164,7 @@ const resetProgress = async (): Promise<void> => {
     <!-- Область отображения текущего маршрута -->
     <main
       class="flex min-h-0 w-full flex-1 items-center overflow-hidden"
-      :class="isAlbumWorkspace ? 'max-w-none p-0' : 'mx-auto max-w-6xl px-5 py-4 sm:px-8 sm:py-6'"
+      :class="isAlbumWorkspace ? 'max-w-none p-0' : 'mx-auto max-w-6xl px-5 py-2 sm:px-8 sm:py-4'"
     >
       <RouterView />
     </main>

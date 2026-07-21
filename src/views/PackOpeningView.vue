@@ -92,11 +92,11 @@ onMounted(consumePack)
     </div>
 
     <template v-else-if="!isFinished && currentCard">
-      <div class="mb-4 text-center">
-        <p class="text-sm font-bold uppercase tracking-[0.18em] text-coral">
+      <div class="mb-2 text-center">
+        <p class="hidden text-xs font-bold uppercase tracking-[0.16em] text-coral sm:block">
           {{ t('packOpening.eyebrow') }}
         </p>
-        <h1 class="mt-2 text-3xl font-black tracking-tight sm:text-5xl">
+        <h1 class="text-2xl font-black tracking-tight sm:mt-1 sm:text-4xl">
           {{ t('packOpening.title') }}
         </h1>
       </div>
@@ -116,14 +116,14 @@ onMounted(consumePack)
       >
         ✓
       </div>
-      <p class="mt-6 text-sm font-bold uppercase tracking-[0.18em] text-coral">
+      <p class="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-coral">
         {{ t('packOpening.eyebrow') }}
       </p>
-      <h1 class="mt-2 text-4xl font-black tracking-tight sm:text-6xl">
+      <h1 class="mt-1 text-3xl font-black tracking-tight sm:text-5xl">
         {{ t('packOpening.complete') }}
       </h1>
-      <p class="mt-4 max-w-md text-ink/65">{{ t('packOpening.completeText') }}</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <p class="mt-2 max-w-md text-sm text-ink/60">{{ t('packOpening.completeText') }}</p>
+      <div class="mt-4 flex flex-wrap justify-center gap-2">
         <Button
           :label="t('packOpening.continue')"
           icon="pi pi-arrow-right"

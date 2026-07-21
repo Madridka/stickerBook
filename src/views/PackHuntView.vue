@@ -84,12 +84,12 @@ onMounted(async (): Promise<void> => {
     </div>
 
     <template v-else-if="phase === 'playing' || phase === 'saving'">
-      <header class="mb-3 w-full text-center sm:mb-5">
-        <p class="text-xs font-black uppercase tracking-[0.18em] text-coral">
+      <header class="mb-2 w-full text-center sm:mb-3">
+        <p class="hidden text-[10px] font-black uppercase tracking-[0.16em] text-coral sm:block">
           {{ t('packHunt.eyebrow') }}
         </p>
         <div class="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
-          <h1 class="text-3xl font-black tracking-tight sm:text-5xl">
+          <h1 class="text-2xl font-black tracking-tight sm:text-4xl">
             {{ t(`${gameTranslationPrefix}.title`) }}
           </h1>
           <span class="border border-ink/15 px-3 py-1 text-xs font-bold text-ink/55">
@@ -101,10 +101,10 @@ onMounted(async (): Promise<void> => {
             }}
           </span>
         </div>
-        <p class="mx-auto mt-1 max-w-2xl text-sm text-ink/65 sm:text-base">
+        <p class="mx-auto mt-0.5 hidden max-w-2xl text-xs leading-tight text-ink/55 md:block">
           {{ t(`${gameTranslationPrefix}.description`) }}
         </p>
-        <p class="mt-1 text-xs font-semibold text-ink/45">
+        <p class="mt-0.5 text-[11px] font-semibold leading-tight text-ink/50">
           {{ t(`${gameTranslationPrefix}.hint`) }}
         </p>
       </header>

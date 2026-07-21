@@ -29,19 +29,19 @@ const handleOpen = (): void => emit('open')
 
 <template>
   <!-- Карточка набора с двумя независимыми способами получения -->
-  <article class="border border-ink/15 bg-paper/70 p-5 shadow-sm sm:p-7">
+  <article class="border border-ink/15 bg-paper/70 p-3 shadow-sm sm:p-5">
     <!-- Информация о типе и названии товара -->
     <div class="flex items-start justify-between gap-4">
       <div>
         <p class="text-xs font-bold uppercase tracking-[0.18em] text-coral">
           {{ t('shop.itemType') }}
         </p>
-        <h2 class="mt-1 text-3xl font-black tracking-tight">{{ t('shop.pack') }}</h2>
-        <p class="mt-1 text-sm text-ink/60">{{ t('shop.packDescription') }}</p>
+        <h2 class="mt-0.5 text-2xl font-black tracking-tight">{{ t('shop.pack') }}</h2>
+        <p class="mt-0.5 hidden text-xs text-ink/55 sm:block">{{ t('shop.packDescription') }}</p>
       </div>
 
       <!-- Сохранённые блистеры остаются доступны независимо от способа получения. -->
-      <aside class="shrink-0 border border-gold/50 bg-gold/15 p-3 text-right">
+      <aside class="shrink-0 border border-gold/50 bg-gold/15 p-2 text-right sm:p-3">
         <p class="text-[10px] font-black uppercase tracking-[0.14em] text-ink/45">
           {{ t('shop.inventory') }}
         </p>
@@ -61,7 +61,7 @@ const handleOpen = (): void => emit('open')
     </div>
 
     <!-- Два способа получения набора сохраняют старую покупку и добавляют мини-игру -->
-    <div class="relative mt-5 border-t border-ink/10 pt-5">
+    <div class="relative mt-3 border-t border-ink/10 pt-3">
       <span
         class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 bg-paper px-3 text-xs font-black uppercase tracking-[0.18em] text-coral"
       >

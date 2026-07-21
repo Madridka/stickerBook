@@ -176,9 +176,14 @@ const updateLockProgress = (timestamp: number): void => {
   previousFrame = timestamp
   elapsedSeconds.value = Math.floor((timestamp - startedAt) / 1000)
 
+  // Во время переноса цели заполненная шкала остаётся только визуальным итогом
+  // найденной точки и не может повторно засчитать следующую контрольную точку.
   if (isRelocating.value) {
-    lockProgress.value = 100
-  } else if (isScannerActive.value && targetDistance.value <= detectionRadius) {
+    animationFrame = window.requestAnimationFrame(updateLockProgress)
+    return
+  }
+
+  if (isScannerActive.value && targetDistance.value <= detectionRadius) {
     lockProgress.value = Math.min(
       100,
       lockProgress.value + (elapsed / gameData.packHunt.holdDurationMs) * 100,

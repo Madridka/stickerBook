@@ -54,8 +54,7 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
     </header>
 
     <nav
-      class="mx-auto mt-[1.8cqw] grid min-h-0 w-full flex-1 gap-[1.1cqw]"
-      :style="{ gridTemplateRows: `repeat(${groupRows.length}, minmax(0, 1fr))` }"
+      class="mx-auto mt-[1.8cqw] grid min-h-0 w-full flex-1 grid-rows-3 gap-[1.1cqw]"
       :aria-label="t('album.contents.navigation')"
     >
       <section

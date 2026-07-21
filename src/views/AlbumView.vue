@@ -93,9 +93,9 @@ const latestReleaseSeries: string =
 const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
   .filter(({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`))
   .slice(0, 3)
-const contentsPageSize: number = 16
+const contentsPageSize: number = 12
 const contentsFirstPage: number = 4
-const contentsLastPage: number = 4
+const contentsLastPage: number = 7
 
 const { t } = useI18n()
 const router = useRouter()
@@ -145,6 +145,11 @@ const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] =>
 const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed((): AlbumGeometryPage[] =>
   visiblePageIndexes.value.map(
     (pageIndex: number): AlbumGeometryPage => pages.value[pageIndex].geometry,
+  ),
+)
+const isTeamPageVisible: ComputedRef<boolean> = computed((): boolean =>
+  visibleGeometries.value.some(
+    ({ number }: AlbumGeometryPage): boolean => number > contentsLastPage,
   ),
 )
 const visiblePageLabel: ComputedRef<string> = computed((): string =>
@@ -280,6 +285,24 @@ const getContentsTeams = (pageNumber: number): AlbumContentsTeam[] => {
 const openTeam = (pageId: string): void => {
   const pageIndex: number = pages.value.findIndex(
     ({ geometry }: AlbumPageView): boolean => geometry.id === pageId,
+  )
+  if (pageIndex < 0) return
+  activeTargetId.value = undefined
+  currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
+}
+
+// Возвращает к разделу оглавления, в котором находится текущая сборная.
+const openContents = (): void => {
+  const teamIndex: number = albumContentsTeams.findIndex(({ id }): boolean =>
+    visibleGeometries.value.some(
+      ({ id: pageId }: AlbumGeometryPage): boolean =>
+        pageId === `${id}-left` || pageId === `${id}-right`,
+    ),
+  )
+  const contentsPageNumber: number =
+    contentsFirstPage + Math.floor(Math.max(teamIndex, 0) / contentsPageSize)
+  const pageIndex: number = pages.value.findIndex(
+    ({ geometry }: AlbumPageView): boolean => geometry.number === contentsPageNumber,
   )
   if (pageIndex < 0) return
   activeTargetId.value = undefined
@@ -427,10 +450,12 @@ onBeforeUnmount((): void => {
           :is-open="isBookOpen"
           :display-mode="displayMode"
           :open-start-page="1"
+          :show-contents-shortcut="isTeamPageVisible"
           @open="openBook"
           @close="closeBook"
           @previous="previousPage"
           @next="nextPage"
+          @contents="openContents"
         >
           <template #default="{ pageIndex }">
             <AlbumEditorialPage

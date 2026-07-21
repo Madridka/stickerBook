@@ -2,7 +2,7 @@
   {
     "id": "france-left",
     "number": 72,
-    "image": "page-72-stickers-left.png",
+    "image": "france-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -21,7 +21,7 @@
   {
     "id": "france-right",
     "number": 73,
-    "image": "page-73-stickers-right.png",
+    "image": "france-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

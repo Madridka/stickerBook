@@ -12,6 +12,7 @@ interface Props {
   isOpen: boolean
   displayMode?: 'spread' | 'page'
   openStartPage?: number
+  showContentsShortcut?: boolean
 }
 
 interface Emits {
@@ -19,6 +20,7 @@ interface Emits {
   close: []
   previous: []
   next: []
+  contents: []
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -70,6 +72,7 @@ const previousPage = (): void =>
     'previous',
   )
 const closeBook = (): void => emit('close')
+const openContents = (): void => emit('contents')
 
 onBeforeUnmount((): void => {
   if (turnTimer) clearTimeout(turnTimer)
@@ -152,6 +155,18 @@ onBeforeUnmount((): void => {
           @click.stop="nextPage"
         />
       </template>
+
+      <Button
+        v-if="isOpen && showContentsShortcut"
+        class="album-book__contents-button"
+        icon="pi pi-list"
+        :label="t('album.contents.label')"
+        :aria-label="t('album.contents.back')"
+        :title="t('album.contents.back')"
+        severity="secondary"
+        type="button"
+        @click.stop="openContents"
+      />
 
       <Button
         class="album-book__corner-button"
@@ -259,6 +274,34 @@ onBeforeUnmount((): void => {
   box-shadow: 0 8px 22px rgb(23 33 43 / 30%);
   color: #f7f3eb;
   backdrop-filter: blur(5px);
+}
+
+.album-book__contents-button.p-button:not(.p-button-text):not(.p-button-outlined) {
+  position: absolute;
+  top: clamp(0.45rem, 1cqw, 0.75rem);
+  right: clamp(3.35rem, 4cqw, 4rem);
+  z-index: 40;
+  height: 2.5rem;
+  border: 1px solid rgb(var(--color-paper) / 72%);
+  border-radius: 999px;
+  background: var(--prime-accent);
+  box-shadow:
+    0 0 0 2px rgb(var(--color-ink) / 16%),
+    0 8px 22px rgb(var(--color-ink) / 30%);
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+
+.album-book__contents-button.p-button:not(.p-button-text):not(.p-button-outlined):hover {
+  border-color: rgb(var(--color-paper));
+  background: var(--prime-accent);
+  color: #fff;
+  filter: brightness(1.08);
+}
+
+.album-book__contents-button.p-button:focus-visible {
+  outline: 3px solid var(--prime-accent);
+  outline-offset: 3px;
 }
 
 .album-book__corner-button:focus-visible {
@@ -383,6 +426,22 @@ onBeforeUnmount((): void => {
     width: 2.25rem;
     min-width: 2.25rem;
     height: 2.25rem;
+  }
+
+  .album-book__contents-button.p-button:not(.p-button-text):not(.p-button-outlined) {
+    right: 3.1rem;
+    width: 2.25rem;
+    min-width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+  }
+
+  .album-book__contents-button :deep(.p-button-label) {
+    display: none;
+  }
+
+  .album-book__contents-button :deep(.p-button-icon) {
+    margin: 0;
   }
 }
 

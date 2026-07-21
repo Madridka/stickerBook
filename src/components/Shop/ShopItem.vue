@@ -100,7 +100,7 @@ const handleOpen = (): void => emit('open')
 
         <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-1 mt-10">
           <div class="pack-foil pack-foil--paid">
-            <span class="pack-foil__eyebrow">stickerBook</span>
+            <span class="pack-foil__eyebrow">{{ t('shop.pointsPackName') }}</span>
             <strong>{{ t('shop.wc-26') }}</strong>
           </div>
         </div>
@@ -140,8 +140,8 @@ const handleOpen = (): void => emit('open')
 
         <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-2">
           <div class="pack-foil pack-foil--free">
-            <span class="pack-foil__eyebrow">{{ t('shop.play&win') }}</span>
-            <strong>{{ t('shop.free') }}</strong>
+            <span class="pack-foil__eyebrow">{{ t('shop.free') }}</span>
+            <strong>{{ t('shop.itemType') }}</strong>
             <span class="pack-foil__caption">{{ t('shop.cooldownPack') }}</span>
           </div>
         </div>
@@ -289,7 +289,7 @@ const handleOpen = (): void => emit('open')
 .pack-foil {
   position: relative;
   display: flex;
-  width: min(78%, 8.25rem);
+  width: min(78%, 8.35rem);
   aspect-ratio: 9 / 14;
   flex-direction: column;
   align-items: center;
@@ -407,7 +407,7 @@ const handleOpen = (): void => emit('open')
 .pack-foil__caption {
   position: relative;
   z-index: 1;
-  font-size: clamp(0.38rem, 1.2vw, 0.58rem);
+  font-size: clamp(0.55rem, 1.2vw, 0.79rem);
   font-weight: 900;
   letter-spacing: 0.16em;
 }

@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import {
-  computed,
-  onBeforeUnmount,
-  ref,
-  type ComputedRef,
-  type CSSProperties,
-  type Ref,
-} from 'vue'
+import { computed, onBeforeUnmount, ref, type ComputedRef, type CSSProperties, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ProgressBar from 'primevue/progressbar'
 
@@ -218,7 +211,6 @@ onBeforeUnmount((): void => {
           v-for="slotIndex in pieceIds"
           :key="slotIndex"
           type="button"
-          data-puzzle-slot
           :data-puzzle-slot="slotIndex"
           class="relative min-h-0 overflow-hidden border border-dashed border-paper/55 bg-paper/10 transition-colors focus-visible:ring-4 focus-visible:ring-coral"
           :class="selectedPiece === slotIndex ? 'bg-coral/25' : ''"

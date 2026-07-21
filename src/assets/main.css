@@ -49,7 +49,7 @@
 .page-enter-from, .page-leave-to { opacity: 0; transform: translateY(6px); }
 
 /* Приводит стандартные PrimeVue Button и Menu к визуальной системе StickerBook */
-.p-button {
+.p-button:not(.native-button) {
   border-radius: 0.25rem;
   font-family: inherit;
   font-weight: 700;
@@ -57,29 +57,49 @@
 }
 
 /* PrimeIcons visually sit slightly above the center of their font line. */
-.p-button .p-button-icon {
+.p-button:not(.native-button) .p-button-icon {
   position: relative;
   top: 1px;
   line-height: 1;
 }
 
-.p-button:not(.p-button-text):not(.p-button-outlined) {
+.p-button:not(.native-button):not(.p-button-text):not(.p-button-outlined):not(
+    :is(
+      .p-button-secondary,
+      .p-button-success,
+      .p-button-info,
+      .p-button-warn,
+      .p-button-help,
+      .p-button-danger,
+      .p-button-contrast
+    )
+  ) {
   background: var(--prime-text);
   border-color: var(--prime-text);
   color: var(--prime-surface);
 }
 
-.p-button:not(.p-button-text):not(.p-button-outlined):hover {
+.p-button:not(.native-button):not(.p-button-text):not(.p-button-outlined):not(
+    :is(
+      .p-button-secondary,
+      .p-button-success,
+      .p-button-info,
+      .p-button-warn,
+      .p-button-help,
+      .p-button-danger,
+      .p-button-contrast
+    )
+  ):hover {
   background: var(--prime-accent);
   border-color: var(--prime-accent);
   color: #fff;
 }
 
-.p-button.p-button-text {
+.p-button:not(.native-button).p-button-text {
   color: var(--prime-text);
 }
 
-.p-button.p-button-text:hover {
+.p-button:not(.native-button).p-button-text:hover {
   background: var(--prime-accent-soft);
   color: var(--prime-accent);
 }
@@ -93,11 +113,11 @@
   color: var(--prime-accent) !important;
 }
 
-.p-button:active {
+.p-button:not(.native-button):active {
   transform: translateY(1px);
 }
 
-.p-button:focus-visible {
+.p-button:not(.native-button):focus-visible {
   box-shadow: 0 0 0 0.2rem rgb(var(--color-coral) / 0.25);
   outline: none;
 }

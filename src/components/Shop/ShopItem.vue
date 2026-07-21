@@ -85,7 +85,7 @@ const handleOpen = (): void => emit('open')
       role="tabpanel"
     >
       <article
-        class="store-offer store-offer--paid relative flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-end overflow-hidden bg-ink p-3 text-paper shadow-[6px_6px_0_rgb(var(--color-coral)/0.42)] sm:p-4"
+        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-end overflow-hidden bg-ink p-3 text-paper shadow-[6px_6px_0_rgb(var(--color-coral)/0.42)] before:pointer-events-none before:absolute before:h-[42%] before:-rotate-[18deg] before:bg-coral/[.92] before:[inset:18%_-45%_auto_28%] before:content-[''] after:pointer-events-none after:absolute after:h-[12%] after:-rotate-[18deg] after:border-y after:border-paper/[.22] after:[inset:42%_-28%_auto_-38%] after:content-[''] sm:p-4"
       >
         <div class="relative z-10 flex items-center justify-between gap-2">
           <p class="text-[9px] font-black uppercase tracking-[0.2em] text-coral sm:text-[10px]">
@@ -99,9 +99,17 @@ const handleOpen = (): void => emit('open')
         </div>
 
         <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-1 mt-10">
-          <div class="pack-foil pack-foil--paid">
-            <span class="pack-foil__eyebrow">{{ t('shop.pointsPackName') }}</span>
-            <strong>{{ t('shop.wc-26') }}</strong>
+          <div
+            class="relative flex aspect-[9/14] w-[min(78%,8.35rem)] -rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-gold)),rgb(var(--color-coral))_55%,#9e2e51)] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-['']"
+          >
+            <span
+              class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
+              >{{ t('shop.pointsPackName') }}</span
+            >
+            <strong
+              class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
+              >{{ t('shop.wc-26') }}</strong
+            >
           </div>
         </div>
 
@@ -113,7 +121,7 @@ const handleOpen = (): void => emit('open')
             {{ t('shop.paidDescription') }}
           </p>
           <Button
-            class="offer-button--light mt-2 w-full text-[11px] sm:mt-3 sm:text-sm"
+            class="mt-2 w-full !border-paper !bg-paper !text-ink text-[11px] hover:!border-coral hover:!bg-coral hover:!text-white sm:mt-3 sm:text-sm"
             :label="t('shop.buyFor', { price: formattedPrice })"
             icon="pi pi-shopping-bag"
             :disabled="!canBuy || purchasing"
@@ -125,7 +133,7 @@ const handleOpen = (): void => emit('open')
       </article>
 
       <article
-        class="store-offer store-offer--free relative flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-start overflow-hidden bg-mint p-3 text-ink shadow-[6px_6px_0_rgb(var(--color-gold)/0.55)] sm:p-4"
+        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-start overflow-hidden bg-mint p-3 text-ink shadow-[6px_6px_0_rgb(var(--color-gold)/0.55)] before:pointer-events-none before:absolute before:h-[58%] before:rotate-[22deg] before:bg-gold/[.78] before:[inset:-10%_-60%_auto_10%] before:content-[''] after:pointer-events-none after:absolute after:-right-[12%] after:top-[42%] after:aspect-square after:w-[70%] after:rounded-full after:border after:border-ink/[.14] after:shadow-[0_0_0_1rem_rgb(var(--color-paper)/0.12),0_0_0_2rem_rgb(var(--color-paper)/0.08)] after:content-[''] sm:p-4"
       >
         <div class="relative z-10 flex items-center justify-between gap-2">
           <p class="text-[9px] font-black uppercase tracking-[0.2em] text-ink/60 sm:text-[10px]">
@@ -139,10 +147,21 @@ const handleOpen = (): void => emit('open')
         </div>
 
         <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-2">
-          <div class="pack-foil pack-foil--free">
-            <span class="pack-foil__eyebrow">{{ t('shop.free') }}</span>
-            <strong>{{ t('shop.itemType') }}</strong>
-            <span class="pack-foil__caption">{{ t('shop.cooldownPack') }}</span>
+          <div
+            class="relative flex aspect-[9/14] w-[min(78%,8.35rem)] rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-ink)),#284f58_60%,rgb(var(--color-coral)))] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-['']"
+          >
+            <span
+              class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
+              >{{ t('shop.free') }}</span
+            >
+            <strong
+              class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
+              >{{ t('shop.itemType') }}</strong
+            >
+            <span
+              class="relative z-[1] mt-[.35rem] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em] opacity-[.72]"
+              >{{ t('shop.cooldownPack') }}</span
+            >
           </div>
         </div>
 
@@ -207,17 +226,28 @@ const handleOpen = (): void => emit('open')
           class="border border-ink/15 bg-ink p-2.5 text-paper shadow-[4px_4px_0_rgb(var(--color-mint)/0.6)]"
         >
           <div class="flex aspect-[9/11] items-center justify-center bg-paper/5">
-            <div class="pack-foil pack-foil--owned">
-              <span class="pack-foil__eyebrow">VKLEYKI</span>
-              <strong>2026</strong>
-              <span class="pack-foil__caption">5 STICKERS</span>
+            <div
+              class="relative flex aspect-[9/14] w-[min(62%,5.75rem)] -rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-gold)),rgb(var(--color-coral))_55%,#9e2e51)] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-['']"
+            >
+              <span
+                class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
+                >VKLEYKI</span
+              >
+              <strong
+                class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
+                >2026</strong
+              >
+              <span
+                class="relative z-[1] mt-[.35rem] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em] opacity-[.72]"
+                >5 STICKERS</span
+              >
             </div>
           </div>
           <p class="mt-2 truncate text-xs font-black">
             {{ t('shop.ownedPackNumber', { number: index + 1 }) }}
           </p>
           <Button
-            class="offer-button--light mt-2 w-full text-xs"
+            class="mt-2 w-full !border-paper !bg-paper !text-ink text-xs hover:!border-coral hover:!bg-coral hover:!text-white"
             :label="t('shop.openOwnedPack')"
             icon="pi pi-gift"
             size="small"
@@ -240,201 +270,3 @@ const handleOpen = (): void => emit('open')
     </section>
   </div>
 </template>
-
-<style scoped>
-.store-offer {
-  isolation: isolate;
-}
-
-.store-offer::before,
-.store-offer::after {
-  position: absolute;
-  content: '';
-  pointer-events: none;
-}
-
-.store-offer--paid::before {
-  inset: 18% -45% auto 28%;
-  height: 42%;
-  background: rgb(var(--color-coral) / 0.92);
-  transform: rotate(-18deg);
-}
-
-.store-offer--paid::after {
-  inset: 42% -28% auto -38%;
-  height: 12%;
-  border-block: 1px solid rgb(var(--color-paper) / 0.22);
-  transform: rotate(-18deg);
-}
-
-.store-offer--free::before {
-  inset: -10% -60% auto 10%;
-  height: 58%;
-  background: rgb(var(--color-gold) / 0.78);
-  transform: rotate(22deg);
-}
-
-.store-offer--free::after {
-  right: -12%;
-  top: 42%;
-  width: 70%;
-  aspect-ratio: 1;
-  border: 1px solid rgb(var(--color-ink) / 0.14);
-  border-radius: 9999px;
-  box-shadow:
-    0 0 0 1rem rgb(var(--color-paper) / 0.12),
-    0 0 0 2rem rgb(var(--color-paper) / 0.08);
-}
-
-.pack-foil {
-  position: relative;
-  display: flex;
-  width: min(78%, 8.35rem);
-  aspect-ratio: 9 / 14;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 0.55);
-  clip-path: polygon(
-    4% 0,
-    96% 0,
-    100% 3%,
-    97% 6%,
-    100% 9%,
-    97% 12%,
-    100% 15%,
-    97% 18%,
-    100% 21%,
-    97% 24%,
-    100% 27%,
-    97% 30%,
-    100% 33%,
-    97% 36%,
-    100% 39%,
-    97% 42%,
-    100% 45%,
-    97% 48%,
-    100% 51%,
-    97% 54%,
-    100% 57%,
-    97% 60%,
-    100% 63%,
-    97% 66%,
-    100% 69%,
-    97% 72%,
-    100% 75%,
-    97% 78%,
-    100% 81%,
-    97% 84%,
-    100% 87%,
-    97% 90%,
-    100% 94%,
-    96% 100%,
-    4% 100%,
-    0 94%,
-    3% 90%,
-    0 87%,
-    3% 84%,
-    0 81%,
-    3% 78%,
-    0 75%,
-    3% 72%,
-    0 69%,
-    3% 66%,
-    0 63%,
-    3% 60%,
-    0 57%,
-    3% 54%,
-    0 51%,
-    3% 48%,
-    0 45%,
-    3% 42%,
-    0 39%,
-    3% 36%,
-    0 33%,
-    3% 30%,
-    0 27%,
-    3% 24%,
-    0 21%,
-    3% 18%,
-    0 15%,
-    3% 12%,
-    0 9%,
-    3% 6%,
-    0 3%
-  );
-  box-shadow: 0 12px 22px rgb(0 0 0 / 0.25);
-  transform: rotate(-3deg);
-}
-
-.pack-foil::before,
-.pack-foil::after {
-  position: absolute;
-  content: '';
-}
-
-.pack-foil::before {
-  inset: 6% 0 auto;
-  height: 2px;
-  border-block: 1px dashed rgb(255 255 255 / 0.58);
-}
-
-.pack-foil::after {
-  inset: auto -45% 12% 24%;
-  height: 28%;
-  background: rgb(255 255 255 / 0.18);
-  transform: rotate(-28deg);
-}
-
-.pack-foil--paid,
-.pack-foil--owned {
-  background: linear-gradient(145deg, rgb(var(--color-gold)), rgb(var(--color-coral)) 55%, #9e2e51);
-  color: white;
-}
-
-.pack-foil--free {
-  background: linear-gradient(145deg, rgb(var(--color-ink)), #284f58 60%, rgb(var(--color-coral)));
-  color: white;
-  transform: rotate(3deg);
-}
-
-.pack-foil--owned {
-  width: min(62%, 5.75rem);
-}
-
-.pack-foil__eyebrow,
-.pack-foil__caption {
-  position: relative;
-  z-index: 1;
-  font-size: clamp(0.55rem, 1.2vw, 0.79rem);
-  font-weight: 900;
-  letter-spacing: 0.16em;
-}
-
-.pack-foil strong {
-  position: relative;
-  z-index: 1;
-  font-size: clamp(1.25rem, 4vw, 2.2rem);
-  font-weight: 950;
-  line-height: 1;
-  letter-spacing: -0.08em;
-}
-
-.pack-foil__caption {
-  margin-top: 0.35rem;
-  opacity: 0.72;
-}
-
-:deep(.offer-button--light.p-button:not(.p-button-text):not(.p-button-outlined)) {
-  border-color: rgb(var(--color-paper));
-  background: rgb(var(--color-paper));
-  color: rgb(var(--color-ink));
-}
-
-:deep(.offer-button--light.p-button:not(.p-button-text):not(.p-button-outlined):hover) {
-  border-color: rgb(var(--color-coral));
-  background: rgb(var(--color-coral));
-  color: white;
-}
-</style>

@@ -6,9 +6,11 @@ export default {
     extend: {
       animation: {
         'album-page-turn-backward':
-          'album-page-turn-backward 420ms cubic-bezier(0.22, 0.72, 0.22, 1) both',
+          'album-page-turn-backward 520ms cubic-bezier(0.2, 0.68, 0.2, 1) both',
         'album-page-turn-forward':
-          'album-page-turn-forward 420ms cubic-bezier(0.22, 0.72, 0.22, 1) both',
+          'album-page-turn-forward 520ms cubic-bezier(0.2, 0.68, 0.2, 1) both',
+        'album-page-skeleton-shimmer':
+          'album-page-skeleton-shimmer 1.15s ease-in-out infinite',
         'click-effect': 'click-effect 700ms cubic-bezier(0.2, 0.8, 0.3, 1) forwards',
         'target-pulse': 'target-pulse 950ms ease-in-out infinite alternate',
       },
@@ -28,6 +30,9 @@ export default {
         'album-page-turn-forward': {
           from: { transform: 'rotateY(-100deg)' },
           to: { transform: 'rotateY(0deg)' },
+        },
+        'album-page-skeleton-shimmer': {
+          to: { transform: 'translateX(100%)' },
         },
         'click-effect': {
           from: { opacity: '1', transform: 'translate(-50%, -50%) scale(0.8)' },

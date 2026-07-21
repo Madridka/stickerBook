@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { formatCountdown } from '@/utils/formatCountdown'
 
 import Button from 'primevue/button'
 import SelectButton from 'primevue/selectbutton'
@@ -11,8 +12,7 @@ interface Props {
   price: number
   canBuy: boolean
   purchasing?: boolean
-  dailyRemaining: number
-  dailyLimit: number
+  cooldownRemainingMs: number
   miniGameLoaded: boolean
   ownedPackIds: string[]
   inventoryLoaded: boolean
@@ -31,6 +31,9 @@ const { t } = useI18n()
 const activeSection: Ref<ShopSection> = ref('store')
 
 const formattedPrice: ComputedRef<string> = computed(() => props.price.toLocaleString('ru-RU'))
+const cooldownText: ComputedRef<string> = computed((): string =>
+  formatCountdown(props.cooldownRemainingMs),
+)
 const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
   {
     value: 'store',
@@ -95,11 +98,10 @@ const handleOpen = (): void => emit('open')
           </span>
         </div>
 
-        <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-2">
+        <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-1 mt-10">
           <div class="pack-foil pack-foil--paid">
-            <span class="pack-foil__eyebrow">VKLEYKI</span>
-            <strong>2026</strong>
-            <span class="pack-foil__caption">WORLD EDITION</span>
+            <span class="pack-foil__eyebrow">stickerBook</span>
+            <strong>{{ t('shop.wc-26') }}</strong>
           </div>
         </div>
 
@@ -138,9 +140,9 @@ const handleOpen = (): void => emit('open')
 
         <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-2">
           <div class="pack-foil pack-foil--free">
-            <span class="pack-foil__eyebrow">PLAY & WIN</span>
-            <strong>FREE</strong>
-            <span class="pack-foil__caption">DAILY PACK</span>
+            <span class="pack-foil__eyebrow">{{ t('shop.play&win') }}</span>
+            <strong>{{ t('shop.free') }}</strong>
+            <span class="pack-foil__caption">{{ t('shop.cooldownPack') }}</span>
           </div>
         </div>
 
@@ -150,16 +152,16 @@ const handleOpen = (): void => emit('open')
           </h2>
           <p class="mt-1 text-[9px] font-bold leading-snug text-ink/55 sm:text-[10px]">
             {{
-              dailyRemaining > 0
-                ? t('shop.dailyGames', { remaining: dailyRemaining, limit: dailyLimit })
-                : t('shop.dailyLimitReached')
+              cooldownRemainingMs === 0
+                ? t('shop.gameAvailable')
+                : t('shop.cooldownRemaining', { time: cooldownText })
             }}
           </p>
           <Button
             class="mt-2 w-full text-[11px] sm:mt-3 sm:text-sm"
             :label="t('shop.getFree')"
             icon="pi pi-bolt"
-            :disabled="!miniGameLoaded || dailyRemaining <= 0"
+            :disabled="!miniGameLoaded || cooldownRemainingMs > 0"
             type="button"
             @click="handlePlay"
           />

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, type Component, type ComputedRef, type Ref } from 'vue'
+import { computed, onMounted, ref, watch, type Component, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackHuntStore, type PackHuntClaimResult } from '@/stores/packHunt'
+import { formatCountdown } from '@/utils/formatCountdown'
 import {
   isPackMiniGameId,
   selectPackMiniGame,
@@ -16,8 +17,9 @@ import ProgressSpinner from 'primevue/progressspinner'
 import PackHuntGame from '@/components/MiniGame/PackHuntGame.vue'
 import PackMachineGame from '@/components/MiniGame/PackMachineGame.vue'
 import PackRackGame from '@/components/MiniGame/PackRackGame.vue'
+import PackShellGame from '@/components/MiniGame/PackShellGame.vue'
 
-type HuntPhase = 'loading' | 'playing' | 'saving' | 'won' | 'limit' | 'error'
+type HuntPhase = 'loading' | 'playing' | 'saving' | 'won' | 'cooldown' | 'error'
 
 const { t } = useI18n()
 const route = useRoute()
@@ -33,6 +35,7 @@ const gameComponents: Record<PackMiniGameId, Component> = {
   signal: PackHuntGame,
   rack: PackRackGame,
   machine: PackMachineGame,
+  shell: PackShellGame,
 }
 const selectedGameComponent: ComputedRef<Component> = computed(
   (): Component => gameComponents[selectedGame.value],
@@ -40,14 +43,17 @@ const selectedGameComponent: ComputedRef<Component> = computed(
 const gameTranslationPrefix: ComputedRef<string> = computed(
   (): string => `packHunt.games.${selectedGame.value}`,
 )
+const cooldownText: ComputedRef<string> = computed((): string =>
+  formatCountdown(packHunt.cooldownRemainingMs),
+)
 
 // Выдаёт уже найденную награду и синхронизирует общий инвентарь перед открытием.
 const saveReward = async (): Promise<void> => {
   phase.value = 'saving'
   try {
     const result: PackHuntClaimResult = await packHunt.claimReward()
-    if (result === 'limit-reached') {
-      phase.value = 'limit'
+    if (result === 'cooldown-active') {
+      phase.value = 'cooldown'
       return
     }
     await inventory.load()
@@ -69,12 +75,19 @@ const returnToShop = async (): Promise<void> => {
   await router.push({ name: 'shop' })
 }
 
+watch(
+  (): boolean => packHunt.canPlay,
+  (canPlay: boolean): void => {
+    if (canPlay && phase.value === 'cooldown') phase.value = 'playing'
+  },
+)
+
 onMounted(async (): Promise<void> => {
   await packHunt.load()
   if (!isPackMiniGameId(requestedGame)) {
     await router.replace({ query: { ...route.query, game: selectedGame.value } })
   }
-  phase.value = packHunt.canPlay ? 'playing' : 'limit'
+  phase.value = packHunt.canPlay ? 'playing' : 'cooldown'
 })
 </script>
 
@@ -98,10 +111,7 @@ onMounted(async (): Promise<void> => {
           </h1>
           <span class="border border-ink/15 px-3 py-1 text-xs font-bold text-ink/55">
             {{
-              t('packHunt.dailyProgress', {
-                completed: packHunt.completedToday,
-                limit: packHunt.dailyLimit,
-              })
+              t('packHunt.cooldownRule')
             }}
           </span>
         </div>
@@ -147,9 +157,11 @@ onMounted(async (): Promise<void> => {
 
       <template v-else>
         <h1 class="mt-5 text-3xl font-black tracking-tight sm:text-5xl">
-          {{ t('packHunt.limitTitle') }}
+          {{ t('packHunt.cooldownTitle') }}
         </h1>
-        <p class="mt-3 text-ink/65">{{ t('packHunt.limitText') }}</p>
+        <p class="mt-3 text-ink/65">
+          {{ t('packHunt.cooldownText', { time: cooldownText }) }}
+        </p>
       </template>
 
       <div class="mt-7 flex flex-wrap justify-center gap-3">

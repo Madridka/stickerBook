@@ -13,11 +13,12 @@
     "candidateCount": 5
   },
   "packHunt": {
-    "dailyLimit": 3,
+    "cooldownMs": 14400000,
     "games": [
       { "id": "signal", "weight": 1 },
       { "id": "rack", "weight": 1 },
-      { "id": "machine", "weight": 1 }
+      { "id": "machine", "weight": 1 },
+      { "id": "shell", "weight": 1 }
     ],
     "signalsRequired": 3,
     "holdDurationMs": 3000,
@@ -80,6 +81,21 @@
         "minimumHorizontalChangePercent": 14,
         "candidateAttempts": 80
       }
+    },
+    "shell": {
+      "rounds": [
+        { "boxCount": 3, "swapCount": 3, "swapDurationMs": 950, "feintChance": 0 },
+        { "boxCount": 3, "swapCount": 5, "swapDurationMs": 650, "feintChance": 0.25 },
+        { "boxCount": 4, "swapCount": 6, "swapDurationMs": 600, "feintChance": 0.2 }
+      ],
+      "revealDurationMs": 1500,
+      "preShuffleDelayMs": 500,
+      "firstMoveExtraMs": 380,
+      "resultDelayMs": 1100,
+      "completionDelayMs": 900,
+      "feintPauseMs": 200,
+      "feintPeakFraction": 0.55,
+      "fieldPaddingPercent": 15
     }
   }
 }

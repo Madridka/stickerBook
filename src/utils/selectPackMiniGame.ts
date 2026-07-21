@@ -1,6 +1,6 @@
 import gameData from '@/data/mainConst.json'
 
-export type PackMiniGameId = 'signal' | 'rack' | 'machine'
+export type PackMiniGameId = 'signal' | 'rack' | 'machine' | 'shell'
 
 interface PackMiniGameOption {
   id: PackMiniGameId
@@ -8,7 +8,7 @@ interface PackMiniGameOption {
 }
 
 export const isPackMiniGameId = (value: unknown): value is PackMiniGameId =>
-  value === 'signal' || value === 'rack' || value === 'machine'
+  value === 'signal' || value === 'rack' || value === 'machine' || value === 'shell'
 
 // Выбирает мини-игру по настраиваемым весам из игровых данных.
 export const selectPackMiniGame = (): PackMiniGameId => {

@@ -35,12 +35,10 @@ export interface InventoryItem {
 }
 
 export interface PackHuntProgress {
-  // Единственная запись дневного прогресса поиска наборов
-  id: 'daily'
-  // Локальная календарная дата, к которой относится счётчик
-  dateKey: string
-  // Количество полученных за эту дату наград
-  completed: number
+  // Единственная запись времени последней награды за мини-игру
+  id: 'cooldown'
+  // Момент получения награды, от которого отсчитывается перерыв
+  lastClaimedAt: number
 }
 
 export interface DuplicateExchange {
@@ -130,6 +128,17 @@ database.version(8).stores({
   duplicates: 'id, playerId, location',
   deletedCards: 'id, instanceId, playerId, deletedAt',
   packHuntProgress: 'id, dateKey',
+  duplicateExchanges: 'id, createdAt',
+  packOpeningSessions: 'id, packId, createdAt',
+})
+database.version(9).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
+  packHuntProgress: 'id',
   duplicateExchanges: 'id, createdAt',
   packOpeningSessions: 'id, packId, createdAt',
 })

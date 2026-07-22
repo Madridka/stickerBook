@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import cards from '@/data/wc-26/players'
+import cards from '@/data/wc-26/catalog'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
-import type { CollectionItem, PlayerCard } from '@/types'
+import type { CardDefinition, CollectionItem } from '@/types'
 
 import Tab from 'primevue/tab'
 import TabList from 'primevue/tablist'
@@ -43,7 +43,7 @@ const cardOrder: Map<string, number> = new Map(
 
 const isReadyToPlace = (item: CollectionItem): boolean =>
   ['inventory', 'collection'].includes(item.instance.location)
-const getCard = (playerId: string): PlayerCard | undefined =>
+const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
@@ -93,10 +93,10 @@ const visibleCollectionItems: ComputedRef<CollectionItem[]> = computed((): Colle
   )
 
   return [...filtered].sort((left: CollectionItem, right: CollectionItem): number => {
-    const leftCard: PlayerCard | undefined = getCard(left.instance.playerId)
-    const rightCard: PlayerCard | undefined = getCard(right.instance.playerId)
+    const leftCard: CardDefinition | undefined = getCard(left.instance.playerId)
+    const rightCard: CardDefinition | undefined = getCard(right.instance.playerId)
     if (collectionSort.value === 'name') {
-      return (leftCard?.fullName ?? '').localeCompare(rightCard?.fullName ?? '', 'ru')
+      return (leftCard?.displayName ?? '').localeCompare(rightCard?.displayName ?? '', 'ru')
     }
     if (collectionSort.value === 'status') {
       const statusDifference: number = Number(isReadyToPlace(right)) - Number(isReadyToPlace(left))
@@ -256,12 +256,12 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
                   v-if="getCard(item.instance.playerId)"
                   class="aspect-[2/3] w-full bg-white object-cover"
                   :src="getCard(item.instance.playerId)?.image"
-                  :alt="getCard(item.instance.playerId)?.fullName"
+                  :alt="getCard(item.instance.playerId)?.displayName"
                 />
                 <div class="mt-2 flex items-start justify-between gap-2">
                   <div class="min-w-0">
                     <p class="truncate text-sm font-black">
-                      {{ getCard(item.instance.playerId)?.fullName }}
+                      {{ getCard(item.instance.playerId)?.displayName }}
                     </p>
                     <p
                       class="mt-0.5 flex items-center gap-1 text-[11px] font-black"
@@ -316,12 +316,12 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
                 v-if="getCard(item.instance.playerId)"
                 class="aspect-[2/3] w-full bg-white object-cover grayscale"
                 :src="getCard(item.instance.playerId)?.image"
-                :alt="getCard(item.instance.playerId)?.fullName"
+                :alt="getCard(item.instance.playerId)?.displayName"
               />
               <div class="mt-2 flex items-start justify-between gap-2">
                 <div class="min-w-0">
                   <p class="truncate text-sm font-black">
-                    {{ getCard(item.instance.playerId)?.fullName }}
+                    {{ getCard(item.instance.playerId)?.displayName }}
                   </p>
                   <p class="text-[11px] font-semibold text-ink/50">
                     {{ t('album.location.deleted') }}

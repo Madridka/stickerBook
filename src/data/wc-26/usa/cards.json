@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "usa",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "usa-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "USA Team Logo",
+      "image": "/cards/usa/USA-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "usa-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Mauricio Pochettino",
+      "image": "/cards/usa/USA-02-mauricio-pochettino.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "mauricio-pochettino",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "usa-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Matt Turner",
+      "image": "/cards/usa/USA-03-matt-turner.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "matt-turner",
+      "position": "GK"
+    },
+    {
+      "id": "usa-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Sergino Dest",
+      "image": "/cards/usa/USA-04-sergino-dest.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sergino-dest",
+      "position": "DF"
+    },
+    {
+      "id": "usa-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Chris Richards",
+      "image": "/cards/usa/USA-05-chris-richards.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "chris-richards",
+      "position": "DF"
+    },
+    {
+      "id": "usa-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Tyler Adams",
+      "image": "/cards/usa/USA-06-tyler-adams.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tyler-adams",
+      "position": "MF"
+    },
+    {
+      "id": "usa-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Antonee Robinson",
+      "image": "/cards/usa/USA-07-antonee-robinson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "antonee-robinson",
+      "position": "DF"
+    },
+    {
+      "id": "usa-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Auston Trusty",
+      "image": "/cards/usa/USA-08-auston-trusty.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "auston-trusty",
+      "position": "DF"
+    },
+    {
+      "id": "usa-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Giovanni Reyna",
+      "image": "/cards/usa/USA-09-giovanni-reyna.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "giovanni-reyna",
+      "position": "MF"
+    },
+    {
+      "id": "usa-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Weston McKennie",
+      "image": "/cards/usa/USA-10-weston-mckennie.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "weston-mckennie",
+      "position": "MF"
+    },
+    {
+      "id": "usa-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Ricardo Pepi",
+      "image": "/cards/usa/USA-11-ricardo-pepi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ricardo-pepi",
+      "position": "FW"
+    },
+    {
+      "id": "usa-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Christian Pulisic",
+      "image": "/cards/usa/USA-12-christian-pulisic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "christian-pulisic",
+      "position": "FW"
+    },
+    {
+      "id": "usa-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Brenden Aaronson",
+      "image": "/cards/usa/USA-13-brenden-aaronson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "brenden-aaronson",
+      "position": "FW"
+    },
+    {
+      "id": "usa-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Miles Robinson",
+      "image": "/cards/usa/USA-14-miles-robinson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "miles-robinson",
+      "position": "DF"
+    },
+    {
+      "id": "usa-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Tim Ream",
+      "image": "/cards/usa/USA-15-tim-ream.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tim-ream",
+      "position": "DF"
+    },
+    {
+      "id": "usa-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Sebastian Berhalter",
+      "image": "/cards/usa/USA-16-sebastian-berhalter.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sebastian-berhalter",
+      "position": "MF"
+    },
+    {
+      "id": "usa-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Cristian Roldan",
+      "image": "/cards/usa/USA-17-cristian-roldan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "cristian-roldan",
+      "position": "MF"
+    },
+    {
+      "id": "usa-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Alex Freeman",
+      "image": "/cards/usa/USA-18-alex-freeman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alex-freeman",
+      "position": "DF"
+    },
+    {
+      "id": "usa-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Malik Tillman",
+      "image": "/cards/usa/USA-19-malik-tillman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "malik-tillman",
+      "position": "MF"
+    },
+    {
+      "id": "usa-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Max Arfsten",
+      "image": "/cards/usa/USA-20-max-arfsten.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "max-arfsten",
+      "position": "DF"
+    }
+  ]
+}

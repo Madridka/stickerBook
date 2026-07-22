@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "canada",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "can-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Canada Team Logo",
+      "image": "/cards/canada/CAN-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "can-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Jesse Marsch",
+      "image": "/cards/canada/CAN-02-jesse-marsch.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "jesse-marsch",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "can-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Dayne St. Clair",
+      "image": "/cards/canada/CAN-03-dayne-st-clair.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dayne-st-clair",
+      "position": "GK"
+    },
+    {
+      "id": "can-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Alistair Johnston",
+      "image": "/cards/canada/CAN-04-alistair-johnston.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alistair-johnston",
+      "position": "DF"
+    },
+    {
+      "id": "can-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Alfie Jones",
+      "image": "/cards/canada/CAN-05-alfie-jones.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alfie-jones",
+      "position": "DF"
+    },
+    {
+      "id": "can-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Luc De Fougerolles",
+      "image": "/cards/canada/CAN-06-luc-de-fougerolles.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "luc-de-fougerolles",
+      "position": "DF"
+    },
+    {
+      "id": "can-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Joel Waterman",
+      "image": "/cards/canada/CAN-07-joel-waterman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "joel-waterman",
+      "position": "DF"
+    },
+    {
+      "id": "can-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Mathieu Choiniere",
+      "image": "/cards/canada/CAN-08-mathieu-choiniere.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mathieu-choiniere",
+      "position": "MF"
+    },
+    {
+      "id": "can-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Stephen Eustaquio",
+      "image": "/cards/canada/CAN-09-stephen-eustaquio.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "stephen-eustaquio",
+      "position": "MF"
+    },
+    {
+      "id": "can-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Ismael Kone",
+      "image": "/cards/canada/CAN-10-ismael-kone.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ismael-kone",
+      "position": "MF"
+    },
+    {
+      "id": "can-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Cyle Larin",
+      "image": "/cards/canada/CAN-11-cyle-larin.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "cyle-larin",
+      "position": "FW"
+    },
+    {
+      "id": "can-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Jonathan David",
+      "image": "/cards/canada/CAN-12-jonathan-david.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jonathan-david",
+      "position": "FW"
+    },
+    {
+      "id": "can-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Liam Millar",
+      "image": "/cards/canada/CAN-13-liam-millar.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "liam-millar",
+      "position": "MF"
+    },
+    {
+      "id": "can-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Tani Oluwaseyi",
+      "image": "/cards/canada/CAN-14-tani-oluwaseyi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tani-oluwaseyi",
+      "position": "FW"
+    },
+    {
+      "id": "can-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Derek Cornelius",
+      "image": "/cards/canada/CAN-15-derek-cornelius.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "derek-cornelius",
+      "position": "DF"
+    },
+    {
+      "id": "can-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Jacob Shaffelburg",
+      "image": "/cards/canada/CAN-16-jacob-shaffelburg.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jacob-shaffelburg",
+      "position": "MF"
+    },
+    {
+      "id": "can-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Moise Bombito",
+      "image": "/cards/canada/CAN-17-moise-bombito.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "moise-bombito",
+      "position": "DF"
+    },
+    {
+      "id": "can-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Maxime Crepeau",
+      "image": "/cards/canada/CAN-18-maxime-crepeau.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "maxime-crepeau",
+      "position": "GK"
+    },
+    {
+      "id": "can-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Tajon Buchanan",
+      "image": "/cards/canada/CAN-19-tajon-buchanan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tajon-buchanan",
+      "position": "FW"
+    },
+    {
+      "id": "can-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Owen Goodman",
+      "image": "/cards/canada/CAN-20-owen-goodman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "owen-goodman",
+      "position": "GK"
+    }
+  ]
+}

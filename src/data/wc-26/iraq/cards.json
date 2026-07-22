@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "iraq",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "irq-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Iraq Team Logo",
+      "image": "/cards/iraq/IRQ-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "irq-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Graham Arnold",
+      "image": "/cards/iraq/IRQ-02-graham-arnold.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "graham-arnold",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "irq-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Fahad Talib",
+      "image": "/cards/iraq/IRQ-03-fahad-talib.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "fahad-talib",
+      "position": "GK"
+    },
+    {
+      "id": "irq-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Rebin Sulaka",
+      "image": "/cards/iraq/IRQ-04-rebin-sulaka.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "rebin-sulaka",
+      "position": "DF"
+    },
+    {
+      "id": "irq-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Hussein Ali",
+      "image": "/cards/iraq/IRQ-05-hussein-ali.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hussein-ali",
+      "position": "DF"
+    },
+    {
+      "id": "irq-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Zaid Tahseen",
+      "image": "/cards/iraq/IRQ-06-zaid-tahseen.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "zaid-tahseen",
+      "position": "DF"
+    },
+    {
+      "id": "irq-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Akam Hashim",
+      "image": "/cards/iraq/IRQ-07-akam-hashim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "akam-hashim",
+      "position": "DF"
+    },
+    {
+      "id": "irq-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Munaf Younus",
+      "image": "/cards/iraq/IRQ-08-munaf-younus.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "munaf-younus",
+      "position": "DF"
+    },
+    {
+      "id": "irq-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Youssef Amyn",
+      "image": "/cards/iraq/IRQ-09-youssef-amyn.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "youssef-amyn",
+      "position": "MF"
+    },
+    {
+      "id": "irq-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Ibrahim Bayesh",
+      "image": "/cards/iraq/IRQ-10-ibrahim-bayesh.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ibrahim-bayesh",
+      "position": "MF"
+    },
+    {
+      "id": "irq-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Ali Alhamadi",
+      "image": "/cards/iraq/IRQ-11-ali-alhamadi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ali-alhamadi",
+      "position": "FW"
+    },
+    {
+      "id": "irq-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Mohanad Ali",
+      "image": "/cards/iraq/IRQ-12-mohanad-ali.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohanad-ali",
+      "position": "FW"
+    },
+    {
+      "id": "irq-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Ahmed Qasem",
+      "image": "/cards/iraq/IRQ-13-ahmed-qasem.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ahmed-qasem",
+      "position": "FW"
+    },
+    {
+      "id": "irq-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Jalal Hassan",
+      "image": "/cards/iraq/IRQ-14-jalal-hassan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jalal-hassan",
+      "position": "GK"
+    },
+    {
+      "id": "irq-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Ali Yousif",
+      "image": "/cards/iraq/IRQ-15-ali-yousif.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ali-yousif",
+      "position": "FW"
+    },
+    {
+      "id": "irq-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Zidane Iqbal",
+      "image": "/cards/iraq/IRQ-16-zidane-iqbal.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "zidane-iqbal",
+      "position": "MF"
+    },
+    {
+      "id": "irq-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Ahmed Maknazi",
+      "image": "/cards/iraq/IRQ-17-ahmed-maknazi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ahmed-maknazi",
+      "position": "DF"
+    },
+    {
+      "id": "irq-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Amir Alammari",
+      "image": "/cards/iraq/IRQ-18-amir-alammari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "amir-alammari",
+      "position": "MF"
+    },
+    {
+      "id": "irq-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Ali Jasim",
+      "image": "/cards/iraq/IRQ-19-ali-jasim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ali-jasim",
+      "position": "FW"
+    },
+    {
+      "id": "irq-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Aymen Hussein",
+      "image": "/cards/iraq/IRQ-20-aymen-hussein.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "aymen-hussein",
+      "position": "FW"
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import cards from '@/data/wc-26/players'
+import cards from '@/data/wc-26/catalog'
 import gameData from '@/data/mainConst.json'
 import {
   useCollectionStore,
   type BeginDuplicateExchangeResult,
   type ClaimDuplicateExchangeResult,
 } from '@/stores/collection'
-import type { PlayerCard, StickerInstance } from '@/types'
+import type { CardDefinition, StickerInstance } from '@/types'
 
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
@@ -35,19 +35,20 @@ const duplicateGroups: ComputedRef<DuplicateGroup[]> = computed((): DuplicateGro
   })
   return Array.from(groups, ([playerId, instances]): DuplicateGroup => ({ playerId, instances }))
 })
-const candidateCards: ComputedRef<PlayerCard[]> = computed((): PlayerCard[] =>
+const candidateCards: ComputedRef<CardDefinition[]> = computed((): CardDefinition[] =>
   (collection.pendingExchange?.candidatePlayerIds ?? [])
-    .map((playerId: string): PlayerCard | undefined => getCard(playerId))
-    .filter((card: PlayerCard | undefined): card is PlayerCard => Boolean(card)),
+    .map((playerId: string): CardDefinition | undefined => getCard(playerId))
+    .filter((card: CardDefinition | undefined): card is CardDefinition => Boolean(card)),
 )
-const rewardCard: ComputedRef<PlayerCard | undefined> = computed((): PlayerCard | undefined =>
-  rewardCardId.value ? getCard(rewardCardId.value) : undefined,
+const rewardCard: ComputedRef<CardDefinition | undefined> = computed(
+  (): CardDefinition | undefined =>
+    rewardCardId.value ? getCard(rewardCardId.value) : undefined,
 )
 const canSubmit: ComputedRef<boolean> = computed(
   (): boolean => selectedInstanceIds.value.length === selectionLimit && !collection.isExchanging,
 )
 
-const getCard = (playerId: string): PlayerCard | undefined =>
+const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 const selectedCount = (group: DuplicateGroup): number =>
   group.instances.filter(({ id }): boolean => selectedInstanceIds.value.includes(id)).length
@@ -171,7 +172,7 @@ const claimCandidate = async (): Promise<void> => {
     >
       <i class="pi pi-check-circle text-base text-emerald-700" />
       <strong class="min-w-0 truncate text-sm">
-        {{ t('duplicateExchange.rewardTitle') }} · {{ rewardCard.fullName }}
+        {{ t('duplicateExchange.rewardTitle') }} · {{ rewardCard.displayName }}
       </strong>
     </div>
 
@@ -197,10 +198,10 @@ const claimCandidate = async (): Promise<void> => {
           v-if="getCard(group.playerId)"
           class="aspect-[2/3] w-full bg-white object-cover"
           :src="getCard(group.playerId)?.image"
-          :alt="getCard(group.playerId)?.fullName"
+          :alt="getCard(group.playerId)?.displayName"
         />
         <p class="mt-1 truncate text-xs font-black sm:text-sm">
-          {{ getCard(group.playerId)?.fullName }}
+          {{ getCard(group.playerId)?.displayName }}
         </p>
         <p class="text-[11px] font-semibold uppercase tracking-wide text-coral">
           {{ t('duplicateExchange.selectedInGroup', { count: selectedCount(group) }) }}
@@ -211,7 +212,7 @@ const claimCandidate = async (): Promise<void> => {
             size="small"
             severity="secondary"
             outlined
-            :aria-label="t('duplicateExchange.remove', { name: getCard(group.playerId)?.fullName })"
+            :aria-label="t('duplicateExchange.remove', { name: getCard(group.playerId)?.displayName })"
             :disabled="selectedCount(group) === 0"
             data-duplicate-remove
             @click="removeFromGroup(group)"
@@ -219,7 +220,7 @@ const claimCandidate = async (): Promise<void> => {
           <Button
             icon="pi pi-plus"
             size="small"
-            :aria-label="t('duplicateExchange.add', { name: getCard(group.playerId)?.fullName })"
+            :aria-label="t('duplicateExchange.add', { name: getCard(group.playerId)?.displayName })"
             :disabled="
               selectedInstanceIds.length >= selectionLimit ||
               selectedCount(group) >= group.instances.length
@@ -321,7 +322,7 @@ const claimCandidate = async (): Promise<void> => {
               ? 'border-coral shadow-[6px_6px_0_rgb(var(--color-coral)/0.3)]'
               : 'border-ink/20 hover:border-ink'
           "
-          :aria-label="t('duplicateExchange.chooseCandidate', { name: card.fullName })"
+          :aria-label="t('duplicateExchange.chooseCandidate', { name: card.displayName })"
           :aria-pressed="selectedCandidateId === card.id"
           data-exchange-candidate
           :data-player-id="card.id"
@@ -330,9 +331,9 @@ const claimCandidate = async (): Promise<void> => {
           <img
             class="aspect-[2/3] w-full bg-white object-cover"
             :src="card.image"
-            :alt="card.fullName"
+            :alt="card.displayName"
           />
-          <strong class="mt-2 block truncate text-sm">{{ card.fullName }}</strong>
+          <strong class="mt-2 block truncate text-sm">{{ card.displayName }}</strong>
           <span
             class="mt-1 inline-block text-[10px] font-black uppercase tracking-wide"
             :class="isOwned(card.id) ? 'text-coral' : 'text-emerald-700'"

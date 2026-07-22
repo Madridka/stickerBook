@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "switzerland",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "sui-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Switzerland Team Logo",
+      "image": "/cards/switzerland/SUI-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "sui-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Murat Yakin",
+      "image": "/cards/switzerland/SUI-02-murat-yakin.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "murat-yakin",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "sui-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Gregor Kobel",
+      "image": "/cards/switzerland/SUI-03-gregor-kobel.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gregor-kobel",
+      "position": "GK"
+    },
+    {
+      "id": "sui-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Miro Muheim",
+      "image": "/cards/switzerland/SUI-04-miro-muheim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "miro-muheim",
+      "position": "DF"
+    },
+    {
+      "id": "sui-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Silvan Widmer",
+      "image": "/cards/switzerland/SUI-05-silvan-widmer.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "silvan-widmer",
+      "position": "DF"
+    },
+    {
+      "id": "sui-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Nico Elvedi",
+      "image": "/cards/switzerland/SUI-06-nico-elvedi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nico-elvedi",
+      "position": "DF"
+    },
+    {
+      "id": "sui-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Manuel Akanji",
+      "image": "/cards/switzerland/SUI-07-manuel-akanji.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "manuel-akanji",
+      "position": "DF"
+    },
+    {
+      "id": "sui-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Denis Zakaria",
+      "image": "/cards/switzerland/SUI-08-denis-zakaria.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "denis-zakaria",
+      "position": "MF"
+    },
+    {
+      "id": "sui-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Breel Embolo",
+      "image": "/cards/switzerland/SUI-09-breel-embolo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "breel-embolo",
+      "position": "FW"
+    },
+    {
+      "id": "sui-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Remo Freuler",
+      "image": "/cards/switzerland/SUI-10-remo-freuler.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "remo-freuler",
+      "position": "MF"
+    },
+    {
+      "id": "sui-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Johan Manzambi",
+      "image": "/cards/switzerland/SUI-11-johan-manzambi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "johan-manzambi",
+      "position": "MF"
+    },
+    {
+      "id": "sui-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Granit Xhaka",
+      "image": "/cards/switzerland/SUI-12-granit-xhaka.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "granit-xhaka",
+      "position": "MF"
+    },
+    {
+      "id": "sui-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Dan Ndoye",
+      "image": "/cards/switzerland/SUI-13-dan-ndoye.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dan-ndoye",
+      "position": "FW"
+    },
+    {
+      "id": "sui-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Yvon Mvogo",
+      "image": "/cards/switzerland/SUI-14-yvon-mvogo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yvon-mvogo",
+      "position": "GK"
+    },
+    {
+      "id": "sui-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Ricardo Rodriguez",
+      "image": "/cards/switzerland/SUI-15-ricardo-rodriguez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ricardo-rodriguez",
+      "position": "DF"
+    },
+    {
+      "id": "sui-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Ardon Jashari",
+      "image": "/cards/switzerland/SUI-16-ardon-jashari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ardon-jashari",
+      "position": "MF"
+    },
+    {
+      "id": "sui-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Djibril Sow",
+      "image": "/cards/switzerland/SUI-17-djibril-sow.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "djibril-sow",
+      "position": "MF"
+    },
+    {
+      "id": "sui-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Christian Fassnacht",
+      "image": "/cards/switzerland/SUI-18-christian-fassnacht.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "christian-fassnacht",
+      "position": "FW"
+    },
+    {
+      "id": "sui-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Ruben Vargas",
+      "image": "/cards/switzerland/SUI-19-ruben-vargas.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ruben-vargas",
+      "position": "FW"
+    },
+    {
+      "id": "sui-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Eray Coemert",
+      "image": "/cards/switzerland/SUI-20-eray-coemert.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "eray-coemert",
+      "position": "DF"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "brazil",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "bra-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Brazil Team Logo",
+      "image": "/cards/brazil/BRA-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "bra-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Carlo Ancelotti",
+      "image": "/cards/brazil/BRA-02-carlo-ancelotti.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "carlo-ancelotti",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "bra-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Alisson",
+      "image": "/cards/brazil/BRA-03-alisson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alisson",
+      "position": "GK"
+    },
+    {
+      "id": "bra-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Ederson",
+      "image": "/cards/brazil/BRA-04-ederson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ederson",
+      "position": "GK"
+    },
+    {
+      "id": "bra-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Gabriel Magalhaes",
+      "image": "/cards/brazil/BRA-05-gabriel-magalhaes.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gabriel-magalhaes",
+      "position": "DF"
+    },
+    {
+      "id": "bra-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Marcos Marquinhos",
+      "image": "/cards/brazil/BRA-06-marcos-marquinhos.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "marcos-marquinhos",
+      "position": "DF"
+    },
+    {
+      "id": "bra-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Casemiro",
+      "image": "/cards/brazil/BRA-07-casemiro.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "casemiro",
+      "position": "MF"
+    },
+    {
+      "id": "bra-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Alex Sandro",
+      "image": "/cards/brazil/BRA-08-alex-sandro.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alex-sandro",
+      "position": "DF"
+    },
+    {
+      "id": "bra-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Vinicius Junior",
+      "image": "/cards/brazil/BRA-09-vinicius-junior.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "vinicius-junior",
+      "position": "FW"
+    },
+    {
+      "id": "bra-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Bruno Guimaraes",
+      "image": "/cards/brazil/BRA-10-bruno-guimaraes.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "bruno-guimaraes",
+      "position": "MF"
+    },
+    {
+      "id": "bra-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Matheus Cunha",
+      "image": "/cards/brazil/BRA-11-matheus-cunha.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "matheus-cunha",
+      "position": "FW"
+    },
+    {
+      "id": "bra-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Neymar Jr",
+      "image": "/cards/brazil/BRA-12-neymar-jr.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "neymar-jr",
+      "position": "FW"
+    },
+    {
+      "id": "bra-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Raphinha",
+      "image": "/cards/brazil/BRA-13-raphinha.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "raphinha",
+      "position": "FW"
+    },
+    {
+      "id": "bra-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Weverton",
+      "image": "/cards/brazil/BRA-14-weverton.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "weverton",
+      "position": "GK"
+    },
+    {
+      "id": "bra-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Danilo",
+      "image": "/cards/brazil/BRA-15-danilo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "danilo",
+      "position": "DF"
+    },
+    {
+      "id": "bra-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Gleison Bremer",
+      "image": "/cards/brazil/BRA-16-gleison-bremer.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gleison-bremer",
+      "position": "DF"
+    },
+    {
+      "id": "bra-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Leonardo Leo Pereira",
+      "image": "/cards/brazil/BRA-17-leonardo-leo-pereira.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "leonardo-leo-pereira",
+      "position": "DF"
+    },
+    {
+      "id": "bra-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Douglas Santos",
+      "image": "/cards/brazil/BRA-18-douglas-santos.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "douglas-santos",
+      "position": "DF"
+    },
+    {
+      "id": "bra-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Fabinho",
+      "image": "/cards/brazil/BRA-19-fabinho.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "fabinho",
+      "position": "MF"
+    },
+    {
+      "id": "bra-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Danilo Santos",
+      "image": "/cards/brazil/BRA-20-danilo-santos.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "danilo-santos",
+      "position": "MF"
+    }
+  ]
+}

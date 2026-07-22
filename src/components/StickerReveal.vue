@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { ref, watch, type Ref } from 'vue'
+import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { PlayerCard } from '@/types'
+import { playerPositionLabels } from '@/data/playerPositionLabels'
+import type { CardDefinition } from '@/types'
 
 import Button from 'primevue/button'
 
 interface Props {
-  card: PlayerCard
+  card: CardDefinition
   index: number
   total: number
   duplicate?: boolean
@@ -17,6 +18,11 @@ const props: Props = withDefaults(defineProps<Props>(), { duplicate: false, adva
 const emit = defineEmits<{ next: [] }>()
 const { t } = useI18n()
 const isRevealed: Ref<boolean> = ref(false)
+const cardKindLabel: ComputedRef<string> = computed((): string =>
+  props.card.kind === 'player'
+    ? playerPositionLabels[props.card.position]
+    : props.card.kind.toUpperCase(),
+)
 
 // Сбрасывает состояние просмотра при переходе к следующей карточке
 watch(
@@ -60,13 +66,13 @@ const handleCardClick = (): void => {
           : 'hover:-translate-x-0.5 hover:-translate-y-0.5 hover:-rotate-1 hover:shadow-[12px_12px_0_rgb(var(--color-ink)/0.14)]'
       "
       type="button"
-      :aria-label="isRevealed ? card.fullName : t('packOpening.reveal')"
+      :aria-label="isRevealed ? card.displayName : t('packOpening.reveal')"
       @click="handleCardClick"
     >
       <div v-if="isRevealed" class="flex h-full min-h-0 flex-col overflow-hidden bg-white p-2">
         <div class="min-h-0 flex-1">
           <div class="relative h-full">
-            <img class="h-full w-full object-contain" :src="card.image" :alt="card.fullName" />
+            <img class="h-full w-full object-contain" :src="card.image" :alt="card.displayName" />
             <span
               v-if="duplicate"
               class="absolute right-2 top-2 rounded bg-coral px-2 py-1 text-xs font-black uppercase tracking-wide text-white shadow"
@@ -76,9 +82,11 @@ const handleCardClick = (): void => {
           </div>
         </div>
         <div class="shrink-0 border-t-2 border-ink pt-2">
-          <p class="text-xs font-bold uppercase tracking-[0.14em] text-coral">{{ card.type }}</p>
-          <p class="mt-1 text-xl font-black leading-tight">{{ card.fullName }}</p>
-          <p class="text-sm font-semibold text-ink/60">{{ card.team }}</p>
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-coral">
+            {{ cardKindLabel }}
+          </p>
+          <p class="mt-1 text-xl font-black leading-tight">{{ card.displayName }}</p>
+          <p class="text-sm font-semibold text-ink/60">{{ card.teamId }}</p>
           <p v-if="duplicate" class="mt-1 text-xs font-bold text-coral">
             {{ t('packOpening.duplicateStorageHint') }}
           </p>

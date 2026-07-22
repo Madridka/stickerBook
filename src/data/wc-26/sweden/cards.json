@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "sweden",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "swe-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Sweden Team Logo",
+      "image": "/cards/sweden/SWE-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "swe-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Graham Potter",
+      "image": "/cards/sweden/SWE-02-graham-potter.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "graham-potter",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "swe-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Jacob Widell Zetterstrom",
+      "image": "/cards/sweden/SWE-03-jacob-widell-zetterstrom.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jacob-widell-zetterstrom",
+      "position": "GK"
+    },
+    {
+      "id": "swe-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Gustaf Lagerbielke",
+      "image": "/cards/sweden/SWE-04-gustaf-lagerbielke.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gustaf-lagerbielke",
+      "position": "DF"
+    },
+    {
+      "id": "swe-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Victor Lindelof",
+      "image": "/cards/sweden/SWE-05-victor-lindelof.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "victor-lindelof",
+      "position": "DF"
+    },
+    {
+      "id": "swe-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Isak Hien",
+      "image": "/cards/sweden/SWE-06-isak-hien.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "isak-hien",
+      "position": "DF"
+    },
+    {
+      "id": "swe-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Gabriel Gudmundsson",
+      "image": "/cards/sweden/SWE-07-gabriel-gudmundsson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gabriel-gudmundsson",
+      "position": "DF"
+    },
+    {
+      "id": "swe-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Herman Johansson",
+      "image": "/cards/sweden/SWE-08-herman-johansson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "herman-johansson",
+      "position": "DF"
+    },
+    {
+      "id": "swe-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Lucas Bergvall",
+      "image": "/cards/sweden/SWE-09-lucas-bergvall.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lucas-bergvall",
+      "position": "MF"
+    },
+    {
+      "id": "swe-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Daniel Svensson",
+      "image": "/cards/sweden/SWE-10-daniel-svensson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "daniel-svensson",
+      "position": "DF"
+    },
+    {
+      "id": "swe-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Alexander Isak",
+      "image": "/cards/sweden/SWE-11-alexander-isak.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alexander-isak",
+      "position": "FW"
+    },
+    {
+      "id": "swe-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Benjamin Nygren",
+      "image": "/cards/sweden/SWE-12-benjamin-nygren.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "benjamin-nygren",
+      "position": "MF"
+    },
+    {
+      "id": "swe-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Anthony Elanga",
+      "image": "/cards/sweden/SWE-13-anthony-elanga.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "anthony-elanga",
+      "position": "FW"
+    },
+    {
+      "id": "swe-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Viktor Johansson",
+      "image": "/cards/sweden/SWE-14-viktor-johansson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "viktor-johansson",
+      "position": "GK"
+    },
+    {
+      "id": "swe-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Ken Sema",
+      "image": "/cards/sweden/SWE-15-ken-sema.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ken-sema",
+      "position": "MF"
+    },
+    {
+      "id": "swe-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Hjalmar Ekdal",
+      "image": "/cards/sweden/SWE-16-hjalmar-ekdal.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hjalmar-ekdal",
+      "position": "DF"
+    },
+    {
+      "id": "swe-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Carl Starfelt",
+      "image": "/cards/sweden/SWE-17-carl-starfelt.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "carl-starfelt",
+      "position": "DF"
+    },
+    {
+      "id": "swe-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Jesper Karlstrom",
+      "image": "/cards/sweden/SWE-18-jesper-karlstrom.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jesper-karlstrom",
+      "position": "MF"
+    },
+    {
+      "id": "swe-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Viktor Gyokeres",
+      "image": "/cards/sweden/SWE-19-viktor-gyokeres.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "viktor-gyokeres",
+      "position": "FW"
+    },
+    {
+      "id": "swe-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Yasin Ayari",
+      "image": "/cards/sweden/SWE-20-yasin-ayari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yasin-ayari",
+      "position": "MF"
+    }
+  ]
+}

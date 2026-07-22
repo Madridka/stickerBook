@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "congo-dr",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "cod-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Congo DR Team Logo",
+      "image": "/cards/congo-dr/COD-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "cod-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Sebastien Desabre",
+      "image": "/cards/congo-dr/COD-02-sebastien-desabre.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "sebastien-desabre",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "cod-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Lionel Mpasi",
+      "image": "/cards/congo-dr/COD-03-lionel-mpasi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lionel-mpasi",
+      "position": "GK"
+    },
+    {
+      "id": "cod-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Aaron Wan-Bissaka",
+      "image": "/cards/congo-dr/COD-04-aaron-wan-bissaka.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "aaron-wan-bissaka",
+      "position": "DF"
+    },
+    {
+      "id": "cod-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Steve Kapuadi",
+      "image": "/cards/congo-dr/COD-05-steve-kapuadi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "steve-kapuadi",
+      "position": "DF"
+    },
+    {
+      "id": "cod-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Axel Tuanzebe",
+      "image": "/cards/congo-dr/COD-06-axel-tuanzebe.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "axel-tuanzebe",
+      "position": "DF"
+    },
+    {
+      "id": "cod-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Dylan Batubinsika",
+      "image": "/cards/congo-dr/COD-07-dylan-batubinsika.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dylan-batubinsika",
+      "position": "DF"
+    },
+    {
+      "id": "cod-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Ngalayel Mukau",
+      "image": "/cards/congo-dr/COD-08-ngalayel-mukau.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ngalayel-mukau",
+      "position": "MF"
+    },
+    {
+      "id": "cod-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Nathanael Mbuku",
+      "image": "/cards/congo-dr/COD-09-nathanael-mbuku.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nathanael-mbuku",
+      "position": "MF"
+    },
+    {
+      "id": "cod-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Samuel Moutoussamy",
+      "image": "/cards/congo-dr/COD-10-samuel-moutoussamy.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "samuel-moutoussamy",
+      "position": "MF"
+    },
+    {
+      "id": "cod-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Brian Cipenga",
+      "image": "/cards/congo-dr/COD-11-brian-cipenga.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "brian-cipenga",
+      "position": "FW"
+    },
+    {
+      "id": "cod-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Theo Bongonda",
+      "image": "/cards/congo-dr/COD-12-theo-bongonda.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "theo-bongonda",
+      "position": "MF"
+    },
+    {
+      "id": "cod-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Gael Kakuta",
+      "image": "/cards/congo-dr/COD-13-gael-kakuta.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gael-kakuta",
+      "position": "FW"
+    },
+    {
+      "id": "cod-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Joris Kayembe",
+      "image": "/cards/congo-dr/COD-14-joris-kayembe.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "joris-kayembe",
+      "position": "DF"
+    },
+    {
+      "id": "cod-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Meschack Elia",
+      "image": "/cards/congo-dr/COD-15-meschack-elia.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "meschack-elia",
+      "position": "FW"
+    },
+    {
+      "id": "cod-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Noah Sadiki",
+      "image": "/cards/congo-dr/COD-16-noah-sadiki.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "noah-sadiki",
+      "position": "MF"
+    },
+    {
+      "id": "cod-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Aaron Tshibola",
+      "image": "/cards/congo-dr/COD-17-aaron-tshibola.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "aaron-tshibola",
+      "position": "MF"
+    },
+    {
+      "id": "cod-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Timothy Fayulu",
+      "image": "/cards/congo-dr/COD-18-timothy-fayulu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "timothy-fayulu",
+      "position": "GK"
+    },
+    {
+      "id": "cod-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Cedric Bakambu",
+      "image": "/cards/congo-dr/COD-19-cedric-bakambu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "cedric-bakambu",
+      "position": "FW"
+    },
+    {
+      "id": "cod-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Charles Pickel",
+      "image": "/cards/congo-dr/COD-20-charles-pickel.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "charles-pickel",
+      "position": "MF"
+    }
+  ]
+}

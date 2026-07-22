@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "qatar",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "qat-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Qatar Team Logo",
+      "image": "/cards/qatar/QAT-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "qat-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Julen Lopetegui",
+      "image": "/cards/qatar/QAT-02-julen-lopetegui.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "julen-lopetegui",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "qat-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Mahmoud Abunada",
+      "image": "/cards/qatar/QAT-03-mahmoud-abunada.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mahmoud-abunada",
+      "position": "GK"
+    },
+    {
+      "id": "qat-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Pedro Miguel",
+      "image": "/cards/qatar/QAT-04-pedro-miguel.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "pedro-miguel",
+      "position": "DF"
+    },
+    {
+      "id": "qat-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Lucas Mendes",
+      "image": "/cards/qatar/QAT-05-lucas-mendes.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lucas-mendes",
+      "position": "DF"
+    },
+    {
+      "id": "qat-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Gueye Issa Laye",
+      "image": "/cards/qatar/QAT-06-gueye-issa-laye.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gueye-issa-laye",
+      "position": "DF"
+    },
+    {
+      "id": "qat-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Jassem Gaber",
+      "image": "/cards/qatar/QAT-07-jassem-gaber.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jassem-gaber",
+      "position": "DF"
+    },
+    {
+      "id": "qat-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Abdelaziz Abdulaziz Hatem",
+      "image": "/cards/qatar/QAT-08-abdelaziz-abdulaziz-hatem.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdelaziz-abdulaziz-hatem",
+      "position": "MF"
+    },
+    {
+      "id": "qat-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Ahmed Alaaeldin",
+      "image": "/cards/qatar/QAT-09-ahmed-alaaeldin.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ahmed-alaaeldin",
+      "position": "FW"
+    },
+    {
+      "id": "qat-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Edmilson Junior",
+      "image": "/cards/qatar/QAT-10-edmilson-junior.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "edmilson-junior",
+      "position": "FW"
+    },
+    {
+      "id": "qat-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Mohammed Muntari",
+      "image": "/cards/qatar/QAT-11-mohammed-muntari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohammed-muntari",
+      "position": "FW"
+    },
+    {
+      "id": "qat-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Hasan Hassan Alhaydos",
+      "image": "/cards/qatar/QAT-12-hasan-hassan-alhaydos.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hasan-hassan-alhaydos",
+      "position": "FW"
+    },
+    {
+      "id": "qat-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Akram Afif",
+      "image": "/cards/qatar/QAT-13-akram-afif.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "akram-afif",
+      "position": "FW"
+    },
+    {
+      "id": "qat-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Karim Boudiaf",
+      "image": "/cards/qatar/QAT-14-karim-boudiaf.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "karim-boudiaf",
+      "position": "MF"
+    },
+    {
+      "id": "qat-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Ayoub Aloui",
+      "image": "/cards/qatar/QAT-15-ayoub-aloui.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ayoub-aloui",
+      "position": "DF"
+    },
+    {
+      "id": "qat-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Homam Ahmed",
+      "image": "/cards/qatar/QAT-16-homam-ahmed.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "homam-ahmed",
+      "position": "DF"
+    },
+    {
+      "id": "qat-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Yusuf Abdurisag",
+      "image": "/cards/qatar/QAT-17-yusuf-abdurisag.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yusuf-abdurisag",
+      "position": "FW"
+    },
+    {
+      "id": "qat-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Boualem Khoukhi",
+      "image": "/cards/qatar/QAT-18-boualem-khoukhi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "boualem-khoukhi",
+      "position": "DF"
+    },
+    {
+      "id": "qat-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Ahmed Alganehi",
+      "image": "/cards/qatar/QAT-19-ahmed-alganehi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ahmed-alganehi",
+      "position": "MF"
+    },
+    {
+      "id": "qat-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Sultan Albrake",
+      "image": "/cards/qatar/QAT-20-sultan-albrake.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sultan-albrake",
+      "position": "DF"
+    }
+  ]
+}

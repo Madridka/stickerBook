@@ -4,7 +4,7 @@ import { database, type DuplicateExchange } from '@/db/database'
 import { reconcileOrphanedDuplicates } from '@/db/stickerLifecycle'
 import type { CollectionItem, StickerInstance, StickerPlacement } from '@/types'
 import collectionData from '@/data/collection.json'
-import cards from '@/data/wc-26/players'
+import cards, { catalogs } from '@/data/wc-26/catalog'
 import albumData from '@/data/wc-26/album'
 import gameData from '@/data/mainConst.json'
 import { createId } from '@/utils/createId'
@@ -22,9 +22,9 @@ export const useCollectionStore = defineStore('collection', () => {
 
   // Считает размер коллекции по уникальным позициям альбома, не учитывая версии карточек.
   const cardAlbumSlotIds: Map<string, string> = new Map(
-    cards.map(({ id, albumSlotId }): [string, string] => [id, albumSlotId ?? id]),
+    cards.map(({ id, baseCardId }): [string, string] => [id, baseCardId ?? id]),
   )
-  const total: number = new Set(cards.map(({ id, albumSlotId }): string => albumSlotId ?? id)).size
+  const total: number = new Set(cards.map(({ id, baseCardId }): string => baseCardId ?? id)).size
   const pages: number = collectionData.pages
   const albumSlotIds: Set<string> = new Set(
     albumData.pages.flatMap(({ slots }): string[] =>
@@ -127,7 +127,7 @@ export const useCollectionStore = defineStore('collection', () => {
           const exchange: DuplicateExchange = {
             id: 'pending',
             candidatePlayerIds: createDuplicateExchangeCandidates(
-              cards,
+              catalogs,
               excludedPlayerIds,
               gameData.duplicateExchange.candidateCount,
             ),

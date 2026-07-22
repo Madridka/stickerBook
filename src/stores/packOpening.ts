@@ -6,11 +6,11 @@ import {
   type PackOpeningReward,
   type PackOpeningSession,
 } from '@/db/database'
-import cards from '@/data/wc-26/players'
+import { catalogs } from '@/data/wc-26/catalog'
 import packData from '@/data/mainConst.json'
-import type { PlayerCard, StickerInstance } from '@/types'
+import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
-import { weightedRandom } from '@/utils/weightedRandom'
+import { selectCardV2 } from '@/utils/dropEngine'
 
 export type AdvancePackOpeningResult = 'advanced' | 'completed' | 'unavailable'
 
@@ -56,9 +56,15 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             activeCards.map(({ playerId }: StickerInstance): string => playerId),
           )
           const rewards: PackOpeningReward[] = Array.from(
-            { length: packData.cardsPerPack },
+            { length: packData.packConfigs.standard.cardsPerPack },
             (): PackOpeningReward => {
-              const card: PlayerCard = weightedRandom(cards)
+              const card: CardDefinition = selectCardV2({
+                catalogs,
+                packConfig: packData.packConfigs.standard,
+                poolId: 'standard',
+                defaultSelectionWeight: packData.dropEngine.defaultSelectionWeight,
+                randomSource: Math.random,
+              }) as CardDefinition
               const isDuplicate: boolean = ownedPlayerIds.has(card.id)
               ownedPlayerIds.add(card.id)
               return { instanceId: createId(), playerId: card.id, isDuplicate }

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "uzbekistan",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "uzb-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Uzbekistan Team Logo",
+      "image": "/cards/uzbekistan/UZB-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "uzb-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Fabio Cannavaro",
+      "image": "/cards/uzbekistan/UZB-02-fabio-cannavaro.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "fabio-cannavaro",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "uzb-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Utkir Yusupov",
+      "image": "/cards/uzbekistan/UZB-03-utkir-yusupov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "utkir-yusupov",
+      "position": "GK"
+    },
+    {
+      "id": "uzb-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Abdukodir Khusanov",
+      "image": "/cards/uzbekistan/UZB-04-abdukodir-khusanov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdukodir-khusanov",
+      "position": "DF"
+    },
+    {
+      "id": "uzb-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Khojiakbar Alijonov",
+      "image": "/cards/uzbekistan/UZB-05-khojiakbar-alijonov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "khojiakbar-alijonov",
+      "position": "DF"
+    },
+    {
+      "id": "uzb-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Farrukh Sayfiev",
+      "image": "/cards/uzbekistan/UZB-06-farrukh-sayfiev.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "farrukh-sayfiev",
+      "position": "DF"
+    },
+    {
+      "id": "uzb-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Rustam Ashurmatov",
+      "image": "/cards/uzbekistan/UZB-07-rustam-ashurmatov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "rustam-ashurmatov",
+      "position": "DF"
+    },
+    {
+      "id": "uzb-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Akmal Mozgovoy",
+      "image": "/cards/uzbekistan/UZB-08-akmal-mozgovoy.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "akmal-mozgovoy",
+      "position": "MF"
+    },
+    {
+      "id": "uzb-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Otabek Shukurov",
+      "image": "/cards/uzbekistan/UZB-09-otabek-shukurov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "otabek-shukurov",
+      "position": "MF"
+    },
+    {
+      "id": "uzb-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Jamshid Iskanderov",
+      "image": "/cards/uzbekistan/UZB-10-jamshid-iskanderov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jamshid-iskanderov",
+      "position": "MF"
+    },
+    {
+      "id": "uzb-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Odiljon Xamrobekov",
+      "image": "/cards/uzbekistan/UZB-11-odiljon-xamrobekov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "odiljon-xamrobekov",
+      "position": "MF"
+    },
+    {
+      "id": "uzb-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Ruslanbek Jiyanov",
+      "image": "/cards/uzbekistan/UZB-12-ruslanbek-jiyanov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ruslanbek-jiyanov",
+      "position": "MF"
+    },
+    {
+      "id": "uzb-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Oston Urunov",
+      "image": "/cards/uzbekistan/UZB-13-oston-urunov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "oston-urunov",
+      "position": "MF"
+    },
+    {
+      "id": "uzb-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Abduvohid Nematov",
+      "image": "/cards/uzbekistan/UZB-14-abduvohid-nematov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abduvohid-nematov",
+      "position": "GK"
+    },
+    {
+      "id": "uzb-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Sherzod Nasrullaev",
+      "image": "/cards/uzbekistan/UZB-15-sherzod-nasrullaev.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sherzod-nasrullaev",
+      "position": "DF"
+    },
+    {
+      "id": "uzb-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Eldor Shomurodov",
+      "image": "/cards/uzbekistan/UZB-16-eldor-shomurodov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "eldor-shomurodov",
+      "position": "FW"
+    },
+    {
+      "id": "uzb-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Umar Eshmurodov",
+      "image": "/cards/uzbekistan/UZB-17-umar-eshmurodov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "umar-eshmurodov",
+      "position": "DF"
+    },
+    {
+      "id": "uzb-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Botirali Ergashev",
+      "image": "/cards/uzbekistan/UZB-18-botirali-ergashev.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "botirali-ergashev",
+      "position": "GK"
+    },
+    {
+      "id": "uzb-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Dostonbek Khamdamov",
+      "image": "/cards/uzbekistan/UZB-19-dostonbek-khamdamov.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dostonbek-khamdamov",
+      "position": "MF"
+    },
+    {
+      "id": "uzb-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Abdulla Abdullaev",
+      "image": "/cards/uzbekistan/UZB-20-abdulla-abdullaev.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdulla-abdullaev",
+      "position": "DF"
+    }
+  ]
+}

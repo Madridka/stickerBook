@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "japan",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "jpn-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Japan Team Logo",
+      "image": "/cards/japan/JPN-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "jpn-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Hajime Moriyasu",
+      "image": "/cards/japan/JPN-02-hajime-moriyasu.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "hajime-moriyasu",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "jpn-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Zion Suzuki",
+      "image": "/cards/japan/JPN-03-zion-suzuki.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "zion-suzuki",
+      "position": "GK"
+    },
+    {
+      "id": "jpn-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Yukinari Sugawara",
+      "image": "/cards/japan/JPN-04-yukinari-sugawara.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yukinari-sugawara",
+      "position": "DF"
+    },
+    {
+      "id": "jpn-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Shogo Taniguchi",
+      "image": "/cards/japan/JPN-05-shogo-taniguchi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "shogo-taniguchi",
+      "position": "DF"
+    },
+    {
+      "id": "jpn-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Kou Itakura",
+      "image": "/cards/japan/JPN-06-kou-itakura.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kou-itakura",
+      "position": "DF"
+    },
+    {
+      "id": "jpn-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Yuto Nagatomo",
+      "image": "/cards/japan/JPN-07-yuto-nagatomo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yuto-nagatomo",
+      "position": "DF"
+    },
+    {
+      "id": "jpn-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Shuto Machino",
+      "image": "/cards/japan/JPN-08-shuto-machino.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "shuto-machino",
+      "position": "FW"
+    },
+    {
+      "id": "jpn-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Ao Tanaka",
+      "image": "/cards/japan/JPN-09-ao-tanaka.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ao-tanaka",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Takefusa Kubo",
+      "image": "/cards/japan/JPN-10-takefusa-kubo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "takefusa-kubo",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Keisuke Goto",
+      "image": "/cards/japan/JPN-11-keisuke-goto.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "keisuke-goto",
+      "position": "FW"
+    },
+    {
+      "id": "jpn-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Ritsu Doan",
+      "image": "/cards/japan/JPN-12-ritsu-doan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ritsu-doan",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Daizen Maeda",
+      "image": "/cards/japan/JPN-13-daizen-maeda.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "daizen-maeda",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Keisuke Osako",
+      "image": "/cards/japan/JPN-14-keisuke-osako.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "keisuke-osako",
+      "position": "GK"
+    },
+    {
+      "id": "jpn-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Keito Nakamura",
+      "image": "/cards/japan/JPN-15-keito-nakamura.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "keito-nakamura",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Junya Ito",
+      "image": "/cards/japan/JPN-16-junya-ito.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "junya-ito",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Daichi Kamada",
+      "image": "/cards/japan/JPN-17-daichi-kamada.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "daichi-kamada",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Tsuyoshi Watanabe",
+      "image": "/cards/japan/JPN-18-tsuyoshi-watanabe.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tsuyoshi-watanabe",
+      "position": "DF"
+    },
+    {
+      "id": "jpn-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Yuito Suzuki",
+      "image": "/cards/japan/JPN-19-yuito-suzuki.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yuito-suzuki",
+      "position": "MF"
+    },
+    {
+      "id": "jpn-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Ayase Ueda",
+      "image": "/cards/japan/JPN-20-ayase-ueda.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ayase-ueda",
+      "position": "FW"
+    }
+  ]
+}

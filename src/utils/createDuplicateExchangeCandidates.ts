@@ -1,24 +1,40 @@
-import type { PlayerCard } from '@/types'
-import { weightedRandom } from '@/utils/weightedRandom'
+import gameData from '../data/mainConst.json' with { type: 'json' }
+import type { CardDefinition, NormalizedCardCatalog } from '../types/cardCatalog.ts'
+import { selectCardV2, type RandomSource } from './dropEngine.ts'
 
-// Выбирает разных кандидатов по игровым весам, исключая игроков из сданных повторок.
+// Сохраняет прежние правила обмена: исключает сданные карточки и возвращает разные ID.
 export const createDuplicateExchangeCandidates = (
-  cards: PlayerCard[],
+  catalogs: NormalizedCardCatalog[],
   excludedPlayerIds: Set<string>,
   candidateCount: number,
+  randomSource: RandomSource = Math.random,
 ): string[] => {
-  let pool: PlayerCard[] = cards.filter(
-    ({ id, weight }): boolean => !excludedPlayerIds.has(id) && weight > 0,
+  let availableCatalogs: NormalizedCardCatalog[] = catalogs.map((catalog) => ({
+    ...catalog,
+    cards: catalog.cards.filter((card) => !excludedPlayerIds.has(card.id)),
+  }))
+  const availableCount = availableCatalogs.reduce(
+    (total, catalog) => total + catalog.cards.length,
+    0,
   )
-  if (pool.length < candidateCount) {
+  if (availableCount < candidateCount) {
     throw new Error('Not enough cards for duplicate exchange')
   }
 
   const candidatePlayerIds: string[] = []
   while (candidatePlayerIds.length < candidateCount) {
-    const candidate: PlayerCard = weightedRandom(pool)
+    const candidate = selectCardV2({
+      catalogs: availableCatalogs,
+      packConfig: gameData.packConfigs.standard,
+      poolId: 'standard',
+      defaultSelectionWeight: gameData.dropEngine.defaultSelectionWeight,
+      randomSource,
+    }) as CardDefinition
     candidatePlayerIds.push(candidate.id)
-    pool = pool.filter(({ id }): boolean => id !== candidate.id)
+    availableCatalogs = availableCatalogs.map((catalog) => ({
+      ...catalog,
+      cards: catalog.cards.filter((card) => card.id !== candidate.id),
+    }))
   }
   return candidatePlayerIds
 }

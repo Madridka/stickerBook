@@ -2,12 +2,12 @@
 import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import cards from '@/data/wc-26/players'
+import cards from '@/data/wc-26/catalog'
 import packData from '@/data/mainConst.json'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
-import type { PlayerCard } from '@/types'
+import type { CardDefinition } from '@/types'
 
 import Button from 'primevue/button'
 
@@ -19,8 +19,8 @@ const router = useRouter()
 const inventory = useInventoryStore()
 const collection = useCollectionStore()
 const packOpening = usePackOpeningStore()
-const cardById: Map<string, PlayerCard> = new Map(
-  cards.map((card: PlayerCard): [string, PlayerCard] => [card.id, card]),
+const cardById: Map<string, CardDefinition> = new Map(
+  cards.map((card: CardDefinition): [string, CardDefinition] => [card.id, card]),
 )
 const isAnimationComplete: Ref<boolean> = ref(false)
 const isReady: Ref<boolean> = ref(false)
@@ -28,15 +28,18 @@ const currentIndex: ComputedRef<number> = computed(
   (): number => packOpening.session?.currentIndex ?? 0,
 )
 const rewardTotal: ComputedRef<number> = computed(
-  (): number => packOpening.session?.rewards.length ?? packData.cardsPerPack,
+  (): number =>
+    packOpening.session?.rewards.length ?? packData.packConfigs.standard.cardsPerPack,
 )
 const isFinished: ComputedRef<boolean> = computed(
   (): boolean => currentIndex.value >= rewardTotal.value,
 )
-const currentCard: ComputedRef<PlayerCard | undefined> = computed((): PlayerCard | undefined => {
+const currentCard: ComputedRef<CardDefinition | undefined> = computed(
+  (): CardDefinition | undefined => {
   const playerId: string | undefined = packOpening.session?.rewards[currentIndex.value]?.playerId
   return playerId ? cardById.get(playerId) : undefined
-})
+  },
+)
 const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
   Boolean(packOpening.session?.rewards[currentIndex.value]?.isDuplicate),
 )

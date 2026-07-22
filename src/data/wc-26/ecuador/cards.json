@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "ecuador",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "ecu-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Ecuador Team Logo",
+      "image": "/cards/ecuador/ECU-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "ecu-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Sebastian Beccacece",
+      "image": "/cards/ecuador/ECU-02-sebastian-beccacece.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "sebastian-beccacece",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "ecu-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Hernan Galindez",
+      "image": "/cards/ecuador/ECU-03-hernan-galindez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hernan-galindez",
+      "position": "GK"
+    },
+    {
+      "id": "ecu-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Felix Torres",
+      "image": "/cards/ecuador/ECU-04-felix-torres.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "felix-torres",
+      "position": "DF"
+    },
+    {
+      "id": "ecu-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Piero Hincapie",
+      "image": "/cards/ecuador/ECU-05-piero-hincapie.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "piero-hincapie",
+      "position": "DF"
+    },
+    {
+      "id": "ecu-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Joel Ordonez",
+      "image": "/cards/ecuador/ECU-06-joel-ordonez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "joel-ordonez",
+      "position": "DF"
+    },
+    {
+      "id": "ecu-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Jordy Alcivar",
+      "image": "/cards/ecuador/ECU-07-jordy-alcivar.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jordy-alcivar",
+      "position": "MF"
+    },
+    {
+      "id": "ecu-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Willian Pacho",
+      "image": "/cards/ecuador/ECU-08-willian-pacho.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "willian-pacho",
+      "position": "DF"
+    },
+    {
+      "id": "ecu-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Pervis Estupinan",
+      "image": "/cards/ecuador/ECU-09-pervis-estupinan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "pervis-estupinan",
+      "position": "DF"
+    },
+    {
+      "id": "ecu-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Anthony Valencia",
+      "image": "/cards/ecuador/ECU-10-anthony-valencia.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "anthony-valencia",
+      "position": "MF"
+    },
+    {
+      "id": "ecu-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "John Yeboah",
+      "image": "/cards/ecuador/ECU-11-john-yeboah.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "john-yeboah",
+      "position": "FW"
+    },
+    {
+      "id": "ecu-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Kendry Paez",
+      "image": "/cards/ecuador/ECU-12-kendry-paez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kendry-paez",
+      "position": "MF"
+    },
+    {
+      "id": "ecu-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Kevin Rodriguez",
+      "image": "/cards/ecuador/ECU-13-kevin-rodriguez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kevin-rodriguez",
+      "position": "FW"
+    },
+    {
+      "id": "ecu-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Moises Ramirez",
+      "image": "/cards/ecuador/ECU-14-moises-ramirez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "moises-ramirez",
+      "position": "GK"
+    },
+    {
+      "id": "ecu-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Enner Valencia",
+      "image": "/cards/ecuador/ECU-15-enner-valencia.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "enner-valencia",
+      "position": "FW"
+    },
+    {
+      "id": "ecu-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Alan Minda",
+      "image": "/cards/ecuador/ECU-16-alan-minda.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alan-minda",
+      "position": "MF"
+    },
+    {
+      "id": "ecu-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Pedro Vite",
+      "image": "/cards/ecuador/ECU-17-pedro-vite.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "pedro-vite",
+      "position": "MF"
+    },
+    {
+      "id": "ecu-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Jordy Caicedo",
+      "image": "/cards/ecuador/ECU-18-jordy-caicedo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jordy-caicedo",
+      "position": "FW"
+    },
+    {
+      "id": "ecu-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Angelo Preciado",
+      "image": "/cards/ecuador/ECU-19-angelo-preciado.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "angelo-preciado",
+      "position": "DF"
+    },
+    {
+      "id": "ecu-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Denil Castillo",
+      "image": "/cards/ecuador/ECU-20-denil-castillo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "denil-castillo",
+      "position": "MF"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { PlayerCard, StickerDropResult, StickerInstance } from '@/types'
+import type { CardDefinition, StickerDropResult, StickerInstance } from '@/types'
 
 import { evaluateStickerDrop } from '@/components/DragDrop/dropGeometry'
 import StickerThumbnail from '@/components/Sticker/StickerThumbnail.vue'
 
 interface Props {
-  card: PlayerCard
+  card: CardDefinition
   instance: StickerInstance
   prepared: boolean
 }
@@ -80,7 +80,7 @@ const finishDrag = (event: PointerEvent): void => {
     {
       instanceId: props.instance.id,
       playerId: props.instance.playerId,
-      albumSlotId: props.card.albumSlotId ?? props.card.id,
+      albumSlotId: props.card.baseCardId ?? props.card.id,
     },
   )
   if (result) emit('drop', result)
@@ -101,7 +101,7 @@ const handleKeyboardClick = (event: MouseEvent): void => {
     class="group flex h-32 w-60 shrink-0 touch-pan-x cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral max-md:h-24 max-md:w-[10.75rem] max-md:gap-2 max-md:border max-md:p-1.5"
     :class="{ 'border-mint ring-2 ring-mint/50': prepared, 'opacity-50': isDragging }"
     type="button"
-    :aria-label="card.fullName"
+    :aria-label="card.displayName"
     @pointerdown="startDrag"
     @pointermove="moveDrag"
     @pointerup="finishDrag"
@@ -120,7 +120,7 @@ const handleKeyboardClick = (event: MouseEvent): void => {
       >
       <strong
         class="mt-1 block text-sm font-black leading-tight max-md:mt-0.5 max-md:text-[0.68rem]"
-        >{{ card.fullName }}</strong
+        >{{ card.displayName }}</strong
       >
       <span
         class="mt-3 inline-flex items-center gap-1 rounded px-2 py-1 text-[10px] font-black uppercase tracking-wide max-md:mt-1.5 max-md:gap-[0.2rem] max-md:px-[0.35rem] max-md:py-[0.2rem] max-md:text-[0.45rem] max-md:tracking-[0.04em] max-md:[&_i]:text-[0.55rem]"

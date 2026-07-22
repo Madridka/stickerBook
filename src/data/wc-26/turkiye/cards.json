@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "turkiye",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "tur-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Turkiye Team Logo",
+      "image": "/cards/turkiye/TUR-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "tur-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Vincenzo Montella",
+      "image": "/cards/turkiye/TUR-02-vincenzo-montella.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "vincenzo-montella",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "tur-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Mert Gunok",
+      "image": "/cards/turkiye/TUR-03-mert-gunok.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mert-gunok",
+      "position": "GK"
+    },
+    {
+      "id": "tur-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Zeki Celik",
+      "image": "/cards/turkiye/TUR-04-zeki-celik.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "zeki-celik",
+      "position": "DF"
+    },
+    {
+      "id": "tur-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Merih Demiral",
+      "image": "/cards/turkiye/TUR-05-merih-demiral.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "merih-demiral",
+      "position": "DF"
+    },
+    {
+      "id": "tur-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Caglar Soyuncu",
+      "image": "/cards/turkiye/TUR-06-caglar-soyuncu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "caglar-soyuncu",
+      "position": "DF"
+    },
+    {
+      "id": "tur-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Salih Ozcan",
+      "image": "/cards/turkiye/TUR-07-salih-ozcan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "salih-ozcan",
+      "position": "MF"
+    },
+    {
+      "id": "tur-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Orkun Kokcu",
+      "image": "/cards/turkiye/TUR-08-orkun-kokcu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "orkun-kokcu",
+      "position": "MF"
+    },
+    {
+      "id": "tur-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Kerem Akturkoglu",
+      "image": "/cards/turkiye/TUR-09-kerem-akturkoglu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kerem-akturkoglu",
+      "position": "FW"
+    },
+    {
+      "id": "tur-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Arda Guler",
+      "image": "/cards/turkiye/TUR-10-arda-guler.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "arda-guler",
+      "position": "FW"
+    },
+    {
+      "id": "tur-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Deniz Gul",
+      "image": "/cards/turkiye/TUR-11-deniz-gul.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "deniz-gul",
+      "position": "FW"
+    },
+    {
+      "id": "tur-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Hakan Calhanoglu",
+      "image": "/cards/turkiye/TUR-12-hakan-calhanoglu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hakan-calhanoglu",
+      "position": "MF"
+    },
+    {
+      "id": "tur-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Kenan Yildiz",
+      "image": "/cards/turkiye/TUR-13-kenan-yildiz.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kenan-yildiz",
+      "position": "FW"
+    },
+    {
+      "id": "tur-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Altay Bayindir",
+      "image": "/cards/turkiye/TUR-14-altay-bayindir.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "altay-bayindir",
+      "position": "GK"
+    },
+    {
+      "id": "tur-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Eren Elmali",
+      "image": "/cards/turkiye/TUR-15-eren-elmali.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "eren-elmali",
+      "position": "DF"
+    },
+    {
+      "id": "tur-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Abdulkerim Bardakci",
+      "image": "/cards/turkiye/TUR-16-abdulkerim-bardakci.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdulkerim-bardakci",
+      "position": "DF"
+    },
+    {
+      "id": "tur-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Ozan Kabak",
+      "image": "/cards/turkiye/TUR-17-ozan-kabak.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ozan-kabak",
+      "position": "DF"
+    },
+    {
+      "id": "tur-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Ismail Yuksek",
+      "image": "/cards/turkiye/TUR-18-ismail-yuksek.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ismail-yuksek",
+      "position": "MF"
+    },
+    {
+      "id": "tur-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Irfan Kahveci",
+      "image": "/cards/turkiye/TUR-19-irfan-kahveci.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "irfan-kahveci",
+      "position": "FW"
+    },
+    {
+      "id": "tur-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Mert Muldur",
+      "image": "/cards/turkiye/TUR-20-mert-muldur.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mert-muldur",
+      "position": "DF"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import { useAlbumStore } from '@/stores/album'
 import type {
   AlbumGeometryPage,
   AlbumGeometrySlot,
-  PlayerCard,
+  CardDefinition,
   StickerInstance,
   StickerPlacement,
   StickerPreparation,
@@ -16,8 +16,8 @@ import { shouldSnapStickerAlignment } from '@/components/DragDrop/dropGeometry'
 interface Props {
   slot: AlbumGeometrySlot
   page: AlbumGeometryPage
-  targetCard?: PlayerCard
-  card?: PlayerCard
+  targetCard?: CardDefinition
+  card?: CardDefinition
   instance?: StickerInstance
   placement?: StickerPlacement
   preparation?: StickerPreparation
@@ -33,7 +33,7 @@ const emit = defineEmits<{
 const { t } = useI18n()
 const album = useAlbumStore()
 const targetName: ComputedRef<string> = computed(
-  (): string => props.targetCard?.fullName ?? props.slot.name,
+  (): string => props.targetCard?.displayName ?? props.slot.name,
 )
 const slotCode: ComputedRef<string> = computed((): string =>
   props.slot.id.toUpperCase().replace('-', ' '),
@@ -105,7 +105,7 @@ const previewCard = (): void => {
       v-if="card"
       class="absolute inset-0 z-10 h-full w-full cursor-pointer object-fill"
       :src="card.image"
-      :alt="card.fullName"
+      :alt="card.displayName"
       :style="cardStyle()"
       @click="previewCard"
     />

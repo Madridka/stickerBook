@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "scotland",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "sco-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Scotland Team Logo",
+      "image": "/cards/scotland/SCO-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "sco-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Steve Clarke",
+      "image": "/cards/scotland/SCO-02-steve-clarke.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "steve-clarke",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "sco-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Angus Gunn",
+      "image": "/cards/scotland/SCO-03-angus-gunn.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "angus-gunn",
+      "position": "GK"
+    },
+    {
+      "id": "sco-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Aaron Hickey",
+      "image": "/cards/scotland/SCO-04-aaron-hickey.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "aaron-hickey",
+      "position": "DF"
+    },
+    {
+      "id": "sco-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Andy Robertson",
+      "image": "/cards/scotland/SCO-05-andy-robertson.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "andy-robertson",
+      "position": "DF"
+    },
+    {
+      "id": "sco-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Scott McTominay",
+      "image": "/cards/scotland/SCO-06-scott-mctominay.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "scott-mctominay",
+      "position": "MF"
+    },
+    {
+      "id": "sco-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Grant Hanley",
+      "image": "/cards/scotland/SCO-07-grant-hanley.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "grant-hanley",
+      "position": "DF"
+    },
+    {
+      "id": "sco-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Kieran Tierney",
+      "image": "/cards/scotland/SCO-08-kieran-tierney.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kieran-tierney",
+      "position": "DF"
+    },
+    {
+      "id": "sco-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "John McGinn",
+      "image": "/cards/scotland/SCO-09-john-mcginn.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "john-mcginn",
+      "position": "MF"
+    },
+    {
+      "id": "sco-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Tyler Fletcher",
+      "image": "/cards/scotland/SCO-10-tyler-fletcher.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tyler-fletcher",
+      "position": "MF"
+    },
+    {
+      "id": "sco-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Lyndon Dykes",
+      "image": "/cards/scotland/SCO-11-lyndon-dykes.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lyndon-dykes",
+      "position": "FW"
+    },
+    {
+      "id": "sco-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Che Adams",
+      "image": "/cards/scotland/SCO-12-che-adams.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "che-adams",
+      "position": "FW"
+    },
+    {
+      "id": "sco-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Ryan Christie",
+      "image": "/cards/scotland/SCO-13-ryan-christie.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ryan-christie",
+      "position": "MF"
+    },
+    {
+      "id": "sco-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Liam Kelly",
+      "image": "/cards/scotland/SCO-14-liam-kelly.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "liam-kelly",
+      "position": "GK"
+    },
+    {
+      "id": "sco-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Jack Hendry",
+      "image": "/cards/scotland/SCO-15-jack-hendry.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jack-hendry",
+      "position": "DF"
+    },
+    {
+      "id": "sco-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Ross Stewart",
+      "image": "/cards/scotland/SCO-16-ross-stewart.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ross-stewart",
+      "position": "FW"
+    },
+    {
+      "id": "sco-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "John Souttar",
+      "image": "/cards/scotland/SCO-17-john-souttar.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "john-souttar",
+      "position": "DF"
+    },
+    {
+      "id": "sco-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Dominic Hyam",
+      "image": "/cards/scotland/SCO-18-dominic-hyam.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dominic-hyam",
+      "position": "DF"
+    },
+    {
+      "id": "sco-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Ben Gannon-Doak",
+      "image": "/cards/scotland/SCO-19-ben-gannon-doak.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ben-gannon-doak",
+      "position": "FW"
+    },
+    {
+      "id": "sco-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "George Hirst",
+      "image": "/cards/scotland/SCO-20-george-hirst.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "george-hirst",
+      "position": "FW"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "bosnia-and-herzegovina",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "bih-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Bosnia and Herzegovina Team Logo",
+      "image": "/cards/bosnia-and-herzegovina/BIH-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "bih-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Sergej Barbarez",
+      "image": "/cards/bosnia-and-herzegovina/BIH-02-sergej-barbarez.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "sergej-barbarez",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "bih-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Nikola Vasilj",
+      "image": "/cards/bosnia-and-herzegovina/BIH-03-nikola-vasilj.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nikola-vasilj",
+      "position": "GK"
+    },
+    {
+      "id": "bih-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Nihad Mujakic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-04-nihad-mujakic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nihad-mujakic",
+      "position": "DF"
+    },
+    {
+      "id": "bih-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Dennis Hadzikadunic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-05-dennis-hadzikadunic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dennis-hadzikadunic",
+      "position": "DF"
+    },
+    {
+      "id": "bih-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Tarik Muharemovic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-06-tarik-muharemovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tarik-muharemovic",
+      "position": "DF"
+    },
+    {
+      "id": "bih-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Sead Kolasinac",
+      "image": "/cards/bosnia-and-herzegovina/BIH-07-sead-kolasinac.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sead-kolasinac",
+      "position": "DF"
+    },
+    {
+      "id": "bih-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Benjamin Tahirovic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-08-benjamin-tahirovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "benjamin-tahirovic",
+      "position": "MF"
+    },
+    {
+      "id": "bih-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Amar Dedic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-09-amar-dedic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "amar-dedic",
+      "position": "DF"
+    },
+    {
+      "id": "bih-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Armin Gigovic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-10-armin-gigovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "armin-gigovic",
+      "position": "MF"
+    },
+    {
+      "id": "bih-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Samed Bazdar",
+      "image": "/cards/bosnia-and-herzegovina/BIH-11-samed-bazdar.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "samed-bazdar",
+      "position": "FW"
+    },
+    {
+      "id": "bih-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Ermedin Demirovic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-12-ermedin-demirovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ermedin-demirovic",
+      "position": "FW"
+    },
+    {
+      "id": "bih-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Edin Dzeko",
+      "image": "/cards/bosnia-and-herzegovina/BIH-13-edin-dzeko.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "edin-dzeko",
+      "position": "FW"
+    },
+    {
+      "id": "bih-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Mladen Jurkas",
+      "image": "/cards/bosnia-and-herzegovina/BIH-14-mladen-jurkas.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mladen-jurkas",
+      "position": "GK"
+    },
+    {
+      "id": "bih-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Ivan Basic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-15-ivan-basic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ivan-basic",
+      "position": "MF"
+    },
+    {
+      "id": "bih-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Ivan Sunjic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-16-ivan-sunjic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ivan-sunjic",
+      "position": "MF"
+    },
+    {
+      "id": "bih-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Amar Memic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-17-amar-memic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "amar-memic",
+      "position": "MF"
+    },
+    {
+      "id": "bih-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Amir Hadziahmetovic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-18-amir-hadziahmetovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "amir-hadziahmetovic",
+      "position": "MF"
+    },
+    {
+      "id": "bih-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Dzenis Burnic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-19-dzenis-burnic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dzenis-burnic",
+      "position": "MF"
+    },
+    {
+      "id": "bih-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Nikola Katic",
+      "image": "/cards/bosnia-and-herzegovina/BIH-20-nikola-katic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nikola-katic",
+      "position": "DF"
+    }
+  ]
+}

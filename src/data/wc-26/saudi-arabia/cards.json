@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "saudi-arabia",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "ksa-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Saudi Arabia Team Logo",
+      "image": "/cards/saudi-arabia/KSA-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "ksa-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Georgios Donis",
+      "image": "/cards/saudi-arabia/KSA-02-georgios-donis.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "georgios-donis",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "ksa-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Nawaf Alaqidi",
+      "image": "/cards/saudi-arabia/KSA-03-nawaf-alaqidi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nawaf-alaqidi",
+      "position": "GK"
+    },
+    {
+      "id": "ksa-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Ali Majrashi",
+      "image": "/cards/saudi-arabia/KSA-04-ali-majrashi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ali-majrashi",
+      "position": "DF"
+    },
+    {
+      "id": "ksa-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Ali Lajami",
+      "image": "/cards/saudi-arabia/KSA-05-ali-lajami.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ali-lajami",
+      "position": "DF"
+    },
+    {
+      "id": "ksa-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Abdulelah Alamri",
+      "image": "/cards/saudi-arabia/KSA-06-abdulelah-alamri.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdulelah-alamri",
+      "position": "DF"
+    },
+    {
+      "id": "ksa-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Hassan Altambakti",
+      "image": "/cards/saudi-arabia/KSA-07-hassan-altambakti.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hassan-altambakti",
+      "position": "DF"
+    },
+    {
+      "id": "ksa-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Nasser Aldawsari",
+      "image": "/cards/saudi-arabia/KSA-08-nasser-aldawsari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nasser-aldawsari",
+      "position": "MF"
+    },
+    {
+      "id": "ksa-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Musab Aljuwayr",
+      "image": "/cards/saudi-arabia/KSA-09-musab-aljuwayr.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "musab-aljuwayr",
+      "position": "MF"
+    },
+    {
+      "id": "ksa-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Aiman Yahya",
+      "image": "/cards/saudi-arabia/KSA-10-aiman-yahya.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "aiman-yahya",
+      "position": "FW"
+    },
+    {
+      "id": "ksa-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Feras Albrikan",
+      "image": "/cards/saudi-arabia/KSA-11-feras-albrikan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "feras-albrikan",
+      "position": "FW"
+    },
+    {
+      "id": "ksa-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Salem Aldawsari",
+      "image": "/cards/saudi-arabia/KSA-12-salem-aldawsari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "salem-aldawsari",
+      "position": "FW"
+    },
+    {
+      "id": "ksa-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Saleh Alshehri",
+      "image": "/cards/saudi-arabia/KSA-13-saleh-alshehri.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "saleh-alshehri",
+      "position": "FW"
+    },
+    {
+      "id": "ksa-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Saud Abdulhamid",
+      "image": "/cards/saudi-arabia/KSA-14-saud-abdulhamid.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "saud-abdulhamid",
+      "position": "DF"
+    },
+    {
+      "id": "ksa-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Nawaf Bu Washl",
+      "image": "/cards/saudi-arabia/KSA-15-nawaf-bu-washl.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nawaf-bu-washl",
+      "position": "DF"
+    },
+    {
+      "id": "ksa-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Hassan Kadish",
+      "image": "/cards/saudi-arabia/KSA-16-hassan-kadish.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hassan-kadish",
+      "position": "DF"
+    },
+    {
+      "id": "ksa-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Abdullah Alkhaibari",
+      "image": "/cards/saudi-arabia/KSA-17-abdullah-alkhaibari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdullah-alkhaibari",
+      "position": "MF"
+    },
+    {
+      "id": "ksa-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Ziyad Aljohani",
+      "image": "/cards/saudi-arabia/KSA-18-ziyad-aljohani.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ziyad-aljohani",
+      "position": "MF"
+    },
+    {
+      "id": "ksa-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Khalid Alghannam",
+      "image": "/cards/saudi-arabia/KSA-19-khalid-alghannam.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "khalid-alghannam",
+      "position": "FW"
+    },
+    {
+      "id": "ksa-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Ala Alhajji",
+      "image": "/cards/saudi-arabia/KSA-20-ala-alhajji.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ala-alhajji",
+      "position": "MF"
+    }
+  ]
+}

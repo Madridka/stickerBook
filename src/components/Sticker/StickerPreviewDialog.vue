@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref, watch, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { PlayerCard, StickerInstance } from '@/types'
+import type { CardDefinition, StickerInstance } from '@/types'
 
 import Dialog from 'primevue/dialog'
 import Button from 'primevue/button'
 
 interface Props {
   visible: boolean
-  card?: PlayerCard
+  card?: CardDefinition
   instance?: StickerInstance
 }
 
@@ -72,7 +72,7 @@ const prepare = (): void => {
           <img
             class="absolute inset-0 h-full w-full rounded-lg object-cover shadow-xl [backface-visibility:hidden]"
             :src="card.image"
-            :alt="card.fullName"
+            :alt="card.displayName"
           />
           <div
             class="absolute inset-0 flex flex-col justify-between rounded-lg bg-ink p-5 text-paper shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-7"
@@ -85,7 +85,7 @@ const prepare = (): void => {
                 {{ t('stickerPreview.player') }}
               </p>
               <strong class="mt-1 block text-xl leading-tight md:text-3xl">{{
-                card.fullName
+                card.displayName
               }}</strong>
               <p class="mt-4 text-xs uppercase tracking-wide text-paper/55 md:mt-6 md:text-sm">
                 {{ t('stickerPreview.quality') }}

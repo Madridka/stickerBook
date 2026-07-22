@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "completed": true,
+  "teamCount": 48,
+  "totalCardCount": 961,
+  "teamCardCount": 48,
+  "coachCardCount": 48,
+  "playerCardCount": 865,
+  "baseCardCount": 960,
+  "specialCardCount": 1,
+  "momentCardCount": 0,
+  "legendCardCount": 0,
+  "missingPositionCount": 0,
+  "teamsWithExtraCards": [
+    {
+      "teamId": "spain",
+      "totalCardCount": 21,
+      "extraCardCount": 1
+    }
+  ],
+  "duplicateIds": [],
+  "duplicateCardNumbers": [],
+  "duplicateAlbumSlots": [],
+  "invalidTeamCardCount": [],
+  "invalidBaseCardCount": [],
+  "missingBaseSlots": [],
+  "invalidBaseCardReferences": [],
+  "inferredSpecialCards": [],
+  "inheritanceWarnings": [],
+  "blockingInheritanceMismatches": [],
+  "unknownKinds": [],
+  "unknownSeries": [],
+  "unknownFinishes": [],
+  "nonStandardWeights": [],
+  "pathErrors": [],
+  "teamProblems": [
+    {
+      "teamId": "algeria",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "argentina",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "australia",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "austria",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "belgium",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "bosnia-and-herzegovina",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "brazil",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "cabo-verde",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "canada",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "colombia",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "congo-dr",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "cote-divoire",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "croatia",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "curacao",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "czechia",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "ecuador",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "egypt",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "england",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "france",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "germany",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "ghana",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "haiti",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "iran",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "iraq",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "japan",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "jordan",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "korea-republic",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "mexico",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "morocco",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "netherlands",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "new-zealand",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "norway",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "panama",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "paraguay",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "portugal",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "qatar",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "saudi-arabia",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "scotland",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "senegal",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "south-africa",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "spain",
+      "totalCards": 21,
+      "baseCards": 20,
+      "additionalCards": 1,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "sweden",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "switzerland",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "tunisia",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "turkiye",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "uruguay",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "usa",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    },
+    {
+      "teamId": "uzbekistan",
+      "totalCards": 20,
+      "baseCards": 20,
+      "additionalCards": 0,
+      "missingPositions": 0,
+      "warningCount": 0,
+      "criticalErrorCount": 0
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "norway",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "nor-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Norway Team Logo",
+      "image": "/cards/norway/NOR-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "nor-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Stale Solbakken",
+      "image": "/cards/norway/NOR-02-stale-solbakken.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "stale-solbakken",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "nor-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Orjan Nyland",
+      "image": "/cards/norway/NOR-03-orjan-nyland.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "orjan-nyland",
+      "position": "GK"
+    },
+    {
+      "id": "nor-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Morten Thorsby",
+      "image": "/cards/norway/NOR-04-morten-thorsby.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "morten-thorsby",
+      "position": "MF"
+    },
+    {
+      "id": "nor-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Kristoffer Ajer",
+      "image": "/cards/norway/NOR-05-kristoffer-ajer.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kristoffer-ajer",
+      "position": "DF"
+    },
+    {
+      "id": "nor-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Leo Ostigard",
+      "image": "/cards/norway/NOR-06-leo-ostigard.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "leo-ostigard",
+      "position": "DF"
+    },
+    {
+      "id": "nor-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "David Moller Wolfe",
+      "image": "/cards/norway/NOR-07-david-moller-wolfe.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "david-moller-wolfe",
+      "position": "DF"
+    },
+    {
+      "id": "nor-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Patrick Berg",
+      "image": "/cards/norway/NOR-08-patrick-berg.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "patrick-berg",
+      "position": "MF"
+    },
+    {
+      "id": "nor-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Alexander Sorloth",
+      "image": "/cards/norway/NOR-09-alexander-sorloth.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alexander-sorloth",
+      "position": "FW"
+    },
+    {
+      "id": "nor-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Sander Berge",
+      "image": "/cards/norway/NOR-10-sander-berge.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sander-berge",
+      "position": "MF"
+    },
+    {
+      "id": "nor-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Erling Haaland",
+      "image": "/cards/norway/NOR-11-erling-haaland.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "erling-haaland",
+      "position": "FW"
+    },
+    {
+      "id": "nor-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Martin Odegaard",
+      "image": "/cards/norway/NOR-12-martin-odegaard.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "martin-odegaard",
+      "position": "MF"
+    },
+    {
+      "id": "nor-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Jorgen Strand Larsen",
+      "image": "/cards/norway/NOR-13-jorgen-strand-larsen.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jorgen-strand-larsen",
+      "position": "FW"
+    },
+    {
+      "id": "nor-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Sander Tangvik",
+      "image": "/cards/norway/NOR-14-sander-tangvik.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sander-tangvik",
+      "position": "GK"
+    },
+    {
+      "id": "nor-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Egil Selvik",
+      "image": "/cards/norway/NOR-15-egil-selvik.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "egil-selvik",
+      "position": "GK"
+    },
+    {
+      "id": "nor-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Fredrik Aursnes",
+      "image": "/cards/norway/NOR-16-fredrik-aursnes.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "fredrik-aursnes",
+      "position": "MF"
+    },
+    {
+      "id": "nor-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Fredrik Bjorkan",
+      "image": "/cards/norway/NOR-17-fredrik-bjorkan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "fredrik-bjorkan",
+      "position": "DF"
+    },
+    {
+      "id": "nor-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Marcus Holmgren Pedersen",
+      "image": "/cards/norway/NOR-18-marcus-holmgren-pedersen.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "marcus-holmgren-pedersen",
+      "position": "DF"
+    },
+    {
+      "id": "nor-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Torbjorn Heggem",
+      "image": "/cards/norway/NOR-19-torbjorn-heggem.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "torbjorn-heggem",
+      "position": "DF"
+    },
+    {
+      "id": "nor-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Kristian Thorstvedt",
+      "image": "/cards/norway/NOR-20-kristian-thorstvedt.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kristian-thorstvedt",
+      "position": "MF"
+    }
+  ]
+}

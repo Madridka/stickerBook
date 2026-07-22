@@ -394,7 +394,7 @@ onBeforeUnmount(clearPeelTimer)
             v-if="item"
             class="pointer-events-none h-full w-full select-none object-cover"
             :src="item.card.image"
-            :alt="item.card.fullName"
+            :alt="item.card.displayName"
             draggable="false"
           />
         </button>
@@ -425,7 +425,7 @@ onBeforeUnmount(clearPeelTimer)
           v-if="item"
           class="h-full w-full object-cover"
           :src="item.card.image"
-          :alt="item.card.fullName"
+          :alt="item.card.displayName"
         />
         <button
           v-for="(zone, index) in pressZones"

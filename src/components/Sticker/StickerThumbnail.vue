@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { PlayerCard, StickerInstance } from '@/types'
+import type { CardDefinition, StickerInstance } from '@/types'
 
 interface Props {
-  card: PlayerCard
+  card: CardDefinition
   instance: StickerInstance
 }
 
@@ -14,7 +14,7 @@ defineProps<Props>()
     <img
       class="h-full w-full object-contain"
       :src="card.image"
-      :alt="card.fullName"
+      :alt="card.displayName"
       draggable="false"
     />
     <span class="absolute bottom-1 left-1 rounded bg-ink/85 px-1 text-[9px] font-bold text-paper">

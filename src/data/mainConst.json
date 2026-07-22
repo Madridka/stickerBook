@@ -1,6 +1,57 @@
 {
   "price": 20,
   "cardsPerPack": 5,
+  "dropEngine": {
+    "activeVersion": 2,
+    "availableVersions": [2],
+    "defaultSelectionWeight": 1
+  },
+  "packConfigs": {
+    "standard": {
+      "cardsPerPack": 5,
+      "rarityOdds": {
+        "common": 91.61,
+        "uncommon": 4,
+        "rare": 4,
+        "epic": 0.31,
+        "legendary": 0.08
+      }
+    }
+  },
+  "collection": {
+    "id": "wc-26",
+    "expectedTeamCount": 48,
+    "baseAlbumSlotsPerTeam": 20
+  },
+  "cardCatalog": {
+    "schemaVersion": 2,
+    "kinds": ["team", "coach", "player"],
+    "positions": ["GK", "DF", "MF", "FW"],
+    "coachRoles": ["HEAD_COACH"],
+    "rarities": ["common", "uncommon", "rare", "epic", "legendary"],
+    "series": ["base", "special", "moment", "legend"],
+    "finishes": ["standard", "foil", "holographic"],
+    "defaults": {
+      "rarity": "common",
+      "series": "base",
+      "finish": "standard",
+      "selectionWeight": 1
+    }
+  },
+  "cardAssets": {
+    "width": 512,
+    "height": 768,
+    "format": "webp"
+  },
+  "legacyMigration": {
+    "weightToRarity": [
+      { "minWeight": 20, "rarity": "common" },
+      { "minWeight": 15, "rarity": "uncommon" },
+      { "minWeight": 10, "rarity": "rare" },
+      { "minWeight": 5, "rarity": "epic" },
+      { "minWeight": 0, "rarity": "legendary" }
+    ]
+  },
   "clicker": {
     "baseReward": 1,
     "energyLimit": 100,

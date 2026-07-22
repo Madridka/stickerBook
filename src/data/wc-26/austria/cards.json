@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "austria",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "aut-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Austria Team Logo",
+      "image": "/cards/austria/AUT-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "aut-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Ralf Rangnick",
+      "image": "/cards/austria/AUT-02-ralf-rangnick.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "ralf-rangnick",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "aut-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Alexander Schlager",
+      "image": "/cards/austria/AUT-03-alexander-schlager.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alexander-schlager",
+      "position": "GK"
+    },
+    {
+      "id": "aut-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "David Affengruber",
+      "image": "/cards/austria/AUT-04-david-affengruber.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "david-affengruber",
+      "position": "DF"
+    },
+    {
+      "id": "aut-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Kevin Danso",
+      "image": "/cards/austria/AUT-05-kevin-danso.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kevin-danso",
+      "position": "DF"
+    },
+    {
+      "id": "aut-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Xaver Schlager",
+      "image": "/cards/austria/AUT-06-xaver-schlager.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "xaver-schlager",
+      "position": "MF"
+    },
+    {
+      "id": "aut-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Stefan Posch",
+      "image": "/cards/austria/AUT-07-stefan-posch.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "stefan-posch",
+      "position": "DF"
+    },
+    {
+      "id": "aut-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Nicolas Seiwald",
+      "image": "/cards/austria/AUT-08-nicolas-seiwald.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nicolas-seiwald",
+      "position": "MF"
+    },
+    {
+      "id": "aut-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Marko Arnautovic",
+      "image": "/cards/austria/AUT-09-marko-arnautovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "marko-arnautovic",
+      "position": "FW"
+    },
+    {
+      "id": "aut-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "David Alaba",
+      "image": "/cards/austria/AUT-10-david-alaba.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "david-alaba",
+      "position": "DF"
+    },
+    {
+      "id": "aut-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Marcel Sabitzer",
+      "image": "/cards/austria/AUT-11-marcel-sabitzer.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "marcel-sabitzer",
+      "position": "MF"
+    },
+    {
+      "id": "aut-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Florian Grillitsch",
+      "image": "/cards/austria/AUT-12-florian-grillitsch.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "florian-grillitsch",
+      "position": "MF"
+    },
+    {
+      "id": "aut-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Michael Gregoritsch",
+      "image": "/cards/austria/AUT-13-michael-gregoritsch.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "michael-gregoritsch",
+      "position": "FW"
+    },
+    {
+      "id": "aut-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Florian Wiegele",
+      "image": "/cards/austria/AUT-14-florian-wiegele.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "florian-wiegele",
+      "position": "GK"
+    },
+    {
+      "id": "aut-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Patrick Pentz",
+      "image": "/cards/austria/AUT-15-patrick-pentz.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "patrick-pentz",
+      "position": "GK"
+    },
+    {
+      "id": "aut-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Sasa Kalajdzic",
+      "image": "/cards/austria/AUT-16-sasa-kalajdzic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sasa-kalajdzic",
+      "position": "FW"
+    },
+    {
+      "id": "aut-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Philipp Lienhart",
+      "image": "/cards/austria/AUT-17-philipp-lienhart.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "philipp-lienhart",
+      "position": "DF"
+    },
+    {
+      "id": "aut-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Phillip Mwene",
+      "image": "/cards/austria/AUT-18-phillip-mwene.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "phillip-mwene",
+      "position": "DF"
+    },
+    {
+      "id": "aut-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Carney Chukwuemeka",
+      "image": "/cards/austria/AUT-19-carney-chukwuemeka.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "carney-chukwuemeka",
+      "position": "MF"
+    },
+    {
+      "id": "aut-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Romano Schmid",
+      "image": "/cards/austria/AUT-20-romano-schmid.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "romano-schmid",
+      "position": "MF"
+    }
+  ]
+}

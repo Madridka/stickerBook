@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "south-africa",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "rsa-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "South Africa Team Logo",
+      "image": "/cards/south-africa/RSA-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "rsa-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Hugo Broos",
+      "image": "/cards/south-africa/RSA-02-hugo-broos.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "hugo-broos",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "rsa-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Ronwen Williams",
+      "image": "/cards/south-africa/RSA-03-ronwen-williams.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ronwen-williams",
+      "position": "GK"
+    },
+    {
+      "id": "rsa-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Thabang Matuludi",
+      "image": "/cards/south-africa/RSA-04-thabang-matuludi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "thabang-matuludi",
+      "position": "DF"
+    },
+    {
+      "id": "rsa-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Khulumani Ndamane",
+      "image": "/cards/south-africa/RSA-05-khulumani-ndamane.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "khulumani-ndamane",
+      "position": "DF"
+    },
+    {
+      "id": "rsa-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Teboho Mokoena",
+      "image": "/cards/south-africa/RSA-06-teboho-mokoena.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "teboho-mokoena",
+      "position": "MF"
+    },
+    {
+      "id": "rsa-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Thalente Mbatha",
+      "image": "/cards/south-africa/RSA-07-thalente-mbatha.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "thalente-mbatha",
+      "position": "MF"
+    },
+    {
+      "id": "rsa-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Aubrey Modiba",
+      "image": "/cards/south-africa/RSA-08-aubrey-modiba.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "aubrey-modiba",
+      "position": "DF"
+    },
+    {
+      "id": "rsa-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Oswin Appollis",
+      "image": "/cards/south-africa/RSA-09-oswin-appollis.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "oswin-appollis",
+      "position": "FW"
+    },
+    {
+      "id": "rsa-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Tshepang Moremi",
+      "image": "/cards/south-africa/RSA-10-tshepang-moremi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tshepang-moremi",
+      "position": "FW"
+    },
+    {
+      "id": "rsa-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Lyle Foster",
+      "image": "/cards/south-africa/RSA-11-lyle-foster.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lyle-foster",
+      "position": "FW"
+    },
+    {
+      "id": "rsa-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Relebohile Mofokeng",
+      "image": "/cards/south-africa/RSA-12-relebohile-mofokeng.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "relebohile-mofokeng",
+      "position": "FW"
+    },
+    {
+      "id": "rsa-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Themba Zwane",
+      "image": "/cards/south-africa/RSA-13-themba-zwane.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "themba-zwane",
+      "position": "MF"
+    },
+    {
+      "id": "rsa-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Thapelo Maseko",
+      "image": "/cards/south-africa/RSA-14-thapelo-maseko.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "thapelo-maseko",
+      "position": "FW"
+    },
+    {
+      "id": "rsa-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Sphephelo Sithole",
+      "image": "/cards/south-africa/RSA-15-sphephelo-sithole.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sphephelo-sithole",
+      "position": "MF"
+    },
+    {
+      "id": "rsa-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Mbekezeli Mbokazi",
+      "image": "/cards/south-africa/RSA-16-mbekezeli-mbokazi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mbekezeli-mbokazi",
+      "position": "DF"
+    },
+    {
+      "id": "rsa-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Iqraam Rayners",
+      "image": "/cards/south-africa/RSA-17-iqraam-rayners.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "iqraam-rayners",
+      "position": "FW"
+    },
+    {
+      "id": "rsa-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Sipho Chaine",
+      "image": "/cards/south-africa/RSA-18-sipho-chaine.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sipho-chaine",
+      "position": "GK"
+    },
+    {
+      "id": "rsa-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Evidence Makgopa",
+      "image": "/cards/south-africa/RSA-19-evidence-makgopa.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "evidence-makgopa",
+      "position": "FW"
+    },
+    {
+      "id": "rsa-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Samukele Kabini",
+      "image": "/cards/south-africa/RSA-20-samukele-kabini.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "samukele-kabini",
+      "position": "DF"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "cote-divoire",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "civ-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Cote d'Ivoire Team Logo",
+      "image": "/cards/cote-divoire/CIV-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "civ-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Emerse Fae",
+      "image": "/cards/cote-divoire/CIV-02-emerse-fae.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "emerse-fae",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "civ-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Yahia Fofana",
+      "image": "/cards/cote-divoire/CIV-03-yahia-fofana.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yahia-fofana",
+      "position": "GK"
+    },
+    {
+      "id": "civ-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Ousmane Diomande",
+      "image": "/cards/cote-divoire/CIV-04-ousmane-diomande.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ousmane-diomande",
+      "position": "DF"
+    },
+    {
+      "id": "civ-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Ghislain Konan",
+      "image": "/cards/cote-divoire/CIV-05-ghislain-konan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ghislain-konan",
+      "position": "DF"
+    },
+    {
+      "id": "civ-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Jean Seri",
+      "image": "/cards/cote-divoire/CIV-06-jean-seri.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jean-seri",
+      "position": "MF"
+    },
+    {
+      "id": "civ-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Wilfried Singo",
+      "image": "/cards/cote-divoire/CIV-07-wilfried-singo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "wilfried-singo",
+      "position": "DF"
+    },
+    {
+      "id": "civ-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Seko Fofana",
+      "image": "/cards/cote-divoire/CIV-08-seko-fofana.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "seko-fofana",
+      "position": "MF"
+    },
+    {
+      "id": "civ-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Odilon Kossounou",
+      "image": "/cards/cote-divoire/CIV-09-odilon-kossounou.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "odilon-kossounou",
+      "position": "DF"
+    },
+    {
+      "id": "civ-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Franck Kessie",
+      "image": "/cards/cote-divoire/CIV-10-franck-kessie.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "franck-kessie",
+      "position": "MF"
+    },
+    {
+      "id": "civ-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Ange-Yoan Bonny",
+      "image": "/cards/cote-divoire/CIV-11-ange-yoan-bonny.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ange-yoan-bonny",
+      "position": "FW"
+    },
+    {
+      "id": "civ-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Simon Adingra",
+      "image": "/cards/cote-divoire/CIV-12-simon-adingra.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "simon-adingra",
+      "position": "FW"
+    },
+    {
+      "id": "civ-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Yan Diomande",
+      "image": "/cards/cote-divoire/CIV-13-yan-diomande.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yan-diomande",
+      "position": "FW"
+    },
+    {
+      "id": "civ-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Elye Wahi",
+      "image": "/cards/cote-divoire/CIV-14-elye-wahi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "elye-wahi",
+      "position": "FW"
+    },
+    {
+      "id": "civ-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Christopher Operi",
+      "image": "/cards/cote-divoire/CIV-15-christopher-operi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "christopher-operi",
+      "position": "DF"
+    },
+    {
+      "id": "civ-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Oumar Diakite",
+      "image": "/cards/cote-divoire/CIV-16-oumar-diakite.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "oumar-diakite",
+      "position": "FW"
+    },
+    {
+      "id": "civ-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Amad Diallo",
+      "image": "/cards/cote-divoire/CIV-17-amad-diallo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "amad-diallo",
+      "position": "FW"
+    },
+    {
+      "id": "civ-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Mohamed Kone",
+      "image": "/cards/cote-divoire/CIV-18-mohamed-kone.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohamed-kone",
+      "position": "GK"
+    },
+    {
+      "id": "civ-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Guela Doue",
+      "image": "/cards/cote-divoire/CIV-19-guela-doue.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "guela-doue",
+      "position": "DF"
+    },
+    {
+      "id": "civ-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Ibrahim Sangare",
+      "image": "/cards/cote-divoire/CIV-20-ibrahim-sangare.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ibrahim-sangare",
+      "position": "MF"
+    }
+  ]
+}

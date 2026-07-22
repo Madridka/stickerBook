@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "korea-republic",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "kor-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Korea Republic Team Logo",
+      "image": "/cards/korea-republic/KOR-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "kor-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Myungbo Hong",
+      "image": "/cards/korea-republic/KOR-02-myungbo-hong.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "myungbo-hong",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "kor-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Seunggyu Kim",
+      "image": "/cards/korea-republic/KOR-03-seunggyu-kim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "seunggyu-kim",
+      "position": "GK"
+    },
+    {
+      "id": "kor-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Hanbeom Lee",
+      "image": "/cards/korea-republic/KOR-04-hanbeom-lee.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hanbeom-lee",
+      "position": "DF"
+    },
+    {
+      "id": "kor-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Gihyuk Lee",
+      "image": "/cards/korea-republic/KOR-05-gihyuk-lee.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gihyuk-lee",
+      "position": "MF"
+    },
+    {
+      "id": "kor-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Minjae Kim",
+      "image": "/cards/korea-republic/KOR-06-minjae-kim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "minjae-kim",
+      "position": "DF"
+    },
+    {
+      "id": "kor-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Taehyeon Kim",
+      "image": "/cards/korea-republic/KOR-07-taehyeon-kim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "taehyeon-kim",
+      "position": "DF"
+    },
+    {
+      "id": "kor-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Inbeom Hwang",
+      "image": "/cards/korea-republic/KOR-08-inbeom-hwang.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "inbeom-hwang",
+      "position": "MF"
+    },
+    {
+      "id": "kor-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Heungmin Son",
+      "image": "/cards/korea-republic/KOR-09-heungmin-son.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "heungmin-son",
+      "position": "FW"
+    },
+    {
+      "id": "kor-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Seungho Paik",
+      "image": "/cards/korea-republic/KOR-10-seungho-paik.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "seungho-paik",
+      "position": "MF"
+    },
+    {
+      "id": "kor-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Guesung Cho",
+      "image": "/cards/korea-republic/KOR-11-guesung-cho.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "guesung-cho",
+      "position": "FW"
+    },
+    {
+      "id": "kor-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Jaesung Lee",
+      "image": "/cards/korea-republic/KOR-12-jaesung-lee.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jaesung-lee",
+      "position": "MF"
+    },
+    {
+      "id": "kor-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Heechan Hwang",
+      "image": "/cards/korea-republic/KOR-13-heechan-hwang.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "heechan-hwang",
+      "position": "MF"
+    },
+    {
+      "id": "kor-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Bumkeun Song",
+      "image": "/cards/korea-republic/KOR-14-bumkeun-song.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "bumkeun-song",
+      "position": "GK"
+    },
+    {
+      "id": "kor-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Taeseok Lee",
+      "image": "/cards/korea-republic/KOR-15-taeseok-lee.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "taeseok-lee",
+      "position": "DF"
+    },
+    {
+      "id": "kor-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Wije Cho",
+      "image": "/cards/korea-republic/KOR-16-wije-cho.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "wije-cho",
+      "position": "DF"
+    },
+    {
+      "id": "kor-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Moonhwan Kim",
+      "image": "/cards/korea-republic/KOR-17-moonhwan-kim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "moonhwan-kim",
+      "position": "DF"
+    },
+    {
+      "id": "kor-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Jinseob Park",
+      "image": "/cards/korea-republic/KOR-18-jinseob-park.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jinseob-park",
+      "position": "DF"
+    },
+    {
+      "id": "kor-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Junho Bae",
+      "image": "/cards/korea-republic/KOR-19-junho-bae.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "junho-bae",
+      "position": "MF"
+    },
+    {
+      "id": "kor-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Hyeongyu Oh",
+      "image": "/cards/korea-republic/KOR-20-hyeongyu-oh.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hyeongyu-oh",
+      "position": "FW"
+    }
+  ]
+}

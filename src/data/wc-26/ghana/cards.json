@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "ghana",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "gha-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Ghana Team Logo",
+      "image": "/cards/ghana/GHA-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "gha-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Carlos Queiroz",
+      "image": "/cards/ghana/GHA-02-carlos-queiroz.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "carlos-queiroz",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "gha-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Lawrence Zigi",
+      "image": "/cards/ghana/GHA-03-lawrence-zigi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lawrence-zigi",
+      "position": "GK"
+    },
+    {
+      "id": "gha-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Alidu Seidu",
+      "image": "/cards/ghana/GHA-04-alidu-seidu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "alidu-seidu",
+      "position": "DF"
+    },
+    {
+      "id": "gha-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Caleb Yirenkyi",
+      "image": "/cards/ghana/GHA-05-caleb-yirenkyi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "caleb-yirenkyi",
+      "position": "MF"
+    },
+    {
+      "id": "gha-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Jonas Adjetey",
+      "image": "/cards/ghana/GHA-06-jonas-adjetey.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jonas-adjetey",
+      "position": "DF"
+    },
+    {
+      "id": "gha-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Thomas Partey",
+      "image": "/cards/ghana/GHA-07-thomas-partey.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "thomas-partey",
+      "position": "MF"
+    },
+    {
+      "id": "gha-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Abdul Mumin",
+      "image": "/cards/ghana/GHA-08-abdul-mumin.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdul-mumin",
+      "position": "DF"
+    },
+    {
+      "id": "gha-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Abdul Fatawu",
+      "image": "/cards/ghana/GHA-09-abdul-fatawu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdul-fatawu",
+      "position": "FW"
+    },
+    {
+      "id": "gha-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Kwasi Sibo",
+      "image": "/cards/ghana/GHA-10-kwasi-sibo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kwasi-sibo",
+      "position": "MF"
+    },
+    {
+      "id": "gha-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Jordan Ayew",
+      "image": "/cards/ghana/GHA-11-jordan-ayew.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jordan-ayew",
+      "position": "FW"
+    },
+    {
+      "id": "gha-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Brandon Thomas-Asante",
+      "image": "/cards/ghana/GHA-12-brandon-thomas-asante.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "brandon-thomas-asante",
+      "position": "FW"
+    },
+    {
+      "id": "gha-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Antoine Semenyo",
+      "image": "/cards/ghana/GHA-13-antoine-semenyo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "antoine-semenyo",
+      "position": "MF"
+    },
+    {
+      "id": "gha-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Joseph Anang",
+      "image": "/cards/ghana/GHA-14-joseph-anang.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "joseph-anang",
+      "position": "GK"
+    },
+    {
+      "id": "gha-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Christopher Bonsu Baah",
+      "image": "/cards/ghana/GHA-15-christopher-bonsu-baah.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "christopher-bonsu-baah",
+      "position": "FW"
+    },
+    {
+      "id": "gha-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Gideon Mensah",
+      "image": "/cards/ghana/GHA-16-gideon-mensah.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gideon-mensah",
+      "position": "DF"
+    },
+    {
+      "id": "gha-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Elisha Owusu",
+      "image": "/cards/ghana/GHA-17-elisha-owusu.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "elisha-owusu",
+      "position": "MF"
+    },
+    {
+      "id": "gha-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Benjamin Asare",
+      "image": "/cards/ghana/GHA-18-benjamin-asare.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "benjamin-asare",
+      "position": "GK"
+    },
+    {
+      "id": "gha-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Baba Rahman",
+      "image": "/cards/ghana/GHA-19-baba-rahman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "baba-rahman",
+      "position": "DF"
+    },
+    {
+      "id": "gha-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Jerome Opoku",
+      "image": "/cards/ghana/GHA-20-jerome-opoku.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jerome-opoku",
+      "position": "DF"
+    }
+  ]
+}

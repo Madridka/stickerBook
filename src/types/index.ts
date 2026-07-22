@@ -1,19 +1,24 @@
 export type PlayerPosition = 'GK' | 'DF' | 'MF' | 'FW'
-export type CardType = 'logo' | 'player' | 'squad'
 export type StickerLocation = 'inventory' | 'collection' | 'album' | 'duplicate' | 'deleted'
 
-export interface PlayerCard {
-  id: string
-  albumSlotId?: string
-  number?: number
-  firstName?: string
-  lastName?: string
-  fullName: string
-  image: string
-  type: CardType
-  team: string
-  weight: number
-}
+export type {
+  AcquisitionSource,
+  BaseCard,
+  CardDefinition,
+  Card as CatalogCard,
+  CardCatalog,
+  CardCatalogDefaults,
+  CardFinish,
+  CardKind,
+  CardRarity,
+  CardSeries,
+  CoachCard,
+  CoachRole,
+  NormalizedCardCatalog,
+  PlayerCard as CatalogPlayerCard,
+  PlayerCardDefinition,
+  TeamCard,
+} from './cardCatalog'
 
 export interface StickerInstance {
   id: string
@@ -88,7 +93,7 @@ export interface StickerDropResult {
 }
 
 export interface StickerTrayItem {
-  card: PlayerCard
+  card: import('./cardCatalog').CardDefinition
   instance: StickerInstance
 }
 

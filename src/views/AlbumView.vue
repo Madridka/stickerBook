@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref }
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
-import cards from '@/data/wc-26/players'
+import cards from '@/data/wc-26/catalog'
 import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
@@ -13,7 +13,7 @@ import projectLogo from '../../assets/game/wc-26/main/sticker-book-logo.png?url'
 import type {
   AlbumGeometryPage,
   CollectionItem,
-  PlayerCard,
+  CardDefinition,
   StickerDropResult,
   StickerPlacement,
   StickerPreparation,
@@ -177,12 +177,12 @@ const placedOnVisiblePages: ComputedRef<number> = computed((): number =>
   ),
 )
 const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
-const getCard = (playerId: string): PlayerCard | undefined =>
+const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
-const getCardAlbumSlotId = (playerId: string): string => getCard(playerId)?.albumSlotId ?? playerId
+const getCardAlbumSlotId = (playerId: string): string => getCard(playerId)?.baseCardId ?? playerId
 
 type PlacedCard = {
-  card: PlayerCard
+  card: CardDefinition
   instance: StickerInstance
   placement: StickerPlacement
   preparation?: StickerPreparation
@@ -205,7 +205,7 @@ const getPlacedCards = (slotId: string): PlacedCard[] =>
         normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
     )
     .map(({ instance }): PlacedCard | undefined => {
-      const card: PlayerCard | undefined = getCard(instance.playerId)
+      const card: CardDefinition | undefined = getCard(instance.playerId)
       return card && instance.placement
         ? { card, instance, placement: instance.placement, preparation: instance.preparation }
         : undefined
@@ -234,14 +234,14 @@ const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[]
   collection.items
     .filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location))
     .map(({ instance }): StickerTrayItem | undefined => {
-      const card: PlayerCard | undefined = getCard(instance.playerId)
+      const card: CardDefinition | undefined = getCard(instance.playerId)
       return card ? { card, instance } : undefined
     })
     .filter((item: StickerTrayItem | undefined): item is StickerTrayItem => Boolean(item)),
 )
 
 const openPreview = (instance: StickerInstance): void => {
-  const card: PlayerCard | undefined = getCard(instance.playerId)
+  const card: CardDefinition | undefined = getCard(instance.playerId)
   if (!card) return
   previewItem.value = { card, instance }
   isPreviewOpen.value = true

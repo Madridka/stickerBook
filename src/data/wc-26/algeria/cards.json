@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "algeria",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "alg-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Algeria Team Logo",
+      "image": "/cards/algeria/ALG-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "alg-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Vladimir Petkovic",
+      "image": "/cards/algeria/ALG-02-vladimir-petkovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "vladimir-petkovic",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "alg-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Melvin Mastil",
+      "image": "/cards/algeria/ALG-03-melvin-mastil.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "melvin-mastil",
+      "position": "GK"
+    },
+    {
+      "id": "alg-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Aissa Mandi",
+      "image": "/cards/algeria/ALG-04-aissa-mandi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "aissa-mandi",
+      "position": "DF"
+    },
+    {
+      "id": "alg-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Achref Abada",
+      "image": "/cards/algeria/ALG-05-achref-abada.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "achref-abada",
+      "position": "DF"
+    },
+    {
+      "id": "alg-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Mohamed Tougai",
+      "image": "/cards/algeria/ALG-06-mohamed-tougai.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohamed-tougai",
+      "position": "DF"
+    },
+    {
+      "id": "alg-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Zineddine Belaid",
+      "image": "/cards/algeria/ALG-07-zineddine-belaid.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "zineddine-belaid",
+      "position": "DF"
+    },
+    {
+      "id": "alg-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Ramiz Zerrouki",
+      "image": "/cards/algeria/ALG-08-ramiz-zerrouki.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ramiz-zerrouki",
+      "position": "MF"
+    },
+    {
+      "id": "alg-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Riyad Mahrez",
+      "image": "/cards/algeria/ALG-09-riyad-mahrez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "riyad-mahrez",
+      "position": "FW"
+    },
+    {
+      "id": "alg-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Houssem Aouar",
+      "image": "/cards/algeria/ALG-10-houssem-aouar.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "houssem-aouar",
+      "position": "MF"
+    },
+    {
+      "id": "alg-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Amine Gouiri",
+      "image": "/cards/algeria/ALG-11-amine-gouiri.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "amine-gouiri",
+      "position": "FW"
+    },
+    {
+      "id": "alg-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Fares Chaibi",
+      "image": "/cards/algeria/ALG-12-fares-chaibi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "fares-chaibi",
+      "position": "MF"
+    },
+    {
+      "id": "alg-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Anis Hadj Moussa",
+      "image": "/cards/algeria/ALG-13-anis-hadj-moussa.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "anis-hadj-moussa",
+      "position": "FW"
+    },
+    {
+      "id": "alg-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Nadhir Benbouali",
+      "image": "/cards/algeria/ALG-14-nadhir-benbouali.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "nadhir-benbouali",
+      "position": "FW"
+    },
+    {
+      "id": "alg-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Jaouen Hadjam",
+      "image": "/cards/algeria/ALG-15-jaouen-hadjam.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jaouen-hadjam",
+      "position": "DF"
+    },
+    {
+      "id": "alg-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Hicham Boudaoui",
+      "image": "/cards/algeria/ALG-16-hicham-boudaoui.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hicham-boudaoui",
+      "position": "MF"
+    },
+    {
+      "id": "alg-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Rayan Ait-Nouri",
+      "image": "/cards/algeria/ALG-17-rayan-ait-nouri.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "rayan-ait-nouri",
+      "position": "DF"
+    },
+    {
+      "id": "alg-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Oussama Benbot",
+      "image": "/cards/algeria/ALG-18-oussama-benbot.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "oussama-benbot",
+      "position": "GK"
+    },
+    {
+      "id": "alg-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Rafik Belghali",
+      "image": "/cards/algeria/ALG-19-rafik-belghali.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "rafik-belghali",
+      "position": "DF"
+    },
+    {
+      "id": "alg-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Mohamed Amoura",
+      "image": "/cards/algeria/ALG-20-mohamed-amoura.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohamed-amoura",
+      "position": "FW"
+    }
+  ]
+}

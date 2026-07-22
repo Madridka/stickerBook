@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "panama",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "pan-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Panama Team Logo",
+      "image": "/cards/panama/PAN-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "pan-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Thomas Christiansen",
+      "image": "/cards/panama/PAN-02-thomas-christiansen.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "thomas-christiansen",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "pan-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Luis Mejia",
+      "image": "/cards/panama/PAN-03-luis-mejia.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "luis-mejia",
+      "position": "GK"
+    },
+    {
+      "id": "pan-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Cesar Blackman",
+      "image": "/cards/panama/PAN-04-cesar-blackman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "cesar-blackman",
+      "position": "DF"
+    },
+    {
+      "id": "pan-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Jose Cordoba",
+      "image": "/cards/panama/PAN-05-jose-cordoba.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jose-cordoba",
+      "position": "DF"
+    },
+    {
+      "id": "pan-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Fidel Escobar",
+      "image": "/cards/panama/PAN-06-fidel-escobar.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "fidel-escobar",
+      "position": "DF"
+    },
+    {
+      "id": "pan-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Edgardo Farina",
+      "image": "/cards/panama/PAN-07-edgardo-farina.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "edgardo-farina",
+      "position": "DF"
+    },
+    {
+      "id": "pan-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Cristian Martinez",
+      "image": "/cards/panama/PAN-08-cristian-martinez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "cristian-martinez",
+      "position": "MF"
+    },
+    {
+      "id": "pan-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Jose Rodriguez",
+      "image": "/cards/panama/PAN-09-jose-rodriguez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jose-rodriguez",
+      "position": "MF"
+    },
+    {
+      "id": "pan-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Adalberto Carrasquilla",
+      "image": "/cards/panama/PAN-10-adalberto-carrasquilla.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "adalberto-carrasquilla",
+      "position": "MF"
+    },
+    {
+      "id": "pan-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Tomas Rodriguez",
+      "image": "/cards/panama/PAN-11-tomas-rodriguez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tomas-rodriguez",
+      "position": "FW"
+    },
+    {
+      "id": "pan-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Ismael Diaz",
+      "image": "/cards/panama/PAN-12-ismael-diaz.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ismael-diaz",
+      "position": "MF"
+    },
+    {
+      "id": "pan-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Edgar Barcenas",
+      "image": "/cards/panama/PAN-13-edgar-barcenas.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "edgar-barcenas",
+      "position": "MF"
+    },
+    {
+      "id": "pan-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Cesar Samudio",
+      "image": "/cards/panama/PAN-14-cesar-samudio.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "cesar-samudio",
+      "position": "GK"
+    },
+    {
+      "id": "pan-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Jiovany Ramos",
+      "image": "/cards/panama/PAN-15-jiovany-ramos.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jiovany-ramos",
+      "position": "DF"
+    },
+    {
+      "id": "pan-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Carlos Harvey",
+      "image": "/cards/panama/PAN-16-carlos-harvey.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "carlos-harvey",
+      "position": "DF"
+    },
+    {
+      "id": "pan-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Eric Davis",
+      "image": "/cards/panama/PAN-17-eric-davis.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "eric-davis",
+      "position": "DF"
+    },
+    {
+      "id": "pan-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Andres Andrade",
+      "image": "/cards/panama/PAN-18-andres-andrade.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "andres-andrade",
+      "position": "DF"
+    },
+    {
+      "id": "pan-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Jose Fajardo",
+      "image": "/cards/panama/PAN-19-jose-fajardo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jose-fajardo",
+      "position": "FW"
+    },
+    {
+      "id": "pan-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Cecilio Waterman",
+      "image": "/cards/panama/PAN-20-cecilio-waterman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "cecilio-waterman",
+      "position": "FW"
+    }
+  ]
+}

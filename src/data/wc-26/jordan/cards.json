@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "jordan",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "jor-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Jordan Team Logo",
+      "image": "/cards/jordan/JOR-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "jor-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Jamal Sellami",
+      "image": "/cards/jordan/JOR-02-jamal-sellami.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "jamal-sellami",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "jor-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Yazeed Abulaila",
+      "image": "/cards/jordan/JOR-03-yazeed-abulaila.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yazeed-abulaila",
+      "position": "GK"
+    },
+    {
+      "id": "jor-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Mohammad Abuhasheesh",
+      "image": "/cards/jordan/JOR-04-mohammad-abuhasheesh.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohammad-abuhasheesh",
+      "position": "DF"
+    },
+    {
+      "id": "jor-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Abdallah Nasib",
+      "image": "/cards/jordan/JOR-05-abdallah-nasib.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "abdallah-nasib",
+      "position": "DF"
+    },
+    {
+      "id": "jor-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Husam Abudahab",
+      "image": "/cards/jordan/JOR-06-husam-abudahab.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "husam-abudahab",
+      "position": "DF"
+    },
+    {
+      "id": "jor-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Yazan Alarab",
+      "image": "/cards/jordan/JOR-07-yazan-alarab.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yazan-alarab",
+      "position": "DF"
+    },
+    {
+      "id": "jor-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Amer Jamous",
+      "image": "/cards/jordan/JOR-08-amer-jamous.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "amer-jamous",
+      "position": "MF"
+    },
+    {
+      "id": "jor-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Mohammad Abuzraiq",
+      "image": "/cards/jordan/JOR-09-mohammad-abuzraiq.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohammad-abuzraiq",
+      "position": "FW"
+    },
+    {
+      "id": "jor-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Noor Alrawabdeh",
+      "image": "/cards/jordan/JOR-10-noor-alrawabdeh.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "noor-alrawabdeh",
+      "position": "MF"
+    },
+    {
+      "id": "jor-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Ali Olwan",
+      "image": "/cards/jordan/JOR-11-ali-olwan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ali-olwan",
+      "position": "FW"
+    },
+    {
+      "id": "jor-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Mousa Altamari",
+      "image": "/cards/jordan/JOR-12-mousa-altamari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mousa-altamari",
+      "position": "FW"
+    },
+    {
+      "id": "jor-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Odeh Fakhoury",
+      "image": "/cards/jordan/JOR-13-odeh-fakhoury.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "odeh-fakhoury",
+      "position": "FW"
+    },
+    {
+      "id": "jor-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Noureddin Nour Baniateyah",
+      "image": "/cards/jordan/JOR-14-noureddin-nour-baniateyah.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "noureddin-nour-baniateyah",
+      "position": "GK"
+    },
+    {
+      "id": "jor-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Mahmoud Almardi",
+      "image": "/cards/jordan/JOR-15-mahmoud-almardi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mahmoud-almardi",
+      "position": "FW"
+    },
+    {
+      "id": "jor-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Rajaei Ayed",
+      "image": "/cards/jordan/JOR-16-rajaei-ayed.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "rajaei-ayed",
+      "position": "MF"
+    },
+    {
+      "id": "jor-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Ibrahim Sadeh",
+      "image": "/cards/jordan/JOR-17-ibrahim-sadeh.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ibrahim-sadeh",
+      "position": "MF"
+    },
+    {
+      "id": "jor-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Mohammad Abualnadi",
+      "image": "/cards/jordan/JOR-18-mohammad-abualnadi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohammad-abualnadi",
+      "position": "DF"
+    },
+    {
+      "id": "jor-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Saleem Obaid",
+      "image": "/cards/jordan/JOR-19-saleem-obaid.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "saleem-obaid",
+      "position": "DF"
+    },
+    {
+      "id": "jor-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Mohammad Abughoush",
+      "image": "/cards/jordan/JOR-20-mohammad-abughoush.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohammad-abughoush",
+      "position": "MF"
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "senegal",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "sen-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Senegal Team Logo",
+      "image": "/cards/senegal/SEN-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "sen-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Pape Thiaw",
+      "image": "/cards/senegal/SEN-02-pape-thiaw.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "pape-thiaw",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "sen-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Édouard Mendy",
+      "image": "/cards/senegal/SEN-03-edouard-mendy.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "player",
+      "personId": "edouard-mendy",
+      "position": "GK"
+    },
+    {
+      "id": "sen-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Yehvann Diouf",
+      "image": "/cards/senegal/SEN-04-yehvann-diouf.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "yehvann-diouf",
+      "position": "GK"
+    },
+    {
+      "id": "sen-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Kalidou Koulibaly",
+      "image": "/cards/senegal/SEN-05-kalidou-koulibaly.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "player",
+      "personId": "kalidou-koulibaly",
+      "position": "DF"
+    },
+    {
+      "id": "sen-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Mamadou Sarr",
+      "image": "/cards/senegal/SEN-06-mamadou-sarr.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mamadou-sarr",
+      "position": "DF"
+    },
+    {
+      "id": "sen-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Moussa Niakhaté",
+      "image": "/cards/senegal/SEN-07-moussa-niakhate.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "moussa-niakhate",
+      "position": "DF"
+    },
+    {
+      "id": "sen-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "El Hadji Malick Diouf",
+      "image": "/cards/senegal/SEN-08-el-hadji-malick-diouf.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "el-hadji-malick-diouf",
+      "position": "DF"
+    },
+    {
+      "id": "sen-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Ismail Jakobs",
+      "image": "/cards/senegal/SEN-09-ismail-jakobs.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ismail-jakobs",
+      "position": "DF"
+    },
+    {
+      "id": "sen-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Krépin Diatta",
+      "image": "/cards/senegal/SEN-10-krepin-diatta.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "krepin-diatta",
+      "position": "DF"
+    },
+    {
+      "id": "sen-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Idrissa Gueye",
+      "image": "/cards/senegal/SEN-11-idrissa-gueye.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "player",
+      "personId": "idrissa-gueye",
+      "position": "MF"
+    },
+    {
+      "id": "sen-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Pape Gueye",
+      "image": "/cards/senegal/SEN-12-pape-gueye.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "pape-gueye",
+      "position": "MF"
+    },
+    {
+      "id": "sen-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Lamine Camara",
+      "image": "/cards/senegal/SEN-13-lamine-camara.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lamine-camara",
+      "position": "MF"
+    },
+    {
+      "id": "sen-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Habib Diarra",
+      "image": "/cards/senegal/SEN-14-habib-diarra.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "habib-diarra",
+      "position": "MF"
+    },
+    {
+      "id": "sen-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Pape Matar Sarr",
+      "image": "/cards/senegal/SEN-15-pape-matar-sarr.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "pape-matar-sarr",
+      "position": "MF"
+    },
+    {
+      "id": "sen-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Sadio Mané",
+      "image": "/cards/senegal/SEN-16-sadio-mane.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "sadio-mane",
+      "position": "FW"
+    },
+    {
+      "id": "sen-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Nicolas Jackson",
+      "image": "/cards/senegal/SEN-17-nicolas-jackson.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "player",
+      "personId": "nicolas-jackson",
+      "position": "FW"
+    },
+    {
+      "id": "sen-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Ismaïla Sarr",
+      "image": "/cards/senegal/SEN-18-ismaila-sarr.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ismaila-sarr",
+      "position": "FW"
+    },
+    {
+      "id": "sen-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Iliman Ndiaye",
+      "image": "/cards/senegal/SEN-19-iliman-ndiaye.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "iliman-ndiaye",
+      "position": "FW"
+    },
+    {
+      "id": "sen-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Assane Diao",
+      "image": "/cards/senegal/SEN-20-assane-diao.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "assane-diao",
+      "position": "FW"
+    }
+  ]
+}

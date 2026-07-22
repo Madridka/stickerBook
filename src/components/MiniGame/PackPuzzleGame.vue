@@ -4,8 +4,8 @@ import { useI18n } from 'vue-i18n'
 import ProgressBar from 'primevue/progressbar'
 
 import gameData from '@/data/mainConst.json'
-import cards from '@/data/wc-26/players'
-import type { PlayerCard } from '@/types'
+import cards from '@/data/wc-26/catalog'
+import type { CardDefinition, PlayerCardDefinition } from '@/types'
 
 interface PuzzleLayout {
   columns: number
@@ -16,12 +16,12 @@ const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()
 const config = gameData.packHunt.puzzle
 
-const selectCard = (): PlayerCard => {
-  const candidates: PlayerCard[] = cards.filter(
-    (card: PlayerCard): boolean => card.type === 'player' && card.weight > 0,
+const selectCard = (): PlayerCardDefinition => {
+  const candidates: PlayerCardDefinition[] = cards.filter(
+    (card: CardDefinition): card is PlayerCardDefinition => card.kind === 'player',
   )
-  const scores: number[] = candidates.map(({ weight }): number =>
-    Math.pow(1 / weight, config.lowWeightBiasPower),
+  const scores: number[] = candidates.map(({ rarity }): number =>
+    Math.pow(1 / gameData.packConfigs.standard.rarityOdds[rarity], config.lowWeightBiasPower),
   )
   const totalScore: number = scores.reduce((total, score): number => total + score, 0)
   let cursor: number = Math.random() * totalScore
@@ -45,7 +45,7 @@ const shuffle = (values: number[]): number[] => {
   return result
 }
 
-const card: PlayerCard = selectCard()
+const card: PlayerCardDefinition = selectCard()
 const fragmentCount: number =
   config.fragmentCountMin +
   Math.floor(Math.random() * (config.fragmentCountMax - config.fragmentCountMin + 1))
@@ -179,7 +179,7 @@ onBeforeUnmount((): void => {
     <div class="mb-3 flex items-center justify-between gap-4">
       <div>
         <p class="text-xs font-black uppercase tracking-[0.14em] text-ink/45">
-          {{ t('packHunt.puzzle.cardLabel', { name: card.fullName }) }}
+          {{ t('packHunt.puzzle.cardLabel', { name: card.displayName }) }}
         </p>
         <p
           class="mt-1 text-sm font-bold"

@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "wc-26",
+  "teamId": "croatia",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "cro-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Croatia Team Logo",
+      "image": "/cards/croatia/CRO-01-team-logo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "uncommon",
+      "kind": "team"
+    },
+    {
+      "id": "cro-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Zlatko Dalić",
+      "image": "/cards/croatia/CRO-02-zlatko-dalic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "zlatko-dalic",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "cro-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Dominik Livaković",
+      "image": "/cards/croatia/CRO-03-dominik-livakovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "dominik-livakovic",
+      "position": "GK"
+    },
+    {
+      "id": "cro-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Joško Gvardiol",
+      "image": "/cards/croatia/CRO-04-josko-gvardiol.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "josko-gvardiol",
+      "position": "DF"
+    },
+    {
+      "id": "cro-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Josip Stanišić",
+      "image": "/cards/croatia/CRO-05-josip-stanisic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "josip-stanisic",
+      "position": "DF"
+    },
+    {
+      "id": "cro-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Luka Vušković",
+      "image": "/cards/croatia/CRO-06-luka-vuskovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "luka-vuskovic",
+      "position": "DF"
+    },
+    {
+      "id": "cro-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Josip Šutalo",
+      "image": "/cards/croatia/CRO-07-josip-sutalo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "josip-sutalo",
+      "position": "DF"
+    },
+    {
+      "id": "cro-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Duje Ćaleta-Car",
+      "image": "/cards/croatia/CRO-08-duje-caleta-car.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "duje-caleta-car",
+      "position": "DF"
+    },
+    {
+      "id": "cro-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Luka Modrić",
+      "image": "/cards/croatia/CRO-09-luka-modric.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "legendary",
+      "kind": "player",
+      "personId": "luka-modric",
+      "position": "MF"
+    },
+    {
+      "id": "cro-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Mateo Kovačić",
+      "image": "/cards/croatia/CRO-10-mateo-kovacic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mateo-kovacic",
+      "position": "MF"
+    },
+    {
+      "id": "cro-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Martin Baturina",
+      "image": "/cards/croatia/CRO-11-martin-baturina.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "martin-baturina",
+      "position": "MF"
+    },
+    {
+      "id": "cro-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Lovro Majer",
+      "image": "/cards/croatia/CRO-12-lovro-majer.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "lovro-majer",
+      "position": "MF"
+    },
+    {
+      "id": "cro-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Kristijan Jakić",
+      "image": "/cards/croatia/CRO-13-kristijan-jakic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kristijan-jakic",
+      "position": "DF"
+    },
+    {
+      "id": "cro-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Mario Pašalić",
+      "image": "/cards/croatia/CRO-14-mario-pasalic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mario-pasalic",
+      "position": "MF"
+    },
+    {
+      "id": "cro-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Petar Sučić",
+      "image": "/cards/croatia/CRO-15-petar-sucic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "petar-sucic",
+      "position": "MF"
+    },
+    {
+      "id": "cro-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Ivan Perišić",
+      "image": "/cards/croatia/CRO-16-ivan-perisic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ivan-perisic",
+      "position": "FW"
+    },
+    {
+      "id": "cro-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Marco Pašalić",
+      "image": "/cards/croatia/CRO-17-marco-pasalic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "marco-pasalic",
+      "position": "FW"
+    },
+    {
+      "id": "cro-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Ante Budimir",
+      "image": "/cards/croatia/CRO-18-ante-budimir.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ante-budimir",
+      "position": "FW"
+    },
+    {
+      "id": "cro-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Andrej Kramarić",
+      "image": "/cards/croatia/CRO-19-andrej-kramaric.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "andrej-kramaric",
+      "position": "FW"
+    },
+    {
+      "id": "cro-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Franjo Ivanović",
+      "image": "/cards/croatia/CRO-20-franjo-ivanovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "franjo-ivanovic",
+      "position": "FW"
+    }
+  ]
+}

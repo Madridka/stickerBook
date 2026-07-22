@@ -1,7 +1,6 @@
 [
   {
     "id": "mexico-left",
-    "number": 8,
     "image": "mexico-left.webp",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "mexico-right",
-    "number": 9,
     "image": "mexico-right.webp",
     "width": 1536,
     "height": 1200,

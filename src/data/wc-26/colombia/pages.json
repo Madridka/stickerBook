@@ -1,7 +1,6 @@
 [
   {
     "id": "colombia-left",
-    "number": 94,
     "image": "page-94-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "colombia-right",
-    "number": 95,
     "image": "page-95-stickers-right.png",
     "width": 1536,
     "height": 1200,

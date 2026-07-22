@@ -1,7 +1,6 @@
 [
   {
     "id": "canada-left",
-    "number": 16,
     "image": "page-16-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "canada-right",
-    "number": 17,
     "image": "page-17-stickers-right.png",
     "width": 1536,
     "height": 1200,

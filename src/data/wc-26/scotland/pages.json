@@ -1,7 +1,6 @@
 [
   {
     "id": "scotland-left",
-    "number": 30,
     "image": "page-30-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "scotland-right",
-    "number": 31,
     "image": "page-31-stickers-right.png",
     "width": 1536,
     "height": 1200,

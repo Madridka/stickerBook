@@ -1,7 +1,6 @@
 [
   {
     "id": "sweden-left",
-    "number": 52,
     "image": "page-52-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "sweden-right",
-    "number": 53,
     "image": "page-53-stickers-right.png",
     "width": 1536,
     "height": 1200,

@@ -1,7 +1,6 @@
 [
   {
     "id": "turkiye-left",
-    "number": 38,
     "image": "page-38-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "turkiye-right",
-    "number": 39,
     "image": "page-39-stickers-right.png",
     "width": 1536,
     "height": 1200,

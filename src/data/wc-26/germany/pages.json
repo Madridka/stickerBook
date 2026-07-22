@@ -1,7 +1,6 @@
 [
   {
     "id": "germany-left",
-    "number": 40,
     "image": "page-40-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "germany-right",
-    "number": 41,
     "image": "page-41-stickers-right.png",
     "width": 1536,
     "height": 1200,

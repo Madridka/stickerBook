@@ -1,7 +1,6 @@
 [
   {
     "id": "korea-republic-left",
-    "number": 12,
     "image": "page-12-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "korea-republic-right",
-    "number": 13,
     "image": "page-13-stickers-right.png",
     "width": 1536,
     "height": 1200,

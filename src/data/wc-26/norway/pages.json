@@ -1,7 +1,6 @@
 [
   {
     "id": "norway-left",
-    "number": 78,
     "image": "page-78-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "norway-right",
-    "number": 79,
     "image": "page-79-stickers-right.png",
     "width": 1536,
     "height": 1200,

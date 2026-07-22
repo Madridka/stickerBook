@@ -1,7 +1,6 @@
 [
   {
     "id": "morocco-left",
-    "number": 26,
     "image": "page-26-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "morocco-right",
-    "number": 27,
     "image": "page-27-stickers-right.png",
     "width": 1536,
     "height": 1200,

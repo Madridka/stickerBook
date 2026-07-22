@@ -1,7 +1,6 @@
 [
   {
     "id": "panama-left",
-    "number": 102,
     "image": "page-102-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "panama-right",
-    "number": 103,
     "image": "page-103-stickers-right.png",
     "width": 1536,
     "height": 1200,

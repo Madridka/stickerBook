@@ -1,7 +1,6 @@
 [
   {
     "id": "ecuador-left",
-    "number": 46,
     "image": "page-46-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "ecuador-right",
-    "number": 47,
     "image": "page-47-stickers-right.png",
     "width": 1536,
     "height": 1200,

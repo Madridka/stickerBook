@@ -1,7 +1,6 @@
 [
   {
     "id": "japan-left",
-    "number": 50,
     "image": "page-50-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "japan-right",
-    "number": 51,
     "image": "page-51-stickers-right.png",
     "width": 1536,
     "height": 1200,

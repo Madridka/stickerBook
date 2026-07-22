@@ -1,7 +1,6 @@
 [
   {
     "id": "curacao-left",
-    "number": 42,
     "image": "page-42-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "curacao-right",
-    "number": 43,
     "image": "page-43-stickers-right.png",
     "width": 1536,
     "height": 1200,

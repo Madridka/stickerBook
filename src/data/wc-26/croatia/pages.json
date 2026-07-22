@@ -1,7 +1,6 @@
 [
   {
     "id": "croatia-left",
-    "number": 98,
     "image": "croatia-left.webp",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "croatia-right",
-    "number": 99,
     "image": "croatia-right.webp",
     "width": 1536,
     "height": 1200,

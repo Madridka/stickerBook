@@ -1,7 +1,6 @@
 [
   {
     "id": "portugal-left",
-    "number": 88,
     "image": "portugal-left.webp",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "portugal-right",
-    "number": 89,
     "image": "portugal-right.webp",
     "width": 1536,
     "height": 1200,

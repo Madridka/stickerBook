@@ -1,7 +1,6 @@
 [
   {
     "id": "ghana-left",
-    "number": 100,
     "image": "page-100-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "ghana-right",
-    "number": 101,
     "image": "page-101-stickers-right.png",
     "width": 1536,
     "height": 1200,

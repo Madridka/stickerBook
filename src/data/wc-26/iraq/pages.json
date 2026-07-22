@@ -1,7 +1,6 @@
 [
   {
     "id": "iraq-left",
-    "number": 76,
     "image": "page-76-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "iraq-right",
-    "number": 77,
     "image": "page-77-stickers-right.png",
     "width": 1536,
     "height": 1200,

@@ -1,7 +1,6 @@
 [
   {
     "id": "netherlands-left",
-    "number": 48,
     "image": "page-48-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "netherlands-right",
-    "number": 49,
     "image": "page-49-stickers-right.png",
     "width": 1536,
     "height": 1200,

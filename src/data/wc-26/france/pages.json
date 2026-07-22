@@ -1,7 +1,6 @@
 [
   {
     "id": "france-left",
-    "number": 72,
     "image": "france-left.webp",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "france-right",
-    "number": 73,
     "image": "france-right.webp",
     "width": 1536,
     "height": 1200,

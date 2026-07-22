@@ -1,7 +1,6 @@
 [
   {
     "id": "cote-divoire-left",
-    "number": 44,
     "image": "page-44-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "cote-divoire-right",
-    "number": 45,
     "image": "page-45-stickers-right.png",
     "width": 1536,
     "height": 1200,

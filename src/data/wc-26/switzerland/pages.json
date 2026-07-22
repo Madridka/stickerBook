@@ -1,7 +1,6 @@
 [
   {
     "id": "switzerland-left",
-    "number": 22,
     "image": "switzerland-left.webp",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "switzerland-right",
-    "number": 23,
     "image": "switzerland-right.webp",
     "width": 1536,
     "height": 1200,

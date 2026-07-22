@@ -1,7 +1,6 @@
 [
   {
     "id": "haiti-left",
-    "number": 28,
     "image": "page-28-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "haiti-right",
-    "number": 29,
     "image": "page-29-stickers-right.png",
     "width": 1536,
     "height": 1200,

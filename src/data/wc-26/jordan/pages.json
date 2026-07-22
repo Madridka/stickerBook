@@ -1,7 +1,6 @@
 [
   {
     "id": "jordan-left",
-    "number": 86,
     "image": "page-86-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "jordan-right",
-    "number": 87,
     "image": "page-87-stickers-right.png",
     "width": 1536,
     "height": 1200,

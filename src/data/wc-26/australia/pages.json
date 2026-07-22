@@ -1,7 +1,6 @@
 [
   {
     "id": "australia-left",
-    "number": 36,
     "image": "page-36-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "australia-right",
-    "number": 37,
     "image": "page-37-stickers-right.png",
     "width": 1536,
     "height": 1200,

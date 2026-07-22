@@ -1,7 +1,6 @@
 [
   {
     "id": "congo-dr-left",
-    "number": 90,
     "image": "page-90-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "congo-dr-right",
-    "number": 91,
     "image": "page-91-stickers-right.png",
     "width": 1536,
     "height": 1200,

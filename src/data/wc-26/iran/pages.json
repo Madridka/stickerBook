@@ -1,7 +1,6 @@
 [
   {
     "id": "iran-left",
-    "number": 60,
     "image": "page-60-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "iran-right",
-    "number": 61,
     "image": "page-61-stickers-right.png",
     "width": 1536,
     "height": 1200,

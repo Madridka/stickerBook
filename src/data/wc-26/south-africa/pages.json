@@ -1,7 +1,6 @@
 [
   {
     "id": "south-africa-left",
-    "number": 10,
     "image": "page-10-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "south-africa-right",
-    "number": 11,
     "image": "page-11-stickers-right.png",
     "width": 1536,
     "height": 1200,

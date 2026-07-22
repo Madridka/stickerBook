@@ -1,7 +1,6 @@
 [
   {
     "id": "czechia-left",
-    "number": 14,
     "image": "page-14-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "czechia-right",
-    "number": 15,
     "image": "page-15-stickers-right.png",
     "width": 1536,
     "height": 1200,

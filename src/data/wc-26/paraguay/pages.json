@@ -1,7 +1,6 @@
 [
   {
     "id": "paraguay-left",
-    "number": 34,
     "image": "page-34-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "paraguay-right",
-    "number": 35,
     "image": "page-35-stickers-right.png",
     "width": 1536,
     "height": 1200,

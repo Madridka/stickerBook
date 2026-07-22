@@ -1,7 +1,6 @@
 [
   {
     "id": "tunisia-left",
-    "number": 54,
     "image": "page-54-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "tunisia-right",
-    "number": 55,
     "image": "page-55-stickers-right.png",
     "width": 1536,
     "height": 1200,

@@ -1,7 +1,6 @@
 [
   {
     "id": "uzbekistan-left",
-    "number": 92,
     "image": "page-92-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "uzbekistan-right",
-    "number": 93,
     "image": "page-93-stickers-right.png",
     "width": 1536,
     "height": 1200,

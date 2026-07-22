@@ -1,7 +1,6 @@
 [
   {
     "id": "austria-left",
-    "number": 84,
     "image": "page-84-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "austria-right",
-    "number": 85,
     "image": "page-85-stickers-right.png",
     "width": 1536,
     "height": 1200,

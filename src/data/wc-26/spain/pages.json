@@ -1,7 +1,6 @@
 [
   {
     "id": "spain-left",
-    "number": 64,
     "image": "spain-left.webp",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "spain-right",
-    "number": 65,
     "image": "spain-right.webp",
     "width": 1536,
     "height": 1200,

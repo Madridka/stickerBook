@@ -1,7 +1,6 @@
 [
   {
     "id": "egypt-left",
-    "number": 58,
     "image": "page-58-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "egypt-right",
-    "number": 59,
     "image": "page-59-stickers-right.png",
     "width": 1536,
     "height": 1200,

@@ -1,7 +1,6 @@
 [
   {
     "id": "uruguay-left",
-    "number": 70,
     "image": "page-70-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "uruguay-right",
-    "number": 71,
     "image": "page-71-stickers-right.png",
     "width": 1536,
     "height": 1200,

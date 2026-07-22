@@ -1,7 +1,6 @@
 [
   {
     "id": "new-zealand-left",
-    "number": 62,
     "image": "page-62-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "new-zealand-right",
-    "number": 63,
     "image": "page-63-stickers-right.png",
     "width": 1536,
     "height": 1200,

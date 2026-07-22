@@ -1,7 +1,6 @@
 [
   {
     "id": "england-left",
-    "number": 96,
     "image": "england-left.webp",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "england-right",
-    "number": 97,
     "image": "england-right.webp",
     "width": 1536,
     "height": 1200,

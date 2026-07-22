@@ -1,8 +1,7 @@
 [
   {
     "id": "algeria-left",
-    "number": 82,
-    "image": "page-82-stickers-left.png",
+    "image": "algeria-left.png",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -90,8 +89,7 @@
   },
   {
     "id": "algeria-right",
-    "number": 83,
-    "image": "page-83-stickers-right.png",
+    "image": "algeria-right.png",
     "width": 1536,
     "height": 1200,
     "slots": [

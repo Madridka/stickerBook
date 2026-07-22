@@ -1,7 +1,6 @@
 [
   {
     "id": "argentina-left",
-    "number": 80,
     "image": "argentina-left.webp",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "argentina-right",
-    "number": 81,
     "image": "argentina-right.webp",
     "width": 1536,
     "height": 1200,

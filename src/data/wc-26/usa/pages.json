@@ -1,7 +1,6 @@
 [
   {
     "id": "usa-left",
-    "number": 32,
     "image": "page-32-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -90,7 +89,6 @@
   },
   {
     "id": "usa-right",
-    "number": 33,
     "image": "page-33-stickers-right.png",
     "width": 1536,
     "height": 1200,

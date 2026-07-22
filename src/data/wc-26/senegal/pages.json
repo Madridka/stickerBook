@@ -1,7 +1,6 @@
 [
   {
     "id": "senegal-left",
-    "number": 74,
     "image": "page-74-stickers-left.png",
     "width": 1536,
     "height": 1200,
@@ -20,7 +19,6 @@
   },
   {
     "id": "senegal-right",
-    "number": 75,
     "image": "page-75-stickers-right.png",
     "width": 1536,
     "height": 1200,

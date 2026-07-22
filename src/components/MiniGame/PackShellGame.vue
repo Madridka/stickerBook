@@ -9,7 +9,7 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import gameData from '@/data/mainConst.json'
+import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 
 import ProgressBar from 'primevue/progressbar'
 
@@ -33,7 +33,7 @@ const { t } = useI18n()
 
 // Лестница сложности: коробки, число перестановок, скорость анимации и шанс
 // ложного движения нарастают от раунда к раунду — это и есть все виды усложнения.
-const shellConfig = gameData.packHunt.shell
+const shellConfig = PACK_HUNT_CONFIG.shell
 const roundConfigs: RoundConfig[] = shellConfig.rounds
 const {
   revealDurationMs,
@@ -230,7 +230,7 @@ onMounted((): void => {
   initRound(0, true)
   elapsedInterval = window.setInterval((): void => {
     elapsedSeconds.value += 1
-  }, 1000)
+  }, shellConfig.elapsedIntervalMs)
 })
 
 onBeforeUnmount((): void => {

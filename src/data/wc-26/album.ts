@@ -47,10 +47,6 @@ import croatiaPages from './croatia/pages.json'
 import ghanaPages from './ghana/pages.json'
 import panamaPages from './panama/pages.json'
 
-// Тестовый режим: все карточки полного каталога отображаются так, будто они уже вклеены.
-// Переключение флага не изменяет сохранённые данные пользователя.
-export const PLACE_ALL_COLLECTED_CARDS = true
-
 const visibleTeamPages = [
   ...mexicoPages,
   ...southAfricaPages,

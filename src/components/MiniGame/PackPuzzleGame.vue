@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, ref, type ComputedRef, type CSSProperties, t
 import { useI18n } from 'vue-i18n'
 import ProgressBar from 'primevue/progressbar'
 
-import gameData from '@/data/mainConst.json'
+import { PACK_CONFIGS, PACK_HUNT_CONFIG } from '@/data/mainConst'
 import cards from '@/data/wc-26/catalog'
 import type { CardDefinition, PlayerCardDefinition } from '@/types'
 
@@ -14,14 +14,14 @@ interface PuzzleLayout {
 
 const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()
-const config = gameData.packHunt.puzzle
+const config = PACK_HUNT_CONFIG.puzzle
 
 const selectCard = (): PlayerCardDefinition => {
   const candidates: PlayerCardDefinition[] = cards.filter(
     (card: CardDefinition): card is PlayerCardDefinition => card.kind === 'player',
   )
   const scores: number[] = candidates.map(({ rarity }): number =>
-    Math.pow(1 / gameData.packConfigs.standard.rarityOdds[rarity], config.lowWeightBiasPower),
+    Math.pow(1 / PACK_CONFIGS.standard.rarityOdds[rarity], config.lowWeightBiasPower),
   )
   const totalScore: number = scores.reduce((total, score): number => total + score, 0)
   let cursor: number = Math.random() * totalScore
@@ -102,7 +102,7 @@ const showWrongSlot = (): void => {
       selectedPiece.value === undefined
         ? 'packHunt.puzzle.selectPiece'
         : 'packHunt.puzzle.pieceSelected'
-  }, 1000)
+  }, config.wrongSlotFeedbackMs)
 }
 
 const placePiece = (pieceId: number | undefined, slotIndex: number): void => {

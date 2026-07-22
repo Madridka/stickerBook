@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import gameData from '../src/data/mainConst.json' with { type: 'json' }
+import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '../src/data/mainConst.ts'
 import type { Card, CardCatalog, CardRarity } from '../src/types/cardCatalog.ts'
 import {
   getRenormalizedRarityOdds,
@@ -9,7 +9,7 @@ import {
   type RarityOdds,
 } from '../src/utils/dropEngine.ts'
 
-const rarityOdds = gameData.packConfigs.standard.rarityOdds as RarityOdds
+const rarityOdds = PACK_CONFIGS.standard.rarityOdds as RarityOdds
 
 const createCard = (
   id: string,
@@ -57,9 +57,9 @@ const createSeededRng = (seed: number): RandomSource => {
 const select = (catalog: CardCatalog, randomSource: RandomSource): Card =>
   selectCardV2({
     catalogs: [catalog],
-    packConfig: { cardsPerPack: gameData.packConfigs.standard.cardsPerPack, rarityOdds },
+    packConfig: { cardsPerPack: PACK_CONFIGS.standard.cardsPerPack, rarityOdds },
     poolId: 'standard',
-    defaultSelectionWeight: gameData.dropEngine.defaultSelectionWeight,
+    defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
     randomSource,
   })
 

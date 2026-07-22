@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { STICKER_DRAG_THRESHOLD_PX } from '@/data/mainConst'
 import type { CardDefinition, StickerDropResult, StickerInstance } from '@/types'
 
 import { evaluateStickerDrop } from '@/components/DragDrop/dropGeometry'
@@ -28,8 +29,6 @@ const pointerX: Ref<number> = ref(0)
 const pointerY: Ref<number> = ref(0)
 const dragStartX: Ref<number> = ref(0)
 const dragStartY: Ref<number> = ref(0)
-const dragThreshold: number = 10
-
 // Первый выбор открывает подготовку, повторный захват переносит готовую наклейку.
 const startDrag = (event: PointerEvent): void => {
   if (event.button !== 0) return
@@ -49,7 +48,7 @@ const moveDrag = (event: PointerEvent): void => {
   if (!props.prepared || isDragging.value) return
   const deltaX: number = event.clientX - dragStartX.value
   const deltaY: number = event.clientY - dragStartY.value
-  if (Math.hypot(deltaX, deltaY) < dragThreshold) return
+  if (Math.hypot(deltaX, deltaY) < STICKER_DRAG_THRESHOLD_PX) return
 
   // Горизонтальный жест пальцем прокручивает трей, вертикальный начинает перенос наклейки.
   if (event.pointerType === 'touch' && Math.abs(deltaX) > Math.abs(deltaY)) return
@@ -67,7 +66,7 @@ const finishDrag = (event: PointerEvent): void => {
   )
 
   if (!props.prepared) {
-    if (movement < dragThreshold) emit('preview')
+    if (movement < STICKER_DRAG_THRESHOLD_PX) emit('preview')
     return
   }
   if (!isDragging.value) {

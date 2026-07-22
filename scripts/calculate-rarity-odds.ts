@@ -1,7 +1,7 @@
 import { readFile, readdir } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import gameData from '../src/data/mainConst.json' with { type: 'json' }
+import { CARD_CATALOG_CONFIG, LEGACY_MIGRATION_CONFIG } from '../src/data/mainConst.ts'
 import type { CardRarity } from '../src/types/cardCatalog.ts'
 
 interface LegacyWeightedCard {
@@ -10,7 +10,7 @@ interface LegacyWeightedCard {
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url))
 const dataDirectory = path.resolve(scriptDirectory, '../src/data/wc-26')
-const rarities = gameData.cardCatalog.rarities as CardRarity[]
+const rarities = CARD_CATALOG_CONFIG.rarities as CardRarity[]
 
 const readLegacyCards = async (): Promise<LegacyWeightedCard[]> => {
   const entries = await readdir(dataDirectory, { withFileTypes: true })
@@ -24,7 +24,7 @@ const readLegacyCards = async (): Promise<LegacyWeightedCard[]> => {
 }
 
 const getRarity = (weight: number): CardRarity => {
-  const range = [...gameData.legacyMigration.weightToRarity]
+  const range = [...LEGACY_MIGRATION_CONFIG.weightToRarity]
     .sort((left, right) => right.minWeight - left.minWeight)
     .find((candidate) => weight >= candidate.minWeight)
   if (!range) throw new Error(`No rarity mapping for legacy weight ${weight}`)

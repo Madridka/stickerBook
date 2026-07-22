@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
-import packData from '@/data/mainConst.json'
+import { PACK_PRICE } from '@/data/mainConst'
 import { purchasePack, type PurchasePackResult } from '@/services/economy'
 import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniGame'
 
@@ -24,14 +24,14 @@ const ownedPackIds: ComputedRef<string[]> = computed(() =>
 
 // Покупает пак одной транзакцией и синхронизирует UI только после её фиксации.
 const buyPack = async (): Promise<void> => {
-  if (isPurchasing.value || player.coins < packData.price) return
+  if (isPurchasing.value || player.coins < PACK_PRICE) return
 
   isPurchasing.value = true
   hasPurchaseError.value = false
   try {
     try {
       await player.flushSaves()
-      const result: PurchasePackResult = await purchasePack(packData.price)
+      const result: PurchasePackResult = await purchasePack(PACK_PRICE)
       if (result.status !== 'purchased') {
         if (result.player) player.applyPersistedState(result.player)
         hasPurchaseError.value = true
@@ -98,8 +98,8 @@ onMounted(async (): Promise<void> => {
     <!-- Доступные товары магазина -->
     <ShopItem
       class="mt-3 sm:mt-4"
-      :price="packData.price"
-      :can-buy="player.coins >= packData.price"
+      :price="PACK_PRICE"
+      :can-buy="player.coins >= PACK_PRICE"
       :purchasing="isPurchasing"
       :cooldown-remaining-ms="packHunt.cooldownRemainingMs"
       :mini-game-loaded="packHunt.isLoaded"

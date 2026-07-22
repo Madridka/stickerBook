@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import gameData from '@/data/mainConst.json'
+import { CLICKER_CONFIG, HOME_VIEW_CONFIG } from '@/data/mainConst'
 import { useCollectionStore } from '@/stores/collection'
 import { usePlayerStore } from '@/stores/player'
 
@@ -26,13 +26,13 @@ let energyTimer: number | undefined
 
 // Переводит процент заполнения журнала в линейный бонус к награде за клик.
 const clickReward: ComputedRef<number> = computed((): number => {
-  const rawReward: number = gameData.clicker.baseReward * (1 + collection.albumProgress / 100)
-  const multiplier: number = 10 ** gameData.clicker.rewardPrecision
+  const rawReward: number = CLICKER_CONFIG.baseReward * (1 + collection.albumProgress / 100)
+  const multiplier: number = 10 ** CLICKER_CONFIG.rewardPrecision
   return Math.round((rawReward + Number.EPSILON) * multiplier) / multiplier
 })
 const formattedClickReward: ComputedRef<string> = computed((): string =>
   clickReward.value.toLocaleString('ru-RU', {
-    maximumFractionDigits: gameData.clicker.rewardPrecision,
+    maximumFractionDigits: CLICKER_CONFIG.rewardPrecision,
   }),
 )
 const isClickDisabled: ComputedRef<boolean> = computed(
@@ -61,12 +61,15 @@ const handleClick = (event: MouseEvent): void => {
   effects.value = [...effects.value, effect]
   window.setTimeout((): void => {
     effects.value = effects.value.filter(({ id }: ClickEffectItem): boolean => id !== effect.id)
-  }, 700)
+  }, HOME_VIEW_CONFIG.clickEffectDurationMs)
 }
 
 onMounted((): void => {
   player.refreshEnergy()
-  energyTimer = window.setInterval((): void => player.refreshEnergy(), 1000)
+  energyTimer = window.setInterval(
+    (): void => player.refreshEnergy(),
+    HOME_VIEW_CONFIG.energyRefreshIntervalMs,
+  )
 })
 
 onBeforeUnmount((): void => {

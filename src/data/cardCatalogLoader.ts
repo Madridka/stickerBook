@@ -1,4 +1,4 @@
-import gameData from './mainConst.json' with { type: 'json' }
+import { COLLECTION_CONFIG, DROP_ENGINE_CONFIG } from './mainConst.ts'
 import { parseCardCatalog } from '../schemas/cardCatalog.ts'
 import type {
   Card,
@@ -23,7 +23,7 @@ const normalizeCard = (
   series: card.series ?? catalog.defaults.series,
   finish: card.finish ?? catalog.defaults.finish,
   acquisition: card.acquisition ?? catalog.defaults.acquisition.map((source) => ({ ...source })),
-  selectionWeight: card.selectionWeight ?? gameData.dropEngine.defaultSelectionWeight,
+  selectionWeight: card.selectionWeight ?? DROP_ENGINE_CONFIG.defaultSelectionWeight,
 })
 
 // Валидирует импортированные JSON и создаёт новые нормализованные объекты без их мутации.
@@ -32,9 +32,9 @@ export const loadCardCatalogs = (
   assetBaseUrl = '',
 ): NormalizedCardCatalog[] => {
   const catalogs = inputs.map(parseCardCatalog)
-  if (catalogs.length !== gameData.collection.expectedTeamCount) {
+  if (catalogs.length !== COLLECTION_CONFIG.expectedTeamCount) {
     throw new Error(
-      `Expected ${gameData.collection.expectedTeamCount} card catalogs, received ${catalogs.length}`,
+      `Expected ${COLLECTION_CONFIG.expectedTeamCount} card catalogs, received ${catalogs.length}`,
     )
   }
 

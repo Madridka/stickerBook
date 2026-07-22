@@ -9,7 +9,7 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import gameData from '@/data/mainConst.json'
+import { MINI_GAME_FIELD_PERCENT, PACK_HUNT_CONFIG } from '@/data/mainConst'
 
 import ProgressBar from 'primevue/progressbar'
 
@@ -20,18 +20,18 @@ interface Point {
 
 const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()
-const fieldPercent: number = 100
+const fieldPercent: number = MINI_GAME_FIELD_PERCENT
 const fieldCenter: number = fieldPercent / 2
 const fieldRef: Ref<HTMLElement | undefined> = ref(undefined)
 const scanner: Ref<Point> = ref({ x: fieldCenter, y: fieldCenter })
-const targetRange: number = fieldPercent - gameData.packHunt.targetPaddingPercent * 2
+const targetRange: number = fieldPercent - PACK_HUNT_CONFIG.targetPaddingPercent * 2
 const lockProgress: Ref<number> = ref(0)
 const isScannerActive: Ref<boolean> = ref(false)
 const isRelocating: Ref<boolean> = ref(false)
 const isComplete: Ref<boolean> = ref(false)
 const foundSignals: Ref<Point[]> = ref([])
 const elapsedSeconds: Ref<number> = ref(0)
-const detectionRadius: number = gameData.packHunt.detectionRadiusPercent
+const detectionRadius: number = PACK_HUNT_CONFIG.detectionRadiusPercent
 let animationFrame: number | undefined
 let previousFrame: number = 0
 let startedAt: number = 0
@@ -39,14 +39,14 @@ let relocationTimer: number | undefined
 let completionTimer: number | undefined
 
 const createDistantTarget = (origin: Point): Point => {
-  for (let attempt: number = 0; attempt < 40; attempt += 1) {
+  for (let attempt: number = 0; attempt < PACK_HUNT_CONFIG.targetCandidateAttempts; attempt += 1) {
     const candidate: Point = {
-      x: Math.round(gameData.packHunt.targetPaddingPercent + Math.random() * targetRange),
-      y: Math.round(gameData.packHunt.targetPaddingPercent + Math.random() * targetRange),
+      x: Math.round(PACK_HUNT_CONFIG.targetPaddingPercent + Math.random() * targetRange),
+      y: Math.round(PACK_HUNT_CONFIG.targetPaddingPercent + Math.random() * targetRange),
     }
     if (
       Math.hypot(candidate.x - origin.x, candidate.y - origin.y) >=
-      gameData.packHunt.minimumTargetDistancePercent
+      PACK_HUNT_CONFIG.minimumTargetDistancePercent
     ) {
       return candidate
     }
@@ -55,12 +55,12 @@ const createDistantTarget = (origin: Point): Point => {
   return {
     x:
       origin.x < fieldCenter
-        ? fieldPercent - gameData.packHunt.targetPaddingPercent
-        : gameData.packHunt.targetPaddingPercent,
+        ? fieldPercent - PACK_HUNT_CONFIG.targetPaddingPercent
+        : PACK_HUNT_CONFIG.targetPaddingPercent,
     y:
       origin.y < fieldCenter
-        ? fieldPercent - gameData.packHunt.targetPaddingPercent
-        : gameData.packHunt.targetPaddingPercent,
+        ? fieldPercent - PACK_HUNT_CONFIG.targetPaddingPercent
+        : PACK_HUNT_CONFIG.targetPaddingPercent,
   }
 }
 
@@ -72,8 +72,8 @@ const targetDistance: ComputedRef<number> = computed((): number =>
 const signalStrength: ComputedRef<number> = computed((): number => {
   if (isRelocating.value) return 0
   if (isComplete.value || targetDistance.value <= detectionRadius) return 4
-  if (targetDistance.value <= gameData.packHunt.mediumSignalRadiusPercent) return 3
-  if (targetDistance.value <= gameData.packHunt.weakSignalRadiusPercent) return 2
+  if (targetDistance.value <= PACK_HUNT_CONFIG.mediumSignalRadiusPercent) return 3
+  if (targetDistance.value <= PACK_HUNT_CONFIG.weakSignalRadiusPercent) return 2
   return 1
 })
 const signalTranslationKey: ComputedRef<string> = computed((): string => {
@@ -92,8 +92,8 @@ const targetStyle: ComputedRef<CSSProperties> = computed(
 
 const clamp = (value: number): number =>
   Math.max(
-    gameData.packHunt.scannerPaddingPercent,
-    Math.min(fieldPercent - gameData.packHunt.scannerPaddingPercent, value),
+    PACK_HUNT_CONFIG.scannerPaddingPercent,
+    Math.min(fieldPercent - PACK_HUNT_CONFIG.scannerPaddingPercent, value),
   )
 
 // Переводит координаты указателя в проценты игрового поля для мыши и touch-жеста.
@@ -135,7 +135,7 @@ const moveScannerWithKeyboard = (event: KeyboardEvent): void => {
     return
   }
   event.preventDefault()
-  const step: number = gameData.packHunt.keyboardStepPercent
+  const step: number = PACK_HUNT_CONFIG.keyboardStepPercent
   const next: Point = { ...scanner.value }
   if (event.key === 'ArrowUp') next.y -= step
   if (event.key === 'ArrowDown') next.y += step
@@ -151,13 +151,13 @@ const completeSignal = (): void => {
   isScannerActive.value = false
   lockProgress.value = 100
 
-  if (foundSignals.value.length >= gameData.packHunt.signalsRequired) {
+  if (foundSignals.value.length >= PACK_HUNT_CONFIG.signalsRequired) {
     isComplete.value = true
     animationFrame = undefined
     completionTimer = window.setTimeout((): void => {
       completionTimer = undefined
       emit('complete')
-    }, gameData.packHunt.signalCompletionDelayMs)
+    }, PACK_HUNT_CONFIG.signalCompletionDelayMs)
     return
   }
 
@@ -168,12 +168,15 @@ const completeSignal = (): void => {
     isRelocating.value = false
     previousFrame = 0
     relocationTimer = undefined
-  }, gameData.packHunt.signalTransitionMs)
+  }, PACK_HUNT_CONFIG.signalTransitionMs)
 }
 
 // Накапливает фиксацию только внутри найденной зоны и мягко уменьшает её при уходе.
 const updateLockProgress = (timestamp: number): void => {
-  const elapsed: number = previousFrame === 0 ? 0 : Math.min(64, timestamp - previousFrame)
+  const elapsed: number =
+    previousFrame === 0
+      ? 0
+      : Math.min(PACK_HUNT_CONFIG.maxFrameDeltaMs, timestamp - previousFrame)
   previousFrame = timestamp
   elapsedSeconds.value = Math.floor((timestamp - startedAt) / 1000)
 
@@ -187,12 +190,13 @@ const updateLockProgress = (timestamp: number): void => {
   if (isScannerActive.value && targetDistance.value <= detectionRadius) {
     lockProgress.value = Math.min(
       100,
-      lockProgress.value + (elapsed / gameData.packHunt.holdDurationMs) * 100,
+      lockProgress.value + (elapsed / PACK_HUNT_CONFIG.holdDurationMs) * 100,
     )
   } else {
     lockProgress.value = Math.max(
       0,
-      lockProgress.value - (elapsed / gameData.packHunt.holdDurationMs) * 35,
+      lockProgress.value -
+        (elapsed / PACK_HUNT_CONFIG.holdDurationMs) * PACK_HUNT_CONFIG.lockDecayPercent,
     )
   }
 
@@ -246,13 +250,13 @@ onBeforeUnmount((): void => {
         {{
           t('packHunt.signalsProgress', {
             current: foundSignals.length,
-            total: gameData.packHunt.signalsRequired,
+            total: PACK_HUNT_CONFIG.signalsRequired,
           })
         }}
       </span>
       <div class="flex items-center justify-end gap-1.5">
         <span
-          v-for="index in gameData.packHunt.signalsRequired"
+          v-for="index in PACK_HUNT_CONFIG.signalsRequired"
           :key="index"
           class="flex h-5 w-5 items-center justify-center rounded-full border text-[10px] font-black"
           :class="

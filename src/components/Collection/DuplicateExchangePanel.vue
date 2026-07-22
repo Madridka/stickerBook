@@ -2,7 +2,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import cards from '@/data/wc-26/catalog'
-import gameData from '@/data/mainConst.json'
+import { DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
 import {
   useCollectionStore,
   type BeginDuplicateExchangeResult,
@@ -20,8 +20,8 @@ interface DuplicateGroup {
 
 const { t } = useI18n()
 const collection = useCollectionStore()
-const selectionLimit: number = gameData.duplicateExchange.tradeInCount
-const candidateCount: number = gameData.duplicateExchange.candidateCount
+const selectionLimit: number = DUPLICATE_EXCHANGE_CONFIG.tradeInCount
+const candidateCount: number = DUPLICATE_EXCHANGE_CONFIG.candidateCount
 const selectedInstanceIds: Ref<string[]> = ref([])
 const selectedCandidateId: Ref<string | undefined> = ref(undefined)
 const rewardCardId: Ref<string | undefined> = ref(undefined)

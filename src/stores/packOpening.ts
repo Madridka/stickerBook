@@ -7,7 +7,7 @@ import {
   type PackOpeningSession,
 } from '@/db/database'
 import { catalogs } from '@/data/wc-26/catalog'
-import packData from '@/data/mainConst.json'
+import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '@/data/mainConst'
 import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 import { selectCardV2 } from '@/utils/dropEngine'
@@ -56,13 +56,13 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             activeCards.map(({ playerId }: StickerInstance): string => playerId),
           )
           const rewards: PackOpeningReward[] = Array.from(
-            { length: packData.packConfigs.standard.cardsPerPack },
+            { length: PACK_CONFIGS.standard.cardsPerPack },
             (): PackOpeningReward => {
               const card: CardDefinition = selectCardV2({
                 catalogs,
-                packConfig: packData.packConfigs.standard,
+                packConfig: PACK_CONFIGS.standard,
                 poolId: 'standard',
-                defaultSelectionWeight: packData.dropEngine.defaultSelectionWeight,
+                defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
                 randomSource: Math.random,
               }) as CardDefinition
               const isDuplicate: boolean = ownedPlayerIds.has(card.id)

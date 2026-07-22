@@ -1,22 +1,22 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, PLAYER_STATE_ID, type PlayerState } from '@/db/database'
-import gameData from '@/data/mainConst.json'
+import { CLICKER_CONFIG } from '@/data/mainConst'
 
 const COIN_FORMATTER: Intl.NumberFormat = new Intl.NumberFormat('ru-RU', {
-  maximumFractionDigits: gameData.clicker.rewardPrecision,
+  maximumFractionDigits: CLICKER_CONFIG.rewardPrecision,
 })
 const ENERGY_EPSILON = 0.000001
 
 // Округляет начисления, чтобы дробный бонус не накапливал ошибки floating point.
 const roundReward = (value: number): number => {
-  const multiplier: number = 10 ** gameData.clicker.rewardPrecision
+  const multiplier: number = 10 ** CLICKER_CONFIG.rewardPrecision
   return Math.round((value + Number.EPSILON) * multiplier) / multiplier
 }
 
 export const usePlayerStore = defineStore('player', () => {
   const coins: Ref<number> = ref(0)
-  const energy: Ref<number> = ref(gameData.clicker.energyLimit)
+  const energy: Ref<number> = ref(CLICKER_CONFIG.energyLimit)
   const energyUpdatedAt: Ref<number> = ref(Date.now())
   const isLoaded: Ref<boolean> = ref(false)
 
@@ -26,26 +26,26 @@ export const usePlayerStore = defineStore('player', () => {
   )
   const availableEnergy: ComputedRef<number> = computed((): number =>
     Math.min(
-      gameData.clicker.energyLimit,
-      Math.floor((energy.value + ENERGY_EPSILON) / gameData.clicker.energyCostPerClick),
+      CLICKER_CONFIG.energyLimit,
+      Math.floor((energy.value + ENERGY_EPSILON) / CLICKER_CONFIG.energyCostPerClick),
     ),
   )
   const energyPercent: ComputedRef<number> = computed(
-    (): number => (energy.value / gameData.clicker.energyLimit) * 100,
+    (): number => (energy.value / CLICKER_CONFIG.energyLimit) * 100,
   )
   const canClick: ComputedRef<boolean> = computed(
-    (): boolean => energy.value + ENERGY_EPSILON >= gameData.clicker.energyCostPerClick,
+    (): boolean => energy.value + ENERGY_EPSILON >= CLICKER_CONFIG.energyCostPerClick,
   )
   const millisecondsUntilNextEnergy: ComputedRef<number> = computed((): number => {
-    if (energy.value >= gameData.clicker.energyLimit) return 0
+    if (energy.value >= CLICKER_CONFIG.energyLimit) return 0
 
-    const fractionalEnergy: number = energy.value % gameData.clicker.energyCostPerClick
+    const fractionalEnergy: number = energy.value % CLICKER_CONFIG.energyCostPerClick
     const missingEnergy: number =
       fractionalEnergy <= ENERGY_EPSILON
-        ? gameData.clicker.energyCostPerClick
-        : gameData.clicker.energyCostPerClick - fractionalEnergy
+        ? CLICKER_CONFIG.energyCostPerClick
+        : CLICKER_CONFIG.energyCostPerClick - fractionalEnergy
     const energyPerMillisecond: number =
-      gameData.clicker.energyLimit / gameData.clicker.fullRechargeMs
+      CLICKER_CONFIG.energyLimit / CLICKER_CONFIG.fullRechargeMs
     return Math.ceil(missingEnergy / energyPerMillisecond)
   })
   let hasLocalChanges: boolean = false
@@ -56,9 +56,9 @@ export const usePlayerStore = defineStore('player', () => {
     const safeNow: number = Math.max(now, energyUpdatedAt.value)
     const elapsedMs: number = safeNow - energyUpdatedAt.value
     const regeneratedEnergy: number =
-      (elapsedMs / gameData.clicker.fullRechargeMs) * gameData.clicker.energyLimit
+      (elapsedMs / CLICKER_CONFIG.fullRechargeMs) * CLICKER_CONFIG.energyLimit
 
-    energy.value = Math.min(gameData.clicker.energyLimit, energy.value + regeneratedEnergy)
+    energy.value = Math.min(CLICKER_CONFIG.energyLimit, energy.value + regeneratedEnergy)
     energyUpdatedAt.value = safeNow
   }
 
@@ -68,7 +68,7 @@ export const usePlayerStore = defineStore('player', () => {
 
     if (!hasLocalChanges && savedPlayer) {
       coins.value = savedPlayer.coins
-      energy.value = savedPlayer.energy ?? gameData.clicker.energyLimit
+      energy.value = savedPlayer.energy ?? CLICKER_CONFIG.energyLimit
       energyUpdatedAt.value = savedPlayer.energyUpdatedAt ?? Date.now()
       refreshEnergy()
     }
@@ -102,14 +102,14 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   // Расходует фиксированную энергию и начисляет награду, не меняя размер запаса из-за бонуса.
-  const addCoin = (amount: number = gameData.clicker.baseReward): boolean => {
+  const addCoin = (amount: number = CLICKER_CONFIG.baseReward): boolean => {
     if (!Number.isFinite(amount) || amount <= 0) return false
 
     refreshEnergy()
     if (!canClick.value) return false
 
     hasLocalChanges = true
-    energy.value = Math.max(0, energy.value - gameData.clicker.energyCostPerClick)
+    energy.value = Math.max(0, energy.value - CLICKER_CONFIG.energyCostPerClick)
     coins.value = roundReward(coins.value + amount)
     save()
     return true
@@ -127,7 +127,7 @@ export const usePlayerStore = defineStore('player', () => {
   return {
     coins,
     energy,
-    energyLimit: gameData.clicker.energyLimit,
+    energyLimit: CLICKER_CONFIG.energyLimit,
     availableEnergy,
     energyPercent,
     millisecondsUntilNextEnergy,

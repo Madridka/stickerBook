@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { STICKER_PREPARATION_CONFIG } from '@/data/mainConst'
 import type { StickerPreparation, StickerTrayItem } from '@/types'
 
 import Button from 'primevue/button'
@@ -57,17 +58,19 @@ const shufflePressZones = (): PressZone[] => {
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
+const { peel: peelConfig, alignment: alignmentConfig, press: pressConfig } =
+  STICKER_PREPARATION_CONFIG
 const step: Ref<number> = ref(0)
-const peelPosition: Ref<number> = ref(12)
-const peelTargetPosition: Ref<number> = ref(70)
-const peelTargetDuration: Ref<number> = ref(900)
+const peelPosition: Ref<number> = ref(peelConfig.initialPositionPercent)
+const peelTargetPosition: Ref<number> = ref(peelConfig.initialTargetPositionPercent)
+const peelTargetDuration: Ref<number> = ref(peelConfig.initialTargetDurationMs)
 const peelResult: Ref<PeelResult> = ref('playing')
 const peelOrigin: Ref<PeelOrigin | undefined> = ref(undefined)
 const peelTrackRef: Ref<HTMLElement | undefined> = ref(undefined)
 const peelTargetRef: Ref<HTMLElement | undefined> = ref(undefined)
 const peelHandleRef: Ref<HTMLElement | undefined> = ref(undefined)
-const alignX: Ref<number> = ref(38)
-const alignY: Ref<number> = ref(-30)
+const alignX: Ref<number> = ref(alignmentConfig.initialX)
+const alignY: Ref<number> = ref(alignmentConfig.initialY)
 const alignOrigin: Ref<PointerOrigin | undefined> = ref(undefined)
 const pressedCount: Ref<number> = ref(0)
 const pressMistakes: Ref<number> = ref(0)
@@ -79,18 +82,20 @@ const alignmentDistance: ComputedRef<number> = computed((): number =>
   Math.round(alignmentOffset.value),
 )
 const alignmentAccuracy: ComputedRef<number> = computed((): number =>
-  Math.min(100, Math.max(0, 101 - Math.round(alignmentOffset.value / 2))),
+  Math.min(
+    100,
+    Math.max(
+      0,
+      alignmentConfig.accuracyBase -
+        Math.round(alignmentOffset.value / alignmentConfig.accuracyDistanceDivisor),
+    ),
+  ),
 )
 const stepTranslationKeys: string[] = [
   'stickerTray.stepPeel',
   'stickerTray.stepAlign',
   'stickerTray.stepPress',
 ]
-const alignmentCardWidth: number = 112
-const alignmentCardHeight: number = 168
-const alignmentPerfectAccuracy: number = 95
-const alignmentMaxX: number = 128
-const alignmentMaxY: number = 144
 let peelTimer: ReturnType<typeof setTimeout> | undefined
 
 const clearPeelTimer = (): void => {
@@ -103,19 +108,32 @@ const randomBetween = (min: number, max: number): number =>
 
 const movePeelTarget = (): void => {
   if (!props.visible || step.value !== 0 || peelResult.value !== 'playing') return
-  peelTargetDuration.value = randomBetween(650, 1250)
-  peelTargetPosition.value = randomBetween(22, 78)
-  peelTimer = setTimeout(movePeelTarget, peelTargetDuration.value + randomBetween(180, 520))
+  peelTargetDuration.value = randomBetween(
+    peelConfig.targetDurationMinMs,
+    peelConfig.targetDurationMaxMs,
+  )
+  peelTargetPosition.value = randomBetween(
+    peelConfig.targetPositionMinPercent,
+    peelConfig.targetPositionMaxPercent,
+  )
+  peelTimer = setTimeout(
+    movePeelTarget,
+    peelTargetDuration.value +
+      randomBetween(peelConfig.targetPauseMinMs, peelConfig.targetPauseMaxMs),
+  )
 }
 
 const resetPeel = (): void => {
   clearPeelTimer()
-  peelPosition.value = 12
-  peelTargetPosition.value = randomBetween(38, 72)
+  peelPosition.value = peelConfig.initialPositionPercent
+  peelTargetPosition.value = randomBetween(
+    peelConfig.resetTargetMinPercent,
+    peelConfig.resetTargetMaxPercent,
+  )
   peelTargetDuration.value = 0
   peelResult.value = 'playing'
   peelOrigin.value = undefined
-  peelTimer = setTimeout(movePeelTarget, 180)
+  peelTimer = setTimeout(movePeelTarget, peelConfig.startDelayMs)
 }
 
 watch(
@@ -127,8 +145,8 @@ watch(
     }
     step.value = 0
     resetPeel()
-    alignX.value = 38
-    alignY.value = -30
+    alignX.value = alignmentConfig.initialX
+    alignY.value = alignmentConfig.initialY
     alignOrigin.value = undefined
     pressedCount.value = 0
     pressMistakes.value = 0
@@ -139,7 +157,7 @@ watch(
 watch(step, (currentStep: number): void => {
   if (currentStep === 0 && props.visible && peelResult.value === 'playing') {
     clearPeelTimer()
-    peelTimer = setTimeout(movePeelTarget, 180)
+    peelTimer = setTimeout(movePeelTarget, peelConfig.startDelayMs)
     return
   }
   clearPeelTimer()
@@ -161,7 +179,10 @@ const startPeel = (event: PointerEvent): void => {
 const movePeel = (event: PointerEvent): void => {
   if (!peelOrigin.value) return
   const delta: number = ((event.clientX - peelOrigin.value.x) / peelOrigin.value.trackWidth) * 100
-  peelPosition.value = Math.max(7, Math.min(93, peelOrigin.value.position + delta))
+  peelPosition.value = Math.max(
+    peelConfig.handleMinPercent,
+    Math.min(peelConfig.handleMaxPercent, peelOrigin.value.position + delta),
+  )
 }
 
 const finishPeel = (): void => {
@@ -198,12 +219,18 @@ const startAlignment = (event: PointerEvent): void => {
 const moveAlignment = (event: PointerEvent): void => {
   if (!alignOrigin.value) return
   alignX.value = Math.max(
-    -alignmentMaxX,
-    Math.min(alignmentMaxX, alignOrigin.value.offsetX + event.clientX - alignOrigin.value.x),
+    -alignmentConfig.maxX,
+    Math.min(
+      alignmentConfig.maxX,
+      alignOrigin.value.offsetX + event.clientX - alignOrigin.value.x,
+    ),
   )
   alignY.value = Math.max(
-    -alignmentMaxY,
-    Math.min(alignmentMaxY, alignOrigin.value.offsetY + event.clientY - alignOrigin.value.y),
+    -alignmentConfig.maxY,
+    Math.min(
+      alignmentConfig.maxY,
+      alignOrigin.value.offsetY + event.clientY - alignOrigin.value.y,
+    ),
   )
 }
 
@@ -221,7 +248,7 @@ const pressCorner = (index: number): void => {
 
 const nextStep = (): void => {
   if (step.value === 0 && peelResult.value !== 'success') return
-  step.value = Math.min(2, step.value + 1)
+  step.value = Math.min(STICKER_PREPARATION_CONFIG.stepCount - 1, step.value + 1)
 }
 
 const previousStep = (): void => {
@@ -233,12 +260,15 @@ const completePreparation = (): void => {
   if (!props.item || pressedCount.value < pressZones.value.length) return
   const peelQuality: number = 100
   const alignmentQuality: number = alignmentAccuracy.value
-  const pressQuality: number = Math.max(80, 100 - pressMistakes.value * 5)
+  const pressQuality: number = Math.max(
+    pressConfig.minimumQuality,
+    100 - pressMistakes.value * pressConfig.mistakePenalty,
+  )
   const quality: number = Math.min(peelQuality, alignmentQuality, pressQuality)
   const preparation: StickerPreparation = {
     quality,
-    alignmentX: Number((alignX.value / alignmentCardWidth).toFixed(4)),
-    alignmentY: Number((alignY.value / alignmentCardHeight).toFixed(4)),
+    alignmentX: Number((alignX.value / alignmentConfig.cardWidth).toFixed(4)),
+    alignmentY: Number((alignY.value / alignmentConfig.cardHeight).toFixed(4)),
   }
   emit('complete', props.item.instance.id, preparation)
   emit('update:visible', false)
@@ -263,7 +293,7 @@ onBeforeUnmount(clearPeelTimer)
   >
     <div class="mb-3 grid grid-cols-3 gap-2 max-md:mb-1.5 max-md:gap-1">
       <div
-        v-for="index in 3"
+        v-for="index in STICKER_PREPARATION_CONFIG.stepCount"
         :key="index"
         class="rounded border px-2 py-2 text-center text-[10px] font-black uppercase tracking-wide max-md:py-1"
         :class="
@@ -279,7 +309,12 @@ onBeforeUnmount(clearPeelTimer)
     </div>
 
     <p class="text-[10px] font-black uppercase tracking-[0.16em] text-coral">
-      {{ t('stickerTray.stepLabel', { current: step + 1, total: 3 }) }}
+      {{
+        t('stickerTray.stepLabel', {
+          current: step + 1,
+          total: STICKER_PREPARATION_CONFIG.stepCount,
+        })
+      }}
     </p>
 
     <template v-if="step === 0">
@@ -381,7 +416,7 @@ onBeforeUnmount(clearPeelTimer)
         />
         <button
           class="absolute left-1/2 top-1/2 aspect-[2/3] w-28 touch-none select-none overflow-hidden rounded border-2 border-ink bg-white shadow-xl cursor-grab active:cursor-grabbing"
-          :class="alignmentAccuracy > alignmentPerfectAccuracy ? 'ring-4 ring-mint' : ''"
+          :class="alignmentAccuracy > alignmentConfig.perfectAccuracy ? 'ring-4 ring-mint' : ''"
           :style="{ transform: `translate(calc(-50% + ${alignX}px), calc(-50% + ${alignY}px))` }"
           type="button"
           :aria-label="t('stickerTray.alignTitle')"
@@ -401,10 +436,10 @@ onBeforeUnmount(clearPeelTimer)
       </div>
       <p
         class="mt-3 text-center text-xs font-black max-md:mt-2"
-        :class="alignmentAccuracy > alignmentPerfectAccuracy ? 'text-emerald-700' : 'text-ink/55'"
+        :class="alignmentAccuracy > alignmentConfig.perfectAccuracy ? 'text-emerald-700' : 'text-ink/55'"
       >
         {{
-          alignmentAccuracy > alignmentPerfectAccuracy
+          alignmentAccuracy > alignmentConfig.perfectAccuracy
             ? t('stickerTray.alignmentReady', { accuracy: alignmentAccuracy })
             : t('stickerTray.alignment', {
                 accuracy: alignmentAccuracy,
@@ -460,7 +495,7 @@ onBeforeUnmount(clearPeelTimer)
         @click="previousStep"
       />
       <Button
-        v-if="step < 2"
+        v-if="step < STICKER_PREPARATION_CONFIG.stepCount - 1"
         :label="t('stickerTray.continue')"
         icon="pi pi-arrow-right"
         icon-pos="right"

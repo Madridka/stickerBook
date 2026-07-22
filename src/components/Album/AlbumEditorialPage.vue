@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { ALBUM_VIEW_CONFIG } from '@/data/mainConst'
 
 interface AlbumReleaseNote {
   version: string
@@ -223,7 +224,7 @@ const { t } = useI18n()
             </h3>
             <ul class="grid list-none grid-cols-2 gap-[1.3cqw_2.5cqw] [margin:1.25cqw_0_0] p-0">
               <li
-                v-for="item in release.items.slice(0, 2)"
+                v-for="item in release.items.slice(0, ALBUM_VIEW_CONFIG.releaseItemsPerNote)"
                 :key="item"
                 class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#b9d8c2] before:content-[''] before:[box-shadow:inset_0_0_0_max(1px,0.08cqw)_rgb(23_33_43_/_20%)] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
               >

@@ -4,7 +4,7 @@ import {
   type InventoryItem,
   type PlayerState,
 } from '@/db/database'
-import gameData from '@/data/mainConst.json'
+import { CLICKER_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
 
 export interface PurchasedPackReceipt {
@@ -22,7 +22,7 @@ export type PurchasePackResult = PurchasedPackReceipt | RejectedPackPurchase
 
 // Сохраняет денежные значения с той же точностью, что и награды кликера.
 const roundCoins = (value: number): number => {
-  const multiplier: number = 10 ** gameData.clicker.rewardPrecision
+  const multiplier: number = 10 ** CLICKER_CONFIG.rewardPrecision
   return Math.round((value + Number.EPSILON) * multiplier) / multiplier
 }
 
@@ -43,7 +43,7 @@ export const purchasePack = async (price: number): Promise<PurchasePackResult> =
       const player: PlayerState = {
         ...savedPlayer,
         coins: roundCoins(savedPlayer.coins - price),
-        energy: savedPlayer.energy ?? gameData.clicker.energyLimit,
+        energy: savedPlayer.energy ?? CLICKER_CONFIG.energyLimit,
         energyUpdatedAt: savedPlayer.energyUpdatedAt ?? Date.now(),
       }
       const item: InventoryItem = {

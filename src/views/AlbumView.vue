@@ -3,8 +3,8 @@ import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref }
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
+import { ALBUM_VIEW_CONFIG, PLACE_ALL_COLLECTED_CARDS } from '@/data/mainConst'
 import cards from '@/data/wc-26/catalog'
-import { PLACE_ALL_COLLECTED_CARDS } from '@/data/wc-26/album'
 import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
@@ -93,10 +93,8 @@ const latestReleaseSeries: string =
   allReleaseNotes[0]?.version.split('.').slice(0, 2).join('.') ?? '0.0'
 const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
   .filter(({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`))
-  .slice(0, 3)
-const contentsPageSize: number = 12
-const contentsFirstPage: number = 4
-const contentsLastPage: number = 7
+  .slice(0, ALBUM_VIEW_CONFIG.recentReleaseCount)
+const { contentsPageSize, contentsFirstPage, contentsLastPage } = ALBUM_VIEW_CONFIG
 
 const { t } = useI18n()
 const router = useRouter()
@@ -440,7 +438,7 @@ const cancelDrop = (): void => {
 }
 
 onMounted((): void => {
-  desktopMediaQuery = window.matchMedia('(min-width: 1024px)')
+  desktopMediaQuery = window.matchMedia(ALBUM_VIEW_CONFIG.desktopSpreadMediaQuery)
   syncDesktopSpread(desktopMediaQuery)
   desktopMediaQuery.addEventListener('change', syncDesktopSpread)
 })

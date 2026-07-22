@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { ALBUM_VIEW_CONFIG } from '@/data/mainConst'
 
 import Button from 'primevue/button'
 
@@ -44,7 +45,6 @@ type TurnAction = 'previous' | 'next'
 const isTurning: Ref<boolean> = ref(false)
 const turnDirection: Ref<TurnDirection> = ref('forward')
 let turnTimer: ReturnType<typeof setTimeout> | undefined
-const turnDuration: number = 520
 
 // Запускает переворот одной страницы и синхронизирует индекс после анимации.
 const turnTo = (targetPage: number, direction: TurnDirection, action: TurnAction): void => {
@@ -55,7 +55,7 @@ const turnTo = (targetPage: number, direction: TurnDirection, action: TurnAction
     if (action === 'next') emit('next')
     else emit('previous')
     isTurning.value = false
-  }, turnDuration)
+  }, ALBUM_VIEW_CONFIG.pageTurnDurationMs)
 }
 
 const openBook = (): void => emit('open')

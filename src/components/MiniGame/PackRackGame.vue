@@ -9,7 +9,7 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import gameData from '@/data/mainConst.json'
+import { MINI_GAME_FIELD_PERCENT, PACK_HUNT_CONFIG } from '@/data/mainConst'
 import { createMiniGamePath, type MiniGamePoint } from '@/utils/createMiniGamePath'
 
 import ProgressBar from 'primevue/progressbar'
@@ -25,7 +25,7 @@ type RackStage = 0 | 1 | 2
 
 const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()
-const fieldPercent: number = 100
+const fieldPercent: number = MINI_GAME_FIELD_PERCENT
 const stage: Ref<RackStage> = ref(0)
 const isTransitioning: Ref<boolean> = ref(false)
 const isFinishing: Ref<boolean> = ref(false)
@@ -36,7 +36,7 @@ const rightOrigin: Ref<SpreadOrigin | undefined> = ref(undefined)
 const isGripping: Ref<boolean> = ref(false)
 const gripProgress: Ref<number> = ref(0)
 const extractionAreaRef: Ref<HTMLElement | undefined> = ref(undefined)
-const extractionPoints: MiniGamePoint[] = createMiniGamePath(gameData.packHunt.rack.route)
+const extractionPoints: MiniGamePoint[] = createMiniGamePath(PACK_HUNT_CONFIG.rack.route)
 const packPosition: Ref<MiniGamePoint> = ref({ ...extractionPoints[0]! })
 const nextPointIndex: Ref<number> = ref(1)
 const isExtracting: Ref<boolean> = ref(false)
@@ -51,18 +51,18 @@ let startedAt: number = 0
 let stageTimer: number | undefined
 let completionTimer: number | undefined
 
-const spreadTarget: number = gameData.packHunt.rack.spreadTargetPercent
+const spreadTarget: number = PACK_HUNT_CONFIG.rack.spreadTargetPercent
 const isSpreadComplete: ComputedRef<boolean> = computed(
   (): boolean => leftSpread.value <= -spreadTarget && rightSpread.value >= spreadTarget,
 )
 const leftStackStyle: ComputedRef<CSSProperties> = computed(
   (): CSSProperties => ({
-    left: `${50 - gameData.packHunt.rack.stackSeparationPercent + leftSpread.value}%`,
+    left: `${50 - PACK_HUNT_CONFIG.rack.stackSeparationPercent + leftSpread.value}%`,
   }),
 )
 const rightStackStyle: ComputedRef<CSSProperties> = computed(
   (): CSSProperties => ({
-    left: `${50 + gameData.packHunt.rack.stackSeparationPercent + rightSpread.value}%`,
+    left: `${50 + PACK_HUNT_CONFIG.rack.stackSeparationPercent + rightSpread.value}%`,
   }),
 )
 const packStyle: ComputedRef<CSSProperties> = computed(
@@ -81,7 +81,7 @@ const moveToStage = (nextStage: RackStage): void => {
     stage.value = nextStage
     isTransitioning.value = false
     stageTimer = undefined
-  }, gameData.packHunt.rack.stageTransitionMs)
+  }, PACK_HUNT_CONFIG.rack.stageTransitionMs)
 }
 
 // Завершает раунд не раньше общей минимальной длительности, сохраняя финальную анимацию.
@@ -89,7 +89,7 @@ const finishGame = (): void => {
   if (isFinishing.value) return
   isFinishing.value = true
   const elapsed: number = window.performance.now() - startedAt
-  const delay: number = Math.max(0, gameData.packHunt.rack.minimumDurationMs - elapsed)
+  const delay: number = Math.max(0, PACK_HUNT_CONFIG.rack.minimumDurationMs - elapsed)
   completionTimer = window.setTimeout((): void => {
     completionTimer = undefined
     emit('complete')
@@ -129,7 +129,7 @@ const spreadWithKeyboard = (event: KeyboardEvent, side: RackSide): void => {
   const expectedKey: string = side === 'left' ? 'ArrowLeft' : 'ArrowRight'
   if (event.key !== expectedKey || stage.value !== 0) return
   event.preventDefault()
-  const step: number = gameData.packHunt.keyboardStepPercent
+  const step: number = PACK_HUNT_CONFIG.keyboardStepPercent
   if (side === 'left') leftSpread.value = Math.max(-spreadTarget, leftSpread.value - step)
   else rightSpread.value = Math.min(spreadTarget, rightSpread.value + step)
   if (isSpreadComplete.value) moveToStage(1)
@@ -158,7 +158,7 @@ const checkExtractionPoint = (): void => {
     packPosition.value.x - point.x,
     packPosition.value.y - point.y,
   )
-  if (distance > gameData.packHunt.rack.pathTolerancePercent) return
+  if (distance > PACK_HUNT_CONFIG.rack.pathTolerancePercent) return
   packPosition.value = { ...point }
   nextPointIndex.value += 1
   if (nextPointIndex.value >= extractionPoints.length) finishGame()
@@ -193,7 +193,7 @@ const moveExtractionWithKeyboard = (event: KeyboardEvent): void => {
     return
   }
   event.preventDefault()
-  const step: number = gameData.packHunt.keyboardStepPercent
+  const step: number = PACK_HUNT_CONFIG.keyboardStepPercent
   const next: MiniGamePoint = { ...packPosition.value }
   if (event.key === 'ArrowUp') next.y -= step
   if (event.key === 'ArrowDown') next.y += step
@@ -205,17 +205,21 @@ const moveExtractionWithKeyboard = (event: KeyboardEvent): void => {
 
 // Обновляет удержание уголка блистера независимо от частоты кадров.
 const updateGrip = (timestamp: number): void => {
-  const elapsed: number = previousFrame === 0 ? 0 : Math.min(64, timestamp - previousFrame)
+  const elapsed: number =
+    previousFrame === 0
+      ? 0
+      : Math.min(PACK_HUNT_CONFIG.rack.maxFrameDeltaMs, timestamp - previousFrame)
   previousFrame = timestamp
   if (stage.value === 1 && isGripping.value && !isTransitioning.value) {
     gripProgress.value = Math.min(
       100,
-      gripProgress.value + (elapsed / gameData.packHunt.rack.gripDurationMs) * 100,
+      gripProgress.value + (elapsed / PACK_HUNT_CONFIG.rack.gripDurationMs) * 100,
     )
   } else if (stage.value === 1) {
     gripProgress.value = Math.max(
       0,
-      gripProgress.value - (elapsed / gameData.packHunt.rack.gripDurationMs) * 30,
+      gripProgress.value -
+        (elapsed / PACK_HUNT_CONFIG.rack.gripDurationMs) * PACK_HUNT_CONFIG.rack.gripDecayPercent,
     )
   }
   if (gripProgress.value >= 100 && stage.value === 1) {

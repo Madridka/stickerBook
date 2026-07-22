@@ -3,7 +3,11 @@ import { readFile, readdir } from 'node:fs/promises'
 import path from 'node:path'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
-import gameData from '../src/data/mainConst.json' with { type: 'json' }
+import {
+  DROP_ENGINE_CONFIG,
+  DUPLICATE_EXCHANGE_CONFIG,
+  PACK_CONFIGS,
+} from '../src/data/mainConst.ts'
 import { loadCardCatalogs } from '../src/data/cardCatalogLoader.ts'
 import type { CardRarity } from '../src/types/cardCatalog.ts'
 import { createDuplicateExchangeCandidates } from '../src/utils/createDuplicateExchangeCandidates.ts'
@@ -58,15 +62,15 @@ test('pack opening and duplicate exchange use normalized cards', async () => {
   const catalogs = loadCardCatalogs(await readTeamData('cards.json'))
   const allIds = new Set(catalogs.flatMap((catalog) => catalog.cards.map((card) => card.id)))
   const randomSource = createSeededRng(2026)
-  const packIds = Array.from({ length: gameData.packConfigs.standard.cardsPerPack }, () =>
+  const packIds = Array.from({ length: PACK_CONFIGS.standard.cardsPerPack }, () =>
     selectCardV2({
       catalogs,
       packConfig: {
-        cardsPerPack: gameData.packConfigs.standard.cardsPerPack,
-        rarityOdds: gameData.packConfigs.standard.rarityOdds as Record<CardRarity, number>,
+        cardsPerPack: PACK_CONFIGS.standard.cardsPerPack,
+        rarityOdds: PACK_CONFIGS.standard.rarityOdds as Record<CardRarity, number>,
       },
       poolId: 'standard',
-      defaultSelectionWeight: gameData.dropEngine.defaultSelectionWeight,
+      defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
       randomSource,
     }).id,
   )
@@ -77,10 +81,10 @@ test('pack opening and duplicate exchange use normalized cards', async () => {
   const candidates = createDuplicateExchangeCandidates(
     catalogs,
     excluded,
-    gameData.duplicateExchange.candidateCount,
+    DUPLICATE_EXCHANGE_CONFIG.candidateCount,
     randomSource,
   )
-  assert.equal(candidates.length, gameData.duplicateExchange.candidateCount)
+  assert.equal(candidates.length, DUPLICATE_EXCHANGE_CONFIG.candidateCount)
   assert.equal(new Set(candidates).size, candidates.length)
   assert.ok(candidates.every((id) => allIds.has(id) && !excluded.has(id)))
 })

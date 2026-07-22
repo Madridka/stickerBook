@@ -2,7 +2,7 @@ import { readFile, readdir } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ZodError } from 'zod'
-import gameData from '../src/data/mainConst.json' with { type: 'json' }
+import { COLLECTION_CONFIG, PACK_CONFIGS } from '../src/data/mainConst.ts'
 import { parseCardCatalog } from '../src/schemas/cardCatalog.ts'
 import type { CardCatalog } from '../src/types/cardCatalog.ts'
 
@@ -35,9 +35,9 @@ const validateData = async (): Promise<void> => {
   const failures: string[] = []
   const catalogs: CardCatalog[] = []
 
-  if (catalogPaths.length !== gameData.collection.expectedTeamCount) {
+  if (catalogPaths.length !== COLLECTION_CONFIG.expectedTeamCount) {
     failures.push(
-      `Expected ${gameData.collection.expectedTeamCount} cards.json files, found ${catalogPaths.length}`,
+      `Expected ${COLLECTION_CONFIG.expectedTeamCount} cards.json files, found ${catalogPaths.length}`,
     )
   }
 
@@ -57,7 +57,7 @@ const validateData = async (): Promise<void> => {
   }
 
   const cardOwners = new Map<string, string[]>()
-  const configuredPackPoolIds = new Set(Object.keys(gameData.packConfigs))
+  const configuredPackPoolIds = new Set(Object.keys(PACK_CONFIGS))
   let baseCardCount = 0
   let totalCardCount = 0
 
@@ -92,7 +92,7 @@ const validateData = async (): Promise<void> => {
   }
 
   const expectedBaseCardCount =
-    gameData.collection.expectedTeamCount * gameData.collection.baseAlbumSlotsPerTeam
+    COLLECTION_CONFIG.expectedTeamCount * COLLECTION_CONFIG.baseAlbumSlotsPerTeam
   if (baseCardCount !== expectedBaseCardCount) {
     failures.push(`Expected ${expectedBaseCardCount} base cards, found ${baseCardCount}`)
   }
@@ -100,7 +100,7 @@ const validateData = async (): Promise<void> => {
     failures.push(`Expected at least ${expectedBaseCardCount} total cards, found ${totalCardCount}`)
   }
 
-  for (const [poolId, packConfig] of Object.entries(gameData.packConfigs)) {
+  for (const [poolId, packConfig] of Object.entries(PACK_CONFIGS)) {
     const oddsTotal = Object.values(packConfig.rarityOdds).reduce(
       (total, odds) => total + odds,
       0,

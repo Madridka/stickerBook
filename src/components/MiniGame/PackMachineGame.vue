@@ -9,7 +9,7 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import gameData from '@/data/mainConst.json'
+import { MINI_GAME_FIELD_PERCENT, PACK_HUNT_CONFIG } from '@/data/mainConst'
 import { createMiniGamePath, type MiniGamePoint } from '@/utils/createMiniGamePath'
 
 import Button from 'primevue/button'
@@ -24,8 +24,8 @@ type MachineStage = 0 | 1 | 2
 
 const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()
-const fieldPercent: number = 100
-const machineData = gameData.packHunt.machine
+const fieldPercent: number = MINI_GAME_FIELD_PERCENT
+const machineData = PACK_HUNT_CONFIG.machine
 const initialMagnitude: number =
   machineData.drumOffsetMinPercent +
   Math.random() * (machineData.drumOffsetMaxPercent - machineData.drumOffsetMinPercent)
@@ -130,7 +130,7 @@ const moveDrumWithKeyboard = (event: KeyboardEvent): void => {
   if (stage.value !== 0 || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return
   event.preventDefault()
   const direction: number = event.key === 'ArrowLeft' ? -1 : 1
-  drumOffset.value += direction * gameData.packHunt.keyboardStepPercent
+  drumOffset.value += direction * PACK_HUNT_CONFIG.keyboardStepPercent
   if (isDrumAligned.value) {
     drumOffset.value = 0
     moveToStage(1)
@@ -154,7 +154,7 @@ const stopTimingFromPointer = (event: PointerEvent): void => {
 }
 
 const stopTimingFromClick = (): void => {
-  if (window.performance.now() - lastStopPointerAt < 700) return
+  if (window.performance.now() - lastStopPointerAt < machineData.pointerClickSuppressionMs) return
   stopTiming()
 }
 
@@ -200,7 +200,7 @@ const moveDeliveryWithKeyboard = (event: KeyboardEvent): void => {
     return
   }
   event.preventDefault()
-  const step: number = gameData.packHunt.keyboardStepPercent
+  const step: number = PACK_HUNT_CONFIG.keyboardStepPercent
   const next: MiniGamePoint = { ...packPosition.value }
   if (event.key === 'ArrowUp') next.y -= step
   if (event.key === 'ArrowDown') next.y += step

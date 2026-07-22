@@ -1,7 +1,11 @@
 import { mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import gameData from '../../src/data/mainConst.json' with { type: 'json' }
+import {
+  CARD_CATALOG_CONFIG,
+  COLLECTION_CONFIG,
+  LEGACY_MIGRATION_CONFIG,
+} from '../../src/data/mainConst.ts'
 import { parseCardCatalog } from '../../src/schemas/cardCatalog.ts'
 import type {
   CardCatalog,
@@ -311,7 +315,7 @@ const getCachedPosition = (teamId: string, personId: string): PlayerPosition | u
   playerPositionCache[personId]?.position
 
 const getRarity = (weight: number): CardRarity | null => {
-  const ranges = [...gameData.legacyMigration.weightToRarity].sort(
+  const ranges = [...LEGACY_MIGRATION_CONFIG.weightToRarity].sort(
     (left, right) => right.minWeight - left.minWeight,
   )
   const range = ranges.find((candidate) => weight >= candidate.minWeight)
@@ -319,7 +323,7 @@ const getRarity = (weight: number): CardRarity | null => {
 }
 
 const isStandardWeight = (weight: number): boolean => {
-  const ranges = [...gameData.legacyMigration.weightToRarity].sort(
+  const ranges = [...LEGACY_MIGRATION_CONFIG.weightToRarity].sort(
     (left, right) => right.minWeight - left.minWeight,
   )
   const exactThreshold = ranges.some((range) => range.minWeight === weight)
@@ -401,10 +405,10 @@ export const migrateTeam = (teamId: string, legacyCards: LegacyCard[]): TeamMigr
     const override = cardOverrides[legacyCard.id]
     const series = override?.series ?? identity.series
     const finish = override?.finish ?? identity.finish
-    if (!(gameData.cardCatalog.series as string[]).includes(series)) {
+    if (!(CARD_CATALOG_CONFIG.series as string[]).includes(series)) {
       unknownSeries.push({ teamId, id: legacyCard.id, value: series })
     }
-    if (!(gameData.cardCatalog.finishes as string[]).includes(finish)) {
+    if (!(CARD_CATALOG_CONFIG.finishes as string[]).includes(finish)) {
       unknownFinishes.push({ teamId, id: legacyCard.id, value: finish })
     }
     if (identity.inferredSpecial && !override) {
@@ -446,7 +450,7 @@ export const migrateTeam = (teamId: string, legacyCards: LegacyCard[]): TeamMigr
     } else {
       card.baseCardId = override?.baseCardId ?? identity.baseCardId
     }
-    if (rarity !== gameData.cardCatalog.defaults.rarity) {
+    if (rarity !== CARD_CATALOG_CONFIG.defaults.rarity) {
       card.rarity = rarity
     }
     if (kind === 'coach' || kind === 'player') {
@@ -520,7 +524,7 @@ export const migrateTeam = (teamId: string, legacyCards: LegacyCard[]): TeamMigr
   const baseSlots = baseCards.flatMap((card) =>
     card.albumSlot === undefined ? [] : [card.albumSlot],
   )
-  const expectedSlots = gameData.collection.baseAlbumSlotsPerTeam
+  const expectedSlots = COLLECTION_CONFIG.baseAlbumSlotsPerTeam
   const duplicateCardNumbers = groupDuplicates(teamId, cards, (card) => card.cardNumber)
   const duplicateAlbumSlots = groupDuplicates(teamId, baseCards, (card) => card.albumSlot)
   const invalidTeamCardCount =
@@ -535,13 +539,13 @@ export const migrateTeam = (teamId: string, legacyCards: LegacyCard[]): TeamMigr
 
   return {
     catalog: {
-      schemaVersion: gameData.cardCatalog.schemaVersion as 2,
-      collectionId: gameData.collection.id,
+      schemaVersion: CARD_CATALOG_CONFIG.schemaVersion,
+      collectionId: COLLECTION_CONFIG.id,
       teamId,
       defaults: {
-        rarity: gameData.cardCatalog.defaults.rarity as CardRarity,
-        series: gameData.cardCatalog.defaults.series as CardSeries,
-        finish: gameData.cardCatalog.defaults.finish as CardFinish,
+        rarity: CARD_CATALOG_CONFIG.defaults.rarity as CardRarity,
+        series: CARD_CATALOG_CONFIG.defaults.series as CardSeries,
+        finish: CARD_CATALOG_CONFIG.defaults.finish as CardFinish,
         acquisition: [{ type: 'pack', poolId: 'standard' }],
       },
       cards,
@@ -565,8 +569,8 @@ export const migrateTeam = (teamId: string, legacyCards: LegacyCard[]): TeamMigr
 }
 
 const createEmptyReport = (): DryRunReport => ({
-  schemaVersion: gameData.cardCatalog.schemaVersion,
-  collectionId: gameData.collection.id,
+  schemaVersion: CARD_CATALOG_CONFIG.schemaVersion,
+  collectionId: COLLECTION_CONFIG.id,
   completed: false,
   teamCount: 0,
   totalCardCount: 0,
@@ -628,11 +632,11 @@ const addTeamToReport = (
   report.momentCardCount += cards.filter((card) => card.series === 'moment').length
   report.legendCardCount += cards.filter((card) => card.series === 'legend').length
   report.missingPositionCount += result.missingPositionCount
-  if (cards.length > gameData.collection.baseAlbumSlotsPerTeam) {
+  if (cards.length > COLLECTION_CONFIG.baseAlbumSlotsPerTeam) {
     report.teamsWithExtraCards.push({
       teamId,
       totalCardCount: cards.length,
-      extraCardCount: cards.length - gameData.collection.baseAlbumSlotsPerTeam,
+      extraCardCount: cards.length - COLLECTION_CONFIG.baseAlbumSlotsPerTeam,
     })
   }
 
@@ -687,8 +691,8 @@ const assertSuccessfulDryRun = async (): Promise<void> => {
   }
   if (
     input.completed !== true ||
-    input.schemaVersion !== gameData.cardCatalog.schemaVersion ||
-    input.teamCount !== gameData.collection.expectedTeamCount
+    input.schemaVersion !== CARD_CATALOG_CONFIG.schemaVersion ||
+    input.teamCount !== COLLECTION_CONFIG.expectedTeamCount
   ) {
     throw new Error('A successful global --dry-run is required before --write')
   }
@@ -702,7 +706,7 @@ const createProgress = (): MigrationProgress => ({
   errorCount: 0,
   unresolvedFieldCount: 0,
   startedAt: new Date().toISOString(),
-  schemaVersion: gameData.cardCatalog.schemaVersion,
+  schemaVersion: CARD_CATALOG_CONFIG.schemaVersion,
 })
 
 const readProgress = async (resume: boolean): Promise<MigrationProgress> => {
@@ -714,7 +718,7 @@ const readProgress = async (resume: boolean): Promise<MigrationProgress> => {
     if (
       isRecord(input) &&
       Array.isArray(input.completedTeams) &&
-      input.schemaVersion === gameData.cardCatalog.schemaVersion
+      input.schemaVersion === CARD_CATALOG_CONFIG.schemaVersion
     ) {
       return input as unknown as MigrationProgress
     }
@@ -773,7 +777,7 @@ const runDryRun = async (playerFiles: string[], teamIdFilter?: string): Promise<
   report.duplicateIds = collectDuplicateIds(ids)
   report.completed =
     !teamIdFilter &&
-    report.teamCount === gameData.collection.expectedTeamCount &&
+    report.teamCount === COLLECTION_CONFIG.expectedTeamCount &&
     getCriticalErrorCount(report) === 0
   await writeJsonAtomically(dryRunReportPath, report)
   console.log(
@@ -842,9 +846,9 @@ const runWrite = async (
 const main = async (): Promise<void> => {
   const options = parseOptions(process.argv.slice(2))
   const playerFiles = await findPlayerFiles()
-  if (playerFiles.length !== gameData.collection.expectedTeamCount) {
+  if (playerFiles.length !== COLLECTION_CONFIG.expectedTeamCount) {
     throw new Error(
-      `Expected ${gameData.collection.expectedTeamCount} players.json files, found ${playerFiles.length}`,
+      `Expected ${COLLECTION_CONFIG.expectedTeamCount} players.json files, found ${playerFiles.length}`,
     )
   }
   await mkdir(reportsDirectory, { recursive: true })

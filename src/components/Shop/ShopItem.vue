@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { CARDS_PER_PACK } from '@/data/mainConst'
 import { formatCountdown } from '@/utils/formatCountdown'
 
 import Button from 'primevue/button'
@@ -239,7 +240,7 @@ const handleOpen = (): void => emit('open')
               >
               <span
                 class="relative z-[1] mt-[.35rem] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em] opacity-[.72]"
-                >5 STICKERS</span
+                >{{ CARDS_PER_PACK }} STICKERS</span
               >
             </div>
           </div>

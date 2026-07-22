@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import gameData from '../data/mainConst.json' with { type: 'json' }
+import { CARD_CATALOG_CONFIG, COLLECTION_CONFIG } from '../data/mainConst.ts'
 import type {
   CardCatalog,
   CardFinish,
@@ -18,14 +18,14 @@ const asEnumValues = <T extends string>(values: T[]): [T, ...T[]] => {
   return values as [T, ...T[]]
 }
 
-const cardKindSchema = z.enum(asEnumValues(gameData.cardCatalog.kinds as CardKind[]))
+const cardKindSchema = z.enum(asEnumValues(CARD_CATALOG_CONFIG.kinds as CardKind[]))
 const playerPositionSchema = z.enum(
-  asEnumValues(gameData.cardCatalog.positions as PlayerPosition[]),
+  asEnumValues(CARD_CATALOG_CONFIG.positions as PlayerPosition[]),
 )
-const coachRoleSchema = z.enum(asEnumValues(gameData.cardCatalog.coachRoles as CoachRole[]))
-const cardRaritySchema = z.enum(asEnumValues(gameData.cardCatalog.rarities as CardRarity[]))
-const cardSeriesSchema = z.enum(asEnumValues(gameData.cardCatalog.series as CardSeries[]))
-const cardFinishSchema = z.enum(asEnumValues(gameData.cardCatalog.finishes as CardFinish[]))
+const coachRoleSchema = z.enum(asEnumValues(CARD_CATALOG_CONFIG.coachRoles as CoachRole[]))
+const cardRaritySchema = z.enum(asEnumValues(CARD_CATALOG_CONFIG.rarities as CardRarity[]))
+const cardSeriesSchema = z.enum(asEnumValues(CARD_CATALOG_CONFIG.series as CardSeries[]))
+const cardFinishSchema = z.enum(asEnumValues(CARD_CATALOG_CONFIG.finishes as CardFinish[]))
 
 const acquisitionSourceSchema = z.discriminatedUnion('type', [
   z.strictObject({ type: z.literal('pack'), poolId: z.string().min(1) }),
@@ -67,8 +67,8 @@ const cardSchema = z.discriminatedUnion('kind', [
 ])
 
 const cardCatalogObjectSchema = z.strictObject({
-  schemaVersion: z.literal(gameData.cardCatalog.schemaVersion),
-  collectionId: z.literal(gameData.collection.id),
+  schemaVersion: z.literal(CARD_CATALOG_CONFIG.schemaVersion),
+  collectionId: z.literal(COLLECTION_CONFIG.id),
   teamId: z.string().min(1),
   defaults: z.strictObject({
     rarity: cardRaritySchema,
@@ -153,7 +153,7 @@ export const cardCatalogSchema = cardCatalogObjectSchema.superRefine((catalog, c
   })
 
   const baseCards = catalog.cards.filter((card) => card.series === 'base')
-  const expectedSlotCount = gameData.collection.baseAlbumSlotsPerTeam
+  const expectedSlotCount = COLLECTION_CONFIG.baseAlbumSlotsPerTeam
   if (catalog.cards.length < expectedSlotCount) {
     context.addIssue({
       code: 'custom',

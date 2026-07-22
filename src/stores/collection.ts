@@ -6,7 +6,7 @@ import type { CollectionItem, StickerInstance, StickerPlacement } from '@/types'
 import collectionData from '@/data/collection.json'
 import cards, { catalogs } from '@/data/wc-26/catalog'
 import albumData from '@/data/wc-26/album'
-import gameData from '@/data/mainConst.json'
+import { DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
 import { createDuplicateExchangeCandidates } from '@/utils/createDuplicateExchangeCandidates'
 
@@ -99,7 +99,7 @@ export const useCollectionStore = defineStore('collection', () => {
     instanceIds: string[],
   ): Promise<BeginDuplicateExchangeResult> => {
     const uniqueIds: string[] = Array.from(new Set(instanceIds))
-    if (uniqueIds.length !== gameData.duplicateExchange.tradeInCount || isExchanging.value) {
+    if (uniqueIds.length !== DUPLICATE_EXCHANGE_CONFIG.tradeInCount || isExchanging.value) {
       return 'invalid-selection'
     }
     isExchanging.value = true
@@ -129,7 +129,7 @@ export const useCollectionStore = defineStore('collection', () => {
             candidatePlayerIds: createDuplicateExchangeCandidates(
               catalogs,
               excludedPlayerIds,
-              gameData.duplicateExchange.candidateCount,
+              DUPLICATE_EXCHANGE_CONFIG.candidateCount,
             ),
             createdAt: Date.now(),
           }

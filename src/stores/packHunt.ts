@@ -1,7 +1,7 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type InventoryItem, type PackHuntProgress } from '@/db/database'
-import gameData from '@/data/mainConst.json'
+import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
 
 export type PackHuntClaimResult = 'claimed' | 'cooldown-active'
@@ -13,7 +13,7 @@ export const usePackHuntStore = defineStore('packHunt', () => {
   const currentTime: Ref<number> = ref(Date.now())
   const isLoaded: Ref<boolean> = ref(false)
   const isClaiming: Ref<boolean> = ref(false)
-  const cooldownMs: number = gameData.packHunt.cooldownMs
+  const cooldownMs: number = PACK_HUNT_CONFIG.cooldownMs
   const cooldownRemainingMs: ComputedRef<number> = computed((): number =>
     Math.max(0, lastClaimedAt.value + cooldownMs - currentTime.value),
   )

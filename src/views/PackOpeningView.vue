@@ -3,7 +3,7 @@ import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import cards from '@/data/wc-26/catalog'
-import packData from '@/data/mainConst.json'
+import { PACK_CONFIGS } from '@/data/mainConst'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
@@ -29,7 +29,7 @@ const currentIndex: ComputedRef<number> = computed(
 )
 const rewardTotal: ComputedRef<number> = computed(
   (): number =>
-    packOpening.session?.rewards.length ?? packData.packConfigs.standard.cardsPerPack,
+    packOpening.session?.rewards.length ?? PACK_CONFIGS.standard.cardsPerPack,
 )
 const isFinished: ComputedRef<boolean> = computed(
   (): boolean => currentIndex.value >= rewardTotal.value,

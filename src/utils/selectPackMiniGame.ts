@@ -1,4 +1,4 @@
-import gameData from '@/data/mainConst.json'
+import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 
 export type PackMiniGameId = 'signal' | 'rack' | 'machine' | 'shell' | 'puzzle' | 'catch'
 
@@ -17,7 +17,7 @@ export const isPackMiniGameId = (value: unknown): value is PackMiniGameId =>
 
 // Выбирает мини-игру по настраиваемым весам из игровых данных.
 export const selectPackMiniGame = (): PackMiniGameId => {
-  const options: PackMiniGameOption[] = gameData.packHunt.games
+  const options: PackMiniGameOption[] = PACK_HUNT_CONFIG.games
     .filter(({ id, weight }): boolean => isPackMiniGameId(id) && weight > 0)
     .map(({ id, weight }): PackMiniGameOption => ({ id: id as PackMiniGameId, weight }))
   const totalWeight: number = options.reduce(

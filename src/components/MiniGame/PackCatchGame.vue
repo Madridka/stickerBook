@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import gameData from '@/data/mainConst.json'
+import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 
 import ProgressBar from 'primevue/progressbar'
 
@@ -54,7 +54,7 @@ const {
   initialItemYPercent,
   itemDespawnYPercent,
   maxFrameDeltaMs,
-} = gameData.packHunt.catch
+} = PACK_HUNT_CONFIG.catch
 
 const catcherHalfWidthPercent: number = catcherWidthPercent / 2
 const catchToleranceHalfWidthPercent: number =

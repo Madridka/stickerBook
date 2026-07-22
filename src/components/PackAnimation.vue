@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { PACK_ANIMATION_CONFIG } from '@/data/mainConst'
 
 const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()
@@ -11,12 +12,15 @@ let animationTimer: number | undefined
 const startAnimation = (): void => {
   animationTimer = window.setInterval((): void => {
     animationStep.value += 1
-    if (animationStep.value >= 3) {
+    if (animationStep.value >= PACK_ANIMATION_CONFIG.stepCount) {
       window.clearInterval(animationTimer)
       animationTimer = undefined
-      window.setTimeout((): void => emit('complete'), 450)
+      window.setTimeout(
+        (): void => emit('complete'),
+        PACK_ANIMATION_CONFIG.completionDelayMs,
+      )
     }
-  }, 850)
+  }, PACK_ANIMATION_CONFIG.stepIntervalMs)
 }
 
 onMounted(startAnimation)

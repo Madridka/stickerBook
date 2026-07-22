@@ -1,7 +1,7 @@
 import { mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import gameData from '../../src/data/mainConst.json' with { type: 'json' }
+import { CARD_CATALOG_CONFIG, COLLECTION_CONFIG } from '../../src/data/mainConst.ts'
 import { parseCardCatalog } from '../../src/schemas/cardCatalog.ts'
 import type { CardCatalog, PlayerPosition } from '../../src/types/cardCatalog.ts'
 
@@ -129,16 +129,16 @@ const createProgress = (): PositionProgress => ({
   unresolvedFieldCount: 0,
   errorCount: 0,
   startedAt: new Date().toISOString(),
-  schemaVersion: gameData.cardCatalog.schemaVersion,
+  schemaVersion: CARD_CATALOG_CONFIG.schemaVersion,
 })
 
 const main = async (): Promise<void> => {
   await mkdir(reportsDirectory, { recursive: true })
   const cache = parseCache(await readJson(cachePath))
   const catalogFiles = await findCatalogFiles()
-  if (catalogFiles.length !== gameData.collection.expectedTeamCount) {
+  if (catalogFiles.length !== COLLECTION_CONFIG.expectedTeamCount) {
     throw new Error(
-      `Expected ${gameData.collection.expectedTeamCount} catalogs, found ${catalogFiles.length}`,
+      `Expected ${COLLECTION_CONFIG.expectedTeamCount} catalogs, found ${catalogFiles.length}`,
     )
   }
 

@@ -1,4 +1,4 @@
-import gameData from '../data/mainConst.json' with { type: 'json' }
+import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '../data/mainConst.ts'
 import type { CardDefinition, NormalizedCardCatalog } from '../types/cardCatalog.ts'
 import { selectCardV2, type RandomSource } from './dropEngine.ts'
 
@@ -25,9 +25,9 @@ export const createDuplicateExchangeCandidates = (
   while (candidatePlayerIds.length < candidateCount) {
     const candidate = selectCardV2({
       catalogs: availableCatalogs,
-      packConfig: gameData.packConfigs.standard,
+      packConfig: PACK_CONFIGS.standard,
       poolId: 'standard',
-      defaultSelectionWeight: gameData.dropEngine.defaultSelectionWeight,
+      defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
       randomSource,
     }) as CardDefinition
     candidatePlayerIds.push(candidate.id)

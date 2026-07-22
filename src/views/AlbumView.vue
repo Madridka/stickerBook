@@ -181,6 +181,7 @@ const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
 const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 const getCardAlbumSlotId = (playerId: string): string => getCard(playerId)?.baseCardId ?? playerId
+const selectedCatalogCardIds: Ref<Record<string, string>> = ref({})
 
 type PlacedCard = {
   card: CardDefinition
@@ -188,6 +189,26 @@ type PlacedCard = {
   placement: StickerPlacement
   preparation?: StickerPreparation
 }
+
+// Полный каталог для демонстрационного режима не зависит от сохранённой коллекции пользователя.
+const catalogCardsByAlbumSlot: ReadonlyMap<string, PlacedCard[]> = cards.reduce(
+  (slots: Map<string, PlacedCard[]>, card: CardDefinition): Map<string, PlacedCard[]> => {
+    const slotId: string = card.baseCardId ?? card.id
+    const placedCard: PlacedCard = {
+      card,
+      instance: {
+        id: `catalog:${card.id}`,
+        playerId: card.id,
+        quality: 100,
+        location: 'album',
+      },
+      placement: { slotId, x: 0, y: 0, rotation: 0 },
+    }
+    slots.set(slotId, [...(slots.get(slotId) ?? []), placedCard])
+    return slots
+  },
+  new Map<string, PlacedCard[]>(),
+)
 
 // Синхронизирует режим одной страницы и полного разворота с Tailwind breakpoint lg.
 const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void => {
@@ -197,15 +218,14 @@ const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void =>
   }
 }
 
-// Возвращает уже вклеенную карточку с поддержкой старых идентификаторов слотов.
-const getPlacedCards = (slotId: string): PlacedCard[] =>
-  collection.items
+// Возвращает карточки слота; в демонстрационном режиме берёт их из полного каталога игры.
+const getPlacedCards = (slotId: string): PlacedCard[] => {
+  if (PLACE_ALL_COLLECTED_CARDS) return catalogCardsByAlbumSlot.get(slotId) ?? []
+
+  return collection.items
     .filter(
       ({ instance }): boolean => {
         if (instance.location === 'deleted') return false
-        if (PLACE_ALL_COLLECTED_CARDS) {
-          return getCardAlbumSlotId(instance.playerId) === slotId
-        }
         return (
           instance.location === 'album' &&
           normalizeSlotId(instance.placement?.slotId ?? '') === slotId
@@ -215,23 +235,25 @@ const getPlacedCards = (slotId: string): PlacedCard[] =>
     .map(({ instance }): PlacedCard | undefined => {
       const card: CardDefinition | undefined = getCard(instance.playerId)
       if (!card) return undefined
-      const placement: StickerPlacement | undefined =
-        PLACE_ALL_COLLECTED_CARDS
-          ? { slotId, x: 0, y: 0, rotation: 0 }
-          : instance.placement
+      const placement: StickerPlacement | undefined = instance.placement
       return placement
         ? {
             card,
             instance,
             placement,
-            preparation: PLACE_ALL_COLLECTED_CARDS ? undefined : instance.preparation,
+            preparation: instance.preparation,
           }
         : undefined
     })
     .filter((item: PlacedCard | undefined): item is PlacedCard => Boolean(item))
+}
 
 const getPlacedCard = (slotId: string): PlacedCard | undefined => {
   const placedCards: PlacedCard[] = getPlacedCards(slotId)
+  if (PLACE_ALL_COLLECTED_CARDS) {
+    const selectedCardId: string | undefined = selectedCatalogCardIds.value[slotId]
+    return placedCards.find(({ card }): boolean => card.id === selectedCardId) ?? placedCards[0]
+  }
   return (
     placedCards.find(({ instance }): boolean => instance.isAlbumDisplay === true) ?? placedCards[0]
   )
@@ -245,6 +267,13 @@ const showNextPlacedCard = async (slotId: string): Promise<void> => {
     ({ instance }): boolean => instance.id === current?.instance.id,
   )
   const next: PlacedCard = placedCards[(currentIndex + 1) % placedCards.length]
+  if (PLACE_ALL_COLLECTED_CARDS) {
+    selectedCatalogCardIds.value = {
+      ...selectedCatalogCardIds.value,
+      [slotId]: next.card.id,
+    }
+    return
+  }
   await collection.setAlbumDisplay(next.instance.id, slotId)
 }
 

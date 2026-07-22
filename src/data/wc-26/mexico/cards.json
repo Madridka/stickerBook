@@ -115,18 +115,6 @@
       "id": "mex-09",
       "cardNumber": "09",
       "albumSlot": 9,
-      "displayName": "Carlos Rodríguez",
-      "image": "/cards/mexico/MEX-09-carlos-rodriguez.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "carlos-rodriguez",
-      "position": "MF"
-    },
-    {
-      "id": "mex-10",
-      "cardNumber": "10",
-      "albumSlot": 10,
       "displayName": "Edson Álvarez",
       "image": "/cards/mexico/MEX-10-edson-alvarez.webp",
       "series": "base",
@@ -134,6 +122,18 @@
       "kind": "player",
       "personId": "edson-alvarez",
       "position": "DF"
+    },
+    {
+      "id": "mex-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Carlos Rodríguez",
+      "image": "/cards/mexico/MEX-09-carlos-rodriguez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "carlos-rodriguez",
+      "position": "MF"
     },
     {
       "id": "mex-11",
@@ -163,18 +163,6 @@
       "id": "mex-13",
       "cardNumber": "13",
       "albumSlot": 13,
-      "displayName": "Diego Lainez",
-      "image": "/cards/mexico/MEX-13-diego-lainez.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "diego-lainez",
-      "position": "FW"
-    },
-    {
-      "id": "mex-14",
-      "cardNumber": "14",
-      "albumSlot": 14,
       "displayName": "Érick Sánchez",
       "image": "/cards/mexico/MEX-14-erick-sanchez.webp",
       "series": "base",
@@ -182,6 +170,18 @@
       "kind": "player",
       "personId": "erick-sanchez",
       "position": "MF"
+    },
+    {
+      "id": "mex-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Diego Lainez",
+      "image": "/cards/mexico/MEX-13-diego-lainez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "diego-lainez",
+      "position": "FW"
     },
     {
       "id": "mex-15",

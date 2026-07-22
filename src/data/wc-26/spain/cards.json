@@ -188,6 +188,18 @@
       "id": "esp-15",
       "cardNumber": "15",
       "albumSlot": 15,
+      "displayName": "Gavi",
+      "image": "/cards/spain/ESP-20-gavi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "gavi",
+      "position": "MF"
+    },
+    {
+      "id": "esp-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
       "displayName": "Dani Olmo",
       "image": "/cards/spain/ESP-15-dani-olmo.webp",
       "series": "base",
@@ -198,9 +210,9 @@
       "position": "FW"
     },
     {
-      "id": "esp-16",
-      "cardNumber": "16",
-      "albumSlot": 16,
+      "id": "esp-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
       "displayName": "Lamine Yamal",
       "image": "/cards/spain/ESP-16-lamine-yamal.webp",
       "series": "base",
@@ -211,9 +223,9 @@
       "position": "FW"
     },
     {
-      "id": "esp-17",
-      "cardNumber": "17",
-      "albumSlot": 17,
+      "id": "esp-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
       "displayName": "Nico Williams",
       "image": "/cards/spain/ESP-17-nico-williams.webp",
       "series": "base",
@@ -224,9 +236,9 @@
       "position": "FW"
     },
     {
-      "id": "esp-18",
-      "cardNumber": "18",
-      "albumSlot": 18,
+      "id": "esp-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
       "displayName": "Mikel Oyarzabal",
       "image": "/cards/spain/ESP-18-mikel-oyarzabal.webp",
       "series": "base",
@@ -236,9 +248,9 @@
       "position": "FW"
     },
     {
-      "id": "esp-19",
-      "cardNumber": "19",
-      "albumSlot": 19,
+      "id": "esp-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
       "displayName": "Ferran Torres",
       "image": "/cards/spain/ESP-19-ferran-torres.webp",
       "series": "base",
@@ -248,8 +260,8 @@
       "position": "FW"
     },
     {
-      "id": "esp-19.1",
-      "cardNumber": "19.1",
+      "id": "esp-20.1",
+      "cardNumber": "20.1",
       "displayName": "Ferran Torres",
       "image": "/cards/spain/ESP-19.1-ferran-torres.png",
       "series": "special",
@@ -258,19 +270,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "ferran-torres",
-      "position": "FW"
-    },
-    {
-      "id": "esp-20",
-      "cardNumber": "20",
-      "albumSlot": 20,
-      "displayName": "Gavi",
-      "image": "/cards/spain/ESP-20-gavi.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "gavi",
-      "position": "MF"
+      "position": "FW",
+      "albumSlot": 20
     }
   ]
 }

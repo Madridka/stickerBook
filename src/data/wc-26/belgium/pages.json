@@ -1,8 +1,7 @@
 [
   {
     "id": "belgium-left",
-    "number": 56,
-    "image": "page-56-stickers-left.png",
+    "image": "belgium-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -90,8 +89,7 @@
   },
   {
     "id": "belgium-right",
-    "number": 57,
-    "image": "page-57-stickers-right.png",
+    "image": "belgium-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

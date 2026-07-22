@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import cards from '@/data/wc-26/catalog'
+import { PLACE_ALL_COLLECTED_CARDS } from '@/data/wc-26/album'
 import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
@@ -200,14 +201,31 @@ const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void =>
 const getPlacedCards = (slotId: string): PlacedCard[] =>
   collection.items
     .filter(
-      ({ instance }): boolean =>
-        instance.location === 'album' &&
-        normalizeSlotId(instance.placement?.slotId ?? '') === slotId,
+      ({ instance }): boolean => {
+        if (instance.location === 'deleted') return false
+        if (PLACE_ALL_COLLECTED_CARDS) {
+          return getCardAlbumSlotId(instance.playerId) === slotId
+        }
+        return (
+          instance.location === 'album' &&
+          normalizeSlotId(instance.placement?.slotId ?? '') === slotId
+        )
+      },
     )
     .map(({ instance }): PlacedCard | undefined => {
       const card: CardDefinition | undefined = getCard(instance.playerId)
-      return card && instance.placement
-        ? { card, instance, placement: instance.placement, preparation: instance.preparation }
+      if (!card) return undefined
+      const placement: StickerPlacement | undefined =
+        PLACE_ALL_COLLECTED_CARDS
+          ? { slotId, x: 0, y: 0, rotation: 0 }
+          : instance.placement
+      return placement
+        ? {
+            card,
+            instance,
+            placement,
+            preparation: PLACE_ALL_COLLECTED_CARDS ? undefined : instance.preparation,
+          }
         : undefined
     })
     .filter((item: PlacedCard | undefined): item is PlacedCard => Boolean(item))
@@ -230,15 +248,16 @@ const showNextPlacedCard = async (slotId: string): Promise<void> => {
   await collection.setAlbumDisplay(next.instance.id, slotId)
 }
 
-const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[] =>
-  collection.items
+const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[] => {
+  if (PLACE_ALL_COLLECTED_CARDS) return []
+  return collection.items
     .filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location))
     .map(({ instance }): StickerTrayItem | undefined => {
       const card: CardDefinition | undefined = getCard(instance.playerId)
       return card ? { card, instance } : undefined
     })
-    .filter((item: StickerTrayItem | undefined): item is StickerTrayItem => Boolean(item)),
-)
+    .filter((item: StickerTrayItem | undefined): item is StickerTrayItem => Boolean(item))
+})
 
 const openPreview = (instance: StickerInstance): void => {
   const card: CardDefinition | undefined = getCard(instance.playerId)

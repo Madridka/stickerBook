@@ -1,20 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
-import albumCatalog from '@/data/albums.json'
+import albumCatalog, { type AlbumCatalogItem } from '@/data/albums'
 import { useCollectionStore } from '@/stores/collection'
 import type { AlbumGeometryData, CollectionItem } from '@/types'
 
-interface AlbumLibraryItem {
-  id: string
-  route: string
-  cover: string
-  pages: number
-}
-
 const { t } = useI18n()
 const collection = useCollectionStore()
-const albums: AlbumLibraryItem[] = albumCatalog.albums
+const albums: AlbumCatalogItem[] = albumCatalog.albums
 const coverImages: Record<string, string> = import.meta.glob(
   '../../assets/game/*/main/album/cover.webp',
   { eager: true, import: 'default', query: '?url' },
@@ -24,11 +17,11 @@ const albumGeometry: Record<string, AlbumGeometryData> = import.meta.glob('../da
   import: 'default',
 }) as Record<string, AlbumGeometryData>
 
-const getCover = (album: AlbumLibraryItem): string =>
+const getCover = (album: AlbumCatalogItem): string =>
   coverImages[`../../assets/game/${album.id}/main/album/${album.cover}`] ?? ''
 
 // Рассчитывает заполнение конкретного журнала только по вклеенным в него карточкам.
-const getProgress = (album: AlbumLibraryItem): number => {
+const getProgress = (album: AlbumCatalogItem): number => {
   const geometry: AlbumGeometryData | undefined = albumGeometry[`../data/${album.id}/album.ts`]
   if (!geometry) return 0
   const slotIds: Set<string> = new Set(

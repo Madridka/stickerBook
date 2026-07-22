@@ -1,7 +1,7 @@
 [
   {
     "id": "congo-dr-left",
-    "image": "page-90-stickers-left.png",
+    "image": "congo-dr-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "congo-dr-right",
-    "image": "page-91-stickers-right.png",
+    "image": "congo-dr-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

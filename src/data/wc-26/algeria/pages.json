@@ -1,7 +1,7 @@
 [
   {
     "id": "algeria-left",
-    "image": "algeria-left.png",
+    "image": "algeria-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "algeria-right",
-    "image": "algeria-right.png",
+    "image": "algeria-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

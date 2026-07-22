@@ -1,7 +1,7 @@
 [
   {
     "id": "qatar-left",
-    "image": "page-20-stickers-left.png",
+    "image": "qatar-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "qatar-right",
-    "image": "page-21-stickers-right.png",
+    "image": "qatar-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

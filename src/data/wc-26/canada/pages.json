@@ -1,7 +1,7 @@
 [
   {
     "id": "canada-left",
-    "image": "page-16-stickers-left.png",
+    "image": "canada-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "canada-right",
-    "image": "page-17-stickers-right.png",
+    "image": "canada-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

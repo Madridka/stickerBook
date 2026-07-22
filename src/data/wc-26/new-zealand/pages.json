@@ -1,7 +1,7 @@
 [
   {
     "id": "new-zealand-left",
-    "image": "page-62-stickers-left.png",
+    "image": "new-zealand-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "new-zealand-right",
-    "image": "page-63-stickers-right.png",
+    "image": "new-zealand-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

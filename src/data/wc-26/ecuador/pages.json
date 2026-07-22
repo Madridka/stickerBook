@@ -1,7 +1,7 @@
 [
   {
     "id": "ecuador-left",
-    "image": "page-46-stickers-left.png",
+    "image": "ecuador-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "ecuador-right",
-    "image": "page-47-stickers-right.png",
+    "image": "ecuador-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

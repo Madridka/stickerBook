@@ -1,7 +1,7 @@
 [
   {
     "id": "curacao-left",
-    "image": "page-42-stickers-left.png",
+    "image": "curacao-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "curacao-right",
-    "image": "page-43-stickers-right.png",
+    "image": "curacao-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

@@ -1,7 +1,7 @@
 [
   {
     "id": "tunisia-left",
-    "image": "page-54-stickers-left.png",
+    "image": "tunisia-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "tunisia-right",
-    "image": "page-55-stickers-right.png",
+    "image": "tunisia-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

@@ -1,7 +1,7 @@
 [
   {
     "id": "haiti-left",
-    "image": "page-28-stickers-left.png",
+    "image": "haiti-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "haiti-right",
-    "image": "page-29-stickers-right.png",
+    "image": "haiti-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

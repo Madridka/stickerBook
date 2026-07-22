@@ -1,7 +1,7 @@
 [
   {
     "id": "netherlands-left",
-    "image": "page-48-stickers-left.png",
+    "image": "netherlands-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "netherlands-right",
-    "image": "page-49-stickers-right.png",
+    "image": "netherlands-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

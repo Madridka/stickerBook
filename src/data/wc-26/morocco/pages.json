@@ -1,7 +1,7 @@
 [
   {
     "id": "morocco-left",
-    "image": "page-26-stickers-left.png",
+    "image": "morocco-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "morocco-right",
-    "image": "page-27-stickers-right.png",
+    "image": "morocco-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

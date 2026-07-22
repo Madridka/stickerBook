@@ -1,7 +1,7 @@
 [
   {
     "id": "paraguay-left",
-    "image": "page-34-stickers-left.png",
+    "image": "paraguay-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "paraguay-right",
-    "image": "page-35-stickers-right.png",
+    "image": "paraguay-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

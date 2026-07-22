@@ -1,7 +1,7 @@
 [
   {
     "id": "uruguay-left",
-    "image": "page-70-stickers-left.png",
+    "image": "uruguay-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "uruguay-right",
-    "image": "page-71-stickers-right.png",
+    "image": "uruguay-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

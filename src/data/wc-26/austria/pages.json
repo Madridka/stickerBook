@@ -1,7 +1,7 @@
 [
   {
     "id": "austria-left",
-    "image": "page-84-stickers-left.png",
+    "image": "austria-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "austria-right",
-    "image": "page-85-stickers-right.png",
+    "image": "austria-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

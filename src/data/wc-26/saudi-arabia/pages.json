@@ -1,7 +1,7 @@
 [
   {
     "id": "saudi-arabia-left",
-    "image": "page-68-stickers-left.png",
+    "image": "saudi-arabia-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "saudi-arabia-right",
-    "image": "page-69-stickers-right.png",
+    "image": "saudi-arabia-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

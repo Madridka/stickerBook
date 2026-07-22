@@ -1,7 +1,7 @@
 [
   {
     "id": "egypt-left",
-    "image": "page-58-stickers-left.png",
+    "image": "egypt-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "egypt-right",
-    "image": "page-59-stickers-right.png",
+    "image": "egypt-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

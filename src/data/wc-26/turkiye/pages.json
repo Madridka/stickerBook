@@ -1,7 +1,7 @@
 [
   {
     "id": "turkiye-left",
-    "image": "page-38-stickers-left.png",
+    "image": "turkiye-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "turkiye-right",
-    "image": "page-39-stickers-right.png",
+    "image": "turkiye-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

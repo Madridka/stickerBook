@@ -1,7 +1,7 @@
 [
   {
     "id": "senegal-left",
-    "image": "page-74-stickers-left.png",
+    "image": "senegal-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -19,7 +19,7 @@
   },
   {
     "id": "senegal-right",
-    "image": "page-75-stickers-right.png",
+    "image": "senegal-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

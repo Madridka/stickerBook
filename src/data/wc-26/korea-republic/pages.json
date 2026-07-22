@@ -1,7 +1,7 @@
 [
   {
     "id": "korea-republic-left",
-    "image": "page-12-stickers-left.png",
+    "image": "korea-republic-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "korea-republic-right",
-    "image": "page-13-stickers-right.png",
+    "image": "korea-republic-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

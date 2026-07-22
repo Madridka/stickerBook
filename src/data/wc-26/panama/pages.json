@@ -1,7 +1,7 @@
 [
   {
     "id": "panama-left",
-    "image": "page-102-stickers-left.png",
+    "image": "panama-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "panama-right",
-    "image": "page-103-stickers-right.png",
+    "image": "panama-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

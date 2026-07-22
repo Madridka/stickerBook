@@ -1,7 +1,7 @@
 [
   {
     "id": "germany-left",
-    "image": "page-40-stickers-left.png",
+    "image": "germany-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -19,7 +19,7 @@
   },
   {
     "id": "germany-right",
-    "image": "page-41-stickers-right.png",
+    "image": "germany-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

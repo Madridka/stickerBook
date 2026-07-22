@@ -1,7 +1,7 @@
 [
   {
     "id": "uzbekistan-left",
-    "image": "page-92-stickers-left.png",
+    "image": "uzbekistan-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "uzbekistan-right",
-    "image": "page-93-stickers-right.png",
+    "image": "uzbekistan-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

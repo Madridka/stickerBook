@@ -1,7 +1,7 @@
 [
   {
     "id": "czechia-left",
-    "image": "page-14-stickers-left.png",
+    "image": "czechia-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "czechia-right",
-    "image": "page-15-stickers-right.png",
+    "image": "czechia-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

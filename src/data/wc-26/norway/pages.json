@@ -1,7 +1,7 @@
 [
   {
     "id": "norway-left",
-    "image": "page-78-stickers-left.png",
+    "image": "norway-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "norway-right",
-    "image": "page-79-stickers-right.png",
+    "image": "norway-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

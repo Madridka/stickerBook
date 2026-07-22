@@ -1,7 +1,7 @@
 [
   {
     "id": "australia-left",
-    "image": "page-36-stickers-left.png",
+    "image": "australia-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "australia-right",
-    "image": "page-37-stickers-right.png",
+    "image": "australia-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

@@ -1,7 +1,7 @@
 [
   {
     "id": "cote-divoire-left",
-    "image": "page-44-stickers-left.png",
+    "image": "cote-divoire-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "cote-divoire-right",
-    "image": "page-45-stickers-right.png",
+    "image": "cote-divoire-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

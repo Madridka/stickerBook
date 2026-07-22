@@ -1,7 +1,7 @@
 [
   {
     "id": "cabo-verde-left",
-    "image": "page-66-stickers-left.png",
+    "image": "cabo-verde-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -19,7 +19,7 @@
   },
   {
     "id": "cabo-verde-right",
-    "image": "page-67-stickers-right.png",
+    "image": "cabo-verde-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

@@ -1,7 +1,7 @@
 [
   {
     "id": "jordan-left",
-    "image": "page-86-stickers-left.png",
+    "image": "jordan-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "jordan-right",
-    "image": "page-87-stickers-right.png",
+    "image": "jordan-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

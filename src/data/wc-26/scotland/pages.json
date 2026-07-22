@@ -1,7 +1,7 @@
 [
   {
     "id": "scotland-left",
-    "image": "page-30-stickers-left.png",
+    "image": "scotland-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "scotland-right",
-    "image": "page-31-stickers-right.png",
+    "image": "scotland-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

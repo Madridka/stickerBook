@@ -1,7 +1,7 @@
 [
   {
     "id": "iran-left",
-    "image": "page-60-stickers-left.png",
+    "image": "iran-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "iran-right",
-    "image": "page-61-stickers-right.png",
+    "image": "iran-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

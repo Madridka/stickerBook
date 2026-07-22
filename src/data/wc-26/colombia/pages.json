@@ -1,7 +1,7 @@
 [
   {
     "id": "colombia-left",
-    "image": "page-94-stickers-left.png",
+    "image": "colombia-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "colombia-right",
-    "image": "page-95-stickers-right.png",
+    "image": "colombia-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

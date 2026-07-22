@@ -1,7 +1,7 @@
 [
   {
     "id": "ghana-left",
-    "image": "page-100-stickers-left.png",
+    "image": "ghana-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "ghana-right",
-    "image": "page-101-stickers-right.png",
+    "image": "ghana-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

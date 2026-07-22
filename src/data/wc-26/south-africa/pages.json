@@ -1,7 +1,7 @@
 [
   {
     "id": "south-africa-left",
-    "image": "page-10-stickers-left.png",
+    "image": "south-africa-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "south-africa-right",
-    "image": "page-11-stickers-right.png",
+    "image": "south-africa-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

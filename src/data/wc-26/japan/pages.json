@@ -1,7 +1,7 @@
 [
   {
     "id": "japan-left",
-    "image": "page-50-stickers-left.png",
+    "image": "japan-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "japan-right",
-    "image": "page-51-stickers-right.png",
+    "image": "japan-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

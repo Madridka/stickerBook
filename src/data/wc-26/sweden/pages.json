@@ -1,7 +1,7 @@
 [
   {
     "id": "sweden-left",
-    "image": "page-52-stickers-left.png",
+    "image": "sweden-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "sweden-right",
-    "image": "page-53-stickers-right.png",
+    "image": "sweden-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

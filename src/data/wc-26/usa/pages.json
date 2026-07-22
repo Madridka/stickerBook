@@ -1,7 +1,7 @@
 [
   {
     "id": "usa-left",
-    "image": "page-32-stickers-left.png",
+    "image": "usa-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "usa-right",
-    "image": "page-33-stickers-right.png",
+    "image": "usa-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

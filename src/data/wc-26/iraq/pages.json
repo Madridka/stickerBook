@@ -1,7 +1,7 @@
 [
   {
     "id": "iraq-left",
-    "image": "page-76-stickers-left.png",
+    "image": "iraq-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "iraq-right",
-    "image": "page-77-stickers-right.png",
+    "image": "iraq-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

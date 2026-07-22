@@ -1,7 +1,7 @@
 [
   {
     "id": "brazil-left",
-    "image": "page-24-stickers-left.png",
+    "image": "brazil-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "brazil-right",
-    "image": "page-25-stickers-right.png",
+    "image": "brazil-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

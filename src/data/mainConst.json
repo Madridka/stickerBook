@@ -19,7 +19,8 @@
       { "id": "rack", "weight": 1 },
       { "id": "machine", "weight": 1 },
       { "id": "shell", "weight": 1 },
-      { "id": "puzzle", "weight": 1 }
+      { "id": "puzzle", "weight": 1 },
+      { "id": "catch", "weight": 1 }
     ],
     "signalsRequired": 3,
     "holdDurationMs": 3000,
@@ -104,6 +105,36 @@
       "cardAspectRatio": 0.7142857,
       "lowWeightBiasPower": 2,
       "completionDelayMs": 900
+    },
+    "catch": {
+      "sessionDurationSeconds": 18,
+      "completionDelayMs": 1300,
+      "catcherWidthPercent": 16,
+      "catchLinePercent": 82,
+      "catchBandHalfPercent": 4,
+      "catchToleranceExtraPercent": 3,
+      "keyboardMovePercentPerSecond": 85,
+      "stumbleDurationMs": 1100,
+      "stumbleSpeedMultiplier": 0.45,
+      "spawnIntervalStartMs": 950,
+      "spawnIntervalEndMs": 480,
+      "fallDurationStartMs": 3600,
+      "fallDurationEndMs": 2100,
+      "fallDurationJitterMin": 0.85,
+      "fallDurationJitterMax": 1.15,
+      "obstacleWeightStart": 0.08,
+      "obstacleWeightEnd": 0.24,
+      "goldenWeightStart": 0.12,
+      "goldenWeightEnd": 0.16,
+      "emptyWeight": 0.16,
+      "packScore": 1,
+      "goldenScore": 5,
+      "obstacleScore": -3,
+      "floatingLabelLifetimeMs": 700,
+      "initialCatcherXPercent": 50,
+      "initialItemYPercent": -6,
+      "itemDespawnYPercent": 104,
+      "maxFrameDeltaMs": 48
     }
   }
 }

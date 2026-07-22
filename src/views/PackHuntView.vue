@@ -19,6 +19,7 @@ import PackMachineGame from '@/components/MiniGame/PackMachineGame.vue'
 import PackRackGame from '@/components/MiniGame/PackRackGame.vue'
 import PackShellGame from '@/components/MiniGame/PackShellGame.vue'
 import PackPuzzleGame from '@/components/MiniGame/PackPuzzleGame.vue'
+import PackCatchGame from '@/components/MiniGame/PackCatchGame.vue'
 
 type HuntPhase = 'loading' | 'playing' | 'saving' | 'won' | 'cooldown' | 'error'
 
@@ -38,6 +39,7 @@ const gameComponents: Record<PackMiniGameId, Component> = {
   machine: PackMachineGame,
   shell: PackShellGame,
   puzzle: PackPuzzleGame,
+  catch: PackCatchGame,
 }
 const selectedGameComponent: ComputedRef<Component> = computed(
   (): Component => gameComponents[selectedGame.value],
@@ -112,9 +114,7 @@ onMounted(async (): Promise<void> => {
             {{ t(`${gameTranslationPrefix}.title`) }}
           </h1>
           <span class="border border-ink/15 px-3 py-1 text-xs font-bold text-ink/55">
-            {{
-              t('packHunt.cooldownRule')
-            }}
+            {{ t('packHunt.cooldownRule') }}
           </span>
         </div>
         <p class="mx-auto mt-0.5 hidden max-w-2xl text-xs leading-tight text-ink/55 md:block">

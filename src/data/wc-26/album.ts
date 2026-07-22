@@ -108,7 +108,7 @@ export default {
     {
       id: 'project-cover',
       number: 1,
-      image: 'cover.webp',
+      image: 'info/cover.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -116,7 +116,7 @@ export default {
     {
       id: 'project-info',
       number: 2,
-      image: 'info-left.webp',
+      image: 'info/info-left.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -124,7 +124,7 @@ export default {
     {
       id: 'project-changelog',
       number: 3,
-      image: 'info-right.webp',
+      image: 'info/info-right.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -132,7 +132,7 @@ export default {
     {
       id: 'contents-a-c',
       number: 4,
-      image: 'info-left.webp',
+      image: 'info/info-left.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -140,7 +140,7 @@ export default {
     {
       id: 'contents-d-f',
       number: 5,
-      image: 'info-right.webp',
+      image: 'info/info-right.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -148,7 +148,7 @@ export default {
     {
       id: 'contents-g-i',
       number: 6,
-      image: 'info-left.webp',
+      image: 'info/info-left.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -156,7 +156,7 @@ export default {
     {
       id: 'contents-j-l',
       number: 7,
-      image: 'info-right.webp',
+      image: 'info/info-right.webp',
       width: 1536,
       height: 1200,
       slots: [],

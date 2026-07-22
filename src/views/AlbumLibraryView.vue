@@ -9,7 +9,7 @@ const { t } = useI18n()
 const collection = useCollectionStore()
 const albums: AlbumCatalogItem[] = albumCatalog.albums
 const coverImages: Record<string, string> = import.meta.glob(
-  '../../assets/game/*/main/album/cover.webp',
+  '../../assets/game/*/main/album/info/cover.webp',
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
 const albumGeometry: Record<string, AlbumGeometryData> = import.meta.glob('../data/*/album.ts', {

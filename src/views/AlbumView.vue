@@ -113,7 +113,7 @@ const isPreviewOpen: Ref<boolean> = ref(false)
 let desktopMediaQuery: MediaQueryList | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
-  '../../assets/game/wc-26/main/album/*.webp',
+  '../../assets/game/wc-26/main/album/**/*.webp',
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
 

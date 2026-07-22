@@ -14,7 +14,7 @@ const albums: AlbumCatalogItem[] = [
   {
     id: 'wc-26',
     route: '/album/wc-26',
-    cover: 'cover.webp',
+    cover: 'info/cover.webp',
     pages: countAlbumPages(worldCup2026Album),
   },
 ]

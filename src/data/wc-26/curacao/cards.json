@@ -102,6 +102,18 @@
       "id": "cuw-08",
       "cardNumber": "08",
       "albumSlot": 8,
+      "displayName": "Armando Obispo",
+      "image": "/cards/curacao/CUW-20-armando-obispo.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "armando-obispo",
+      "position": "DF"
+    },
+    {
+      "id": "cuw-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
       "displayName": "Godfried Roemeratoe",
       "image": "/cards/curacao/CUW-08-godfried-roemeratoe.webp",
       "series": "base",
@@ -111,9 +123,9 @@
       "position": "MF"
     },
     {
-      "id": "cuw-09",
-      "cardNumber": "09",
-      "albumSlot": 9,
+      "id": "cuw-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
       "displayName": "Juninho Bacuna",
       "image": "/cards/curacao/CUW-09-juninho-bacuna.webp",
       "series": "base",
@@ -123,9 +135,9 @@
       "position": "MF"
     },
     {
-      "id": "cuw-10",
-      "cardNumber": "10",
-      "albumSlot": 10,
+      "id": "cuw-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
       "displayName": "Livano Comenencia",
       "image": "/cards/curacao/CUW-10-livano-comenencia.webp",
       "series": "base",
@@ -133,18 +145,6 @@
       "kind": "player",
       "personId": "livano-comenencia",
       "position": "MF"
-    },
-    {
-      "id": "cuw-11",
-      "cardNumber": "11",
-      "albumSlot": 11,
-      "displayName": "Juergen Locadia",
-      "image": "/cards/curacao/CUW-11-juergen-locadia.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "juergen-locadia",
-      "position": "FW"
     },
     {
       "id": "cuw-12",
@@ -162,54 +162,6 @@
       "id": "cuw-13",
       "cardNumber": "13",
       "albumSlot": 13,
-      "displayName": "Jeremy Antonisse",
-      "image": "/cards/curacao/CUW-13-jeremy-antonisse.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "jeremy-antonisse",
-      "position": "FW"
-    },
-    {
-      "id": "cuw-14",
-      "cardNumber": "14",
-      "albumSlot": 14,
-      "displayName": "Sontje Hansen",
-      "image": "/cards/curacao/CUW-14-sontje-hansen.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "sontje-hansen",
-      "position": "FW"
-    },
-    {
-      "id": "cuw-15",
-      "cardNumber": "15",
-      "albumSlot": 15,
-      "displayName": "Tyrese Noslin",
-      "image": "/cards/curacao/CUW-15-tyrese-noslin.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "tyrese-noslin",
-      "position": "FW"
-    },
-    {
-      "id": "cuw-16",
-      "cardNumber": "16",
-      "albumSlot": 16,
-      "displayName": "Kenji Gorre",
-      "image": "/cards/curacao/CUW-16-kenji-gorre.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "kenji-gorre",
-      "position": "FW"
-    },
-    {
-      "id": "cuw-17",
-      "cardNumber": "17",
-      "albumSlot": 17,
       "displayName": "Arjany Martha",
       "image": "/cards/curacao/CUW-17-arjany-martha.webp",
       "series": "base",
@@ -219,9 +171,69 @@
       "position": "MF"
     },
     {
+      "id": "cuw-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Juergen Locadia",
+      "image": "/cards/curacao/CUW-11-juergen-locadia.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "juergen-locadia",
+      "position": "FW"
+    },
+    {
+      "id": "cuw-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Jeremy Antonisse",
+      "image": "/cards/curacao/CUW-13-jeremy-antonisse.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jeremy-antonisse",
+      "position": "FW"
+    },
+    {
+      "id": "cuw-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Sontje Hansen",
+      "image": "/cards/curacao/CUW-14-sontje-hansen.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sontje-hansen",
+      "position": "FW"
+    },
+    {
+      "id": "cuw-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Tyrese Noslin",
+      "image": "/cards/curacao/CUW-15-tyrese-noslin.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tyrese-noslin",
+      "position": "FW"
+    },
+    {
       "id": "cuw-18",
       "cardNumber": "18",
       "albumSlot": 18,
+      "displayName": "Kenji Gorre",
+      "image": "/cards/curacao/CUW-16-kenji-gorre.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "kenji-gorre",
+      "position": "FW"
+    },
+    {
+      "id": "cuw-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
       "displayName": "Jearl Margaritha",
       "image": "/cards/curacao/CUW-18-jearl-margaritha.webp",
       "series": "base",
@@ -231,9 +243,9 @@
       "position": "FW"
     },
     {
-      "id": "cuw-19",
-      "cardNumber": "19",
-      "albumSlot": 19,
+      "id": "cuw-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
       "displayName": "Brandley Kuwas",
       "image": "/cards/curacao/CUW-19-brandley-kuwas.webp",
       "series": "base",
@@ -241,18 +253,6 @@
       "kind": "player",
       "personId": "brandley-kuwas",
       "position": "FW"
-    },
-    {
-      "id": "cuw-20",
-      "cardNumber": "20",
-      "albumSlot": 20,
-      "displayName": "Armando Obispo",
-      "image": "/cards/curacao/CUW-20-armando-obispo.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "armando-obispo",
-      "position": "DF"
     }
   ]
 }

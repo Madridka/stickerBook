@@ -115,18 +115,6 @@
       "id": "cpv-09",
       "cardNumber": "09",
       "albumSlot": 9,
-      "displayName": "João Paulo Fernandes",
-      "image": "/cards/cabo-verde/CPV-09-joao-paulo-fernandes.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "joao-paulo-fernandes",
-      "position": "MF"
-    },
-    {
-      "id": "cpv-10",
-      "cardNumber": "10",
-      "albumSlot": 10,
       "displayName": "Stopira Tavares",
       "image": "/cards/cabo-verde/CPV-10-stopira-tavares.webp",
       "series": "base",
@@ -134,6 +122,18 @@
       "kind": "player",
       "personId": "stopira-tavares",
       "position": "DF"
+    },
+    {
+      "id": "cpv-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "João Paulo Fernandes",
+      "image": "/cards/cabo-verde/CPV-09-joao-paulo-fernandes.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "joao-paulo-fernandes",
+      "position": "MF"
     },
     {
       "id": "cpv-11",
@@ -199,6 +199,42 @@
       "id": "cpv-16",
       "cardNumber": "16",
       "albumSlot": 16,
+      "displayName": "Garry Rodrigues",
+      "image": "/cards/cabo-verde/CPV-18-garry-rodrigues.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "garry-rodrigues",
+      "position": "MF"
+    },
+    {
+      "id": "cpv-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Jovane Cabral",
+      "image": "/cards/cabo-verde/CPV-19-jovane-cabral.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "jovane-cabral",
+      "position": "MF"
+    },
+    {
+      "id": "cpv-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Hélio Varela",
+      "image": "/cards/cabo-verde/CPV-20-helio-varela.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "helio-varela",
+      "position": "MF"
+    },
+    {
+      "id": "cpv-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
       "displayName": "Ryan Mendes",
       "image": "/cards/cabo-verde/CPV-16-ryan-mendes.webp",
       "series": "base",
@@ -209,9 +245,9 @@
       "position": "FW"
     },
     {
-      "id": "cpv-17",
-      "cardNumber": "17",
-      "albumSlot": 17,
+      "id": "cpv-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
       "displayName": "Dailon Livramento",
       "image": "/cards/cabo-verde/CPV-17-dailon-livramento.webp",
       "series": "base",
@@ -220,42 +256,6 @@
       "kind": "player",
       "personId": "dailon-livramento",
       "position": "FW"
-    },
-    {
-      "id": "cpv-18",
-      "cardNumber": "18",
-      "albumSlot": 18,
-      "displayName": "Garry Rodrigues",
-      "image": "/cards/cabo-verde/CPV-18-garry-rodrigues.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "garry-rodrigues",
-      "position": "MF"
-    },
-    {
-      "id": "cpv-19",
-      "cardNumber": "19",
-      "albumSlot": 19,
-      "displayName": "Jovane Cabral",
-      "image": "/cards/cabo-verde/CPV-19-jovane-cabral.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "jovane-cabral",
-      "position": "MF"
-    },
-    {
-      "id": "cpv-20",
-      "cardNumber": "20",
-      "albumSlot": 20,
-      "displayName": "Hélio Varela",
-      "image": "/cards/cabo-verde/CPV-20-helio-varela.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "helio-varela",
-      "position": "MF"
     }
   ]
 }

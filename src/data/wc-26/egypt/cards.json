@@ -54,6 +54,18 @@
       "id": "egy-04",
       "cardNumber": "04",
       "albumSlot": 4,
+      "displayName": "Mahdy Soliman",
+      "image": "/cards/egypt/EGY-18-mahdy-soliman.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mahdy-soliman",
+      "position": "GK"
+    },
+    {
+      "id": "egy-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
       "displayName": "Yasser Ibrahim",
       "image": "/cards/egypt/EGY-04-yasser-ibrahim.webp",
       "series": "base",
@@ -63,9 +75,9 @@
       "position": "DF"
     },
     {
-      "id": "egy-05",
-      "cardNumber": "05",
-      "albumSlot": 5,
+      "id": "egy-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
       "displayName": "Mohamed Hany",
       "image": "/cards/egypt/EGY-05-mohamed-hany.webp",
       "series": "base",
@@ -75,9 +87,9 @@
       "position": "DF"
     },
     {
-      "id": "egy-06",
-      "cardNumber": "06",
-      "albumSlot": 6,
+      "id": "egy-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
       "displayName": "Hossam Abdelmaguid",
       "image": "/cards/egypt/EGY-06-hossam-abdelmaguid.webp",
       "series": "base",
@@ -87,9 +99,9 @@
       "position": "DF"
     },
     {
-      "id": "egy-07",
-      "cardNumber": "07",
-      "albumSlot": 7,
+      "id": "egy-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
       "displayName": "Ramy Rabia",
       "image": "/cards/egypt/EGY-07-ramy-rabia.webp",
       "series": "base",
@@ -99,9 +111,9 @@
       "position": "DF"
     },
     {
-      "id": "egy-08",
-      "cardNumber": "08",
-      "albumSlot": 8,
+      "id": "egy-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
       "displayName": "Mohamed Abdelmoneim",
       "image": "/cards/egypt/EGY-08-mohamed-abdelmoneim.webp",
       "series": "base",
@@ -111,21 +123,33 @@
       "position": "DF"
     },
     {
-      "id": "egy-09",
-      "cardNumber": "09",
-      "albumSlot": 9,
-      "displayName": "Mahmoud Trezeguet",
-      "image": "/cards/egypt/EGY-09-mahmoud-trezeguet.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "mahmoud-trezeguet",
-      "position": "FW"
-    },
-    {
       "id": "egy-10",
       "cardNumber": "10",
       "albumSlot": 10,
+      "displayName": "Ahmed Fatouh",
+      "image": "/cards/egypt/EGY-15-ahmed-fatouh.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ahmed-fatouh",
+      "position": "DF"
+    },
+    {
+      "id": "egy-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Karim Hafez",
+      "image": "/cards/egypt/EGY-17-karim-hafez.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "karim-hafez",
+      "position": "DF"
+    },
+    {
+      "id": "egy-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
       "displayName": "Emam Ashour",
       "image": "/cards/egypt/EGY-10-emam-ashour.webp",
       "series": "base",
@@ -133,30 +157,6 @@
       "kind": "player",
       "personId": "emam-ashour",
       "position": "MF"
-    },
-    {
-      "id": "egy-11",
-      "cardNumber": "11",
-      "albumSlot": 11,
-      "displayName": "Hamza Abdelkarim",
-      "image": "/cards/egypt/EGY-11-hamza-abdelkarim.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "hamza-abdelkarim",
-      "position": "FW"
-    },
-    {
-      "id": "egy-12",
-      "cardNumber": "12",
-      "albumSlot": 12,
-      "displayName": "Mohamed Salah",
-      "image": "/cards/egypt/EGY-12-mohamed-salah.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "mohamed-salah",
-      "position": "FW"
     },
     {
       "id": "egy-13",
@@ -174,30 +174,6 @@
       "id": "egy-14",
       "cardNumber": "14",
       "albumSlot": 14,
-      "displayName": "Haissem Hassan",
-      "image": "/cards/egypt/EGY-14-haissem-hassan.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "haissem-hassan",
-      "position": "FW"
-    },
-    {
-      "id": "egy-15",
-      "cardNumber": "15",
-      "albumSlot": 15,
-      "displayName": "Ahmed Fatouh",
-      "image": "/cards/egypt/EGY-15-ahmed-fatouh.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "ahmed-fatouh",
-      "position": "DF"
-    },
-    {
-      "id": "egy-16",
-      "cardNumber": "16",
-      "albumSlot": 16,
       "displayName": "Hamdy Fathy",
       "image": "/cards/egypt/EGY-16-hamdy-fathy.webp",
       "series": "base",
@@ -207,33 +183,9 @@
       "position": "MF"
     },
     {
-      "id": "egy-17",
-      "cardNumber": "17",
-      "albumSlot": 17,
-      "displayName": "Karim Hafez",
-      "image": "/cards/egypt/EGY-17-karim-hafez.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "karim-hafez",
-      "position": "DF"
-    },
-    {
-      "id": "egy-18",
-      "cardNumber": "18",
-      "albumSlot": 18,
-      "displayName": "Mahdy Soliman",
-      "image": "/cards/egypt/EGY-18-mahdy-soliman.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "mahdy-soliman",
-      "position": "GK"
-    },
-    {
-      "id": "egy-19",
-      "cardNumber": "19",
-      "albumSlot": 19,
+      "id": "egy-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
       "displayName": "Mohanad Lashin",
       "image": "/cards/egypt/EGY-19-mohanad-lashin.webp",
       "series": "base",
@@ -243,9 +195,9 @@
       "position": "MF"
     },
     {
-      "id": "egy-20",
-      "cardNumber": "20",
-      "albumSlot": 20,
+      "id": "egy-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
       "displayName": "Nabil Donga",
       "image": "/cards/egypt/EGY-20-nabil-donga.webp",
       "series": "base",
@@ -253,6 +205,54 @@
       "kind": "player",
       "personId": "nabil-donga",
       "position": "MF"
+    },
+    {
+      "id": "egy-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Mahmoud Trezeguet",
+      "image": "/cards/egypt/EGY-09-mahmoud-trezeguet.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mahmoud-trezeguet",
+      "position": "FW"
+    },
+    {
+      "id": "egy-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Hamza Abdelkarim",
+      "image": "/cards/egypt/EGY-11-hamza-abdelkarim.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "hamza-abdelkarim",
+      "position": "FW"
+    },
+    {
+      "id": "egy-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Mohamed Salah",
+      "image": "/cards/egypt/EGY-12-mohamed-salah.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "mohamed-salah",
+      "position": "FW"
+    },
+    {
+      "id": "egy-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Haissem Hassan",
+      "image": "/cards/egypt/EGY-14-haissem-hassan.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "haissem-hassan",
+      "position": "FW"
     }
   ]
 }

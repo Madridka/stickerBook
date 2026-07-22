@@ -54,6 +54,18 @@
       "id": "mar-04",
       "cardNumber": "04",
       "albumSlot": 4,
+      "displayName": "Munir El Kajoui",
+      "image": "/cards/morocco/MAR-14-munir-el-kajoui.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "munir-el-kajoui",
+      "position": "GK"
+    },
+    {
+      "id": "mar-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
       "displayName": "Achraf Hakimi",
       "image": "/cards/morocco/MAR-04-achraf-hakimi.webp",
       "series": "base",
@@ -63,9 +75,9 @@
       "position": "DF"
     },
     {
-      "id": "mar-05",
-      "cardNumber": "05",
-      "albumSlot": 5,
+      "id": "mar-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
       "displayName": "Noussair Mazraoui",
       "image": "/cards/morocco/MAR-05-noussair-mazraoui.webp",
       "series": "base",
@@ -73,18 +85,6 @@
       "kind": "player",
       "personId": "noussair-mazraoui",
       "position": "DF"
-    },
-    {
-      "id": "mar-06",
-      "cardNumber": "06",
-      "albumSlot": 6,
-      "displayName": "Sofyan Amrabat",
-      "image": "/cards/morocco/MAR-06-sofyan-amrabat.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "sofyan-amrabat",
-      "position": "MF"
     },
     {
       "id": "mar-07",
@@ -102,90 +102,6 @@
       "id": "mar-08",
       "cardNumber": "08",
       "albumSlot": 8,
-      "displayName": "Ayyoub Bouaddi",
-      "image": "/cards/morocco/MAR-08-ayyoub-bouaddi.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "ayyoub-bouaddi",
-      "position": "MF"
-    },
-    {
-      "id": "mar-09",
-      "cardNumber": "09",
-      "albumSlot": 9,
-      "displayName": "Chemsdine Talbi",
-      "image": "/cards/morocco/MAR-09-chemsdine-talbi.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "chemsdine-talbi",
-      "position": "MF"
-    },
-    {
-      "id": "mar-10",
-      "cardNumber": "10",
-      "albumSlot": 10,
-      "displayName": "Azzedine Ounahi",
-      "image": "/cards/morocco/MAR-10-azzedine-ounahi.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "azzedine-ounahi",
-      "position": "MF"
-    },
-    {
-      "id": "mar-11",
-      "cardNumber": "11",
-      "albumSlot": 11,
-      "displayName": "Souane Rahimi",
-      "image": "/cards/morocco/MAR-11-souane-rahimi.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "souane-rahimi",
-      "position": "FW"
-    },
-    {
-      "id": "mar-12",
-      "cardNumber": "12",
-      "albumSlot": 12,
-      "displayName": "Brahim Diaz",
-      "image": "/cards/morocco/MAR-12-brahim-diaz.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "brahim-diaz",
-      "position": "FW"
-    },
-    {
-      "id": "mar-13",
-      "cardNumber": "13",
-      "albumSlot": 13,
-      "displayName": "Ismael Saibari",
-      "image": "/cards/morocco/MAR-13-ismael-saibari.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "ismael-saibari",
-      "position": "MF"
-    },
-    {
-      "id": "mar-14",
-      "cardNumber": "14",
-      "albumSlot": 14,
-      "displayName": "Munir El Kajoui",
-      "image": "/cards/morocco/MAR-14-munir-el-kajoui.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "munir-el-kajoui",
-      "position": "GK"
-    },
-    {
-      "id": "mar-15",
-      "cardNumber": "15",
-      "albumSlot": 15,
       "displayName": "Zakaria El Ouahdi",
       "image": "/cards/morocco/MAR-15-zakaria-el-ouahdi.webp",
       "series": "base",
@@ -195,9 +111,9 @@
       "position": "DF"
     },
     {
-      "id": "mar-16",
-      "cardNumber": "16",
-      "albumSlot": 16,
+      "id": "mar-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
       "displayName": "Issa Diop",
       "image": "/cards/morocco/MAR-16-issa-diop.webp",
       "series": "base",
@@ -207,9 +123,81 @@
       "position": "DF"
     },
     {
-      "id": "mar-17",
-      "cardNumber": "17",
-      "albumSlot": 17,
+      "id": "mar-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Chadi Riad",
+      "image": "/cards/morocco/MAR-20-chadi-riad.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "chadi-riad",
+      "position": "DF"
+    },
+    {
+      "id": "mar-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Sofyan Amrabat",
+      "image": "/cards/morocco/MAR-06-sofyan-amrabat.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "sofyan-amrabat",
+      "position": "MF"
+    },
+    {
+      "id": "mar-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Ayyoub Bouaddi",
+      "image": "/cards/morocco/MAR-08-ayyoub-bouaddi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ayyoub-bouaddi",
+      "position": "MF"
+    },
+    {
+      "id": "mar-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Chemsdine Talbi",
+      "image": "/cards/morocco/MAR-09-chemsdine-talbi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "chemsdine-talbi",
+      "position": "MF"
+    },
+    {
+      "id": "mar-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Azzedine Ounahi",
+      "image": "/cards/morocco/MAR-10-azzedine-ounahi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "azzedine-ounahi",
+      "position": "MF"
+    },
+    {
+      "id": "mar-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Ismael Saibari",
+      "image": "/cards/morocco/MAR-13-ismael-saibari.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "ismael-saibari",
+      "position": "MF"
+    },
+    {
+      "id": "mar-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
       "displayName": "Samir El Mourabet",
       "image": "/cards/morocco/MAR-17-samir-el-mourabet.webp",
       "series": "base",
@@ -219,9 +207,9 @@
       "position": "MF"
     },
     {
-      "id": "mar-18",
-      "cardNumber": "18",
-      "albumSlot": 18,
+      "id": "mar-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
       "displayName": "Gessime Yassine",
       "image": "/cards/morocco/MAR-18-gessime-yassine.webp",
       "series": "base",
@@ -231,9 +219,33 @@
       "position": "MF"
     },
     {
+      "id": "mar-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Souane Rahimi",
+      "image": "/cards/morocco/MAR-11-souane-rahimi.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "souane-rahimi",
+      "position": "FW"
+    },
+    {
       "id": "mar-19",
       "cardNumber": "19",
       "albumSlot": 19,
+      "displayName": "Brahim Diaz",
+      "image": "/cards/morocco/MAR-12-brahim-diaz.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "brahim-diaz",
+      "position": "FW"
+    },
+    {
+      "id": "mar-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
       "displayName": "Amine Sbai",
       "image": "/cards/morocco/MAR-19-amine-sbai.webp",
       "series": "base",
@@ -241,18 +253,6 @@
       "kind": "player",
       "personId": "amine-sbai",
       "position": "FW"
-    },
-    {
-      "id": "mar-20",
-      "cardNumber": "20",
-      "albumSlot": 20,
-      "displayName": "Chadi Riad",
-      "image": "/cards/morocco/MAR-20-chadi-riad.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "chadi-riad",
-      "position": "DF"
     }
   ]
 }

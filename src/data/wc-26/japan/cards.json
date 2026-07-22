@@ -54,6 +54,18 @@
       "id": "jpn-04",
       "cardNumber": "04",
       "albumSlot": 4,
+      "displayName": "Keisuke Osako",
+      "image": "/cards/japan/JPN-14-keisuke-osako.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "keisuke-osako",
+      "position": "GK"
+    },
+    {
+      "id": "jpn-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
       "displayName": "Yukinari Sugawara",
       "image": "/cards/japan/JPN-04-yukinari-sugawara.webp",
       "series": "base",
@@ -63,9 +75,9 @@
       "position": "DF"
     },
     {
-      "id": "jpn-05",
-      "cardNumber": "05",
-      "albumSlot": 5,
+      "id": "jpn-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
       "displayName": "Shogo Taniguchi",
       "image": "/cards/japan/JPN-05-shogo-taniguchi.webp",
       "series": "base",
@@ -75,9 +87,9 @@
       "position": "DF"
     },
     {
-      "id": "jpn-06",
-      "cardNumber": "06",
-      "albumSlot": 6,
+      "id": "jpn-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
       "displayName": "Kou Itakura",
       "image": "/cards/japan/JPN-06-kou-itakura.webp",
       "series": "base",
@@ -87,9 +99,9 @@
       "position": "DF"
     },
     {
-      "id": "jpn-07",
-      "cardNumber": "07",
-      "albumSlot": 7,
+      "id": "jpn-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
       "displayName": "Yuto Nagatomo",
       "image": "/cards/japan/JPN-07-yuto-nagatomo.webp",
       "series": "base",
@@ -99,21 +111,21 @@
       "position": "DF"
     },
     {
-      "id": "jpn-08",
-      "cardNumber": "08",
-      "albumSlot": 8,
-      "displayName": "Shuto Machino",
-      "image": "/cards/japan/JPN-08-shuto-machino.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "shuto-machino",
-      "position": "FW"
-    },
-    {
       "id": "jpn-09",
       "cardNumber": "09",
       "albumSlot": 9,
+      "displayName": "Tsuyoshi Watanabe",
+      "image": "/cards/japan/JPN-18-tsuyoshi-watanabe.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "tsuyoshi-watanabe",
+      "position": "DF"
+    },
+    {
+      "id": "jpn-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
       "displayName": "Ao Tanaka",
       "image": "/cards/japan/JPN-09-ao-tanaka.webp",
       "series": "base",
@@ -123,9 +135,9 @@
       "position": "MF"
     },
     {
-      "id": "jpn-10",
-      "cardNumber": "10",
-      "albumSlot": 10,
+      "id": "jpn-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
       "displayName": "Takefusa Kubo",
       "image": "/cards/japan/JPN-10-takefusa-kubo.webp",
       "series": "base",
@@ -133,18 +145,6 @@
       "kind": "player",
       "personId": "takefusa-kubo",
       "position": "MF"
-    },
-    {
-      "id": "jpn-11",
-      "cardNumber": "11",
-      "albumSlot": 11,
-      "displayName": "Keisuke Goto",
-      "image": "/cards/japan/JPN-11-keisuke-goto.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "keisuke-goto",
-      "position": "FW"
     },
     {
       "id": "jpn-12",
@@ -174,18 +174,6 @@
       "id": "jpn-14",
       "cardNumber": "14",
       "albumSlot": 14,
-      "displayName": "Keisuke Osako",
-      "image": "/cards/japan/JPN-14-keisuke-osako.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "keisuke-osako",
-      "position": "GK"
-    },
-    {
-      "id": "jpn-15",
-      "cardNumber": "15",
-      "albumSlot": 15,
       "displayName": "Keito Nakamura",
       "image": "/cards/japan/JPN-15-keito-nakamura.webp",
       "series": "base",
@@ -195,9 +183,9 @@
       "position": "MF"
     },
     {
-      "id": "jpn-16",
-      "cardNumber": "16",
-      "albumSlot": 16,
+      "id": "jpn-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
       "displayName": "Junya Ito",
       "image": "/cards/japan/JPN-16-junya-ito.webp",
       "series": "base",
@@ -207,9 +195,9 @@
       "position": "MF"
     },
     {
-      "id": "jpn-17",
-      "cardNumber": "17",
-      "albumSlot": 17,
+      "id": "jpn-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
       "displayName": "Daichi Kamada",
       "image": "/cards/japan/JPN-17-daichi-kamada.webp",
       "series": "base",
@@ -219,21 +207,9 @@
       "position": "MF"
     },
     {
-      "id": "jpn-18",
-      "cardNumber": "18",
-      "albumSlot": 18,
-      "displayName": "Tsuyoshi Watanabe",
-      "image": "/cards/japan/JPN-18-tsuyoshi-watanabe.webp",
-      "series": "base",
-      "finish": "standard",
-      "kind": "player",
-      "personId": "tsuyoshi-watanabe",
-      "position": "DF"
-    },
-    {
-      "id": "jpn-19",
-      "cardNumber": "19",
-      "albumSlot": 19,
+      "id": "jpn-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
       "displayName": "Yuito Suzuki",
       "image": "/cards/japan/JPN-19-yuito-suzuki.webp",
       "series": "base",
@@ -241,6 +217,30 @@
       "kind": "player",
       "personId": "yuito-suzuki",
       "position": "MF"
+    },
+    {
+      "id": "jpn-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Shuto Machino",
+      "image": "/cards/japan/JPN-08-shuto-machino.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "shuto-machino",
+      "position": "FW"
+    },
+    {
+      "id": "jpn-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Keisuke Goto",
+      "image": "/cards/japan/JPN-11-keisuke-goto.webp",
+      "series": "base",
+      "finish": "standard",
+      "kind": "player",
+      "personId": "keisuke-goto",
+      "position": "FW"
     },
     {
       "id": "jpn-20",

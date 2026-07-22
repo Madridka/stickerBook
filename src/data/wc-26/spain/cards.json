@@ -263,15 +263,14 @@
       "id": "esp-20.1",
       "cardNumber": "20.1",
       "displayName": "Ferran Torres",
-      "image": "/cards/spain/ESP-20.1-ferran-torres.png",
+      "image": "/cards/spain/ESP-20.1-ferran-torres.webp",
       "series": "special",
       "finish": "standard",
-      "baseCardId": "esp-19",
+      "baseCardId": "esp-20",
       "rarity": "legendary",
       "kind": "player",
       "personId": "ferran-torres",
-      "position": "FW",
-      "albumSlot": 20
+      "position": "FW"
     }
   ]
 }

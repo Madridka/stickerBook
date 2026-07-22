@@ -92,8 +92,8 @@ test('pack opening and duplicate exchange use normalized cards', async () => {
 test('special variants keep their base album slot relationship', async () => {
   const catalogs = loadCardCatalogs(await readTeamData('cards.json'))
   const cards = catalogs.flatMap((catalog) => catalog.cards)
-  const special = cards.find((card) => card.id === 'esp-19.1')
-  assert.equal(special?.baseCardId, 'esp-19')
+  const special = cards.find((card) => card.id === 'esp-20.1')
+  assert.equal(special?.baseCardId, 'esp-20')
   assert.ok(cards.some((card) => card.id === special?.baseCardId && card.series === 'base'))
 })
 

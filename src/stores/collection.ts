@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 import { database, type DuplicateExchange } from '@/db/database'
 import { reconcileOrphanedDuplicates } from '@/db/stickerLifecycle'
 import type { CollectionItem, StickerInstance, StickerPlacement } from '@/types'
-import collectionData from '@/data/collection.json'
 import cards, { catalogs } from '@/data/wc-26/catalog'
 import albumData from '@/data/wc-26/album'
 import { DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
@@ -25,7 +24,6 @@ export const useCollectionStore = defineStore('collection', () => {
     cards.map(({ id, baseCardId }): [string, string] => [id, baseCardId ?? id]),
   )
   const total: number = new Set(cards.map(({ id, baseCardId }): string => baseCardId ?? id)).size
-  const pages: number = collectionData.pages
   const albumSlotIds: Set<string> = new Set(
     albumData.pages.flatMap(({ slots }): string[] =>
       slots.map(({ id }): string => id),
@@ -275,7 +273,6 @@ export const useCollectionStore = defineStore('collection', () => {
     isLoaded,
     isExchanging,
     total,
-    pages,
     progress,
     albumProgress,
     stickerInventory: computed((): CollectionItem[] =>

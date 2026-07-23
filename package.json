@@ -8,10 +8,6 @@
     "build": "vue-tsc --project tsconfig.app.json --noEmit && vite build",
     "preview": "vite preview",
     "validate:data": "node --experimental-strip-types scripts/validate-data.ts",
-    "calculate:rarity-odds": "node --experimental-strip-types scripts/calculate-rarity-odds.ts",
-    "migrate:cards": "node --experimental-strip-types scripts/migration/migrate-cards.ts",
-    "migrate:positions": "node --experimental-strip-types scripts/migration/fill-player-positions.ts",
-    "test:data": "node --experimental-strip-types --test scripts/migration/*.test.ts",
     "test:drop": "node --experimental-strip-types --test scripts/drop-engine.test.ts",
     "test:runtime-catalog": "node --experimental-strip-types --test scripts/runtime-catalog.test.ts"
   },

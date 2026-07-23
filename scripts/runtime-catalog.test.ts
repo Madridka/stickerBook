@@ -4,6 +4,7 @@ import path from 'node:path'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
 import {
+  COLLECTION_CONFIG,
   DROP_ENGINE_CONFIG,
   DUPLICATE_EXCHANGE_CONFIG,
   PACK_CONFIGS,
@@ -44,8 +45,7 @@ test('runtime loader validates and normalizes all catalogs without mutation', as
   const catalogs = loadCardCatalogs(inputs, '/game/')
   const cards = catalogs.flatMap((catalog) => catalog.cards)
 
-  assert.equal(catalogs.length, 48)
-  assert.equal(cards.length, 961)
+  assert.equal(catalogs.length, COLLECTION_CONFIG.expectedTeamCount)
   assert.equal(JSON.stringify(inputs), snapshot)
   assert.equal(new Set(cards.map((card) => card.id)).size, cards.length)
   assert.ok(cards.every((card) => card.collectionId === 'wc-26'))
@@ -110,6 +110,7 @@ test('every album slot resolves to a normalized base card', async () => {
   const slotPlayerIds = teamPages.flatMap((pages) =>
     pages.flatMap((page) => page.slots.map((slot) => slot.playerId)),
   )
-  assert.equal(slotPlayerIds.length, 960)
+  assert.equal(new Set(slotPlayerIds).size, slotPlayerIds.length)
+  assert.equal(slotPlayerIds.length, baseCardIds.size)
   assert.ok(slotPlayerIds.every((playerId) => baseCardIds.has(playerId)))
 })

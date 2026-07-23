@@ -20,10 +20,6 @@ export const CARDS_PER_PACK: number = 5
 
 /** Настройки версии алгоритма выпадения и базового веса карточки. */
 export const DROP_ENGINE_CONFIG = {
-  // Версия алгоритма выпадения, используемая приложением сейчас.
-  activeVersion: 2,
-  // Версии алгоритма выпадения, которые поддерживают игровые данные.
-  availableVersions: [2],
   // Вес выбора карточки, если он не указан в её каталоге.
   defaultSelectionWeight: 1,
 }
@@ -96,30 +92,6 @@ export const CARD_CATALOG_CONFIG: CardCatalogConfig = {
     // Вес выбора карточки при отсутствии собственного значения.
     selectionWeight: 1,
   },
-}
-
-/** Требования к исходным изображениям карточек. */
-export const CARD_ASSET_CONFIG = {
-  // Ожидаемая ширина изображения карточки в пикселях.
-  width: 512,
-  // Ожидаемая высота изображения карточки в пикселях.
-  height: 768,
-  // Основной формат подготовленных изображений карточек.
-  format: 'webp',
-}
-
-/** Правила преобразования старого веса карточки в актуальную редкость. */
-export const LEGACY_MIGRATION_CONFIG: {
-  weightToRarity: Array<{ minWeight: number; rarity: CardRarity }>
-} = {
-  // Диапазоны проверяются от большего минимального веса к меньшему.
-  weightToRarity: [
-    { minWeight: 20, rarity: 'common' },
-    { minWeight: 15, rarity: 'uncommon' },
-    { minWeight: 10, rarity: 'rare' },
-    { minWeight: 5, rarity: 'epic' },
-    { minWeight: 0, rarity: 'legendary' },
-  ],
 }
 
 /** Баланс энергии, награды и отображения дробных значений кликера. */

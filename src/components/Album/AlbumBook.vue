@@ -86,7 +86,7 @@ onBeforeUnmount((): void => {
       :class="
         !isOpen || displayMode === 'page' || isStandaloneStartPage
           ? 'aspect-[32/25] h-full w-auto flex-auto max-md:h-auto max-md:w-full max-md:flex-none'
-          : 'grid aspect-[64/25] h-full w-auto flex-auto grid-cols-2 shadow-[0_18px_50px_rgb(var(--color-ink)/0.24)]'
+          : 'grid aspect-[64/25] w-[min(100%,calc((100dvh-20.5rem)*2.56))] flex-[0_1_auto] grid-cols-2 shadow-[0_18px_50px_rgb(var(--color-ink)/0.24)]'
       "
     >
       <template v-if="isOpen">

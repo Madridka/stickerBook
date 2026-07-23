@@ -23,6 +23,7 @@ interface Emits {
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
+const isCollapsed: Ref<boolean> = ref(false)
 const selectedInstanceId: Ref<string | undefined> = ref(undefined)
 const isPeelOpen: Ref<boolean> = ref(false)
 const isPreparationCompleted: Ref<boolean> = ref(false)
@@ -78,15 +79,40 @@ const closePreparation = (): void => {
   if (!isPreparationCompleted.value) emit('clear-focus')
   isPreparationCompleted.value = false
 }
+
+const toggleCollapsed = (): void => {
+  isCollapsed.value = !isCollapsed.value
+}
 </script>
 
 <template>
   <section
-    class="flex h-52 max-h-52 w-full shrink-0 flex-col border-t border-ink/15 bg-paper px-3 pb-1 pt-3 max-md:h-[8.5rem] max-md:max-h-[8.5rem] max-md:px-2 max-md:pb-1 max-md:pt-2"
+    class="relative flex w-full shrink-0 flex-col overflow-visible border-t border-ink/15 bg-paper px-3 transition-[height,max-height,padding] duration-200 ease-out max-md:px-2"
+    :class="
+      isCollapsed
+        ? 'h-11 max-h-11 justify-center py-0'
+        : 'h-52 max-h-52 pb-1 pt-3 max-md:h-[8.5rem] max-md:max-h-[8.5rem] max-md:pb-1 max-md:pt-2'
+    "
     :aria-label="t('stickerTray.title')"
   >
+    <button
+      type="button"
+      class="absolute left-1/2 top-0 z-20 grid h-9 w-9 -translate-x-1/2 -translate-y-1/2 cursor-pointer place-items-center rounded-full border border-ink/15 bg-paper text-ink/70 shadow-md transition hover:border-coral/50 hover:text-coral focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral max-md:h-8 max-md:w-8"
+      :aria-expanded="!isCollapsed"
+      :aria-label="t(isCollapsed ? 'stickerTray.expand' : 'stickerTray.collapse')"
+      :title="t(isCollapsed ? 'stickerTray.expand' : 'stickerTray.collapse')"
+      @click="toggleCollapsed"
+    >
+      <i
+        class="pi text-xs"
+        :class="isCollapsed ? 'pi-chevron-up' : 'pi-chevron-down'"
+        aria-hidden="true"
+      />
+    </button>
+
     <div
-      class="mb-2 flex items-end justify-between gap-3 max-md:mb-1 max-md:items-center max-md:gap-2"
+      class="flex justify-between gap-3 max-md:items-center max-md:gap-2"
+      :class="isCollapsed ? 'mb-0 items-center' : 'mb-2 items-end max-md:mb-1'"
     >
       <div>
         <p
@@ -94,7 +120,9 @@ const closePreparation = (): void => {
         >
           {{ t('stickerTray.title') }}
         </p>
-        <p class="mt-1 text-xs text-ink/55 max-md:hidden">{{ t('stickerTray.hint') }}</p>
+        <p v-if="!isCollapsed" class="mt-1 text-xs text-ink/55 max-md:hidden">
+          {{ t('stickerTray.hint') }}
+        </p>
       </div>
       <span
         class="shrink-0 text-xs font-bold text-ink/55 max-md:text-[0.55rem] max-md:leading-none"
@@ -103,7 +131,7 @@ const closePreparation = (): void => {
     </div>
 
     <div
-      v-if="cards.length"
+      v-if="!isCollapsed && cards.length"
       class="flex min-h-0 flex-1 touch-pan-x gap-3 overflow-x-auto overflow-y-hidden px-1 pt-1 [scrollbar-color:rgb(var(--color-coral)/0.55)_transparent] [scrollbar-width:thin] max-md:gap-2"
       @wheel="scrollCardsWithWheel"
     >
@@ -120,7 +148,7 @@ const closePreparation = (): void => {
       />
     </div>
     <p
-      v-else
+      v-else-if="!isCollapsed"
       class="rounded border border-dashed border-ink/20 px-4 py-5 text-center text-sm text-ink/55 max-md:p-3 max-md:text-[0.7rem]"
     >
       {{ t('stickerTray.empty') }}

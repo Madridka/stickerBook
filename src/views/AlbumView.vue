@@ -49,21 +49,6 @@ const toPlainText = (value: string): string =>
     .replace(/\*\*([^*]+)\*\*/g, '$1')
     .trim()
 
-const readMarkdownList = (markdown: string, sectionTitle: string): string[] => {
-  const lines: string[] = markdown.split(/\r?\n/)
-  const sectionStart: number = lines.findIndex(
-    (line: string): boolean => line.trim() === `## ${sectionTitle}`,
-  )
-  if (sectionStart < 0) return []
-  const sectionEnd: number = lines.findIndex(
-    (line: string, index: number): boolean => index > sectionStart && line.startsWith('## '),
-  )
-  return lines
-    .slice(sectionStart + 1, sectionEnd < 0 ? lines.length : sectionEnd)
-    .filter((line: string): boolean => /^-\s+/.test(line))
-    .map((line: string): string => toPlainText(line.replace(/^-\s+/, '')))
-}
-
 const parseReleaseNotes = (markdown: string): AlbumReleaseNote[] => {
   const headings: RegExpMatchArray[] = Array.from(
     markdown.matchAll(/^##\s+(\d+\.\d+\.\d+)\s+—\s+(.+)$/gm),
@@ -85,15 +70,18 @@ const projectIntro: string = toPlainText(
     .split(/\r?\n/)
     .find((line: string): boolean => Boolean(line.trim()) && !line.startsWith('#')) ?? '',
 )
-const currentMvpItems: string[] = readMarkdownList(projectReadme, 'Текущий MVP')
-const nextStepItems: string[] = readMarkdownList(projectReadme, 'Ближайшие шаги')
-const futureIdeaItems: string[] = readMarkdownList(projectReadme, 'Будущие идеи')
 const allReleaseNotes: AlbumReleaseNote[] = parseReleaseNotes(changelogMarkdown)
 const latestReleaseSeries: string =
   allReleaseNotes[0]?.version.split('.').slice(0, 2).join('.') ?? '0.0'
-const recentReleaseNotes: AlbumReleaseNote[] = allReleaseNotes
-  .filter(({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`))
-  .slice(0, ALBUM_VIEW_CONFIG.recentReleaseCount)
+const currentSeriesReleaseNotes: AlbumReleaseNote[] = allReleaseNotes.filter(
+  ({ version }: AlbumReleaseNote): boolean => version.startsWith(`${latestReleaseSeries}.`),
+)
+const recentReleaseNotes: AlbumReleaseNote[] = [
+  ...currentSeriesReleaseNotes,
+  ...allReleaseNotes.filter(
+    ({ version }: AlbumReleaseNote): boolean => !version.startsWith(`${latestReleaseSeries}.`),
+  ),
+].slice(0, ALBUM_VIEW_CONFIG.recentReleaseCount)
 const { contentsPageSize, contentsFirstPage, contentsLastPage } = ALBUM_VIEW_CONFIG
 
 const { t } = useI18n()
@@ -509,9 +497,6 @@ onBeforeUnmount((): void => {
               :page-number="pages[pageIndex].geometry.number"
               :logo="projectLogo"
               :project-intro="projectIntro"
-              :current-items="currentMvpItems"
-              :next-items="nextStepItems"
-              :future-items="futureIdeaItems"
               :release-series="latestReleaseSeries"
               :releases="recentReleaseNotes"
             />

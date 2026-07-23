@@ -12,9 +12,6 @@ interface Props {
   pageNumber: number
   logo: string
   projectIntro: string
-  currentItems: string[]
-  nextItems: string[]
-  futureItems: string[]
   releaseSeries: string
   releases: AlbumReleaseNote[]
 }
@@ -69,7 +66,7 @@ const { t } = useI18n()
 
     <section
       v-else-if="pageNumber === 2"
-      class="info-page h-full w-full [padding:13.3%_6.8%_5.4%_13.2%]"
+      class="info-page h-full w-full [padding:11.5%_6.8%_5.4%_13.2%]"
       :aria-label="t('album.editorial.infoAria')"
     >
       <header
@@ -91,77 +88,44 @@ const { t } = useI18n()
         </p>
       </header>
 
-      <div class="info-page__grid mt-[3.4cqw] grid grid-cols-[1.05fr_0.95fr] gap-[2.6cqw_4.8cqw]">
-        <article
-          class="info-block info-block--primary grid min-w-0 row-span-2 grid-cols-[2.5cqw_1fr] gap-[1.5cqw] border-r-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_22%)] pr-[4.4cqw]"
+      <div class="mt-[2.4cqw]">
+        <span
+          class="text-[clamp(6px,0.78cqw,12px)] font-black uppercase tracking-[0.18em] text-[#e86b52] max-md:text-[clamp(4px,0.9cqw,7px)]"
+          >{{ t('album.editorial.guideKicker') }}</span
         >
-          <span
-            class="info-block__index grid h-[2.4cqw] w-[2.4cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] [font-weight:950] text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
-            >{{ t('album.editorial.currentIndex') }}</span
-          >
-          <div>
-            <h3
-              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
-            >
-              {{ t('album.editorial.currentMvp') }}
-            </h3>
-            <ul class="grid list-none gap-[0.72cqw] [margin:1.25cqw_0_0] p-0">
-              <li
-                v-for="item in currentItems"
-                :key="item"
-                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#e86b52] before:content-[''] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
-              >
-                {{ item }}
-              </li>
-            </ul>
-          </div>
-        </article>
+        <h3
+          class="m-0 mt-[0.35cqw] text-[clamp(12px,2.15cqw,33px)] font-black leading-none tracking-[-0.035em] max-md:text-[clamp(8px,2.15cqw,12px)]"
+        >
+          {{ t('album.editorial.guideTitle') }}
+        </h3>
 
-        <article class="info-block grid min-w-0 grid-cols-[2.5cqw_1fr] gap-[1.5cqw]">
-          <span
-            class="info-block__index grid h-[2.4cqw] w-[2.4cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] [font-weight:950] text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
-            >{{ t('album.editorial.nextIndex') }}</span
+        <ol
+          class="mt-[1.7cqw] grid list-none grid-cols-2 gap-[1.15cqw_3.5cqw] border-t-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_22%)] pt-[1.7cqw] p-0"
+        >
+          <li
+            v-for="step in 5"
+            :key="step"
+            class="grid min-w-0 grid-cols-[2.7cqw_1fr] gap-[1.1cqw]"
           >
-          <div>
-            <h3
-              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
+            <span
+              class="grid h-[2.7cqw] w-[2.7cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] font-black text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
             >
-              {{ t('album.editorial.nextSteps') }}
-            </h3>
-            <ul class="grid list-none gap-[0.72cqw] [margin:1.25cqw_0_0] p-0">
-              <li
-                v-for="item in nextItems"
-                :key="item"
-                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#e86b52] before:content-[''] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
+              {{ String(step).padStart(2, '0') }}
+            </span>
+            <div>
+              <h4
+                class="m-0 text-[clamp(9px,1.2cqw,18px)] font-black leading-[1.1] tracking-[-0.02em] max-md:text-[clamp(5px,1.2cqw,9px)]"
               >
-                {{ item }}
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="info-block grid min-w-0 grid-cols-[2.5cqw_1fr] gap-[1.5cqw]">
-          <span
-            class="info-block__index grid h-[2.4cqw] w-[2.4cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] [font-weight:950] text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
-            >{{ t('album.editorial.futureIndex') }}</span
-          >
-          <div>
-            <h3
-              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
-            >
-              {{ t('album.editorial.futureIdeas') }}
-            </h3>
-            <ul class="grid list-none gap-[0.72cqw] [margin:1.25cqw_0_0] p-0">
-              <li
-                v-for="item in futureItems"
-                :key="item"
-                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#e86b52] before:content-[''] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
+                {{ t(`album.editorial.guideSteps.${step}.title`) }}
+              </h4>
+              <p
+                class="m-0 mt-[0.4cqw] text-[clamp(7px,1.02cqw,14px)] [font-weight:570] leading-[1.35] text-[rgb(23_33_43_/_82%)] max-md:text-[clamp(4.5px,1.02cqw,7px)]"
               >
-                {{ item }}
-              </li>
-            </ul>
-          </div>
-        </article>
+                {{ t(`album.editorial.guideSteps.${step}.description`) }}
+              </p>
+            </div>
+          </li>
+        </ol>
       </div>
 
       <footer

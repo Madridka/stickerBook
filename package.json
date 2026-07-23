@@ -7,8 +7,6 @@
     "dev": "vite",
     "build": "vue-tsc --project tsconfig.app.json --noEmit && vite build",
     "preview": "vite preview",
-    "cards:images:last": "node --experimental-strip-types scripts/set-card-image-source.ts last-stickers",
-    "cards:images:default": "node --experimental-strip-types scripts/set-card-image-source.ts default",
     "validate:data": "node --experimental-strip-types scripts/validate-data.ts",
     "test:drop": "node --experimental-strip-types --test scripts/drop-engine.test.ts",
     "test:runtime-catalog": "node --experimental-strip-types --test scripts/runtime-catalog.test.ts"

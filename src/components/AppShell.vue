@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { computed, ref, type Ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { database } from '@/db/database'
 import { useTheme } from '@/composables/useTheme'
+import { HOME_VIEW_CONFIG } from '@/data/mainConst'
+import { usePlayerStore } from '@/stores/player'
 
 import Menu from 'primevue/menu'
 import Dialog from 'primevue/dialog'
@@ -13,12 +15,14 @@ const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()
 const route = useRoute()
 const router = useRouter()
+const player = usePlayerStore()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
 const isAlbumWorkspace = computed((): boolean => route.meta.albumWorkspace === true)
 const desktopMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const mobileMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const isResetConfirmOpen: Ref<boolean> = ref(false)
 const isResetting: Ref<boolean> = ref(false)
+let resourceTimer: number | undefined
 
 const resetProgressItem = computed(() => ({
   label: t('app.resetProgress'),
@@ -91,6 +95,18 @@ const resetProgress = async (): Promise<void> => {
     isResetting.value = false
   }
 }
+
+onMounted((): void => {
+  player.refreshEnergy()
+  resourceTimer = window.setInterval(
+    (): void => player.refreshEnergy(),
+    HOME_VIEW_CONFIG.energyRefreshIntervalMs,
+  )
+})
+
+onBeforeUnmount((): void => {
+  if (resourceTimer !== undefined) window.clearInterval(resourceTimer)
+})
 </script>
 
 <template>
@@ -107,10 +123,40 @@ const resetProgress = async (): Promise<void> => {
           t('app.title')
         }}</RouterLink>
         <span v-else class="text-xl font-black tracking-tight">{{ t('app.title') }}</span>
+
+        <div
+          class="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 md:ml-4"
+          :aria-label="t('app.resources')"
+          data-player-resources
+        >
+          <div
+            class="flex items-center gap-1 rounded-full border border-ink/15 bg-gold/15 px-2 py-1 text-xs font-black tabular-nums sm:px-2.5"
+            :title="t('home.summary.coins')"
+            data-resource-coins
+          >
+            <i class="pi pi-wallet text-coral" aria-hidden="true" />
+            <span>{{ player.formattedCoins }}</span>
+            <span class="hidden text-[9px] uppercase tracking-wide text-ink/45 sm:inline">
+              {{ t('home.summary.coins') }}
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-1 rounded-full border border-ink/15 bg-mint/20 px-2 py-1 text-xs font-black tabular-nums sm:px-2.5"
+            :title="t('home.energyTitle')"
+            data-resource-energy
+          >
+            <i class="pi pi-bolt text-coral" aria-hidden="true" />
+            <span>{{ player.availableEnergy }} / {{ player.energyLimit }}</span>
+            <span class="hidden text-[9px] uppercase tracking-wide text-ink/45 lg:inline">
+              {{ t('home.energyTitle') }}
+            </span>
+          </div>
+        </div>
+
         <!-- Навигация, переключатель темы и меню -->
         <div
           v-if="!isPackOpening"
-          class="hidden items-center gap-4 text-sm font-semibold md:flex md:gap-7"
+          class="hidden items-center gap-4 text-sm font-semibold md:ml-4 md:flex md:gap-7"
         >
           <RouterLink class="transition-colors hover:text-coral" to="/">{{
             t('app.home')
@@ -152,7 +198,7 @@ const resetProgress = async (): Promise<void> => {
           <Menu ref="desktopMenuRef" :model="desktopMenuItems" :popup="true" />
         </div>
 
-        <div v-if="!isPackOpening" class="flex items-center md:hidden">
+        <div v-if="!isPackOpening" class="ml-1 flex items-center md:hidden">
           <Button
             class="app-menu-button"
             text

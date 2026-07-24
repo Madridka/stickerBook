@@ -50,19 +50,26 @@ const cardOrder: Map<string, number> = new Map(
 
 const isReadyToPlace = (item: CollectionItem): boolean =>
   ['inventory', 'collection'].includes(item.instance.location)
+const needsPreparation = (item: CollectionItem): boolean =>
+  isReadyToPlace(item) && !item.instance.preparation
 const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 
-// Открывает разворот нужной карточки, не запуская подготовку наклейки.
+// Открывает нужный разворот и сразу запускает подготовку ещё не подготовленной наклейки.
 const openCardInAlbum = async (item: CollectionItem): Promise<void> => {
   await router.push({
     name: 'album-wc-26',
     query: {
       card: item.instance.playerId,
       instance: item.instance.id,
+      action: needsPreparation(item) ? 'prepare' : undefined,
     },
   })
 }
+
+const isPreparationGuideActive: ComputedRef<boolean> = computed(
+  (): boolean => gameGuide.currentStep?.id === 'prepare-first-sticker',
+)
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
   collection.items.filter(
@@ -226,6 +233,21 @@ watch(
       <TabPanels class="min-h-0 flex-1 overflow-hidden bg-transparent px-0 pb-0 pt-2 sm:pt-3">
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="collection">
           <template v-if="collectedItems.length">
+            <aside
+              v-if="isPreparationGuideActive"
+              class="mb-3 flex items-start gap-3 border-l-4 border-coral bg-coral/10 p-3"
+              role="status"
+              data-preparation-guide
+            >
+              <i class="pi pi-sparkles mt-0.5 text-lg text-coral" aria-hidden="true" />
+              <div>
+                <strong class="block text-sm">{{ t('album.collectionControls.guideTitle') }}</strong>
+                <p class="mt-0.5 text-xs leading-relaxed text-ink/65">
+                  {{ t('album.collectionControls.guideText') }}
+                </p>
+              </div>
+            </aside>
+
             <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
               <SelectButton
                 v-model="collectionFilter"
@@ -280,9 +302,14 @@ watch(
                 "
                 type="button"
                 :aria-label="
-                  t('album.collectionControls.openInAlbum', {
+                  t(
+                    needsPreparation(item)
+                      ? 'album.collectionControls.prepareCard'
+                      : 'album.collectionControls.openInAlbum',
+                    {
                     name: getCard(item.instance.playerId)?.displayName ?? item.instance.playerId,
-                  })
+                    },
+                  )
                 "
                 @click="openCardInAlbum(item)"
               >
@@ -299,13 +326,29 @@ watch(
                     </p>
                     <p
                       class="mt-0.5 flex items-center gap-1 text-[11px] font-black"
-                      :class="isReadyToPlace(item) ? 'text-emerald-700' : 'text-amber-700'"
+                      :class="
+                        needsPreparation(item)
+                          ? 'text-coral'
+                          : isReadyToPlace(item)
+                            ? 'text-emerald-700'
+                            : 'text-amber-700'
+                      "
                     >
-                      <i :class="isReadyToPlace(item) ? 'pi pi-send' : 'pi pi-check-circle'" />
+                      <i
+                        :class="
+                          needsPreparation(item)
+                            ? 'pi pi-sparkles'
+                            : isReadyToPlace(item)
+                              ? 'pi pi-send'
+                              : 'pi pi-check-circle'
+                        "
+                      />
                       {{
                         t(
-                          isReadyToPlace(item)
-                            ? 'album.collectionControls.readyStatus'
+                          needsPreparation(item)
+                            ? 'album.collectionControls.needsPreparationStatus'
+                            : isReadyToPlace(item)
+                              ? 'album.collectionControls.readyStatus'
                             : 'album.collectionControls.albumStatus',
                         )
                       }}
@@ -318,7 +361,13 @@ watch(
                 <span
                   class="mt-2 flex items-center justify-between border-t border-ink/10 pt-1.5 text-[10px] font-black uppercase tracking-wide text-ink/45 transition-colors group-hover:text-coral"
                 >
-                  {{ t('album.collectionControls.openInAlbumShort') }}
+                  {{
+                    t(
+                      needsPreparation(item)
+                        ? 'album.collectionControls.prepareAction'
+                        : 'album.collectionControls.openInAlbumShort',
+                    )
+                  }}
                   <i class="pi pi-arrow-right" aria-hidden="true" />
                 </span>
               </button>

@@ -41,6 +41,7 @@ const testState = vi.hoisted(() => ({
     rewardGoals: [],
     isLoaded: true,
     lastCompletedGoalId: undefined,
+    overallProgress: 0,
   },
 }))
 
@@ -90,6 +91,8 @@ describe('HomeView', () => {
     testState.player.millisecondsUntilFullEnergy = 0
     testState.quickActions = []
     testState.goals.nearestGoals = []
+    testState.inventory.packCount = 0
+    testState.goals.overallProgress = 0
   })
 
   it('показывает текущую цель и корректный текст кнопки', () => {
@@ -130,6 +133,17 @@ describe('HomeView', () => {
     ]
     const wrapper = mountHome()
     expect(wrapper.get('[data-nearest-goals]').text()).toContain('3 / 5')
+  })
+
+  it('показывает в сводке наборы, коллекцию и цели вместо ресурсов конкретного журнала', () => {
+    testState.inventory.packCount = 2
+    testState.goals.overallProgress = 25
+    const wrapper = mountHome()
+    const summary = wrapper.get('[data-player-summary]').text()
+    expect(summary).toContain('Наборы')
+    expect(summary).toContain('Цели')
+    expect(summary).toContain('25%')
+    expect(summary).not.toContain('Журнал')
   })
 
   it('защищает мобильную структуру от горизонтального overflow', () => {

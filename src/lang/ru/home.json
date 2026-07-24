@@ -8,7 +8,7 @@
   "energyValue": "{current} / {limit}",
   "energyFull": "Запас полон",
   "energyRecovery": "+1 через {time}",
-  "clickBonus": "Журнал {progress}% · +{reward} за клик",
+  "clickBonus": "Журнал ЧМ-2026: {progress}% · +{reward} за клик",
   "logoAlt": "Логотип «Вклейка»",
   "score": "Очки",
   "title": "Собирай моменты чемпионата",
@@ -24,7 +24,8 @@
     "coins": "Монеты",
     "album": "Журнал",
     "packs": "Наборы",
-    "collection": "Коллекция"
+    "collection": "Коллекция",
+    "goals": "Цели"
   },
   "goal": {
     "eyebrow": "Текущая цель",

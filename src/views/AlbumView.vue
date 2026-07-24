@@ -101,6 +101,11 @@ const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
 const isPreviewOpen: Ref<boolean> = ref(false)
 const prioritizedTrayInstanceId: Ref<string | undefined> = ref(undefined)
 const focusedTrayInstanceId: Ref<string | undefined> = ref(undefined)
+const autoPrepareInstanceId: ComputedRef<string | undefined> = computed((): string | undefined =>
+  route.query.action === 'prepare' && typeof route.query.instance === 'string'
+    ? route.query.instance
+    : undefined,
+)
 let desktopMediaQuery: MediaQueryList | undefined
 let trayFocusTimer: number | undefined
 let collectionTargetFocusTimer: number | undefined
@@ -581,6 +586,7 @@ onBeforeUnmount((): void => {
       <StickerTray
         :cards="trayCards"
         :highlighted-instance-id="focusedTrayInstanceId"
+        :auto-prepare-instance-id="autoPrepareInstanceId"
         @focus="focusCardTarget"
         @clear-focus="clearCardTarget"
         @drag-start="prepareDropPage"

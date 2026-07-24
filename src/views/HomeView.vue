@@ -2,7 +2,6 @@
 import {
   computed,
   onBeforeUnmount,
-  onMounted,
   ref,
   watch,
   type ComputedRef,
@@ -15,13 +14,12 @@ import type { GoalRuntimeState } from '@/features/goals/types'
 import { CLICKER_CONFIG, HOME_VIEW_CONFIG } from '@/data/mainConst'
 import { useRecommendedAction, type QuickAction } from '@/composables/useRecommendedAction'
 import { useCollectionStore } from '@/stores/collection'
+import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { useGoalsStore } from '@/stores/goals'
 import { formatCountdown } from '@/utils/formatCountdown'
 
 import Button from 'primevue/button'
-import ProgressBar from 'primevue/progressbar'
-
 import ClickArea from '@/components/Clicker/ClickArea.vue'
 import ClickEnergyPanel from '@/components/Clicker/ClickEnergyPanel.vue'
 import CurrentGoalCard from '@/components/goals/CurrentGoalCard.vue'
@@ -38,11 +36,11 @@ const { t } = useI18n()
 const router = useRouter()
 const player = usePlayerStore()
 const collection = useCollectionStore()
+const inventory = useInventoryStore()
 const goals = useGoalsStore()
 const { recommendation, quickActions } = useRecommendedAction()
 const effects: Ref<ClickEffectItem[]> = ref([])
 let nextEffectId: number = 0
-let energyTimer: number | undefined
 let completionTimer: number | undefined
 const completionNotice: Ref<boolean> = ref(false)
 
@@ -132,16 +130,7 @@ watch(
   },
 )
 
-onMounted((): void => {
-  player.refreshEnergy()
-  energyTimer = window.setInterval(
-    (): void => player.refreshEnergy(),
-    HOME_VIEW_CONFIG.energyRefreshIntervalMs,
-  )
-})
-
 onBeforeUnmount((): void => {
-  if (energyTimer !== undefined) window.clearInterval(energyTimer)
   if (completionTimer !== undefined) window.clearTimeout(completionTimer)
 })
 </script>
@@ -162,46 +151,41 @@ onBeforeUnmount((): void => {
         data-player-summary
       >
         <div class="flex min-w-0 items-center gap-2 px-2.5 py-2">
-          <i class="pi pi-wallet shrink-0 text-base text-coral" aria-hidden="true" />
+          <i class="pi pi-box shrink-0 text-base text-coral" aria-hidden="true" />
           <div class="min-w-0">
             <span class="block truncate text-[9px] font-black uppercase tracking-wider text-ink/45">
-              {{ t('home.summary.coins') }}
+              {{ t('home.summary.packs') }}
             </span>
             <strong class="block truncate text-lg font-black leading-none tabular-nums">
-              {{ player.formattedCoins }}
+              {{ inventory.packCount }}
             </strong>
           </div>
         </div>
 
         <div class="min-w-0 border-x border-ink/15 px-2.5 py-2">
           <div class="flex items-center gap-2">
-            <i class="pi pi-book shrink-0 text-base text-coral" aria-hidden="true" />
+            <i class="pi pi-images shrink-0 text-base text-coral" aria-hidden="true" />
             <div class="min-w-0">
               <span
                 class="block truncate text-[9px] font-black uppercase tracking-wider text-ink/45"
               >
-                {{ t('home.summary.album') }}
+                {{ t('home.summary.collection') }}
               </span>
               <strong class="block text-lg font-black leading-none tabular-nums">
-                {{ collection.albumProgress }}%
+                {{ collection.collectedTotal }} / {{ collection.total }}
               </strong>
             </div>
           </div>
-          <ProgressBar
-            class="summary-progress mt-1 h-1"
-            :value="collection.albumProgress"
-            :show-value="false"
-          />
         </div>
 
         <div class="flex min-w-0 items-center gap-2 px-2.5 py-2">
-          <i class="pi pi-images shrink-0 text-base text-coral" aria-hidden="true" />
+          <i class="pi pi-flag shrink-0 text-base text-coral" aria-hidden="true" />
           <div class="min-w-0">
             <span class="block truncate text-[9px] font-black uppercase tracking-wider text-ink/45">
-              {{ t('home.summary.collection') }}
+              {{ t('home.summary.goals') }}
             </span>
             <strong class="block truncate text-lg font-black leading-none tabular-nums">
-              {{ collection.collectedTotal }} / {{ collection.total }}
+              {{ goals.overallProgress }}%
             </strong>
           </div>
         </div>
@@ -315,10 +299,6 @@ onBeforeUnmount((): void => {
 </template>
 
 <style scoped>
-:deep(.summary-progress .p-progressbar-value) {
-  background: rgb(var(--color-mint));
-}
-
 :deep(.quick-action .p-button-label) {
   min-width: 0;
   width: 100%;

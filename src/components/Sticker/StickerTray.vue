@@ -10,6 +10,7 @@ import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 interface Props {
   cards: StickerTrayItem[]
   highlightedInstanceId?: string
+  autoPrepareInstanceId?: string
 }
 
 interface Emits {
@@ -30,6 +31,7 @@ const isPeelOpen: Ref<boolean> = ref(false)
 const isPreparationCompleted: Ref<boolean> = ref(false)
 const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
 const isPreviewOpen: Ref<boolean> = ref(false)
+const autoPreparedInstanceId: Ref<string | undefined> = ref(undefined)
 const trayScrollRef: Ref<HTMLElement | undefined> = ref(undefined)
 const selectedItem: ComputedRef<StickerTrayItem | undefined> = computed(
   (): StickerTrayItem | undefined =>
@@ -95,6 +97,24 @@ watch(
     void nextTick((): void => {
       trayScrollRef.value?.scrollTo({ left: 0, behavior: 'smooth' })
     })
+  },
+  { immediate: true },
+)
+
+watch(
+  (): string | undefined => {
+    const instanceId = props.autoPrepareInstanceId
+    return instanceId &&
+      props.cards.some(({ instance }): boolean => instance.id === instanceId)
+      ? instanceId
+      : undefined
+  },
+  (instanceId: string | undefined): void => {
+    if (!instanceId || autoPreparedInstanceId.value === instanceId) return
+    const item = props.cards.find(({ instance }): boolean => instance.id === instanceId)
+    if (!item || item.instance.preparation) return
+    autoPreparedInstanceId.value = instanceId
+    void nextTick((): void => prepareSticker(item))
   },
   { immediate: true },
 )

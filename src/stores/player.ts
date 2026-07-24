@@ -48,6 +48,12 @@ export const usePlayerStore = defineStore('player', () => {
       CLICKER_CONFIG.energyLimit / CLICKER_CONFIG.fullRechargeMs
     return Math.ceil(missingEnergy / energyPerMillisecond)
   })
+  const millisecondsUntilFullEnergy: ComputedRef<number> = computed((): number => {
+    if (energy.value >= CLICKER_CONFIG.energyLimit) return 0
+    const energyPerMillisecond: number =
+      CLICKER_CONFIG.energyLimit / CLICKER_CONFIG.fullRechargeMs
+    return Math.ceil((CLICKER_CONFIG.energyLimit - energy.value) / energyPerMillisecond)
+  })
   let hasLocalChanges: boolean = false
   let saveQueue: Promise<void> = Promise.resolve()
 
@@ -131,6 +137,7 @@ export const usePlayerStore = defineStore('player', () => {
     availableEnergy,
     energyPercent,
     millisecondsUntilNextEnergy,
+    millisecondsUntilFullEnergy,
     canClick,
     formattedCoins,
     isLoaded,

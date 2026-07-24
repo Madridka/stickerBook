@@ -29,6 +29,8 @@
     "sortName": "По имени",
     "readyStatus": "Готова к вклейке",
     "albumStatus": "Вклеена",
+    "openInAlbum": "Открыть карточку «{name}» на её странице в журнале",
+    "openInAlbumShort": "К странице",
     "filterEmpty": "Карточек с выбранным статусом пока нет."
   },
   "spreadTitle": "Чемпионат мира 2026 · страница {page}",

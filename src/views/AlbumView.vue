@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import { ALBUM_VIEW_CONFIG, PLACE_ALL_COLLECTED_CARDS } from '@/data/mainConst'
 import cards from '@/data/wc-26/catalog'
@@ -85,6 +85,7 @@ const recentReleaseNotes: AlbumReleaseNote[] = [
 const { contentsPageSize, contentsFirstPage, contentsLastPage } = ALBUM_VIEW_CONFIG
 
 const { t } = useI18n()
+const route = useRoute()
 const router = useRouter()
 const album = useAlbumStore()
 const collection = useCollectionStore()
@@ -98,7 +99,10 @@ const confirmationKind: Ref<'wrong' | 'far'> = ref('far')
 const isConfirmOpen: Ref<boolean> = ref(false)
 const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
 const isPreviewOpen: Ref<boolean> = ref(false)
+const prioritizedTrayInstanceId: Ref<string | undefined> = ref(undefined)
+const focusedTrayInstanceId: Ref<string | undefined> = ref(undefined)
 let desktopMediaQuery: MediaQueryList | undefined
+let trayFocusTimer: number | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
   '../../assets/game/wc-26/main/album/**/*.webp',
@@ -265,13 +269,19 @@ const showNextPlacedCard = async (slotId: string): Promise<void> => {
 
 const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[] => {
   if (PLACE_ALL_COLLECTED_CARDS) return []
-  return collection.items
+  const items: StickerTrayItem[] = collection.items
     .filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location))
     .map(({ instance }): StickerTrayItem | undefined => {
       const card: CardDefinition | undefined = getCard(instance.playerId)
       return card ? { card, instance } : undefined
     })
     .filter((item: StickerTrayItem | undefined): item is StickerTrayItem => Boolean(item))
+
+  const focusedIndex: number = items.findIndex(
+    ({ instance }: StickerTrayItem): boolean => instance.id === prioritizedTrayInstanceId.value,
+  )
+  if (focusedIndex <= 0) return items
+  return [items[focusedIndex], ...items.slice(0, focusedIndex), ...items.slice(focusedIndex + 1)]
 })
 
 const openPreview = (instance: StickerInstance): void => {
@@ -305,6 +315,23 @@ const focusCardTarget = (playerId: string): void => {
 
 const clearCardTarget = (): void => {
   activeTargetId.value = undefined
+}
+
+// Применяет точную ссылку из коллекции: открывает страницу и временно выделяет карточку в трее.
+const applyCollectionCardLink = (): void => {
+  const playerId: unknown = route.query.card
+  const instanceId: unknown = route.query.instance
+  if (typeof playerId !== 'string') return
+
+  focusCardTarget(playerId)
+  if (typeof instanceId !== 'string') return
+
+  prioritizedTrayInstanceId.value = instanceId
+  focusedTrayInstanceId.value = instanceId
+  if (trayFocusTimer !== undefined) window.clearTimeout(trayFocusTimer)
+  trayFocusTimer = window.setTimeout((): void => {
+    focusedTrayInstanceId.value = undefined
+  }, ALBUM_VIEW_CONFIG.trayFocusDurationMs)
 }
 
 const getContentsTeams = (pageNumber: number): AlbumContentsTeam[] => {
@@ -429,10 +456,12 @@ onMounted((): void => {
   desktopMediaQuery = window.matchMedia(ALBUM_VIEW_CONFIG.desktopSpreadMediaQuery)
   syncDesktopSpread(desktopMediaQuery)
   desktopMediaQuery.addEventListener('change', syncDesktopSpread)
+  applyCollectionCardLink()
 })
 
 onBeforeUnmount((): void => {
   desktopMediaQuery?.removeEventListener('change', syncDesktopSpread)
+  if (trayFocusTimer !== undefined) window.clearTimeout(trayFocusTimer)
 })
 </script>
 
@@ -536,6 +565,7 @@ onBeforeUnmount((): void => {
 
       <StickerTray
         :cards="trayCards"
+        :highlighted-instance-id="focusedTrayInstanceId"
         @focus="focusCardTarget"
         @clear-focus="clearCardTarget"
         @drag-start="prepareDropPage"

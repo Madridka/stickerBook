@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, type ComputedRef, type Ref } from 'vue'
+import { computed, nextTick, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { StickerDropResult, StickerPreparation, StickerTrayItem } from '@/types'
 
@@ -9,6 +9,7 @@ import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 
 interface Props {
   cards: StickerTrayItem[]
+  highlightedInstanceId?: string
 }
 
 interface Emits {
@@ -29,6 +30,7 @@ const isPeelOpen: Ref<boolean> = ref(false)
 const isPreparationCompleted: Ref<boolean> = ref(false)
 const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
 const isPreviewOpen: Ref<boolean> = ref(false)
+const trayScrollRef: Ref<HTMLElement | undefined> = ref(undefined)
 const selectedItem: ComputedRef<StickerTrayItem | undefined> = computed(
   (): StickerTrayItem | undefined =>
     props.cards.find(({ instance }): boolean => instance.id === selectedInstanceId.value),
@@ -83,6 +85,19 @@ const closePreparation = (): void => {
 const toggleCollapsed = (): void => {
   isCollapsed.value = !isCollapsed.value
 }
+
+// Показывает поднятую в начало карточку и возвращает прокрутку к ней.
+watch(
+  (): string | undefined => props.highlightedInstanceId,
+  (instanceId: string | undefined): void => {
+    if (!instanceId) return
+    isCollapsed.value = false
+    void nextTick((): void => {
+      trayScrollRef.value?.scrollTo({ left: 0, behavior: 'smooth' })
+    })
+  },
+  { immediate: true },
+)
 </script>
 
 <template>
@@ -132,6 +147,7 @@ const toggleCollapsed = (): void => {
 
     <div
       v-if="!isCollapsed && cards.length"
+      ref="trayScrollRef"
       class="flex min-h-0 flex-1 touch-pan-x gap-3 overflow-x-auto overflow-y-hidden px-1 pt-1 [scrollbar-color:rgb(var(--color-coral)/0.55)_transparent] [scrollbar-width:thin] max-md:gap-2"
       @wheel="scrollCardsWithWheel"
     >
@@ -141,6 +157,7 @@ const toggleCollapsed = (): void => {
         :card="item.card"
         :instance="item.instance"
         :prepared="Boolean(item.instance.preparation)"
+        :highlighted="item.instance.id === highlightedInstanceId"
         @prepare="prepareSticker(item)"
         @preview="openPreview(item)"
         @drag-start="emit('drag-start', $event)"

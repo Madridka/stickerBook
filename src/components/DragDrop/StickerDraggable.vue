@@ -11,6 +11,7 @@ interface Props {
   card: CardDefinition
   instance: StickerInstance
   prepared: boolean
+  highlighted?: boolean
 }
 
 interface Emits {
@@ -98,9 +99,14 @@ const handleKeyboardClick = (event: MouseEvent): void => {
 <template>
   <button
     class="group flex h-32 w-60 shrink-0 touch-pan-x cursor-pointer items-center gap-3 rounded border-2 border-ink/15 bg-white p-2 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-coral max-md:h-24 max-md:w-[10.75rem] max-md:gap-2 max-md:border max-md:p-1.5"
-    :class="{ 'border-mint ring-2 ring-mint/50': prepared, 'opacity-50': isDragging }"
+    :class="{
+      'border-mint ring-2 ring-mint/50': prepared && !highlighted,
+      'animate-target-pulse border-coral ring-4 ring-coral/40 shadow-lg': highlighted,
+      'opacity-50': isDragging,
+    }"
     type="button"
     :aria-label="card.displayName"
+    :aria-current="highlighted ? 'true' : undefined"
     @pointerdown="startDrag"
     @pointermove="moveDrag"
     @pointerup="finishDrag"

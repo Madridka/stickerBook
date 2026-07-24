@@ -45,11 +45,7 @@ const buyPack = async (): Promise<void> => {
       return
     }
 
-    try {
-      await router.push({ name: 'pack-opening' })
-    } catch {
-      window.location.assign(router.resolve({ name: 'pack-opening' }).href)
-    }
+    await router.push({ name: 'pack-opening' })
   } finally {
     isPurchasing.value = false
   }

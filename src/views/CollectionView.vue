@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { computed, ref, type ComputedRef, type Ref } from 'vue'
+import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute, useRouter } from 'vue-router'
 import cards from '@/data/wc-26/catalog'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
+import { useGameGuideStore } from '@/stores/gameGuide'
 import type { CardDefinition, CollectionItem } from '@/types'
 
 import Tab from 'primevue/tab'
@@ -31,10 +33,15 @@ interface CollectionSortOption {
 }
 
 const { t } = useI18n()
+const route = useRoute()
+const router = useRouter()
 const collection = useCollectionStore()
 const deletedCards = useDeletedCardsStore()
-const activeTab: Ref<string> = ref('collection')
-const collectionFilter: Ref<CollectionFilter> = ref('all')
+const gameGuide = useGameGuideStore()
+const activeTab: Ref<string> = ref(route.query.tab === 'duplicates' ? 'duplicates' : 'collection')
+const collectionFilter: Ref<CollectionFilter> = ref(
+  route.query.filter === 'ready' ? 'ready' : 'all',
+)
 const collectionSort: Ref<CollectionSort> = ref('status')
 const collectionFilters: CollectionFilter[] = ['all', 'ready', 'album']
 const cardOrder: Map<string, number> = new Map(
@@ -45,6 +52,17 @@ const isReadyToPlace = (item: CollectionItem): boolean =>
   ['inventory', 'collection'].includes(item.instance.location)
 const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
+
+// Открывает разворот нужной карточки, не запуская подготовку наклейки.
+const openCardInAlbum = async (item: CollectionItem): Promise<void> => {
+  await router.push({
+    name: 'album-wc-26',
+    query: {
+      card: item.instance.playerId,
+      instance: item.instance.id,
+    },
+  })
+}
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
   collection.items.filter(
@@ -116,6 +134,15 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
       collection.items.find(({ instance }): boolean => instance.id === instanceId),
     )
     .filter((item: CollectionItem | undefined): item is CollectionItem => Boolean(item)),
+)
+
+// Подтверждает просмотр коллекции только после появления полученных карточек.
+watch(
+  (): boolean => collection.isLoaded && collectedItems.value.length > 0,
+  (hasCards: boolean): void => {
+    if (hasCards) void gameGuide.markCollectionViewed()
+  },
+  { immediate: true },
 )
 </script>
 
@@ -242,15 +269,22 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
               v-if="visibleCollectionItems.length"
               class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6"
             >
-              <article
+              <button
                 v-for="item in visibleCollectionItems"
                 :key="item.instance.id"
-                class="border-2 bg-paper p-2"
+                class="group border-2 bg-paper p-2 text-left transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral"
                 :class="
                   isReadyToPlace(item)
                     ? 'border-mint shadow-[4px_4px_0_rgb(var(--color-mint)/0.45)]'
                     : 'border-gold/80 shadow-[4px_4px_0_rgb(var(--color-gold)/0.32)]'
                 "
+                type="button"
+                :aria-label="
+                  t('album.collectionControls.openInAlbum', {
+                    name: getCard(item.instance.playerId)?.displayName ?? item.instance.playerId,
+                  })
+                "
+                @click="openCardInAlbum(item)"
               >
                 <img
                   v-if="getCard(item.instance.playerId)"
@@ -281,7 +315,13 @@ const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[
                     >{{ item.instance.quality }}%</span
                   >
                 </div>
-              </article>
+                <span
+                  class="mt-2 flex items-center justify-between border-t border-ink/10 pt-1.5 text-[10px] font-black uppercase tracking-wide text-ink/45 transition-colors group-hover:text-coral"
+                >
+                  {{ t('album.collectionControls.openInAlbumShort') }}
+                  <i class="pi pi-arrow-right" aria-hidden="true" />
+                </span>
+              </button>
             </div>
             <div
               v-else

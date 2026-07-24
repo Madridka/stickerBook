@@ -65,6 +65,15 @@ export interface PackOpeningSession {
   createdAt: number
 }
 
+export interface GameGuideProgress {
+  // Единственная запись одноразовой цепочки первых шагов.
+  id: 'first-steps'
+  completedStepIds: string[]
+  viewedCollection: boolean
+  completed: boolean
+  updatedAt: number
+}
+
 interface StickerBookDatabase extends Dexie {
   stickers: Table<CollectedSticker, string>
   player: Table<PlayerState, string>
@@ -75,6 +84,7 @@ interface StickerBookDatabase extends Dexie {
   packHuntProgress: Table<PackHuntProgress, string>
   duplicateExchanges: Table<DuplicateExchange, string>
   packOpeningSessions: Table<PackOpeningSession, string>
+  gameGuideProgress: Table<GameGuideProgress, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -141,4 +151,16 @@ database.version(9).stores({
   packHuntProgress: 'id',
   duplicateExchanges: 'id, createdAt',
   packOpeningSessions: 'id, packId, createdAt',
+})
+database.version(10).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
+  packHuntProgress: 'id',
+  duplicateExchanges: 'id, createdAt',
+  packOpeningSessions: 'id, packId, createdAt',
+  gameGuideProgress: 'id, completed, updatedAt',
 })

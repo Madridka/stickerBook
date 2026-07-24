@@ -149,20 +149,36 @@ onBeforeUnmount((): void => {
         :aria-label="t('home.summary.label')"
         data-player-summary
       >
-        <div class="flex min-w-0 items-center gap-1.5 px-1.5 py-2 sm:px-2">
+        <button
+          class="flex min-w-0 items-center gap-1.5 px-1.5 py-2 text-left text-ink transition-colors hover:bg-gold/15 focus-visible:relative focus-visible:z-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-coral sm:px-2"
+          type="button"
+          :aria-label="t('home.summary.packs')"
+          :title="t('home.summary.packs')"
+          data-summary-link="packs"
+          @click="navigate({ name: 'shop' })"
+        >
           <i class="pi pi-box shrink-0 text-sm text-coral" aria-hidden="true" />
           <div class="min-w-0">
-            <span class="block truncate text-[8px] font-black uppercase tracking-wide text-ink/45 sm:text-[9px]">
+            <span
+              class="block truncate text-[8px] font-black uppercase tracking-wide text-ink/45 sm:text-[9px]"
+            >
               {{ t('home.summary.packs') }}
             </span>
-            <strong class="block truncate text-base font-black leading-none tabular-nums sm:text-lg">
+            <strong
+              class="block truncate text-base font-black leading-none tabular-nums sm:text-lg"
+            >
               {{ inventory.packCount }}
             </strong>
           </div>
-        </div>
+        </button>
 
-        <div
-          class="col-span-2 flex min-w-0 justify-center border-x border-ink/15 px-1.5 py-2 text-center sm:px-2"
+        <button
+          class="col-span-2 flex min-w-0 justify-center border-x border-ink/15 px-1.5 py-2 text-center text-ink transition-colors hover:bg-mint/20 focus-visible:relative focus-visible:z-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-coral sm:px-2"
+          type="button"
+          :aria-label="t('home.summary.collection')"
+          :title="t('home.summary.collection')"
+          data-summary-link="collection"
+          @click="navigate({ name: 'collection' })"
         >
           <div class="flex min-w-0 items-center gap-1.5">
             <i class="pi pi-images shrink-0 text-sm text-coral" aria-hidden="true" />
@@ -172,24 +188,37 @@ onBeforeUnmount((): void => {
               >
                 {{ t('home.summary.collection') }}
               </span>
-              <strong class="block whitespace-nowrap text-base font-black leading-none tabular-nums sm:text-lg">
+              <strong
+                class="block whitespace-nowrap text-base font-black leading-none tabular-nums sm:text-lg"
+              >
                 {{ collection.collectedTotal }}/{{ collection.total }}
               </strong>
             </div>
           </div>
-        </div>
+        </button>
 
-        <div class="flex min-w-0 items-center gap-1.5 px-1.5 py-2 sm:px-2">
+        <button
+          class="flex min-w-0 items-center gap-1.5 px-1.5 py-2 text-left text-ink transition-colors hover:bg-coral/10 focus-visible:relative focus-visible:z-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-coral sm:px-2"
+          type="button"
+          :aria-label="t('home.summary.goals')"
+          :title="t('home.summary.goals')"
+          data-summary-link="goals"
+          @click="navigate({ name: 'goals' })"
+        >
           <i class="pi pi-flag shrink-0 text-sm text-coral" aria-hidden="true" />
           <div class="min-w-0">
-            <span class="block truncate text-[8px] font-black uppercase tracking-wide text-ink/45 sm:text-[9px]">
+            <span
+              class="block truncate text-[8px] font-black uppercase tracking-wide text-ink/45 sm:text-[9px]"
+            >
               {{ t('home.summary.goals') }}
             </span>
-            <strong class="block truncate text-base font-black leading-none tabular-nums sm:text-lg">
+            <strong
+              class="block truncate text-base font-black leading-none tabular-nums sm:text-lg"
+            >
               {{ goals.overallProgress }}%
             </strong>
           </div>
-        </div>
+        </button>
       </section>
 
       <div class="order-2 flex min-w-0 flex-col gap-3 lg:col-start-2 lg:row-start-2">
@@ -291,8 +320,8 @@ onBeforeUnmount((): void => {
         role="status"
         data-goal-completed-notice
       >
-        <strong class="block">Цель выполнена</strong>
-        <span class="text-sm">Награда готова</span>
+        <strong class="block">{{ t('home.missionDone') }}</strong>
+        <span class="text-sm">{{ t('home.rewardIsReady') }}</span>
       </aside>
     </Transition>
   </section>

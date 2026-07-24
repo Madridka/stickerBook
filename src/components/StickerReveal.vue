@@ -23,6 +23,14 @@ const cardKindLabel: ComputedRef<string> = computed((): string =>
     ? playerPositionLabels[props.card.position]
     : props.card.kind.toUpperCase(),
 )
+const cardTeamLabel: ComputedRef<string> = computed((): string =>
+  props.card.teamId
+    .replace(/-and(?=[a-z])/g, '-and-')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toUpperCase(),
+)
 
 // Сбрасывает состояние просмотра при переходе к следующей карточке
 watch(
@@ -86,7 +94,12 @@ const handleCardClick = (): void => {
             {{ cardKindLabel }}
           </p>
           <p class="mt-1 text-xl font-black leading-tight">{{ card.displayName }}</p>
-          <p class="text-sm font-semibold text-ink/60">{{ card.teamId }}</p>
+          <p
+            class="text-xs font-black uppercase tracking-[0.1em] text-ink/60"
+            data-card-team
+          >
+            {{ cardTeamLabel }}
+          </p>
           <p v-if="duplicate" class="mt-1 text-xs font-bold text-coral">
             {{ t('packOpening.duplicateStorageHint') }}
           </p>

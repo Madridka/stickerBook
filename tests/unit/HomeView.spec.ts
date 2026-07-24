@@ -148,6 +148,18 @@ describe('HomeView', () => {
     expect(summary.get('strong.whitespace-nowrap').exists()).toBe(true)
   })
 
+  it('открывает разделы из интерактивной сводки', async () => {
+    const wrapper = mountHome()
+    await wrapper.get('[data-summary-link="packs"]').trigger('click')
+    await wrapper.get('[data-summary-link="collection"]').trigger('click')
+    await wrapper.get('[data-summary-link="goals"]').trigger('click')
+    expect(testState.push.mock.calls).toEqual([
+      [{ name: 'shop' }],
+      [{ name: 'collection' }],
+      [{ name: 'goals' }],
+    ])
+  })
+
   it('защищает мобильную структуру от горизонтального overflow', () => {
     const wrapper = mountHome()
     expect(wrapper.get('[data-home-view]').classes()).toContain('overflow-x-hidden')

@@ -31,11 +31,11 @@ export const PACK_CONFIGS = {
     cardsPerPack: CARDS_PER_PACK,
     // Процентная вероятность выбора каждой редкости до нормализации доступного пула.
     rarityOdds: {
-      common: 78,
+      common: 80,
       uncommon: 10,
       rare: 7,
-      epic: 3.5,
-      legendary: 1.5,
+      epic: 2.15,
+      legendary: 0.85,
     },
   },
 } satisfies Record<string, PackConfig>

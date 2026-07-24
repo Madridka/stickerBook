@@ -46,6 +46,7 @@
       "image": "/cards/croatia/CRO-03-dominik-livakovic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "dominik-livakovic",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/croatia/CRO-04-josko-gvardiol.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "josko-gvardiol",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/croatia/CRO-05-josip-stanisic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "josip-stanisic",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/croatia/CRO-06-luka-vuskovic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "luka-vuskovic",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/croatia/CRO-07-josip-sutalo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "josip-sutalo",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/croatia/CRO-08-duje-caleta-car.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "duje-caleta-car",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/croatia/CRO-09-kristijan-jakic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kristijan-jakic",
       "position": "DF"
@@ -143,6 +150,7 @@
       "image": "/cards/croatia/CRO-11-mateo-kovacic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "mateo-kovacic",
       "position": "MF"
@@ -155,6 +163,7 @@
       "image": "/cards/croatia/CRO-12-martin-baturina.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "martin-baturina",
       "position": "MF"
@@ -167,6 +176,7 @@
       "image": "/cards/croatia/CRO-13-lovro-majer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "lovro-majer",
       "position": "MF"
@@ -179,6 +189,7 @@
       "image": "/cards/croatia/CRO-14-mario-pasalic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "mario-pasalic",
       "position": "MF"
@@ -191,6 +202,7 @@
       "image": "/cards/croatia/CRO-15-petar-sucic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "petar-sucic",
       "position": "MF"
@@ -203,6 +215,7 @@
       "image": "/cards/croatia/CRO-16-ivan-perisic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ivan-perisic",
       "position": "FW"
@@ -215,6 +228,7 @@
       "image": "/cards/croatia/CRO-17-marco-pasalic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "marco-pasalic",
       "position": "FW"
@@ -227,6 +241,7 @@
       "image": "/cards/croatia/CRO-18-ante-budimir.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ante-budimir",
       "position": "FW"
@@ -239,6 +254,7 @@
       "image": "/cards/croatia/CRO-19-andrej-kramaric.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "andrej-kramaric",
       "position": "FW"
@@ -251,6 +267,7 @@
       "image": "/cards/croatia/CRO-20-franjo-ivanovic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "franjo-ivanovic",
       "position": "FW"

@@ -46,6 +46,7 @@
       "image": "/cards/panama/lastStickers/PAN-03-orlando-mosquera.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "orlando-mosquera",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/panama/lastStickers/PAN-04-luis-mejia.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "luis-mejia",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/panama/lastStickers/PAN-05-fidel-escobar.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "fidel-escobar",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/panama/lastStickers/PAN-06-andres-andrade.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "andres-andrade",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/panama/lastStickers/PAN-07-michael-amir-murillo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "michael-amir-murillo",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/panama/lastStickers/PAN-08-eric-davis.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "eric-davis",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/panama/lastStickers/PAN-09-jose-cordoba.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jose-cordoba",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/panama/lastStickers/PAN-10-cesar-blackman.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "cesar-blackman",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/panama/lastStickers/PAN-11-cristian-martinez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "cristian-martinez",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/panama/lastStickers/PAN-12-anibal-godoy.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "anibal-godoy",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/panama/lastStickers/PAN-13-adalberto-carrasquilla.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "adalberto-carrasquilla",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/panama/lastStickers/PAN-14-edgar-barcenas.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "edgar-barcenas",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/panama/lastStickers/PAN-15-carlos-harvey.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "carlos-harvey",
       "position": "DF"
@@ -202,6 +215,7 @@
       "image": "/cards/panama/lastStickers/PAN-16-ismael-diaz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ismael-diaz",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/panama/lastStickers/PAN-17-jose-fajardo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jose-fajardo",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/panama/lastStickers/PAN-18-cecilio-waterman.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "cecilio-waterman",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/panama/lastStickers/PAN-19-jose-luiz-rodriguez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jose-luiz-rodriguez",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/panama/lastStickers/PAN-20-alberto-quintero.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "alberto-quintero",
       "position": "FW"

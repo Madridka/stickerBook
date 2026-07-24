@@ -46,6 +46,7 @@
       "image": "/cards/jordan/lastStickers/JOR-03-yazeed-abulaila.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yazeed-abulaila",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/jordan/lastStickers/JOR-04-ihsan-haddad.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ihsan-haddad",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/jordan/lastStickers/JOR-05-mohammad-abu-hashish.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohammad-abu-hashish",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/jordan/lastStickers/JOR-06-yazan-al-arab.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yazan-al-arab",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/jordan/lastStickers/JOR-07-abdallah-nasib.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "abdallah-nasib",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/jordan/lastStickers/JOR-08-saleem-obaid.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "saleem-obaid",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/jordan/lastStickers/JOR-09-mohammad-abualnadi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohammad-abualnadi",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/jordan/lastStickers/JOR-10-ibrahim-saadeh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ibrahim-saadeh",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/jordan/lastStickers/JOR-11-nizar-al-rashdan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "nizar-al-rashdan",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/jordan/lastStickers/JOR-12-noor-al-rawabdeh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "noor-al-rawabdeh",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/jordan/lastStickers/JOR-13-mohannad-abu-taha.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohannad-abu-taha",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/jordan/lastStickers/JOR-14-amer-jamous.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "amer-jamous",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/jordan/lastStickers/JOR-15-musa-al-taamari.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "musa-al-taamari",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/jordan/lastStickers/JOR-16-yazan-al-naimat.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yazan-al-naimat",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/jordan/lastStickers/JOR-17-mahmoud-al-mardi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mahmoud-al-mardi",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/jordan/lastStickers/JOR-18-ali-olwan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ali-olwan",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/jordan/lastStickers/JOR-19-mohammad-abu-zrayq.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohammad-abu-zrayq",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/jordan/lastStickers/JOR-20-ibrahim-sabra.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ibrahim-sabra",
       "position": "FW"

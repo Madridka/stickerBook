@@ -46,6 +46,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-03-ronwen-williams.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ronwen-williams",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-04-sipho-chaine.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "sipho-chaine",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-05-aubrey-modiba.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "aubrey-modiba",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-06-samukele-kabini.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "samukele-kabini",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-07-mbekezeli-mbokazi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mbekezeli-mbokazi",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-08-khulumani-ndamane.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "khulumani-ndamane",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-09-siyabonga-ngezana.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "siyabonga-ngezana",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-10-khuliso-mudau.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "khuliso-mudau",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-11-nkosinathi-sibisi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "nkosinathi-sibisi",
       "position": "DF"
@@ -154,6 +163,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-12-teboho-mokoena.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "teboho-mokoena",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-13-thalente-mbatha.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "thalente-mbatha",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-14-bathusi-aubaas.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "bathusi-aubaas",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-15-yaya-sithole.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yaya-sithole",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-16-sipho-mbule.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "sipho-mbule",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-17-lyle-foster.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "lyle-foster",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-18-iqraam-rayners.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "iqraam-rayners",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-19-mohau-nkota.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohau-nkota",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/south-africa/lastStickers/RSA-20-oswin-appollis.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "oswin-appollis",
       "position": "FW"

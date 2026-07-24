@@ -46,6 +46,7 @@
       "image": "/cards/iran/lastStickers/IRN-03-alireza-beiranvand.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alireza-beiranvand",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/iran/lastStickers/IRN-04-morteza-pouraliganji.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "morteza-pouraliganji",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/iran/lastStickers/IRN-05-ehsan-hajsafi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ehsan-hajsafi",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/iran/lastStickers/IRN-06-milad-mohammadi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "milad-mohammadi",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/iran/lastStickers/IRN-07-shojae-khalilzadeh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "shojae-khalilzadeh",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/iran/lastStickers/IRN-08-ramin-rezaeian.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ramin-rezaeian",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/iran/lastStickers/IRN-09-hossein-kanaani.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hossein-kanaani",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/iran/lastStickers/IRN-10-sadegh-moharrami.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "sadegh-moharrami",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/iran/lastStickers/IRN-11-saleh-hardani.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "saleh-hardani",
       "position": "DF"
@@ -154,6 +163,7 @@
       "image": "/cards/iran/lastStickers/IRN-12-saeed-ezatolahi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "saeed-ezatolahi",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/iran/lastStickers/IRN-13-saman-ghoddos.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "saman-ghoddos",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/iran/lastStickers/IRN-14-omid-noorafkan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "omid-noorafkan",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/iran/lastStickers/IRN-15-roozbeh-cheshmi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "roozbeh-cheshmi",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/iran/lastStickers/IRN-16-mohammad-mohebi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohammad-mohebi",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/iran/lastStickers/IRN-17-sardar-azmoun.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "sardar-azmoun",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/iran/lastStickers/IRN-18-mehdi-taremi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "mehdi-taremi",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/iran/lastStickers/IRN-19-alireza-jahanbakhsh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alireza-jahanbakhsh",
       "position": "MF"
@@ -250,6 +267,7 @@
       "image": "/cards/iran/lastStickers/IRN-20-ali-gholizadeh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ali-gholizadeh",
       "position": "FW"

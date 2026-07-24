@@ -46,6 +46,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-03-yahia-fofana.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yahia-fofana",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-04-ghislain-konan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ghislain-konan",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-05-wilfried-singo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "wilfried-singo",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-06-odilon-kossounou.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "odilon-kossounou",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-07-evan-ndicka.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "evan-ndicka",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-08-willy-boly.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "willy-boly",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-09-emmanuel-agbadou.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "emmanuel-agbadou",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-10-ousmane-diomande.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ousmane-diomande",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-11-franck-kessie.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "franck-kessie",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-12-seko-fofana.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "seko-fofana",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-13-ibrahim-sangare.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ibrahim-sangare",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-14-jean-philippe-gbamin.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jean-philippe-gbamin",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-15-amad-diallo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "amad-diallo",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-16-sebastien-haller.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "sebastien-haller",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-17-simon-adingra.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "simon-adingra",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-18-yan-diomande.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yan-diomande",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-19-evann-guessand.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "evann-guessand",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/cote-divoire/lastStickers/CIV-20-oumar-diakite.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "oumar-diakite",
       "position": "FW"

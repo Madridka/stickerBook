@@ -46,6 +46,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-03-utkir-yusupov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "utkir-yusupov",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-04-farrukh-savfiev.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "farrukh-savfiev",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-05-sherzod-nasrullaev.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "sherzod-nasrullaev",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-06-umar-eshmurodov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "umar-eshmurodov",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-07-husniddin-aliqulov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "husniddin-aliqulov",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-08-rustamjon-ashurmatov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "rustamjon-ashurmatov",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-09-khojiakbar-alijonov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "khojiakbar-alijonov",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-10-abdukodir-khusanov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "abdukodir-khusanov",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-11-odiljon-hamrobekov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "odiljon-hamrobekov",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-12-otabek-shukurov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "otabek-shukurov",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-13-jamshid-iskanderov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jamshid-iskanderov",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-14-azizbek-turgunboev.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "azizbek-turgunboev",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-15-khojimat-erkinov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "khojimat-erkinov",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-16-eldor-shomurodov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "eldor-shomurodov",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-17-oston-urunov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "oston-urunov",
       "position": "MF"
@@ -226,6 +241,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-18-jaloliddin-masharipov.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jaloliddin-masharipov",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-19-igor-sergeev.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "igor-sergeev",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/uzbekistan/lastStickers/UZB-20-abbosbek-fayzullaev.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "abbosbek-fayzullaev",
       "position": "FW"

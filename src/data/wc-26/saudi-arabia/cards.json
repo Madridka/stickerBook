@@ -46,6 +46,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-03-nawaf-alaqidi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "nawaf-alaqidi",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-04-abdulrahman-al-sanbi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "abdulrahman-al-sanbi",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-05-saud-abdulhamid.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "saud-abdulhamid",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-06-nawaf-bouwashl.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "nawaf-bouwashl",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-07-jihad-thakri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jihad-thakri",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-08-moteb-al-harbi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "moteb-al-harbi",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-09-hassan-altambakti.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hassan-altambakti",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-10-musab-aljuwayr.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "musab-aljuwayr",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-11-ziyad-aljohani.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ziyad-aljohani",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-12-abdullah-alkhaibari.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "abdullah-alkhaibari",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-13-nasser-aldawsari.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "nasser-aldawsari",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-14-saleh-abu-alshamat.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "saleh-abu-alshamat",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-15-marwan-alsahafi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "marwan-alsahafi",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-16-salem-aldawsari.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "salem-aldawsari",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-17-abdulrahman-al-aboud.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "abdulrahman-al-aboud",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-18-feras-akbrikan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "feras-akbrikan",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-19-saleh-alshehri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "saleh-alshehri",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/saudi-arabia/lastStickers/KSA-20-abdullah-al-hamdan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "abdullah-al-hamdan",
       "position": "FW"

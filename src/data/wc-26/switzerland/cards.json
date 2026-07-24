@@ -46,6 +46,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-03-gregor-kobel.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "gregor-kobel",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-04-yvon-mvogo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yvon-mvogo",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-05-manuel-akanji.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "manuel-akanji",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-06-ricardo-rodriguez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ricardo-rodriguez",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-07-nico-elvedi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nico-elvedi",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-08-aurele-amenda.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "aurele-amenda",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-09-silvan-widmer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "silvan-widmer",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-10-granit-xhaka.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "granit-xhaka",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-11-denis-zakaria.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "denis-zakaria",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-12-remo-freuler.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "remo-freuler",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-13-fabian-rieder.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "fabian-rieder",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-14-ardon-jashari.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ardon-jashari",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-15-johan-manzambi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "johan-manzambi",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-16-michel-aebischer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "michel-aebischer",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-17-breel-embolo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "breel-embolo",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-18-ruben-vargas.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ruben-vargas",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-19-dan-ndoye.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "dan-ndoye",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/switzerland/lastStickers/SUI-20-zeki-amdouni.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "zeki-amdouni",
       "position": "FW"

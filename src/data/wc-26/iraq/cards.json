@@ -46,6 +46,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-03-jalal-hassan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jalal-hassan",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-04-rebin-sulaka.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "rebin-sulaka",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-05-hussein-ali.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hussein-ali",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-06-akam-hashem.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "akam-hashem",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-07-merchas-doski.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "merchas-doski",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-08-zaid-tahseen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "zaid-tahseen",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-09-manaf-younis.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "manaf-younis",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-10-zidane-iqbal.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "zidane-iqbal",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-11-amir-al-ammari.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "amir-al-ammari",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-12-ibrahim-bavesh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ibrahim-bavesh",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-13-ali-jasim.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ali-jasim",
       "position": "FW"
@@ -178,6 +189,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-14-youssef-amyn.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "youssef-amyn",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-15-aimar-sher.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "aimar-sher",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-16-marko-farji.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "marko-farji",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-17-osama-rashid.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "osama-rashid",
       "position": "MF"
@@ -226,6 +241,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-18-ali-al-hamadi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ali-al-hamadi",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-19-aymen-hussein.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "aymen-hussein",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/iraq/lastStickers/IRQ-20-mohanad-ali.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohanad-ali",
       "position": "FW"

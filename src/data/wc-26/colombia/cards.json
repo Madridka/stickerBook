@@ -46,6 +46,7 @@
       "image": "/cards/colombia/lastStickers/COL-03-camilo-vargas.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "camilo-vargas",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/colombia/lastStickers/COL-04-david-ospina.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "david-ospina",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/colombia/lastStickers/COL-05-davinson-sanchez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "davinson-sanchez",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/colombia/lastStickers/COL-06-yerry-mina.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yerry-mina",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/colombia/lastStickers/COL-07-daniel-munoz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "daniel-munoz",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/colombia/lastStickers/COL-08-johan-mojica.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "johan-mojica",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/colombia/lastStickers/COL-09-jhon-lucumi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jhon-lucumi",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/colombia/lastStickers/COL-10-santiago-arias.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "santiago-arias",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/colombia/lastStickers/COL-11-jefferson-lerma.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "jefferson-lerma",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/colombia/lastStickers/COL-12-kevin-castano.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kevin-castano",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/colombia/lastStickers/COL-13-richard-rios.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "richard-rios",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/colombia/lastStickers/COL-14-james-rodriguez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "james-rodriguez",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/colombia/lastStickers/COL-15-juan-fernando-quintero.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "juan-fernando-quintero",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/colombia/lastStickers/COL-16-jorge-carrascal.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jorge-carrascal",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/colombia/lastStickers/COL-17-jhon-arias.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "jhon-arias",
       "position": "MF"
@@ -226,6 +241,7 @@
       "image": "/cards/colombia/lastStickers/COL-18-jhon-cordova.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jhon-cordova",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/colombia/lastStickers/COL-19-luis-suarez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "luis-suarez",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/colombia/lastStickers/COL-20-luis-diaz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "luis-diaz",
       "position": "FW"

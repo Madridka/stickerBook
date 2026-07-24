@@ -46,6 +46,7 @@
       "image": "/cards/uruguay/lastStickers/URU-03-sergio-rochet.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "sergio-rochet",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/uruguay/lastStickers/URU-04-santiago-mele.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "santiago-mele",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/uruguay/lastStickers/URU-05-ronald-araujo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "ronald-araujo",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/uruguay/lastStickers/URU-06-jose-maria-gimenez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "jose-maria-gimenez",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/uruguay/lastStickers/URU-07-sebastian-caceres.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "sebastian-caceres",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/uruguay/lastStickers/URU-08-mathias-olivera.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "mathias-olivera",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/uruguay/lastStickers/URU-09-guillermo-varela.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "guillermo-varela",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/uruguay/lastStickers/URU-10-nahitan-nandez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nahitan-nandez",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/uruguay/lastStickers/URU-11-federico-valverde.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "federico-valverde",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/uruguay/lastStickers/URU-12-giorgian-de-arrascaeta.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "giorgian-de-arrascaeta",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/uruguay/lastStickers/URU-13-rodrigo-bentancur.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "rodrigo-bentancur",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/uruguay/lastStickers/URU-14-manuel-ugarte.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "manuel-ugarte",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/uruguay/lastStickers/URU-15-nicolas-de-la-cruz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "nicolas-de-la-cruz",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/uruguay/lastStickers/URU-16-maxi-araujo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "maxi-araujo",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/uruguay/lastStickers/URU-17-darwin-nunez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "darwin-nunez",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/uruguay/lastStickers/URU-18-federico-vinas.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "federico-vinas",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/uruguay/lastStickers/URU-19-rodrigo-aguirre.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "rodrigo-aguirre",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/uruguay/lastStickers/URU-20-facundo-pellistri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "facundo-pellistri",
       "position": "FW"

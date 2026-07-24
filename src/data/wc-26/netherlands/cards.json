@@ -46,6 +46,7 @@
       "image": "/cards/netherlands/lastStickers/NED-03-bart-verbruggen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "bart-verbruggen",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/netherlands/lastStickers/NED-04-robin-roefs.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "robin-roefs",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/netherlands/lastStickers/NED-05-lutsharel-geertruida.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "lutsharel-geertruida",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/netherlands/lastStickers/NED-06-virgil-van-dijk.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "virgil-van-dijk",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/netherlands/lastStickers/NED-07-nathan-ake.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "nathan-ake",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/netherlands/lastStickers/NED-08-jan-van-hecke.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jan-van-hecke",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/netherlands/lastStickers/NED-09-mats-wieffer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "mats-wieffer",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/netherlands/lastStickers/NED-10-micky-van-de-ven.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "micky-van-de-ven",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/netherlands/lastStickers/NED-11-marten-de-roon.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "marten-de-roon",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/netherlands/lastStickers/NED-12-justin-kluivert.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "justin-kluivert",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/netherlands/lastStickers/NED-13-ryan-gravenberch.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ryan-gravenberch",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/netherlands/lastStickers/NED-14-tijjani-reijnders.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "tijjani-reijnders",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/netherlands/lastStickers/NED-15-guus-til.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "guus-til",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/netherlands/lastStickers/NED-16-wout-weghorst.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "wout-weghorst",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/netherlands/lastStickers/NED-17-memphis-depay.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "memphis-depay",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/netherlands/lastStickers/NED-18-cody-gakpo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "cody-gakpo",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/netherlands/lastStickers/NED-19-noa-lang.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "noa-lang",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/netherlands/lastStickers/NED-20-donyell-malen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "donyell-malen",
       "position": "FW"

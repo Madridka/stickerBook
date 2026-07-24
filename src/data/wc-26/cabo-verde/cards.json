@@ -46,6 +46,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-03-vozinha.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "vozinha",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-04-logan-costa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "logan-costa",
       "position": "DF"
@@ -70,7 +72,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-05-pico.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "common",
       "kind": "player",
       "personId": "pico",
       "position": "DF"
@@ -83,6 +85,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-06-diney.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "diney",
       "position": "DF"
@@ -95,6 +98,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-07-steven-moreira.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "steven-moreira",
       "position": "DF"
@@ -107,6 +111,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-08-wagner-pina.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "wagner-pina",
       "position": "DF"
@@ -119,6 +124,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-09-joao-paulo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "joao-paulo",
       "position": "DF"
@@ -131,6 +137,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-10-yannick-semedo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yannick-semedo",
       "position": "DF"
@@ -143,6 +150,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-11-kevin-pina.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kevin-pina",
       "position": "MF"
@@ -155,6 +163,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-12-patrick-andrade.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "patrick-andrade",
       "position": "MF"
@@ -167,6 +176,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-13-jamiro-monteiro.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jamiro-monteiro",
       "position": "MF"
@@ -179,6 +189,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-14-deroy-duarte.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "deroy-duarte",
       "position": "MF"
@@ -191,6 +202,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-15-garry-rodrigues.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "garry-rodrigues",
       "position": "MF"
@@ -203,6 +215,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-16-jovane-cabral.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jovane-cabral",
       "position": "MF"
@@ -215,6 +228,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-17-ryan-mendes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ryan-mendes",
       "position": "FW"
@@ -227,6 +241,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-18-dailon-livramento.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "dailon-livramento",
       "position": "FW"
@@ -239,7 +254,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-19-willy-semedo.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "epic",
+      "rarity": "common",
       "kind": "player",
       "personId": "willy-semedo",
       "position": "FW"
@@ -252,7 +267,7 @@
       "image": "/cards/cabo-verde/lastStickers/CPV-20-bebe.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "bebe",
       "position": "FW"

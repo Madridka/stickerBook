@@ -46,6 +46,7 @@
       "image": "/cards/haiti/lastStickers/HAI-03-johny-placide.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "johny-placide",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/haiti/lastStickers/HAI-04-carlens-arcus.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "carlens-arcus",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/haiti/lastStickers/HAI-05-martin-experience.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "martin-experience",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/haiti/lastStickers/HAI-06-jean-kevin-duverne.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jean-kevin-duverne",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/haiti/lastStickers/HAI-07-ricardo-ade.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ricardo-ade",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/haiti/lastStickers/HAI-08-duke-lacroix.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "duke-lacroix",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/haiti/lastStickers/HAI-09-garven-metusala.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "garven-metusala",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/haiti/lastStickers/HAI-10-hannes-delcroix.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hannes-delcroix",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/haiti/lastStickers/HAI-11-leverton-pierre.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "leverton-pierre",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/haiti/lastStickers/HAI-12-danley-jean-jacques.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "danley-jean-jacques",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/haiti/lastStickers/HAI-13-jean-ricner-bellegarde.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jean-ricner-bellegarde",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/haiti/lastStickers/HAI-14-christopher-attys.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "christopher-attys",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/haiti/lastStickers/HAI-15-derrick-etienne-jr.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "derrick-etienne-jr",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/haiti/lastStickers/HAI-16-josue-casimir.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "josue-casimir",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/haiti/lastStickers/HAI-17-ruben-providence.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ruben-providence",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/haiti/lastStickers/HAI-18-duckens-nazon.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "duckens-nazon",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/haiti/lastStickers/HAI-19-louicius-deedson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "louicius-deedson",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/haiti/lastStickers/HAI-20-frantzdy-pierrot.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "frantzdy-pierrot",
       "position": "FW"

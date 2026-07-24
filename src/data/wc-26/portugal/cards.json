@@ -46,6 +46,7 @@
       "image": "/cards/portugal/POR-03-diogo-costa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "diogo-costa",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/portugal/POR-04-jose-sa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jose-sa",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/portugal/POR-05-joao-cancelo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "joao-cancelo",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/portugal/POR-06-diogo-dalot.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "diogo-dalot",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/portugal/POR-07-nuno-mendes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "nuno-mendes",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/portugal/POR-08-goncalo-inacio.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "goncalo-inacio",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/portugal/POR-09-ruben-dias.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "ruben-dias",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/portugal/POR-10-bruno-fernandes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "bruno-fernandes",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/portugal/POR-11-ruben-neves.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ruben-neves",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/portugal/POR-12-vitinha.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "vitinha",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/portugal/POR-13-bernardo-silva.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "bernardo-silva",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/portugal/POR-14-joao-neves.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "joao-neves",
       "position": "MF"
@@ -203,6 +215,7 @@
       "image": "/cards/portugal/POR-16-francisco-trincao.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "francisco-trincao",
       "position": "FW"
@@ -215,6 +228,7 @@
       "image": "/cards/portugal/POR-17-joao-felix.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "joao-felix",
       "position": "FW"
@@ -227,6 +241,7 @@
       "image": "/cards/portugal/POR-18-goncalo-ramos.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "goncalo-ramos",
       "position": "FW"
@@ -239,6 +254,7 @@
       "image": "/cards/portugal/POR-19-pedro-neto.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "pedro-neto",
       "position": "FW"
@@ -251,6 +267,7 @@
       "image": "/cards/portugal/POR-20-rafael-leao.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "rafael-leao",
       "position": "FW"

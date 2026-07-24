@@ -46,7 +46,7 @@
       "image": "/cards/argentina/ARG-03-emiliano-martinez.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "epic",
       "kind": "player",
       "personId": "emiliano-martinez",
       "position": "GK"
@@ -59,6 +59,7 @@
       "image": "/cards/argentina/ARG-04-geronimo-rulli.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "geronimo-rulli",
       "position": "GK"
@@ -71,6 +72,7 @@
       "image": "/cards/argentina/ARG-05-cristian-romero.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "cristian-romero",
       "position": "DF"
@@ -83,6 +85,7 @@
       "image": "/cards/argentina/ARG-06-lisandro-martinez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "lisandro-martinez",
       "position": "DF"
@@ -95,6 +98,7 @@
       "image": "/cards/argentina/ARG-07-nicolas-otamendi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "nicolas-otamendi",
       "position": "DF"
@@ -107,6 +111,7 @@
       "image": "/cards/argentina/ARG-08-nahuel-molina.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nahuel-molina",
       "position": "DF"
@@ -119,6 +124,7 @@
       "image": "/cards/argentina/ARG-09-nicolas-tagliafico.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nicolas-tagliafico",
       "position": "DF"
@@ -131,6 +137,7 @@
       "image": "/cards/argentina/ARG-10-leonardo-balerdi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "leonardo-balerdi",
       "position": "DF"
@@ -182,6 +189,7 @@
       "image": "/cards/argentina/ARG-14-leandro-paredes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "leandro-paredes",
       "position": "MF"
@@ -194,6 +202,7 @@
       "image": "/cards/argentina/ARG-15-giovani-lo-celso.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "giovani-lo-celso",
       "position": "MF"
@@ -232,7 +241,7 @@
       "image": "/cards/argentina/ARG-18-lautaro-martinez.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "epic",
       "kind": "player",
       "personId": "lautaro-martinez",
       "position": "FW"
@@ -245,6 +254,7 @@
       "image": "/cards/argentina/ARG-19-nico-paz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nico-paz",
       "position": "FW"
@@ -257,6 +267,7 @@
       "image": "/cards/argentina/ARG-20-thiago-almada.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "thiago-almada",
       "position": "FW"

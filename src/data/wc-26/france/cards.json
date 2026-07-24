@@ -59,6 +59,7 @@
       "image": "/cards/france/lastStickers/FRA-04-theo-hernandez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "theo-hernandez",
       "position": "DF"
@@ -71,7 +72,7 @@
       "image": "/cards/france/lastStickers/FRA-05-william-saliba.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "epic",
       "kind": "player",
       "personId": "william-saliba",
       "position": "DF"
@@ -84,6 +85,7 @@
       "image": "/cards/france/lastStickers/FRA-06-jules-kounde.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "jules-kounde",
       "position": "DF"
@@ -96,6 +98,7 @@
       "image": "/cards/france/lastStickers/FRA-07-ibrahima-konate.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ibrahima-konate",
       "position": "DF"
@@ -108,6 +111,7 @@
       "image": "/cards/france/lastStickers/FRA-08-dayot-upamecano.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "dayot-upamecano",
       "position": "DF"
@@ -120,6 +124,7 @@
       "image": "/cards/france/lastStickers/FRA-09-lucas-digne.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "lucas-digne",
       "position": "DF"
@@ -132,6 +137,7 @@
       "image": "/cards/france/lastStickers/FRA-10-aurelien-tchouameni.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "aurelien-tchouameni",
       "position": "MF"
@@ -157,7 +163,7 @@
       "image": "/cards/france/lastStickers/FRA-12-manu-kone.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "manu-kone",
       "position": "MF"
@@ -170,6 +176,7 @@
       "image": "/cards/france/lastStickers/FRA-13-adrien-rabiot.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "adrien-rabiot",
       "position": "MF"
@@ -182,6 +189,7 @@
       "image": "/cards/france/lastStickers/FRA-14-michael-olise.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "michael-olise",
       "position": "FW"
@@ -194,7 +202,7 @@
       "image": "/cards/france/lastStickers/FRA-15-ousmane-dembele.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "epic",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "ousmane-dembele",
       "position": "FW"
@@ -207,7 +215,7 @@
       "image": "/cards/france/lastStickers/FRA-16-bradley-barcola.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "epic",
+      "rarity": "rare",
       "kind": "player",
       "personId": "bradley-barcola",
       "position": "FW"
@@ -246,6 +254,7 @@
       "image": "/cards/france/lastStickers/FRA-19-hugo-ekitike.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "hugo-ekitike",
       "position": "FW"
@@ -258,6 +267,7 @@
       "image": "/cards/france/lastStickers/FRA-20-kylian-mbappe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "kylian-mbappe",
       "position": "FW"

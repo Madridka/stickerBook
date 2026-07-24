@@ -52,6 +52,7 @@ export interface PlayerCard extends BaseCard {
   kind: 'player'
   personId: string
   position: PlayerPosition
+  rarity: CardRarity
   shirtNumber?: number
 }
 

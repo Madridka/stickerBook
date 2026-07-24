@@ -46,6 +46,7 @@
       "image": "/cards/algeria/ALG-03-alexis-guendouz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "alexis-guendouz",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/algeria/ALG-04-ramy-bensebaini.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ramy-bensebaini",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/algeria/ALG-05-youcef-atal.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "youcef-atal",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/algeria/ALG-06-rayan-ait-nouri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "rayan-ait-nouri",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/algeria/ALG-07-mohamed-amine-tougai.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohamed-amine-tougai",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/algeria/ALG-08-aissa-mandi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "aissa-mandi",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/algeria/ALG-09-ismael-bennacer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ismael-bennacer",
       "position": "MF"
@@ -130,6 +137,7 @@
       "image": "/cards/algeria/ALG-10-houssem-aouar.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "houssem-aouar",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/algeria/ALG-11-hicham-boudaoui.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hicham-boudaoui",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/algeria/ALG-12-ramiz-zerrouki.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ramiz-zerrouki",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/algeria/ALG-13-nabil-bentaleb.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nabil-bentaleb",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/algeria/ALG-14-fares-chaibi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "fares-chaibi",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/algeria/ALG-15-riyad-mahrez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "riyad-mahrez",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/algeria/ALG-16-said-benrahma.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "said-benrahma",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/algeria/ALG-17-anis-hadj-moussa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "anis-hadj-moussa",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/algeria/ALG-18-amine-gouiri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "amine-gouiri",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/algeria/ALG-19-baghdad-bounedjah.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "baghdad-bounedjah",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/algeria/ALG-20-mohammed-amoura.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "mohammed-amoura",
       "position": "FW"

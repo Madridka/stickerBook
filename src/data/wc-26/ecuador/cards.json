@@ -46,6 +46,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-03-hernan-galindez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "hernan-galindez",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-04-gonzalo-valle.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "gonzalo-valle",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-05-piero-hincapie.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "piero-hincapie",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-06-pervis-estupinan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "pervis-estupinan",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-07-willian-pacho.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "willian-pacho",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-08-angelo-preciado.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "angelo-preciado",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-09-joel-ordonez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "joel-ordonez",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-10-moises-caicedo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "moises-caicedo",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-11-alan-franco.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alan-franco",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-12-kendry-paez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "kendry-paez",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-13-pedro-vite.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "pedro-vite",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-14-john-yeboah.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "john-yeboah",
       "position": "FW"
@@ -190,6 +202,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-15-leonardo-campana.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "leonardo-campana",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-16-gonzalo-plata.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "gonzalo-plata",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-17-nilson-angulo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nilson-angulo",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-18-alan-minda.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alan-minda",
       "position": "MF"
@@ -238,6 +254,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-19-kevin-rodriguez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kevin-rodriguez",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/ecuador/lastStickers/ECU-20-enner-valencia.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "enner-valencia",
       "position": "FW"

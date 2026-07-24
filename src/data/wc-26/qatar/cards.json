@@ -46,6 +46,7 @@
       "image": "/cards/qatar/lastStickers/QAT-03-meshaal-barsham.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "meshaal-barsham",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/qatar/lastStickers/QAT-04-sultan-albrake.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "sultan-albrake",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/qatar/lastStickers/QAT-05-lucas-mendes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "lucas-mendes",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/qatar/lastStickers/QAT-06-homam-ahmed.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "homam-ahmed",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/qatar/lastStickers/QAT-07-boualem-khoukhi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "boualem-khoukhi",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/qatar/lastStickers/QAT-08-pedro-miguel.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "pedro-miguel",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/qatar/lastStickers/QAT-09-tarek-salman.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "tarek-salman",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/qatar/lastStickers/QAT-10-mohamed-al-mannai.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohamed-al-mannai",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/qatar/lastStickers/QAT-11-karim-boudiaf.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "karim-boudiaf",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/qatar/lastStickers/QAT-12-assim-madibo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "assim-madibo",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/qatar/lastStickers/QAT-13-ahmed-fatehi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ahmed-fatehi",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/qatar/lastStickers/QAT-14-mohammed-waad.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohammed-waad",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/qatar/lastStickers/QAT-15-abdulaziz-hatem.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "abdulaziz-hatem",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/qatar/lastStickers/QAT-16-hassan-al-haydos.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "hassan-al-haydos",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/qatar/lastStickers/QAT-17-edmilson-junior.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "edmilson-junior",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/qatar/lastStickers/QAT-18-akram-hassan-afif.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "akram-hassan-afif",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/qatar/lastStickers/QAT-19-ahmed-al-ganehi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ahmed-al-ganehi",
       "position": "MF"
@@ -250,6 +267,7 @@
       "image": "/cards/qatar/lastStickers/QAT-20-almoez-ali.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "almoez-ali",
       "position": "FW"

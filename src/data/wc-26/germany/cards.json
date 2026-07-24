@@ -59,6 +59,7 @@
       "image": "/cards/germany/lastStickers/GER-04-jonathan-tah.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "jonathan-tah",
       "position": "DF"
@@ -71,6 +72,7 @@
       "image": "/cards/germany/lastStickers/GER-05-david-raum.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "david-raum",
       "position": "DF"
@@ -83,6 +85,7 @@
       "image": "/cards/germany/lastStickers/GER-06-nico-schlotterbeck.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "nico-schlotterbeck",
       "position": "DF"
@@ -95,6 +98,7 @@
       "image": "/cards/germany/lastStickers/GER-07-antonio-rudiger.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "antonio-rudiger",
       "position": "DF"
@@ -107,6 +111,7 @@
       "image": "/cards/germany/lastStickers/GER-08-waldemar-anton.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "waldemar-anton",
       "position": "DF"
@@ -119,7 +124,7 @@
       "image": "/cards/germany/lastStickers/GER-09-ridle-baku.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ridle-baku",
       "position": "DF"
@@ -132,6 +137,7 @@
       "image": "/cards/germany/lastStickers/GER-10-maximilian-mittelstadt.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "maximilian-mittelstadt",
       "position": "DF"
@@ -144,6 +150,7 @@
       "image": "/cards/germany/lastStickers/GER-11-joshua-kimmich.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "joshua-kimmich",
       "position": "DF"
@@ -169,7 +176,7 @@
       "image": "/cards/germany/lastStickers/GER-13-felix-nmecha.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "epic",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "felix-nmecha",
       "position": "MF"
@@ -182,6 +189,7 @@
       "image": "/cards/germany/lastStickers/GER-14-leon-goretzka.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "leon-goretzka",
       "position": "MF"
@@ -194,6 +202,7 @@
       "image": "/cards/germany/lastStickers/GER-15-jamal-musiala.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "jamal-musiala",
       "position": "MF"
@@ -206,6 +215,7 @@
       "image": "/cards/germany/lastStickers/GER-16-serge-gnabry.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "serge-gnabry",
       "position": "FW"
@@ -231,6 +241,7 @@
       "image": "/cards/germany/lastStickers/GER-18-leroy-sane.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "leroy-sane",
       "position": "MF"
@@ -243,6 +254,7 @@
       "image": "/cards/germany/lastStickers/GER-19-karim-adeyemi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "karim-adeyemi",
       "position": "FW"
@@ -255,6 +267,7 @@
       "image": "/cards/germany/lastStickers/GER-20-nick-woltemade.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "nick-woltemade",
       "position": "FW"

@@ -46,6 +46,7 @@
       "image": "/cards/canada/lastStickers/CAN-03-dayne-st-clair.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "dayne-st-clair",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/canada/lastStickers/CAN-04-alphonso-davies.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "alphonso-davies",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/canada/lastStickers/CAN-05-alistair-johnston.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alistair-johnston",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/canada/lastStickers/CAN-06-samuel-adekugbe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "samuel-adekugbe",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/canada/lastStickers/CAN-07-richie-laryea.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "richie-laryea",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/canada/lastStickers/CAN-08-derek-cornelius.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "derek-cornelius",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/canada/lastStickers/CAN-09-moise-bombito.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "moise-bombito",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/canada/lastStickers/CAN-10-kamal-miller.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kamal-miller",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/canada/lastStickers/CAN-11-stephen-eustaquio.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "stephen-eustaquio",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/canada/lastStickers/CAN-12-ismael-kone.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ismael-kone",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/canada/lastStickers/CAN-13-jonathan-osorio.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jonathan-osorio",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/canada/lastStickers/CAN-14-jacob-shaffelburg.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jacob-shaffelburg",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/canada/lastStickers/CAN-15-mathieu-choiniere.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "mathieu-choiniere",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/canada/lastStickers/CAN-16-niko-sigur.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "niko-sigur",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/canada/lastStickers/CAN-17-tajon-buchanan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "tajon-buchanan",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/canada/lastStickers/CAN-18-liam-millar.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "liam-millar",
       "position": "MF"
@@ -238,6 +254,7 @@
       "image": "/cards/canada/lastStickers/CAN-19-cyle-larin.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "cyle-larin",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/canada/lastStickers/CAN-20-jonathan-david.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "jonathan-david",
       "position": "FW"

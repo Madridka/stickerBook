@@ -46,6 +46,7 @@
       "image": "/cards/belgium/BEL-03-thibaut-courtois.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "thibaut-courtois",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/belgium/BEL-04-arthur-theate.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "arthur-theate",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/belgium/BEL-05-timothy-castagne.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "timothy-castagne",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/belgium/BEL-06-zeno-debast.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "zeno-debast",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/belgium/BEL-07-brandon-mechele.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "brandon-mechele",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/belgium/BEL-08-maxim-de-cuyper.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "maxim-de-cuyper",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/belgium/BEL-09-thomas-meunier.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "thomas-meunier",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/belgium/BEL-10-youri-tielemans.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "youri-tielemans",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/belgium/BEL-11-amadou-onana.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "amadou-onana",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/belgium/BEL-12-nicolas-raskin.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nicolas-raskin",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/belgium/BEL-13-alexis-saelemaekers.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alexis-saelemaekers",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/belgium/BEL-14-hans-vanaken.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "hans-vanaken",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/belgium/BEL-15-kevin-de-bruyne.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "kevin-de-bruyne",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/belgium/BEL-16-jeremy-doku.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "jeremy-doku",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/belgium/BEL-17-charles-de-ketelaere.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "charles-de-ketelaere",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/belgium/BEL-18-leandro-trossard.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "leandro-trossard",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/belgium/BEL-19-lois-openda.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "lois-openda",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/belgium/BEL-20-romelu-lukaku.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "romelu-lukaku",
       "position": "FW"

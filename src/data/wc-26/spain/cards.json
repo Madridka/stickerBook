@@ -46,6 +46,7 @@
       "image": "/cards/spain/ESP-03-unai-simon.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "unai-simon",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/spain/ESP-04-david-raya.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "david-raya",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/spain/ESP-05-pedro-porro.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "pedro-porro",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/spain/ESP-06-pau-cubarsi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "pau-cubarsi",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/spain/ESP-07-aymeric-laporte.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "aymeric-laporte",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/spain/ESP-08-marc-cucurella.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "marc-cucurella",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/spain/ESP-09-alejandro-grimaldo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "alejandro-grimaldo",
       "position": "DF"
@@ -130,7 +137,7 @@
       "image": "/cards/spain/ESP-10-rodri.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "epic",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "rodri",
       "position": "MF"
@@ -143,6 +150,7 @@
       "image": "/cards/spain/ESP-11-martin-zubimendi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "martin-zubimendi",
       "position": "MF"
@@ -168,6 +176,7 @@
       "image": "/cards/spain/ESP-13-fabian-ruiz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "fabian-ruiz",
       "position": "MF"
@@ -180,6 +189,7 @@
       "image": "/cards/spain/ESP-14-mikel-merino.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "mikel-merino",
       "position": "MF"
@@ -192,6 +202,7 @@
       "image": "/cards/spain/ESP-15-gavi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "gavi",
       "position": "MF"
@@ -243,6 +254,7 @@
       "image": "/cards/spain/ESP-19-mikel-oyarzabal.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "mikel-oyarzabal",
       "position": "FW"
@@ -255,6 +267,7 @@
       "image": "/cards/spain/ESP-20-ferran-torres.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ferran-torres",
       "position": "FW"

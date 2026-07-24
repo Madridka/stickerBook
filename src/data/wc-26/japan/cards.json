@@ -46,6 +46,7 @@
       "image": "/cards/japan/lastStickers/JPN-03-zion-suzuki.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "zion-suzuki",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/japan/lastStickers/JPN-04-henry-heroki-mochizuki.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "henry-heroki-mochizuki",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/japan/lastStickers/JPN-05-ayumu-seko.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ayumu-seko",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/japan/lastStickers/JPN-06-junnosuke-suzuki.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "junnosuke-suzuki",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/japan/lastStickers/JPN-07-shogo-taniguchi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "shogo-taniguchi",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/japan/lastStickers/JPN-08-tsuyoshi-watanabe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "tsuyoshi-watanabe",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/japan/lastStickers/JPN-09-kaishu-sano.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kaishu-sano",
       "position": "MF"
@@ -130,6 +137,7 @@
       "image": "/cards/japan/lastStickers/JPN-10-yuki-soma.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yuki-soma",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/japan/lastStickers/JPN-11-ao-tanaka.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ao-tanaka",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/japan/lastStickers/JPN-12-daichi-kamada.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "daichi-kamada",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/japan/lastStickers/JPN-13-takefusa-kubo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "takefusa-kubo",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/japan/lastStickers/JPN-14-ritsu-doan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ritsu-doan",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/japan/lastStickers/JPN-15-keito-nakamura.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "keito-nakamura",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/japan/lastStickers/JPN-16-takumi-minamino.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "takumi-minamino",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/japan/lastStickers/JPN-17-shuto-machino.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "shuto-machino",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/japan/lastStickers/JPN-18-junya-ito.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "junya-ito",
       "position": "MF"
@@ -238,6 +254,7 @@
       "image": "/cards/japan/lastStickers/JPN-19-koki-ogawa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "koki-ogawa",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/japan/lastStickers/JPN-20-ayase-ueda.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ayase-ueda",
       "position": "FW"

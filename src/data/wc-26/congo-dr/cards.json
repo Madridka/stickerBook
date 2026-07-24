@@ -46,6 +46,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-03-lionel-mpasi-nzau.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "lionel-mpasi-nzau",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-04-aaron-wan-bissaka.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "aaron-wan-bissaka",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-05-axel-tuanzebe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "axel-tuanzebe",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-06-arthur-masuaku.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "arthur-masuaku",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-07-chancel-mbemba.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "chancel-mbemba",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-08-joris-kayembe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "joris-kayembe",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-09-charles-pickel.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "charles-pickel",
       "position": "MF"
@@ -130,6 +137,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-10-ngalayel-mukau.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ngalayel-mukau",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-11-edo-kayembe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "edo-kayembe",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-12-samuel-moutoussamy.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "samuel-moutoussamy",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-13-noah-sadiki.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "noah-sadiki",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-14-theo-bongonda.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "theo-bongonda",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-15-meschak-elia.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "meschak-elia",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-16-yoane-wissa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "yoane-wissa",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-17-brian-cipenga.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "brian-cipenga",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-18-fiston-mayele.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "fiston-mayele",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-19-cedric-bakambu.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "cedric-bakambu",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/congo-dr/lastStickers/COD-20-nathanael-mbuku.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "nathanael-mbuku",
       "position": "MF"

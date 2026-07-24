@@ -46,6 +46,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-03-max-crocombe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "max-crocombe",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-04-alex-paulsen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "alex-paulsen",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-05-michael-boxall.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "michael-boxall",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-06-liberato-cacace.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "liberato-cacace",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-07-tim-payne.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "tim-payne",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-08-tyler-bindon.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "tyler-bindon",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-09-francis-de-vries.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "francis-de-vries",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-10-finn-surman.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "finn-surman",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-11-joe-bell.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "joe-bell",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-12-sarpreet-singh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "sarpreet-singh",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-13-ryan-thomas.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ryan-thomas",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-14-matthew-garbett.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "matthew-garbett",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-15-marko-stamenic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "marko-stamenic",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-16-ben-old.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ben-old",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-17-chris-wood.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "chris-wood",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-18-elijah-just.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "elijah-just",
       "position": "MF"
@@ -238,6 +254,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-19-callum-mccowatt.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "callum-mccowatt",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/new-zealand/lastStickers/NZL-20-kosta-barbarouses.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "kosta-barbarouses",
       "position": "FW"

@@ -46,6 +46,7 @@
       "image": "/cards/sweden/lastStickers/SWE-03-victor-johansson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "victor-johansson",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/sweden/lastStickers/SWE-04-isak-hien.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "isak-hien",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/sweden/lastStickers/SWE-05-gabriel-gudmundsson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "gabriel-gudmundsson",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/sweden/lastStickers/SWE-06-emil-holm.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "emil-holm",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/sweden/lastStickers/SWE-07-victor-nilsson-lindelof.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "victor-nilsson-lindelof",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/sweden/lastStickers/SWE-08-gustaf-lagerbielke.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "gustaf-lagerbielke",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/sweden/lastStickers/SWE-09-lucas-bergvall.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "lucas-bergvall",
       "position": "MF"
@@ -130,6 +137,7 @@
       "image": "/cards/sweden/lastStickers/SWE-10-hugo-larsson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "hugo-larsson",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/sweden/lastStickers/SWE-11-jesper-karlstrom.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jesper-karlstrom",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/sweden/lastStickers/SWE-12-yasin-ayari.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yasin-ayari",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/sweden/lastStickers/SWE-13-mattias-svanberg.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "mattias-svanberg",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/sweden/lastStickers/SWE-14-daniel-svensson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "daniel-svensson",
       "position": "DF"
@@ -190,6 +202,7 @@
       "image": "/cards/sweden/lastStickers/SWE-15-ken-sema.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ken-sema",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/sweden/lastStickers/SWE-16-roony-bardghji.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "roony-bardghji",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/sweden/lastStickers/SWE-17-dejan-kulusevski.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "dejan-kulusevski",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/sweden/lastStickers/SWE-18-anthony-elanga.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "anthony-elanga",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/sweden/lastStickers/SWE-19-alexander-isak.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "alexander-isak",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/sweden/lastStickers/SWE-20-viktor-gyokeres.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "viktor-gyokeres",
       "position": "FW"

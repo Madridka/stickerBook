@@ -46,6 +46,7 @@
       "image": "/cards/england/lastStickers/ENG-03-jordan-pickford.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "jordan-pickford",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/england/lastStickers/ENG-04-john-stones.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "john-stones",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/england/lastStickers/ENG-05-marc-guehi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "marc-guehi",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/england/lastStickers/ENG-06-ezri-konsa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ezri-konsa",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/england/lastStickers/ENG-07-trent-alexander-arnold.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "trent-alexander-arnold",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/england/lastStickers/ENG-08-reece-james.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "reece-james",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/england/lastStickers/ENG-09-dan-burn.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "dan-burn",
       "position": "DF"
@@ -156,6 +163,7 @@
       "image": "/cards/england/lastStickers/ENG-12-jude-bellingham.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "jude-bellingham",
       "position": "MF"
@@ -168,6 +176,7 @@
       "image": "/cards/england/lastStickers/ENG-13-cole-palmer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "cole-palmer",
       "position": "MF"
@@ -180,6 +189,7 @@
       "image": "/cards/england/lastStickers/ENG-14-morgan-rogers.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "morgan-rogers",
       "position": "MF"
@@ -192,6 +202,7 @@
       "image": "/cards/england/lastStickers/ENG-15-anthony-gordon.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "anthony-gordon",
       "position": "FW"
@@ -204,7 +215,7 @@
       "image": "/cards/england/lastStickers/ENG-16-phil-foden.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "epic",
       "kind": "player",
       "personId": "phil-foden",
       "position": "FW"
@@ -230,6 +241,7 @@
       "image": "/cards/england/lastStickers/ENG-18-harry-kane.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "harry-kane",
       "position": "FW"
@@ -242,6 +254,7 @@
       "image": "/cards/england/lastStickers/ENG-19-marcus-rashford.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "marcus-rashford",
       "position": "FW"
@@ -254,6 +267,7 @@
       "image": "/cards/england/lastStickers/ENG-20-ollie-watkins.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ollie-watkins",
       "position": "FW"

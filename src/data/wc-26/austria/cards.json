@@ -46,6 +46,7 @@
       "image": "/cards/austria/AUT-03-alexander-schlager.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alexander-schlager",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/austria/AUT-04-patrick-pentz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "patrick-pentz",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/austria/AUT-05-david-alaba.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "david-alaba",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/austria/AUT-06-kevin-danso.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "kevin-danso",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/austria/AUT-07-philipp-lienhart.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "philipp-lienhart",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/austria/AUT-08-stefan-posch.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "stefan-posch",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/austria/AUT-09-phillipp-mwene.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "phillipp-mwene",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/austria/AUT-10-alexander-prass.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alexander-prass",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/austria/AUT-11-xaver-schlager.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "xaver-schlager",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/austria/AUT-12-marcel-sabitzer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "marcel-sabitzer",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/austria/AUT-13-konrad-laimer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "konrad-laimer",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/austria/AUT-14-florian-grillitsch.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "florian-grillitsch",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/austria/AUT-15-nicolas-seiwald.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "nicolas-seiwald",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/austria/AUT-16-romano-schmid.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "romano-schmid",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/austria/AUT-17-patrick-wimmer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "patrick-wimmer",
       "position": "MF"
@@ -226,6 +241,7 @@
       "image": "/cards/austria/AUT-18-christoph-baumgartner.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "christoph-baumgartner",
       "position": "MF"
@@ -238,6 +254,7 @@
       "image": "/cards/austria/AUT-19-michael-gregoritsch.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "michael-gregoritsch",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/austria/AUT-20-marko-arnautovic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "marko-arnautovic",
       "position": "FW"

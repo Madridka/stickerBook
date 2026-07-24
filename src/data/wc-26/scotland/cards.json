@@ -46,6 +46,7 @@
       "image": "/cards/scotland/lastStickers/SCO-03-angus-gunn.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "angus-gunn",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/scotland/lastStickers/SCO-04-jack-hendry.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jack-hendry",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/scotland/lastStickers/SCO-05-kieran-tierney.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "kieran-tierney",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/scotland/lastStickers/SCO-06-aaron-hickey.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "aaron-hickey",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/scotland/lastStickers/SCO-07-andrew-robertson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "andrew-robertson",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/scotland/lastStickers/SCO-08-scott-mckenna.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "scott-mckenna",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/scotland/lastStickers/SCO-09-john-souttar.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "john-souttar",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/scotland/lastStickers/SCO-10-anthony-ralston.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "anthony-ralston",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/scotland/lastStickers/SCO-11-grant-hanley.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "grant-hanley",
       "position": "DF"
@@ -154,6 +163,7 @@
       "image": "/cards/scotland/lastStickers/SCO-12-scott-mctominay.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "scott-mctominay",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/scotland/lastStickers/SCO-13-billy-gilmour.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "billy-gilmour",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/scotland/lastStickers/SCO-14-lewis-ferguson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "lewis-ferguson",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/scotland/lastStickers/SCO-15-ryan-christie.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ryan-christie",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/scotland/lastStickers/SCO-16-kenny-mclean.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kenny-mclean",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/scotland/lastStickers/SCO-17-john-mcginn.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "john-mcginn",
       "position": "MF"
@@ -226,6 +241,7 @@
       "image": "/cards/scotland/lastStickers/SCO-18-lyndon-dykes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "lyndon-dykes",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/scotland/lastStickers/SCO-19-che-adams.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "che-adams",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/scotland/lastStickers/SCO-20-ben-gannon-doak.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ben-gannon-doak",
       "position": "FW"

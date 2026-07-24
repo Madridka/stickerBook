@@ -59,6 +59,7 @@
       "image": "/cards/mexico/MEX-04-jorge-sanchez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jorge-sanchez",
       "position": "DF"
@@ -71,6 +72,7 @@
       "image": "/cards/mexico/MEX-05-cesar-montes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "cesar-montes",
       "position": "DF"
@@ -83,6 +85,7 @@
       "image": "/cards/mexico/MEX-06-jesus-gallardo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jesus-gallardo",
       "position": "DF"
@@ -95,6 +98,7 @@
       "image": "/cards/mexico/MEX-07-israel-reyes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "israel-reyes",
       "position": "DF"
@@ -107,6 +111,7 @@
       "image": "/cards/mexico/MEX-08-johan-vasquez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "johan-vasquez",
       "position": "DF"
@@ -119,6 +124,7 @@
       "image": "/cards/mexico/MEX-09-edson-alvarez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "edson-alvarez",
       "position": "DF"
@@ -131,6 +137,7 @@
       "image": "/cards/mexico/MEX-10-carlos-rodriguez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "carlos-rodriguez",
       "position": "MF"
@@ -143,6 +150,7 @@
       "image": "/cards/mexico/MEX-11-orbelin-pineda.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "orbelin-pineda",
       "position": "MF"
@@ -155,6 +163,7 @@
       "image": "/cards/mexico/MEX-12-marcel-ruiz.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "marcel-ruiz",
       "position": "MF"
@@ -167,6 +176,7 @@
       "image": "/cards/mexico/MEX-13-erick-sanchez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "erick-sanchez",
       "position": "MF"
@@ -179,6 +189,7 @@
       "image": "/cards/mexico/MEX-14-diego-lainez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "diego-lainez",
       "position": "FW"
@@ -191,6 +202,7 @@
       "image": "/cards/mexico/MEX-15-hirving-lozano.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "hirving-lozano",
       "position": "FW"
@@ -203,6 +215,7 @@
       "image": "/cards/mexico/MEX-16-santiago-gimenez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "santiago-gimenez",
       "position": "FW"
@@ -215,6 +228,7 @@
       "image": "/cards/mexico/MEX-17-raul-jimenez.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "raul-jimenez",
       "position": "FW"
@@ -227,6 +241,7 @@
       "image": "/cards/mexico/MEX-18-alexis-vega.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alexis-vega",
       "position": "FW"
@@ -239,6 +254,7 @@
       "image": "/cards/mexico/MEX-19-roberto-alvarado.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "roberto-alvarado",
       "position": "FW"
@@ -251,6 +267,7 @@
       "image": "/cards/mexico/MEX-20-cesar-huerta.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "cesar-huerta",
       "position": "FW"

@@ -46,6 +46,7 @@
       "image": "/cards/norway/lastStickers/NOR-03-orjan-nyland.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "orjan-nyland",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/norway/lastStickers/NOR-04-julian-ryerson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "julian-ryerson",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/norway/lastStickers/NOR-05-leo-ostigard.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "leo-ostigard",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/norway/lastStickers/NOR-06-kristoffer-vassbakk-ajer.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "kristoffer-vassbakk-ajer",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/norway/lastStickers/NOR-07-marcus-holmgren-pedersen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "marcus-holmgren-pedersen",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/norway/lastStickers/NOR-08-david-moller-wolfe.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "david-moller-wolfe",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/norway/lastStickers/NOR-09-torbjorn-heggem.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "torbjorn-heggem",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/norway/lastStickers/NOR-10-morten-thorsby.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "morten-thorsby",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/norway/lastStickers/NOR-11-martin-odegaard.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "martin-odegaard",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/norway/lastStickers/NOR-12-sander-berge.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "sander-berge",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/norway/lastStickers/NOR-13-andreas-schjelderup.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "andreas-schjelderup",
       "position": "FW"
@@ -178,6 +189,7 @@
       "image": "/cards/norway/lastStickers/NOR-14-patrick-berg.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "patrick-berg",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/norway/lastStickers/NOR-15-erling-haaland.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "erling-haaland",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/norway/lastStickers/NOR-16-alexander-sorloth.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "alexander-sorloth",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/norway/lastStickers/NOR-17-aron-donnum.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "aron-donnum",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/norway/lastStickers/NOR-18-jorgen-strand-larsen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jorgen-strand-larsen",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/norway/lastStickers/NOR-19-antonio-nusa.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "antonio-nusa",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/norway/lastStickers/NOR-20-oscar-bobb.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "oscar-bobb",
       "position": "FW"

@@ -62,6 +62,7 @@ const cardSchema = z.discriminatedUnion('kind', [
     kind: z.literal(cardKindSchema.enum.player),
     personId: z.string().min(1),
     position: playerPositionSchema,
+    rarity: cardRaritySchema,
     shirtNumber: z.number().int().nonnegative().optional(),
   }),
 ])

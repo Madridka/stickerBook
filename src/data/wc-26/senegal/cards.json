@@ -59,6 +59,7 @@
       "image": "/cards/senegal/lastStickers/SEN-04-yehvann-diouf.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "yehvann-diouf",
       "position": "GK"
@@ -71,7 +72,7 @@
       "image": "/cards/senegal/lastStickers/SEN-05-moussa-niakhate.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "moussa-niakhate",
       "position": "DF"
@@ -84,6 +85,7 @@
       "image": "/cards/senegal/lastStickers/SEN-06-abdoulaye-seck.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "abdoulaye-seck",
       "position": "DF"
@@ -96,6 +98,7 @@
       "image": "/cards/senegal/lastStickers/SEN-07-ismail-jakobs.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ismail-jakobs",
       "position": "DF"
@@ -108,6 +111,7 @@
       "image": "/cards/senegal/lastStickers/SEN-08-el-hadji-malick-diouf.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "el-hadji-malick-diouf",
       "position": "DF"
@@ -120,6 +124,7 @@
       "image": "/cards/senegal/lastStickers/SEN-09-kalidou-koulibaly.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "kalidou-koulibaly",
       "position": "DF"
@@ -132,6 +137,7 @@
       "image": "/cards/senegal/lastStickers/SEN-10-idrissa-gana-gueye.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "idrissa-gana-gueye",
       "position": "MF"
@@ -157,6 +163,7 @@
       "image": "/cards/senegal/lastStickers/SEN-12-pape-gueye.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "pape-gueye",
       "position": "MF"
@@ -169,6 +176,7 @@
       "image": "/cards/senegal/lastStickers/SEN-13-habib-diarra.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "habib-diarra",
       "position": "MF"
@@ -181,6 +189,7 @@
       "image": "/cards/senegal/lastStickers/SEN-14-lamine-camara.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "lamine-camara",
       "position": "MF"
@@ -193,6 +202,7 @@
       "image": "/cards/senegal/lastStickers/SEN-15-sadio-mane.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "sadio-mane",
       "position": "FW"
@@ -205,7 +215,7 @@
       "image": "/cards/senegal/lastStickers/SEN-16-ismaila-sarr.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "epic",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ismaila-sarr",
       "position": "FW"
@@ -218,7 +228,7 @@
       "image": "/cards/senegal/lastStickers/SEN-17-boulaye-dia.webp",
       "series": "base",
       "finish": "standard",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "boulaye-dia",
       "position": "FW"
@@ -231,6 +241,7 @@
       "image": "/cards/senegal/lastStickers/SEN-18-iliman-ndiaye.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "iliman-ndiaye",
       "position": "FW"
@@ -243,6 +254,7 @@
       "image": "/cards/senegal/lastStickers/SEN-19-nicolas-jackson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "nicolas-jackson",
       "position": "FW"
@@ -255,6 +267,7 @@
       "image": "/cards/senegal/lastStickers/SEN-20-krepin-diatta.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "krepin-diatta",
       "position": "DF"

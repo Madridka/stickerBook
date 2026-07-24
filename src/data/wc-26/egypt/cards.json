@@ -46,6 +46,7 @@
       "image": "/cards/egypt/lastStickers/EGY-03-mohamed-el-shenawy.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "mohamed-el-shenawy",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/egypt/lastStickers/EGY-04-mohamed-hany.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohamed-hany",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/egypt/lastStickers/EGY-05-mohamed-hamdy.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohamed-hamdy",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/egypt/lastStickers/EGY-06-yasser-ibrahim.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yasser-ibrahim",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/egypt/lastStickers/EGY-07-khaled-sobhi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "khaled-sobhi",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/egypt/lastStickers/EGY-08-ramy-rabia.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ramy-rabia",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/egypt/lastStickers/EGY-09-hossam-abdelmaguid.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hossam-abdelmaguid",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/egypt/lastStickers/EGY-10-ahmed-fatouh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ahmed-fatouh",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/egypt/lastStickers/EGY-11-marwan-attia.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "marwan-attia",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/egypt/lastStickers/EGY-12-zizo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "zizo",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/egypt/lastStickers/EGY-13-hamdy-fathy.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hamdy-fathy",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/egypt/lastStickers/EGY-14-mohamed-lasheen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohamed-lasheen",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/egypt/lastStickers/EGY-15-emam-ashour.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "emam-ashour",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/egypt/lastStickers/EGY-16-osama-faisal.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "osama-faisal",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/egypt/lastStickers/EGY-17-mohamed-salah.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "mohamed-salah",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/egypt/lastStickers/EGY-18-mostafa-mohamed.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "mostafa-mohamed",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/egypt/lastStickers/EGY-19-trezeguet.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "trezeguet",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/egypt/lastStickers/EGY-20-omar-marmoush.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "omar-marmoush",
       "position": "FW"

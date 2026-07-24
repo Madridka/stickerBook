@@ -46,6 +46,7 @@
       "image": "/cards/brazil/lastStickers/BRA-03-alisson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "alisson",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/brazil/lastStickers/BRA-04-bento.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "bento",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/brazil/lastStickers/BRA-05-marquinhos.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "marquinhos",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/brazil/lastStickers/BRA-06-eder-militao.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "eder-militao",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/brazil/lastStickers/BRA-07-gabriel-magalhaes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "gabriel-magalhaes",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/brazil/lastStickers/BRA-08-danilo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "danilo",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/brazil/lastStickers/BRA-09-wesley.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "wesley",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/brazil/lastStickers/BRA-10-lucas-paqueta.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "lucas-paqueta",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/brazil/lastStickers/BRA-11-casemiro.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "casemiro",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/brazil/lastStickers/BRA-12-bruno-guimaraes.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "bruno-guimaraes",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/brazil/lastStickers/BRA-13-luiz-henrique.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "luiz-henrique",
       "position": "FW"
@@ -178,6 +189,7 @@
       "image": "/cards/brazil/lastStickers/BRA-14-vinicius-junior.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "vinicius-junior",
       "position": "FW"
@@ -190,6 +202,7 @@
       "image": "/cards/brazil/lastStickers/BRA-15-rodrygo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "rodrygo",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/brazil/lastStickers/BRA-16-joao-pedro.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "joao-pedro",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/brazil/lastStickers/BRA-17-matheus-cunha.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "matheus-cunha",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/brazil/lastStickers/BRA-18-gabriel-martinelli.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "gabriel-martinelli",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/brazil/lastStickers/BRA-19-raphinha.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "raphinha",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/brazil/lastStickers/BRA-20-estevao.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "estevao",
       "position": "FW"

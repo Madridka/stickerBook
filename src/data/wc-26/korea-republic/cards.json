@@ -46,6 +46,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-03-hyeonwoo-jo.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hyeonwoo-jo",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-04-seunggyu-kim.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "seunggyu-kim",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-05-minjae-kim.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "minjae-kim",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-06-yumin-cho.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yumin-cho",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-07-youngwoo-seol.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "youngwoo-seol",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-08-hanbeom-lee.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hanbeom-lee",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-09-taeseok-lee.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "taeseok-lee",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-10-myungjae-lee.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "myungjae-lee",
       "position": "DF"
@@ -142,6 +150,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-11-jaesung-lee.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "jaesung-lee",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-12-inbeom-hwang.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "inbeom-hwang",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-13-kangin-lee.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "kangin-lee",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-14-seungho-paik.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "seungho-paik",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-15-jens-castrop.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "jens-castrop",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-16-donggyeong-lee.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "donggyeong-lee",
       "position": "MF"
@@ -214,6 +228,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-17-guesung-cho.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "guesung-cho",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-18-heungmin-son.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "legendary",
       "kind": "player",
       "personId": "heungmin-son",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-19-heechan-hwang.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "heechan-hwang",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/korea-republic/lastStickers/KOR-20-hyeongyu-oh.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hyeongyu-oh",
       "position": "FW"

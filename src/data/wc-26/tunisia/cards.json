@@ -46,6 +46,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-03-bechir-ben-said.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "bechir-ben-said",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-04-aymen-dahmen.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "aymen-dahmen",
       "position": "GK"
@@ -70,6 +72,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-05-yan-valery.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yan-valery",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-06-montassar-talbi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "montassar-talbi",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-07-yassine-meriah.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "yassine-meriah",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-08-ali-abdi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ali-abdi",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-09-dylan-bronn.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "dylan-bronn",
       "position": "DF"
@@ -130,6 +137,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-10-ellyes-skhiri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "ellyes-skhiri",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-11-aissa-laidouni.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "aissa-laidouni",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-12-ferjani-sassi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ferjani-sassi",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-13-mohamed-ali-ben-romdhane.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "mohamed-ali-ben-romdhane",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-14-hannibal-mejbri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "hannibal-mejbri",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-15-elias-achouri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "elias-achouri",
       "position": "FW"
@@ -202,6 +215,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-16-elias-saad.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "elias-saad",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-17-hazem-mastouri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "hazem-mastouri",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-18-ismael-gharbi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "ismael-gharbi",
       "position": "MF"
@@ -238,6 +254,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-19-sayfallah-ltaief.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "sayfallah-ltaief",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/tunisia/lastStickers/TUN-20-naim-sliti.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "common",
       "kind": "player",
       "personId": "naim-sliti",
       "position": "FW"

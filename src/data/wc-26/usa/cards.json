@@ -46,6 +46,7 @@
       "image": "/cards/usa/lastStickers/USA-03-matt-freese.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "matt-freese",
       "position": "GK"
@@ -58,6 +59,7 @@
       "image": "/cards/usa/lastStickers/USA-04-chris-richards.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "chris-richards",
       "position": "DF"
@@ -70,6 +72,7 @@
       "image": "/cards/usa/lastStickers/USA-05-tim-ream.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "tim-ream",
       "position": "DF"
@@ -82,6 +85,7 @@
       "image": "/cards/usa/lastStickers/USA-06-mark-mckenzie.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "mark-mckenzie",
       "position": "DF"
@@ -94,6 +98,7 @@
       "image": "/cards/usa/lastStickers/USA-07-alex-freeman.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "alex-freeman",
       "position": "DF"
@@ -106,6 +111,7 @@
       "image": "/cards/usa/lastStickers/USA-08-antonee-robinson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "antonee-robinson",
       "position": "DF"
@@ -118,6 +124,7 @@
       "image": "/cards/usa/lastStickers/USA-09-tyler-adams.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "tyler-adams",
       "position": "MF"
@@ -130,6 +137,7 @@
       "image": "/cards/usa/lastStickers/USA-10-tanner-tessmann.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "tanner-tessmann",
       "position": "MF"
@@ -142,6 +150,7 @@
       "image": "/cards/usa/lastStickers/USA-11-weston-mckenny.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "weston-mckenny",
       "position": "MF"
@@ -154,6 +163,7 @@
       "image": "/cards/usa/lastStickers/USA-12-christian-roldan.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "christian-roldan",
       "position": "MF"
@@ -166,6 +176,7 @@
       "image": "/cards/usa/lastStickers/USA-13-timothy-weah.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "timothy-weah",
       "position": "MF"
@@ -178,6 +189,7 @@
       "image": "/cards/usa/lastStickers/USA-14-diego-luna.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "diego-luna",
       "position": "MF"
@@ -190,6 +202,7 @@
       "image": "/cards/usa/lastStickers/USA-15-malik-tillman.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "malik-tillman",
       "position": "MF"
@@ -202,6 +215,7 @@
       "image": "/cards/usa/lastStickers/USA-16-christian-pulisic.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "christian-pulisic",
       "position": "FW"
@@ -214,6 +228,7 @@
       "image": "/cards/usa/lastStickers/USA-17-brenden-aaronson.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "brenden-aaronson",
       "position": "FW"
@@ -226,6 +241,7 @@
       "image": "/cards/usa/lastStickers/USA-18-ricardo-pepi.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "ricardo-pepi",
       "position": "FW"
@@ -238,6 +254,7 @@
       "image": "/cards/usa/lastStickers/USA-19-haji-wright.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "uncommon",
       "kind": "player",
       "personId": "haji-wright",
       "position": "FW"
@@ -250,6 +267,7 @@
       "image": "/cards/usa/lastStickers/USA-20-folarin-balogun.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "rare",
       "kind": "player",
       "personId": "folarin-balogun",
       "position": "FW"

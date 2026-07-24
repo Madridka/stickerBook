@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1000">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9e3cf"/>
+      <stop offset=".55" stop-color="#d8d2be"/>
+      <stop offset="1" stop-color="#c7c0aa"/>
+    </linearGradient>
+    <pattern id="grain" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="7" r="1.2" fill="#173b35" opacity=".055"/>
+      <circle cx="18" cy="17" r=".8" fill="#fff" opacity=".28"/>
+      <path d="M0 23L24 0" stroke="#173b35" stroke-width=".45" opacity=".035"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="1000" fill="url(#paper)"/>
+  <rect width="1280" height="1000" fill="url(#grain)"/>
+  <path d="M56 62h1168v876H56z" fill="none" stroke="#173b35" stroke-width="3" opacity=".32"/>
+  <path d="M76 82h1128v836H76z" fill="none" stroke="#8f6d36" stroke-width="2" opacity=".35"/>
+  <circle cx="640" cy="500" r="330" fill="none" stroke="#173b35" stroke-width="2" opacity=".045"/>
+  <path d="M310 500h660M640 170v660" stroke="#173b35" stroke-width="2" opacity=".04"/>
+</svg>

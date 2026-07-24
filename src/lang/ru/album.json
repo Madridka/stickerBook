@@ -124,12 +124,31 @@
     "text": "Выберите журнал, чтобы открыть его и начать собирать коллекцию.",
     "pages": "{count} страниц",
     "progress": "Заполнено: {progress}%",
+    "historicalCardsAvailable": "{available} из {total} карточек доступны",
+    "erasAvailable": "{available} из {total} эпох открыты",
+    "openAction": "Открыть журнал",
     "openNamed": "Открыть журнал «{name}»",
+    "types": {
+      "collection": "Коллекционный",
+      "historical": "Исторический"
+    },
     "items": {
       "wc-26": {
-        "title": "Чемпионат мира 2026"
+        "title": "Чемпионат мира 2026",
+        "description": "Коллекционный журнал чемпионата мира: собирайте карточки и вклеивайте их на страницы."
+      },
+      "tomsk-football-history": {
+        "title": "История томского футбола XXI века",
+        "description": "Четыре эпохи, двадцать четыре футболиста и история развития футбола в Томске."
       }
     }
+  },
+  "history": {
+    "eraProgress": "эпоха журнала",
+    "placed": "Вклеено",
+    "leftPage": "Левая страница",
+    "rightPage": "Правая страница",
+    "openPlayer": "Открыть историческую карточку «{name}»"
   },
   "editorial": {
     "coverAria": "Обложка «Вклейки»",

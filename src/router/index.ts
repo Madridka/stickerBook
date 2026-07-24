@@ -37,11 +37,33 @@ const router: Router = createRouter({
         {
           path: 'wc-26',
           name: 'album-wc-26',
-          component: () => import('@/views/AlbumView.vue'),
+          component: () => import('@/views/JournalRouteView.vue'),
           meta: {
             title: (i18n.global.t as (key: string) => string)(
               'album.library.items.wc-26.title',
             ),
+            albumWorkspace: true,
+            journalId: 'wc-26',
+          },
+        },
+        {
+          path: 'tomsk-football-history',
+          name: 'album-tomsk-football-history',
+          component: () => import('@/views/JournalRouteView.vue'),
+          meta: {
+            title: (i18n.global.t as (key: string) => string)(
+              'album.library.items.tomsk-football-history.title',
+            ),
+            albumWorkspace: true,
+            journalId: 'tomsk-football-history',
+          },
+        },
+        {
+          path: ':journalId',
+          name: 'album-unknown',
+          component: () => import('@/views/JournalRouteView.vue'),
+          meta: {
+            title: (i18n.global.t as (key: string) => string)('album.library.title'),
             albumWorkspace: true,
           },
         },

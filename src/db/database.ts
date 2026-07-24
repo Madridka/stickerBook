@@ -1,6 +1,7 @@
 import Dexie, { type Table } from 'dexie'
 import type { DeletedCard, StickerInstance } from '@/types'
 import type { GoalCounter, GoalPlayerState } from '@/features/goals/types'
+import type { JournalProgressRecord } from '@/features/journals/types'
 
 export const PLAYER_STATE_ID = 'current'
 
@@ -91,6 +92,7 @@ interface StickerBookDatabase extends Dexie {
   gameGuideProgress: Table<GameGuideProgress, string>
   goalStates: Table<GoalPlayerState, string>
   goalCounters: Table<GoalCounter, string>
+  journalProgress: Table<JournalProgressRecord, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -183,4 +185,21 @@ database.version(11).stores({
   gameGuideProgress: 'id, completed, updatedAt',
   goalStates: 'goalId, completedAt, claimedAt',
   goalCounters: 'id, updatedAt',
+})
+
+// Исторические журналы получают собственное пространство прогресса, не меняя записи WC-26.
+database.version(12).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
+  packHuntProgress: 'id',
+  duplicateExchanges: 'id, createdAt',
+  packOpeningSessions: 'id, packId, createdAt',
+  gameGuideProgress: 'id, completed, updatedAt',
+  goalStates: 'goalId, completedAt, claimedAt',
+  goalCounters: 'id, updatedAt',
+  journalProgress: 'journalId, updatedAt',
 })

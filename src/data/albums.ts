@@ -1,22 +1,8 @@
-import type { AlbumGeometryData } from '@/types'
-import worldCup2026Album from './wc-26/album'
+import { journals } from '@/features/journals/registry'
+import type { JournalDefinition } from '@/features/journals/types'
 
-export interface AlbumCatalogItem {
-  id: string
-  route: string
-  cover: string
-  pages: number
-}
+export type AlbumCatalogItem = JournalDefinition
 
-const countAlbumPages = (album: AlbumGeometryData): number => album.pages.length
-
-const albums: AlbumCatalogItem[] = [
-  {
-    id: 'wc-26',
-    route: '/album/wc-26',
-    cover: 'info/cover.webp',
-    pages: countAlbumPages(worldCup2026Album),
-  },
-]
+const albums: AlbumCatalogItem[] = journals
 
 export default { albums }

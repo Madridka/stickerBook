@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title">
+  <title id="title">История томского футбола XXI века</title>
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#183f38"/>
+      <stop offset="1" stop-color="#0c2424"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.2" fill="#e7d8b2" opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#cover)"/>
+  <rect width="1200" height="900" fill="url(#dots)"/>
+  <path d="M74 70h1052v760H74z" fill="none" stroke="#d1b071" stroke-width="4"/>
+  <path d="M104 100h992v700H104z" fill="none" stroke="#d1b071" stroke-width="1" opacity=".7"/>
+  <circle cx="600" cy="450" r="245" fill="none" stroke="#e6d7b0" stroke-width="3" opacity=".14"/>
+  <path d="M355 450h490M600 205v490" stroke="#e6d7b0" stroke-width="3" opacity=".12"/>
+  <text x="600" y="238" fill="#d1b071" font-family="Arial,sans-serif" font-size="25" text-anchor="middle" letter-spacing="9">ИСТОРИЧЕСКИЙ ЖУРНАЛ</text>
+  <text x="600" y="370" fill="#f4edd9" font-family="Georgia,serif" font-size="70" text-anchor="middle">История томского</text>
+  <text x="600" y="460" fill="#f4edd9" font-family="Georgia,serif" font-size="84" font-weight="700" text-anchor="middle">футбола</text>
+  <text x="600" y="555" fill="#d1b071" font-family="Georgia,serif" font-size="58" text-anchor="middle">XXI века</text>
+  <text x="600" y="720" fill="#e6d7b0" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" letter-spacing="5">4 ЭПОХИ · 24 ФУТБОЛИСТА</text>
+</svg>

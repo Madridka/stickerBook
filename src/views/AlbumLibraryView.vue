@@ -18,10 +18,13 @@ const albumGeometry: Record<string, AlbumGeometryData> = import.meta.glob('../da
 }) as Record<string, AlbumGeometryData>
 
 const getCover = (album: AlbumCatalogItem): string =>
-  coverImages[`../../assets/game/${album.id}/main/album/${album.cover}`] ?? ''
+  album.cover.startsWith('/')
+    ? album.cover
+    : (coverImages[`../../assets/game/${album.id}/main/album/${album.cover}`] ?? '')
 
 // Рассчитывает заполнение конкретного журнала только по вклеенным в него карточкам.
 const getProgress = (album: AlbumCatalogItem): number => {
+  if (album.type === 'historical') return 100
   const geometry: AlbumGeometryData | undefined = albumGeometry[`../data/${album.id}/album.ts`]
   if (!geometry) return 0
   const slotIds: Set<string> = new Set(
@@ -38,6 +41,22 @@ const getProgress = (album: AlbumCatalogItem): number => {
   )
   return Math.min(100, Math.round((occupiedSlots.size / slotIds.size) * 100))
 }
+
+const getProgressLabel = (album: AlbumCatalogItem): string =>
+  album.type === 'historical'
+    ? t('album.library.historicalCardsAvailable', {
+        available: Object.keys(album.players).length,
+        total: Object.keys(album.players).length,
+      })
+    : t('album.library.progress', { progress: getProgress(album) })
+
+const getVolumeLabel = (album: AlbumCatalogItem): string =>
+  album.type === 'historical'
+    ? t('album.library.erasAvailable', {
+        available: album.spreads.length,
+        total: album.spreads.length,
+      })
+    : t('album.library.pages', { count: album.pages })
 </script>
 
 <template>
@@ -62,7 +81,7 @@ const getProgress = (album: AlbumCatalogItem): number => {
         :to="album.route"
         class="group block rounded-lg p-1.5 outline-none transition-colors hover:bg-coral/10 focus-visible:bg-coral/10 focus-visible:ring-2 focus-visible:ring-coral sm:p-2"
         :aria-label="
-          t('album.library.openNamed', { name: t(`album.library.items.${album.id}.title`) })
+              t('album.library.openNamed', { name: t(album.titleKey) })
         "
       >
         <!-- Папка визуально отделяет каталог журналов от содержимого выбранного альбома. -->
@@ -77,17 +96,23 @@ const getProgress = (album: AlbumCatalogItem): number => {
               v-if="getCover(album)"
               class="h-full w-full object-cover opacity-90 transition-transform duration-300 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
               :src="getCover(album)"
-              :alt="t(`album.library.items.${album.id}.title`)"
+              :alt="t(album.titleKey)"
             />
           </div>
         </div>
 
         <div class="mt-3 text-center">
           <strong class="block truncate text-sm font-black sm:text-base">
-            {{ t(`album.library.items.${album.id}.title`) }}
+            {{ t(album.titleKey) }}
           </strong>
+          <span class="mt-0.5 block text-[10px] font-black uppercase tracking-wide text-coral">
+            {{ t(`album.library.types.${album.type}`) }}
+          </span>
+          <p class="mx-auto mt-1 line-clamp-2 max-w-56 text-[11px] leading-snug text-ink/55">
+            {{ t(album.descriptionKey) }}
+          </p>
           <span class="mt-1 block text-xs font-bold text-ink/55">
-            {{ t('album.library.progress', { progress: getProgress(album) }) }}
+            {{ getProgressLabel(album) }}
           </span>
           <span class="mx-auto mt-2 block h-1.5 w-4/5 overflow-hidden rounded-full bg-ink/10">
             <span
@@ -96,7 +121,10 @@ const getProgress = (album: AlbumCatalogItem): number => {
             />
           </span>
           <span class="mt-1.5 block text-[11px] font-bold uppercase tracking-wide text-coral">
-            {{ t('album.library.pages', { count: album.pages }) }}
+            {{ getVolumeLabel(album) }}
+          </span>
+          <span class="mt-1 block text-[11px] font-black text-ink group-hover:text-coral">
+            {{ t('album.library.openAction') }}
           </span>
         </div>
       </RouterLink>

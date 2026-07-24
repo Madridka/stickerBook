@@ -60,10 +60,10 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
       <section
         v-for="group in groupRows"
         :key="group.id"
-        class="grid min-h-0 grid-cols-[8cqw_1fr] items-stretch gap-[1.5cqw]"
+        class="grid min-h-0 grid-cols-[10cqw_minmax(0,1fr)] items-stretch gap-[1cqw]"
       >
         <h3
-          class="grid place-items-center border-r border-ink/15 text-[clamp(7px,1.15cqw,17px)] font-black uppercase tracking-[0.07em] text-coral"
+          class="grid min-w-0 place-items-center overflow-hidden border-r border-ink/15 px-[0.4cqw] text-center text-[clamp(6px,1cqw,15px)] font-black uppercase leading-tight tracking-[0.03em] text-coral"
         >
           {{ t('album.contents.group', { group: group.id }) }}
         </h3>

@@ -136,6 +136,8 @@ export const PACK_HUNT_CONFIG = {
     { id: 'shell', weight: 1 },
     { id: 'puzzle', weight: 1 },
     { id: 'catch', weight: 1 },
+    { id: 'memory', weight: 1 },
+    { id: 'passCombo', weight: 1 },
   ],
   // Количество сигналов, которое нужно найти для завершения поиска.
   signalsRequired: 3,

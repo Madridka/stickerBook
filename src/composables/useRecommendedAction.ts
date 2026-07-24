@@ -87,9 +87,7 @@ const createPassiveAction = (
 })
 
 // Чистый resolver: одинаковый снимок игрового состояния всегда даёт одинаковую рекомендацию.
-export const resolveRecommendedAction = (
-  state: RecommendedActionSnapshot,
-): RecommendedAction => {
+export const resolveRecommendedAction = (state: RecommendedActionSnapshot): RecommendedAction => {
   if (state.hasPendingOpening) {
     return createAction(
       'continue-opening',
@@ -100,8 +98,7 @@ export const resolveRecommendedAction = (
       1_100,
     )
   }
-  const isBlockedEarnStep: boolean =
-    state.guideStep?.id === 'earn-first-pack' && state.energy <= 0
+  const isBlockedEarnStep: boolean = state.guideStep?.id === 'earn-first-pack' && state.energy <= 0
   if (state.guideStep && !isBlockedEarnStep) {
     if (!state.guideStep.actionLabelKey || !state.guideStep.route) {
       return createPassiveAction(
@@ -160,7 +157,7 @@ export const resolveRecommendedAction = (
       'home.actions.minigame.title',
       'home.actions.minigame.description',
       'home.actions.minigame.action',
-      { name: 'pack-hunt', query: { game: 'signal' } },
+      { name: 'pack-hunt', query: { game: 'memory' } },
       500,
     )
   }
@@ -195,15 +192,11 @@ export const resolveRecommendedAction = (
   }
   return createAction(
     'browse-collection',
-    state.collectionCount > 0
-      ? 'home.actions.browse.title'
-      : 'home.actions.browseAlbum.title',
+    state.collectionCount > 0 ? 'home.actions.browse.title' : 'home.actions.browseAlbum.title',
     state.collectionCount > 0
       ? 'home.actions.browse.description'
       : 'home.actions.browseAlbum.description',
-    state.collectionCount > 0
-      ? 'home.actions.browse.action'
-      : 'home.actions.browseAlbum.action',
+    state.collectionCount > 0 ? 'home.actions.browse.action' : 'home.actions.browseAlbum.action',
     { name: state.collectionCount > 0 ? 'collection' : 'album' },
     100,
   )
@@ -214,9 +207,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
   if (state.hasPendingOpening || state.packCount > 0) {
     actions.push({
       id: 'open-pack',
-      titleKey: state.hasPendingOpening
-        ? 'home.quick.continueOpening'
-        : 'home.quick.openPack',
+      titleKey: state.hasPendingOpening ? 'home.quick.continueOpening' : 'home.quick.openPack',
       badge: state.packCount || '…',
       route: { name: 'pack-opening' },
       priority: 900,
@@ -305,25 +296,21 @@ export const useRecommendedAction = (): RecommendedActions => {
         openingSession && openingSession.currentIndex < openingSession.rewards.length,
       ),
       cardsToPrepare: placeable.filter(({ instance }): boolean => !instance.preparation).length,
-      preparedStickers: placeable.filter(({ instance }): boolean =>
-        Boolean(instance.preparation),
-      ).length,
+      preparedStickers: placeable.filter(({ instance }): boolean => Boolean(instance.preparation))
+        .length,
       duplicateCount: collection.duplicateTotal,
       hasPendingExchange: Boolean(collection.pendingExchange),
       canPlayMiniGame: packHunt.canPlay,
       collectionCount: collection.items.length,
-      albumCount: collection.items.filter(
-        ({ instance }): boolean => instance.location === 'album',
-      ).length,
+      albumCount: collection.items.filter(({ instance }): boolean => instance.location === 'album')
+        .length,
       guideStep: guide.currentStep,
     }
   })
 
   return {
     snapshot,
-    recommendation: computed((): RecommendedAction =>
-      resolveRecommendedAction(snapshot.value),
-    ),
+    recommendation: computed((): RecommendedAction => resolveRecommendedAction(snapshot.value)),
     quickActions: computed((): QuickAction[] => resolveQuickActions(snapshot.value)),
   }
 }

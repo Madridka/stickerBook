@@ -20,6 +20,8 @@ import PackRackGame from '@/components/MiniGame/PackRackGame.vue'
 import PackShellGame from '@/components/MiniGame/PackShellGame.vue'
 import PackPuzzleGame from '@/components/MiniGame/PackPuzzleGame.vue'
 import PackCatchGame from '@/components/MiniGame/PackCatchGame.vue'
+import PackMemoryGame from '@/components/MiniGame/PackMemoryGame.vue'
+import PackPassComboGame from '@/components/MiniGame/PackPassComboGame.vue'
 
 type HuntPhase = 'loading' | 'playing' | 'saving' | 'won' | 'cooldown' | 'error'
 
@@ -40,6 +42,8 @@ const gameComponents: Record<PackMiniGameId, Component> = {
   shell: PackShellGame,
   puzzle: PackPuzzleGame,
   catch: PackCatchGame,
+  memory: PackMemoryGame,
+  passCombo: PackPassComboGame,
 }
 const selectedGameComponent: ComputedRef<Component> = computed(
   (): Component => gameComponents[selectedGame.value],

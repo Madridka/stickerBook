@@ -1,6 +1,14 @@
 import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 
-export type PackMiniGameId = 'signal' | 'rack' | 'machine' | 'shell' | 'puzzle' | 'catch'
+export type PackMiniGameId =
+  | 'signal'
+  | 'rack'
+  | 'machine'
+  | 'shell'
+  | 'puzzle'
+  | 'catch'
+  | 'memory'
+  | 'passCombo'
 
 interface PackMiniGameOption {
   id: PackMiniGameId
@@ -13,7 +21,9 @@ export const isPackMiniGameId = (value: unknown): value is PackMiniGameId =>
   value === 'machine' ||
   value === 'shell' ||
   value === 'puzzle' ||
-  value === 'catch'
+  value === 'catch' ||
+  value === 'memory' ||
+  value === 'passCombo'
 
 // Выбирает мини-игру по настраиваемым весам из игровых данных.
 export const selectPackMiniGame = (): PackMiniGameId => {

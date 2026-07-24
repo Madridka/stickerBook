@@ -36,6 +36,12 @@ const testState = vi.hoisted(() => ({
     },
   },
   quickActions: [] as Array<Record<string, unknown>>,
+  goals: {
+    nearestGoals: [] as Array<Record<string, unknown>>,
+    rewardGoals: [],
+    isLoaded: true,
+    lastCompletedGoalId: undefined,
+  },
 }))
 
 vi.mock('vue-router', async (importOriginal) => {
@@ -45,6 +51,7 @@ vi.mock('vue-router', async (importOriginal) => {
 vi.mock('@/stores/player', () => ({ usePlayerStore: () => testState.player }))
 vi.mock('@/stores/inventory', () => ({ useInventoryStore: () => testState.inventory }))
 vi.mock('@/stores/collection', () => ({ useCollectionStore: () => testState.collection }))
+vi.mock('@/stores/goals', () => ({ useGoalsStore: () => testState.goals }))
 vi.mock('@/composables/useRecommendedAction', async () => {
   const { computed } = await import('vue')
   return {
@@ -82,6 +89,7 @@ describe('HomeView', () => {
     testState.player.millisecondsUntilNextEnergy = 0
     testState.player.millisecondsUntilFullEnergy = 0
     testState.quickActions = []
+    testState.goals.nearestGoals = []
   })
 
   it('показывает текущую цель и корректный текст кнопки', () => {
@@ -109,6 +117,19 @@ describe('HomeView', () => {
   it('не выводит недоступные быстрые действия', () => {
     const wrapper = mountHome()
     expect(wrapper.find('[data-quick-action]').exists()).toBe(false)
+  })
+
+  it('показывает компактный блок ближайших целей', () => {
+    testState.goals.nearestGoals = [
+      {
+        definition: { id: 'near', title: 'Открыть 5 наборов' },
+        progress: { current: 3, target: 5 },
+        status: 'active',
+        isRewardAvailable: false,
+      },
+    ]
+    const wrapper = mountHome()
+    expect(wrapper.get('[data-nearest-goals]').text()).toContain('3 / 5')
   })
 
   it('защищает мобильную структуру от горизонтального overflow', () => {

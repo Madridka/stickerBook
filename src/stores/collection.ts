@@ -8,6 +8,7 @@ import albumData from '@/data/wc-26/album'
 import { DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
 import { createDuplicateExchangeCandidates } from '@/utils/createDuplicateExchangeCandidates'
+import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
 export type BeginDuplicateExchangeResult = 'started' | 'invalid-selection' | 'pending-exists'
 export type ClaimDuplicateExchangeResult = 'claimed' | 'invalid-choice'
@@ -157,15 +158,23 @@ export const useCollectionStore = defineStore('collection', () => {
         database.cards,
         database.duplicates,
         database.duplicateExchanges,
+        database.goalCounters,
         async (): Promise<ClaimDuplicateExchangeResult> => {
           const pending: DuplicateExchange | undefined =
             await database.duplicateExchanges.get('pending')
           if (!pending?.candidatePlayerIds.includes(playerId)) return 'invalid-choice'
           await storeCardInstance(playerId)
           await database.duplicateExchanges.delete('pending')
+          const counter = await database.goalCounters.get('duplicates-exchanged')
+          await database.goalCounters.put({
+            id: 'duplicates-exchanged',
+            value: (counter?.value ?? 0) + 1,
+            updatedAt: Date.now(),
+          })
           return 'claimed'
         },
       )
+      if (result === 'claimed') notifyGoalsChanged()
       await load()
       return result
     } finally {

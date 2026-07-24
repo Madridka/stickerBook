@@ -1,12 +1,22 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
+import {
+  computed,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  watch,
+  type ComputedRef,
+  type Ref,
+} from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import type { RouteLocationRaw } from 'vue-router'
+import type { GoalRuntimeState } from '@/features/goals/types'
 import { CLICKER_CONFIG, HOME_VIEW_CONFIG } from '@/data/mainConst'
 import { useRecommendedAction, type QuickAction } from '@/composables/useRecommendedAction'
 import { useCollectionStore } from '@/stores/collection'
 import { usePlayerStore } from '@/stores/player'
+import { useGoalsStore } from '@/stores/goals'
 import { formatCountdown } from '@/utils/formatCountdown'
 
 import Button from 'primevue/button'
@@ -15,6 +25,7 @@ import ProgressBar from 'primevue/progressbar'
 import ClickArea from '@/components/Clicker/ClickArea.vue'
 import ClickEnergyPanel from '@/components/Clicker/ClickEnergyPanel.vue'
 import CurrentGoalCard from '@/components/goals/CurrentGoalCard.vue'
+import NearestGoals from '@/components/goals/NearestGoals.vue'
 
 interface ClickEffectItem {
   id: number
@@ -27,10 +38,13 @@ const { t } = useI18n()
 const router = useRouter()
 const player = usePlayerStore()
 const collection = useCollectionStore()
+const goals = useGoalsStore()
 const { recommendation, quickActions } = useRecommendedAction()
 const effects: Ref<ClickEffectItem[]> = ref([])
 let nextEffectId: number = 0
 let energyTimer: number | undefined
+let completionTimer: number | undefined
+const completionNotice: Ref<boolean> = ref(false)
 
 const clickReward: ComputedRef<number> = computed((): number => {
   const rawReward: number = CLICKER_CONFIG.baseReward * (1 + collection.albumProgress / 100)
@@ -59,6 +73,25 @@ const orderedQuickActions: ComputedRef<QuickAction[]> = computed((): QuickAction
           right.priority - left.priority,
       ),
 )
+const nearestGoalsForHome: ComputedRef<GoalRuntimeState[]> = computed(() => {
+  const recommendedGoalIds: Partial<Record<string, string>> = {
+    'buy-pack': 'buy-first-pack',
+    'open-pack': 'open-first-pack',
+    'continue-opening': 'open-first-pack',
+    'prepare-sticker': 'prepare-first-sticker',
+    'place-sticker': 'place-first-sticker',
+    'play-mini-game': 'complete-first-minigame',
+    'exchange-duplicates': 'exchange-first-duplicates',
+  }
+  const duplicateGoalId =
+    recommendedGoalIds[recommendation.value.id] ??
+    (recommendation.value.id.startsWith('guide-')
+      ? recommendation.value.id.replace(/^guide-/, '')
+      : undefined)
+  return goals.nearestGoals
+    .filter(({ definition }): boolean => definition.id !== duplicateGoalId)
+    .slice(0, 3)
+})
 const nextEnergyLabel: ComputedRef<string> = computed((): string =>
   formatCountdown(player.millisecondsUntilNextEnergy),
 )
@@ -87,6 +120,18 @@ const navigate = async (route: RouteLocationRaw): Promise<void> => {
   await router.push(route)
 }
 
+watch(
+  () => goals.lastCompletedGoalId,
+  (current, previous): void => {
+    if (!current || current === previous) return
+    completionNotice.value = true
+    if (completionTimer !== undefined) window.clearTimeout(completionTimer)
+    completionTimer = window.setTimeout((): void => {
+      completionNotice.value = false
+    }, 4_500)
+  },
+)
+
 onMounted((): void => {
   player.refreshEnergy()
   energyTimer = window.setInterval(
@@ -97,6 +142,7 @@ onMounted((): void => {
 
 onBeforeUnmount((): void => {
   if (energyTimer !== undefined) window.clearInterval(energyTimer)
+  if (completionTimer !== undefined) window.clearTimeout(completionTimer)
 })
 </script>
 
@@ -163,6 +209,7 @@ onBeforeUnmount((): void => {
 
       <div class="order-2 flex min-w-0 flex-col gap-3 lg:col-start-2 lg:row-start-2">
         <CurrentGoalCard :goal="recommendation" @action="navigate(recommendation.action.route)" />
+        <NearestGoals :goals="nearestGoalsForHome" @open="navigate({ name: 'goals' })" />
 
         <section
           v-if="!player.canClick"
@@ -252,6 +299,18 @@ onBeforeUnmount((): void => {
         </div>
       </section>
     </div>
+
+    <Transition name="goal-notice">
+      <aside
+        v-if="completionNotice"
+        class="fixed bottom-5 right-5 z-40 border-2 border-ink bg-mint px-4 py-3 shadow-[5px_5px_0_rgb(var(--color-coral))]"
+        role="status"
+        data-goal-completed-notice
+      >
+        <strong class="block">Цель выполнена</strong>
+        <span class="text-sm">Награда готова</span>
+      </aside>
+    </Transition>
   </section>
 </template>
 
@@ -263,5 +322,18 @@ onBeforeUnmount((): void => {
 :deep(.quick-action .p-button-label) {
   min-width: 0;
   width: 100%;
+}
+
+.goal-notice-enter-active,
+.goal-notice-leave-active {
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.goal-notice-enter-from,
+.goal-notice-leave-to {
+  opacity: 0;
+  transform: translateY(0.75rem);
 }
 </style>

@@ -6,6 +6,7 @@ import {
 } from '@/db/database'
 import { CLICKER_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
+import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
 export interface PurchasedPackReceipt {
   status: 'purchased'
@@ -30,10 +31,11 @@ const roundCoins = (value: number): number => {
 export const purchasePack = async (price: number): Promise<PurchasePackResult> => {
   if (!Number.isFinite(price) || price <= 0) return { status: 'invalid-price' }
 
-  return database.transaction(
+  const result = await database.transaction(
     'rw',
     database.player,
     database.inventory,
+    database.goalCounters,
     async (): Promise<PurchasePackResult> => {
       const savedPlayer: PlayerState | undefined = await database.player.get(PLAYER_STATE_ID)
       if (!savedPlayer || savedPlayer.coins < price) {
@@ -54,7 +56,15 @@ export const purchasePack = async (price: number): Promise<PurchasePackResult> =
 
       await database.player.put(player)
       await database.inventory.add(item)
+      const counter = await database.goalCounters.get('packs-purchased')
+      await database.goalCounters.put({
+        id: 'packs-purchased',
+        value: (counter?.value ?? 0) + 1,
+        updatedAt: Date.now(),
+      })
       return { status: 'purchased', item, player }
     },
   )
+  if (result.status === 'purchased') notifyGoalsChanged()
+  return result
 }

@@ -1,0 +1,35 @@
+{
+  "eyebrow": "Долгосрочный прогресс",
+  "title": "Цели",
+  "description": "Выполняй цели, а затем забирай подготовленные награды.",
+  "progress": "Прогресс",
+  "filter": "Фильтр целей",
+  "claim": "Получить",
+  "rewardClaimed": "Награда получена",
+  "dependencyLocked": "Сначала выполни предыдущую цель",
+  "categories": {
+    "all": "Все",
+    "collection": "Коллекция",
+    "album": "Журнал",
+    "packs": "Наборы",
+    "minigames": "Мини-игры",
+    "economy": "Экономика",
+    "progression": "Прогресс"
+  },
+  "status": {
+    "locked": "Закрыта",
+    "active": "Активна",
+    "completed": "Готово",
+    "claimed": "Получено"
+  },
+  "sections": {
+    "rewards": "Награды готовы",
+    "active": "Активные цели",
+    "completed": "Завершённые цели"
+  },
+  "rewards": {
+    "coins": "монет",
+    "energy": "энергии",
+    "pack": "набор"
+  }
+}

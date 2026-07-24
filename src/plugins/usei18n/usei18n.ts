@@ -4,6 +4,7 @@ import app from '@/lang/ru/app.json'
 import common from '@/lang/ru/common.json'
 import duplicateExchange from '@/lang/ru/duplicateExchange.json'
 import home from '@/lang/ru/home.json'
+import goals from '@/lang/ru/goals.json'
 import packOpening from '@/lang/ru/packOpening.json'
 import packHunt from '@/lang/ru/packHunt.json'
 import shop from '@/lang/ru/shop.json'
@@ -18,6 +19,7 @@ const messages: {
     common: typeof common
     duplicateExchange: typeof duplicateExchange
     home: typeof home
+    goals: typeof goals
     packOpening: typeof packOpening
     packHunt: typeof packHunt
     shop: typeof shop
@@ -31,6 +33,7 @@ const messages: {
     common,
     duplicateExchange,
     home,
+    goals,
     packOpening,
     packHunt,
     shop,

@@ -11,6 +11,7 @@ import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '@/data/mainConst'
 import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 import { selectCardV2 } from '@/utils/dropEngine'
+import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
 export type AdvancePackOpeningResult = 'advanced' | 'completed' | 'unavailable'
 
@@ -100,17 +101,18 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
   }
 
   // Атомарно выдаёт весь заранее рассчитанный результат и только затем списывает пак.
-  const finalize = async (): Promise<void> => {
-    await database.transaction(
+  const finalize = async (): Promise<boolean> =>
+    database.transaction(
       'rw',
       database.inventory,
       database.cards,
       database.duplicates,
       database.packOpeningSessions,
-      async (): Promise<void> => {
+      database.goalCounters,
+      async (): Promise<boolean> => {
         const pending: PackOpeningSession | undefined =
           await database.packOpeningSessions.get('pending')
-        if (!pending) return
+        if (!pending) return false
 
         for (const reward of pending.rewards) {
           const instance: StickerInstance = {
@@ -134,9 +136,15 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
 
         await database.inventory.delete(pending.packId)
         await database.packOpeningSessions.delete('pending')
+        const counter = await database.goalCounters.get('packs-opened')
+        await database.goalCounters.put({
+          id: 'packs-opened',
+          value: (counter?.value ?? 0) + 1,
+          updatedAt: Date.now(),
+        })
+        return true
       },
     )
-  }
 
   // Фиксирует просмотр карточки; последняя карточка завершает всю транзакцию открытия.
   const advance = async (): Promise<AdvancePackOpeningResult> => {
@@ -151,7 +159,8 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
         return 'advanced'
       }
 
-      await finalize()
+      const completed = await finalize()
+      if (completed) notifyGoalsChanged()
       session.value = { ...session.value, currentIndex: session.value.rewards.length }
       return 'completed'
     } finally {

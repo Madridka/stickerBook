@@ -2,6 +2,7 @@ import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, PLAYER_STATE_ID, type PlayerState } from '@/db/database'
 import { CLICKER_CONFIG } from '@/data/mainConst'
+import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
 const COIN_FORMATTER: Intl.NumberFormat = new Intl.NumberFormat('ru-RU', {
   maximumFractionDigits: CLICKER_CONFIG.rewardPrecision,
@@ -82,14 +83,30 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   // Последовательно записывает изменения, чтобы быстрые клики не перетирали друг друга
-  const save = (): void => {
+  const save = (earnedCoins: number = 0): void => {
     saveQueue = saveQueue.then(async (): Promise<void> => {
-      await database.player.put({
-        id: PLAYER_STATE_ID,
-        coins: coins.value,
-        energy: energy.value,
-        energyUpdatedAt: energyUpdatedAt.value,
-      })
+      await database.transaction(
+        'rw',
+        database.player,
+        database.goalCounters,
+        async (): Promise<void> => {
+          await database.player.put({
+            id: PLAYER_STATE_ID,
+            coins: coins.value,
+            energy: energy.value,
+            energyUpdatedAt: energyUpdatedAt.value,
+          })
+          if (earnedCoins > 0) {
+            const counter = await database.goalCounters.get('coins-earned')
+            await database.goalCounters.put({
+              id: 'coins-earned',
+              value: (counter?.value ?? 0) + earnedCoins,
+              updatedAt: Date.now(),
+            })
+          }
+        },
+      )
+      if (earnedCoins > 0) notifyGoalsChanged()
     })
   }
 
@@ -117,7 +134,7 @@ export const usePlayerStore = defineStore('player', () => {
     hasLocalChanges = true
     energy.value = Math.max(0, energy.value - CLICKER_CONFIG.energyCostPerClick)
     coins.value = roundReward(coins.value + amount)
-    save()
+    save(amount)
     return true
   }
 

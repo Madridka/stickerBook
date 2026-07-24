@@ -61,6 +61,13 @@ const mobileMenuItems = computed(() => [
     },
   },
   {
+    label: t('app.goals'),
+    icon: 'pi pi-flag',
+    command: (): void => {
+      void router.push('/goals')
+    },
+  },
+  {
     label: t('common.theme'),
     icon: 'pi pi-palette',
     command: toggleTheme,
@@ -116,6 +123,9 @@ const resetProgress = async (): Promise<void> => {
           }}</RouterLink>
           <RouterLink class="transition-colors hover:text-coral" to="/shop">{{
             t('app.shop')
+          }}</RouterLink>
+          <RouterLink class="transition-colors hover:text-coral" to="/goals">{{
+            t('app.goals')
           }}</RouterLink>
           <button
             class="theme-toggle__button"

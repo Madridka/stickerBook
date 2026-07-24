@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import { database, type InventoryItem, type PackHuntProgress } from '@/db/database'
 import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
+import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
 export type PackHuntClaimResult = 'claimed' | 'cooldown-active'
 
@@ -44,6 +45,7 @@ export const usePackHuntStore = defineStore('packHunt', () => {
         'rw',
         database.packHuntProgress,
         database.inventory,
+        database.goalCounters,
         async (): Promise<PackHuntClaimResult> => {
           const claimedAt: number = Date.now()
           const saved: PackHuntProgress | undefined =
@@ -63,10 +65,17 @@ export const usePackHuntStore = defineStore('packHunt', () => {
 
           await database.inventory.add(item)
           await database.packHuntProgress.put(progress)
+          const counter = await database.goalCounters.get('minigames-completed')
+          await database.goalCounters.put({
+            id: 'minigames-completed',
+            value: (counter?.value ?? 0) + 1,
+            updatedAt: claimedAt,
+          })
           return 'claimed'
         },
       )
 
+      if (result === 'claimed') notifyGoalsChanged()
       await load()
       return result
     } finally {

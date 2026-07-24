@@ -56,6 +56,14 @@ const router: Router = createRouter({
       },
     },
     {
+      path: '/goals',
+      name: 'goals',
+      component: () => import('@/views/GoalsView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('app.goals'),
+      },
+    },
+    {
       path: '/pack-opening',
       name: 'pack-opening',
       component: () => import('@/views/PackOpeningView.vue'),

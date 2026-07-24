@@ -1,5 +1,6 @@
 import Dexie, { type Table } from 'dexie'
 import type { DeletedCard, StickerInstance } from '@/types'
+import type { GoalCounter, GoalPlayerState } from '@/features/goals/types'
 
 export const PLAYER_STATE_ID = 'current'
 
@@ -30,6 +31,8 @@ export interface InventoryItem {
   id: string
   // Дискриминатор типа предмета для расширения модели
   type: InventoryItemType
+  // Идентификатор конфигурации набора; старые записи без поля остаются стандартными.
+  packId?: string
   // Время создания предмета
   createdAt: number
 }
@@ -85,6 +88,8 @@ interface StickerBookDatabase extends Dexie {
   duplicateExchanges: Table<DuplicateExchange, string>
   packOpeningSessions: Table<PackOpeningSession, string>
   gameGuideProgress: Table<GameGuideProgress, string>
+  goalStates: Table<GoalPlayerState, string>
+  goalCounters: Table<GoalCounter, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -163,4 +168,18 @@ database.version(10).stores({
   duplicateExchanges: 'id, createdAt',
   packOpeningSessions: 'id, packId, createdAt',
   gameGuideProgress: 'id, completed, updatedAt',
+})
+database.version(11).stores({
+  stickers: 'id, collectedAt',
+  player: 'id',
+  inventory: 'id, type, createdAt',
+  cards: 'id, playerId, location',
+  duplicates: 'id, playerId, location',
+  deletedCards: 'id, instanceId, playerId, deletedAt',
+  packHuntProgress: 'id',
+  duplicateExchanges: 'id, createdAt',
+  packOpeningSessions: 'id, packId, createdAt',
+  gameGuideProgress: 'id, completed, updatedAt',
+  goalStates: 'goalId, completedAt, claimedAt',
+  goalCounters: 'id, updatedAt',
 })

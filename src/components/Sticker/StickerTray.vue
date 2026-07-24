@@ -16,6 +16,7 @@ interface Props {
 interface Emits {
   focus: [playerId: string]
   'clear-focus': []
+  'auto-prepare-started': []
   'drag-start': [playerId: string]
   ready: [instanceId: string, preparation: StickerPreparation]
   drop: [result: StickerDropResult]
@@ -114,7 +115,10 @@ watch(
     const item = props.cards.find(({ instance }): boolean => instance.id === instanceId)
     if (!item || item.instance.preparation) return
     autoPreparedInstanceId.value = instanceId
-    void nextTick((): void => prepareSticker(item))
+    void nextTick((): void => {
+      prepareSticker(item)
+      emit('auto-prepare-started')
+    })
   },
   { immediate: true },
 )

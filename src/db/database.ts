@@ -73,6 +73,7 @@ export interface GameGuideProgress {
   id: 'first-steps'
   completedStepIds: string[]
   viewedCollection: boolean
+  autoPreparationShown?: boolean
   completed: boolean
   updatedAt: number
 }

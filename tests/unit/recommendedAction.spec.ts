@@ -48,6 +48,27 @@ describe('resolveRecommendedAction', () => {
     expect(resolveRecommendedAction(createSnapshot()).id).toBe('browse-collection')
   })
 
+  it('не создаёт переход к кликеру для цели на текущем экране', () => {
+    const recommendation = resolveRecommendedAction(createSnapshot({ energy: 10 }))
+    expect(recommendation.id).toBe('earn-coins')
+    expect(recommendation.action).toBeUndefined()
+  })
+
+  it('не создаёт якорь для первого шага гайда', () => {
+    const recommendation = resolveRecommendedAction(
+      createSnapshot({
+        energy: 10,
+        guideStep: {
+          id: 'earn-first-pack',
+          titleKey: 'home.guide.earn.title',
+          descriptionKey: 'home.guide.earn.description',
+        },
+      }),
+    )
+    expect(recommendation.id).toBe('guide-earn-first-pack')
+    expect(recommendation.action).toBeUndefined()
+  })
+
   it('показывает доступную мини-игру', () => {
     expect(resolveRecommendedAction(createSnapshot({ canPlayMiniGame: true })).id).toBe(
       'play-mini-game',

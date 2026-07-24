@@ -38,6 +38,7 @@ const { t } = useI18n()
     </div>
 
     <Button
+      v-if="goal.action"
       class="mt-4 w-full"
       :label="t(goal.action.labelKey)"
       icon="pi pi-arrow-right"

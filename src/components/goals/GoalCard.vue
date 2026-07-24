@@ -24,8 +24,8 @@ const progressPercent: ComputedRef<number> = computed(() =>
 
 <template>
   <article
-    class="flex h-full flex-col border border-ink/15 bg-paper p-4"
-    :class="{ 'opacity-60': goal.status === 'locked' }"
+    class="goal-card flex h-full flex-col overflow-hidden border-2 border-ink/25 p-4 pt-5"
+    :class="{ 'goal-card--locked': goal.status === 'locked' }"
     :data-goal-id="goal.definition.id"
     :data-goal-status="goal.status"
   >
@@ -36,7 +36,7 @@ const progressPercent: ComputedRef<number> = computed(() =>
         </p>
         <h3 class="mt-1 text-lg font-black leading-tight">{{ goal.definition.title }}</h3>
       </div>
-      <span class="shrink-0 rounded-full bg-ink/10 px-2 py-1 text-[10px] font-black uppercase">
+      <span class="goal-card__status shrink-0 rounded-full px-2 py-1 text-[10px] font-black uppercase">
         {{ t(`goals.status.${goal.status}`) }}
       </span>
     </div>
@@ -65,7 +65,7 @@ const progressPercent: ComputedRef<number> = computed(() =>
         class="rounded bg-gold/20 px-2 py-1 text-xs font-black"
       >
         <template v-if="reward.type === 'coins'">
-          <i class="pi pi-wallet mr-1" />{{ reward.amount }} {{ t('goals.rewards.coins') }}
+          <i class="pi pi-wallet mr-1" />{{ t('goals.rewards.coins') }} {{ reward.amount }}
         </template>
         <template v-else-if="reward.type === 'energy'">
           <i class="pi pi-bolt mr-1" />{{ reward.amount }} {{ t('goals.rewards.energy') }}
@@ -109,7 +109,76 @@ const progressPercent: ComputedRef<number> = computed(() =>
 </template>
 
 <style scoped>
+.goal-card {
+  position: relative;
+  background:
+    linear-gradient(rgb(255 255 255 / 0.32), rgb(255 255 255 / 0.32)),
+    rgb(var(--color-paper));
+  box-shadow: 5px 5px 0 rgb(var(--color-ink) / 0.13);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.goal-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 0.3rem;
+  background: rgb(var(--color-mint));
+  content: '';
+}
+
+.goal-card:hover {
+  border-color: rgb(var(--color-ink) / 0.48);
+  box-shadow: 7px 7px 0 rgb(var(--color-ink) / 0.16);
+  transform: translate(-1px, -1px);
+}
+
+.goal-card[data-goal-status='completed'] {
+  border-color: rgb(var(--color-coral) / 0.7);
+  box-shadow: 5px 5px 0 rgb(var(--color-gold) / 0.62);
+}
+
+.goal-card[data-goal-status='completed']::before {
+  background: rgb(var(--color-coral));
+}
+
+.goal-card[data-goal-status='claimed']::before {
+  background: rgb(var(--color-ink) / 0.3);
+}
+
+.goal-card--locked {
+  opacity: 0.68;
+}
+
+.goal-card__status {
+  background: rgb(var(--color-mint) / 0.42);
+  color: rgb(var(--color-ink));
+}
+
+.goal-card[data-goal-status='completed'] .goal-card__status {
+  background: rgb(var(--color-coral) / 0.14);
+  color: rgb(var(--color-coral));
+}
+
+.goal-card[data-goal-status='claimed'] .goal-card__status,
+.goal-card[data-goal-status='locked'] .goal-card__status {
+  background: rgb(var(--color-ink) / 0.09);
+  color: rgb(var(--color-ink) / 0.65);
+}
+
 :deep(.goal-card-progress .p-progressbar-value) {
   background: rgb(var(--color-coral));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .goal-card {
+    transition: none;
+  }
+
+  .goal-card:hover {
+    transform: none;
+  }
 }
 </style>

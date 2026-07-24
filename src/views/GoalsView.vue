@@ -42,10 +42,10 @@ const navigate = async (goal: GoalRuntimeState): Promise<void> => {
 
 <template>
   <section
-    class="mx-auto h-full min-h-0 w-full overflow-y-auto py-2 pr-1"
+    class="goals-view mx-auto h-full min-h-0 w-full overflow-y-auto border border-ink/10 px-3 py-3 sm:px-4 sm:py-4"
     data-goals-view
   >
-    <header class="border-2 border-ink bg-paper p-4 shadow-[5px_5px_0_rgb(var(--color-gold)/0.6)]">
+    <header class="relative border-2 border-ink bg-paper p-4 shadow-[6px_6px_0_rgb(var(--color-gold)/0.65)]">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p class="text-xs font-black uppercase tracking-[0.18em] text-coral">
@@ -76,8 +76,10 @@ const navigate = async (goal: GoalRuntimeState): Promise<void> => {
     </nav>
 
     <section v-if="rewardGoals.length" class="mt-6" data-goals-rewards>
-      <h2 class="text-xl font-black">{{ t('goals.sections.rewards') }}</h2>
-      <div class="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <h2 class="goals-section-title text-xl font-black">
+        <span>{{ t('goals.sections.rewards') }}</span>
+      </h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <GoalCard
           v-for="goal in rewardGoals"
           :key="goal.definition.id"
@@ -89,8 +91,10 @@ const navigate = async (goal: GoalRuntimeState): Promise<void> => {
     </section>
 
     <section v-if="activeGoals.length" class="mt-6" data-goals-active>
-      <h2 class="text-xl font-black">{{ t('goals.sections.active') }}</h2>
-      <div class="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <h2 class="goals-section-title text-xl font-black">
+        <span>{{ t('goals.sections.active') }}</span>
+      </h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <GoalCard
           v-for="goal in activeGoals"
           :key="goal.definition.id"
@@ -101,8 +105,10 @@ const navigate = async (goal: GoalRuntimeState): Promise<void> => {
     </section>
 
     <section v-if="claimedGoals.length" class="mt-6 pb-5" data-goals-completed>
-      <h2 class="text-xl font-black">{{ t('goals.sections.completed') }}</h2>
-      <div class="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <h2 class="goals-section-title text-xl font-black">
+        <span>{{ t('goals.sections.completed') }}</span>
+      </h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <GoalCard v-for="goal in claimedGoals" :key="goal.definition.id" :goal="goal" />
       </div>
     </section>
@@ -110,6 +116,34 @@ const navigate = async (goal: GoalRuntimeState): Promise<void> => {
 </template>
 
 <style scoped>
+.goals-view {
+  background-color: rgb(var(--color-mint) / 0.16);
+  background-image:
+    linear-gradient(rgb(var(--color-paper) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--color-paper) / 0.35) 1px, transparent 1px);
+  background-size: 24px 24px;
+  box-shadow: inset 0 0 0 1px rgb(var(--color-paper) / 0.45);
+}
+
+.goals-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.goals-section-title::after {
+  height: 2px;
+  flex: 1;
+  background: rgb(var(--color-ink) / 0.12);
+  content: '';
+}
+
+.goals-section-title span {
+  padding: 0.2rem 0.55rem;
+  background: rgb(var(--color-paper) / 0.82);
+  box-shadow: 3px 3px 0 rgb(var(--color-ink) / 0.1);
+}
+
 :deep(.overall-goals-progress .p-progressbar-value) {
   background: rgb(var(--color-mint));
 }

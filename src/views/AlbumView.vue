@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
+import {
+  computed,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  type ComputedRef,
+  type Ref,
+} from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
@@ -353,6 +360,14 @@ const applyCollectionCardLink = (): void => {
   }, ALBUM_VIEW_CONFIG.trayFocusDurationMs)
 }
 
+// Делает обучающий запуск подготовки одноразовым даже при возврате через историю браузера.
+const clearAutoPrepareAction = (): void => {
+  if (route.query.action !== 'prepare') return
+  const query = { ...route.query }
+  delete query.action
+  void router.replace({ query })
+}
+
 const getContentsTeams = (pageNumber: number): AlbumContentsTeam[] => {
   const pageOffset: number = pageNumber - contentsFirstPage
   return albumContentsTeams.slice(
@@ -587,6 +602,7 @@ onBeforeUnmount((): void => {
         :cards="trayCards"
         :highlighted-instance-id="focusedTrayInstanceId"
         :auto-prepare-instance-id="autoPrepareInstanceId"
+        @auto-prepare-started="clearAutoPrepareAction"
         @focus="focusCardTarget"
         @clear-focus="clearCardTarget"
         @drag-start="prepareDropPage"

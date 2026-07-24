@@ -23,8 +23,8 @@ export interface GuideStepDefinition {
   titleKey: string
   descriptionKey: string
   descriptionParams?: Record<string, string | number>
-  actionLabelKey: string
-  route: RouteLocationRaw
+  actionLabelKey?: string
+  route?: RouteLocationRaw
   progress?: { current: number; target: number }
 }
 
@@ -47,6 +47,7 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
   const packHunt = usePackHuntStore()
   const completedStepIds: Ref<GuideStepId[]> = ref([])
   const viewedCollection: Ref<boolean> = ref(false)
+  const autoPreparationShown: Ref<boolean> = ref(false)
   const isLoaded: Ref<boolean> = ref(false)
   let saveQueue: Promise<void> = Promise.resolve()
   let initializationPromise: Promise<void>
@@ -68,6 +69,7 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
       id: GUIDE_PROGRESS_ID,
       completedStepIds: [...completedStepIds.value],
       viewedCollection: viewedCollection.value,
+      autoPreparationShown: autoPreparationShown.value,
       completed: completedStepIds.value.length === STEP_ORDER.length,
       updatedAt: Date.now(),
     }
@@ -115,6 +117,7 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
     )
     // Для существующего сохранения наличие карточек означает, что экран результата уже был пройден.
     viewedCollection.value = saved?.viewedCollection ?? collection.items.length > 0
+    autoPreparationShown.value = saved?.autoPreparationShown ?? false
     isLoaded.value = true
     reconcile()
     save()
@@ -140,8 +143,6 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
         titleKey: 'home.guide.earn.title',
         descriptionKey: 'home.guide.earn.description',
         descriptionParams: { remaining: Math.max(0, PACK_PRICE - player.coins) },
-        actionLabelKey: 'home.guide.earn.action',
-        route: { name: 'home', hash: '#clicker' },
         progress: { current: Math.min(player.coins, PACK_PRICE), target: PACK_PRICE },
       },
       'buy-first-pack': {
@@ -193,6 +194,20 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
   const isCompleted: ComputedRef<boolean> = computed(
     (): boolean => isLoaded.value && completedStepIds.value.length === STEP_ORDER.length,
   )
+  const canAutoPrepareSticker: ComputedRef<boolean> = computed(
+    (): boolean =>
+      isLoaded.value &&
+      !autoPreparationShown.value &&
+      currentStep.value?.id === 'prepare-first-sticker',
+  )
+
+  const consumeAutoPreparation = async (): Promise<boolean> => {
+    await initializationPromise
+    if (!canAutoPrepareSticker.value) return false
+    autoPreparationShown.value = true
+    save()
+    return true
+  }
 
   watch(
     [
@@ -216,8 +231,10 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
   return {
     completedStepIds,
     currentStep,
+    canAutoPrepareSticker,
     isCompleted,
     isLoaded,
+    consumeAutoPreparation,
     markCollectionViewed,
     reconcile,
   }

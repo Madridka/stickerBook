@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import {
-  computed,
-  onBeforeUnmount,
-  ref,
-  watch,
-  type ComputedRef,
-  type Ref,
-} from 'vue'
+import { computed, onBeforeUnmount, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import type { RouteLocationRaw } from 'vue-router'
@@ -118,6 +111,12 @@ const navigate = async (route: RouteLocationRaw): Promise<void> => {
   await router.push(route)
 }
 
+const navigateRecommendation = async (): Promise<void> => {
+  if (recommendation.value.action) {
+    await navigate(recommendation.value.action.route)
+  }
+}
+
 watch(
   () => goals.lastCompletedGoalId,
   (current, previous): void => {
@@ -146,45 +145,47 @@ onBeforeUnmount((): void => {
       class="grid min-h-full min-w-0 gap-3 lg:h-full lg:min-h-0 lg:grid-cols-[minmax(0,1.12fr)_minmax(20rem,.88fr)] lg:grid-rows-[auto_auto_minmax(0,1fr)]"
     >
       <section
-        class="order-1 grid min-w-0 grid-cols-3 overflow-hidden border-2 border-ink bg-paper shadow-[4px_4px_0_rgb(var(--color-gold)/0.5)] lg:col-start-2 lg:row-start-1"
+        class="order-1 grid min-w-0 grid-cols-4 overflow-hidden border-2 border-ink bg-paper shadow-[4px_4px_0_rgb(var(--color-gold)/0.5)] lg:col-start-2 lg:row-start-1"
         :aria-label="t('home.summary.label')"
         data-player-summary
       >
-        <div class="flex min-w-0 items-center gap-2 px-2.5 py-2">
-          <i class="pi pi-box shrink-0 text-base text-coral" aria-hidden="true" />
+        <div class="flex min-w-0 items-center gap-1.5 px-1.5 py-2 sm:px-2">
+          <i class="pi pi-box shrink-0 text-sm text-coral" aria-hidden="true" />
           <div class="min-w-0">
-            <span class="block truncate text-[9px] font-black uppercase tracking-wider text-ink/45">
+            <span class="block truncate text-[8px] font-black uppercase tracking-wide text-ink/45 sm:text-[9px]">
               {{ t('home.summary.packs') }}
             </span>
-            <strong class="block truncate text-lg font-black leading-none tabular-nums">
+            <strong class="block truncate text-base font-black leading-none tabular-nums sm:text-lg">
               {{ inventory.packCount }}
             </strong>
           </div>
         </div>
 
-        <div class="min-w-0 border-x border-ink/15 px-2.5 py-2">
-          <div class="flex items-center gap-2">
-            <i class="pi pi-images shrink-0 text-base text-coral" aria-hidden="true" />
+        <div
+          class="col-span-2 flex min-w-0 justify-center border-x border-ink/15 px-1.5 py-2 text-center sm:px-2"
+        >
+          <div class="flex min-w-0 items-center gap-1.5">
+            <i class="pi pi-images shrink-0 text-sm text-coral" aria-hidden="true" />
             <div class="min-w-0">
               <span
-                class="block truncate text-[9px] font-black uppercase tracking-wider text-ink/45"
+                class="block truncate text-[8px] font-black uppercase tracking-wide text-ink/45 sm:text-[9px]"
               >
                 {{ t('home.summary.collection') }}
               </span>
-              <strong class="block text-lg font-black leading-none tabular-nums">
-                {{ collection.collectedTotal }} / {{ collection.total }}
+              <strong class="block whitespace-nowrap text-base font-black leading-none tabular-nums sm:text-lg">
+                {{ collection.collectedTotal }}/{{ collection.total }}
               </strong>
             </div>
           </div>
         </div>
 
-        <div class="flex min-w-0 items-center gap-2 px-2.5 py-2">
-          <i class="pi pi-flag shrink-0 text-base text-coral" aria-hidden="true" />
+        <div class="flex min-w-0 items-center gap-1.5 px-1.5 py-2 sm:px-2">
+          <i class="pi pi-flag shrink-0 text-sm text-coral" aria-hidden="true" />
           <div class="min-w-0">
-            <span class="block truncate text-[9px] font-black uppercase tracking-wider text-ink/45">
+            <span class="block truncate text-[8px] font-black uppercase tracking-wide text-ink/45 sm:text-[9px]">
               {{ t('home.summary.goals') }}
             </span>
-            <strong class="block truncate text-lg font-black leading-none tabular-nums">
+            <strong class="block truncate text-base font-black leading-none tabular-nums sm:text-lg">
               {{ goals.overallProgress }}%
             </strong>
           </div>
@@ -192,7 +193,7 @@ onBeforeUnmount((): void => {
       </section>
 
       <div class="order-2 flex min-w-0 flex-col gap-3 lg:col-start-2 lg:row-start-2">
-        <CurrentGoalCard :goal="recommendation" @action="navigate(recommendation.action.route)" />
+        <CurrentGoalCard :goal="recommendation" @action="navigateRecommendation" />
         <NearestGoals :goals="nearestGoalsForHome" @open="navigate({ name: 'goals' })" />
 
         <section
@@ -210,7 +211,6 @@ onBeforeUnmount((): void => {
 
       <div class="order-3 min-w-0 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:min-h-0">
         <section
-          id="clicker"
           class="flex min-h-[20rem] flex-col items-center border border-ink/10 bg-white/20 p-3 transition-opacity sm:min-h-[24rem] lg:h-full lg:min-h-0"
           :class="{ 'opacity-60': !player.canClick }"
           data-clicker

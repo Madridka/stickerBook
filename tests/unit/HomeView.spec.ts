@@ -30,10 +30,6 @@ const testState = vi.hoisted(() => ({
     titleKey: 'home.actions.earn.title',
     descriptionKey: 'home.actions.earn.description',
     priority: 300,
-    action: {
-      labelKey: 'home.actions.earn.action',
-      route: { name: 'home', hash: '#clicker' },
-    },
   },
   quickActions: [] as Array<Record<string, unknown>>,
   goals: {
@@ -93,18 +89,15 @@ describe('HomeView', () => {
     testState.goals.nearestGoals = []
     testState.inventory.packCount = 0
     testState.goals.overallProgress = 0
+    testState.collection.collectedTotal = 0
+    testState.collection.total = 960
   })
 
-  it('показывает текущую цель и корректный текст кнопки', () => {
+  it('показывает текущую цель без ненужного перехода к кликеру', () => {
     const wrapper = mountHome()
-    expect(wrapper.get('[data-current-goal]').text()).toContain('Заработай монеты')
-    expect(wrapper.get('[data-goal-action]').text()).toContain('Перейти к кликеру')
-  })
-
-  it('переходит по маршруту основной кнопки', async () => {
-    const wrapper = mountHome()
-    await wrapper.get('[data-goal-action]').trigger('click')
-    expect(testState.push).toHaveBeenCalledWith({ name: 'home', hash: '#clicker' })
+    expect(wrapper.get('[data-current-goal]').text()).toContain('Забивай голы')
+    expect(wrapper.find('[data-goal-action]').exists()).toBe(false)
+    expect(testState.push).not.toHaveBeenCalled()
   })
 
   it('показывает оба таймера при нулевой энергии', () => {
@@ -144,6 +137,15 @@ describe('HomeView', () => {
     expect(summary).toContain('Цели')
     expect(summary).toContain('25%')
     expect(summary).not.toContain('Журнал')
+  })
+
+  it('не переносит крупный прогресс коллекции на вторую строку', () => {
+    testState.collection.collectedTotal = 1200
+    testState.collection.total = 1500
+    const wrapper = mountHome()
+    const summary = wrapper.get('[data-player-summary]')
+    expect(summary.text()).toContain('1200/1500')
+    expect(summary.get('strong.whitespace-nowrap').exists()).toBe(true)
   })
 
   it('защищает мобильную структуру от горизонтального overflow', () => {

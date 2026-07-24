@@ -48,11 +48,13 @@ describe('StickerTray onboarding', () => {
     await nextTick()
     await nextTick()
     expect(wrapper.get('[data-auto-preparation]').text()).toBe('instance-1')
+    expect(wrapper.emitted('auto-prepare-started')).toHaveLength(1)
   })
 
   it('не запускает подготовку повторно для уже готовой карточки', async () => {
     const wrapper = mountTray(createItem(true))
     await nextTick()
     expect(wrapper.find('[data-auto-preparation]').exists()).toBe(false)
+    expect(wrapper.emitted('auto-prepare-started')).toBeUndefined()
   })
 })

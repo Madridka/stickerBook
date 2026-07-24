@@ -83,7 +83,7 @@ onMounted(async (): Promise<void> => {
           {{ t('shop.balance') }}
         </p>
         <p class="text-lg font-black leading-tight tabular-nums sm:text-xl">
-          {{ player.formattedCoins }} {{ t('shop.coins') }}
+          {{ t('shop.coins') }} {{ player.formattedCoins }}
         </p>
       </div>
     </div>

@@ -55,14 +55,16 @@ const needsPreparation = (item: CollectionItem): boolean =>
 const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 
-// Открывает нужный разворот и сразу запускает подготовку ещё не подготовленной наклейки.
+// Автоподготовка включается только при первом обучающем переходе пользователя.
 const openCardInAlbum = async (item: CollectionItem): Promise<void> => {
+  const shouldAutoPrepare: boolean =
+    needsPreparation(item) && (await gameGuide.consumeAutoPreparation())
   await router.push({
     name: 'album-wc-26',
     query: {
       card: item.instance.playerId,
       instance: item.instance.id,
-      action: needsPreparation(item) ? 'prepare' : undefined,
+      action: shouldAutoPrepare ? 'prepare' : undefined,
     },
   })
 }
@@ -70,6 +72,8 @@ const openCardInAlbum = async (item: CollectionItem): Promise<void> => {
 const isPreparationGuideActive: ComputedRef<boolean> = computed(
   (): boolean => gameGuide.currentStep?.id === 'prepare-first-sticker',
 )
+const startsAutomaticPreparation = (item: CollectionItem): boolean =>
+  needsPreparation(item) && gameGuide.canAutoPrepareSticker
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
   collection.items.filter(
@@ -303,11 +307,11 @@ watch(
                 type="button"
                 :aria-label="
                   t(
-                    needsPreparation(item)
+                    startsAutomaticPreparation(item)
                       ? 'album.collectionControls.prepareCard'
                       : 'album.collectionControls.openInAlbum',
                     {
-                    name: getCard(item.instance.playerId)?.displayName ?? item.instance.playerId,
+                      name: getCard(item.instance.playerId)?.displayName ?? item.instance.playerId,
                     },
                   )
                 "
@@ -363,7 +367,7 @@ watch(
                 >
                   {{
                     t(
-                      needsPreparation(item)
+                      startsAutomaticPreparation(item)
                         ? 'album.collectionControls.prepareAction'
                         : 'album.collectionControls.openInAlbumShort',
                     )

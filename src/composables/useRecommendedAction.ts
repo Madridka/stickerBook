@@ -20,7 +20,7 @@ export interface RecommendedAction {
   descriptionParams?: Record<string, string | number>
   priority: number
   progress?: ActionProgress
-  action: {
+  action?: {
     labelKey: string
     route: RouteLocationRaw
   }
@@ -70,6 +70,22 @@ const createAction = (
   action: { labelKey: label, route },
 })
 
+const createPassiveAction = (
+  id: string,
+  title: string,
+  description: string,
+  priority: number,
+  progress?: ActionProgress,
+  descriptionParams?: Record<string, string | number>,
+): RecommendedAction => ({
+  id,
+  titleKey: title,
+  descriptionKey: description,
+  priority,
+  progress,
+  descriptionParams,
+})
+
 // Чистый resolver: одинаковый снимок игрового состояния всегда даёт одинаковую рекомендацию.
 export const resolveRecommendedAction = (
   state: RecommendedActionSnapshot,
@@ -87,6 +103,16 @@ export const resolveRecommendedAction = (
   const isBlockedEarnStep: boolean =
     state.guideStep?.id === 'earn-first-pack' && state.energy <= 0
   if (state.guideStep && !isBlockedEarnStep) {
+    if (!state.guideStep.actionLabelKey || !state.guideStep.route) {
+      return createPassiveAction(
+        `guide-${state.guideStep.id}`,
+        state.guideStep.titleKey,
+        state.guideStep.descriptionKey,
+        1_000,
+        state.guideStep.progress,
+        state.guideStep.descriptionParams,
+      )
+    }
     return createAction(
       `guide-${state.guideStep.id}`,
       state.guideStep.titleKey,
@@ -149,12 +175,10 @@ export const resolveRecommendedAction = (
     )
   }
   if (state.energy > 0) {
-    return createAction(
+    return createPassiveAction(
       'earn-coins',
       'home.actions.earn.title',
       'home.actions.earn.description',
-      'home.actions.earn.action',
-      { name: 'home', hash: '#clicker' },
       300,
       { current: Math.min(state.coins, PACK_PRICE), target: PACK_PRICE },
     )

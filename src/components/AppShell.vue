@@ -135,10 +135,8 @@ onBeforeUnmount((): void => {
             data-resource-coins
           >
             <i class="pi pi-wallet text-coral" aria-hidden="true" />
+            <span>{{ t('home.summary.coins') }}</span>
             <span>{{ player.formattedCoins }}</span>
-            <span class="hidden text-[9px] uppercase tracking-wide text-ink/45 sm:inline">
-              {{ t('home.summary.coins') }}
-            </span>
           </div>
           <div
             class="flex items-center gap-1 rounded-full border border-ink/15 bg-mint/20 px-2 py-1 text-xs font-black tabular-nums sm:px-2.5"
@@ -202,7 +200,8 @@ onBeforeUnmount((): void => {
           <Button
             class="app-menu-button"
             text
-            :label="t('app.menu')"
+            :aria-label="t('app.menu')"
+            :title="t('app.menu')"
             icon="pi pi-bars"
             type="button"
             @click="toggleMobileMenu"

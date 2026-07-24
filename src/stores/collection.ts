@@ -20,11 +20,9 @@ export const useCollectionStore = defineStore('collection', () => {
   const isLoaded: Ref<boolean> = ref(false)
   const isExchanging: Ref<boolean> = ref(false)
 
-  // Считает размер коллекции по уникальным позициям альбома, не учитывая версии карточек.
-  const cardAlbumSlotIds: Map<string, string> = new Map(
-    cards.map(({ id, baseCardId }): [string, string] => [id, baseCardId ?? id]),
-  )
-  const total: number = new Set(cards.map(({ id, baseCardId }): string => baseCardId ?? id)).size
+  // Каждая версия карточки является отдельной позицией коллекции.
+  const catalogCardIds: Set<string> = new Set(cards.map(({ id }): string => id))
+  const total: number = catalogCardIds.size
   const albumSlotIds: Set<string> = new Set(
     albumData.pages.flatMap(({ slots }): string[] =>
       slots.map(({ id }): string => id),
@@ -232,23 +230,23 @@ export const useCollectionStore = defineStore('collection', () => {
     )
   }
 
-  // Объединяет обычные и особые версии карточки в одну найденную позицию альбома.
-  const collectedAlbumSlotIds: ComputedRef<Set<string>> = computed(
+  // Считает найденные версии карточек отдельно, включая специальные.
+  const collectedCardIds: ComputedRef<Set<string>> = computed(
     (): Set<string> =>
       new Set(
         items.value
-          .filter(({ instance }): boolean => instance.location !== 'deleted')
-          .map(({ instance }): string | undefined =>
-            cardAlbumSlotIds.get(instance.playerId),
+          .filter(
+            ({ instance }): boolean =>
+              instance.location !== 'deleted' && catalogCardIds.has(instance.playerId),
           )
-          .filter((slotId: string | undefined): slotId is string => Boolean(slotId)),
+          .map(({ instance }): string => instance.playerId),
       ),
   )
   const collectedTotal: ComputedRef<number> = computed(
-    (): number => collectedAlbumSlotIds.value.size,
+    (): number => collectedCardIds.value.size,
   )
 
-  // Вычисляет процент найденных уникальных позиций текущей коллекции.
+  // Вычисляет процент найденных уникальных карточек текущей коллекции.
   const progress: ComputedRef<number> = computed((): number =>
     total ? Math.min(100, Math.round((collectedTotal.value / total) * 100)) : 0,
   )

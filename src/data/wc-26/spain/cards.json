@@ -91,6 +91,19 @@
       "position": "DF"
     },
     {
+      "id": "esp-06.1",
+      "cardNumber": "06.1",
+      "displayName": "Pau Cubarsí",
+      "image": "/cards/spain/ESP-06.1-pau-cubarsi.webp",
+      "series": "special",
+      "finish": "standard",
+      "baseCardId": "esp-06",
+      "rarity": "legendary",
+      "kind": "player",
+      "personId": "pau-cubarsi",
+      "position": "DF"
+    },
+    {
       "id": "esp-07",
       "cardNumber": "07",
       "albumSlot": 7,
@@ -137,6 +150,19 @@
       "image": "/cards/spain/ESP-10-rodri.webp",
       "series": "base",
       "finish": "standard",
+      "rarity": "legendary",
+      "kind": "player",
+      "personId": "rodri",
+      "position": "MF"
+    },
+    {
+      "id": "esp-10.1",
+      "cardNumber": "10.1",
+      "displayName": "Rodri",
+      "image": "/cards/spain/ESP-10.1-rodri.webp",
+      "series": "special",
+      "finish": "standard",
+      "baseCardId": "esp-10",
       "rarity": "legendary",
       "kind": "player",
       "personId": "rodri",

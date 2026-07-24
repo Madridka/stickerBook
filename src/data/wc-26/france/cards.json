@@ -271,6 +271,19 @@
       "kind": "player",
       "personId": "kylian-mbappe",
       "position": "FW"
+    },
+    {
+      "id": "fra-20.1",
+      "cardNumber": "20.1",
+      "displayName": "Kylian Mbappe",
+      "image": "/cards/france/FRA-20.1-kylian-mbappe.webp",
+      "series": "special",
+      "finish": "standard",
+      "baseCardId": "fra-20",
+      "rarity": "legendary",
+      "kind": "player",
+      "personId": "kylian-mbappe",
+      "position": "FW"
     }
   ]
 }

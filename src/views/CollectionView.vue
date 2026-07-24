@@ -6,7 +6,7 @@ import cards from '@/data/wc-26/catalog'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
 import { useGameGuideStore } from '@/stores/gameGuide'
-import type { CardDefinition, CollectionItem } from '@/types'
+import type { CardDefinition, CollectionItem, StickerInstance, StickerTrayItem } from '@/types'
 
 import Tab from 'primevue/tab'
 import TabList from 'primevue/tablist'
@@ -17,6 +17,7 @@ import Select from 'primevue/select'
 import SelectButton from 'primevue/selectbutton'
 
 import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
+import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 
 type CollectionFilter = 'all' | 'ready' | 'album'
 type CollectionSort = 'status' | 'album' | 'name'
@@ -44,6 +45,8 @@ const collectionFilter: Ref<CollectionFilter> = ref(
 )
 const collectionSort: Ref<CollectionSort> = ref('status')
 const collectionFilters: CollectionFilter[] = ['all', 'ready', 'album']
+const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
+const isPreviewOpen: Ref<boolean> = ref(false)
 const cardOrder: Map<string, number> = new Map(
   cards.map(({ id }, index: number): [string, number] => [id, index]),
 )
@@ -55,25 +58,37 @@ const needsPreparation = (item: CollectionItem): boolean =>
 const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 
-// Автоподготовка включается только при первом обучающем переходе пользователя.
-const openCardInAlbum = async (item: CollectionItem): Promise<void> => {
-  const shouldAutoPrepare: boolean =
-    needsPreparation(item) && (await gameGuide.consumeAutoPreparation())
+const openCardPreview = (item: CollectionItem): void => {
+  const card: CardDefinition | undefined = getCard(item.instance.playerId)
+  if (!card) return
+  previewItem.value = { card, instance: item.instance }
+  isPreviewOpen.value = true
+}
+
+const prepareCardInAlbum = async (instance: StickerInstance): Promise<void> => {
+  await gameGuide.consumeAutoPreparation()
   await router.push({
     name: 'album-wc-26',
     query: {
-      card: item.instance.playerId,
-      instance: item.instance.id,
-      action: shouldAutoPrepare ? 'prepare' : undefined,
+      card: instance.playerId,
+      instance: instance.id,
+      action: 'prepare',
     },
   })
+}
+
+const removeCard = async (instance: StickerInstance): Promise<void> => {
+  const item: CollectionItem | undefined = collection.items.find(
+    ({ instance: currentInstance }): boolean => currentInstance.id === instance.id,
+  )
+  if (!item) return
+  await deletedCards.removeCard(item.instance)
+  await collection.load()
 }
 
 const isPreparationGuideActive: ComputedRef<boolean> = computed(
   (): boolean => gameGuide.currentStep?.id === 'prepare-first-sticker',
 )
-const startsAutomaticPreparation = (item: CollectionItem): boolean =>
-  needsPreparation(item) && gameGuide.canAutoPrepareSticker
 
 const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
   collection.items.filter(
@@ -306,16 +321,12 @@ watch(
                 "
                 type="button"
                 :aria-label="
-                  t(
-                    startsAutomaticPreparation(item)
-                      ? 'album.collectionControls.prepareCard'
-                      : 'album.collectionControls.openInAlbum',
-                    {
-                      name: getCard(item.instance.playerId)?.displayName ?? item.instance.playerId,
-                    },
-                  )
+                  t('album.collectionControls.previewCard', {
+                    name: getCard(item.instance.playerId)?.displayName ?? item.instance.playerId,
+                  })
                 "
-                @click="openCardInAlbum(item)"
+                data-collection-card
+                @click="openCardPreview(item)"
               >
                 <img
                   v-if="getCard(item.instance.playerId)"
@@ -365,14 +376,8 @@ watch(
                 <span
                   class="mt-2 flex items-center justify-between border-t border-ink/10 pt-1.5 text-[10px] font-black uppercase tracking-wide text-ink/45 transition-colors group-hover:text-coral"
                 >
-                  {{
-                    t(
-                      startsAutomaticPreparation(item)
-                        ? 'album.collectionControls.prepareAction'
-                        : 'album.collectionControls.openInAlbumShort',
-                    )
-                  }}
-                  <i class="pi pi-arrow-right" aria-hidden="true" />
+                  {{ t('album.collectionControls.previewAction') }}
+                  <i class="pi pi-eye" aria-hidden="true" />
                 </span>
               </button>
             </div>
@@ -439,5 +444,13 @@ watch(
         </TabPanel>
       </TabPanels>
     </Tabs>
+
+    <StickerPreviewDialog
+      v-model:visible="isPreviewOpen"
+      :card="previewItem?.card"
+      :instance="previewItem?.instance"
+      @prepare="prepareCardInAlbum"
+      @remove="removeCard"
+    />
   </section>
 </template>

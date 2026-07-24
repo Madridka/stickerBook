@@ -103,6 +103,7 @@ const prioritizedTrayInstanceId: Ref<string | undefined> = ref(undefined)
 const focusedTrayInstanceId: Ref<string | undefined> = ref(undefined)
 let desktopMediaQuery: MediaQueryList | undefined
 let trayFocusTimer: number | undefined
+let collectionTargetFocusTimer: number | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
   '../../assets/game/wc-26/main/album/**/*.webp',
@@ -302,6 +303,10 @@ const removeCard = async (instanceId: string): Promise<void> => {
 
 // Открывает страницу выбранного игрока и подсвечивает единственную подходящую ячейку.
 const focusCardTarget = (playerId: string): void => {
+  if (collectionTargetFocusTimer !== undefined) {
+    window.clearTimeout(collectionTargetFocusTimer)
+    collectionTargetFocusTimer = undefined
+  }
   const albumSlotId: string = getCardAlbumSlotId(playerId)
   const pageIndex: number = pages.value.findIndex(({ geometry }): boolean =>
     geometry.slots.some((slot): boolean => slot.playerId === albumSlotId),
@@ -314,6 +319,10 @@ const focusCardTarget = (playerId: string): void => {
 }
 
 const clearCardTarget = (): void => {
+  if (collectionTargetFocusTimer !== undefined) {
+    window.clearTimeout(collectionTargetFocusTimer)
+    collectionTargetFocusTimer = undefined
+  }
   activeTargetId.value = undefined
 }
 
@@ -324,6 +333,11 @@ const applyCollectionCardLink = (): void => {
   if (typeof playerId !== 'string') return
 
   focusCardTarget(playerId)
+  const targetId: string = getCardAlbumSlotId(playerId)
+  collectionTargetFocusTimer = window.setTimeout((): void => {
+    if (activeTargetId.value === targetId) activeTargetId.value = undefined
+    collectionTargetFocusTimer = undefined
+  }, ALBUM_VIEW_CONFIG.collectionTargetFocusDurationMs)
   if (typeof instanceId !== 'string') return
 
   prioritizedTrayInstanceId.value = instanceId
@@ -462,6 +476,7 @@ onMounted((): void => {
 onBeforeUnmount((): void => {
   desktopMediaQuery?.removeEventListener('change', syncDesktopSpread)
   if (trayFocusTimer !== undefined) window.clearTimeout(trayFocusTimer)
+  if (collectionTargetFocusTimer !== undefined) window.clearTimeout(collectionTargetFocusTimer)
 })
 </script>
 

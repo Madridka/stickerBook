@@ -161,9 +161,7 @@ onBeforeUnmount((): void => {
         </div>
       </section>
 
-      <div
-        class="order-2 flex min-w-0 flex-col gap-3 lg:col-start-2 lg:row-start-2"
-      >
+      <div class="order-2 flex min-w-0 flex-col gap-3 lg:col-start-2 lg:row-start-2">
         <CurrentGoalCard :goal="recommendation" @action="navigate(recommendation.action.route)" />
 
         <section
@@ -179,9 +177,7 @@ onBeforeUnmount((): void => {
         </section>
       </div>
 
-      <div
-        class="order-3 min-w-0 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:min-h-0"
-      >
+      <div class="order-3 min-w-0 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:min-h-0">
         <section
           id="clicker"
           class="flex min-h-[20rem] flex-col items-center border border-ink/10 bg-white/20 p-3 transition-opacity sm:min-h-[24rem] lg:h-full lg:min-h-0"
@@ -230,7 +226,7 @@ onBeforeUnmount((): void => {
         <p v-if="!player.canClick" class="mb-2 text-xs text-ink/55">
           {{ t('home.quick.whileRecovering') }}
         </p>
-        <div class="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+        <div class="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1">
           <Button
             v-for="action in orderedQuickActions"
             :key="action.id"

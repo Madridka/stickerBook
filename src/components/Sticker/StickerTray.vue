@@ -11,9 +11,12 @@ interface Props {
   cards: StickerTrayItem[]
   highlightedInstanceId?: string
   autoPrepareInstanceId?: string
+  pageFilterActive?: boolean
+  pageFilterAvailable?: boolean
 }
 
 interface Emits {
+  'toggle-page-filter': []
   focus: [playerId: string]
   'clear-focus': []
   'auto-prepare-started': []
@@ -163,10 +166,26 @@ watch(
           {{ t('stickerTray.hint') }}
         </p>
       </div>
-      <span
-        class="shrink-0 text-xs font-bold text-ink/55 max-md:text-[0.55rem] max-md:leading-none"
-        >{{ cards.length }}</span
-      >
+      <div class="flex shrink-0 items-center gap-2 max-md:gap-1">
+        <button
+          v-if="pageFilterAvailable || pageFilterActive"
+          type="button"
+          class="rounded-full border px-3 py-1 text-[11px] font-black transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral max-md:px-2 max-md:py-0.5 max-md:text-[0.55rem]"
+          :class="
+            pageFilterActive
+              ? 'border-coral bg-coral text-paper hover:bg-coral/90'
+              : 'border-ink/20 bg-white/70 text-ink/70 hover:border-coral/60 hover:text-coral'
+          "
+          :aria-pressed="pageFilterActive"
+          @click="emit('toggle-page-filter')"
+        >
+          {{ t(pageFilterActive ? 'stickerTray.showAll' : 'stickerTray.showCurrentPage') }}
+        </button>
+        <span
+          class="text-xs font-bold text-ink/55 max-md:text-[0.55rem] max-md:leading-none"
+          >{{ cards.length }}</span
+        >
+      </div>
     </div>
 
     <div
@@ -192,7 +211,7 @@ watch(
       v-else-if="!isCollapsed"
       class="rounded border border-dashed border-ink/20 px-4 py-5 text-center text-sm text-ink/55 max-md:p-3 max-md:text-[0.7rem]"
     >
-      {{ t('stickerTray.empty') }}
+      {{ t(pageFilterActive ? 'stickerTray.emptyCurrentPage' : 'stickerTray.empty') }}
     </p>
   </section>
 

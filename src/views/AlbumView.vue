@@ -108,6 +108,7 @@ const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
 const isPreviewOpen: Ref<boolean> = ref(false)
 const prioritizedTrayInstanceId: Ref<string | undefined> = ref(undefined)
 const focusedTrayInstanceId: Ref<string | undefined> = ref(undefined)
+const isTrayPageFiltered: Ref<boolean> = ref(false)
 const autoPrepareInstanceId: ComputedRef<string | undefined> = computed((): string | undefined =>
   route.query.action === 'prepare' && typeof route.query.instance === 'string'
     ? route.query.instance
@@ -282,6 +283,11 @@ const showNextPlacedCard = async (slotId: string): Promise<void> => {
 
 const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[] => {
   if (PLACE_ALL_COLLECTED_CARDS) return []
+  const visiblePlayerIds: Set<string> = new Set(
+    visibleGeometries.value.flatMap(({ slots }: AlbumGeometryPage): string[] =>
+      slots.map(({ playerId }): string => playerId),
+    ),
+  )
   const items: StickerTrayItem[] = collection.items
     .filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location))
     .map(({ instance }): StickerTrayItem | undefined => {
@@ -289,6 +295,10 @@ const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[]
       return card ? { card, instance } : undefined
     })
     .filter((item: StickerTrayItem | undefined): item is StickerTrayItem => Boolean(item))
+    .filter(
+      ({ card }: StickerTrayItem): boolean =>
+        !isTrayPageFiltered.value || visiblePlayerIds.has(card.baseCardId ?? card.id),
+    )
 
   const focusedIndex: number = items.findIndex(
     ({ instance }: StickerTrayItem): boolean => instance.id === prioritizedTrayInstanceId.value,
@@ -602,6 +612,9 @@ onBeforeUnmount((): void => {
         :cards="trayCards"
         :highlighted-instance-id="focusedTrayInstanceId"
         :auto-prepare-instance-id="autoPrepareInstanceId"
+        :page-filter-active="isTrayPageFiltered"
+        :page-filter-available="visibleSlotTotal > 0"
+        @toggle-page-filter="isTrayPageFiltered = !isTrayPageFiltered"
         @auto-prepare-started="clearAutoPrepareAction"
         @focus="focusCardTarget"
         @clear-focus="clearCardTarget"

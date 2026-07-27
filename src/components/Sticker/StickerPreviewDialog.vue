@@ -22,12 +22,16 @@ const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
 const isFlipped: Ref<boolean> = ref(false)
+const isRemoveConfirmOpen: Ref<boolean> = ref(false)
 
 // Каждый новый просмотр начинает с лицевой стороны карточки.
 watch(
   (): boolean => props.visible,
   (visible: boolean): void => {
-    if (visible) isFlipped.value = false
+    if (visible) {
+      isFlipped.value = false
+      isRemoveConfirmOpen.value = false
+    }
   },
 )
 
@@ -37,9 +41,13 @@ const toggleFlip = (): void => {
 const close = (): void => {
   emit('update:visible', false)
 }
+const requestRemove = (): void => {
+  isRemoveConfirmOpen.value = true
+}
 const remove = (): void => {
   if (!props.instance) return
   emit('remove', props.instance)
+  isRemoveConfirmOpen.value = false
   close()
 }
 
@@ -100,16 +108,22 @@ const prepare = (): void => {
                   <strong class="mt-1 block text-xl leading-tight md:text-3xl">{{
                     card.displayName
                   }}</strong>
-                  <p class="mt-4 text-xs uppercase tracking-wide text-paper/55 md:mt-6 md:text-sm">
-                    {{ t('stickerPreview.quality') }}
-                  </p>
-                  <strong class="mt-1 block text-lg md:text-2xl">{{ instance.quality }}%</strong>
-                  <p
-                    class="mt-2 flex items-start gap-1.5 text-left text-[10px] leading-relaxed text-paper/70 md:text-xs"
-                  >
-                    <i class="pi pi-info-circle mt-0.5 shrink-0" aria-hidden="true" />
-                    <span>{{ t('stickerPreview.qualityDescription') }}</span>
-                  </p>
+                  <div class="mt-4 rounded-md bg-paper/10 p-2.5 md:mt-5 md:p-3">
+                    <div class="flex items-center justify-between gap-3">
+                      <span class="text-xs uppercase tracking-wide text-paper/55 md:text-sm">
+                        {{ t('stickerPreview.quality') }}
+                      </span>
+                      <strong class="text-lg leading-none md:text-2xl"
+                        >{{ instance.quality }}%</strong
+                      >
+                    </div>
+                    <p
+                      class="mt-1.5 flex items-start gap-1.5 text-left text-[10px] leading-snug text-paper/70 md:text-xs"
+                    >
+                      <i class="pi pi-info-circle mt-0.5 shrink-0" aria-hidden="true" />
+                      <span>{{ t('stickerPreview.qualityDescription') }}</span>
+                    </p>
+                  </div>
                   <p class="mt-3 text-xs uppercase tracking-wide text-paper/55 md:mt-5 md:text-sm">
                     {{ t('stickerPreview.status') }}
                   </p>
@@ -146,10 +160,39 @@ const prepare = (): void => {
         @click="prepare"
       />
       <Button
+        data-delete-card
         :label="t('stickerPreview.delete')"
         icon="pi pi-trash"
         severity="danger"
         outlined
+        type="button"
+        @click="requestRemove"
+      />
+    </div>
+  </Dialog>
+
+  <Dialog
+    v-model:visible="isRemoveConfirmOpen"
+    modal
+    :header="t('stickerPreview.deleteConfirmTitle')"
+    class="w-[min(92vw,28rem)]"
+  >
+    <p class="text-sm leading-relaxed text-ink/70">
+      {{ t('stickerPreview.deleteConfirmText') }}
+    </p>
+    <div class="mt-5 flex justify-end gap-2">
+      <Button
+        :label="t('app.cancel')"
+        severity="secondary"
+        text
+        type="button"
+        @click="isRemoveConfirmOpen = false"
+      />
+      <Button
+        data-confirm-delete
+        :label="t('stickerPreview.deleteConfirmAction')"
+        icon="pi pi-trash"
+        severity="danger"
         type="button"
         @click="remove"
       />

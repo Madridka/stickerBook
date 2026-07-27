@@ -47,6 +47,25 @@ export const useGoalsStore = defineStore('goals', () => {
         page.slots.filter((slot): boolean => occupiedSlotIds.has(slot.id)).length,
       ]),
     )
+    const completedPages: number = albumData.pages.filter(
+      (page): boolean =>
+        page.slots.length > 0 &&
+        page.slots.every((slot): boolean => occupiedSlotIds.has(slot.id)),
+    ).length
+    const teamSlotIds: Map<string, Set<string>> = new Map()
+    for (const page of albumData.pages) {
+      for (const slot of page.slots) {
+        const teamId: string | undefined = cardById.get(slot.playerId)?.teamId
+        if (!teamId) continue
+        const slots: Set<string> = teamSlotIds.get(teamId) ?? new Set<string>()
+        slots.add(slot.id)
+        teamSlotIds.set(teamId, slots)
+      }
+    }
+    const completedTeams: number = [...teamSlotIds.values()].filter(
+      (slotIds): boolean =>
+        slotIds.size > 0 && [...slotIds].every((slotId): boolean => occupiedSlotIds.has(slotId)),
+    ).length
     const rarities: GoalProgressContext['rarityCollected'] = {}
     let variantsCollected = 0
     for (const item of collection.items) {
@@ -72,6 +91,8 @@ export const useGoalsStore = defineStore('goals', () => {
       albumSlotsFilled: { [GOAL_ALBUM_ID]: occupiedSlotIds.size },
       albumProgress: { [GOAL_ALBUM_ID]: collection.albumProgress },
       albumPagesFilled: { [GOAL_ALBUM_ID]: pageProgress },
+      albumPagesCompleted: { [GOAL_ALBUM_ID]: completedPages },
+      albumTeamsCompleted: { [GOAL_ALBUM_ID]: completedTeams },
       rarityCollected: rarities,
       variantsCollected,
     }

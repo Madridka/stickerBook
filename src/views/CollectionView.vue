@@ -3,6 +3,7 @@ import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import cards from '@/data/wc-26/catalog'
+import albumContentsTeams from '@/data/wc-26/contents'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
 import { useGameGuideStore } from '@/stores/gameGuide'
@@ -13,9 +14,9 @@ import TabList from 'primevue/tablist'
 import TabPanel from 'primevue/tabpanel'
 import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
-import Select from 'primevue/select'
-import SelectButton from 'primevue/selectbutton'
+import Button from 'primevue/button'
 
+import CollectionControls from '@/components/Collection/CollectionControls.vue'
 import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
 import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 
@@ -33,6 +34,18 @@ interface CollectionSortOption {
   label: string
 }
 
+interface CollectionTeamOption {
+  value: string
+  label: string
+}
+
+interface DeletedCollectionItem extends CollectionItem {
+  deletedAt: number
+}
+
+const DAY_MS = 24 * 60 * 60 * 1000
+const DELETED_CARD_RETENTION_DAYS = 7
+
 const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
@@ -44,6 +57,11 @@ const collectionFilter: Ref<CollectionFilter> = ref(
   route.query.filter === 'ready' ? 'ready' : 'all',
 )
 const collectionSort: Ref<CollectionSort> = ref('status')
+const collectionTeamId: Ref<string> = ref(
+  albumContentsTeams.some(({ id }): boolean => id === route.query.team)
+    ? String(route.query.team)
+    : 'all',
+)
 const collectionFilters: CollectionFilter[] = ['all', 'ready', 'album']
 const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
 const isPreviewOpen: Ref<boolean> = ref(false)
@@ -98,12 +116,22 @@ const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionIte
   ),
 )
 
+// Ограничивает всю коллекцию выбранной сборной до применения статуса и сортировки.
+const teamFilteredItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
+  collectionTeamId.value === 'all'
+    ? collectedItems.value
+    : collectedItems.value.filter(
+        (item: CollectionItem): boolean =>
+          getCard(item.instance.playerId)?.teamId === collectionTeamId.value,
+      ),
+)
+
 const readyItemsCount: ComputedRef<number> = computed(
-  (): number => collectedItems.value.filter(isReadyToPlace).length,
+  (): number => teamFilteredItems.value.filter(isReadyToPlace).length,
 )
 const albumItemsCount: ComputedRef<number> = computed(
   (): number =>
-    collectedItems.value.filter(({ instance }): boolean => instance.location === 'album').length,
+    teamFilteredItems.value.filter(({ instance }): boolean => instance.location === 'album').length,
 )
 const collectionFilterOptions: ComputedRef<CollectionFilterOption[]> = computed(
   (): CollectionFilterOption[] =>
@@ -113,12 +141,34 @@ const collectionFilterOptions: ComputedRef<CollectionFilterOption[]> = computed(
         label: t(`album.collectionControls.${filter}`),
         count:
           filter === 'all'
-            ? collectedItems.value.length
+            ? teamFilteredItems.value.length
             : filter === 'ready'
               ? readyItemsCount.value
               : albumItemsCount.value,
       }),
     ),
+)
+const collectionTeamOptions: ComputedRef<CollectionTeamOption[]> = computed(
+  (): CollectionTeamOption[] => [
+    {
+      value: 'all',
+      label: t('album.collectionControls.teamOption', {
+        name: t('album.collectionControls.allTeams'),
+        count: collectedItems.value.length,
+      }),
+    },
+    ...albumContentsTeams.map(
+      ({ id, nameKey }): CollectionTeamOption => ({
+        value: id,
+        label: t('album.collectionControls.teamOption', {
+          name: t(nameKey),
+          count: collectedItems.value.filter(
+            (item: CollectionItem): boolean => getCard(item.instance.playerId)?.teamId === id,
+          ).length,
+        }),
+      }),
+    ),
+  ],
 )
 const collectionSortOptions: ComputedRef<CollectionSortOption[]> = computed(
   (): CollectionSortOption[] => [
@@ -128,7 +178,7 @@ const collectionSortOptions: ComputedRef<CollectionSortOption[]> = computed(
   ],
 )
 const visibleCollectionItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] => {
-  const filtered: CollectionItem[] = collectedItems.value.filter(
+  const filtered: CollectionItem[] = teamFilteredItems.value.filter(
     (item: CollectionItem): boolean => {
       if (collectionFilter.value === 'ready') return isReadyToPlace(item)
       if (collectionFilter.value === 'album') return item.instance.location === 'album'
@@ -154,13 +204,29 @@ const visibleCollectionItems: ComputedRef<CollectionItem[]> = computed((): Colle
 })
 
 // Сохраняет порядок журнала удаления и связывает его с исходными экземплярами карточек.
-const deletedItems: ComputedRef<CollectionItem[]> = computed((): CollectionItem[] =>
+const deletedItems: ComputedRef<DeletedCollectionItem[]> = computed((): DeletedCollectionItem[] =>
   deletedCards.items
-    .map(({ instanceId }): CollectionItem | undefined =>
-      collection.items.find(({ instance }): boolean => instance.id === instanceId),
-    )
-    .filter((item: CollectionItem | undefined): item is CollectionItem => Boolean(item)),
+    .map(({ instanceId, deletedAt }): DeletedCollectionItem | undefined => {
+      const item: CollectionItem | undefined = collection.items.find(
+        ({ instance }): boolean => instance.id === instanceId,
+      )
+      return item ? { ...item, deletedAt } : undefined
+    })
+    .filter(
+      (item: DeletedCollectionItem | undefined): item is DeletedCollectionItem => Boolean(item),
+    ),
 )
+
+const remainingRestoreDays = (deletedAt: number): number =>
+  Math.max(
+    1,
+    Math.ceil((deletedAt + DELETED_CARD_RETENTION_DAYS * DAY_MS - Date.now()) / DAY_MS),
+  )
+
+const restoreCard = async (instanceId: string): Promise<void> => {
+  await deletedCards.restoreCard(instanceId)
+  await collection.load()
+}
 
 // Подтверждает просмотр коллекции только после появления полученных карточек.
 watch(
@@ -260,51 +326,23 @@ watch(
             >
               <i class="pi pi-sparkles mt-0.5 text-lg text-coral" aria-hidden="true" />
               <div>
-                <strong class="block text-sm">{{ t('album.collectionControls.guideTitle') }}</strong>
+                <strong class="block text-sm">{{
+                  t('album.collectionControls.guideTitle')
+                }}</strong>
                 <p class="mt-0.5 text-xs leading-relaxed text-ink/65">
                   {{ t('album.collectionControls.guideText') }}
                 </p>
               </div>
             </aside>
 
-            <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
-              <SelectButton
-                v-model="collectionFilter"
-                :options="collectionFilterOptions"
-                option-label="label"
-                option-value="value"
-                size="small"
-                :allow-empty="false"
-                :aria-label="t('album.collectionControls.filterLabel')"
-              >
-                <template #option="{ option }">
-                  <span class="flex items-center gap-1 text-xs font-black">
-                    {{ option.label }}
-                    <span class="rounded-full bg-current/10 px-1 py-0.5 text-[10px]">
-                      {{ option.count }}
-                    </span>
-                  </span>
-                </template>
-              </SelectButton>
-
-              <label class="flex items-center gap-2 text-xs font-bold text-ink/55">
-                <span class="max-sm:sr-only">{{ t('album.collectionControls.sortLabel') }}</span>
-                <Select
-                  v-model="collectionSort"
-                  class="w-40 text-xs font-bold"
-                  :options="collectionSortOptions"
-                  size="small"
-                  option-label="label"
-                  option-value="value"
-                  :aria-label="t('album.collectionControls.sortLabel')"
-                  :pt="{
-                    option: {
-                      class: 'text-xs',
-                    },
-                  }"
-                />
-              </label>
-            </div>
+            <CollectionControls
+              v-model:filter="collectionFilter"
+              v-model:team="collectionTeamId"
+              v-model:sort="collectionSort"
+              :filter-options="collectionFilterOptions"
+              :team-options="collectionTeamOptions"
+              :sort-options="collectionSortOptions"
+            />
 
             <div
               v-if="visibleCollectionItems.length"
@@ -313,7 +351,7 @@ watch(
               <button
                 v-for="item in visibleCollectionItems"
                 :key="item.instance.id"
-                class="group border-2 bg-paper p-2 text-left transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral"
+                class="group relative border-2 bg-paper p-2 text-left transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral"
                 :class="
                   isReadyToPlace(item)
                     ? 'border-mint shadow-[4px_4px_0_rgb(var(--color-mint)/0.45)]'
@@ -328,56 +366,59 @@ watch(
                 data-collection-card
                 @click="openCardPreview(item)"
               >
+                <span
+                  class="absolute right-3 top-3 z-10 rounded bg-mint px-1.5 py-0.5 text-[10px] font-black shadow-sm"
+                >
+                  {{ item.instance.quality }}%
+                </span>
                 <img
                   v-if="getCard(item.instance.playerId)"
                   class="aspect-[2/3] w-full bg-white object-cover"
                   :src="getCard(item.instance.playerId)?.image"
                   :alt="getCard(item.instance.playerId)?.displayName"
                 />
-                <div class="mt-2 flex items-start justify-between gap-2">
-                  <div class="min-w-0">
-                    <p class="truncate text-sm font-black">
-                      {{ getCard(item.instance.playerId)?.displayName }}
-                    </p>
-                    <p
-                      class="mt-0.5 flex items-center gap-1 text-[11px] font-black"
+                <div class="mt-2 min-w-0">
+                  <p class="break-words text-sm font-black leading-tight">
+                    {{ getCard(item.instance.playerId)?.displayName }}
+                  </p>
+                  <p
+                    class="mt-1 flex min-w-0 items-center gap-0.5 whitespace-nowrap text-[9px] font-black leading-none sm:gap-1 sm:text-[11px]"
+                    :class="
+                      needsPreparation(item)
+                        ? 'text-coral'
+                        : isReadyToPlace(item)
+                          ? 'text-emerald-700'
+                          : 'text-amber-700'
+                    "
+                  >
+                    <i
+                      class="shrink-0"
                       :class="
                         needsPreparation(item)
-                          ? 'text-coral'
+                          ? 'pi pi-sparkles'
                           : isReadyToPlace(item)
-                            ? 'text-emerald-700'
-                            : 'text-amber-700'
+                            ? 'pi pi-send'
+                            : 'pi pi-check-circle'
                       "
-                    >
-                      <i
-                        :class="
-                          needsPreparation(item)
-                            ? 'pi pi-sparkles'
-                            : isReadyToPlace(item)
-                              ? 'pi pi-send'
-                              : 'pi pi-check-circle'
-                        "
-                      />
+                    />
+                    <span>
                       {{
                         t(
                           needsPreparation(item)
                             ? 'album.collectionControls.needsPreparationStatus'
                             : isReadyToPlace(item)
                               ? 'album.collectionControls.readyStatus'
-                            : 'album.collectionControls.albumStatus',
+                              : 'album.collectionControls.albumStatus',
                         )
                       }}
-                    </p>
-                  </div>
-                  <span class="rounded bg-mint px-1.5 py-0.5 text-[10px] font-black"
-                    >{{ item.instance.quality }}%</span
-                  >
+                    </span>
+                  </p>
                 </div>
                 <span
-                  class="mt-2 flex items-center justify-between border-t border-ink/10 pt-1.5 text-[10px] font-black uppercase tracking-wide text-ink/45 transition-colors group-hover:text-coral"
+                  class="mt-2 flex min-w-0 items-center justify-between gap-1 overflow-hidden whitespace-nowrap border-t border-ink/10 pt-1.5 text-[8px] font-black uppercase tracking-normal text-ink/45 transition-colors group-hover:text-coral sm:text-[10px] sm:tracking-wide"
                 >
-                  {{ t('album.collectionControls.previewAction') }}
-                  <i class="pi pi-eye" aria-hidden="true" />
+                  <span>{{ t('album.collectionControls.previewAction') }}</span>
+                  <i class="pi pi-eye shrink-0" aria-hidden="true" />
                 </span>
               </button>
             </div>
@@ -424,11 +465,26 @@ watch(
                   <p class="text-[11px] font-semibold text-ink/50">
                     {{ t('album.location.deleted') }}
                   </p>
+                  <p class="mt-0.5 text-[10px] font-semibold text-coral">
+                    {{
+                      t('album.restoreAvailable', {
+                        count: remainingRestoreDays(item.deletedAt),
+                      })
+                    }}
+                  </p>
                 </div>
                 <span class="rounded bg-ink/10 px-1.5 py-0.5 text-[10px] font-black"
                   >{{ item.instance.quality }}%</span
                 >
               </div>
+              <Button
+                class="mt-2 w-full"
+                :label="t('album.restoreCard')"
+                icon="pi pi-refresh"
+                size="small"
+                type="button"
+                @click="restoreCard(item.instance.id)"
+              />
             </article>
           </div>
           <div

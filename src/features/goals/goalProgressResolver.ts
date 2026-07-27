@@ -58,6 +58,14 @@ export const resolveRequirementProgress = (
         context.albumPagesFilled[requirement.albumId]?.[requirement.pageId] ?? 0
       target = requirement.target
       break
+    case 'album-pages-completed':
+      actualValue = context.albumPagesCompleted[requirement.albumId] ?? 0
+      target = requirement.target
+      break
+    case 'album-teams-completed':
+      actualValue = context.albumTeamsCompleted[requirement.albumId] ?? 0
+      target = requirement.target
+      break
     case 'rarity-collected':
       actualValue = context.rarityCollected[requirement.rarity] ?? 0
       target = requirement.target

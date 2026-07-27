@@ -121,7 +121,9 @@ onMounted(initializeOpening)
       <h1 class="mt-1 text-3xl font-black tracking-tight sm:text-5xl">
         {{ t('packOpening.complete') }}
       </h1>
-      <p class="mt-2 max-w-md text-sm text-ink/60">{{ t('packOpening.completeText') }}</p>
+      <p class="mt-2 max-w-md text-sm text-ink/60">
+        {{ t('packOpening.completeText', { count: rewardTotal }) }}
+      </p>
       <div class="mt-4 flex flex-wrap justify-center gap-2">
         <Button
           :label="t('packOpening.continue')"

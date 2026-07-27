@@ -23,6 +23,7 @@ const testState = vi.hoisted(() => ({
   deletedCards: {
     items: [],
     removeCard: vi.fn(),
+    restoreCard: vi.fn(),
   },
   gameGuide: {
     currentStep: undefined,
@@ -63,8 +64,7 @@ const mountCollection = () =>
         Tab: slotStub,
         TabPanels: slotStub,
         TabPanel: slotStub,
-        Select: true,
-        SelectButton: true,
+        CollectionControls: true,
         DuplicateExchangePanel: true,
         StickerPreviewDialog: {
           props: ['visible', 'card', 'instance'],

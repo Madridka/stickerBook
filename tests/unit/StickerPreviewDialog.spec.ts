@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import i18n from '@/plugins/usei18n/usei18n'
 import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 import type { CardDefinition, StickerInstance } from '@/types'
@@ -31,7 +31,13 @@ const mountDialog = () =>
           props: ['visible'],
           template: '<section v-if="visible"><slot /></section>',
         },
-        Button: true,
+        Button: {
+          inheritAttrs: false,
+          props: ['label'],
+          emits: ['click'],
+          template:
+            '<button type="button" v-bind="$attrs" @click="$emit(\'click\')">{{ label }}</button>',
+        },
       },
     },
   })
@@ -51,12 +57,21 @@ describe('StickerPreviewDialog', () => {
     expect(flipSurface.classes()).not.toContain('[transform:rotateY(180deg)]')
   })
 
-  it('объясняет значение качества и влияющие на него действия', () => {
+  it('компактно объясняет значение качества рядом с процентовкой', () => {
     const text = mountDialog().text()
 
-    expect(text).toContain('Это состояние экземпляра, а не его редкость')
-    expect(text).toContain('неточное совмещение')
-    expect(text).toContain('ошибки разглаживания')
-    expect(text).toContain('слишком далёкая вклейка')
+    expect(text).toContain('Состояние экземпляра')
+    expect(text).toContain('ошибках подготовки и вклейки')
+    expect(text).toContain('85%')
+  })
+
+  it('удаляет карточку только после подтверждения', async () => {
+    const wrapper = mountDialog()
+
+    await wrapper.get('[data-delete-card]').trigger('click')
+    expect(wrapper.emitted('remove')).toBeUndefined()
+
+    await wrapper.get('[data-confirm-delete]').trigger('click')
+    expect(wrapper.emitted('remove')).toEqual([[instance]])
   })
 })

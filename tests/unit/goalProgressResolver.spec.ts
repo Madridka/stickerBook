@@ -23,6 +23,8 @@ const context: GoalProgressContext = {
   albumSlotsFilled: { album: 12 },
   albumProgress: { album: 18 },
   albumPagesFilled: { album: { page: 10 } },
+  albumPagesCompleted: { album: 1 },
+  albumTeamsCompleted: { album: 4 },
   rarityCollected: { rare: 2 },
   variantsCollected: 1,
 }
@@ -37,6 +39,8 @@ const requirements: Array<Exclude<GoalRequirement, { type: 'goal-completed' }>> 
   { type: 'album-slots-filled', albumId: 'album', target: 10 },
   { type: 'album-progress', albumId: 'album', targetPercent: 10 },
   { type: 'album-page-filled', albumId: 'album', pageId: 'page', target: 10 },
+  { type: 'album-pages-completed', albumId: 'album', target: 1 },
+  { type: 'album-teams-completed', albumId: 'album', target: 4 },
   { type: 'minigames-completed', target: 1 },
   { type: 'duplicates-exchanged', target: 1 },
   { type: 'rarity-collected', rarity: 'rare', target: 1 },

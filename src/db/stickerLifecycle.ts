@@ -28,9 +28,7 @@ export const reconcileOrphanedDuplicates = async (): Promise<void> => {
       const cards: StickerInstance[] = await database.cards.toArray()
       const duplicates: StickerInstance[] = await database.duplicates.toArray()
       const activePlayerIds: Set<string> = new Set(
-        cards
-          .filter(({ location }): boolean => location !== 'deleted')
-          .map(({ playerId }): string => playerId),
+        cards.map(({ playerId }): string => playerId),
       )
 
       for (const duplicate of duplicates) {

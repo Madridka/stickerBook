@@ -88,7 +88,7 @@ const handleOpen = (): void => emit('open')
       <article
         class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-end overflow-hidden bg-ink p-3 text-paper shadow-[6px_6px_0_rgb(var(--color-coral)/0.42)] before:pointer-events-none before:absolute before:h-[42%] before:-rotate-[18deg] before:bg-coral/[.92] before:[inset:18%_-45%_auto_28%] before:content-[''] after:pointer-events-none after:absolute after:h-[12%] after:-rotate-[18deg] after:border-y after:border-paper/[.22] after:[inset:42%_-28%_auto_-38%] after:content-[''] sm:p-4"
       >
-        <div class="relative z-10 flex items-center justify-between gap-2">
+        <div class="relative z-20 flex shrink-0 items-start justify-between gap-2">
           <p class="text-[9px] font-black uppercase tracking-[0.2em] text-coral sm:text-[10px]">
             {{ t('shop.paidKicker') }}
           </p>
@@ -99,9 +99,11 @@ const handleOpen = (): void => emit('open')
           </span>
         </div>
 
-        <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-1 mt-10">
+        <div
+          class="relative z-10 flex min-h-0 flex-1 items-center justify-center overflow-hidden py-1"
+        >
           <div
-            class="relative flex aspect-[9/14] w-[min(78%,8.35rem)] -rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-gold)),rgb(var(--color-coral))_55%,#9e2e51)] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-['']"
+            class="relative flex aspect-[9/14] w-[min(58%,5.5rem)] -rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-gold)),rgb(var(--color-coral))_55%,#9e2e51)] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-[''] sm:w-[min(78%,8.35rem)]"
           >
             <span
               class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
@@ -136,7 +138,7 @@ const handleOpen = (): void => emit('open')
       <article
         class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-start overflow-hidden bg-mint p-3 text-ink shadow-[6px_6px_0_rgb(var(--color-gold)/0.55)] before:pointer-events-none before:absolute before:h-[58%] before:rotate-[22deg] before:bg-gold/[.78] before:[inset:-10%_-60%_auto_10%] before:content-[''] after:pointer-events-none after:absolute after:-right-[12%] after:top-[42%] after:aspect-square after:w-[70%] after:rounded-full after:border after:border-ink/[.14] after:shadow-[0_0_0_1rem_rgb(var(--color-paper)/0.12),0_0_0_2rem_rgb(var(--color-paper)/0.08)] after:content-[''] sm:p-4"
       >
-        <div class="relative z-10 flex items-center justify-between gap-2">
+        <div class="relative z-20 flex shrink-0 items-start justify-between gap-2">
           <p class="text-[9px] font-black uppercase tracking-[0.2em] text-ink/60 sm:text-[10px]">
             {{ t('shop.freeKicker') }}
           </p>
@@ -147,16 +149,18 @@ const handleOpen = (): void => emit('open')
           </span>
         </div>
 
-        <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center py-2">
+        <div
+          class="relative z-10 flex min-h-0 flex-1 items-center justify-center overflow-hidden py-1 sm:py-2"
+        >
           <div
-            class="relative flex aspect-[9/14] w-[min(78%,8.35rem)] rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-ink)),#284f58_60%,rgb(var(--color-coral)))] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-['']"
+            class="relative flex aspect-[9/14] w-[min(58%,5.5rem)] rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-ink)),#284f58_60%,rgb(var(--color-coral)))] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-[''] sm:w-[min(78%,8.35rem)]"
           >
             <span
               class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
               >{{ t('shop.free') }}</span
             >
             <strong
-              class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
+              class="relative z-[1] text-[clamp(.9rem,3.2vw,1.25rem)] font-[950] leading-none tracking-[-.06em] sm:text-[clamp(1rem,4vw,2.2rem)] sm:tracking-[-.08em]"
               >{{ t('shop.itemType') }}</strong
             >
             <span

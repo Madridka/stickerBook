@@ -40,6 +40,16 @@ export const PACK_CONFIGS = {
   },
 } satisfies Record<string, PackConfig>
 
+/** Настройки ротации и содержимого редких блистеров магазина. */
+export const RARE_SHOP_CONFIG = {
+  price: 80,
+  cardsPerPack: 4,
+  missingCardChance: 0.8,
+  offersPerRotation: 3,
+  rotationDurationMs: 4 * 60 * 60 * 1_000,
+  extensionDurationMs: 4 * 60 * 60 * 1_000,
+}
+
 /** Метаданные коллекции, используемые при загрузке и проверке каталогов команд. */
 export const COLLECTION_CONFIG = {
   // Идентификатор текущей коллекции карточек.

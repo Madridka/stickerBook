@@ -29,6 +29,8 @@ export type GoalRequirement =
   | { type: 'album-slots-filled'; albumId: string; target: number }
   | { type: 'album-progress'; albumId: string; targetPercent: number }
   | { type: 'album-page-filled'; albumId: string; pageId: string; target: number }
+  | { type: 'album-pages-completed'; albumId: string; target: number }
+  | { type: 'album-teams-completed'; albumId: string; target: number }
   | { type: 'minigames-completed'; target: number }
   | { type: 'duplicates-exchanged'; target: number }
   | { type: 'rarity-collected'; rarity: CardRarity; target: number }
@@ -78,6 +80,8 @@ export interface GoalProgressContext {
   albumSlotsFilled: Record<string, number>
   albumProgress: Record<string, number>
   albumPagesFilled: Record<string, Record<string, number>>
+  albumPagesCompleted: Record<string, number>
+  albumTeamsCompleted: Record<string, number>
   rarityCollected: Partial<Record<CardRarity, number>>
   variantsCollected: number
 }

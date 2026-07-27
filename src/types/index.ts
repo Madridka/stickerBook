@@ -35,6 +35,7 @@ export interface DeletedCard {
   instanceId: string
   playerId: string
   deletedAt: number
+  previousLocation?: Exclude<StickerLocation, 'deleted' | 'duplicate'>
 }
 
 export interface StickerPreparation {

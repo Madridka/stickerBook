@@ -10,6 +10,10 @@ import { purchasePack, type PurchasePackResult } from '@/services/economy'
 import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniGame'
 
 import ShopItem from '@/components/Shop/ShopItem.vue'
+import RareShopPanel from '@/components/Shop/RareShopPanel.vue'
+import SelectButton from 'primevue/selectbutton'
+
+type ShopCatalogSection = 'regular' | 'rare'
 
 const { t } = useI18n()
 const player = usePlayerStore()
@@ -18,6 +22,12 @@ const packHunt = usePackHuntStore()
 const router = useRouter()
 const isPurchasing: Ref<boolean> = ref(false)
 const hasPurchaseError: Ref<boolean> = ref(false)
+const activeCatalogSection: Ref<ShopCatalogSection> = ref('regular')
+const catalogSections: ComputedRef<Array<{ value: ShopCatalogSection; label: string }>> =
+  computed(() => [
+    { value: 'regular', label: t('shop.catalogSections.regular') },
+    { value: 'rare', label: t('shop.catalogSections.rare') },
+  ])
 const ownedPackIds: ComputedRef<string[]> = computed(() =>
   inventory.items.filter(({ type }) => type === 'pack').map(({ id }) => id),
 )
@@ -91,8 +101,20 @@ onMounted(async (): Promise<void> => {
     <!-- Краткое описание ассортимента -->
     <p class="mt-1 hidden text-xs text-ink/55 md:block">{{ t('shop.text') }}</p>
 
+    <SelectButton
+      v-model="activeCatalogSection"
+      class="mt-3 shrink-0 self-start"
+      :options="catalogSections"
+      option-label="label"
+      option-value="value"
+      :allow-empty="false"
+      size="small"
+      :aria-label="t('shop.catalogSections.ariaLabel')"
+    />
+
     <!-- Доступные товары магазина -->
     <ShopItem
+      v-if="activeCatalogSection === 'regular'"
       class="mt-3 sm:mt-4"
       :price="PACK_PRICE"
       :can-buy="player.coins >= PACK_PRICE"
@@ -105,7 +127,12 @@ onMounted(async (): Promise<void> => {
       @play="playPackHunt"
       @open="openOwnedPack"
     />
-    <p v-if="hasPurchaseError" class="mt-4 text-sm font-bold text-coral" role="alert">
+    <RareShopPanel v-else />
+    <p
+      v-if="activeCatalogSection === 'regular' && hasPurchaseError"
+      class="mt-4 text-sm font-bold text-coral"
+      role="alert"
+    >
       {{ t('shop.purchaseError') }}
     </p>
   </section>

@@ -31,6 +31,11 @@ const cardTeamLabel: ComputedRef<string> = computed((): string =>
     .trim()
     .toUpperCase(),
 )
+const cardMetaLabel: ComputedRef<string> = computed((): string =>
+  [props.card.cardNumber, props.card.kind === 'player' ? props.card.position : null]
+    .filter((value): value is string => value !== null)
+    .join(' · '),
+)
 
 // Сбрасывает состояние просмотра при переходе к следующей карточке
 watch(
@@ -93,11 +98,11 @@ const handleCardClick = (): void => {
           <p class="text-xs font-bold uppercase tracking-[0.14em] text-coral">
             {{ cardKindLabel }}
           </p>
-          <p class="mt-1 text-xl font-black leading-tight">{{ card.displayName }}</p>
-          <p
-            class="text-xs font-black uppercase tracking-[0.1em] text-ink/60"
-            data-card-team
-          >
+          <p class="mt-1 text-xl font-black leading-tight">
+            {{ card.displayName }}
+            <span class="text-sm text-ink/60">· {{ cardMetaLabel }}</span>
+          </p>
+          <p class="text-xs font-black uppercase tracking-[0.1em] text-ink/60" data-card-team>
             {{ cardTeamLabel }}
           </p>
           <p v-if="duplicate" class="mt-1 text-xs font-bold text-coral">

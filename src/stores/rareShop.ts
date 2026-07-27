@@ -7,7 +7,7 @@ import {
   type PackOpeningSession,
   type PlayerState,
 } from '@/db/database'
-import { CLICKER_CONFIG } from '@/data/mainConst'
+import { CLICKER_CONFIG, RARE_SHOP_CONFIG } from '@/data/mainConst'
 import { catalogs } from '@/data/wc-26/catalog'
 import type { NormalizedCardCatalog, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
@@ -34,8 +34,19 @@ export interface RareBlisterPurchaseResult {
   item?: InventoryItem
 }
 
+const getRareShopConfigSignature = (): string =>
+  JSON.stringify([
+    RARE_SHOP_CONFIG.price,
+    RARE_SHOP_CONFIG.cardsPerPack,
+    RARE_SHOP_CONFIG.missingCardChance,
+    RARE_SHOP_CONFIG.offersPerRotation,
+    RARE_SHOP_CONFIG.rotationDurationMs,
+    RARE_SHOP_CONFIG.extensionDurationMs,
+  ])
+
 const createDefaultState = (): RareShopState => ({
   id: 'current',
+  configSignature: getRareShopConfigSignature(),
   currentRotation: null,
   extendedOffers: [],
   extendedOffer: null,
@@ -124,6 +135,17 @@ export const useRareShopStore = defineStore('rareShop', () => {
           const saved: RareShopState | undefined = await database.rareShop.get('current')
           const activeCards: StickerInstance[] = await loadOwnedCards()
           let refreshed: RareShopState = normalizeState(saved)
+          const configSignature: string = getRareShopConfigSignature()
+          if (saved?.configSignature !== configSignature) {
+            refreshed = {
+              ...refreshed,
+              configSignature,
+              currentRotation: null,
+              extendedOffers: [],
+              extendedOffer: null,
+              extendedOfferId: null,
+            }
+          }
           const activeExtendedOffers: RareBlisterOffer[] = refreshed.extendedOffers.filter(
             (offer: RareBlisterOffer): boolean =>
               now < (offer.extendedUntil ?? offer.expiresAt),

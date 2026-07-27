@@ -24,6 +24,7 @@ export interface RareShopRotation {
 
 export interface RareShopState {
   id: 'current'
+  configSignature?: string
   currentRotation: RareShopRotation | null
   extendedOffers: RareBlisterOffer[]
   // Последнее продление сохраняется для совместимости с базовой формой состояния.

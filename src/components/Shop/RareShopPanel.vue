@@ -9,6 +9,7 @@ import {
 } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+import { RARE_SHOP_CONFIG } from '@/data/mainConst'
 import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
@@ -35,6 +36,8 @@ const now: Ref<number> = ref(Date.now())
 const showInfo: Ref<boolean> = ref(false)
 const errorKey: Ref<string | null> = ref(null)
 let timerId: ReturnType<typeof setInterval> | undefined
+const rotationDuration: string = formatCountdown(RARE_SHOP_CONFIG.rotationDurationMs)
+const extensionDuration: string = formatCountdown(RARE_SHOP_CONFIG.extensionDurationMs)
 
 const teamById: ReadonlyMap<string, AlbumContentsTeam> = new Map(
   albumContentsTeams.map(
@@ -146,7 +149,14 @@ onBeforeUnmount((): void => {
         <p class="text-xs font-black text-coral">
           {{ t('shop.rare.nextRotation', { time: rotationRemaining }) }}
         </p>
-        <p class="text-[11px] text-ink/55">{{ t('shop.rare.rotationHint') }}</p>
+        <p class="text-[11px] text-ink/55">
+          {{
+            t('shop.rare.rotationHint', {
+              count: RARE_SHOP_CONFIG.offersPerRotation,
+              time: rotationDuration,
+            })
+          }}
+        </p>
       </div>
       <Button
         :label="t('shop.rare.infoAction')"
@@ -225,9 +235,6 @@ onBeforeUnmount((): void => {
         </div>
 
         <div class="mt-auto pt-3">
-          <p class="mb-2 text-lg font-black">
-            {{ t('shop.rare.price', { price: offer.price }) }}
-          </p>
           <Button
             class="w-full"
             :label="
@@ -235,11 +242,12 @@ onBeforeUnmount((): void => {
                 ? t('shop.rare.purchased')
                 : statusFor(offer) === 'expired'
                   ? t('shop.rare.expired')
-                  : t('shop.rare.buy')
+                  : t('shop.rare.buyFor', { price: offer.price })
             "
             icon="pi pi-shopping-bag"
             :disabled="
               statusFor(offer) !== 'available' ||
+              player.coins < offer.price ||
               rareShop.pendingOfferId !== null
             "
             :loading="rareShop.pendingOfferId === offer.id"
@@ -255,7 +263,7 @@ onBeforeUnmount((): void => {
                 ? t('shop.rare.extensionUsed')
                 : offer.extendedUntil
                   ? t('shop.rare.extended')
-                  : t('shop.rare.extend')
+                  : t('shop.rare.extend', { time: extensionDuration })
             "
             icon="pi pi-hourglass"
             outlined
@@ -287,11 +295,23 @@ onBeforeUnmount((): void => {
     >
       <div class="space-y-3 text-sm leading-relaxed text-ink/70">
         <p>{{ t('shop.rare.infoParagraph1') }}</p>
-        <p>{{ t('shop.rare.infoParagraph2') }}</p>
-        <p>{{ t('shop.rare.infoParagraph3') }}</p>
-        <p>{{ t('shop.rare.infoParagraph4') }}</p>
-        <p>{{ t('shop.rare.infoParagraph5') }}</p>
-        <p>{{ t('shop.rare.infoParagraph6') }}</p>
+        <p>
+          {{
+            t('shop.rare.infoParagraph2', {
+              count: RARE_SHOP_CONFIG.cardsPerPack,
+            })
+          }}
+        </p>
+        <p>
+          {{
+            t('shop.rare.infoParagraph3', {
+              chance: RARE_SHOP_CONFIG.missingCardChance * 100,
+            })
+          }}
+        </p>
+        <p>{{ t('shop.rare.infoParagraph4', { time: rotationDuration }) }}</p>
+        <p>{{ t('shop.rare.infoParagraph5', { price: RARE_SHOP_CONFIG.price }) }}</p>
+        <p>{{ t('shop.rare.infoParagraph6', { time: extensionDuration }) }}</p>
       </div>
       <template #footer>
         <Button :label="t('shop.rare.infoConfirm')" type="button" @click="closeInfo" />

@@ -212,12 +212,14 @@ export const useRareShopStore = defineStore('rareShop', () => {
     try {
       const result = await database.transaction(
         'rw',
-        database.player,
-        database.inventory,
-        database.cards,
-        database.packOpeningSessions,
-        database.rareShop,
-        database.goalCounters,
+        [
+          database.player,
+          database.inventory,
+          database.cards,
+          database.packOpeningSessions,
+          database.rareShop,
+          database.goalCounters,
+        ],
         async (): Promise<RareBlisterPurchaseResult & { state?: RareShopState }> => {
           const saved: RareShopState = normalizeState(await database.rareShop.get('current'))
           const offers: RareBlisterOffer[] = [

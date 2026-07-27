@@ -134,8 +134,8 @@
     "minigameAvailable": "Мини-игра доступна",
     "exchange": "Обменять повторы",
     "album": "Продолжить журнал",
-    "albumProgress": "В журнал уже добавлены карточки",
-    "missionDone": "Цель выполнена",
-    "rewardIsReady": "Награда готова"
-  }
+    "albumProgress": "В журнал уже добавлены карточки"
+  },
+  "missionDone": "Цель выполнена",
+  "rewardIsReady": "Награда готова"
 }

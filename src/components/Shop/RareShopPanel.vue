@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import {
-  computed,
-  onBeforeUnmount,
-  onMounted,
-  ref,
-  type ComputedRef,
-  type Ref,
-} from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { RARE_SHOP_CONFIG } from '@/data/mainConst'
@@ -40,9 +33,7 @@ const rotationDuration: string = formatCountdown(RARE_SHOP_CONFIG.rotationDurati
 const extensionDuration: string = formatCountdown(RARE_SHOP_CONFIG.extensionDurationMs)
 
 const teamById: ReadonlyMap<string, AlbumContentsTeam> = new Map(
-  albumContentsTeams.map(
-    (team: AlbumContentsTeam): [string, AlbumContentsTeam] => [team.id, team],
-  ),
+  albumContentsTeams.map((team: AlbumContentsTeam): [string, AlbumContentsTeam] => [team.id, team]),
 )
 const visibleOffers: ComputedRef<RareBlisterOffer[]> = computed((): RareBlisterOffer[] => {
   const offers: RareBlisterOffer[] = [...rareShop.currentOffers]
@@ -102,9 +93,7 @@ const extendOffer = async (offer: RareBlisterOffer): Promise<void> => {
   const status: RareBlisterExtensionStatus = await rareShop.extendOffer(offer.id)
   if (status === 'extended') return
   errorKey.value =
-    status === 'already-used-today'
-      ? 'shop.rare.extensionUsed'
-      : 'shop.rare.extensionUnavailable'
+    status === 'already-used-today' ? 'shop.rare.extensionUsed' : 'shop.rare.extensionUnavailable'
 }
 
 const closeInfo = async (): Promise<void> => {
@@ -117,13 +106,9 @@ const updateClock = async (): Promise<void> => {
   now.value = Date.now()
   const rotationExpiresAt: number = rareShop.state.currentRotation?.expiresAt ?? 0
   const hasExpiredExtension: boolean = rareShop.extendedOffers.some(
-    (offer: RareBlisterOffer): boolean =>
-      now.value >= (offer.extendedUntil ?? offer.expiresAt),
+    (offer: RareBlisterOffer): boolean => now.value >= (offer.extendedUntil ?? offer.expiresAt),
   )
-  if (
-    (rotationExpiresAt > 0 && now.value >= rotationExpiresAt) ||
-    hasExpiredExtension
-  ) {
+  if ((rotationExpiresAt > 0 && now.value >= rotationExpiresAt) || hasExpiredExtension) {
     await rareShop.refresh(now.value)
   }
 }
@@ -144,7 +129,9 @@ onBeforeUnmount((): void => {
 <template>
   <section class="mt-3 flex min-h-0 flex-1 flex-col sm:mt-4" data-rare-shop>
     <!-- Заголовок ротации и повторный вызов справки -->
-    <div class="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-ink/10 pb-2">
+    <div
+      class="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-ink/10 pb-2"
+    >
       <div>
         <p class="text-xs font-black text-coral">
           {{ t('shop.rare.nextRotation', { time: rotationRemaining }) }}
@@ -222,7 +209,7 @@ onBeforeUnmount((): void => {
             {{ t('shop.rare.collectionComplete') }}
           </p>
           <p v-else class="font-black text-mint-700">
-            {{ t('shop.rare.missingChance', { chance: offer.missingCardChance * 100 }) }}
+            {{ t('shop.rare.missingChance') }}
           </p>
           <p class="font-bold tabular-nums">
             <i class="pi pi-clock mr-1" />
@@ -256,7 +243,10 @@ onBeforeUnmount((): void => {
             @click="buyOffer(offer)"
           />
           <Button
-            v-if="statusFor(offer) === 'available' && offer.rotationId === rareShop.state.currentRotation?.id"
+            v-if="
+              statusFor(offer) === 'available' &&
+              offer.rotationId === rareShop.state.currentRotation?.id
+            "
             class="mt-1.5 w-full"
             :label="
               extensionUsedToday
@@ -275,7 +265,10 @@ onBeforeUnmount((): void => {
         </div>
       </article>
     </div>
-    <div v-else class="flex min-h-52 flex-1 items-center justify-center text-sm font-bold text-ink/45">
+    <div
+      v-else
+      class="flex min-h-52 flex-1 items-center justify-center text-sm font-bold text-ink/45"
+    >
       <i class="pi pi-spin pi-spinner mr-2" />
       {{ t('shop.rare.loading') }}
     </div>
@@ -303,11 +296,7 @@ onBeforeUnmount((): void => {
           }}
         </p>
         <p>
-          {{
-            t('shop.rare.infoParagraph3', {
-              chance: RARE_SHOP_CONFIG.missingCardChance * 100,
-            })
-          }}
+          {{ t('shop.rare.infoParagraph3') }}
         </p>
         <p>{{ t('shop.rare.infoParagraph4', { time: rotationDuration }) }}</p>
         <p>{{ t('shop.rare.infoParagraph5', { price: RARE_SHOP_CONFIG.price }) }}</p>

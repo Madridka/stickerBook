@@ -129,11 +129,11 @@ watch(
 
 <template>
   <section
-    class="relative flex w-full shrink-0 flex-col overflow-visible border-t border-ink/15 bg-paper px-3 transition-[height,max-height,padding] duration-200 ease-out max-md:px-2"
+    class="sticker-tray relative flex w-full shrink-0 flex-col overflow-visible border-t border-ink/15 bg-paper px-3 transition-[height,max-height,padding] duration-200 ease-out max-md:px-2"
     :class="
       isCollapsed
-        ? 'h-11 max-h-11 justify-center py-0'
-        : 'h-52 max-h-52 pb-1 pt-3 max-md:h-[8.5rem] max-md:max-h-[8.5rem] max-md:pb-1 max-md:pt-2'
+        ? 'sticker-tray--collapsed h-11 max-h-11 justify-center py-0'
+        : 'sticker-tray--expanded h-52 max-h-52 pb-1 pt-3 max-md:pt-2'
     "
     :aria-label="t('stickerTray.title')"
   >
@@ -229,3 +229,22 @@ watch(
     @remove="emit('remove', $event.id)"
   />
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .sticker-tray {
+    --sticker-tray-safe-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    padding-bottom: var(--sticker-tray-safe-bottom);
+  }
+
+  .sticker-tray--expanded {
+    height: calc(8.5rem + var(--sticker-tray-safe-bottom));
+    max-height: calc(8.5rem + var(--sticker-tray-safe-bottom));
+  }
+
+  .sticker-tray--collapsed {
+    height: calc(2.75rem + var(--sticker-tray-safe-bottom));
+    max-height: calc(2.75rem + var(--sticker-tray-safe-bottom));
+  }
+}
+</style>

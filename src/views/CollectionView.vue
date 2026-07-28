@@ -22,7 +22,6 @@ import TabPanel from 'primevue/tabpanel'
 import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
 import Button from 'primevue/button'
-import SelectButton from 'primevue/selectbutton'
 
 import CollectionControls from '@/components/Collection/CollectionControls.vue'
 import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
@@ -283,47 +282,88 @@ watch(
 
 <template>
   <section class="flex h-full min-h-0 w-full flex-col">
-    <div class="flex shrink-0 items-center justify-between gap-3 pb-2">
+    <div class="flex shrink-0 items-center justify-between gap-2 pb-2 sm:gap-4">
       <div class="min-w-0">
         <p
           class="text-[10px] font-bold uppercase leading-none tracking-[0.16em] text-coral max-sm:hidden"
         >
           {{ t('app.collection') }}
         </p>
-        <h1 class="truncate text-2xl font-black leading-tight tracking-tight sm:mt-0.5 sm:text-3xl">
+        <h1
+          class="whitespace-nowrap text-xl font-black leading-tight tracking-tight sm:mt-0.5 sm:text-3xl"
+        >
           {{ t('album.collectionTitle') }}
         </h1>
         <p class="mt-0.5 hidden text-xs leading-tight text-ink/55 md:block">
           {{ t('album.collectionText') }}
         </p>
       </div>
-      <SelectButton
-        v-model="activeAlbumId"
-        class="shrink-0"
-        :options="albumOptions"
-        option-label="label"
-        option-value="value"
-        :allow-empty="false"
-        size="small"
-        :aria-label="t('album.collectionControls.albumLabel')"
-      />
       <div
-        class="flex shrink-0 gap-3 text-right text-[10px] font-semibold leading-tight text-ink/55 sm:gap-5 sm:text-xs"
+        class="flex shrink-0 gap-2 text-right text-[9px] font-semibold leading-tight text-ink/55 sm:gap-5 sm:text-xs"
       >
         <div>
-          <strong class="block text-xl font-black leading-none text-ink sm:text-2xl"
+          <strong class="block text-lg font-black leading-none text-ink sm:text-2xl"
             >{{ selectedProgress.collectedCards }} / {{ selectedProgress.totalCards }}</strong
           >
           {{ t('album.uniqueFound') }}
         </div>
         <div>
-          <strong class="block text-xl font-black leading-none text-coral sm:text-2xl">{{
+          <strong class="block text-lg font-black leading-none text-coral sm:text-2xl">{{
             selectedProgress.duplicateCards
           }}</strong>
           {{ t('album.duplicatesStored') }}
         </div>
       </div>
     </div>
+
+    <nav
+      class="mb-2 flex shrink-0 items-center gap-2 border-2 border-ink bg-paper p-2 shadow-[3px_3px_0_rgb(var(--color-coral)/0.45)] sm:mb-3 sm:gap-4 sm:p-3"
+      :aria-label="t('album.collectionControls.albumLabel')"
+    >
+      <div class="flex shrink-0 items-center gap-2">
+        <span
+          class="flex size-9 items-center justify-center bg-coral text-sm text-white sm:size-10"
+          aria-hidden="true"
+        >
+          <i class="pi pi-book" />
+        </span>
+        <div class="hidden sm:block">
+          <p class="text-[10px] font-black uppercase tracking-[0.16em] text-coral">
+            {{ t('album.collectionControls.albumSwitchTitle') }}
+          </p>
+          <p class="text-xs font-semibold text-ink/55">
+            {{ t('album.collectionControls.albumSwitchHint') }}
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="grid min-w-0 flex-1 grid-cols-2 gap-1.5 sm:ml-auto sm:max-w-md sm:gap-2"
+        role="radiogroup"
+      >
+        <button
+          v-for="album in albumOptions"
+          :key="album.value"
+          class="flex min-w-0 items-center justify-center gap-1.5 border-2 px-2 py-2 text-sm font-black transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral sm:px-4 sm:py-2.5"
+          :class="
+            activeAlbumId === album.value
+              ? 'border-ink bg-ink text-paper shadow-[2px_2px_0_rgb(var(--color-coral)/0.65)]'
+              : 'border-ink/15 bg-ink/[.04] text-ink hover:border-coral hover:bg-coral/10'
+          "
+          type="button"
+          role="radio"
+          :aria-checked="activeAlbumId === album.value"
+          @click="activeAlbumId = album.value"
+        >
+          <i
+            class="shrink-0 text-xs"
+            :class="activeAlbumId === album.value ? 'pi pi-check-circle' : 'pi pi-circle'"
+            aria-hidden="true"
+          />
+          <span class="truncate">{{ album.label }}</span>
+        </button>
+      </div>
+    </nav>
 
     <Tabs v-model:value="activeTab" class="flex min-h-0 flex-1 flex-col">
       <TabList class="shrink-0">

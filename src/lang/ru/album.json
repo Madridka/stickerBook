@@ -27,6 +27,8 @@
     "album": "Вклеенные",
     "teamLabel": "Фильтр по сборной",
     "albumLabel": "Выбранный журнал",
+    "albumSwitchTitle": "Журнал",
+    "albumSwitchHint": "Выберите коллекцию",
     "allTeams": "Все сборные",
     "teamOption": "{name} ({count})",
     "sortLabel": "Сортировка",

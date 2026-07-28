@@ -96,11 +96,11 @@ const handleOpen = (): void => emit('open')
 
     <div
       v-if="activeSection === 'store'"
-      class="mt-3 grid min-h-0 flex-1 grid-cols-3 place-content-center gap-2 sm:mt-4 sm:gap-4"
+      class="shop-items-grid mt-3 grid min-h-0 flex-1 grid-flow-col auto-cols-[9.25rem] grid-cols-none place-content-start gap-3 overflow-x-auto px-1 pb-2 sm:mt-4 sm:grid-flow-row sm:auto-cols-auto sm:grid-cols-3 sm:place-content-center sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0"
       role="tabpanel"
     >
       <article
-        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-end overflow-hidden bg-ink p-3 text-paper shadow-[6px_6px_0_rgb(var(--color-coral)/0.42)] before:pointer-events-none before:absolute before:h-[42%] before:-rotate-[18deg] before:bg-coral/[.92] before:[inset:18%_-45%_auto_28%] before:content-[''] after:pointer-events-none after:absolute after:h-[12%] after:-rotate-[18deg] after:border-y after:border-paper/[.22] after:[inset:42%_-28%_auto_-38%] after:content-[''] sm:p-4"
+        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] snap-start flex-col justify-self-end overflow-hidden bg-ink p-3 text-paper shadow-[4px_4px_0_rgb(var(--color-coral)/0.42)] before:pointer-events-none before:absolute before:h-[42%] before:-rotate-[18deg] before:bg-coral/[.92] before:[inset:18%_-45%_auto_28%] before:content-[''] after:pointer-events-none after:absolute after:h-[12%] after:-rotate-[18deg] after:border-y after:border-paper/[.22] after:[inset:42%_-28%_auto_-38%] after:content-[''] sm:p-4 sm:shadow-[6px_6px_0_rgb(var(--color-coral)/0.42)]"
       >
         <div class="relative z-20 flex shrink-0 items-start justify-between gap-2">
           <p class="text-[9px] font-black uppercase tracking-[0.2em] text-coral sm:text-[10px]">
@@ -138,7 +138,7 @@ const handleOpen = (): void => emit('open')
             {{ t('shop.paidDescription') }}
           </p>
           <Button
-            class="mt-2 w-full !border-paper !bg-paper !text-ink text-[11px] hover:!border-coral hover:!bg-coral hover:!text-white sm:mt-3 sm:text-sm"
+            class="shop-card-button mt-2 w-full !border-paper !bg-paper !text-ink hover:!border-coral hover:!bg-coral hover:!text-white sm:mt-3 sm:text-sm"
             :label="t('shop.buyFor', { price: formattedPrice })"
             icon="pi pi-shopping-bag"
             :disabled="!canBuy || purchasing"
@@ -150,7 +150,7 @@ const handleOpen = (): void => emit('open')
       </article>
 
       <article
-        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-start overflow-hidden bg-[linear-gradient(160deg,#192c52,#5e285d_58%,#d65735)] p-3 text-paper shadow-[6px_6px_0_rgb(var(--color-gold)/0.5)] sm:p-4"
+        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] snap-start flex-col justify-self-start overflow-hidden bg-[linear-gradient(160deg,#192c52,#5e285d_58%,#d65735)] p-3 text-paper shadow-[4px_4px_0_rgb(var(--color-gold)/0.5)] sm:p-4 sm:shadow-[6px_6px_0_rgb(var(--color-gold)/0.5)]"
       >
         <div class="relative z-10 flex items-start justify-between gap-2">
           <p class="text-[9px] font-black uppercase tracking-[0.2em] text-gold sm:text-[10px]">
@@ -180,7 +180,7 @@ const handleOpen = (): void => emit('open')
             }}
           </p>
           <Button
-            class="mt-2 w-full !border-paper !bg-paper !text-ink text-[11px] hover:!border-gold hover:!bg-gold sm:mt-3 sm:text-sm"
+            class="shop-card-button mt-2 w-full !border-paper !bg-paper !text-ink hover:!border-gold hover:!bg-gold sm:mt-3 sm:text-sm"
             :label="t('shop.buyFor', { price: formattedKdvPrice })"
             icon="pi pi-gift"
             :disabled="
@@ -194,7 +194,7 @@ const handleOpen = (): void => emit('open')
       </article>
 
       <article
-        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-start overflow-hidden bg-mint p-3 text-ink shadow-[6px_6px_0_rgb(var(--color-gold)/0.55)] before:pointer-events-none before:absolute before:h-[58%] before:rotate-[22deg] before:bg-gold/[.78] before:[inset:-10%_-60%_auto_10%] before:content-[''] after:pointer-events-none after:absolute after:-right-[12%] after:top-[42%] after:aspect-square after:w-[70%] after:rounded-full after:border after:border-ink/[.14] after:shadow-[0_0_0_1rem_rgb(var(--color-paper)/0.12),0_0_0_2rem_rgb(var(--color-paper)/0.08)] after:content-[''] sm:p-4"
+        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] snap-start flex-col justify-self-start overflow-hidden bg-mint p-3 text-ink shadow-[4px_4px_0_rgb(var(--color-gold)/0.55)] before:pointer-events-none before:absolute before:h-[58%] before:rotate-[22deg] before:bg-gold/[.78] before:[inset:-10%_-60%_auto_10%] before:content-[''] after:pointer-events-none after:absolute after:-right-[12%] after:top-[42%] after:aspect-square after:w-[70%] after:rounded-full after:border after:border-ink/[.14] after:shadow-[0_0_0_1rem_rgb(var(--color-paper)/0.12),0_0_0_2rem_rgb(var(--color-paper)/0.08)] after:content-[''] sm:p-4 sm:shadow-[6px_6px_0_rgb(var(--color-gold)/0.55)]"
       >
         <div class="relative z-20 flex shrink-0 items-start justify-between gap-2">
           <p class="text-[9px] font-black uppercase tracking-[0.2em] text-ink/60 sm:text-[10px]">
@@ -240,7 +240,7 @@ const handleOpen = (): void => emit('open')
             }}
           </p>
           <Button
-            class="mt-2 w-full text-[11px] sm:mt-3 sm:text-sm"
+            class="shop-card-button mt-2 w-full sm:mt-3 sm:text-sm"
             :label="t('shop.getFree')"
             icon="pi pi-bolt"
             :disabled="!miniGameLoaded || cooldownRemainingMs > 0"
@@ -334,3 +334,36 @@ const handleOpen = (): void => emit('open')
     </section>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 639px) {
+  .shop-items-grid {
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .shop-items-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shop-card-button {
+    min-height: 2rem;
+    gap: 0.25rem;
+    padding: 0.4rem 0.45rem;
+    font-size: 0.625rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .shop-card-button :deep(.p-button-label) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .shop-card-button :deep(.p-button-icon) {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+  }
+}
+</style>

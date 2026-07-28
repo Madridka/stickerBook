@@ -6,6 +6,26 @@ import type { DeletedCard, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 
 const DELETED_CARD_RETENTION_MS = 7 * 24 * 60 * 60 * 1000
+const RESTORED_CARD_QUALITY = 90
+
+const normalizeRestoredCard = (
+  instance: StickerInstance,
+  location: 'inventory' | 'duplicate',
+): StickerInstance => {
+  const restored: StickerInstance = {
+    ...instance,
+    quality: RESTORED_CARD_QUALITY,
+    location,
+    preparation: {
+      quality: RESTORED_CARD_QUALITY,
+      alignmentX: 0,
+      alignmentY: 0,
+    },
+  }
+  delete restored.placement
+  delete restored.isAlbumDisplay
+  return restored
+}
 
 export const useDeletedCardsStore = defineStore('deletedCards', () => {
   const items: Ref<DeletedCard[]> = ref([])
@@ -117,16 +137,11 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
           .first()
 
         if (activeCard) {
-          const restoredDuplicate: StickerInstance = { ...instance, location: 'duplicate' }
-          delete restoredDuplicate.placement
-          delete restoredDuplicate.preparation
-          delete restoredDuplicate.isAlbumDisplay
+          const restoredDuplicate: StickerInstance = normalizeRestoredCard(instance, 'duplicate')
           await database.cards.delete(instanceId)
           await database.duplicates.put(restoredDuplicate)
         } else {
-          await database.cards.update(instanceId, {
-            location: deletedCard.previousLocation ?? 'inventory',
-          })
+          await database.cards.put(normalizeRestoredCard(instance, 'inventory'))
         }
         await database.deletedCards.delete(deletedCard.id)
       },

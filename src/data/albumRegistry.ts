@@ -388,7 +388,11 @@ const validateAlbum = (album: AlbumDefinition): void => {
     }
   }
   for (const spread of album.spreads) {
-    if (spread.pageIds.some((pageId) => !pageIds.includes(pageId))) {
+    if (
+      spread.pageIds.some(
+        (pageId): boolean => pageId !== undefined && !pageIds.includes(pageId),
+      )
+    ) {
       throw new Error(`${album.id}: spread ${spread.id} references unknown page`)
     }
   }

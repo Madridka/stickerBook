@@ -102,29 +102,29 @@ const visibleTeamPages = [
 }))
 
 export default {
-  id: 'world-cup-2026',
+  id: 'wc-26',
   stickerRatio: { width: 2, height: 3 },
   pages: [
     {
-      id: 'project-cover',
+      id: 'wc26-cover',
       number: 1,
-      image: 'info/cover.webp',
+      image: 'info/wc26-cover.png',
       width: 1536,
       height: 1200,
       slots: [],
     },
     {
-      id: 'project-info',
+      id: 'wc26-hosts',
       number: 2,
-      image: 'info/info-left.webp',
+      image: 'info/wc26-info-left.png',
       width: 1536,
       height: 1200,
       slots: [],
     },
     {
-      id: 'project-changelog',
+      id: 'wc26-format',
       number: 3,
-      image: 'info/info-right.webp',
+      image: 'info/wc26-info-right.png',
       width: 1536,
       height: 1200,
       slots: [],

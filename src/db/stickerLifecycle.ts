@@ -1,12 +1,14 @@
 import { database } from '@/db/database'
 import type { StickerInstance } from '@/types'
+import type { AlbumId } from '@/types'
 
 export const promoteDuplicate = async (
+  albumId: AlbumId,
   playerId: string,
 ): Promise<StickerInstance | undefined> => {
   const duplicate: StickerInstance | undefined = await database.duplicates
-    .where('playerId')
-    .equals(playerId)
+    .where('[albumId+playerId]')
+    .equals([albumId, playerId])
     .first()
   if (!duplicate) return undefined
 
@@ -27,14 +29,18 @@ export const reconcileOrphanedDuplicates = async (): Promise<void> => {
     async (): Promise<void> => {
       const cards: StickerInstance[] = await database.cards.toArray()
       const duplicates: StickerInstance[] = await database.duplicates.toArray()
-      const activePlayerIds: Set<string> = new Set(
-        cards.map(({ playerId }): string => playerId),
+      const activeCardKeys: Set<string> = new Set(
+        cards.map(({ albumId, playerId }): string => `${albumId}:${playerId}`),
       )
 
       for (const duplicate of duplicates) {
-        if (activePlayerIds.has(duplicate.playerId)) continue
-        const promoted: StickerInstance | undefined = await promoteDuplicate(duplicate.playerId)
-        if (promoted) activePlayerIds.add(promoted.playerId)
+        const cardKey: string = `${duplicate.albumId}:${duplicate.playerId}`
+        if (activeCardKeys.has(cardKey)) continue
+        const promoted: StickerInstance | undefined = await promoteDuplicate(
+          duplicate.albumId,
+          duplicate.playerId,
+        )
+        if (promoted) activeCardKeys.add(cardKey)
       }
     },
   )

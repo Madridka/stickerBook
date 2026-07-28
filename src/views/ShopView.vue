@@ -5,8 +5,14 @@ import { useRouter } from 'vue-router'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
-import { PACK_PRICE } from '@/data/mainConst'
-import { purchasePack, type PurchasePackResult } from '@/services/economy'
+import { useBlistersStore } from '@/stores/blisters'
+import { BLISTER_CONFIGS, CARDS_PER_PACK, PACK_PRICE } from '@/data/mainConst'
+import { getAlbumById, getBlisterById } from '@/data/albumRegistry'
+import {
+  purchaseBlister,
+  type PurchaseBlisterResult,
+} from '@/services/economy'
+import type { BlisterDefinition } from '@/types'
 import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniGame'
 
 import ShopItem from '@/components/Shop/ShopItem.vue'
@@ -19,8 +25,14 @@ const { t } = useI18n()
 const player = usePlayerStore()
 const inventory = useInventoryStore()
 const packHunt = usePackHuntStore()
+const blisters = useBlistersStore()
+const standardBlister: BlisterDefinition | undefined = getBlisterById(
+  BLISTER_CONFIGS.standard.id,
+)
+const kdvBlister: BlisterDefinition | undefined = getBlisterById('kdv')
 const router = useRouter()
 const isPurchasing: Ref<boolean> = ref(false)
+const isPurchasingKdv: Ref<boolean> = ref(false)
 const hasPurchaseError: Ref<boolean> = ref(false)
 const activeCatalogSection: Ref<ShopCatalogSection> = ref('regular')
 const catalogSections: ComputedRef<Array<{ value: ShopCatalogSection; label: string }>> =
@@ -31,17 +43,38 @@ const catalogSections: ComputedRef<Array<{ value: ShopCatalogSection; label: str
 const ownedPackIds: ComputedRef<string[]> = computed(() =>
   inventory.items.filter(({ type }) => type === 'pack').map(({ id }) => id),
 )
+const ownedPackDetails: ComputedRef<
+  Record<string, { label: string; cardCount: number }>
+> = computed(() =>
+  Object.fromEntries(
+    inventory.items
+      .filter(({ type }) => type === 'pack')
+      .map((item): [string, { label: string; cardCount: number }] => {
+        const blister = getBlisterById(item.packId ?? BLISTER_CONFIGS.standard.id)
+        const album = getAlbumById(
+          item.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
+        )
+        return [
+          item.id,
+          {
+            label: album ? t(album.shortName) : t('shop.wc-26'),
+            cardCount: blister?.cardCount ?? CARDS_PER_PACK,
+          },
+        ]
+      }),
+  ),
+)
 
 // Покупает пак одной транзакцией и синхронизирует UI только после её фиксации.
 const buyPack = async (): Promise<void> => {
-  if (isPurchasing.value || player.coins < PACK_PRICE) return
+  if (!standardBlister || isPurchasing.value || player.coins < standardBlister.cost) return
 
   isPurchasing.value = true
   hasPurchaseError.value = false
   try {
     try {
       await player.flushSaves()
-      const result: PurchasePackResult = await purchasePack(PACK_PRICE)
+      const result: PurchaseBlisterResult = await purchaseBlister(standardBlister.id)
       if (result.status !== 'purchased') {
         if (result.player) player.applyPersistedState(result.player)
         hasPurchaseError.value = true
@@ -50,14 +83,45 @@ const buyPack = async (): Promise<void> => {
 
       player.applyPersistedState(result.player)
       inventory.applyPersistedItem(result.item)
+      await router.push({ name: 'pack-opening', query: { pack: result.item.id } })
     } catch {
       hasPurchaseError.value = true
       return
     }
-
-    await router.push({ name: 'pack-opening' })
   } finally {
     isPurchasing.value = false
+  }
+}
+
+// Покупает КДВ-блистер вместе с неизменяемой сессией и запуском кулдауна.
+const buyKdvBlister = async (): Promise<void> => {
+  if (
+    !kdvBlister ||
+    isPurchasingKdv.value ||
+    player.coins < kdvBlister.cost ||
+    blisters.getCooldownRemainingMs(kdvBlister.id) > 0
+  ) {
+    return
+  }
+  isPurchasingKdv.value = true
+  hasPurchaseError.value = false
+  try {
+    await player.flushSaves()
+    const result: PurchaseBlisterResult = await purchaseBlister(kdvBlister.id)
+    if (result.status !== 'purchased') {
+      if (result.player) player.applyPersistedState(result.player)
+      hasPurchaseError.value = result.status !== 'cooldown'
+      await blisters.load()
+      return
+    }
+    player.applyPersistedState(result.player)
+    inventory.applyPersistedItem(result.item)
+    await blisters.load()
+    await router.push({ name: 'pack-opening', query: { pack: result.item.id } })
+  } catch {
+    hasPurchaseError.value = true
+  } finally {
+    isPurchasingKdv.value = false
   }
 }
 
@@ -73,7 +137,7 @@ const openOwnedPack = async (): Promise<void> => {
 }
 
 onMounted(async (): Promise<void> => {
-  await Promise.all([packHunt.load(), inventory.load()])
+  await Promise.all([packHunt.load(), inventory.load(), blisters.load()])
 })
 </script>
 
@@ -122,8 +186,18 @@ onMounted(async (): Promise<void> => {
       :cooldown-remaining-ms="packHunt.cooldownRemainingMs"
       :mini-game-loaded="packHunt.isLoaded"
       :owned-pack-ids="ownedPackIds"
+      :owned-pack-details="ownedPackDetails"
       :inventory-loaded="inventory.isLoaded"
+      :kdv-price="kdvBlister?.cost ?? 0"
+      :kdv-can-buy="Boolean(kdvBlister) && player.coins >= (kdvBlister?.cost ?? Infinity)"
+      :kdv-purchasing="isPurchasingKdv"
+      :kdv-cooldown-remaining-ms="
+        kdvBlister ? blisters.getCooldownRemainingMs(kdvBlister.id) : 0
+      "
+      :kdv-loaded="blisters.isLoaded"
+      :kdv-card-count="kdvBlister?.cardCount ?? 0"
       @purchase="buyPack"
+      @purchase-kdv="buyKdvBlister"
       @play="playPackHunt"
       @open="openOwnedPack"
     />

@@ -1,0 +1,38 @@
+import type {
+  CardFinish,
+  CardKind,
+  CardRarity,
+  CardSeries,
+  CoachRole,
+  PlayerPosition,
+} from './cardCatalog'
+
+export interface PackConfig {
+  cardsPerPack: number
+  rarityOdds: Record<CardRarity, number>
+}
+
+export interface BlisterConfig extends PackConfig {
+  id: string
+  albumId: string
+  titleKey: string
+  cost: number
+  cooldownMs: number
+  poolId: string
+}
+
+export interface CardCatalogConfig {
+  schemaVersion: 2
+  kinds: CardKind[]
+  positions: PlayerPosition[]
+  coachRoles: CoachRole[]
+  rarities: CardRarity[]
+  series: CardSeries[]
+  finishes: CardFinish[]
+  defaults: {
+    rarity: CardRarity
+    series: CardSeries
+    finish: CardFinish
+    selectionWeight: number
+  }
+}

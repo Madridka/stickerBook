@@ -10,15 +10,19 @@ import {
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
-import { ALBUM_VIEW_CONFIG, PLACE_ALL_COLLECTED_CARDS } from '@/data/mainConst'
-import cards from '@/data/wc-26/catalog'
-import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
+import {
+  ALBUM_VIEW_CONFIG,
+  BLISTER_CONFIGS,
+  PLACE_ALL_COLLECTED_CARDS,
+} from '@/data/mainConst'
+import { getAlbumById, requireAlbum } from '@/data/albumRegistry'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
-import projectReadme from '../../README.md?raw'
-import projectLogo from '../../assets/game/wc-26/main/sticker-book-logo.png?url'
 import type {
+  AlbumContentsItem,
+  AlbumDefinition,
+  AlbumEditorialPageDefinition,
   AlbumGeometryPage,
   CollectionItem,
   CardDefinition,
@@ -72,11 +76,6 @@ const parseReleaseNotes = (markdown: string): AlbumReleaseNote[] => {
   })
 }
 
-const projectIntro: string = toPlainText(
-  projectReadme
-    .split(/\r?\n/)
-    .find((line: string): boolean => Boolean(line.trim()) && !line.startsWith('#')) ?? '',
-)
 const allReleaseNotes: AlbumReleaseNote[] = parseReleaseNotes(changelogMarkdown)
 const latestReleaseSeries: string =
   allReleaseNotes[0]?.version.split('.').slice(0, 2).join('.') ?? '0.0'
@@ -89,12 +88,31 @@ const recentReleaseNotes: AlbumReleaseNote[] = [
     ({ version }: AlbumReleaseNote): boolean => !version.startsWith(`${latestReleaseSeries}.`),
   ),
 ].slice(0, ALBUM_VIEW_CONFIG.recentReleaseCount)
-const { contentsPageSize, contentsFirstPage, contentsLastPage } = ALBUM_VIEW_CONFIG
 
 const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
 const album = useAlbumStore()
+const requestedAlbumId: string =
+  typeof route.params.albumId === 'string'
+    ? route.params.albumId
+    : BLISTER_CONFIGS.standard.albumId
+const albumDefinition: AlbumDefinition =
+  getAlbumById(requestedAlbumId) ?? requireAlbum(BLISTER_CONFIGS.standard.albumId)
+album.selectAlbum(albumDefinition.id)
+const cards: CardDefinition[] = albumDefinition.cards
+const albumContentsTeams: AlbumContentsItem[] = albumDefinition.contents
+const editorialPages: Record<string, AlbumEditorialPageDefinition> = Object.fromEntries(
+  albumDefinition.editorialPages.map(
+    (page): [string, AlbumEditorialPageDefinition] => [page.pageId, page],
+  ),
+)
+const contentsPageSize: number =
+  albumDefinition.layout.contentsPageSize ?? ALBUM_VIEW_CONFIG.contentsPageSize
+const contentsFirstPage: number =
+  albumDefinition.layout.contentsFirstPage ?? Number.MAX_SAFE_INTEGER
+const contentsLastPage: number =
+  albumDefinition.layout.contentsLastPage ?? Number.MIN_SAFE_INTEGER
 const collection = useCollectionStore()
 const deletedCards = useDeletedCardsStore()
 const currentPage: Ref<number> = ref(0)
@@ -119,7 +137,10 @@ let trayFocusTimer: number | undefined
 let collectionTargetFocusTimer: number | undefined
 
 const albumImages: Record<string, string> = import.meta.glob(
-  '../../assets/game/wc-26/main/album/**/*.webp',
+  [
+    '../../assets/game/*/main/album/**/*.webp',
+    '../../assets/game/*/main/album/**/*.png',
+  ],
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
 
@@ -127,8 +148,14 @@ const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
   album.pages.map(
     (page: AlbumGeometryPage): AlbumPageView => ({
       id: page.id,
-      title: t('album.spreadTitle', { page: String(page.number).padStart(2, '0') }),
-      image: albumImages[`../../assets/game/wc-26/main/album/${page.image}`],
+      title: t('album.spreadTitle', {
+        album: t(albumDefinition.name),
+        page: String(page.number).padStart(2, '0'),
+      }),
+      image:
+        albumImages[
+          `../../assets/game/${albumDefinition.id}/main/album/${page.image}`
+        ] ?? '',
       geometry: page,
     }),
   ),
@@ -138,7 +165,8 @@ const displayMode: ComputedRef<'spread' | 'page'> = computed((): 'spread' | 'pag
   isDesktopSpread.value ? 'spread' : 'page',
 )
 const isDesktopSpreadVisible: ComputedRef<boolean> = computed(
-  (): boolean => isDesktopSpread.value && currentPage.value >= 1,
+  (): boolean =>
+    isDesktopSpread.value && currentPage.value >= albumDefinition.layout.openStartPage,
 )
 const pageStep: ComputedRef<number> = computed((): number => (isDesktopSpread.value ? 2 : 1))
 const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] =>
@@ -153,20 +181,31 @@ const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed((): AlbumGe
   ),
 )
 const isTeamPageVisible: ComputedRef<boolean> = computed((): boolean =>
-  visibleGeometries.value.some(
-    ({ number }: AlbumGeometryPage): boolean => number > contentsLastPage,
-  ),
+  albumContentsTeams.length > 0 &&
+  visibleGeometries.value.some(({ slots }: AlbumGeometryPage): boolean => slots.length > 0),
 )
 const visiblePageLabel: ComputedRef<string> = computed((): string =>
   visibleGeometries.value.map(({ number }): string => String(number).padStart(2, '0')).join('–'),
 )
 const visiblePageTypeLabel: ComputedRef<string> = computed((): string => {
-  if (currentPage.value === 0) return t('album.editorial.coverLabel')
+  const visibleEditorialPages: AlbumEditorialPageDefinition[] = visibleGeometries.value.flatMap(
+    ({ id }): AlbumEditorialPageDefinition[] =>
+      editorialPages[id] ? [editorialPages[id]] : [],
+  )
+  if (visibleEditorialPages.some(({ kind }) => kind === 'cover')) {
+    return t('album.editorial.coverLabel')
+  }
   const isContents: boolean = visibleGeometries.value.some(
     ({ number }: AlbumGeometryPage): boolean =>
       number >= contentsFirstPage && number <= contentsLastPage,
   )
-  return t(isContents ? 'album.contents.label' : 'album.editorial.infoLabel')
+  return t(
+    isContents
+      ? 'album.contents.label'
+      : visibleEditorialPages.length
+        ? 'album.editorial.infoLabel'
+        : 'album.page',
+  )
 })
 const visibleSlotTotal: ComputedRef<number> = computed((): number =>
   visibleGeometries.value.reduce(
@@ -202,6 +241,7 @@ const catalogCardsByAlbumSlot: ReadonlyMap<string, PlacedCard[]> = cards.reduce(
       card,
       instance: {
         id: `catalog:${card.id}`,
+        albumId: albumDefinition.id,
         playerId: card.id,
         quality: 100,
         location: 'album',
@@ -217,8 +257,10 @@ const catalogCardsByAlbumSlot: ReadonlyMap<string, PlacedCard[]> = cards.reduce(
 // Синхронизирует режим одной страницы и полного разворота с Tailwind breakpoint lg.
 const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void => {
   isDesktopSpread.value = event.matches
-  if (event.matches && currentPage.value >= 1) {
-    currentPage.value = 1 + Math.floor((currentPage.value - 1) / 2) * 2
+  const openStartPage: number = albumDefinition.layout.openStartPage
+  if (event.matches && currentPage.value >= openStartPage) {
+    currentPage.value =
+      openStartPage + Math.floor((currentPage.value - openStartPage) / 2) * 2
   }
 }
 
@@ -229,7 +271,7 @@ const getPlacedCards = (slotId: string): PlacedCard[] => {
   return collection.items
     .filter(
       ({ instance }): boolean => {
-        if (instance.location === 'deleted') return false
+        if (instance.albumId !== albumDefinition.id || instance.location === 'deleted') return false
         return (
           instance.location === 'album' &&
           normalizeSlotId(instance.placement?.slotId ?? '') === slotId
@@ -289,7 +331,11 @@ const trayCards: ComputedRef<StickerTrayItem[]> = computed((): StickerTrayItem[]
     ),
   )
   const items: StickerTrayItem[] = collection.items
-    .filter(({ instance }): boolean => ['inventory', 'collection'].includes(instance.location))
+    .filter(
+      ({ instance }): boolean =>
+        instance.albumId === albumDefinition.id &&
+        ['inventory', 'collection'].includes(instance.location),
+    )
     .map(({ instance }): StickerTrayItem | undefined => {
       const card: CardDefinition | undefined = getCard(instance.playerId)
       return card ? { card, instance } : undefined
@@ -335,7 +381,10 @@ const focusCardTarget = (playerId: string): void => {
   )
   if (pageIndex >= 0) {
     isBookOpen.value = true
-    currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
+    const openStartPage: number = albumDefinition.layout.openStartPage
+    currentPage.value = isDesktopSpread.value
+      ? openStartPage + Math.floor((pageIndex - openStartPage) / 2) * 2
+      : pageIndex
   }
   activeTargetId.value = albumSlotId
 }
@@ -378,7 +427,7 @@ const clearAutoPrepareAction = (): void => {
   void router.replace({ query })
 }
 
-const getContentsTeams = (pageNumber: number): AlbumContentsTeam[] => {
+const getContentsTeams = (pageNumber: number): AlbumContentsItem[] => {
   const pageOffset: number = pageNumber - contentsFirstPage
   return albumContentsTeams.slice(
     pageOffset * contentsPageSize,
@@ -393,7 +442,10 @@ const openTeam = (pageId: string): void => {
   )
   if (pageIndex < 0) return
   activeTargetId.value = undefined
-  currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
+  const openStartPage: number = albumDefinition.layout.openStartPage
+  currentPage.value = isDesktopSpread.value
+    ? openStartPage + Math.floor((pageIndex - openStartPage) / 2) * 2
+    : pageIndex
 }
 
 // Возвращает к разделу оглавления, в котором находится текущая сборная.
@@ -411,7 +463,10 @@ const openContents = (): void => {
   )
   if (pageIndex < 0) return
   activeTargetId.value = undefined
-  currentPage.value = isDesktopSpread.value ? 1 + Math.floor((pageIndex - 1) / 2) * 2 : pageIndex
+  const openStartPage: number = albumDefinition.layout.openStartPage
+  currentPage.value = isDesktopSpread.value
+    ? openStartPage + Math.floor((pageIndex - openStartPage) / 2) * 2
+    : pageIndex
 }
 
 // Переводит к целевой странице только тогда, когда текущий разворот вообще не принимает наклейки.
@@ -420,7 +475,7 @@ const prepareDropPage = (playerId: string): void => {
 }
 
 const openBook = (): void => {
-  currentPage.value = 1
+  currentPage.value = albumDefinition.layout.openStartPage
   isBookOpen.value = true
 }
 
@@ -430,13 +485,17 @@ const closeBook = (): void => {
 }
 
 const previousPage = (): void => {
-  currentPage.value = currentPage.value === 1 ? 0 : Math.max(1, currentPage.value - pageStep.value)
+  const openStartPage: number = albumDefinition.layout.openStartPage
+  currentPage.value =
+    currentPage.value === openStartPage
+      ? 0
+      : Math.max(openStartPage, currentPage.value - pageStep.value)
 }
 
 const nextPage = (): void => {
   currentPage.value =
-    currentPage.value === 0
-      ? 1
+    currentPage.value < albumDefinition.layout.openStartPage
+      ? albumDefinition.layout.openStartPage
       : Math.min(pages.value.length - 1, currentPage.value + pageStep.value)
 }
 
@@ -497,6 +556,10 @@ const cancelDrop = (): void => {
 }
 
 onMounted((): void => {
+  if (!getAlbumById(requestedAlbumId)) {
+    void router.replace({ name: 'album' })
+    return
+  }
   desktopMediaQuery = window.matchMedia(ALBUM_VIEW_CONFIG.desktopSpreadMediaQuery)
   syncDesktopSpread(desktopMediaQuery)
   desktopMediaQuery.addEventListener('change', syncDesktopSpread)
@@ -524,6 +587,7 @@ onBeforeUnmount((): void => {
         <h1 class="text-lg font-black leading-tight max-md:text-[0.8rem]">
           {{
             t(isDesktopSpreadVisible ? 'album.spreadRangeTitle' : 'album.spreadTitle', {
+              album: t(albumDefinition.name),
               page: visiblePageLabel,
               pages: visiblePageLabel,
             })
@@ -557,7 +621,7 @@ onBeforeUnmount((): void => {
           :current-page="currentPage"
           :is-open="isBookOpen"
           :display-mode="displayMode"
-          :open-start-page="1"
+          :open-start-page="albumDefinition.layout.openStartPage"
           :show-contents-shortcut="isTeamPageVisible"
           @open="openBook"
           @close="closeBook"
@@ -567,15 +631,18 @@ onBeforeUnmount((): void => {
         >
           <template #default="{ pageIndex }">
             <AlbumEditorialPage
-              v-if="pages[pageIndex].geometry.number <= 3"
+              v-if="editorialPages[pages[pageIndex].geometry.id]"
+              :definition="editorialPages[pages[pageIndex].geometry.id]"
               :page-number="pages[pageIndex].geometry.number"
-              :logo="projectLogo"
-              :project-intro="projectIntro"
               :release-series="latestReleaseSeries"
               :releases="recentReleaseNotes"
             />
             <AlbumContentsPage
-              v-else-if="pages[pageIndex].geometry.number <= contentsLastPage"
+              v-else-if="
+                albumContentsTeams.length > 0 &&
+                pages[pageIndex].geometry.number >= contentsFirstPage &&
+                pages[pageIndex].geometry.number <= contentsLastPage
+              "
               :page-number="pages[pageIndex].geometry.number"
               :teams="getContentsTeams(pages[pageIndex].geometry.number)"
               @select="openTeam"
@@ -609,6 +676,7 @@ onBeforeUnmount((): void => {
       </div>
 
       <StickerTray
+        v-if="cards.length > 0"
         :cards="trayCards"
         :highlighted-instance-id="focusedTrayInstanceId"
         :auto-prepare-instance-id="autoPrepareInstanceId"

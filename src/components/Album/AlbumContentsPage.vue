@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { AlbumContentsTeam } from '@/data/wc-26/contents'
+import type { AlbumContentsItem } from '@/types'
 
 interface Props {
   pageNumber: number
-  teams: AlbumContentsTeam[]
+  teams: AlbumContentsItem[]
 }
 
 interface Emits {
@@ -14,7 +14,7 @@ interface Emits {
 
 interface ContentsGroup {
   id: string
-  teams: AlbumContentsTeam[]
+  teams: AlbumContentsItem[]
 }
 
 const props = defineProps<Props>()
@@ -22,10 +22,10 @@ const emit = defineEmits<Emits>()
 const { t } = useI18n()
 
 const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => {
-  const teamsByGroup: Map<string, AlbumContentsTeam[]> = new Map()
+  const teamsByGroup: Map<string, AlbumContentsItem[]> = new Map()
 
-  props.teams.forEach((team: AlbumContentsTeam): void => {
-    const teams: AlbumContentsTeam[] = teamsByGroup.get(team.group) ?? []
+  props.teams.forEach((team: AlbumContentsItem): void => {
+    const teams: AlbumContentsItem[] = teamsByGroup.get(team.group) ?? []
     teams.push(team)
     teamsByGroup.set(team.group, teams)
   })

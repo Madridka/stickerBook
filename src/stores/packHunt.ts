@@ -1,7 +1,7 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type InventoryItem, type PackHuntProgress } from '@/db/database'
-import { PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, PACK_HUNT_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
@@ -56,6 +56,8 @@ export const usePackHuntStore = defineStore('packHunt', () => {
           const item: InventoryItem = {
             id: createId(),
             type: 'pack',
+            packId: BLISTER_CONFIGS.standard.id,
+            albumId: BLISTER_CONFIGS.standard.albumId,
             createdAt: claimedAt,
           }
           const progress: PackHuntProgress = {

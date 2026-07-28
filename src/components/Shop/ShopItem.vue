@@ -16,7 +16,14 @@ interface Props {
   cooldownRemainingMs: number
   miniGameLoaded: boolean
   ownedPackIds: string[]
+  ownedPackDetails: Record<string, { label: string; cardCount: number }>
   inventoryLoaded: boolean
+  kdvPrice: number
+  kdvCanBuy: boolean
+  kdvPurchasing: boolean
+  kdvCooldownRemainingMs: number
+  kdvLoaded: boolean
+  kdvCardCount: number
 }
 
 interface ShopSectionOption {
@@ -27,13 +34,19 @@ interface ShopSectionOption {
 }
 
 const props: Props = withDefaults(defineProps<Props>(), { purchasing: false })
-const emit = defineEmits<{ purchase: []; play: []; open: [] }>()
+const emit = defineEmits<{ purchase: []; 'purchase-kdv': []; play: []; open: [] }>()
 const { t } = useI18n()
 const activeSection: Ref<ShopSection> = ref('store')
 
 const formattedPrice: ComputedRef<string> = computed(() => props.price.toLocaleString('ru-RU'))
 const cooldownText: ComputedRef<string> = computed((): string =>
   formatCountdown(props.cooldownRemainingMs),
+)
+const kdvCooldownText: ComputedRef<string> = computed((): string =>
+  formatCountdown(props.kdvCooldownRemainingMs),
+)
+const formattedKdvPrice: ComputedRef<string> = computed(() =>
+  props.kdvPrice.toLocaleString('ru-RU'),
 )
 const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
   {
@@ -50,6 +63,7 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
 ])
 
 const handlePurchase = (): void => emit('purchase')
+const handleKdvPurchase = (): void => emit('purchase-kdv')
 const handlePlay = (): void => emit('play')
 const handleOpen = (): void => emit('open')
 </script>
@@ -82,7 +96,7 @@ const handleOpen = (): void => emit('open')
 
     <div
       v-if="activeSection === 'store'"
-      class="mt-3 grid min-h-0 flex-1 grid-cols-2 place-content-center gap-3 sm:mt-4 sm:gap-5"
+      class="mt-3 grid min-h-0 flex-1 grid-cols-3 place-content-center gap-2 sm:mt-4 sm:gap-4"
       role="tabpanel"
     >
       <article
@@ -131,6 +145,50 @@ const handleOpen = (): void => emit('open')
             :loading="purchasing"
             type="button"
             @click="handlePurchase"
+          />
+        </div>
+      </article>
+
+      <article
+        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] flex-col justify-self-start overflow-hidden bg-[linear-gradient(160deg,#192c52,#5e285d_58%,#d65735)] p-3 text-paper shadow-[6px_6px_0_rgb(var(--color-gold)/0.5)] sm:p-4"
+      >
+        <div class="relative z-10 flex items-start justify-between gap-2">
+          <p class="text-[9px] font-black uppercase tracking-[0.2em] text-gold sm:text-[10px]">
+            {{ t('shop.kdv.kicker') }}
+          </p>
+          <span class="border border-paper/25 px-1.5 py-0.5 text-[8px] font-black uppercase">
+            {{ t('shop.kdv.contents', { count: kdvCardCount }) }}
+          </span>
+        </div>
+        <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center">
+          <div
+            class="flex aspect-[9/14] w-[min(62%,8rem)] rotate-2 flex-col items-center justify-center border border-white/60 bg-[linear-gradient(145deg,#ea713d,#752957_52%,#1d3257)] text-white shadow-xl"
+          >
+            <span class="text-[10px] font-black uppercase tracking-[0.2em]">
+              {{ t('shop.pointsPackName') }}
+            </span>
+            <strong class="text-3xl font-black leading-none">{{ t('shop.kdv.shortName') }}</strong>
+          </div>
+        </div>
+        <div class="relative z-10">
+          <h2 class="text-base font-black leading-none sm:text-xl">{{ t('shop.kdv.title') }}</h2>
+          <p class="mt-1 text-[9px] font-bold leading-snug text-paper/70 sm:text-[10px]">
+            {{
+              kdvCooldownRemainingMs > 0
+                ? t('shop.kdv.cooldown', { time: kdvCooldownText })
+                : t('shop.kdv.description')
+            }}
+          </p>
+          <Button
+            class="mt-2 w-full !border-paper !bg-paper !text-ink text-[11px] hover:!border-gold hover:!bg-gold sm:mt-3 sm:text-sm"
+            :label="t('shop.buyFor', { price: formattedKdvPrice })"
+            icon="pi pi-gift"
+            :disabled="
+              !kdvLoaded || !kdvCanBuy || kdvPurchasing || kdvCooldownRemainingMs > 0
+            "
+            :loading="kdvPurchasing"
+            type="button"
+            @click="handleKdvPurchase"
           />
         </div>
       </article>
@@ -240,11 +298,12 @@ const handleOpen = (): void => emit('open')
               >
               <strong
                 class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
-                >2026</strong
+                >{{ ownedPackDetails[packId]?.label ?? t('shop.wc-26') }}</strong
               >
               <span
                 class="relative z-[1] mt-[.35rem] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em] opacity-[.72]"
-                >{{ CARDS_PER_PACK }} STICKERS</span
+                >{{ ownedPackDetails[packId]?.cardCount ?? CARDS_PER_PACK }}
+                STICKERS</span
               >
             </div>
           </div>

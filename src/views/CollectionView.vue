@@ -2,12 +2,19 @@
 import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import cards from '@/data/wc-26/catalog'
-import albumContentsTeams from '@/data/wc-26/contents'
+import { getAlbumById, getAlbums, requireAlbum } from '@/data/albumRegistry'
+import { BLISTER_CONFIGS } from '@/data/mainConst'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
 import { useGameGuideStore } from '@/stores/gameGuide'
-import type { CardDefinition, CollectionItem, StickerInstance, StickerTrayItem } from '@/types'
+import type {
+  AlbumContentsItem,
+  AlbumDefinition,
+  CardDefinition,
+  CollectionItem,
+  StickerInstance,
+  StickerTrayItem,
+} from '@/types'
 
 import Tab from 'primevue/tab'
 import TabList from 'primevue/tablist'
@@ -15,6 +22,7 @@ import TabPanel from 'primevue/tabpanel'
 import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
 import Button from 'primevue/button'
+import SelectButton from 'primevue/selectbutton'
 
 import CollectionControls from '@/components/Collection/CollectionControls.vue'
 import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
@@ -52,21 +60,48 @@ const router = useRouter()
 const collection = useCollectionStore()
 const deletedCards = useDeletedCardsStore()
 const gameGuide = useGameGuideStore()
+const requestedAlbumId: string =
+  typeof route.query.albumId === 'string'
+    ? route.query.albumId
+    : BLISTER_CONFIGS.standard.albumId
+const requestedAlbum: AlbumDefinition | undefined = getAlbumById(requestedAlbumId)
+const activeAlbumId: Ref<string> = ref(
+  requestedAlbum?.cards.length
+    ? requestedAlbum.id
+    : requireAlbum(BLISTER_CONFIGS.standard.albumId).id,
+)
+const activeAlbum: ComputedRef<AlbumDefinition> = computed(() =>
+  requireAlbum(activeAlbumId.value),
+)
+const albumOptions = getAlbums()
+  .filter(({ cards }) => cards.length > 0)
+  .map((album) => ({
+    value: album.id,
+    label: t(album.shortName),
+  }))
+const cards: ComputedRef<CardDefinition[]> = computed(() => activeAlbum.value.cards)
+const albumContentsTeams: ComputedRef<AlbumContentsItem[]> = computed(
+  () => activeAlbum.value.contents,
+)
+const selectedProgress = computed(() => collection.getAlbumProgress(activeAlbumId.value))
 const activeTab: Ref<string> = ref(route.query.tab === 'duplicates' ? 'duplicates' : 'collection')
 const collectionFilter: Ref<CollectionFilter> = ref(
   route.query.filter === 'ready' ? 'ready' : 'all',
 )
 const collectionSort: Ref<CollectionSort> = ref('status')
 const collectionTeamId: Ref<string> = ref(
-  albumContentsTeams.some(({ id }): boolean => id === route.query.team)
+  albumContentsTeams.value.some(({ id }): boolean => id === route.query.team)
     ? String(route.query.team)
     : 'all',
 )
 const collectionFilters: CollectionFilter[] = ['all', 'ready', 'album']
 const previewItem: Ref<StickerTrayItem | undefined> = ref(undefined)
 const isPreviewOpen: Ref<boolean> = ref(false)
-const cardOrder: Map<string, number> = new Map(
-  cards.map(({ id }, index: number): [string, number] => [id, index]),
+const cardOrder: ComputedRef<Map<string, number>> = computed(
+  () =>
+    new Map(
+      cards.value.map(({ id }, index: number): [string, number] => [id, index]),
+    ),
 )
 
 const isReadyToPlace = (item: CollectionItem): boolean =>
@@ -74,7 +109,7 @@ const isReadyToPlace = (item: CollectionItem): boolean =>
 const needsPreparation = (item: CollectionItem): boolean =>
   isReadyToPlace(item) && !item.instance.preparation
 const getCard = (playerId: string): CardDefinition | undefined =>
-  cards.find(({ id }): boolean => id === playerId)
+  cards.value.find(({ id }): boolean => id === playerId)
 
 const openCardPreview = (item: CollectionItem): void => {
   const card: CardDefinition | undefined = getCard(item.instance.playerId)
@@ -86,7 +121,8 @@ const openCardPreview = (item: CollectionItem): void => {
 const prepareCardInAlbum = async (instance: StickerInstance): Promise<void> => {
   await gameGuide.consumeAutoPreparation()
   await router.push({
-    name: 'album-wc-26',
+    name: 'album-detail',
+    params: { albumId: instance.albumId },
     query: {
       card: instance.playerId,
       instance: instance.id,
@@ -112,7 +148,8 @@ const collectedItems: ComputedRef<CollectionItem[]> = computed((): CollectionIte
   collection.items.filter(
     (item: CollectionItem): boolean =>
       item.instance.location !== 'deleted' &&
-      cards.some(({ id }): boolean => id === item.instance.playerId),
+      item.instance.albumId === activeAlbumId.value &&
+      cards.value.some(({ id }): boolean => id === item.instance.playerId),
   ),
 )
 
@@ -157,7 +194,7 @@ const collectionTeamOptions: ComputedRef<CollectionTeamOption[]> = computed(
         count: collectedItems.value.length,
       }),
     },
-    ...albumContentsTeams.map(
+    ...albumContentsTeams.value.map(
       ({ id, nameKey }): CollectionTeamOption => ({
         value: id,
         label: t('album.collectionControls.teamOption', {
@@ -197,8 +234,8 @@ const visibleCollectionItems: ComputedRef<CollectionItem[]> = computed((): Colle
       if (statusDifference !== 0) return statusDifference
     }
     return (
-      (cardOrder.get(left.instance.playerId) ?? Number.MAX_SAFE_INTEGER) -
-      (cardOrder.get(right.instance.playerId) ?? Number.MAX_SAFE_INTEGER)
+      (cardOrder.value.get(left.instance.playerId) ?? Number.MAX_SAFE_INTEGER) -
+      (cardOrder.value.get(right.instance.playerId) ?? Number.MAX_SAFE_INTEGER)
     )
   })
 })
@@ -213,9 +250,15 @@ const deletedItems: ComputedRef<DeletedCollectionItem[]> = computed((): DeletedC
       return item ? { ...item, deletedAt } : undefined
     })
     .filter(
-      (item: DeletedCollectionItem | undefined): item is DeletedCollectionItem => Boolean(item),
+      (item: DeletedCollectionItem | undefined): item is DeletedCollectionItem =>
+        Boolean(item) && item?.instance.albumId === activeAlbumId.value,
     ),
 )
+
+watch(activeAlbumId, (albumId: string): void => {
+  collectionTeamId.value = 'all'
+  void router.replace({ query: { ...route.query, albumId } })
+})
 
 const remainingRestoreDays = (deletedAt: number): number =>
   Math.max(
@@ -254,18 +297,28 @@ watch(
           {{ t('album.collectionText') }}
         </p>
       </div>
+      <SelectButton
+        v-model="activeAlbumId"
+        class="shrink-0"
+        :options="albumOptions"
+        option-label="label"
+        option-value="value"
+        :allow-empty="false"
+        size="small"
+        :aria-label="t('album.collectionControls.albumLabel')"
+      />
       <div
         class="flex shrink-0 gap-3 text-right text-[10px] font-semibold leading-tight text-ink/55 sm:gap-5 sm:text-xs"
       >
         <div>
           <strong class="block text-xl font-black leading-none text-ink sm:text-2xl"
-            >{{ collection.collectedTotal }} / {{ collection.total }}</strong
+            >{{ selectedProgress.collectedCards }} / {{ selectedProgress.totalCards }}</strong
           >
           {{ t('album.uniqueFound') }}
         </div>
         <div>
           <strong class="block text-xl font-black leading-none text-coral sm:text-2xl">{{
-            collection.duplicateTotal
+            selectedProgress.duplicateCards
           }}</strong>
           {{ t('album.duplicatesStored') }}
         </div>
@@ -296,7 +349,7 @@ watch(
             <i class="pi pi-inbox" />
             <span class="hidden sm:inline">{{ t('album.duplicatesTab') }}</span>
             <span class="rounded-full bg-coral/15 px-2 py-0.5 text-xs text-coral">{{
-              collection.duplicateTotal
+              selectedProgress.duplicateCards
             }}</span>
           </span>
         </Tab>
@@ -438,7 +491,7 @@ watch(
         </TabPanel>
 
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="duplicates">
-          <DuplicateExchangePanel />
+          <DuplicateExchangePanel :album-id="activeAlbumId" />
         </TabPanel>
 
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="deleted">

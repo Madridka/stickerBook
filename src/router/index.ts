@@ -35,13 +35,11 @@ const router: Router = createRouter({
           },
         },
         {
-          path: 'wc-26',
-          name: 'album-wc-26',
+          path: ':albumId',
+          name: 'album-detail',
           component: () => import('@/views/AlbumView.vue'),
           meta: {
-            title: (i18n.global.t as (key: string) => string)(
-              'album.library.items.wc-26.title',
-            ),
+            title: (i18n.global.t as (key: string) => string)('app.album'),
             albumWorkspace: true,
           },
         },

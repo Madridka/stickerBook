@@ -65,11 +65,12 @@ const cardSchema = z.discriminatedUnion('kind', [
     rarity: cardRaritySchema,
     shirtNumber: z.number().int().nonnegative().optional(),
   }),
+  z.strictObject({ ...baseCardShape, kind: z.literal(cardKindSchema.enum.special) }),
 ])
 
 const cardCatalogObjectSchema = z.strictObject({
   schemaVersion: z.literal(CARD_CATALOG_CONFIG.schemaVersion),
-  collectionId: z.literal(COLLECTION_CONFIG.id),
+  collectionId: z.string().min(1),
   teamId: z.string().min(1),
   defaults: z.strictObject({
     rarity: cardRaritySchema,
@@ -80,8 +81,9 @@ const cardCatalogObjectSchema = z.strictObject({
   cards: z.array(cardSchema),
 })
 
-// Проверяет связи и уникальность, которые зависят от полного каталога сборной.
-export const cardCatalogSchema = cardCatalogObjectSchema.superRefine((catalog, context) => {
+// Создаёт схему с независимым числом слотов для конкретного журнала.
+export const createCardCatalogSchema = (expectedSlotCount: number) =>
+  cardCatalogObjectSchema.superRefine((catalog, context) => {
   const cardsById = new Map(catalog.cards.map((card) => [card.id, card]))
   const seenIds = new Set<string>()
   const seenCardNumbers = new Set<string>()
@@ -154,7 +156,6 @@ export const cardCatalogSchema = cardCatalogObjectSchema.superRefine((catalog, c
   })
 
   const baseCards = catalog.cards.filter((card) => card.series === 'base')
-  const expectedSlotCount = COLLECTION_CONFIG.baseAlbumSlotsPerTeam
   if (catalog.cards.length < expectedSlotCount) {
     context.addIssue({
       code: 'custom',
@@ -186,7 +187,13 @@ export const cardCatalogSchema = cardCatalogObjectSchema.superRefine((catalog, c
       })
     }
   }
-})
+  })
 
-export const parseCardCatalog = (input: unknown): CardCatalog =>
-  cardCatalogSchema.parse(input) as CardCatalog
+export const cardCatalogSchema = createCardCatalogSchema(
+  COLLECTION_CONFIG.baseAlbumSlotsPerTeam,
+)
+
+export const parseCardCatalog = (
+  input: unknown,
+  expectedSlotCount: number = COLLECTION_CONFIG.baseAlbumSlotsPerTeam,
+): CardCatalog => createCardCatalogSchema(expectedSlotCount).parse(input) as CardCatalog

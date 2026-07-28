@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
-import cards from '@/data/wc-26/catalog'
-import { PACK_CONFIGS } from '@/data/mainConst'
+import { useRoute, useRouter } from 'vue-router'
+import { getAlbumCard } from '@/data/albumRegistry'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
@@ -15,29 +14,28 @@ import PackAnimation from '@/components/PackAnimation.vue'
 import StickerReveal from '@/components/StickerReveal.vue'
 
 const { t } = useI18n()
+const route = useRoute()
 const router = useRouter()
 const inventory = useInventoryStore()
 const collection = useCollectionStore()
 const packOpening = usePackOpeningStore()
-const cardById: Map<string, CardDefinition> = new Map(
-  cards.map((card: CardDefinition): [string, CardDefinition] => [card.id, card]),
-)
 const isAnimationComplete: Ref<boolean> = ref(false)
 const isReady: Ref<boolean> = ref(false)
 const currentIndex: ComputedRef<number> = computed(
   (): number => packOpening.session?.currentIndex ?? 0,
 )
 const rewardTotal: ComputedRef<number> = computed(
-  (): number =>
-    packOpening.session?.rewards.length ?? PACK_CONFIGS.standard.cardsPerPack,
+  (): number => packOpening.session?.rewards.length ?? 0,
 )
 const isFinished: ComputedRef<boolean> = computed(
   (): boolean => currentIndex.value >= rewardTotal.value,
 )
 const currentCard: ComputedRef<CardDefinition | undefined> = computed(
   (): CardDefinition | undefined => {
-  const playerId: string | undefined = packOpening.session?.rewards[currentIndex.value]?.playerId
-  return playerId ? cardById.get(playerId) : undefined
+    const playerId: string | undefined =
+      packOpening.session?.rewards[currentIndex.value]?.playerId
+    const albumId: string | undefined = packOpening.session?.albumId
+    return playerId && albumId ? getAlbumCard(albumId, playerId) : undefined
   },
 )
 const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
@@ -46,7 +44,9 @@ const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
 
 // Создаёт новую сохраняемую сессию или восстанавливает незавершённый показ.
 const initializeOpening = async (): Promise<void> => {
-  const session = await packOpening.start()
+  const requestedPackId: string | undefined =
+    typeof route.query.pack === 'string' ? route.query.pack : undefined
+  const session = await packOpening.start(requestedPackId)
   if (!session) {
     await router.replace({ name: 'shop' })
     return
@@ -72,6 +72,17 @@ const handleNextCard = async (): Promise<void> => {
 
 // После полного просмотра возвращает игрока к выбранному разделу.
 const navigateTo = async (name: 'home' | 'shop' | 'album' | 'collection'): Promise<void> => {
+  if (name === 'album' && packOpening.session?.albumId) {
+    await router.push({
+      name: 'album-detail',
+      params: { albumId: packOpening.session.albumId },
+    })
+    return
+  }
+  if (name === 'collection' && packOpening.session?.albumId) {
+    await router.push({ name, query: { albumId: packOpening.session.albumId } })
+    return
+  }
   await router.push({ name })
 }
 

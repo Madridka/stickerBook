@@ -1,5 +1,5 @@
 import Dexie, { type Table } from 'dexie'
-import type { DeletedCard, StickerInstance } from '@/types'
+import type { AlbumId, DeletedCard, StickerInstance } from '@/types'
 import type { GoalCounter, GoalPlayerState } from '@/features/goals/types'
 import type { RareShopState } from '@/features/rareShop/types'
 
@@ -34,6 +34,8 @@ export interface InventoryItem {
   type: InventoryItemType
   // Идентификатор конфигурации набора; старые записи без поля остаются стандартными.
   packId?: string
+  // Журнал, карточки которого содержит блистер.
+  albumId?: AlbumId
   // Страна тематического редкого блистера.
   countryId?: string
   // Время создания предмета
@@ -50,6 +52,7 @@ export interface PackHuntProgress {
 export interface DuplicateExchange {
   // Единственная незавершённая сдача повторок, ожидающая выбора награды.
   id: 'pending'
+  albumId: AlbumId
   candidatePlayerIds: string[]
   createdAt: number
 }
@@ -57,6 +60,7 @@ export interface DuplicateExchange {
 export interface PackOpeningReward {
   // Заранее созданный идентификатор экземпляра делает итог открытия неизменяемым.
   instanceId: string
+  albumId: AlbumId
   playerId: string
   isDuplicate: boolean
 }
@@ -65,10 +69,18 @@ export interface PackOpeningSession {
   // Одновременно может существовать только одно незавершённое открытие.
   id: 'pending'
   packId: string
+  blisterId: string
+  albumId: AlbumId
   rewards: PackOpeningReward[]
   currentIndex: number
   animationComplete: boolean
   createdAt: number
+}
+
+export interface BlisterCooldown {
+  // Идентификатор типа блистера одновременно служит первичным ключом.
+  id: string
+  nextAvailableAt: number
 }
 
 export interface GameGuideProgress {
@@ -95,6 +107,7 @@ interface StickerBookDatabase extends Dexie {
   goalStates: Table<GoalPlayerState, string>
   goalCounters: Table<GoalCounter, string>
   rareShop: Table<RareShopState, string>
+  blisterCooldowns: Table<BlisterCooldown, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -203,3 +216,81 @@ database.version(12).stores({
   goalCounters: 'id, updatedAt',
   rareShop: 'id',
 })
+
+type LegacyStickerInstance = Omit<StickerInstance, 'albumId'> & { albumId?: AlbumId }
+type LegacyDeletedCard = Omit<DeletedCard, 'albumId'> & { albumId?: AlbumId }
+type LegacyInventoryItem = InventoryItem & { albumId?: AlbumId }
+type LegacyDuplicateExchange = Omit<DuplicateExchange, 'albumId'> & { albumId?: AlbumId }
+type LegacyPackOpeningSession = Omit<
+  PackOpeningSession,
+  'albumId' | 'blisterId' | 'rewards'
+> & {
+  albumId?: AlbumId
+  blisterId?: string
+  rewards: Array<Omit<PackOpeningReward, 'albumId'> & { albumId?: AlbumId }>
+}
+
+// Идемпотентно связывает все старые данные с исходным журналом WC-26.
+database
+  .version(13)
+  .stores({
+    stickers: 'id, collectedAt',
+    player: 'id',
+    inventory: 'id, type, albumId, packId, createdAt',
+    cards: 'id, albumId, [albumId+playerId], playerId, location',
+    duplicates: 'id, albumId, [albumId+playerId], playerId, location',
+    deletedCards: 'id, albumId, instanceId, playerId, deletedAt',
+    packHuntProgress: 'id',
+    duplicateExchanges: 'id, albumId, createdAt',
+    packOpeningSessions: 'id, albumId, blisterId, packId, createdAt',
+    gameGuideProgress: 'id, completed, updatedAt',
+    goalStates: 'goalId, completedAt, claimedAt',
+    goalCounters: 'id, updatedAt',
+    rareShop: 'id',
+    blisterCooldowns: 'id, nextAvailableAt',
+  })
+  .upgrade(async (transaction): Promise<void> => {
+    await transaction
+      .table('cards')
+      .toCollection()
+      .modify((instance: LegacyStickerInstance): void => {
+        instance.albumId ??= 'wc-26'
+      })
+    await transaction
+      .table('duplicates')
+      .toCollection()
+      .modify((instance: LegacyStickerInstance): void => {
+        instance.albumId ??= 'wc-26'
+      })
+    await transaction
+      .table('deletedCards')
+      .toCollection()
+      .modify((item: LegacyDeletedCard): void => {
+        item.albumId ??= 'wc-26'
+      })
+    await transaction
+      .table('inventory')
+      .toCollection()
+      .modify((item: LegacyInventoryItem): void => {
+        if (item.type !== 'pack') return
+        item.packId ??= 'standard'
+        item.albumId ??= 'wc-26'
+      })
+    await transaction
+      .table('duplicateExchanges')
+      .toCollection()
+      .modify((exchange: LegacyDuplicateExchange): void => {
+        exchange.albumId ??= 'wc-26'
+      })
+    await transaction
+      .table('packOpeningSessions')
+      .toCollection()
+      .modify((session: LegacyPackOpeningSession): void => {
+        session.albumId ??= 'wc-26'
+        session.blisterId ??= 'standard'
+        session.rewards = session.rewards.map((reward) => ({
+          ...reward,
+          albumId: reward.albumId ?? session.albumId ?? 'wc-26',
+        }))
+      })
+  })

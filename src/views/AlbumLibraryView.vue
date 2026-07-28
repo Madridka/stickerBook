@@ -1,43 +1,37 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
-import albumCatalog, { type AlbumCatalogItem } from '@/data/albums'
+import { getAlbums } from '@/data/albumRegistry'
 import { useCollectionStore } from '@/stores/collection'
-import type { AlbumGeometryData, CollectionItem } from '@/types'
+import type { AlbumDefinition, AlbumProgress } from '@/types'
 
 const { t } = useI18n()
 const collection = useCollectionStore()
-const albums: AlbumCatalogItem[] = albumCatalog.albums
+const albums: readonly AlbumDefinition[] = getAlbums()
 const coverImages: Record<string, string> = import.meta.glob(
-  '../../assets/game/*/main/album/info/cover.webp',
+  [
+    '../../assets/game/*/main/album/**/*.webp',
+    '../../assets/game/*/main/album/**/*.png',
+  ],
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
-const albumGeometry: Record<string, AlbumGeometryData> = import.meta.glob('../data/*/album.ts', {
-  eager: true,
-  import: 'default',
-}) as Record<string, AlbumGeometryData>
 
-const getCover = (album: AlbumCatalogItem): string =>
-  coverImages[`../../assets/game/${album.id}/main/album/${album.cover}`] ?? ''
+const getCover = (album: AlbumDefinition): string =>
+  coverImages[`../../assets/game/${album.id}/main/album/${album.theme.coverImage}`] ?? ''
 
 // Рассчитывает заполнение конкретного журнала только по вклеенным в него карточкам.
-const getProgress = (album: AlbumCatalogItem): number => {
-  const geometry: AlbumGeometryData | undefined = albumGeometry[`../data/${album.id}/album.ts`]
-  if (!geometry) return 0
-  const slotIds: Set<string> = new Set(
-    geometry.pages.flatMap(({ slots }): string[] => slots.map(({ id }): string => id)),
+const getProgress = (album: AlbumDefinition): AlbumProgress =>
+  collection.getAlbumProgress(album.id)
+const getPlacedPercent = (album: AlbumDefinition): number => {
+  const slotCount: number = album.pages.reduce(
+    (total, page): number => total + page.slots.length,
+    0,
   )
-  if (!slotIds.size) return 0
-  const occupiedSlots: Set<string> = new Set(
-    collection.items
-      .filter(({ instance }: CollectionItem): boolean => instance.location === 'album')
-      .map(({ instance }: CollectionItem): string =>
-        (instance.placement?.slotId ?? '').replace(/-slot$/, ''),
-      )
-      .filter((slotId: string): boolean => slotIds.has(slotId)),
-  )
-  return Math.min(100, Math.round((occupiedSlots.size / slotIds.size) * 100))
+  return slotCount
+    ? Math.min(100, Math.round((getProgress(album).placedCards / slotCount) * 100))
+    : 0
 }
+const isCollectible = (album: AlbumDefinition): boolean => album.cards.length > 0
 </script>
 
 <template>
@@ -62,7 +56,7 @@ const getProgress = (album: AlbumCatalogItem): number => {
         :to="album.route"
         class="group block rounded-lg p-1.5 outline-none transition-colors hover:bg-coral/10 focus-visible:bg-coral/10 focus-visible:ring-2 focus-visible:ring-coral sm:p-2"
         :aria-label="
-          t('album.library.openNamed', { name: t(`album.library.items.${album.id}.title`) })
+          t('album.library.openNamed', { name: t(album.name) })
         "
       >
         <!-- Папка визуально отделяет каталог журналов от содержимого выбранного альбома. -->
@@ -77,26 +71,46 @@ const getProgress = (album: AlbumCatalogItem): number => {
               v-if="getCover(album)"
               class="h-full w-full object-cover opacity-90 transition-transform duration-300 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
               :src="getCover(album)"
-              :alt="t(`album.library.items.${album.id}.title`)"
+              :alt="t(album.name)"
             />
           </div>
         </div>
 
         <div class="mt-3 text-center">
           <strong class="block truncate text-sm font-black sm:text-base">
-            {{ t(`album.library.items.${album.id}.title`) }}
+            {{ t(album.name) }}
           </strong>
-          <span class="mt-1 block text-xs font-bold text-ink/55">
-            {{ t('album.library.progress', { progress: getProgress(album) }) }}
+          <span class="mt-0.5 block truncate text-[11px] text-ink/50">
+            {{ t(album.description) }}
           </span>
-          <span class="mx-auto mt-2 block h-1.5 w-4/5 overflow-hidden rounded-full bg-ink/10">
+          <span v-if="isCollectible(album)" class="mt-1 block text-xs font-bold text-ink/55">
+            {{ t('album.library.progress', { progress: getPlacedPercent(album) }) }}
+          </span>
+          <span
+            v-if="isCollectible(album)"
+            class="mx-auto mt-2 block h-1.5 w-4/5 overflow-hidden rounded-full bg-ink/10"
+          >
             <span
               class="block h-full rounded-full bg-coral transition-[width] duration-300"
-              :style="{ width: `${getProgress(album)}%` }"
+              :style="{ width: `${getPlacedPercent(album)}%` }"
             />
           </span>
+          <span
+            v-if="isCollectible(album)"
+            class="mt-1 block text-[10px] font-semibold text-ink/50"
+          >
+            {{
+              t('album.library.collected', {
+                collected: getProgress(album).collectedCards,
+                total: getProgress(album).totalCards,
+              })
+            }}
+          </span>
+          <span v-else class="mt-1 block text-xs font-bold text-ink/55">
+            {{ t('album.library.information') }}
+          </span>
           <span class="mt-1.5 block text-[11px] font-bold uppercase tracking-wide text-coral">
-            {{ t('album.library.pages', { count: album.pages }) }}
+            {{ t('album.library.pages', { count: album.pages.length }) }}
           </span>
         </div>
       </RouterLink>

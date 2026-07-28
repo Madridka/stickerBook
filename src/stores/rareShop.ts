@@ -7,7 +7,7 @@ import {
   type PackOpeningSession,
   type PlayerState,
 } from '@/db/database'
-import { CLICKER_CONFIG, RARE_SHOP_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, CLICKER_CONFIG, RARE_SHOP_CONFIG } from '@/data/mainConst'
 import { catalogs } from '@/data/wc-26/catalog'
 import type { NormalizedCardCatalog, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
@@ -268,7 +268,10 @@ export const useRareShopStore = defineStore('rareShop', () => {
           if (!catalog) return { status: 'unavailable', player, state: saved }
 
           const activeCards: StickerInstance[] = await database.cards
-            .filter(({ location }: StickerInstance): boolean => location !== 'deleted')
+            .filter(
+              ({ albumId, location }: StickerInstance): boolean =>
+                albumId === BLISTER_CONFIGS.standard.albumId && location !== 'deleted',
+            )
             .toArray()
           const contents = createRareBlisterContents(
             catalog,
@@ -280,12 +283,15 @@ export const useRareShopStore = defineStore('rareShop', () => {
             id: createId(),
             type: 'pack',
             packId: 'rare',
+            albumId: BLISTER_CONFIGS.standard.albumId,
             countryId: offer.countryId,
             createdAt: now,
           }
           const opening: PackOpeningSession = {
             id: 'pending',
             packId: item.id,
+            blisterId: 'rare',
+            albumId: BLISTER_CONFIGS.standard.albumId,
             rewards: contents.rewards,
             currentIndex: 0,
             animationComplete: false,

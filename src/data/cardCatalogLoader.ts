@@ -16,6 +16,7 @@ const normalizeCard = (
   assetBaseUrl: string,
 ): CardDefinition => ({
   ...card,
+  albumId: catalog.collectionId,
   collectionId: catalog.collectionId,
   teamId: catalog.teamId,
   image: normalizeImagePath(card.image, assetBaseUrl),
@@ -30,11 +31,15 @@ const normalizeCard = (
 export const loadCardCatalogs = (
   inputs: readonly unknown[],
   assetBaseUrl = '',
+  expectedCatalogCount: number = COLLECTION_CONFIG.expectedTeamCount,
+  expectedBaseSlotsPerCatalog: number = COLLECTION_CONFIG.baseAlbumSlotsPerTeam,
 ): NormalizedCardCatalog[] => {
-  const catalogs = inputs.map(parseCardCatalog)
-  if (catalogs.length !== COLLECTION_CONFIG.expectedTeamCount) {
+  const catalogs = inputs.map((input) =>
+    parseCardCatalog(input, expectedBaseSlotsPerCatalog),
+  )
+  if (catalogs.length !== expectedCatalogCount) {
     throw new Error(
-      `Expected ${COLLECTION_CONFIG.expectedTeamCount} card catalogs, received ${catalogs.length}`,
+      `Expected ${expectedCatalogCount} card catalogs, received ${catalogs.length}`,
     )
   }
 

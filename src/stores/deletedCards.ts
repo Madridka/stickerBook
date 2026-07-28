@@ -41,13 +41,13 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
           await database.cards.bulkDelete(expired.map(({ instanceId }): string => instanceId))
           await database.deletedCards.bulkDelete(expired.map(({ id }): string => id))
 
-          for (const playerId of new Set(expired.map((item): string => item.playerId))) {
+          for (const item of expired) {
             const activeCard: StickerInstance | undefined = await database.cards
-              .where('playerId')
-              .equals(playerId)
+              .where('[albumId+playerId]')
+              .equals([item.albumId, item.playerId])
               .filter(({ location }): boolean => location !== 'deleted')
               .first()
-            if (!activeCard) await promoteDuplicate(playerId)
+            if (!activeCard) await promoteDuplicate(item.albumId, item.playerId)
           }
         },
       )
@@ -62,6 +62,7 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
   const removeCard = async (instance: StickerInstance): Promise<void> => {
     const deletedCard: DeletedCard = {
       id: createId(),
+      albumId: instance.albumId,
       instanceId: instance.id,
       playerId: instance.playerId,
       deletedAt: Date.now(),
@@ -107,8 +108,8 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
         }
 
         const activeCard: StickerInstance | undefined = await database.cards
-          .where('playerId')
-          .equals(deletedCard.playerId)
+          .where('[albumId+playerId]')
+          .equals([deletedCard.albumId, deletedCard.playerId])
           .filter(
             (candidate: StickerInstance): boolean =>
               candidate.id !== instanceId && candidate.location !== 'deleted',

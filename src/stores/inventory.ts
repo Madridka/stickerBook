@@ -2,6 +2,7 @@ import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type InventoryItem, type InventoryItemType } from '@/db/database'
 import { createId } from '@/utils/createId'
+import { BLISTER_CONFIGS } from '@/data/mainConst'
 
 export const useInventoryStore = defineStore('inventory', () => {
   const items: Ref<InventoryItem[]> = ref([])
@@ -20,14 +21,31 @@ export const useInventoryStore = defineStore('inventory', () => {
 
   // Создаёт предмет заданного типа и сохраняет его в инвентаре.
   const addItem = async (type: InventoryItemType): Promise<InventoryItem> => {
-    const item: InventoryItem = { id: createId(), type, createdAt: Date.now() }
+    const item: InventoryItem = {
+      id: createId(),
+      type,
+      packId: BLISTER_CONFIGS.standard.id,
+      albumId: BLISTER_CONFIGS.standard.albumId,
+      createdAt: Date.now(),
+    }
     await database.inventory.add(item)
     items.value = [...items.value, item]
     return item
   }
 
   // Создаёт новый пак через общий механизм предметов.
-  const addPack = (): Promise<InventoryItem> => addItem('pack')
+  const addPack = async (): Promise<InventoryItem> => {
+    const item: InventoryItem = {
+      id: createId(),
+      type: 'pack',
+      packId: BLISTER_CONFIGS.standard.id,
+      albumId: BLISTER_CONFIGS.standard.albumId,
+      createdAt: Date.now(),
+    }
+    await database.inventory.add(item)
+    items.value = [...items.value, item]
+    return item
+  }
 
   // Добавляет в Pinia предмет, уже сохранённый внешней транзакцией.
   const applyPersistedItem = (item: InventoryItem): void => {

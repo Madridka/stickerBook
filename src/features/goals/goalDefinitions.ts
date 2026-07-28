@@ -110,7 +110,7 @@ export const goalDefinitions: GoalDefinition[] = [
     order: 100,
     requirements: [{ type: 'stickers-placed', target: 1 }],
     reward: [{ type: 'energy', amount: 15 }],
-    action: { label: 'Открыть журнал', route: { name: 'album-wc-26' } },
+    action: { label: 'Открыть журнал', route: { name: 'album-detail', params: { albumId: 'wc-26' } } },
   },
   {
     id: 'place-10-stickers',
@@ -123,7 +123,7 @@ export const goalDefinitions: GoalDefinition[] = [
       { type: 'album-slots-filled', albumId: GOAL_ALBUM_ID, target: 10 },
     ],
     reward: [{ type: 'coins', amount: 50 }],
-    action: { label: 'Открыть журнал', route: { name: 'album-wc-26' } },
+    action: { label: 'Открыть журнал', route: { name: 'album-detail', params: { albumId: 'wc-26' } } },
   },
   {
     id: 'fill-first-page',
@@ -139,7 +139,7 @@ export const goalDefinitions: GoalDefinition[] = [
       },
     ],
     reward: [{ type: 'pack', packId: 'standard', amount: 1 }],
-    action: { label: 'Открыть страницу', route: { name: 'album-wc-26' } },
+    action: { label: 'Открыть страницу', route: { name: 'album-detail', params: { albumId: 'wc-26' } } },
   },
   {
     id: 'complete-first-team',
@@ -152,7 +152,7 @@ export const goalDefinitions: GoalDefinition[] = [
       { type: 'album-teams-completed', albumId: GOAL_ALBUM_ID, target: 1 },
     ],
     reward: [{ type: 'coins', amount: 100 }],
-    action: { label: 'Открыть журнал', route: { name: 'album-wc-26' } },
+    action: { label: 'Открыть журнал', route: { name: 'album-detail', params: { albumId: 'wc-26' } } },
   },
   {
     id: 'complete-4-teams',
@@ -165,7 +165,7 @@ export const goalDefinitions: GoalDefinition[] = [
       { type: 'album-teams-completed', albumId: GOAL_ALBUM_ID, target: 4 },
     ],
     reward: [{ type: 'pack', packId: 'standard', amount: 1 }],
-    action: { label: 'Открыть журнал', route: { name: 'album-wc-26' } },
+    action: { label: 'Открыть журнал', route: { name: 'album-detail', params: { albumId: 'wc-26' } } },
   },
   {
     id: 'complete-12-teams',
@@ -178,7 +178,7 @@ export const goalDefinitions: GoalDefinition[] = [
       { type: 'album-teams-completed', albumId: GOAL_ALBUM_ID, target: 12 },
     ],
     reward: [{ type: 'pack', packId: 'standard', amount: 3 }],
-    action: { label: 'Открыть журнал', route: { name: 'album-wc-26' } },
+    action: { label: 'Открыть журнал', route: { name: 'album-detail', params: { albumId: 'wc-26' } } },
   },
   {
     id: 'reach-album-10-percent',
@@ -190,7 +190,7 @@ export const goalDefinitions: GoalDefinition[] = [
       { type: 'album-progress', albumId: GOAL_ALBUM_ID, targetPercent: 10 },
     ],
     reward: [{ type: 'coins', amount: 100 }],
-    action: { label: 'Открыть журнал', route: { name: 'album-wc-26' } },
+    action: { label: 'Открыть журнал', route: { name: 'album-detail', params: { albumId: 'wc-26' } } },
   },
   {
     id: 'complete-first-minigame',

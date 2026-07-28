@@ -127,7 +127,7 @@ export const resolveRecommendedAction = (state: RecommendedActionSnapshot): Reco
       'home.actions.place.title',
       'home.actions.place.description',
       'home.actions.place.action',
-      { name: 'album-wc-26' },
+      { name: 'album-detail', params: { albumId: 'wc-26' } },
       800,
     )
   }
@@ -219,7 +219,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       id: 'place-stickers',
       titleKey: 'home.quick.place',
       badge: state.preparedStickers,
-      route: { name: 'album-wc-26' },
+      route: { name: 'album-detail', params: { albumId: 'wc-26' } },
       priority: 800,
       requiresEnergy: false,
     })
@@ -259,7 +259,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       id: 'album-slots',
       titleKey: 'home.quick.album',
       descriptionKey: 'home.quick.albumProgress',
-      route: { name: 'album-wc-26' },
+      route: { name: 'album-detail', params: { albumId: 'wc-26' } },
       priority: 300,
       requiresEnergy: false,
     })

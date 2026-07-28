@@ -6,8 +6,8 @@ import {
   type PackOpeningReward,
   type PackOpeningSession,
 } from '@/db/database'
-import { catalogs } from '@/data/wc-26/catalog'
-import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '@/data/mainConst'
+import { getAlbumById, getBlisterById } from '@/data/albumRegistry'
+import { BLISTER_CONFIGS, DROP_ENGINE_CONFIG } from '@/data/mainConst'
 import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 import { selectCardV2 } from '@/utils/dropEngine'
@@ -29,7 +29,7 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
   }
 
   // Один раз рассчитывает содержимое пака и резервирует его сохраняемой сессией.
-  const start = async (): Promise<PackOpeningSession | undefined> => {
+  const start = async (requestedPackId?: string): Promise<PackOpeningSession | undefined> => {
     if (isStarting.value) return session.value
     isStarting.value = true
 
@@ -44,36 +44,56 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             await database.packOpeningSessions.get('pending')
           if (pending) return pending
 
-          const pack: InventoryItem | undefined = await database.inventory
-            .orderBy('createdAt')
-            .filter(({ type }: InventoryItem): boolean => type === 'pack')
-            .first()
+          const pack: InventoryItem | undefined = requestedPackId
+            ? await database.inventory.get(requestedPackId)
+            : await database.inventory
+                .orderBy('createdAt')
+                .filter(({ type }: InventoryItem): boolean => type === 'pack')
+                .first()
           if (!pack) return undefined
+          const blisterId: string = pack.packId ?? BLISTER_CONFIGS.standard.id
+          const blister = getBlisterById(blisterId === 'rare' ? 'standard' : blisterId)
+          const album = getAlbumById(
+            pack.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
+          )
+          if (!blister || !album?.cards.length) return undefined
 
           const activeCards: StickerInstance[] = await database.cards
+            .where('albumId')
+            .equals(album.id)
             .filter(({ location }: StickerInstance): boolean => location !== 'deleted')
             .toArray()
           const ownedPlayerIds: Set<string> = new Set(
             activeCards.map(({ playerId }: StickerInstance): string => playerId),
           )
           const rewards: PackOpeningReward[] = Array.from(
-            { length: PACK_CONFIGS.standard.cardsPerPack },
+            { length: blister.cardCount },
             (): PackOpeningReward => {
               const card: CardDefinition = selectCardV2({
-                catalogs,
-                packConfig: PACK_CONFIGS.standard,
-                poolId: 'standard',
+                catalogs: album.catalogs,
+                packConfig: {
+                  cardsPerPack: blister.cardCount,
+                  rarityOdds: blister.rarityOdds,
+                },
+                poolId: blister.poolId,
                 defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
                 randomSource: Math.random,
               }) as CardDefinition
               const isDuplicate: boolean = ownedPlayerIds.has(card.id)
               ownedPlayerIds.add(card.id)
-              return { instanceId: createId(), playerId: card.id, isDuplicate }
+              return {
+                instanceId: createId(),
+                albumId: album.id,
+                playerId: card.id,
+                isDuplicate,
+              }
             },
           )
           const created: PackOpeningSession = {
             id: 'pending',
             packId: pack.id,
+            blisterId,
+            albumId: album.id,
             rewards,
             currentIndex: 0,
             animationComplete: false,
@@ -117,13 +137,14 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
         for (const reward of pending.rewards) {
           const instance: StickerInstance = {
             id: reward.instanceId,
+            albumId: reward.albumId,
             playerId: reward.playerId,
             quality: 100,
             location: 'inventory',
           }
           const existing: StickerInstance | undefined = await database.cards
-            .where('playerId')
-            .equals(reward.playerId)
+            .where('[albumId+playerId]')
+            .equals([reward.albumId, reward.playerId])
             .filter(({ location }: StickerInstance): boolean => location !== 'deleted')
             .first()
 

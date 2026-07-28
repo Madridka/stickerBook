@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import cards from '@/data/wc-26/catalog'
+import { getAlbumCard } from '@/data/albumRegistry'
 import { DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
 import {
   useCollectionStore,
   type BeginDuplicateExchangeResult,
   type ClaimDuplicateExchangeResult,
 } from '@/stores/collection'
-import type { CardDefinition, StickerInstance } from '@/types'
+import type { AlbumId, CardDefinition, StickerInstance } from '@/types'
 
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
@@ -18,6 +18,7 @@ interface DuplicateGroup {
   instances: StickerInstance[]
 }
 
+const props = defineProps<{ albumId: AlbumId }>()
 const { t } = useI18n()
 const collection = useCollectionStore()
 const selectionLimit: number = DUPLICATE_EXCHANGE_CONFIG.tradeInCount
@@ -30,9 +31,11 @@ const hasError: Ref<boolean> = ref(false)
 
 const duplicateGroups: ComputedRef<DuplicateGroup[]> = computed((): DuplicateGroup[] => {
   const groups: Map<string, StickerInstance[]> = new Map()
-  collection.duplicates.forEach((instance: StickerInstance): void => {
+  collection
+    .getAlbumDuplicates(props.albumId)
+    .forEach((instance: StickerInstance): void => {
     groups.set(instance.playerId, [...(groups.get(instance.playerId) ?? []), instance])
-  })
+    })
   return Array.from(groups, ([playerId, instances]): DuplicateGroup => ({ playerId, instances }))
 })
 const candidateCards: ComputedRef<CardDefinition[]> = computed((): CardDefinition[] =>
@@ -49,10 +52,13 @@ const canSubmit: ComputedRef<boolean> = computed(
 )
 
 const getCard = (playerId: string): CardDefinition | undefined =>
-  cards.find(({ id }): boolean => id === playerId)
+  getAlbumCard(collection.pendingExchange?.albumId ?? props.albumId, playerId)
 const selectedCount = (group: DuplicateGroup): number =>
   group.instances.filter(({ id }): boolean => selectedInstanceIds.value.includes(id)).length
-const isOwned = (playerId: string): boolean => collection.collected.includes(playerId)
+const isOwned = (playerId: string): boolean =>
+  collection
+    .getCollectedCardIds(collection.pendingExchange?.albumId ?? props.albumId)
+    .has(playerId)
 
 const addFromGroup = (group: DuplicateGroup): void => {
   if (selectedInstanceIds.value.length >= selectionLimit) return

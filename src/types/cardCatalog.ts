@@ -1,4 +1,4 @@
-export type CardKind = 'team' | 'coach' | 'player'
+export type CardKind = 'team' | 'coach' | 'player' | 'special'
 export type PlayerPosition = 'GK' | 'DF' | 'MF' | 'FW'
 export type CoachRole = 'HEAD_COACH'
 export type CardRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary'
@@ -56,7 +56,11 @@ export interface PlayerCard extends BaseCard {
   shirtNumber?: number
 }
 
-export type Card = TeamCard | CoachCard | PlayerCard
+export interface SpecialCard extends BaseCard {
+  kind: 'special'
+}
+
+export type Card = TeamCard | CoachCard | PlayerCard | SpecialCard
 
 type NormalizedCardFields = Required<
   Pick<BaseCard, 'rarity' | 'series' | 'finish' | 'acquisition' | 'selectionWeight'>
@@ -67,6 +71,7 @@ type NormalizeCard<T extends Card> = T extends Card
   : never
 
 export type CardDefinition = NormalizeCard<Card> & {
+  albumId: string
   collectionId: string
   teamId: string
 }

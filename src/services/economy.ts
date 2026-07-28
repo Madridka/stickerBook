@@ -4,9 +4,16 @@ import {
   type InventoryItem,
   type PlayerState,
 } from '@/db/database'
-import { CLICKER_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, CLICKER_CONFIG, DROP_ENGINE_CONFIG } from '@/data/mainConst'
+import { getAlbumById, getBlisterById } from '@/data/albumRegistry'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import { selectCardV2 } from '@/utils/dropEngine'
+import type {
+  PackOpeningReward,
+  PackOpeningSession,
+} from '@/db/database'
+import type { CardDefinition, StickerInstance } from '@/types'
 
 export interface PurchasedPackReceipt {
   status: 'purchased'
@@ -20,6 +27,26 @@ export interface RejectedPackPurchase {
 }
 
 export type PurchasePackResult = PurchasedPackReceipt | RejectedPackPurchase
+
+export interface PurchasedBlisterReceipt {
+  status: 'purchased'
+  item: InventoryItem
+  player: PlayerState
+  session: PackOpeningSession
+}
+
+export interface RejectedBlisterPurchase {
+  status:
+    | 'unknown-blister'
+    | 'empty-album'
+    | 'cooldown'
+    | 'insufficient-funds'
+    | 'opening-in-progress'
+  player?: PlayerState
+  nextAvailableAt?: number
+}
+
+export type PurchaseBlisterResult = PurchasedBlisterReceipt | RejectedBlisterPurchase
 
 // Сохраняет денежные значения с той же точностью, что и награды кликера.
 const roundCoins = (value: number): number => {
@@ -51,6 +78,8 @@ export const purchasePack = async (price: number): Promise<PurchasePackResult> =
       const item: InventoryItem = {
         id: createId(),
         type: 'pack',
+        packId: BLISTER_CONFIGS.standard.id,
+        albumId: BLISTER_CONFIGS.standard.albumId,
         createdAt: Date.now(),
       }
 
@@ -65,6 +94,120 @@ export const purchasePack = async (price: number): Promise<PurchasePackResult> =
       return { status: 'purchased', item, player }
     },
   )
+  if (result.status === 'purchased') notifyGoalsChanged()
+  return result
+}
+
+// Проверяет, оплачивает и резервирует содержимое блистера одной транзакцией.
+export const purchaseBlister = async (
+  blisterId: string,
+  now: number = Date.now(),
+): Promise<PurchaseBlisterResult> => {
+  const blister = getBlisterById(blisterId)
+  if (!blister) return { status: 'unknown-blister' }
+  const album = getAlbumById(blister.albumId)
+  if (!album?.cards.length || !album.catalogs.length) return { status: 'empty-album' }
+
+  const result: PurchaseBlisterResult = await database.transaction(
+    'rw',
+    [
+      database.player,
+      database.inventory,
+      database.cards,
+      database.packOpeningSessions,
+      database.blisterCooldowns,
+      database.goalCounters,
+    ],
+    async (): Promise<PurchaseBlisterResult> => {
+      if (await database.packOpeningSessions.get('pending')) {
+        return { status: 'opening-in-progress' }
+      }
+      const cooldown = await database.blisterCooldowns.get(blister.id)
+      if (cooldown && cooldown.nextAvailableAt > now) {
+        return {
+          status: 'cooldown',
+          nextAvailableAt: cooldown.nextAvailableAt,
+        }
+      }
+      const savedPlayer: PlayerState | undefined = await database.player.get(PLAYER_STATE_ID)
+      if (!savedPlayer || savedPlayer.coins < blister.cost) {
+        return { status: 'insufficient-funds', player: savedPlayer }
+      }
+
+      const activeCards: StickerInstance[] = await database.cards
+        .where('albumId')
+        .equals(album.id)
+        .filter(({ location }): boolean => location !== 'deleted')
+        .toArray()
+      const ownedCardIds: Set<string> = new Set(
+        activeCards.map(({ playerId }): string => playerId),
+      )
+      const rewards: PackOpeningReward[] = Array.from(
+        { length: blister.cardCount },
+        (): PackOpeningReward => {
+          const card: CardDefinition = selectCardV2({
+            catalogs: album.catalogs,
+            packConfig: {
+              cardsPerPack: blister.cardCount,
+              rarityOdds: blister.rarityOdds,
+            },
+            poolId: blister.poolId,
+            defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
+            randomSource: Math.random,
+          }) as CardDefinition
+          const isDuplicate: boolean = ownedCardIds.has(card.id)
+          ownedCardIds.add(card.id)
+          return {
+            instanceId: createId(),
+            albumId: album.id,
+            playerId: card.id,
+            isDuplicate,
+          }
+        },
+      )
+      const item: InventoryItem = {
+        id: createId(),
+        type: 'pack',
+        packId: blister.id,
+        albumId: album.id,
+        createdAt: now,
+      }
+      const session: PackOpeningSession = {
+        id: 'pending',
+        packId: item.id,
+        blisterId: blister.id,
+        albumId: album.id,
+        rewards,
+        currentIndex: 0,
+        animationComplete: false,
+        createdAt: now,
+      }
+      const player: PlayerState = {
+        ...savedPlayer,
+        coins: roundCoins(savedPlayer.coins - blister.cost),
+        energy: savedPlayer.energy ?? CLICKER_CONFIG.energyLimit,
+        energyUpdatedAt: savedPlayer.energyUpdatedAt ?? now,
+      }
+
+      await database.player.put(player)
+      await database.inventory.add(item)
+      await database.packOpeningSessions.add(session)
+      if (blister.cooldownMs > 0) {
+        await database.blisterCooldowns.put({
+          id: blister.id,
+          nextAvailableAt: now + blister.cooldownMs,
+        })
+      }
+      const counter = await database.goalCounters.get('packs-purchased')
+      await database.goalCounters.put({
+        id: 'packs-purchased',
+        value: (counter?.value ?? 0) + 1,
+        updatedAt: now,
+      })
+      return { status: 'purchased', item, player, session }
+    },
+  )
+
   if (result.status === 'purchased') notifyGoalsChanged()
   return result
 }

@@ -1,22 +1,19 @@
-import type {
-  CardFinish,
-  CardKind,
-  CardRarity,
-  CardSeries,
-  CoachRole,
-  PlayerPosition,
-} from '../types/cardCatalog.ts'
-
-interface PackConfig {
-  cardsPerPack: number
-  rarityOdds: Record<CardRarity, number>
-}
+import type { BlisterConfig, CardCatalogConfig, PackConfig } from '../types/gameConfig.ts'
 
 /** Стоимость одного стандартного пака в игровых монетах. */
 export const PACK_PRICE: number = 20
 
 /** Количество карточек, которое игрок получает из одного стандартного пака. */
 export const CARDS_PER_PACK: number = 5
+
+/** Стоимость отдельного блистера журнала КДВ. */
+export const KDV_BLISTER_COST: number = 100
+
+/** Количество карточек в одном блистере КДВ. */
+export const KDV_BLISTER_CARD_COUNT: number = 1
+
+/** Абсолютный четырёхчасовой период недоступности блистера КДВ. */
+export const KDV_BLISTER_COOLDOWN_MS: number = 4 * 60 * 60 * 1_000
 
 /** Настройки версии алгоритма выпадения и базового веса карточки. */
 export const DROP_ENGINE_CONFIG = {
@@ -40,6 +37,30 @@ export const PACK_CONFIGS = {
   },
 } satisfies Record<string, PackConfig>
 
+/** Универсальные игровые параметры блистеров, привязанных к журналам. */
+export const BLISTER_CONFIGS = {
+  standard: {
+    id: 'standard',
+    albumId: 'wc-26',
+    titleKey: 'shop.paidTitle',
+    cost: PACK_PRICE,
+    cardsPerPack: CARDS_PER_PACK,
+    cooldownMs: 0,
+    poolId: 'standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  kdv: {
+    id: 'kdv',
+    albumId: 'kdv',
+    titleKey: 'shop.kdv.title',
+    cost: KDV_BLISTER_COST,
+    cardsPerPack: KDV_BLISTER_CARD_COUNT,
+    cooldownMs: KDV_BLISTER_COOLDOWN_MS,
+    poolId: 'standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+} satisfies Record<string, BlisterConfig>
+
 /** Настройки ротации и содержимого редких блистеров магазина. */
 export const RARE_SHOP_CONFIG = {
   price: 80,
@@ -60,28 +81,12 @@ export const COLLECTION_CONFIG = {
   baseAlbumSlotsPerTeam: 20,
 }
 
-interface CardCatalogConfig {
-  schemaVersion: 2
-  kinds: CardKind[]
-  positions: PlayerPosition[]
-  coachRoles: CoachRole[]
-  rarities: CardRarity[]
-  series: CardSeries[]
-  finishes: CardFinish[]
-  defaults: {
-    rarity: CardRarity
-    series: CardSeries
-    finish: CardFinish
-    selectionWeight: number
-  }
-}
-
 /** Справочники и значения по умолчанию для схемы каталога карточек. */
 export const CARD_CATALOG_CONFIG: CardCatalogConfig = {
   // Версия структуры JSON-каталогов карточек.
   schemaVersion: 2,
   // Допустимые типы сущностей на карточках.
-  kinds: ['team', 'coach', 'player'],
+  kinds: ['team', 'coach', 'player', 'special'],
   // Допустимые игровые позиции футболистов.
   positions: ['GK', 'DF', 'MF', 'FW'],
   // Допустимые роли тренерского штаба.

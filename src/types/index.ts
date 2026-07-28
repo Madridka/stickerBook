@@ -2,6 +2,29 @@ export type PlayerPosition = 'GK' | 'DF' | 'MF' | 'FW'
 export type StickerLocation = 'inventory' | 'collection' | 'album' | 'duplicate' | 'deleted'
 
 export type {
+  AlbumCard,
+  AlbumContentsItem,
+  AlbumDefinition,
+  AlbumDropSettings,
+  AlbumEditorialFeature,
+  AlbumEditorialPageAlign,
+  AlbumEditorialPageDefinition,
+  AlbumEditorialPageKind,
+  AlbumEditorialPageTone,
+  AlbumId,
+  AlbumLayout,
+  AlbumPage,
+  AlbumProgress,
+  AlbumSpread,
+  AlbumTheme,
+  BlisterDefinition,
+  CardId,
+  PageId,
+} from './album'
+
+export type { BlisterConfig, CardCatalogConfig, PackConfig } from './gameConfig'
+
+export type {
   AcquisitionSource,
   BaseCard,
   CardDefinition,
@@ -17,11 +40,13 @@ export type {
   NormalizedCardCatalog,
   PlayerCard as CatalogPlayerCard,
   PlayerCardDefinition,
+  SpecialCard,
   TeamCard,
 } from './cardCatalog'
 
 export interface StickerInstance {
   id: string
+  albumId: import('./album').AlbumId
   playerId: string
   quality: number
   location: StickerLocation
@@ -32,6 +57,7 @@ export interface StickerInstance {
 
 export interface DeletedCard {
   id: string
+  albumId: import('./album').AlbumId
   instanceId: string
   playerId: string
   deletedAt: number

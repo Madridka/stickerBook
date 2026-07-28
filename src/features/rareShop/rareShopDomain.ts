@@ -245,7 +245,12 @@ export const createRareBlisterContents = (
   const rewards = shuffle(selected, randomSource).map((card: CardDefinition) => {
     const isDuplicate: boolean = seenIds.has(card.id)
     seenIds.add(card.id)
-    return { instanceId: createId(), playerId: card.id, isDuplicate }
+    return {
+      instanceId: createId(),
+      albumId: card.albumId,
+      playerId: card.id,
+      isDuplicate,
+    }
   })
   return { rewards, guaranteeRollSucceeded }
 }

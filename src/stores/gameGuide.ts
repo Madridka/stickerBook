@@ -178,7 +178,7 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
         titleKey: 'home.guide.place.title',
         descriptionKey: 'home.guide.place.description',
         actionLabelKey: 'home.guide.place.action',
-        route: { name: 'album-wc-26' },
+        route: { name: 'album-detail', params: { albumId: 'wc-26' } },
       },
       'complete-first-minigame': {
         id: next,

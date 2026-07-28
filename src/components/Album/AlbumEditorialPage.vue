@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { ALBUM_VIEW_CONFIG } from '@/data/mainConst'
+import type { AlbumEditorialPageDefinition } from '@/types'
 
 interface AlbumReleaseNote {
   version: string
@@ -9,204 +10,192 @@ interface AlbumReleaseNote {
 }
 
 interface Props {
+  definition: AlbumEditorialPageDefinition
   pageNumber: number
-  logo: string
-  projectIntro: string
-  releaseSeries: string
-  releases: AlbumReleaseNote[]
+  logo?: string
+  releaseSeries?: string
+  releases?: AlbumReleaseNote[]
 }
 
-defineProps<Props>()
+withDefaults(defineProps<Props>(), {
+  logo: '',
+  releaseSeries: '',
+  releases: () => [],
+})
+
 const { t } = useI18n()
 </script>
 
 <template>
   <div
-    class="editorial-page absolute inset-0 overflow-hidden text-[#17212b] [container-type:inline-size] [font-family:Inter,ui-sans-serif,system-ui,sans-serif] [&_*]:box-border [&_*::after]:box-border [&_*::before]:box-border"
-    :class="`editorial-page--${pageNumber}`"
+    class="absolute inset-0 overflow-hidden text-[#17212b] [container-type:inline-size] [font-family:Inter,ui-sans-serif,system-ui,sans-serif] [&_*]:box-border [&_*::after]:box-border [&_*::before]:box-border"
   >
     <section
-      v-if="pageNumber === 1"
-      class="cover-page relative h-full w-full text-[#f7f3eb]"
-      :aria-label="t('album.editorial.coverAria')"
+      v-if="definition.kind === 'cover'"
+      class="relative flex h-full w-full flex-col justify-between [padding:7.5%_7%_5.5%]"
+      :class="definition.tone === 'light' ? 'text-[#f7f3eb]' : 'text-[#17212b]'"
+      :aria-label="t(definition.title)"
     >
-      <div class="cover-page__brand absolute left-[3.5%] top-[5.2%] w-[45%]">
-        <img class="cover-page__logo block h-auto w-full object-contain" :src="logo" alt="" />
-        <span
-          class="cover-page__edition block [margin:-4.2cqw_0_1.5cqw_2.7cqw] text-[clamp(7px,1.02cqw,15px)] font-extrabold uppercase tracking-[0.2em] text-[#e5b95c] max-md:text-[clamp(4px,1.02cqw,7px)]"
-          >{{ t('album.editorial.edition') }}</span
-        >
-        <p
-          class="[margin:0_0_0_2.7cqw] text-[clamp(9px,1.6cqw,24px)] [font-weight:750] leading-[1.35] tracking-[0.025em] text-[#b9d8c2] max-md:text-[clamp(6px,1.6cqw,9px)]"
-        >
-          {{ t('album.editorial.mottoFirst') }}<br />{{ t('album.editorial.mottoSecond') }}
-        </p>
-      </div>
-
       <div
-        class="cover-page__caption absolute bottom-[12.2%] left-[6.2%] grid w-[31%] gap-[0.55cqw] text-[#17212b]"
-      >
-        <span
-          class="text-[clamp(7px,0.95cqw,14px)] font-black uppercase tracking-[0.17em] text-[#e86b52] max-md:text-[clamp(4px,0.95cqw,7px)]"
-          >{{ t('album.title') }}</span
-        >
-        <strong
-          class="text-[clamp(10px,1.45cqw,22px)] leading-[1.15] max-md:text-[clamp(6px,1.45cqw,10px)]"
-          >{{ t('album.editorial.interactiveAlbum') }}</strong
-        >
-      </div>
+        class="pointer-events-none absolute inset-0"
+        :class="
+          definition.tone === 'light'
+            ? 'bg-gradient-to-r from-[#081728]/80 via-[#081728]/35 to-transparent'
+            : 'bg-gradient-to-r from-[#f7f0df]/75 via-[#f7f0df]/25 to-transparent'
+        "
+      />
 
-      <footer
-        class="cover-page__footer absolute bottom-[3.6%] left-[6.2%] right-[4.4%] flex justify-between text-[clamp(6px,0.78cqw,12px)] font-extrabold uppercase tracking-[0.15em] text-[#e5b95c] max-md:text-[clamp(4px,0.9cqw,7px)]"
-      >
-        <span>{{ t('album.editorial.collectionEdition') }}</span>
-        <span>{{ t('album.editorial.volume') }}</span>
-      </footer>
-    </section>
-
-    <section
-      v-else-if="pageNumber === 2"
-      class="info-page h-full w-full [padding:11.5%_6.8%_5.4%_13.2%]"
-      :aria-label="t('album.editorial.infoAria')"
-    >
-      <header
-        class="editorial-header grid grid-cols-[1.18fr_0.82fr] items-end gap-[5cqw] border-b-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_28%)] pb-[3.2cqw]"
-      >
+      <div class="relative z-10 w-[53%]">
+        <img
+          v-if="logo"
+          class="mb-[2.6cqw] block h-auto w-[78%] object-contain"
+          :src="logo"
+          alt=""
+        />
         <span
-          class="editorial-kicker col-span-full text-[clamp(7px,0.92cqw,14px)] font-black uppercase tracking-[0.2em] text-[#e86b52] max-md:text-[clamp(4px,0.9cqw,7px)]"
-          >{{ t('album.editorial.infoKicker') }}</span
+          class="block text-[clamp(7px,0.95cqw,14px)] font-black uppercase tracking-[0.2em] text-[#e5b95c] max-md:text-[clamp(4px,0.95cqw,7px)]"
         >
+          {{ t(definition.eyebrow) }}
+        </span>
         <h2
-          class="m-0 text-[clamp(19px,3.8cqw,58px)] [font-weight:950] leading-[0.95] tracking-[-0.055em] max-md:text-[clamp(12px,3.8cqw,19px)]"
+          class="m-0 mt-[1.2cqw] text-[clamp(23px,4.9cqw,74px)] font-black leading-[0.92] tracking-[-0.055em] max-md:text-[clamp(14px,4.9cqw,23px)]"
         >
-          {{ t('album.editorial.infoTitleFirst') }}<br />{{ t('album.editorial.infoTitleSecond') }}
+          {{ t(definition.title) }}
         </h2>
         <p
-          class="m-0 text-[clamp(7px,1.18cqw,18px)] [font-weight:560] leading-[1.5] max-md:text-[clamp(4.5px,1.18cqw,7px)]"
+          class="m-0 mt-[1.8cqw] max-w-[38cqw] text-[clamp(8px,1.35cqw,20px)] font-semibold leading-[1.45] opacity-90 max-md:text-[clamp(5px,1.35cqw,8px)]"
         >
-          {{ projectIntro }}
+          {{ t(definition.description) }}
         </p>
-      </header>
-
-      <div class="mt-[2.4cqw]">
-        <span
-          class="text-[clamp(6px,0.78cqw,12px)] font-black uppercase tracking-[0.18em] text-[#e86b52] max-md:text-[clamp(4px,0.9cqw,7px)]"
-          >{{ t('album.editorial.guideKicker') }}</span
-        >
-        <h3
-          class="m-0 mt-[0.35cqw] text-[clamp(12px,2.15cqw,33px)] font-black leading-none tracking-[-0.035em] max-md:text-[clamp(8px,2.15cqw,12px)]"
-        >
-          {{ t('album.editorial.guideTitle') }}
-        </h3>
-
-        <ol
-          class="mt-[1.7cqw] grid list-none grid-cols-2 gap-[1.15cqw_3.5cqw] border-t-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_22%)] pt-[1.7cqw] p-0"
-        >
-          <li
-            v-for="step in 5"
-            :key="step"
-            class="grid min-w-0 grid-cols-[2.7cqw_1fr] gap-[1.1cqw]"
-          >
-            <span
-              class="grid h-[2.7cqw] w-[2.7cqw] place-items-center rounded-full bg-[#e5b95c] text-[clamp(6px,0.78cqw,12px)] font-black text-[#17212b] max-md:text-[clamp(4px,0.9cqw,7px)]"
-            >
-              {{ String(step).padStart(2, '0') }}
-            </span>
-            <div>
-              <h4
-                class="m-0 text-[clamp(9px,1.2cqw,18px)] font-black leading-[1.1] tracking-[-0.02em] max-md:text-[clamp(5px,1.2cqw,9px)]"
-              >
-                {{ t(`album.editorial.guideSteps.${step}.title`) }}
-              </h4>
-              <p
-                class="m-0 mt-[0.4cqw] text-[clamp(7px,1.02cqw,14px)] [font-weight:570] leading-[1.35] text-[rgb(23_33_43_/_82%)] max-md:text-[clamp(4.5px,1.02cqw,7px)]"
-              >
-                {{ t(`album.editorial.guideSteps.${step}.description`) }}
-              </p>
-            </div>
-          </li>
-        </ol>
       </div>
 
       <footer
-        class="paper-page-number absolute bottom-[3.1%] left-[13.2%] right-[6.8%] flex items-baseline justify-between text-[clamp(6px,0.72cqw,11px)] font-extrabold uppercase tracking-[0.17em] text-[rgb(23_33_43_/_54%)] max-md:text-[clamp(4px,0.9cqw,7px)]"
+        class="relative z-10 flex items-end justify-between border-t border-current/25 pt-[1.4cqw] text-[clamp(6px,0.76cqw,11px)] font-black uppercase tracking-[0.16em] max-md:text-[clamp(4px,0.76cqw,6px)]"
       >
-        {{ t('app.title') }}
-        <strong
-          class="text-[clamp(10px,1.45cqw,22px)] tracking-[-0.03em] text-[#e86b52] max-md:text-[clamp(6px,1.45cqw,10px)]"
-          >02</strong
-        >
+        <span>{{ definition.footer ? t(definition.footer) : t('album.editorial.issue') }}</span>
+        <strong class="text-[clamp(10px,1.45cqw,22px)] text-[#e5b95c]">01</strong>
       </footer>
     </section>
 
     <section
-      v-else-if="pageNumber === 3"
-      class="changelog-page h-full w-full [padding:13.3%_12.3%_5.4%_7.5%]"
-      :aria-label="t('album.editorial.changelogAria')"
+      v-else-if="definition.kind === 'article'"
+      class="relative flex h-full w-full items-center [padding:6.5%_6.5%_5.5%]"
+      :aria-label="t(definition.title)"
     >
-      <header
-        class="editorial-header editorial-header--changelog grid grid-cols-[0.62fr_1.38fr] items-start gap-[5cqw] border-b-[max(1px,0.1cqw)] border-solid border-[rgb(23_33_43_/_28%)] pb-[3.2cqw]"
+      <article
+        class="relative w-[66%] rounded-[1.4cqw] border border-[#17212b]/15 bg-[#fffaf0]/88 p-[3.2cqw] shadow-[0_1.2cqw_3cqw_rgb(23_33_43_/_14%)] backdrop-blur-[2px]"
+        :class="definition.align === 'right' ? 'ml-auto' : 'mr-auto'"
       >
         <span
-          class="editorial-kicker col-auto pt-[0.45cqw] text-[clamp(7px,0.92cqw,14px)] font-black uppercase tracking-[0.2em] text-[#e86b52] max-md:text-[clamp(4px,0.9cqw,7px)]"
-          >{{ t('album.editorial.changelogKicker') }}</span
+          class="text-[clamp(7px,0.88cqw,13px)] font-black uppercase tracking-[0.2em] text-[#c83d36] max-md:text-[clamp(4px,0.88cqw,7px)]"
         >
-        <div>
-          <h2
-            class="m-0 text-[clamp(19px,3.8cqw,58px)] [font-weight:950] leading-[0.95] tracking-[-0.055em] max-md:text-[clamp(12px,3.8cqw,19px)]"
-          >
-            {{ t('album.editorial.changelogTitleFirst') }}<br />{{
-              t('album.editorial.changelogTitleSecond')
-            }}
-          </h2>
-          <p
-            class="mb-0 ml-0 mr-0 mt-[1.2cqw] text-[clamp(7px,0.92cqw,14px)] font-extrabold uppercase leading-[1.5] tracking-[0.08em] text-[rgb(23_33_43_/_60%)] max-md:text-[clamp(4.5px,1.18cqw,7px)]"
-          >
-            {{ t('album.editorial.releaseSummary', { series: releaseSeries }) }}
-          </p>
-        </div>
-      </header>
+          {{ t(definition.eyebrow) }}
+        </span>
+        <h2
+          class="m-0 mt-[0.8cqw] text-[clamp(19px,3.55cqw,54px)] font-black leading-[0.96] tracking-[-0.05em] max-md:text-[clamp(12px,3.55cqw,19px)]"
+        >
+          {{ t(definition.title) }}
+        </h2>
+        <p
+          class="m-0 mt-[1.35cqw] text-[clamp(7px,1.08cqw,16px)] font-semibold leading-[1.5] text-[#17212b]/75 max-md:text-[clamp(4.5px,1.08cqw,7px)]"
+        >
+          {{ t(definition.description) }}
+        </p>
 
-      <div
-        class="release-list relative mt-[3cqw] grid gap-[2.15cqw] pl-[2.5cqw] before:absolute before:bottom-[0.7cqw] before:left-0 before:top-[0.7cqw] before:w-[max(1px,0.12cqw)] before:bg-[#e5b95c] before:content-['']"
-      >
-        <article
-          v-for="release in releases"
-          :key="release.version"
-          class="release-note relative grid grid-cols-[12cqw_1fr] gap-[3.4cqw] before:absolute before:left-[-3.05cqw] before:top-[0.45cqw] before:h-[1.15cqw] before:w-[1.15cqw] before:rounded-full before:border-[max(1px,0.14cqw)] before:border-solid before:border-[#e5b95c] before:bg-[#f7f3eb] before:content-['']"
+        <div
+          v-if="definition.features?.length"
+          class="mt-[2.2cqw] grid grid-cols-2 gap-[1.2cqw] border-t border-[#17212b]/15 pt-[1.8cqw]"
         >
           <div
-            class="release-note__version text-[clamp(10px,1.62cqw,25px)] [font-weight:950] tracking-[-0.04em] text-[#e86b52] max-md:text-[clamp(6px,1.62cqw,10px)]"
+            v-for="(feature, index) in definition.features"
+            :key="feature.title"
+            class="rounded-[0.8cqw] bg-[#17212b]/[0.045] p-[1.3cqw]"
           >
-            v{{ release.version }}
-          </div>
-          <div class="release-note__body min-w-0">
-            <h3
-              class="m-0 text-[clamp(9px,1.38cqw,21px)] font-black leading-[1.15] tracking-[-0.025em] max-md:text-[clamp(5.5px,1.38cqw,9px)]"
+            <span
+              class="mb-[0.55cqw] block text-[clamp(6px,0.72cqw,11px)] font-black text-[#c83d36] max-md:text-[clamp(4px,0.72cqw,6px)]"
             >
-              {{ release.title }}
+              {{ String(index + 1).padStart(2, '0') }}
+            </span>
+            <h3
+              class="m-0 text-[clamp(9px,1.18cqw,18px)] font-black leading-[1.08] max-md:text-[clamp(5.5px,1.18cqw,9px)]"
+            >
+              {{ t(feature.title) }}
             </h3>
-            <ul class="grid list-none grid-cols-2 gap-[1.3cqw_2.5cqw] [margin:1.25cqw_0_0] p-0">
-              <li
-                v-for="item in release.items.slice(0, ALBUM_VIEW_CONFIG.releaseItemsPerNote)"
-                :key="item"
-                class="relative pl-[1.4cqw] text-[clamp(7px,0.98cqw,15px)] [font-weight:570] leading-[1.35] before:absolute before:left-0 before:top-[0.54em] before:h-[0.45cqw] before:w-[0.45cqw] before:rounded-full before:bg-[#b9d8c2] before:content-[''] before:[box-shadow:inset_0_0_0_max(1px,0.08cqw)_rgb(23_33_43_/_20%)] max-md:text-[clamp(4.5px,0.98cqw,7px)]"
-              >
-                {{ item }}
-              </li>
-            </ul>
+            <p
+              class="m-0 mt-[0.45cqw] text-[clamp(6px,0.88cqw,13px)] font-medium leading-[1.4] text-[#17212b]/70 max-md:text-[clamp(4px,0.88cqw,6px)]"
+            >
+              {{ t(feature.description) }}
+            </p>
           </div>
-        </article>
+        </div>
+      </article>
+
+      <strong
+        class="absolute bottom-[3%] text-[clamp(10px,1.45cqw,22px)] font-black text-[#c83d36] max-md:text-[clamp(6px,1.45cqw,10px)]"
+        :class="pageNumber % 2 === 0 ? 'left-[6.5%]' : 'right-[6.5%]'"
+      >
+        {{ String(pageNumber).padStart(2, '0') }}
+      </strong>
+    </section>
+
+    <section
+      v-else
+      class="relative h-full w-full [padding:8%_8%_5.5%]"
+      :aria-label="t(definition.title)"
+    >
+      <div class="rounded-[1.4cqw] border border-[#17212b]/15 bg-[#fffaf0]/90 p-[3cqw] backdrop-blur-[2px]">
+        <header class="grid grid-cols-[0.56fr_1.44fr] gap-[3cqw] border-b border-[#17212b]/20 pb-[2cqw]">
+          <span
+            class="pt-[0.5cqw] text-[clamp(7px,0.88cqw,13px)] font-black uppercase tracking-[0.2em] text-[#c83d36] max-md:text-[clamp(4px,0.88cqw,7px)]"
+          >
+            {{ t(definition.eyebrow) }}
+          </span>
+          <div>
+            <h2
+              class="m-0 text-[clamp(19px,3.55cqw,54px)] font-black leading-[0.96] tracking-[-0.05em] max-md:text-[clamp(12px,3.55cqw,19px)]"
+            >
+              {{ t(definition.title) }}
+            </h2>
+            <p
+              class="m-0 mt-[0.8cqw] text-[clamp(7px,0.92cqw,14px)] font-bold uppercase tracking-[0.08em] text-[#17212b]/55 max-md:text-[clamp(4.5px,0.92cqw,7px)]"
+            >
+              {{ t(definition.description, { series: releaseSeries }) }}
+            </p>
+          </div>
+        </header>
+
+        <div class="relative mt-[2cqw] grid gap-[1.4cqw] pl-[2cqw] before:absolute before:bottom-0 before:left-0 before:top-0 before:w-px before:bg-[#e5b95c] before:content-['']">
+          <article
+            v-for="release in releases"
+            :key="release.version"
+            class="relative grid grid-cols-[10cqw_1fr] gap-[2.5cqw] before:absolute before:left-[-2.42cqw] before:top-[0.35cqw] before:h-[0.85cqw] before:w-[0.85cqw] before:rounded-full before:border before:border-[#e5b95c] before:bg-[#fffaf0] before:content-['']"
+          >
+            <strong class="text-[clamp(9px,1.35cqw,20px)] font-black text-[#c83d36]">
+              v{{ release.version }}
+            </strong>
+            <div>
+              <h3 class="m-0 text-[clamp(8px,1.15cqw,17px)] font-black">
+                {{ release.title }}
+              </h3>
+              <ul class="mt-[0.6cqw] grid list-none grid-cols-2 gap-[0.6cqw_2cqw] p-0">
+                <li
+                  v-for="item in release.items.slice(0, ALBUM_VIEW_CONFIG.releaseItemsPerNote)"
+                  :key="item"
+                  class="text-[clamp(6px,0.84cqw,13px)] font-medium leading-[1.35] text-[#17212b]/70"
+                >
+                  {{ item }}
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
 
-      <footer
-        class="paper-page-number paper-page-number--right paper-page-number--number-only absolute bottom-[3.1%] left-[7.5%] right-[12.3%] flex items-baseline justify-end text-[clamp(6px,0.72cqw,11px)] font-extrabold uppercase tracking-[0.17em] text-[rgb(23_33_43_/_54%)] max-md:text-[clamp(4px,0.9cqw,7px)]"
+      <strong
+        class="absolute bottom-[3%] right-[8%] text-[clamp(10px,1.45cqw,22px)] font-black text-[#c83d36]"
       >
-        <strong
-          class="text-[clamp(10px,1.45cqw,22px)] tracking-[-0.03em] text-[#e86b52] max-md:text-[clamp(6px,1.45cqw,10px)]"
-          >03</strong
-        >
-      </footer>
+        {{ String(pageNumber).padStart(2, '0') }}
+      </strong>
     </section>
   </div>
 </template>

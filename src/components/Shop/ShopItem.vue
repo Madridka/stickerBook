@@ -96,7 +96,7 @@ const handleOpen = (): void => emit('open')
 
     <div
       v-if="activeSection === 'store'"
-      class="shop-items-grid mt-3 grid min-h-0 flex-1 grid-flow-col auto-cols-[9.25rem] grid-cols-none place-content-start gap-3 overflow-x-auto px-1 pb-2 sm:mt-4 sm:grid-flow-row sm:auto-cols-auto sm:grid-cols-3 sm:place-content-center sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0"
+      class="shop-items-grid mt-3 grid min-h-0 flex-1 auto-rows-max grid-cols-2 place-content-start gap-3 overflow-y-auto px-1 pb-2 sm:mt-4 sm:grid-cols-3 sm:place-content-center sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0"
       role="tabpanel"
     >
       <article
@@ -337,15 +337,6 @@ const handleOpen = (): void => emit('open')
 
 <style scoped>
 @media (max-width: 639px) {
-  .shop-items-grid {
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-  }
-
-  .shop-items-grid::-webkit-scrollbar {
-    display: none;
-  }
-
   .shop-card-button {
     min-height: 2rem;
     gap: 0.25rem;

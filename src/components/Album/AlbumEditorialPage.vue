@@ -83,8 +83,7 @@ const { t } = useI18n()
       :aria-label="t(definition.title)"
     >
       <article
-        class="relative w-[66%] rounded-[1.4cqw] border border-[#17212b]/15 bg-[#fffaf0]/88 p-[3.2cqw] shadow-[0_1.2cqw_3cqw_rgb(23_33_43_/_14%)] backdrop-blur-[2px]"
-        :class="definition.align === 'right' ? 'ml-auto' : 'mr-auto'"
+        class="relative w-full rounded-[1.4cqw] border border-[#17212b]/15 bg-[#fffaf0] p-[3.2cqw] shadow-[0_1.2cqw_3cqw_rgb(23_33_43_/_14%)]"
       >
         <span
           class="text-[clamp(7px,0.88cqw,13px)] font-black uppercase tracking-[0.2em] text-[#c83d36] max-md:text-[clamp(4px,0.88cqw,7px)]"
@@ -140,10 +139,10 @@ const { t } = useI18n()
 
     <section
       v-else
-      class="relative h-full w-full [padding:8%_8%_5.5%]"
+      class="relative flex h-full w-full items-center [padding:8%_8%_5.5%]"
       :aria-label="t(definition.title)"
     >
-      <div class="rounded-[1.4cqw] border border-[#17212b]/15 bg-[#fffaf0]/90 p-[3cqw] backdrop-blur-[2px]">
+      <div class="w-full rounded-[1.4cqw] border border-[#17212b]/15 bg-[#fffaf0] p-[3cqw]">
         <header class="grid grid-cols-[0.56fr_1.44fr] gap-[3cqw] border-b border-[#17212b]/20 pb-[2cqw]">
           <span
             class="pt-[0.5cqw] text-[clamp(7px,0.88cqw,13px)] font-black uppercase tracking-[0.2em] text-[#c83d36] max-md:text-[clamp(4px,0.88cqw,7px)]"

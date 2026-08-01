@@ -1,9 +1,11 @@
 import { mount, shallowMount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 import AlbumBook from '@/components/Album/AlbumBook.vue'
+import AlbumEditorialPage from '@/components/Album/AlbumEditorialPage.vue'
 import StickerSlot from '@/components/Album/StickerSlot.vue'
 import album from '@/data/clubsLogo/album'
 import cards from '@/data/clubsLogo/catalog'
+import { requireAlbum } from '@/data/albumRegistry'
 import router from '@/router'
 
 vi.mock('vue-i18n', async (importOriginal) => {
@@ -55,6 +57,22 @@ describe('clubsLogo journal UI', () => {
     await wrapper.setProps({ currentPage: 1 })
     expect(wrapper.find('[aria-label="album.next"]').exists()).toBe(true)
     expect(wrapper.find('[aria-label="album.previous"]').exists()).toBe(true)
+  })
+
+  it('opens the selected division from the editorial contents', async () => {
+    const definition = requireAlbum('clubsLogo').editorialPages.find(
+      ({ pageId }) => pageId === 'clubs-logo-contents',
+    )
+    expect(definition).toBeDefined()
+    if (!definition) return
+
+    const wrapper = mount(AlbumEditorialPage, {
+      props: { definition, pageNumber: 3 },
+    })
+    const links = wrapper.findAll('button')
+    expect(links).toHaveLength(27)
+    await links[26].trigger('click')
+    expect(wrapper.emitted('navigate')).toEqual([[58]])
   })
 
   it('replaces a missing draft image with the named logo slot', async () => {

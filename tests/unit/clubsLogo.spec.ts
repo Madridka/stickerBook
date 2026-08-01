@@ -52,9 +52,7 @@ describe('clubsLogo journal', () => {
       expect(card.leagueId).toMatch(/^esp[1-5]$/)
       expect(card.countryCode).toBe('ESP')
       expect(card.image).toMatch(/\/clubsLogo\/cards\/spain\/.+\.webp$/)
-      if (card.leagueId === 'esp1' || card.leagueId === 'esp2') {
-        expect(existsSync(resolve('public', card.image.replace(/^\/+/, '')))).toBe(true)
-      }
+      expect(existsSync(resolve('public', card.image.replace(/^\/+/, '')))).toBe(true)
     }
   })
 
@@ -94,7 +92,7 @@ describe('clubsLogo journal', () => {
     expect(album.pages.slice(0, 3).map(({ id }) => id)).toEqual([
       'clubs-logo-cover',
       'clubs-logo-history',
-      'clubs-logo-guide',
+      'clubs-logo-contents',
     ])
     expect(album.pages.slice(0, 3).every(({ slots }) => slots.length === 0)).toBe(true)
     expect(album.pages.slice(3, 5).flatMap(({ slots }) => slots)).toHaveLength(20)
@@ -133,7 +131,17 @@ describe('clubsLogo journal', () => {
     expect(definition.editorialPages.map(({ pageId }) => pageId)).toEqual([
       'clubs-logo-cover',
       'clubs-logo-history',
-      'clubs-logo-guide',
+      'clubs-logo-contents',
     ])
+
+    const contents = definition.editorialPages.find(
+      ({ pageId }) => pageId === 'clubs-logo-contents',
+    )
+    expect(contents?.kind).toBe('contents')
+    expect(contents?.contentsSections?.flatMap(({ items }) => items)).toHaveLength(27)
+    expect(contents?.contentsSections?.[0]?.items[0]?.pages).toBe('04–05')
+    expect(contents?.contentsSections?.[0]?.items[0]?.targetPage).toBe(4)
+    expect(contents?.contentsSections?.[2]?.items[8]?.pages).toBe('58–59')
+    expect(contents?.contentsSections?.[2]?.items[8]?.targetPage).toBe(58)
   })
 })

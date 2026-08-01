@@ -90,7 +90,7 @@ function New-AlbumImage {
   $format = [System.Drawing.StringFormat]::new()
   $format.Alignment = [System.Drawing.StringAlignment]::Center
   $format.LineAlignment = [System.Drawing.StringAlignment]::Center
-  $graphics.DrawString('CLUB LOGOS', $titleFont, $white, [System.Drawing.RectangleF]::new(180, 12, 1176, 120), $format)
+  $graphics.DrawString('SPANISH CLUB LOGOS', $titleFont, $white, [System.Drawing.RectangleF]::new(180, 12, 1176, 120), $format)
   $subtitle = if ($Group) { "SPAIN  $([char]0x2022)  $League  $([char]0x2022)  GRUPO $Group" } else { "SPAIN  $([char]0x2022)  $League" }
   $graphics.DrawString($subtitle, $subtitleFont, $secondary, [System.Drawing.RectangleF]::new(180, 132, 1176, 54), $format)
 

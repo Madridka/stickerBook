@@ -7,6 +7,8 @@ export type {
   AlbumDefinition,
   AlbumDropSettings,
   AlbumEditorialFeature,
+  AlbumEditorialContentsItem,
+  AlbumEditorialContentsSection,
   AlbumEditorialPageAlign,
   AlbumEditorialPageDefinition,
   AlbumEditorialPageKind,

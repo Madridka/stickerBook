@@ -83,7 +83,7 @@ const pages: AlbumGeometryPage[] = [
     slots: [],
   },
   {
-    id: 'clubs-logo-guide',
+    id: 'clubs-logo-contents',
     number: 3,
     image: 'info/info-right.webp',
     width: PAGE_WIDTH,

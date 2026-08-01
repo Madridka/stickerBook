@@ -5,7 +5,8 @@ param(
   [string]$OutputDirectory = 'public/clubsLogo/cards/spain/la-liga',
   [string]$CardId = '',
   [string]$LeagueName = 'LA LIGA',
-  [switch]$CenterAllLogos
+  [switch]$CenterAllLogos,
+  [switch]$UseCardImagePaths
 )
 
 $ErrorActionPreference = 'Stop'
@@ -238,8 +239,15 @@ $white = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::White)
 $accent = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(224, 48, 24))
 
 try {
+  $generatedCards = [Collections.Generic.List[object]]::new()
   foreach ($card in $cards) {
-    $logoPath = Join-Path $logoRoot "$($card.id).png"
+    $logoPath = if ($UseCardImagePaths) {
+      $logoRelative = ([string]$card.image) -replace '^/clubsLogo/cards/', 'clubsLogo/logos/'
+      $logoRelative = $logoRelative -replace '\.webp$', '.png'
+      Join-Path (Join-Path $projectRoot 'public') $logoRelative
+    } else {
+      Join-Path $logoRoot "$($card.id).png"
+    }
     if (-not (Test-Path -LiteralPath $logoPath)) { throw "Missing logo: $logoPath" }
 
     $canvas = [System.Drawing.Bitmap]::new($templateImage.Width, $templateImage.Height)
@@ -250,7 +258,7 @@ try {
     $graphics.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
     $graphics.DrawImage($templateImage, 0, 0, $canvas.Width, $canvas.Height)
 
-    $leagueFont = [System.Drawing.Font]::new('Impact', 70, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+    $leagueFont = New-FittedFont $graphics ($LeagueName.ToUpperInvariant()) 'Impact' 70 34 330
     $numberFont = [System.Drawing.Font]::new('Impact', 118, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
     Draw-CenteredText $graphics ($LeagueName.ToUpperInvariant()) $leagueFont $white ([System.Drawing.RectangleF]::new(225, 42, 330, 120))
     Draw-CenteredText $graphics $card.cardNumber $numberFont $white ([System.Drawing.RectangleF]::new(785, 37, 210, 145))
@@ -287,10 +295,25 @@ try {
     $graphics.Dispose()
     $canvas.Dispose()
 
-    & npx.cmd -y sharp-cli -i $pngPath -o $outputRoot -f webp --quality 82 | Out-Null
-    $generatedPath = Join-Path $outputRoot "$($card.id).webp"
-    $targetPath = Join-Path $outputRoot ([System.IO.Path]::GetFileName($card.image))
-    Move-Item -LiteralPath $generatedPath -Destination $targetPath -Force
+    $targetPath = if ($UseCardImagePaths) {
+      Join-Path (Join-Path $projectRoot 'public') ([string]$card.image).TrimStart('/')
+    } else {
+      Join-Path $outputRoot ([System.IO.Path]::GetFileName($card.image))
+    }
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $targetPath) | Out-Null
+    $generatedCards.Add([pscustomobject]@{ PngPath = $pngPath; TargetPath = $targetPath })
+  }
+
+  $pngPaths = @($generatedCards | ForEach-Object { $_.PngPath })
+  for ($batchStart = 0; $batchStart -lt $pngPaths.Count; $batchStart += 40) {
+    $batchEnd = [Math]::Min($batchStart + 39, $pngPaths.Count - 1)
+    $batch = @($pngPaths[$batchStart..$batchEnd])
+    & npx.cmd -y sharp-cli -i $batch -o $outputRoot -f webp --quality 82 | Out-Null
+    if ($LASTEXITCODE -ne 0) { throw "Club card conversion failed for batch starting at $batchStart" }
+  }
+  foreach ($generatedCard in $generatedCards) {
+    $generatedPath = Join-Path $outputRoot (([IO.Path]::GetFileNameWithoutExtension($generatedCard.PngPath)) + '.webp')
+    Move-Item -LiteralPath $generatedPath -Destination $generatedCard.TargetPath -Force
   }
 } finally {
   $accent.Dispose()

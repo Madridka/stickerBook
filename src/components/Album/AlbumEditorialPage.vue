@@ -23,6 +23,10 @@ withDefaults(defineProps<Props>(), {
   releases: () => [],
 })
 
+const emit = defineEmits<{
+  navigate: [pageNumber: number]
+}>()
+
 const { t } = useI18n()
 </script>
 
@@ -75,6 +79,79 @@ const { t } = useI18n()
         <span>{{ definition.footer ? t(definition.footer) : t('album.editorial.issue') }}</span>
         <strong class="text-[clamp(10px,1.45cqw,22px)] text-[#e5b95c]">01</strong>
       </footer>
+    </section>
+
+    <section
+      v-else-if="definition.kind === 'contents'"
+      class="relative flex h-full w-full items-center [padding:5.2%_5.5%_5.5%]"
+      :aria-label="t(definition.title)"
+    >
+      <article
+        class="relative w-full rounded-[1.4cqw] border border-[#17212b]/15 bg-[#fffaf0]/95 p-[2.5cqw] shadow-[0_1.2cqw_3cqw_rgb(23_33_43_/_14%)] backdrop-blur-[1px]"
+      >
+        <header class="border-b border-[#17212b]/15 pb-[1.4cqw]">
+          <span
+            class="text-[clamp(7px,0.88cqw,13px)] font-black uppercase tracking-[0.2em] text-[#c83d36] max-md:text-[clamp(4px,0.88cqw,7px)]"
+          >
+            {{ t(definition.eyebrow) }}
+          </span>
+          <h2
+            class="m-0 mt-[0.55cqw] text-[clamp(19px,3.25cqw,50px)] font-black leading-[0.96] tracking-[-0.05em] max-md:text-[clamp(12px,3.25cqw,19px)]"
+          >
+            {{ t(definition.title) }}
+          </h2>
+          <p
+            class="m-0 mt-[0.8cqw] text-[clamp(7px,0.95cqw,14px)] font-semibold leading-[1.4] text-[#17212b]/70 max-md:text-[clamp(4.5px,0.95cqw,7px)]"
+          >
+            {{ t(definition.description) }}
+          </p>
+        </header>
+
+        <div class="mt-[1.5cqw] grid grid-cols-3 gap-[1.2cqw]">
+          <section
+            v-for="section in definition.contentsSections"
+            :key="section.title"
+            class="rounded-[0.8cqw] bg-[#17212b]/[0.045] p-[1.25cqw]"
+          >
+            <h3
+              class="m-0 border-b border-[#c83d36]/25 pb-[0.75cqw] text-[clamp(8px,1.05cqw,16px)] font-black uppercase tracking-[0.06em] text-[#c83d36] max-md:text-[clamp(5px,1.05cqw,8px)]"
+            >
+              {{ t(section.title) }}
+            </h3>
+            <ul class="m-0 mt-[0.55cqw] list-none p-0">
+              <li
+                v-for="item in section.items"
+                :key="`${item.label}-${item.group ?? ''}`"
+                class="border-b border-[#17212b]/10 last:border-b-0"
+              >
+                <button
+                  type="button"
+                  class="group flex w-full cursor-pointer items-baseline gap-[0.6cqw] rounded-[0.35cqw] border-0 bg-transparent px-[0.25cqw] py-[0.48cqw] text-left text-[#17212b] transition-colors hover:bg-[#c83d36]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#c83d36]"
+                  @click.stop="emit('navigate', item.targetPage)"
+                >
+                  <span
+                    class="min-w-0 text-[clamp(6px,0.79cqw,12px)] font-bold leading-[1.15] group-hover:text-[#c83d36] max-md:text-[clamp(4px,0.79cqw,6px)]"
+                  >
+                    {{ t(item.label) }}<template v-if="item.group"> · G{{ item.group }}</template>
+                  </span>
+                  <span class="min-w-[1cqw] flex-1 border-b border-dotted border-[#17212b]/30" />
+                  <strong
+                    class="shrink-0 text-[clamp(6px,0.82cqw,12px)] font-black tabular-nums text-[#17212b] group-hover:text-[#c83d36] max-md:text-[clamp(4px,0.82cqw,6px)]"
+                  >
+                    {{ item.pages }}
+                  </strong>
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </article>
+
+      <strong
+        class="absolute bottom-[3%] right-[5.5%] text-[clamp(10px,1.45cqw,22px)] font-black text-[#c83d36] max-md:text-[clamp(6px,1.45cqw,10px)]"
+      >
+        {{ String(pageNumber).padStart(2, '0') }}
+      </strong>
     </section>
 
     <section

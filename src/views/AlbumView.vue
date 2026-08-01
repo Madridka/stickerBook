@@ -455,6 +455,20 @@ const openTeam = (pageId: string): void => {
     : pageIndex
 }
 
+// Открывает выбранный в редакционном оглавлении раздел журнала.
+const openEditorialPage = (pageNumber: number): void => {
+  const pageIndex: number = pages.value.findIndex(
+    ({ geometry }: AlbumPageView): boolean => geometry.number === pageNumber,
+  )
+  if (pageIndex < 0) return
+  activeTargetId.value = undefined
+  isBookOpen.value = true
+  const openStartPage: number = albumDefinition.layout.openStartPage
+  currentPage.value = isDesktopSpread.value
+    ? openStartPage + Math.floor((pageIndex - openStartPage) / 2) * 2
+    : pageIndex
+}
+
 // Возвращает к разделу оглавления, в котором находится текущая сборная.
 const openContents = (): void => {
   const teamIndex: number = albumContentsTeams.findIndex(({ id }): boolean =>
@@ -643,6 +657,7 @@ onBeforeUnmount((): void => {
               :page-number="pages[pageIndex].geometry.number"
               :release-series="latestReleaseSeries"
               :releases="recentReleaseNotes"
+              @navigate="openEditorialPage"
             />
             <AlbumContentsPage
               v-else-if="

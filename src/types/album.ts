@@ -25,13 +25,25 @@ export interface AlbumTheme {
   accentClass?: string
 }
 
-export type AlbumEditorialPageKind = 'cover' | 'article' | 'changelog'
+export type AlbumEditorialPageKind = 'cover' | 'article' | 'contents' | 'changelog'
 export type AlbumEditorialPageAlign = 'left' | 'right'
 export type AlbumEditorialPageTone = 'light' | 'dark'
 
 export interface AlbumEditorialFeature {
   title: string
   description: string
+}
+
+export interface AlbumEditorialContentsItem {
+  label: string
+  pages: string
+  targetPage: number
+  group?: string
+}
+
+export interface AlbumEditorialContentsSection {
+  title: string
+  items: AlbumEditorialContentsItem[]
 }
 
 export interface AlbumEditorialPageDefinition {
@@ -41,6 +53,7 @@ export interface AlbumEditorialPageDefinition {
   title: string
   description: string
   features?: AlbumEditorialFeature[]
+  contentsSections?: AlbumEditorialContentsSection[]
   align?: AlbumEditorialPageAlign
   tone?: AlbumEditorialPageTone
   footer?: string

@@ -1,0 +1,289 @@
+﻿[
+    {
+        "cardId":  "esp5-g01-02",
+        "displayName":  "Antela",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+ANTELA%20C.F.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/GALICIA/escudos_jpg/escudo-antela%20c.f..jpg"
+    },
+    {
+        "cardId":  "esp5-g01-10",
+        "displayName":  "Lalín",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20LAL%C3%8DN",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/GALICIA/escudos_jpg/escudo-c.d.%20lal%EDn.jpg"
+    },
+    {
+        "cardId":  "esp5-g01-13",
+        "displayName":  "Portonovo",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.%20PORTONOVO%20S.D.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/GALICIA/escudos_jpg/escudo-c.%20portonovo%20s.d..jpg"
+    },
+    {
+        "cardId":  "esp5-g02-01",
+        "displayName":  "Andés",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+ANDES%20C.F.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ASTURIAS/escudos_jpg/escudo-andes%20c.f..jpg"
+    },
+    {
+        "cardId":  "esp5-g03-10",
+        "displayName":  "Naval",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20NAVAL%20CANTABRIA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CANTABRIA/escudos_jpg/escudo-c.d.%20naval%20cantabria.jpg"
+    },
+    {
+        "cardId":  "esp5-g04-09",
+        "displayName":  "Erandio",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+S.D.%20ERANDIO%20CLUB",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/PA%CDS%20VASCO/escudos_jpg/escudo-s.d.%20erandio%20club.jpg"
+    },
+    {
+        "cardId":  "esp5-g05-09",
+        "displayName":  "Martinenc",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+F.C.%20MARTINENC",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CATALU%D1A/escudos_jpg/escudo-f.c.%20martinenc.jpg"
+    },
+    {
+        "cardId":  "esp5-g05-13",
+        "displayName":  "Pobla de Mafumet",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.F.%20POBLA%20DE%20MAFUMET",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CATALU%D1A/escudos_jpg/escudo-c.f.%20pobla%20de%20mafumet.jpg"
+    },
+    {
+        "cardId":  "esp5-g05-15",
+        "displayName":  "San Juan Atlético Montcada",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+U.E.%20SAN%20JUAN%20AT.%20DE%20MONTCADA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CATALU%D1A/escudos_jpg/escudo-u.e.%20san%20juan%20at.%20de%20montcada.jpg"
+    },
+    {
+        "cardId":  "esp5-g06-01",
+        "displayName":  "Acero",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20ACERO",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/VALENCIA/escudos_jpg/escudo-c.d.%20acero.jpg"
+    },
+    {
+        "cardId":  "esp5-g06-15",
+        "displayName":  "Torrevieja",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20TORREVIEJA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/VALENCIA/escudos_jpg/escudo-c.d.%20torrevieja.jpg"
+    },
+    {
+        "cardId":  "esp5-g07-11",
+        "displayName":  "Rayo Ciudad Alcobendas",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+RAYO%20CIUDAD%20DE%20ALCOBENDAS%20C.F.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/MADRID/escudos_jpg/escudo-rayo%20ciudad%20de%20alcobendas%20c.f..jpg"
+    },
+    {
+        "cardId":  "esp5-g07-13",
+        "displayName":  "Real Aranjuez",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+REAL%20ARANJUEZ%20C.F.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/MADRID/escudos_jpg/escudo-real%20aranjuez%20c.f..jpg"
+    },
+    {
+        "cardId":  "esp5-g08-06",
+        "displayName":  "Calasanz",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20CALASANZ%20DE%20SORIA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CASTILLA%20Y%20LE%D3N/escudos_jpg/escudo-c.d.%20calasanz%20de%20soria.jpg"
+    },
+    {
+        "cardId":  "esp5-g08-16",
+        "displayName":  "Turégano",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+TUR%C3%89GANO%20C.F.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CASTILLA%20Y%20LE%D3N/escudos_jpg/escudo-tur%E9gano%20c.f..jpg"
+    },
+    {
+        "cardId":  "esp5-g09-05",
+        "displayName":  "Atlético Marbella",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20ATL%C3%89TICO%20MARBELLA%20BALOMPI%C3%89",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ANDALUC%CDA/M%C1LAGA/escudos_jpg/escudo-c.d.%20atl%E9tico%20marbella%20balompi%E9.jpg"
+    },
+    {
+        "cardId":  "esp5-g09-08",
+        "displayName":  "Cantoria",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20CANTORIA%202017%20F.C.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ANDALUC%CDA/ALMER%CDA/escudos_jpg/escudo-c.d.%20cantoria%202017%20f.c..jpg"
+    },
+    {
+        "cardId":  "esp5-g09-12",
+        "displayName":  "Málaga Juniors",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20MALAGA%20JUNIORS%20F.C.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ANDALUC%CDA/M%C1LAGA/escudos_jpg/escudo-c.d.%20malaga%20juniors%20f.c..jpg"
+    },
+    {
+        "cardId":  "esp5-g10-10",
+        "displayName":  "Egabrense",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20EGABRENSE",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ANDALUC%CDA/C%D3RDOBA/escudos_jpg/escudo-c.d.%20egabrense.jpg"
+    },
+    {
+        "cardId":  "esp5-g10-14",
+        "displayName":  "Racing Portuense",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+RACING%20CLUB%20PORTUENSE",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ANDALUC%CDA/C%C1DIZ/escudos_jpg/escudo-racing%20club%20portuense.jpg"
+    },
+    {
+        "cardId":  "esp5-g11-03",
+        "displayName":  "Arenal",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+U.D.%20ARENAL",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ISLAS%20BALEARES/escudos_jpg/escudo-u.d.%20arenal.jpg"
+    },
+    {
+        "cardId":  "esp5-g11-18",
+        "displayName":  "Sineu",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.E.%20SINEU",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ISLAS%20BALEARES/escudos_jpg/escudo-c.e.%20sineu.jpg"
+    },
+    {
+        "cardId":  "esp5-g12-01",
+        "displayName":  "Añaza",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+U.D.%20A%C3%91AZA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ISLAS%20CANARIAS/escudos_jpg/escudo-u.d.%20a%F1aza.jpg"
+    },
+    {
+        "cardId":  "esp5-g12-14",
+        "displayName":  "San Miguel",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+A.D.%20SAN%20MIGUEL",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ANDALUC%CDA/ALMER%CDA/escudos_jpg/escudo-a.d.%20san%20miguel.jpg"
+    },
+    {
+        "cardId":  "esp5-g12-18",
+        "displayName":  "Villaverde Norte",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+S.D.%20VILLAVERDE%20NORTE-",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ISLAS%20CANARIAS/escudos_jpg/escudo-s.d.%20villaverde%20norte-.jpg"
+    },
+    {
+        "cardId":  "esp5-g13-03",
+        "displayName":  "Algar",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20ALGAR",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/MURCIA/escudos_jpg/escudo-c.d.%20algar.jpg"
+    },
+    {
+        "cardId":  "esp5-g13-07",
+        "displayName":  "Bullas Deportivo",
+        "provider":  "FFRM",
+        "pageUrl":  "https://www.ffrm.es/pnfg/NPcd/NFG_VerClub?cod_primaria=3001859\u0026codigo_club=5775475",
+        "imageUrl":  "https://www.ffrm.es/pnfg/pimg/Clubes/00100_0000128596_escudo.jpg"
+    },
+    {
+        "cardId":  "esp5-g13-15",
+        "displayName":  "San Javier",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20SAN%20JAVIER",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/NAVARRA/escudos_jpg/escudo-c.d.%20san%20javier.jpg"
+    },
+    {
+        "cardId":  "esp5-g14-06",
+        "displayName":  "Guadiana",
+        "provider":  "FFRM",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/listado.php",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/EXTREMADURA/escudos_jpg/escudo-c.d.%20guadiana%2E%2E.jpg"
+    },
+    {
+        "cardId":  "esp5-g14-12",
+        "displayName":  "Plasencia",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+U.P.%20PLASENCIA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/EXTREMADURA/escudos_jpg/escudo-u.p.%20plasencia.jpg"
+    },
+    {
+        "cardId":  "esp5-g14-18",
+        "displayName":  "Zafra",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20ZAFRA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/EXTREMADURA/escudos_jpg/escudo-c.d.%20zafra.jpg"
+    },
+    {
+        "cardId":  "esp5-g15-09",
+        "displayName":  "Doneztebe",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+DONEZTEBE%20F.T.",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/NAVARRA/escudos_jpg/escudo-doneztebe%20f.t..jpg"
+    },
+    {
+        "cardId":  "esp5-g15-10",
+        "displayName":  "Gazte Berriak",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20GAZTE%20BERRIAK",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/NAVARRA/escudos_jpg/escudo-c.d.%20gazte%20berriak.jpg"
+    },
+    {
+        "cardId":  "esp5-g15-15",
+        "displayName":  "San Juan",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+A.D.%20SAN%20JUAN%211059",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/NAVARRA/escudos_jpg/escudo-a.d.%20san%20juan.jpg"
+    },
+    {
+        "cardId":  "esp5-g16-07",
+        "displayName":  "Calasancio",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.P.%20CALASANCIO",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/LA%20RIOJA/escudos_jpg/escudo-c.p.%20calasancio.jpg"
+    },
+    {
+        "cardId":  "esp5-g16-09",
+        "displayName":  "Cenicero",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20CENICERO",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/LA%20RIOJA/escudos_jpg/escudo-c.d.%20cenicero.jpg"
+    },
+    {
+        "cardId":  "esp5-g17-02",
+        "displayName":  "Andorra",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+ANDORRA%20CF",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ARAG%D3N/escudos_jpg/escudo-andorra%20cf.jpg"
+    },
+    {
+        "cardId":  "esp5-g17-15",
+        "displayName":  "Internacional Huesca",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+INTERNACIONAL%20HUESCA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/ARAG%D3N/escudos_jpg/escudo-internacional%20huesca.jpg"
+    },
+    {
+        "cardId":  "esp5-g18-01",
+        "displayName":  "Almansa",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+U.D.%20ALMANSA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CASTILLA%20LA%20MANCHA/escudos_jpg/escudo-u.d.%20almansa.jpg"
+    },
+    {
+        "cardId":  "esp5-g18-14",
+        "displayName":  "Torrijos",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20TORRIJOS",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CASTILLA%20LA%20MANCHA/escudos_jpg/escudo-c.d.%20torrijos.jpg"
+    },
+    {
+        "cardId":  "esp5-g18-15",
+        "displayName":  "Villa",
+        "provider":  "Escudos de Futbol y Equipaciones",
+        "pageUrl":  "https://www.escudosdefutbolyequipaciones.com/ESCUDO+C.D.%20VILLA",
+        "imageUrl":  "https://escudosdefutbolyequipaciones.com/images_esc3/ESPA/CASTILLA%20LA%20MANCHA/escudos_jpg/escudo-c.d.%20villa.jpg"
+    }
+]

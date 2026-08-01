@@ -37,6 +37,7 @@ export type {
   CardSeries,
   CoachCard,
   CoachRole,
+  ClubCardMetadata,
   NormalizedCardCatalog,
   PlayerCard as CatalogPlayerCard,
   PlayerCardDefinition,

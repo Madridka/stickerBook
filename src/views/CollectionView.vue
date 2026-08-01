@@ -2,7 +2,7 @@
 import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import { getAlbumById, getAlbums, requireAlbum } from '@/data/albumRegistry'
+import { getPlayerAlbums, requireAlbum } from '@/data/albumRegistry'
 import { BLISTER_CONFIGS } from '@/data/mainConst'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
@@ -63,7 +63,10 @@ const requestedAlbumId: string =
   typeof route.query.albumId === 'string'
     ? route.query.albumId
     : BLISTER_CONFIGS.standard.albumId
-const requestedAlbum: AlbumDefinition | undefined = getAlbumById(requestedAlbumId)
+const playerAlbums: readonly AlbumDefinition[] = getPlayerAlbums()
+const requestedAlbum: AlbumDefinition | undefined = playerAlbums.find(
+  ({ id }): boolean => id === requestedAlbumId,
+)
 const activeAlbumId: Ref<string> = ref(
   requestedAlbum?.cards.length
     ? requestedAlbum.id
@@ -72,7 +75,7 @@ const activeAlbumId: Ref<string> = ref(
 const activeAlbum: ComputedRef<AlbumDefinition> = computed(() =>
   requireAlbum(activeAlbumId.value),
 )
-const albumOptions = getAlbums()
+const albumOptions = playerAlbums
   .filter(({ cards }) => cards.length > 0)
   .map((album) => ({
     value: album.id,

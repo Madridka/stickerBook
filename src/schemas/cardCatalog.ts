@@ -48,9 +48,22 @@ const baseCardShape = {
   selectionWeight: z.number().positive().optional(),
 }
 
+const clubCardMetadataShape = {
+  city: z.string().min(1).optional(),
+  country: z.string().min(1).optional(),
+  foundedYear: z.number().int().positive().optional(),
+  stadium: z.string().min(1).optional(),
+  leagueId: z.string().min(1).optional(),
+  countryCode: z.string().min(2).max(3).optional(),
+}
+
 // Разделяет обязательные поля команды, тренера и игрока на уровне runtime.
 const cardSchema = z.discriminatedUnion('kind', [
-  z.strictObject({ ...baseCardShape, kind: z.literal(cardKindSchema.enum.team) }),
+  z.strictObject({
+    ...baseCardShape,
+    ...clubCardMetadataShape,
+    kind: z.literal(cardKindSchema.enum.team),
+  }),
   z.strictObject({
     ...baseCardShape,
     kind: z.literal(cardKindSchema.enum.coach),

@@ -85,7 +85,7 @@ const validateData = async (): Promise<void> => {
         }
       }
 
-      if (!card.image.startsWith('/cards/') || card.image.includes('..')) {
+      if (!card.image.startsWith('/wc-26/cards/') || card.image.includes('..')) {
         failures.push(`${card.id}: invalid card image path ${card.image}`)
       }
     }

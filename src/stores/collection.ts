@@ -9,7 +9,7 @@ import type {
   StickerInstance,
   StickerPlacement,
 } from '@/types'
-import { getAlbumById, requireAlbum } from '@/data/albumRegistry'
+import { getAlbumById, getPlayerAlbumById } from '@/data/albumRegistry'
 import { BLISTER_CONFIGS, DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
 import { createDuplicateExchangeCandidates } from '@/utils/createDuplicateExchangeCandidates'
@@ -77,9 +77,18 @@ export const useCollectionStore = defineStore('collection', () => {
   // Восстанавливает карточки всех журналов из общей локальной базы.
   const load = async (): Promise<void> => {
     await reconcileOrphanedDuplicates()
-    const storedCards: StickerInstance[] = await database.cards.toArray()
-    duplicates.value = await database.duplicates.toArray()
-    pendingExchange.value = await database.duplicateExchanges.get('pending')
+    const storedCards: StickerInstance[] = (await database.cards.toArray()).filter(
+      ({ albumId }): boolean => Boolean(getPlayerAlbumById(albumId)),
+    )
+    duplicates.value = (await database.duplicates.toArray()).filter(
+      ({ albumId }): boolean => Boolean(getPlayerAlbumById(albumId)),
+    )
+    const storedExchange: DuplicateExchange | undefined =
+      await database.duplicateExchanges.get('pending')
+    pendingExchange.value =
+      storedExchange && getPlayerAlbumById(storedExchange.albumId)
+        ? storedExchange
+        : undefined
     items.value = storedCards.map(
       (instance: StickerInstance): CollectionItem => ({
         instance,
@@ -99,8 +108,9 @@ export const useCollectionStore = defineStore('collection', () => {
     playerId: string,
     instanceId: string = createId(),
   ): Promise<StickerInstance> => {
-    if (!requireAlbum(albumId).cards.some(({ id }): boolean => id === playerId)) {
-      throw new Error(`Unknown card ${albumId}:${playerId}`)
+    const targetAlbum = getPlayerAlbumById(albumId)
+    if (!targetAlbum?.cards.some(({ id }): boolean => id === playerId)) {
+      throw new Error(`Unknown or inaccessible card ${albumId}:${playerId}`)
     }
     const instance: StickerInstance = {
       id: instanceId,
@@ -165,6 +175,8 @@ export const useCollectionStore = defineStore('collection', () => {
           )
           if (albumIds.size !== 1) return 'invalid-selection'
           const albumId: AlbumId = selectedInstances[0].albumId
+          const targetAlbum = getPlayerAlbumById(albumId)
+          if (!targetAlbum) return 'invalid-selection'
           const excludedPlayerIds: Set<string> = new Set(
             selectedInstances.map(({ playerId }): string => playerId),
           )
@@ -172,7 +184,7 @@ export const useCollectionStore = defineStore('collection', () => {
             id: 'pending',
             albumId,
             candidatePlayerIds: createDuplicateExchangeCandidates(
-              requireAlbum(albumId).catalogs,
+              targetAlbum.catalogs,
               excludedPlayerIds,
               DUPLICATE_EXCHANGE_CONFIG.candidateCount,
             ),

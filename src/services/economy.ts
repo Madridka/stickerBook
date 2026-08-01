@@ -5,7 +5,7 @@ import {
   type PlayerState,
 } from '@/db/database'
 import { BLISTER_CONFIGS, CLICKER_CONFIG, DROP_ENGINE_CONFIG } from '@/data/mainConst'
-import { getAlbumById, getBlisterById } from '@/data/albumRegistry'
+import { getPlayerAlbumById, getPlayerBlisterById } from '@/data/albumRegistry'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 import { selectCardV2 } from '@/utils/dropEngine'
@@ -103,9 +103,9 @@ export const purchaseBlister = async (
   blisterId: string,
   now: number = Date.now(),
 ): Promise<PurchaseBlisterResult> => {
-  const blister = getBlisterById(blisterId)
+  const blister = getPlayerBlisterById(blisterId)
   if (!blister) return { status: 'unknown-blister' }
-  const album = getAlbumById(blister.albumId)
+  const album = getPlayerAlbumById(blister.albumId)
   if (!album?.cards.length || !album.catalogs.length) return { status: 'empty-album' }
 
   const result: PurchaseBlisterResult = await database.transaction(
@@ -119,9 +119,12 @@ export const purchaseBlister = async (
       database.goalCounters,
     ],
     async (): Promise<PurchaseBlisterResult> => {
-      if (await database.packOpeningSessions.get('pending')) {
+      const pendingSession: PackOpeningSession | undefined =
+        await database.packOpeningSessions.get('pending')
+      if (pendingSession && getPlayerAlbumById(pendingSession.albumId)) {
         return { status: 'opening-in-progress' }
       }
+      if (pendingSession) await database.packOpeningSessions.delete('pending')
       const cooldown = await database.blisterCooldowns.get(blister.id)
       if (cooldown && cooldown.nextAvailableAt > now) {
         return {

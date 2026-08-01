@@ -15,7 +15,7 @@ import {
   BLISTER_CONFIGS,
   PLACE_ALL_COLLECTED_CARDS,
 } from '@/data/mainConst'
-import { getAlbumById, requireAlbum } from '@/data/albumRegistry'
+import { getAlbumById, getPlayerAlbumById, requireAlbum } from '@/data/albumRegistry'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
@@ -96,9 +96,16 @@ const album = useAlbumStore()
 const requestedAlbumId: string =
   typeof route.params.albumId === 'string'
     ? route.params.albumId
+    : typeof route.meta.developmentAlbumId === 'string'
+      ? route.meta.developmentAlbumId
     : BLISTER_CONFIGS.standard.albumId
+const isDevelopmentAlbumRoute: boolean =
+  route.meta.developmentAlbumId === requestedAlbumId
+const requestedAlbumDefinition: AlbumDefinition | undefined = isDevelopmentAlbumRoute
+  ? getAlbumById(requestedAlbumId)
+  : getPlayerAlbumById(requestedAlbumId)
 const albumDefinition: AlbumDefinition =
-  getAlbumById(requestedAlbumId) ?? requireAlbum(BLISTER_CONFIGS.standard.albumId)
+  requestedAlbumDefinition ?? requireAlbum(BLISTER_CONFIGS.standard.albumId)
 album.selectAlbum(albumDefinition.id)
 const cards: CardDefinition[] = albumDefinition.cards
 const albumContentsTeams: AlbumContentsItem[] = albumDefinition.contents
@@ -556,7 +563,7 @@ const cancelDrop = (): void => {
 }
 
 onMounted((): void => {
-  if (!getAlbumById(requestedAlbumId)) {
+  if (!requestedAlbumDefinition) {
     void router.replace({ name: 'album' })
     return
   }

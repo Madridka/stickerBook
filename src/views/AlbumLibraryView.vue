@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
-import { getAlbums } from '@/data/albumRegistry'
+import { getLibraryAlbums } from '@/data/albumRegistry'
 import { useCollectionStore } from '@/stores/collection'
 import type { AlbumDefinition, AlbumProgress } from '@/types'
 
 const { t } = useI18n()
 const collection = useCollectionStore()
-const albums: readonly AlbumDefinition[] = getAlbums()
+const albums: readonly AlbumDefinition[] = getLibraryAlbums()
 const coverImages: Record<string, string> = import.meta.glob(
   [
     '../../assets/game/*/main/album/**/*.webp',

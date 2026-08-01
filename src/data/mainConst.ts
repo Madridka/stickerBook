@@ -486,4 +486,4 @@ export const STICKER_DRAG_THRESHOLD_PX: number = 10
  * Демонстрационный режим альбома: показывает весь каталог как уже вклеенный,
  * не изменяя сохранённые данные игрока.
  */
-export const PLACE_ALL_COLLECTED_CARDS: boolean = false
+export const PLACE_ALL_COLLECTED_CARDS: boolean = true

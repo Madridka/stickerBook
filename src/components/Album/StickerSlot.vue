@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, type ComputedRef } from 'vue'
+import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useAlbumStore } from '@/stores/album'
 import type {
@@ -32,8 +32,12 @@ const emit = defineEmits<{
 }>()
 const { t } = useI18n()
 const album = useAlbumStore()
+const imageLoadFailed: Ref<boolean> = ref(false)
 const targetName: ComputedRef<string> = computed(
   (): string => props.targetCard?.displayName ?? props.slot.name,
+)
+const showsPlaceholder: ComputedRef<boolean> = computed(
+  (): boolean => !props.card || imageLoadFailed.value,
 )
 const slotCode: ComputedRef<string> = computed((): string =>
   props.slot.id.toUpperCase().replace('-', ' '),
@@ -65,8 +69,15 @@ const cardStyle = (): Record<string, string> => {
 }
 
 const previewCard = (): void => {
-  if (props.instance) emit('preview', props.instance)
+  if (props.instance && !imageLoadFailed.value) emit('preview', props.instance)
 }
+
+watch(
+  (): string | undefined => props.card?.image,
+  (): void => {
+    imageLoadFailed.value = false
+  },
+)
 </script>
 
 <template>
@@ -74,20 +85,20 @@ const previewCard = (): void => {
     class="absolute rounded-[2px] border border-gold/80 bg-[rgb(250_245_231/0.92)] shadow-inner transition-[box-shadow,transform,background-color] duration-[180ms] ease-[ease] before:pointer-events-none before:absolute before:inset-[3%] before:border before:border-gold/[0.58] before:content-['']"
     :class="{
       'z-[15] animate-target-pulse bg-[rgb(var(--color-mint)/0.92)] shadow-[0_0_0_3px_rgb(var(--color-paper)),0_0_0_7px_rgb(var(--color-coral)),0_0_26px_rgb(var(--color-coral)/0.8)]':
-        highlighted && !card,
-      '!border-0 !bg-transparent !shadow-none before:hidden': card,
+        highlighted && showsPlaceholder,
+      '!border-0 !bg-transparent !shadow-none before:hidden': !showsPlaceholder,
     }"
     :style="slotStyle()"
     :aria-label="t('album.slotTarget', { name: targetName })"
     :title="targetName"
     :data-player-id="slot.playerId"
     :data-sticker-slot="slot.id"
-    :data-occupied="Boolean(card)"
+    :data-occupied="!showsPlaceholder"
     role="group"
   >
     <!-- Пустой слот показывает номер и имя игрока вместо служебных координат. -->
     <div
-      v-if="!card"
+      v-if="showsPlaceholder"
       class="pointer-events-none absolute inset-0 flex flex-col items-center justify-between p-[6%] text-center"
     >
       <span
@@ -102,15 +113,16 @@ const previewCard = (): void => {
       </span>
     </div>
     <img
-      v-if="card"
+      v-if="card && !imageLoadFailed"
       class="absolute inset-0 z-10 h-full w-full cursor-pointer object-fill"
       :src="card.image"
       :alt="card.displayName"
       :style="cardStyle()"
+      @error="imageLoadFailed = true"
       @click="previewCard"
     />
     <button
-      v-if="card && (variantCount ?? 0) > 1"
+      v-if="card && !imageLoadFailed && (variantCount ?? 0) > 1"
       class="absolute right-[4%] top-[3%] z-20 flex items-center gap-1 rounded-full bg-ink/85 px-1.5 py-1 text-[clamp(0.34rem,0.5vw,0.58rem)] font-black text-paper shadow-md transition hover:bg-coral focus-visible:outline focus-visible:outline-2 focus-visible:outline-paper max-md:px-1 max-md:py-0.5"
       type="button"
       :aria-label="t('album.changeVariantAria', { name: targetName })"

@@ -6,7 +6,7 @@ import {
   type PackOpeningReward,
   type PackOpeningSession,
 } from '@/db/database'
-import { getAlbumById, getBlisterById } from '@/data/albumRegistry'
+import { getPlayerAlbumById, getPlayerBlisterById } from '@/data/albumRegistry'
 import { BLISTER_CONFIGS, DROP_ENGINE_CONFIG } from '@/data/mainConst'
 import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
@@ -14,6 +14,33 @@ import { selectCardV2 } from '@/utils/dropEngine'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
 export type AdvancePackOpeningResult = 'advanced' | 'completed' | 'unavailable'
+
+const resolvePlayerBlister = (blisterId: string) =>
+  getPlayerBlisterById(blisterId === 'rare' ? 'standard' : blisterId)
+
+const isPlayerPack = (item: InventoryItem): boolean => {
+  if (item.type !== 'pack') return false
+  const blister = resolvePlayerBlister(item.packId ?? BLISTER_CONFIGS.standard.id)
+  const album = getPlayerAlbumById(
+    item.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
+  )
+  return Boolean(blister && album && blister.albumId === album.id)
+}
+
+const isPlayerSession = (candidate?: PackOpeningSession): candidate is PackOpeningSession => {
+  if (!candidate) return false
+  const blister = resolvePlayerBlister(candidate.blisterId)
+  const album = getPlayerAlbumById(candidate.albumId)
+  return Boolean(
+    blister &&
+      album &&
+      blister.albumId === album.id &&
+      candidate.rewards.every(
+        ({ albumId, playerId }): boolean =>
+          albumId === album.id && album.cards.some(({ id }): boolean => id === playerId),
+      ),
+  )
+}
 
 export const usePackOpeningStore = defineStore('packOpening', () => {
   const session: Ref<PackOpeningSession | undefined> = ref(undefined)
@@ -23,7 +50,9 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
 
   // Загружает сохранённый прогресс, чтобы продолжить показ с той же карточки.
   const load = async (): Promise<PackOpeningSession | undefined> => {
-    session.value = await database.packOpeningSessions.get('pending')
+    const stored: PackOpeningSession | undefined =
+      await database.packOpeningSessions.get('pending')
+    session.value = isPlayerSession(stored) ? stored : undefined
     isLoaded.value = true
     return session.value
   }
@@ -42,18 +71,19 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
         async (): Promise<PackOpeningSession | undefined> => {
           const pending: PackOpeningSession | undefined =
             await database.packOpeningSessions.get('pending')
-          if (pending) return pending
+          if (isPlayerSession(pending)) return pending
+          if (pending) await database.packOpeningSessions.delete('pending')
 
           const pack: InventoryItem | undefined = requestedPackId
             ? await database.inventory.get(requestedPackId)
             : await database.inventory
                 .orderBy('createdAt')
-                .filter(({ type }: InventoryItem): boolean => type === 'pack')
+                .filter(isPlayerPack)
                 .first()
-          if (!pack) return undefined
+          if (!pack || !isPlayerPack(pack)) return undefined
           const blisterId: string = pack.packId ?? BLISTER_CONFIGS.standard.id
-          const blister = getBlisterById(blisterId === 'rare' ? 'standard' : blisterId)
-          const album = getAlbumById(
+          const blister = resolvePlayerBlister(blisterId)
+          const album = getPlayerAlbumById(
             pack.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
           )
           if (!blister || !album?.cards.length) return undefined
@@ -132,7 +162,7 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
       async (): Promise<boolean> => {
         const pending: PackOpeningSession | undefined =
           await database.packOpeningSessions.get('pending')
-        if (!pending) return false
+        if (!isPlayerSession(pending)) return false
 
         for (const reward of pending.rewards) {
           const instance: StickerInstance = {

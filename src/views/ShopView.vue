@@ -7,13 +7,17 @@ import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
 import { useBlistersStore } from '@/stores/blisters'
 import { BLISTER_CONFIGS, CARDS_PER_PACK, PACK_PRICE } from '@/data/mainConst'
-import { getAlbumById, getBlisterById } from '@/data/albumRegistry'
+import {
+  getPlayerAlbumById,
+  getPlayerBlisterById,
+} from '@/data/albumRegistry'
 import {
   purchaseBlister,
   type PurchaseBlisterResult,
 } from '@/services/economy'
 import type { BlisterDefinition } from '@/types'
 import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniGame'
+import type { InventoryItem } from '@/db/database'
 
 import ShopItem from '@/components/Shop/ShopItem.vue'
 import RareShopPanel from '@/components/Shop/RareShopPanel.vue'
@@ -26,10 +30,10 @@ const player = usePlayerStore()
 const inventory = useInventoryStore()
 const packHunt = usePackHuntStore()
 const blisters = useBlistersStore()
-const standardBlister: BlisterDefinition | undefined = getBlisterById(
+const standardBlister: BlisterDefinition | undefined = getPlayerBlisterById(
   BLISTER_CONFIGS.standard.id,
 )
-const kdvBlister: BlisterDefinition | undefined = getBlisterById('kdv')
+const kdvBlister: BlisterDefinition | undefined = getPlayerBlisterById('kdv')
 const router = useRouter()
 const isPurchasing: Ref<boolean> = ref(false)
 const isPurchasingKdv: Ref<boolean> = ref(false)
@@ -40,18 +44,31 @@ const catalogSections: ComputedRef<Array<{ value: ShopCatalogSection; label: str
     { value: 'regular', label: t('shop.catalogSections.regular') },
     { value: 'rare', label: t('shop.catalogSections.rare') },
   ])
+
+const resolvePlayerBlister = (blisterId: string): BlisterDefinition | undefined =>
+  getPlayerBlisterById(blisterId === 'rare' ? BLISTER_CONFIGS.standard.id : blisterId)
+
+const isPlayerPack = (item: InventoryItem): boolean => {
+  if (item.type !== 'pack') return false
+  const blister = resolvePlayerBlister(item.packId ?? BLISTER_CONFIGS.standard.id)
+  const album = getPlayerAlbumById(
+    item.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
+  )
+  return Boolean(blister && album && blister.albumId === album.id)
+}
+
 const ownedPackIds: ComputedRef<string[]> = computed(() =>
-  inventory.items.filter(({ type }) => type === 'pack').map(({ id }) => id),
+  inventory.items.filter(isPlayerPack).map(({ id }) => id),
 )
 const ownedPackDetails: ComputedRef<
   Record<string, { label: string; cardCount: number }>
 > = computed(() =>
   Object.fromEntries(
     inventory.items
-      .filter(({ type }) => type === 'pack')
+      .filter(isPlayerPack)
       .map((item): [string, { label: string; cardCount: number }] => {
-        const blister = getBlisterById(item.packId ?? BLISTER_CONFIGS.standard.id)
-        const album = getAlbumById(
+        const blister = resolvePlayerBlister(item.packId ?? BLISTER_CONFIGS.standard.id)
+        const album = getPlayerAlbumById(
           item.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
         )
         return [
@@ -132,7 +149,7 @@ const playPackHunt = async (): Promise<void> => {
 }
 
 const openOwnedPack = async (): Promise<void> => {
-  if (!inventory.isLoaded || inventory.packCount <= 0) return
+  if (!inventory.isLoaded || ownedPackIds.value.length <= 0) return
   await router.push({ name: 'pack-opening' })
 }
 

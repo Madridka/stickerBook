@@ -2,7 +2,7 @@
 import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import { getAlbumCard } from '@/data/albumRegistry'
+import { getPlayerAlbumCard } from '@/data/albumRegistry'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
@@ -35,7 +35,7 @@ const currentCard: ComputedRef<CardDefinition | undefined> = computed(
     const playerId: string | undefined =
       packOpening.session?.rewards[currentIndex.value]?.playerId
     const albumId: string | undefined = packOpening.session?.albumId
-    return playerId && albumId ? getAlbumCard(albumId, playerId) : undefined
+    return playerId && albumId ? getPlayerAlbumCard(albumId, playerId) : undefined
   },
 )
 const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>

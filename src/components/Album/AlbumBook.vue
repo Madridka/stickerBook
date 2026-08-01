@@ -138,6 +138,17 @@ onBeforeUnmount((): void => {
         </div>
       </div>
 
+      <div
+        v-if="
+          isOpen &&
+          displayMode === 'spread' &&
+          !isStandaloneStartPage &&
+          visiblePageIndexes.length > 1
+        "
+        class="pointer-events-none absolute inset-y-0 left-1/2 z-[18] w-px -translate-x-1/2 bg-ink/35 shadow-[0_0_14px_5px_rgb(var(--color-ink)/0.2)]"
+        aria-hidden="true"
+      ></div>
+
     </div>
 
     <div class="pointer-events-none absolute inset-0 z-[100]">

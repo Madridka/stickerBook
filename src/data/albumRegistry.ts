@@ -5,6 +5,8 @@ import wc26Cards, { catalogs as wc26Catalogs } from './wc-26/catalog'
 import wc26Contents from './wc-26/contents'
 import kdvGeometry from './kdv/album'
 import kdvCards, { catalogs as kdvCatalogs } from './kdv/catalog'
+import clubsLogoGeometry from './clubsLogo/album'
+import clubsLogoCards, { catalogs as clubsLogoCatalogs } from './clubsLogo/catalog'
 import type {
   AlbumDefinition,
   AlbumEditorialPageDefinition,
@@ -326,7 +328,116 @@ const kdvAlbum: AlbumDefinition = {
   metadata: { club: 'kdv' },
 }
 
-const definitions: AlbumDefinition[] = [infoAlbum, wc26Album, kdvAlbum]
+const clubsLogoAlbum: AlbumDefinition = {
+  id: 'clubsLogo',
+  name: 'album.library.items.clubsLogo.title',
+  shortName: 'album.library.items.clubsLogo.shortTitle',
+  description: 'album.library.items.clubsLogo.description',
+  route: '/clubsLogo',
+  theme: {
+    coverImage: 'info/cover.webp',
+    previewImage: 'info/cover.webp',
+    accentClass: 'text-coral',
+  },
+  geometry: clubsLogoGeometry,
+  pages: clubsLogoGeometry.pages,
+  spreads: createSpreads('clubsLogo', clubsLogoGeometry.pages.map(({ id }) => id)),
+  cards: clubsLogoCards,
+  catalogs: clubsLogoCatalogs,
+  contents: [],
+  editorialPages: [
+    {
+      pageId: 'clubs-logo-cover',
+      kind: 'cover',
+      eyebrow: 'album.editorial.clubsLogo.cover.eyebrow',
+      title: 'album.editorial.clubsLogo.cover.title',
+      description: 'album.editorial.clubsLogo.cover.description',
+      footer: 'album.editorial.clubsLogo.cover.footer',
+      tone: 'dark',
+    },
+    {
+      pageId: 'clubs-logo-history',
+      kind: 'article',
+      eyebrow: 'album.editorial.clubsLogo.history.eyebrow',
+      title: 'album.editorial.clubsLogo.history.title',
+      description: 'album.editorial.clubsLogo.history.description',
+      align: 'left',
+      features: [
+        {
+          title: 'album.editorial.clubsLogo.history.features.pyramid.title',
+          description: 'album.editorial.clubsLogo.history.features.pyramid.description',
+        },
+        {
+          title: 'album.editorial.clubsLogo.history.features.groups.title',
+          description: 'album.editorial.clubsLogo.history.features.groups.description',
+        },
+        {
+          title: 'album.editorial.clubsLogo.history.features.identity.title',
+          description: 'album.editorial.clubsLogo.history.features.identity.description',
+        },
+        {
+          title: 'album.editorial.clubsLogo.history.features.geography.title',
+          description: 'album.editorial.clubsLogo.history.features.geography.description',
+        },
+      ],
+    },
+    {
+      pageId: 'clubs-logo-guide',
+      kind: 'article',
+      eyebrow: 'album.editorial.clubsLogo.guide.eyebrow',
+      title: 'album.editorial.clubsLogo.guide.title',
+      description: 'album.editorial.clubsLogo.guide.description',
+      align: 'right',
+      features: [
+        {
+          title: 'album.editorial.clubsLogo.guide.features.spreads.title',
+          description: 'album.editorial.clubsLogo.guide.features.spreads.description',
+        },
+        {
+          title: 'album.editorial.clubsLogo.guide.features.emptyPage.title',
+          description: 'album.editorial.clubsLogo.guide.features.emptyPage.description',
+        },
+        {
+          title: 'album.editorial.clubsLogo.guide.features.countries.title',
+          description: 'album.editorial.clubsLogo.guide.features.countries.description',
+        },
+        {
+          title: 'album.editorial.clubsLogo.guide.features.progress.title',
+          description: 'album.editorial.clubsLogo.guide.features.progress.description',
+        },
+      ],
+    },
+  ],
+  layout: {
+    openStartPage: 1,
+  },
+  dropSettings: {
+    poolId: 'clubs-logo-development',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  blisters: [],
+  metadata: {
+    kind: 'club-logos',
+    hiddenFromLibrary: true,
+    playerAccessible: false,
+    countries: Array.from(
+      new Set(
+        clubsLogoCards.flatMap((card) =>
+          card.kind === 'team' && card.country ? [card.country] : [],
+        ),
+      ),
+    ),
+    leagues: Array.from(
+      new Set(
+        clubsLogoCards.flatMap((card) =>
+          card.kind === 'team' && card.leagueId ? [card.leagueId] : [],
+        ),
+      ),
+    ),
+  },
+}
+
+const definitions: AlbumDefinition[] = [infoAlbum, wc26Album, kdvAlbum, clubsLogoAlbum]
 const registry: ReadonlyMap<AlbumId, AlbumDefinition> = new Map(
   definitions.map((album): [AlbumId, AlbumDefinition] => [album.id, album]),
 )
@@ -412,8 +523,16 @@ if (import.meta.env.DEV) {
 }
 
 export const getAlbums = (): readonly AlbumDefinition[] => definitions
+export const getPlayerAlbums = (): readonly AlbumDefinition[] =>
+  definitions.filter(({ metadata }): boolean => metadata.playerAccessible !== false)
+export const getLibraryAlbums = (): readonly AlbumDefinition[] =>
+  getPlayerAlbums().filter(({ metadata }): boolean => metadata.hiddenFromLibrary !== true)
 export const getAlbumById = (albumId: AlbumId): AlbumDefinition | undefined =>
   registry.get(albumId)
+export const getPlayerAlbumById = (albumId: AlbumId): AlbumDefinition | undefined => {
+  const album: AlbumDefinition | undefined = getAlbumById(albumId)
+  return album?.metadata.playerAccessible === false ? undefined : album
+}
 export const requireAlbum = (albumId: AlbumId): AlbumDefinition => {
   const album: AlbumDefinition | undefined = getAlbumById(albumId)
   if (!album) throw new Error(`Unknown album: ${albumId}`)
@@ -425,9 +544,21 @@ export const getAlbumCard = (
   albumId: AlbumId,
   cardId: string,
 ): CardDefinition | undefined => getAlbumById(albumId)?.cards.find(({ id }) => id === cardId)
+export const getPlayerAlbumCard = (
+  albumId: AlbumId,
+  cardId: string,
+): CardDefinition | undefined =>
+  getPlayerAlbumById(albumId)?.cards.find(({ id }) => id === cardId)
 export const getBlisterById = (blisterId: string): BlisterDefinition | undefined =>
   blisters.get(blisterId)
-export const getBlisters = (): readonly BlisterDefinition[] => Array.from(blisters.values())
+export const getPlayerBlisterById = (blisterId: string): BlisterDefinition | undefined => {
+  const blister: BlisterDefinition | undefined = getBlisterById(blisterId)
+  return blister && getPlayerAlbumById(blister.albumId) ? blister : undefined
+}
+export const getBlisters = (): readonly BlisterDefinition[] =>
+  Array.from(blisters.values()).filter(({ albumId }): boolean =>
+    Boolean(getPlayerAlbumById(albumId)),
+  )
 
 export const createEmptyAlbumProgress = (albumId: AlbumId): AlbumProgress => ({
   albumId,

@@ -38,7 +38,16 @@ export interface BaseCard {
   selectionWeight?: number
 }
 
-export interface TeamCard extends BaseCard {
+export interface ClubCardMetadata {
+  city: string
+  country: string
+  foundedYear: number
+  stadium: string
+  leagueId: string
+  countryCode: string
+}
+
+export interface TeamCard extends BaseCard, Partial<ClubCardMetadata> {
   kind: 'team'
 }
 

@@ -273,7 +273,9 @@ const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void =>
 
 // Возвращает карточки слота; в демонстрационном режиме берёт их из полного каталога игры.
 const getPlacedCards = (slotId: string): PlacedCard[] => {
-  if (PLACE_ALL_COLLECTED_CARDS) return catalogCardsByAlbumSlot.get(slotId) ?? []
+  if (PLACE_ALL_COLLECTED_CARDS) {
+    return catalogCardsByAlbumSlot.get(normalizeSlotId(slotId)) ?? []
+  }
 
   return collection.items
     .filter(

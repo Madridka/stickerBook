@@ -6,6 +6,7 @@ import type {
   PlayerState,
 } from '@/db/database'
 import type { RareShopState } from '@/features/rareShop/types'
+import { RARE_SHOP_CONFIG } from '@/data/mainConst'
 
 const persisted = vi.hoisted(() => ({
   rareShop: null as RareShopState | null,
@@ -69,6 +70,14 @@ import { useRareShopStore } from '@/stores/rareShop'
 
 const createState = (): RareShopState => ({
   id: 'current',
+  configSignature: JSON.stringify([
+    RARE_SHOP_CONFIG.price,
+    RARE_SHOP_CONFIG.cardsPerPack,
+    RARE_SHOP_CONFIG.missingCardChance,
+    RARE_SHOP_CONFIG.offersPerRotation,
+    RARE_SHOP_CONFIG.rotationDurationMs,
+    RARE_SHOP_CONFIG.extensionDurationMs,
+  ]),
   currentRotation: {
     id: 'rotation-1',
     generatedAt: 1_000,
@@ -168,10 +177,9 @@ describe('rare shop store', () => {
   it('восстанавливает незавершённую ротацию без генерации новых предложений', async () => {
     if (!persisted.rareShop?.currentRotation) throw new Error('Rotation is missing')
     persisted.rareShop.currentRotation.expiresAt = Date.now() + 60_000
-    persisted.rareShop.currentRotation.offers[0] = {
-      ...persisted.rareShop.currentRotation.offers[0]!,
-      expiresAt: persisted.rareShop.currentRotation.expiresAt,
-    }
+    persisted.rareShop.currentRotation.offers = persisted.rareShop.currentRotation.offers.map(
+      (offer) => ({ ...offer, expiresAt: persisted.rareShop?.currentRotation?.expiresAt ?? 0 }),
+    )
     const store = useRareShopStore()
 
     await store.load()

@@ -1,20 +1,20 @@
 $ErrorActionPreference = 'Stop'
-$generator = Join-Path $PSScriptRoot 'generate-club-logo-cards.ps1'
+$generator = Join-Path $PSScriptRoot 'generate-spain-clubs-logo-cards.ps1'
 
 $divisions = @(
   @{
-    Source = 'src/data/clubsLogo/spain/primera-federacion/cards.json'
-    Output = 'public/clubsLogo/cards/spain/primera-federacion'
+    Source = 'src/data/spainClubsLogo/spain/primera-federacion/cards.json'
+    Output = 'public/spainClubsLogo/cards/spain/primera-federacion'
     League = 'PRIMERA FED.'
   },
   @{
-    Source = 'src/data/clubsLogo/spain/segunda-federacion/cards.json'
-    Output = 'public/clubsLogo/cards/spain/segunda-federacion'
+    Source = 'src/data/spainClubsLogo/spain/segunda-federacion/cards.json'
+    Output = 'public/spainClubsLogo/cards/spain/segunda-federacion'
     League = 'SEGUNDA FED.'
   },
   @{
-    Source = 'src/data/clubsLogo/spain/tercera-federacion/cards.json'
-    Output = 'public/clubsLogo/cards/spain/tercera-federacion'
+    Source = 'src/data/spainClubsLogo/spain/tercera-federacion/cards.json'
+    Output = 'public/spainClubsLogo/cards/spain/tercera-federacion'
     League = 'TERCERA FED.'
   }
 )

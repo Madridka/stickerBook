@@ -57,6 +57,7 @@ export interface AlbumEditorialPageDefinition {
   align?: AlbumEditorialPageAlign
   tone?: AlbumEditorialPageTone
   footer?: string
+  hideCoverCopy?: boolean
 }
 
 export interface AlbumLayout {

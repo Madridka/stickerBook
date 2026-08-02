@@ -9,6 +9,7 @@ const testState = vi.hoisted(() => ({
       instance: {
         id: string
         playerId: string
+        albumId: 'wc-26'
         quality: number
         location: 'collection'
       }
@@ -19,6 +20,13 @@ const testState = vi.hoisted(() => ({
     duplicateTotal: 0,
     total: 1,
     load: vi.fn(),
+    getAlbumProgress: vi.fn(() => ({
+      albumId: 'wc-26',
+      totalCards: 1,
+      collectedCards: 1,
+      placedCards: 0,
+      duplicateCards: 0,
+    })),
   },
   deletedCards: {
     items: [],
@@ -90,6 +98,7 @@ describe('CollectionView', () => {
         instance: {
           id: 'instance-1',
           playerId: card.id,
+          albumId: 'wc-26',
           quality: 100,
           location: 'collection',
         },
@@ -102,6 +111,15 @@ describe('CollectionView', () => {
     testState.gameGuide.consumeAutoPreparation.mockReset()
     testState.gameGuide.consumeAutoPreparation.mockResolvedValue(true)
     testState.gameGuide.markCollectionViewed.mockReset()
+  })
+
+  it('скрывает вкладки альбомов, отключённых в ALBUM_VISIBILITY_CONFIG', () => {
+    const wrapper = mountCollection()
+
+    expect(wrapper.find('[data-album-id="wc-26"]').exists()).toBe(true)
+    expect(wrapper.find('[data-album-id="kdv"]').exists()).toBe(true)
+    expect(wrapper.find('[data-album-id="ucl-26-27"]').exists()).toBe(false)
+    expect(wrapper.find('[data-album-id="spainClubsLogo"]').exists()).toBe(false)
   })
 
   it('открывает карточку в диалоге, а подготовку запускает уже из него', async () => {
@@ -117,7 +135,8 @@ describe('CollectionView', () => {
 
     expect(testState.gameGuide.consumeAutoPreparation).toHaveBeenCalledOnce()
     expect(testState.push).toHaveBeenCalledWith({
-      name: 'album-wc-26',
+      name: 'album-detail',
+      params: { albumId: 'wc-26' },
       query: {
         card: testState.collection.items[0]?.instance.playerId,
         instance: 'instance-1',

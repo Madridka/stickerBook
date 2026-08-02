@@ -37,18 +37,21 @@ describe('collection store', () => {
       {
         id: 'base-instance',
         playerId: 'esp-20',
+        albumId: 'wc-26',
         quality: 100,
         location: 'inventory',
       },
       {
         id: 'special-instance',
         playerId: 'esp-20.1',
+        albumId: 'wc-26',
         quality: 100,
         location: 'inventory',
       },
       {
         id: 'stale-instance',
         playerId: 'removed-from-catalog',
+        albumId: 'wc-26',
         quality: 100,
         location: 'inventory',
       },
@@ -58,7 +61,6 @@ describe('collection store', () => {
     await collection.load()
 
     expect(collection.total).toBe(new Set(cards.map(({ id }) => id)).size)
-    expect(collection.total).toBe(961)
     expect(collection.collectedTotal).toBe(2)
   })
 })

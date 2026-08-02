@@ -50,7 +50,7 @@ test('runtime loader validates and normalizes all catalogs without mutation', as
   assert.equal(new Set(cards.map((card) => card.id)).size, cards.length)
   assert.ok(cards.every((card) => card.collectionId === 'wc-26'))
   assert.ok(cards.every((card) => card.teamId.length > 0))
-  assert.ok(cards.every((card) => card.image.startsWith('/game/cards/')))
+  assert.ok(cards.every((card) => card.image.startsWith('/game/wc-26/cards/')))
   assert.ok(cards.every((card) => card.selectionWeight > 0))
   assert.ok(cards.every((card) => card.acquisition.length > 0))
   assert.ok(cards.some((card) => card.kind === 'team'))

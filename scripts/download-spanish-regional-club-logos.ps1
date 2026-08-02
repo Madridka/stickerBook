@@ -1,6 +1,6 @@
 param(
-  [string]$SourcePath = 'src/data/clubsLogo/spain/tercera-federacion/cards.json',
-  [string]$ManifestPath = 'src/data/clubsLogo/spain/regional-logo-sources.json'
+  [string]$SourcePath = 'src/data/spainClubsLogo/spain/tercera-federacion/cards.json',
+  [string]$ManifestPath = 'src/data/spainClubsLogo/spain/regional-logo-sources.json'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -11,7 +11,7 @@ $cardsById = @{}
 foreach ($card in $cards) { $cardsById[$card.id] = $card }
 $headers = @{ 'User-Agent' = 'StickerBookDev/1.0' }
 $catalogRoot = 'https://www.escudosdefutbolyequipaciones.com/'
-$temporaryRoot = Join-Path $projectRoot 'tmp/clubsLogo/regional-sources'
+$temporaryRoot = Join-Path $projectRoot 'tmp/spainClubsLogo/regional-sources'
 New-Item -ItemType Directory -Force -Path $temporaryRoot | Out-Null
 
 $catalogPages = @{
@@ -106,7 +106,7 @@ foreach ($cardId in @($catalogPages.Keys + $directImages.Keys | Sort-Object)) {
 
   $temporaryPath = Join-Path $temporaryRoot "$cardId-source.jpg"
   Invoke-WebRequest -Uri $imageUrl -OutFile $temporaryPath -Headers $headers -TimeoutSec 60
-  $outputRelative = ([string]$card.image) -replace '^/clubsLogo/cards/', 'clubsLogo/logos/'
+  $outputRelative = ([string]$card.image) -replace '^/spainClubsLogo/cards/', 'spainClubsLogo/logos/'
   $outputRelative = $outputRelative -replace '\.webp$', '.png'
   $outputPath = Join-Path (Join-Path $projectRoot 'public') $outputRelative
   Save-TransparentLogo $temporaryPath $outputPath

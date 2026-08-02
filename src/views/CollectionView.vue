@@ -2,7 +2,7 @@
 import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import { getPlayerAlbums, requireAlbum } from '@/data/albumRegistry'
+import { getLibraryAlbums, requireAlbum } from '@/data/albumRegistry'
 import { BLISTER_CONFIGS } from '@/data/mainConst'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
@@ -63,24 +63,24 @@ const requestedAlbumId: string =
   typeof route.query.albumId === 'string'
     ? route.query.albumId
     : BLISTER_CONFIGS.standard.albumId
-const playerAlbums: readonly AlbumDefinition[] = getPlayerAlbums()
-const requestedAlbum: AlbumDefinition | undefined = playerAlbums.find(
+const visibleAlbums: readonly AlbumDefinition[] = getLibraryAlbums().filter(
+  ({ cards }): boolean => cards.length > 0,
+)
+const requestedAlbum: AlbumDefinition | undefined = visibleAlbums.find(
   ({ id }): boolean => id === requestedAlbumId,
 )
-const activeAlbumId: Ref<string> = ref(
-  requestedAlbum?.cards.length
-    ? requestedAlbum.id
-    : requireAlbum(BLISTER_CONFIGS.standard.albumId).id,
-)
+const fallbackAlbum: AlbumDefinition | undefined =
+  visibleAlbums.find(({ id }): boolean => id === BLISTER_CONFIGS.standard.albumId) ??
+  visibleAlbums[0]
+if (!fallbackAlbum) throw new Error('No visible albums available for collection')
+const activeAlbumId: Ref<string> = ref(requestedAlbum?.id ?? fallbackAlbum.id)
 const activeAlbum: ComputedRef<AlbumDefinition> = computed(() =>
   requireAlbum(activeAlbumId.value),
 )
-const albumOptions = playerAlbums
-  .filter(({ cards }) => cards.length > 0)
-  .map((album) => ({
-    value: album.id,
-    label: t(album.shortName),
-  }))
+const albumOptions = visibleAlbums.map((album) => ({
+  value: album.id,
+  label: t(album.shortName),
+}))
 const cards: ComputedRef<CardDefinition[]> = computed(() => activeAlbum.value.cards)
 const albumContentsTeams: ComputedRef<AlbumContentsItem[]> = computed(
   () => activeAlbum.value.contents,
@@ -347,6 +347,7 @@ watch(
         <button
           v-for="album in albumOptions"
           :key="album.value"
+          :data-album-id="album.value"
           class="flex min-w-0 items-center justify-center gap-1.5 border-2 px-2 py-2 text-sm font-black transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral sm:px-4 sm:py-2.5"
           :class="
             activeAlbumId === album.value

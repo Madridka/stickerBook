@@ -41,6 +41,7 @@ const { t } = useI18n()
       :aria-label="t(definition.title)"
     >
       <div
+        v-if="!definition.hideCoverCopy"
         class="pointer-events-none absolute inset-0"
         :class="
           definition.tone === 'light'
@@ -49,7 +50,7 @@ const { t } = useI18n()
         "
       />
 
-      <div class="relative z-10 w-[53%]">
+      <div v-if="!definition.hideCoverCopy" class="relative z-10 w-[53%]">
         <img
           v-if="logo"
           class="mb-[2.6cqw] block h-auto w-[78%] object-contain"
@@ -74,6 +75,7 @@ const { t } = useI18n()
       </div>
 
       <footer
+        v-if="!definition.hideCoverCopy"
         class="relative z-10 flex items-end justify-between border-t border-current/25 pt-[1.4cqw] text-[clamp(6px,0.76cqw,11px)] font-black uppercase tracking-[0.16em] max-md:text-[clamp(4px,0.76cqw,6px)]"
       >
         <span>{{ definition.footer ? t(definition.footer) : t('album.editorial.issue') }}</span>
@@ -107,7 +109,10 @@ const { t } = useI18n()
           </p>
         </header>
 
-        <div class="mt-[1.5cqw] grid grid-cols-3 gap-[1.2cqw]">
+        <div
+          class="mt-[1.5cqw] grid gap-[1.2cqw]"
+          :class="(definition.contentsSections?.length ?? 0) === 1 ? 'grid-cols-6' : 'grid-cols-3'"
+        >
           <section
             v-for="section in definition.contentsSections"
             :key="section.title"

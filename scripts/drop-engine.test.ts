@@ -74,8 +74,9 @@ test('empty rarity pools are removed without an error', () => {
 
 test('rarity odds are renormalized between available pools', () => {
   const normalized = getRenormalizedRarityOdds(rarityOdds, new Set(['common', 'rare']))
+  const expectedCommon = (rarityOdds.common / (rarityOdds.common + rarityOdds.rare)) * 100
   assert.ok(Math.abs((normalized.common ?? 0) + (normalized.rare ?? 0) - 100) < 1e-10)
-  assert.ok(Math.abs((normalized.common ?? 0) - 95.8163372032) < 1e-9)
+  assert.ok(Math.abs((normalized.common ?? 0) - expectedCommon) < 1e-9)
 })
 
 test('cards outside the selected pack pool cannot drop', () => {

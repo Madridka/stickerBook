@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "ucl-26-27",
+  "name": "UCL 2026/27",
+  "season": "2026/27",
+  "status": "draft",
+  "qualificationStage": "league-phase",
+  "snapshotDate": "2026-08-02",
+  "expectedClubCount": 6,
+  "cardsPerClub": 20,
+  "baseCardCount": 120,
+  "clubs": [
+    {
+      "teamId": "real-madrid",
+      "code": "RMA",
+      "displayName": "Real Madrid CF",
+      "countryCode": "ESP",
+      "status": "confirmed"
+    },
+    {
+      "teamId": "barcelona",
+      "code": "BAR",
+      "displayName": "FC Barcelona",
+      "countryCode": "ESP",
+      "status": "confirmed"
+    },
+    {
+      "teamId": "bayern-munich",
+      "code": "BAY",
+      "displayName": "FC Bayern München",
+      "countryCode": "GER",
+      "status": "confirmed"
+    },
+    {
+      "teamId": "borussia-dortmund",
+      "code": "BVB",
+      "displayName": "Borussia Dortmund",
+      "countryCode": "GER",
+      "status": "confirmed"
+    },
+    {
+      "teamId": "paris-saint-germain",
+      "code": "PSG",
+      "displayName": "Paris Saint-Germain",
+      "countryCode": "FRA",
+      "status": "confirmed"
+    },
+    {
+      "teamId": "arsenal",
+      "code": "ARS",
+      "displayName": "Arsenal FC",
+      "countryCode": "ENG",
+      "status": "confirmed"
+    }
+  ]
+}

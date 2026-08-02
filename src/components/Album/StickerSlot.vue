@@ -82,7 +82,7 @@ watch(
 
 <template>
   <div
-    class="absolute rounded-[2px] border border-gold/80 bg-[rgb(250_245_231/0.92)] shadow-inner transition-[box-shadow,transform,background-color] duration-[180ms] ease-[ease] before:pointer-events-none before:absolute before:inset-[3%] before:border before:border-gold/[0.58] before:content-['']"
+    class="absolute border border-[#bfc9d8]/85 bg-[#07111f] shadow-[0_0_0_2px_rgb(2_9_18_/_78%),0_0_12px_rgb(0_0_0_/_65%)] transition-[box-shadow,transform,background-color] duration-[180ms] ease-[ease] before:pointer-events-none before:absolute before:inset-[2.5%] before:border before:border-[#d7dce5]/55 before:content-['']"
     :class="{
       'z-[15] animate-target-pulse bg-[rgb(var(--color-mint)/0.92)] shadow-[0_0_0_3px_rgb(var(--color-paper)),0_0_0_7px_rgb(var(--color-coral)),0_0_26px_rgb(var(--color-coral)/0.8)]':
         highlighted && showsPlaceholder,

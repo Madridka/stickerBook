@@ -1,10 +1,10 @@
 param(
   [string[]]$SourcePaths = @(
-    'src/data/clubsLogo/spain/primera-federacion/cards.json',
-    'src/data/clubsLogo/spain/segunda-federacion/cards.json',
-    'src/data/clubsLogo/spain/tercera-federacion/cards.json'
+    'src/data/spainClubsLogo/spain/primera-federacion/cards.json',
+    'src/data/spainClubsLogo/spain/segunda-federacion/cards.json',
+    'src/data/spainClubsLogo/spain/tercera-federacion/cards.json'
   ),
-  [string]$ManifestPath = 'src/data/clubsLogo/spain/federation-logo-sources.json',
+  [string]$ManifestPath = 'src/data/spainClubsLogo/spain/federation-logo-sources.json',
   [string[]]$CardIds = @(),
   [switch]$Refresh
 )
@@ -190,7 +190,7 @@ $leagueTeams = @{}
 $index = 0
 foreach ($card in $cards) {
   $index += 1
-  $imageRelative = ([string]$card.image) -replace '^/clubsLogo/cards/', 'clubsLogo/logos/'
+  $imageRelative = ([string]$card.image) -replace '^/spainClubsLogo/cards/', 'spainClubsLogo/logos/'
   $imageRelative = $imageRelative -replace '\.webp$', '.png'
   $outputPath = Join-Path (Join-Path $projectRoot 'public') $imageRelative
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $outputPath) | Out-Null
@@ -266,7 +266,7 @@ foreach ($card in $cards) {
 
 @($preservedManifest) + @($manifest) | Sort-Object cardId | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $manifestFile -Encoding UTF8
 if ($unresolved.Count -gt 0) {
-  $unresolvedPath = Join-Path $projectRoot 'tmp/clubsLogo/unresolved-federation-logos.json'
+  $unresolvedPath = Join-Path $projectRoot 'tmp/spainClubsLogo/unresolved-federation-logos.json'
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $unresolvedPath) | Out-Null
   $unresolved | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $unresolvedPath -Encoding UTF8
   Write-Warning "$($unresolved.Count) clubs remain unresolved; see $unresolvedPath"

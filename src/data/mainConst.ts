@@ -1,5 +1,17 @@
 import type { BlisterConfig, CardCatalogConfig, PackConfig } from '../types/gameConfig.ts'
 
+/**
+ * Управляет отображением каждого журнала в общем списке «Альбом».
+ * Выключенный журнал остаётся зарегистрированным, а его сохранённые карточки не удаляются.
+ */
+export const ALBUM_VISIBILITY_CONFIG: Record<string, boolean> = {
+  info: true,
+  'wc-26': true,
+  kdv: true,
+  'ucl-26-27': false,
+  spainClubsLogo: false,
+}
+
 /** Стоимость одного стандартного пака в игровых монетах. */
 export const PACK_PRICE: number = 20
 

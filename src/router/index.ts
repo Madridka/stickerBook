@@ -51,14 +51,9 @@ const router: Router = createRouter({
       ],
     },
     {
-      path: '/clubsLogo',
-      name: 'clubs-logo-development',
-      component: () => import('@/views/AlbumView.vue'),
-      meta: {
-        title: (i18n.global.t as (key: string) => string)('app.album'),
-        albumWorkspace: true,
-        developmentAlbumId: 'clubsLogo',
-      },
+      path: '/spainClubsLogo',
+      name: 'spain-clubs-logo',
+      redirect: { name: 'album-detail', params: { albumId: 'spainClubsLogo' } },
     },
     {
       path: '/collection',

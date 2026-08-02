@@ -1,12 +1,14 @@
-import { BLISTER_CONFIGS, PACK_CONFIGS } from './mainConst'
+import { ALBUM_VISIBILITY_CONFIG, BLISTER_CONFIGS, PACK_CONFIGS } from './mainConst'
 import infoGeometry from './info/album'
 import wc26Geometry from './wc-26/album'
 import wc26Cards, { catalogs as wc26Catalogs } from './wc-26/catalog'
 import wc26Contents from './wc-26/contents'
+import ucl2627Geometry from './ucl-26-27/album'
+import ucl2627Cards, { catalogs as ucl2627Catalogs } from './ucl-26-27/catalog'
 import kdvGeometry from './kdv/album'
 import kdvCards, { catalogs as kdvCatalogs } from './kdv/catalog'
-import clubsLogoGeometry from './clubsLogo/album'
-import clubsLogoCards, { catalogs as clubsLogoCatalogs } from './clubsLogo/catalog'
+import spainClubsLogoGeometry from './spainClubsLogo/album'
+import spainClubsLogoCards, { catalogs as spainClubsLogoCatalogs } from './spainClubsLogo/catalog'
 import type {
   AlbumDefinition,
   AlbumEditorialPageDefinition,
@@ -328,93 +330,174 @@ const kdvAlbum: AlbumDefinition = {
   metadata: { club: 'kdv' },
 }
 
-const clubsLogoAlbum: AlbumDefinition = {
-  id: 'clubsLogo',
-  name: 'album.library.items.clubsLogo.title',
-  shortName: 'album.library.items.clubsLogo.shortTitle',
-  description: 'album.library.items.clubsLogo.description',
-  route: '/clubsLogo',
+const ucl2627Album: AlbumDefinition = {
+  id: 'ucl-26-27',
+  name: 'album.library.items.ucl-26-27.title',
+  shortName: 'album.library.items.ucl-26-27.shortTitle',
+  description: 'album.library.items.ucl-26-27.description',
+  route: '/album/ucl-26-27',
+  theme: {
+    coverImage: 'info/cover.png',
+    previewImage: 'info/cover.png',
+    accentClass: 'text-coral',
+  },
+  geometry: ucl2627Geometry,
+  pages: ucl2627Geometry.pages,
+  spreads: createSpreads('ucl-26-27', ucl2627Geometry.pages.map(({ id }) => id)),
+  cards: ucl2627Cards,
+  catalogs: ucl2627Catalogs,
+  contents: [],
+  editorialPages: [
+    {
+      pageId: 'ucl-26-27-cover',
+      kind: 'cover',
+      eyebrow: 'album.editorial.ucl2627.cover.eyebrow',
+      title: 'album.editorial.ucl2627.cover.title',
+      description: 'album.editorial.ucl2627.cover.description',
+      tone: 'dark',
+      hideCoverCopy: true,
+    },
+    {
+      pageId: 'ucl-26-27-season',
+      kind: 'contents',
+      eyebrow: 'album.editorial.ucl2627.contents.eyebrow',
+      title: 'album.editorial.ucl2627.contents.title',
+      description: 'album.editorial.ucl2627.contents.description',
+      contentsSections: [
+        {
+          title: 'album.editorial.ucl2627.contents.clubs',
+          items: [
+            { label: 'album.editorial.ucl2627.contents.realMadrid', pages: '04–05', targetPage: 4 },
+            { label: 'album.editorial.ucl2627.contents.barcelona', pages: '06–07', targetPage: 6 },
+            { label: 'album.editorial.ucl2627.contents.bayern', pages: '08–09', targetPage: 8 },
+            { label: 'album.editorial.ucl2627.contents.dortmund', pages: '10–11', targetPage: 10 },
+            { label: 'album.editorial.ucl2627.contents.psg', pages: '12–13', targetPage: 12 },
+            { label: 'album.editorial.ucl2627.contents.arsenal', pages: '14–15', targetPage: 14 },
+          ],
+        },
+      ],
+    },
+    {
+      pageId: 'ucl-26-27-collection',
+      kind: 'article',
+      eyebrow: 'album.editorial.ucl2627.collection.eyebrow',
+      title: 'album.editorial.ucl2627.collection.title',
+      description: 'album.editorial.ucl2627.collection.description',
+      align: 'right',
+      features: [
+        {
+          title: 'album.editorial.ucl2627.collection.features.spreads.title',
+          description: 'album.editorial.ucl2627.collection.features.spreads.description',
+        },
+        {
+          title: 'album.editorial.ucl2627.collection.features.roster.title',
+          description: 'album.editorial.ucl2627.collection.features.roster.description',
+        },
+        {
+          title: 'album.editorial.ucl2627.collection.features.progress.title',
+          description: 'album.editorial.ucl2627.collection.features.progress.description',
+        },
+      ],
+    },
+  ],
+  layout: {
+    openStartPage: 1,
+  },
+  dropSettings: {
+    poolId: 'ucl-26-27-standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  blisters: [],
+  metadata: { season: '2026/27', clubs: 6 },
+}
+
+const spainClubsLogoAlbum: AlbumDefinition = {
+  id: 'spainClubsLogo',
+  name: 'album.library.items.spainClubsLogo.title',
+  shortName: 'album.library.items.spainClubsLogo.shortTitle',
+  description: 'album.library.items.spainClubsLogo.description',
+  route: '/album/spainClubsLogo',
   theme: {
     coverImage: 'info/cover.webp',
     previewImage: 'info/cover.webp',
     accentClass: 'text-coral',
   },
-  geometry: clubsLogoGeometry,
-  pages: clubsLogoGeometry.pages,
-  spreads: createSpreads('clubsLogo', clubsLogoGeometry.pages.map(({ id }) => id)),
-  cards: clubsLogoCards,
-  catalogs: clubsLogoCatalogs,
+  geometry: spainClubsLogoGeometry,
+  pages: spainClubsLogoGeometry.pages,
+  spreads: createSpreads('spainClubsLogo', spainClubsLogoGeometry.pages.map(({ id }) => id)),
+  cards: spainClubsLogoCards,
+  catalogs: spainClubsLogoCatalogs,
   contents: [],
   editorialPages: [
     {
-      pageId: 'clubs-logo-cover',
+      pageId: 'spain-clubs-logo-cover',
       kind: 'cover',
-      eyebrow: 'album.editorial.clubsLogo.cover.eyebrow',
-      title: 'album.editorial.clubsLogo.cover.title',
-      description: 'album.editorial.clubsLogo.cover.description',
-      footer: 'album.editorial.clubsLogo.cover.footer',
+      eyebrow: 'album.editorial.spainClubsLogo.cover.eyebrow',
+      title: 'album.editorial.spainClubsLogo.cover.title',
+      description: 'album.editorial.spainClubsLogo.cover.description',
+      footer: 'album.editorial.spainClubsLogo.cover.footer',
       tone: 'dark',
     },
     {
-      pageId: 'clubs-logo-history',
+      pageId: 'spain-clubs-logo-history',
       kind: 'article',
-      eyebrow: 'album.editorial.clubsLogo.history.eyebrow',
-      title: 'album.editorial.clubsLogo.history.title',
-      description: 'album.editorial.clubsLogo.history.description',
+      eyebrow: 'album.editorial.spainClubsLogo.history.eyebrow',
+      title: 'album.editorial.spainClubsLogo.history.title',
+      description: 'album.editorial.spainClubsLogo.history.description',
       align: 'left',
       features: [
         {
-          title: 'album.editorial.clubsLogo.history.features.pyramid.title',
-          description: 'album.editorial.clubsLogo.history.features.pyramid.description',
+          title: 'album.editorial.spainClubsLogo.history.features.pyramid.title',
+          description: 'album.editorial.spainClubsLogo.history.features.pyramid.description',
         },
         {
-          title: 'album.editorial.clubsLogo.history.features.groups.title',
-          description: 'album.editorial.clubsLogo.history.features.groups.description',
+          title: 'album.editorial.spainClubsLogo.history.features.groups.title',
+          description: 'album.editorial.spainClubsLogo.history.features.groups.description',
         },
         {
-          title: 'album.editorial.clubsLogo.history.features.identity.title',
-          description: 'album.editorial.clubsLogo.history.features.identity.description',
+          title: 'album.editorial.spainClubsLogo.history.features.identity.title',
+          description: 'album.editorial.spainClubsLogo.history.features.identity.description',
         },
         {
-          title: 'album.editorial.clubsLogo.history.features.geography.title',
-          description: 'album.editorial.clubsLogo.history.features.geography.description',
+          title: 'album.editorial.spainClubsLogo.history.features.geography.title',
+          description: 'album.editorial.spainClubsLogo.history.features.geography.description',
         },
       ],
     },
     {
-      pageId: 'clubs-logo-contents',
+      pageId: 'spain-clubs-logo-contents',
       kind: 'contents',
-      eyebrow: 'album.editorial.clubsLogo.contents.eyebrow',
-      title: 'album.editorial.clubsLogo.contents.title',
-      description: 'album.editorial.clubsLogo.contents.description',
+      eyebrow: 'album.editorial.spainClubsLogo.contents.eyebrow',
+      title: 'album.editorial.spainClubsLogo.contents.title',
+      description: 'album.editorial.spainClubsLogo.contents.description',
       contentsSections: [
         {
-          title: 'album.editorial.clubsLogo.contents.sections.main',
+          title: 'album.editorial.spainClubsLogo.contents.sections.main',
           items: [
-            { label: 'album.editorial.clubsLogo.contents.labels.laLiga', pages: '04–05', targetPage: 4 },
-            { label: 'album.editorial.clubsLogo.contents.labels.segunda', pages: '06–09', targetPage: 6 },
-            { label: 'album.editorial.clubsLogo.contents.labels.primera', group: '1', pages: '10–11', targetPage: 10 },
-            { label: 'album.editorial.clubsLogo.contents.labels.primera', group: '2', pages: '12–13', targetPage: 12 },
-            { label: 'album.editorial.clubsLogo.contents.labels.segundaFederacion', group: '1', pages: '14–15', targetPage: 14 },
-            { label: 'album.editorial.clubsLogo.contents.labels.segundaFederacion', group: '2', pages: '16–17', targetPage: 16 },
-            { label: 'album.editorial.clubsLogo.contents.labels.segundaFederacion', group: '3', pages: '18–19', targetPage: 18 },
-            { label: 'album.editorial.clubsLogo.contents.labels.segundaFederacion', group: '4', pages: '20–21', targetPage: 20 },
-            { label: 'album.editorial.clubsLogo.contents.labels.segundaFederacion', group: '5', pages: '22–23', targetPage: 22 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.laLiga', pages: '04–05', targetPage: 4 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segunda', pages: '06–09', targetPage: 6 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.primera', group: '1', pages: '10–11', targetPage: 10 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.primera', group: '2', pages: '12–13', targetPage: 12 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '1', pages: '14–15', targetPage: 14 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '2', pages: '16–17', targetPage: 16 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '3', pages: '18–19', targetPage: 18 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '4', pages: '20–21', targetPage: 20 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '5', pages: '22–23', targetPage: 22 },
           ],
         },
         {
-          title: 'album.editorial.clubsLogo.contents.sections.terceraFirst',
+          title: 'album.editorial.spainClubsLogo.contents.sections.terceraFirst',
           items: Array.from({ length: 9 }, (_value, index) => ({
-            label: 'album.editorial.clubsLogo.contents.labels.tercera',
+            label: 'album.editorial.spainClubsLogo.contents.labels.tercera',
             group: String(index + 1).padStart(2, '0'),
             pages: `${String(24 + index * 2).padStart(2, '0')}–${String(25 + index * 2).padStart(2, '0')}`,
             targetPage: 24 + index * 2,
           })),
         },
         {
-          title: 'album.editorial.clubsLogo.contents.sections.terceraSecond',
+          title: 'album.editorial.spainClubsLogo.contents.sections.terceraSecond',
           items: Array.from({ length: 9 }, (_value, index) => ({
-            label: 'album.editorial.clubsLogo.contents.labels.tercera',
+            label: 'album.editorial.spainClubsLogo.contents.labels.tercera',
             group: String(index + 10).padStart(2, '0'),
             pages: `${42 + index * 2}–${43 + index * 2}`,
             targetPage: 42 + index * 2,
@@ -427,24 +510,22 @@ const clubsLogoAlbum: AlbumDefinition = {
     openStartPage: 1,
   },
   dropSettings: {
-    poolId: 'clubs-logo-development',
+    poolId: 'spain-clubs-logo-development',
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   blisters: [],
   metadata: {
     kind: 'club-logos',
-    hiddenFromLibrary: true,
-    playerAccessible: false,
     countries: Array.from(
       new Set(
-        clubsLogoCards.flatMap((card) =>
+        spainClubsLogoCards.flatMap((card) =>
           card.kind === 'team' && card.country ? [card.country] : [],
         ),
       ),
     ),
     leagues: Array.from(
       new Set(
-        clubsLogoCards.flatMap((card) =>
+        spainClubsLogoCards.flatMap((card) =>
           card.kind === 'team' && card.leagueId ? [card.leagueId] : [],
         ),
       ),
@@ -452,7 +533,13 @@ const clubsLogoAlbum: AlbumDefinition = {
   },
 }
 
-const definitions: AlbumDefinition[] = [infoAlbum, wc26Album, kdvAlbum, clubsLogoAlbum]
+const definitions: AlbumDefinition[] = [
+  infoAlbum,
+  wc26Album,
+  ucl2627Album,
+  kdvAlbum,
+  spainClubsLogoAlbum,
+]
 const registry: ReadonlyMap<AlbumId, AlbumDefinition> = new Map(
   definitions.map((album): [AlbumId, AlbumDefinition] => [album.id, album]),
 )
@@ -541,7 +628,9 @@ export const getAlbums = (): readonly AlbumDefinition[] => definitions
 export const getPlayerAlbums = (): readonly AlbumDefinition[] =>
   definitions.filter(({ metadata }): boolean => metadata.playerAccessible !== false)
 export const getLibraryAlbums = (): readonly AlbumDefinition[] =>
-  getPlayerAlbums().filter(({ metadata }): boolean => metadata.hiddenFromLibrary !== true)
+  getPlayerAlbums().filter(
+    ({ id }): boolean => ALBUM_VISIBILITY_CONFIG[id] !== false,
+  )
 export const getAlbumById = (albumId: AlbumId): AlbumDefinition | undefined =>
   registry.get(albumId)
 export const getPlayerAlbumById = (albumId: AlbumId): AlbumDefinition | undefined => {

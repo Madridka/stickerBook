@@ -1,11 +1,11 @@
 param(
-  [string]$OutputDirectory = 'public/clubsLogo/logos/spain/segunda-division'
+  [string]$OutputDirectory = 'public/spainClubsLogo/logos/spain/segunda-division'
 )
 
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $outputRoot = Join-Path $projectRoot $OutputDirectory
-$temporaryRoot = Join-Path $projectRoot 'tmp/clubsLogo/segunda-division-sources'
+$temporaryRoot = Join-Path $projectRoot 'tmp/spainClubsLogo/segunda-division-sources'
 New-Item -ItemType Directory -Force -Path $outputRoot, $temporaryRoot | Out-Null
 
 $sources = @(

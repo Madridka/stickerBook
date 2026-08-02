@@ -12,12 +12,15 @@ const coverImages: Record<string, string> = import.meta.glob(
   [
     '../../assets/game/*/main/album/**/*.webp',
     '../../assets/game/*/main/album/**/*.png',
+    '!../../assets/game/*/main/album/source/**',
   ],
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
 
 const getCover = (album: AlbumDefinition): string =>
-  coverImages[`../../assets/game/${album.id}/main/album/${album.theme.coverImage}`] ?? ''
+  coverImages[
+    `../../assets/game/${typeof album.metadata.assetAlbumId === 'string' ? album.metadata.assetAlbumId : album.id}/main/album/${album.theme.coverImage}`
+  ] ?? ''
 
 // Рассчитывает заполнение конкретного журнала только по вклеенным в него карточкам.
 const getProgress = (album: AlbumDefinition): AlbumProgress =>

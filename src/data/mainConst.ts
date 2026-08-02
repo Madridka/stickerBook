@@ -7,7 +7,7 @@ import type { BlisterConfig, CardCatalogConfig, PackConfig } from '../types/game
 export const ALBUM_VISIBILITY_CONFIG: Record<string, boolean> = {
   info: true,
   'wc-26': true,
-  kdv: true,
+  tomsk: true,
   'ucl-26-27': false,
   spainClubsLogo: false,
 }
@@ -18,13 +18,13 @@ export const PACK_PRICE: number = 20
 /** Количество карточек, которое игрок получает из одного стандартного пака. */
 export const CARDS_PER_PACK: number = 5
 
-/** Стоимость отдельного блистера журнала КДВ. */
+/** Стоимость отдельного блистера доступной эпохи журнала «История Томи». */
 export const KDV_BLISTER_COST: number = 100
 
-/** Количество карточек в одном блистере КДВ. */
+/** Количество карточек в одном блистере журнала «История Томи». */
 export const KDV_BLISTER_CARD_COUNT: number = 1
 
-/** Абсолютный четырёхчасовой период недоступности блистера КДВ. */
+/** Абсолютный четырёхчасовой период недоступности блистера «История Томи». */
 export const KDV_BLISTER_COOLDOWN_MS: number = 4 * 60 * 60 * 1_000
 
 /** Настройки версии алгоритма выпадения и базового веса карточки. */
@@ -63,7 +63,7 @@ export const BLISTER_CONFIGS = {
   },
   kdv: {
     id: 'kdv',
-    albumId: 'kdv',
+    albumId: 'tomsk',
     titleKey: 'shop.kdv.title',
     cost: KDV_BLISTER_COST,
     cardsPerPack: KDV_BLISTER_CARD_COUNT,
@@ -498,4 +498,4 @@ export const STICKER_DRAG_THRESHOLD_PX: number = 10
  * Демонстрационный режим альбома: показывает весь каталог как уже вклеенный,
  * не изменяя сохранённые данные игрока.
  */
-export const PLACE_ALL_COLLECTED_CARDS: boolean = false
+export const PLACE_ALL_COLLECTED_CARDS: boolean = true

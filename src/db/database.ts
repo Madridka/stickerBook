@@ -294,3 +294,26 @@ database
         }))
       })
   })
+
+// Переносит сохранённую коллекцию прежнего журнала КДВ в общий журнал истории Томска.
+database.version(14).upgrade(async (transaction): Promise<void> => {
+  const migrateAlbumId = (item: { albumId?: AlbumId }): void => {
+    if (item.albumId === 'kdv') item.albumId = 'tomsk'
+  }
+
+  await transaction.table('cards').toCollection().modify(migrateAlbumId)
+  await transaction.table('duplicates').toCollection().modify(migrateAlbumId)
+  await transaction.table('deletedCards').toCollection().modify(migrateAlbumId)
+  await transaction.table('inventory').toCollection().modify(migrateAlbumId)
+  await transaction.table('duplicateExchanges').toCollection().modify(migrateAlbumId)
+  await transaction
+    .table('packOpeningSessions')
+    .toCollection()
+    .modify((session: PackOpeningSession): void => {
+      migrateAlbumId(session)
+      session.rewards = session.rewards.map((reward) => ({
+        ...reward,
+        albumId: reward.albumId === 'kdv' ? 'tomsk' : reward.albumId,
+      }))
+    })
+})

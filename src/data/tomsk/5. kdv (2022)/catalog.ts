@@ -1,5 +1,5 @@
 import rawCatalog from './cards.json'
-import { loadCardCatalogs } from '../cardCatalogLoader'
+import { loadCardCatalogs } from '../../cardCatalogLoader'
 import type { NormalizedCardCatalog, PlayerPosition } from '@/types/cardCatalog'
 
 const positionAliases: Readonly<Record<string, PlayerPosition>> = {
@@ -12,6 +12,8 @@ const positionAliases: Readonly<Record<string, PlayerPosition>> = {
 // Приводит исторические названия позиций КДВ к общей строгой схеме карточек.
 const normalizedInput: unknown = {
   ...rawCatalog,
+  collectionId: 'tomsk',
+  teamId: 'tomsk',
   cards: rawCatalog.cards.map((card) => {
     const image: string = card.image.replace(/^\/cards\/kdv\//, '/kdv/cards/')
     if (card.kind !== 'player') return { ...card, image }

@@ -10,6 +10,7 @@ export interface AlbumContentsItem {
   flag: string
   pageId: PageId
   nameKey: string
+  descriptionKey?: string
   group: string
 }
 

@@ -5,8 +5,9 @@ import wc26Cards, { catalogs as wc26Catalogs } from './wc-26/catalog'
 import wc26Contents from './wc-26/contents'
 import ucl2627Geometry from './ucl-26-27/album'
 import ucl2627Cards, { catalogs as ucl2627Catalogs } from './ucl-26-27/catalog'
-import kdvGeometry from './kdv/album'
-import kdvCards, { catalogs as kdvCatalogs } from './kdv/catalog'
+import tomskGeometry from './tomsk/album'
+import tomskCards, { catalogs as tomskCatalogs } from './tomsk/5. kdv (2022)/catalog'
+import tomskContents from './tomsk/contents'
 import spainClubsLogoGeometry from './spainClubsLogo/album'
 import spainClubsLogoCards, { catalogs as spainClubsLogoCatalogs } from './spainClubsLogo/catalog'
 import type {
@@ -247,87 +248,90 @@ const wc26Album: AlbumDefinition = {
   metadata: { edition: 1 },
 }
 
-const kdvAlbum: AlbumDefinition = {
-  id: 'kdv',
-  name: 'album.library.items.kdv.title',
-  shortName: 'album.library.items.kdv.shortTitle',
-  description: 'album.library.items.kdv.description',
-  route: '/album/kdv',
+const tomskAlbum: AlbumDefinition = {
+  id: 'tomsk',
+  name: 'album.library.items.tomsk.title',
+  shortName: 'album.library.items.tomsk.shortTitle',
+  description: 'album.library.items.tomsk.description',
+  route: '/album/tomsk',
   theme: {
-    coverImage: 'info/cover.png',
-    previewImage: 'info/cover.png',
+    coverImage: 'info/cover.webp',
+    previewImage: 'info/cover.webp',
     accentClass: 'text-gold',
   },
-  geometry: kdvGeometry,
-  pages: kdvGeometry.pages,
-  spreads: createSpreads('kdv', kdvGeometry.pages.map(({ id }) => id)),
-  cards: kdvCards,
-  catalogs: kdvCatalogs,
-  contents: [],
+  geometry: tomskGeometry,
+  pages: tomskGeometry.pages,
+  spreads: createSpreads('tomsk', tomskGeometry.pages.map(({ id }) => id)),
+  cards: tomskCards,
+  catalogs: tomskCatalogs,
+  contents: tomskContents,
   editorialPages: [
     {
-      pageId: 'kdv-cover',
+      pageId: 'tomsk-cover',
       kind: 'cover',
-      eyebrow: 'album.editorial.kdv.cover.eyebrow',
-      title: 'album.editorial.kdv.cover.title',
-      description: 'album.editorial.kdv.cover.description',
-      footer: 'album.editorial.kdv.cover.footer',
+      eyebrow: 'album.editorial.tomsk.cover.eyebrow',
+      title: 'album.editorial.tomsk.cover.title',
+      description: 'album.editorial.tomsk.cover.description',
+      footer: 'album.editorial.tomsk.cover.footer',
       tone: 'dark',
     },
     {
-      pageId: 'kdv-about',
+      pageId: 'tomsk-about',
       kind: 'article',
-      eyebrow: 'album.editorial.kdv.about.eyebrow',
-      title: 'album.editorial.kdv.about.title',
-      description: 'album.editorial.kdv.about.description',
+      eyebrow: 'album.editorial.tomsk.about.eyebrow',
+      title: 'album.editorial.tomsk.about.title',
+      description: 'album.editorial.tomsk.about.description',
       align: 'left',
       features: [
         {
-          title: 'album.editorial.kdv.about.features.identity.title',
-          description: 'album.editorial.kdv.about.features.identity.description',
+          title: 'album.editorial.tomsk.about.features.identity.title',
+          description: 'album.editorial.tomsk.about.features.identity.description',
         },
         {
-          title: 'album.editorial.kdv.about.features.support.title',
-          description: 'album.editorial.kdv.about.features.support.description',
+          title: 'album.editorial.tomsk.about.features.support.title',
+          description: 'album.editorial.tomsk.about.features.support.description',
         },
         {
-          title: 'album.editorial.kdv.about.features.magazine.title',
-          description: 'album.editorial.kdv.about.features.magazine.description',
+          title: 'album.editorial.tomsk.about.features.magazine.title',
+          description: 'album.editorial.tomsk.about.features.magazine.description',
         },
       ],
     },
     {
-      pageId: 'kdv-team',
+      pageId: 'tomsk-history',
       kind: 'article',
-      eyebrow: 'album.editorial.kdv.team.eyebrow',
-      title: 'album.editorial.kdv.team.title',
-      description: 'album.editorial.kdv.team.description',
+      eyebrow: 'album.editorial.tomsk.history.eyebrow',
+      title: 'album.editorial.tomsk.history.title',
+      description: 'album.editorial.tomsk.history.description',
       align: 'right',
       features: [
         {
-          title: 'album.editorial.kdv.team.features.roles.title',
-          description: 'album.editorial.kdv.team.features.roles.description',
+          title: 'album.editorial.tomsk.history.features.roles.title',
+          description: 'album.editorial.tomsk.history.features.roles.description',
         },
         {
-          title: 'album.editorial.kdv.team.features.academy.title',
-          description: 'album.editorial.kdv.team.features.academy.description',
+          title: 'album.editorial.tomsk.history.features.eras.title',
+          description: 'album.editorial.tomsk.history.features.eras.description',
         },
         {
-          title: 'album.editorial.kdv.team.features.collection.title',
-          description: 'album.editorial.kdv.team.features.collection.description',
+          title: 'album.editorial.tomsk.history.features.collection.title',
+          description: 'album.editorial.tomsk.history.features.collection.description',
         },
       ],
     },
   ],
   layout: {
     openStartPage: 1,
+    contentsFirstPage: 4,
+    contentsLastPage: 5,
+    contentsPageSize: 4,
   },
   dropSettings: {
     poolId: 'standard',
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   blisters: [toBlisterDefinition(BLISTER_CONFIGS.kdv)],
-  metadata: { club: 'kdv' },
+  metadata: { club: 'tomsk', cardAssetAlbumId: 'kdv', allowEmptySlots: true },
 }
 
 const ucl2627Album: AlbumDefinition = {
@@ -537,7 +541,7 @@ const definitions: AlbumDefinition[] = [
   infoAlbum,
   wc26Album,
   ucl2627Album,
-  kdvAlbum,
+  tomskAlbum,
   spainClubsLogoAlbum,
 ]
 const registry: ReadonlyMap<AlbumId, AlbumDefinition> = new Map(
@@ -552,12 +556,20 @@ const albumPageAssets: Record<string, string> = import.meta.glob(
   [
     '../../assets/game/*/main/album/**/*.webp',
     '../../assets/game/*/main/album/**/*.png',
+    '!../../assets/game/*/main/album/source/**',
   ],
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
 
 // Проверяет все межфайловые связи до того, как конфигурация попадёт в интерфейс.
 const validateAlbum = (album: AlbumDefinition): void => {
+  const assetAlbumId: string =
+    typeof album.metadata.assetAlbumId === 'string' ? album.metadata.assetAlbumId : album.id
+  const cardAssetAlbumId: string =
+    typeof album.metadata.cardAssetAlbumId === 'string'
+      ? album.metadata.cardAssetAlbumId
+      : assetAlbumId
+  const allowEmptySlots: boolean = album.metadata.allowEmptySlots === true
   const cardIds: string[] = album.cards.map(({ id }) => id)
   const cardNumbers: string[] = album.cards.map(
     ({ teamId, cardNumber }) => `${teamId}:${cardNumber}`,
@@ -585,18 +597,18 @@ const validateAlbum = (album: AlbumDefinition): void => {
       throw new Error(`${album.id}: card ${card.id} belongs to another album`)
     }
     if (!card.image) throw new Error(`${album.id}: card ${card.id} has no image`)
-    if (!card.image.includes(`/${album.id}/cards/`)) {
+    if (!card.image.includes(`/${cardAssetAlbumId}/cards/`)) {
       throw new Error(`${album.id}: card ${card.id} has an invalid image path`)
     }
   }
   for (const page of album.pages) {
-    const assetKey: string = `../../assets/game/${album.id}/main/album/${page.image}`
+    const assetKey: string = `../../assets/game/${assetAlbumId}/main/album/${page.image}`
     if (!albumPageAssets[assetKey]) {
       throw new Error(`${album.id}: page ${page.id} references a missing image`)
     }
   }
   for (const slot of slots) {
-    if (!knownCards.has(slot.playerId)) {
+    if (!allowEmptySlots && !knownCards.has(slot.playerId)) {
       throw new Error(`${album.id}: slot ${slot.id} references unknown card ${slot.playerId}`)
     }
   }

@@ -106,6 +106,10 @@ const requestedAlbumDefinition: AlbumDefinition | undefined = isDevelopmentAlbum
   : getPlayerAlbumById(requestedAlbumId)
 const albumDefinition: AlbumDefinition =
   requestedAlbumDefinition ?? requireAlbum(BLISTER_CONFIGS.standard.albumId)
+const albumAssetId: string =
+  typeof albumDefinition.metadata.assetAlbumId === 'string'
+    ? albumDefinition.metadata.assetAlbumId
+    : albumDefinition.id
 album.selectAlbum(albumDefinition.id)
 const cards: CardDefinition[] = albumDefinition.cards
 const albumContentsTeams: AlbumContentsItem[] = albumDefinition.contents
@@ -147,6 +151,7 @@ const albumImages: Record<string, string> = import.meta.glob(
   [
     '../../assets/game/*/main/album/**/*.webp',
     '../../assets/game/*/main/album/**/*.png',
+    '!../../assets/game/*/main/album/source/**',
   ],
   { eager: true, import: 'default', query: '?url' },
 ) as Record<string, string>
@@ -161,7 +166,7 @@ const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
       }),
       image:
         albumImages[
-          `../../assets/game/${albumDefinition.id}/main/album/${page.image}`
+          `../../assets/game/${albumAssetId}/main/album/${page.image}`
         ] ?? '',
       geometry: page,
     }),
@@ -672,6 +677,12 @@ onBeforeUnmount((): void => {
               @select="openTeam"
             />
             <template v-else>
+              <h2
+                v-if="pages[pageIndex].geometry.sectionTitle"
+                class="pointer-events-none absolute left-[8%] right-[8%] top-[3.5%] z-20 text-center text-[clamp(8px,1.25cqw,19px)] font-black uppercase tracking-[0.12em] text-[#a71920]"
+              >
+                {{ pages[pageIndex].geometry.sectionTitle }}
+              </h2>
               <StickerSlot
                 v-for="slot in pages[pageIndex].geometry.slots"
                 :key="slot.id"

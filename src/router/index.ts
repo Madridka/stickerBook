@@ -36,6 +36,10 @@ const router: Router = createRouter({
           },
         },
         {
+          path: 'kdv',
+          redirect: { name: 'album-detail', params: { albumId: 'tomsk' } },
+        },
+        {
           path: ':albumId',
           name: 'album-detail',
           component: () => import('@/views/AlbumView.vue'),

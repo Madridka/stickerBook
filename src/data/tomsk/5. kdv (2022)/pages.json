@@ -1,7 +1,7 @@
 [
   {
     "id": "kdv-left",
-    "image": "kdv-left.webp",
+    "image": "eras/kdv-left.webp",
     "width": 1536,
     "height": 1200,
     "slots": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "kdv-right",
-    "image": "kdv-right.webp",
+    "image": "eras/kdv-right.webp",
     "width": 1536,
     "height": 1200,
     "slots": [

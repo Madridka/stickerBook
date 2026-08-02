@@ -117,7 +117,7 @@ describe('CollectionView', () => {
     const wrapper = mountCollection()
 
     expect(wrapper.find('[data-album-id="wc-26"]').exists()).toBe(true)
-    expect(wrapper.find('[data-album-id="kdv"]').exists()).toBe(true)
+    expect(wrapper.find('[data-album-id="tomsk"]').exists()).toBe(true)
     expect(wrapper.find('[data-album-id="ucl-26-27"]').exists()).toBe(false)
     expect(wrapper.find('[data-album-id="spainClubsLogo"]').exists()).toBe(false)
   })

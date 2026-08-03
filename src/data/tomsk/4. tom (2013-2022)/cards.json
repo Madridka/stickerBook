@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "collectionId": "tom",
+  "collectionId": "tom-2013-2022",
   "teamId": "tom",
   "defaults": {
     "rarity": "common",
@@ -15,24 +15,24 @@
   },
   "cards": [
     {
-      "id": "tom-01",
+      "id": "tom-2013-2022-01",
       "cardNumber": "01",
       "albumSlot": 1,
-      "displayName": "Valeriy Petrakov",
-      "image": "/cards/tom/TOM-01-valeriy-petrakov.webp",
+      "displayName": "Vasiliy Baskakov",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-01-vasiliy-baskakov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "rare",
       "kind": "coach",
-      "personId": "valeriy-petrakov",
+      "personId": "vasiliy-baskakov",
       "role": "HEAD_COACH"
     },
     {
-      "id": "tom-02",
+      "id": "tom-2013-2022-02",
       "cardNumber": "02",
       "albumSlot": 2,
-      "displayName": "Sergey Pareyko",
-      "image": "/cards/tom/TOM-02-sergey-pareyko.webp",
+      "displayName": "Aleksandr Melikhov",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-02-aleksandr-melikhov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -40,11 +40,11 @@
       "position": "goalkeeper"
     },
     {
-      "id": "tom-03",
+      "id": "tom-2013-2022-03",
       "cardNumber": "03",
       "albumSlot": 3,
-      "displayName": "Vasiliy Khomutovskiy",
-      "image": "/cards/tom/TOM-03-vasiliy-khomutovskiy.webp",
+      "displayName": "Aleksey Solosin",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-03-aleksey-solosin.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -52,11 +52,11 @@
       "position": "goalkeeper"
     },
     {
-      "id": "tom-04",
+      "id": "tom-2013-2022-04",
       "cardNumber": "04",
       "albumSlot": 4,
-      "displayName": "Albert Borzenkov",
-      "image": "/cards/tom/TOM-04-albert-borzenkov.webp",
+      "displayName": "Sergey Omelyanchuk",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-04-sergey-omelyanchuk.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -64,11 +64,11 @@
       "position": "defender"
     },
     {
-      "id": "tom-05",
+      "id": "tom-2013-2022-05",
       "cardNumber": "05",
       "albumSlot": 5,
-      "displayName": "Valeriy Katynsus",
-      "image": "/cards/tom/TOM-05-valeriy-katynsus.webp",
+      "displayName": "Sergey Bendz",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-05-sergey-bendz.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -76,11 +76,11 @@
       "position": "defender"
     },
     {
-      "id": "tom-06",
+      "id": "tom-2013-2022-06",
       "cardNumber": "06",
       "albumSlot": 6,
-      "displayName": "Evgeniy Kaleshin",
-      "image": "/cards/tom/TOM-06-evgeniy-kaleshin.webp",
+      "displayName": "Ante Puljic",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-06-ante-puljic.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -88,11 +88,11 @@
       "position": "defender"
     },
     {
-      "id": "tom-07",
+      "id": "tom-2013-2022-07",
       "cardNumber": "07",
       "albumSlot": 7,
-      "displayName": "Hrvoje Vejic",
-      "image": "/cards/tom/TOM-07-hrvoje-vejic.webp",
+      "displayName": "Martin Jiranek",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-07-martin-jiranek.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -100,11 +100,11 @@
       "position": "defender"
     },
     {
-      "id": "tom-08",
+      "id": "tom-2013-2022-08",
       "cardNumber": "08",
       "albumSlot": 8,
-      "displayName": "Andrius Skerla",
-      "image": "/cards/tom/TOM-08-andrius-skerla.webp",
+      "displayName": "Ivan Temnikov",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-08-ivan-temnikov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -112,23 +112,23 @@
       "position": "defender"
     },
     {
-      "id": "tom-09",
+      "id": "tom-2013-2022-09",
       "cardNumber": "09",
       "albumSlot": 9,
-      "displayName": "Ilya Izotov",
-      "image": "/cards/tom/TOM-09-ilya-izotov.webp",
+      "displayName": "Evgeniy Bashkirov",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-09-evgeniy-bashkirov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "defender"
+      "position": "midfielder"
     },
     {
-      "id": "tom-10",
+      "id": "tom-2013-2022-10",
       "cardNumber": "10",
       "albumSlot": 10,
-      "displayName": "Valeriy Klimov",
-      "image": "/cards/tom/TOM-10-valeriy-klimov.webp",
+      "displayName": "Valeriy Chuperka",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-10-valeriy-chuperka.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -136,11 +136,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom-11",
+      "id": "tom-2013-2022-11",
       "cardNumber": "11",
       "albumSlot": 11,
-      "displayName": "Sergey Skoblyakov",
-      "image": "/cards/tom/TOM-11-sergey-skoblyakov.webp",
+      "displayName": "Pavel Nekhaychik",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-11-pavel-nekhaychik.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -148,11 +148,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom-12",
+      "id": "tom-2013-2022-12",
       "cardNumber": "12",
       "albumSlot": 12,
-      "displayName": "Branislav Krunic",
-      "image": "/cards/tom/TOM-12-branislav-krunic.webp",
+      "displayName": "Ilya Kukharchuk",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-12-ilya-kukharchuk.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -160,11 +160,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom-13",
+      "id": "tom-2013-2022-13",
       "cardNumber": "13",
       "albumSlot": 13,
-      "displayName": "Aleksandr Kulchiy",
-      "image": "/cards/tom/TOM-13-aleksandr-kulchiy.webp",
+      "displayName": "Anton Makurin",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-13-anton-makurin.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -172,11 +172,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom-14",
+      "id": "tom-2013-2022-14",
       "cardNumber": "14",
       "albumSlot": 14,
-      "displayName": "Vasiliy Yanotovskiy",
-      "image": "/cards/tom/TOM-14-vasiliy-yanotovskiy.webp",
+      "displayName": "Nikita Gvineyskiy",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-14-nikita-gvineyskiy.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -184,11 +184,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom-15",
+      "id": "tom-2013-2022-15",
       "cardNumber": "15",
       "albumSlot": 15,
-      "displayName": "Aleksandar Mladenov",
-      "image": "/cards/tom/TOM-15-aleksandar-mladenov.webp",
+      "displayName": "Aleksey Pugin",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-15-aleksey-pugin.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -196,11 +196,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom-16",
+      "id": "tom-2013-2022-16",
       "cardNumber": "16",
       "albumSlot": 16,
-      "displayName": "Dmitriy Tarasov",
-      "image": "/cards/tom/TOM-16-dmitriy-tarasov.webp",
+      "displayName": "Nikolay Kalinskiy",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-16-nikolay-kalinskiy.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -208,23 +208,23 @@
       "position": "midfielder"
     },
     {
-      "id": "tom-17",
+      "id": "tom-2013-2022-17",
       "cardNumber": "17",
       "albumSlot": 17,
-      "displayName": "Oleg Shishkin",
-      "image": "/cards/tom/TOM-17-oleg-shishkin.webp",
+      "displayName": "Nikita Bazhenov",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-17-nikita-bazhenov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "forward"
     },
     {
-      "id": "tom-18",
+      "id": "tom-2013-2022-18",
       "cardNumber": "18",
       "albumSlot": 18,
-      "displayName": "Denis Kiselev",
-      "image": "/cards/tom/TOM-18-denis-kiselev.webp",
+      "displayName": "Aleksandr Sobolev",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-18-aleksandr-sobolev.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -232,11 +232,11 @@
       "position": "forward"
     },
     {
-      "id": "tom-19",
+      "id": "tom-2013-2022-19",
       "cardNumber": "19",
       "albumSlot": 19,
-      "displayName": "Pavel Pogrebnyak",
-      "image": "/cards/tom/TOM-19-pavel-pogrebnyak.webp",
+      "displayName": "Kirill Panchenko",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-19-kirill-panchenko.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -244,11 +244,11 @@
       "position": "forward"
     },
     {
-      "id": "tom-20",
+      "id": "tom-2013-2022-20",
       "cardNumber": "20",
       "albumSlot": 20,
-      "displayName": "Aleksey Medvedev",
-      "image": "/cards/tom/TOM-20-aleksey-medvedev.webp",
+      "displayName": "Anzor Sanaya",
+      "image": "/cards/tom-2013-2022/TOM-2013-2022-20-anzor-sanaya.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",

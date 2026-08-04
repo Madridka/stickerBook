@@ -10,6 +10,7 @@ import {
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
+import { resolveAlbumPageAsset } from '@/data/albumPageAssets'
 import {
   ALBUM_VIEW_CONFIG,
   BLISTER_CONFIGS,
@@ -147,15 +148,6 @@ let desktopMediaQuery: MediaQueryList | undefined
 let trayFocusTimer: number | undefined
 let collectionTargetFocusTimer: number | undefined
 
-const albumImages: Record<string, string> = import.meta.glob(
-  [
-    '../../assets/game/*/main/album/**/*.webp',
-    '../../assets/game/*/main/album/**/*.png',
-    '!../../assets/game/*/main/album/source/**',
-  ],
-  { eager: true, import: 'default', query: '?url' },
-) as Record<string, string>
-
 const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
   album.pages.map(
     (page: AlbumGeometryPage): AlbumPageView => ({
@@ -164,10 +156,7 @@ const pages: ComputedRef<AlbumPageView[]> = computed((): AlbumPageView[] =>
         album: t(albumDefinition.name),
         page: String(page.number).padStart(2, '0'),
       }),
-      image:
-        albumImages[
-          `../../assets/game/${albumAssetId}/main/album/${page.image}`
-        ] ?? '',
+      image: resolveAlbumPageAsset(albumAssetId, page.image) ?? '',
       geometry: page,
     }),
   ),

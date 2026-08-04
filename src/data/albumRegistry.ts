@@ -1,4 +1,5 @@
 import { ALBUM_VISIBILITY_CONFIG, BLISTER_CONFIGS, PACK_CONFIGS } from './mainConst'
+import { hasAlbumPageAsset } from './albumPageAssets'
 import infoGeometry from './info/album'
 import wc26Geometry from './wc-26/album'
 import wc26Cards, { catalogs as wc26Catalogs } from './wc-26/catalog'
@@ -552,15 +553,6 @@ const blisters: ReadonlyMap<string, BlisterDefinition> = new Map(
     album.blisters.map((blister): [string, BlisterDefinition] => [blister.id, blister]),
   ),
 )
-const albumPageAssets: Record<string, string> = import.meta.glob(
-  [
-    '../../assets/game/*/main/album/**/*.webp',
-    '../../assets/game/*/main/album/**/*.png',
-    '!../../assets/game/*/main/album/source/**',
-  ],
-  { eager: true, import: 'default', query: '?url' },
-) as Record<string, string>
-
 // Проверяет все межфайловые связи до того, как конфигурация попадёт в интерфейс.
 const validateAlbum = (album: AlbumDefinition): void => {
   const assetAlbumId: string =
@@ -602,8 +594,7 @@ const validateAlbum = (album: AlbumDefinition): void => {
     }
   }
   for (const page of album.pages) {
-    const assetKey: string = `../../assets/game/${assetAlbumId}/main/album/${page.image}`
-    if (!albumPageAssets[assetKey]) {
+    if (!hasAlbumPageAsset(assetAlbumId, page.image)) {
       throw new Error(`${album.id}: page ${page.id} references a missing image`)
     }
   }

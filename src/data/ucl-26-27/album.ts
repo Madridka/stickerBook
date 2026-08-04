@@ -69,7 +69,7 @@ manifest.clubs.forEach((club): void => {
     pages.push({
       id: `${club.teamId}-${pageIndex === 0 ? 'left' : 'right'}`,
       number: pages.length + 1,
-      image: 'pages/team-page.png',
+      image: `pages/team-${pageIndex === 0 ? 'left' : 'right'}.webp`,
       width: PAGE_WIDTH,
       height: PAGE_HEIGHT,
       slots: createSlots(pageCards),

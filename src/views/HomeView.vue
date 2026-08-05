@@ -133,7 +133,7 @@ watch(
     if (completionTimer !== undefined) window.clearTimeout(completionTimer)
     completionTimer = window.setTimeout((): void => {
       completionNotice.value = false
-    }, 4_500)
+    }, HOME_VIEW_CONFIG.completionNoticeDurationMs)
   },
 )
 

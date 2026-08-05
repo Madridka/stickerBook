@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref, type Ref } from 'vue'
+import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { STICKER_DRAG_THRESHOLD_PX } from '@/data/mainConst'
 import type { CardDefinition, StickerDropResult, StickerInstance } from '@/types'
+import { formatCardDisplayName } from '@/utils/cardDisplayName'
 
 import { evaluateStickerDrop } from '@/components/DragDrop/dropGeometry'
 import StickerThumbnail from '@/components/Sticker/StickerThumbnail.vue'
@@ -24,6 +25,14 @@ interface Emits {
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
+const cardDisplayName: ComputedRef<string> = computed((): string =>
+  formatCardDisplayName(props.card),
+)
+const cardMeta: ComputedRef<string> = computed((): string =>
+  props.card.kind === 'player'
+    ? `${props.card.id} · ${props.card.position}`
+    : props.card.id,
+)
 const isPointerActive: Ref<boolean> = ref(false)
 const isDragging: Ref<boolean> = ref(false)
 const pointerX: Ref<number> = ref(0)
@@ -105,7 +114,7 @@ const handleKeyboardClick = (event: MouseEvent): void => {
       'opacity-50': isDragging,
     }"
     type="button"
-    :aria-label="card.displayName"
+    :aria-label="cardDisplayName"
     :aria-current="highlighted ? 'true' : undefined"
     @pointerdown="startDrag"
     @pointermove="moveDrag"
@@ -121,7 +130,7 @@ const handleKeyboardClick = (event: MouseEvent): void => {
     <div class="min-w-0 flex-1">
       <span
         class="text-[10px] font-black uppercase tracking-[0.14em] text-coral max-md:text-[0.48rem] max-md:tracking-[0.1em]"
-        >{{ card.id }}</span
+        >{{ cardMeta }}</span
       >
       <strong
         class="mt-1 block text-sm font-black leading-tight max-md:mt-0.5 max-md:text-[0.68rem]"

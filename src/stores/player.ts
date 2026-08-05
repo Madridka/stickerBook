@@ -12,7 +12,6 @@ import type { DailyTaskEvent } from '@/features/dailyTasks/types'
 const COIN_FORMATTER: Intl.NumberFormat = new Intl.NumberFormat('ru-RU', {
   maximumFractionDigits: CLICKER_CONFIG.rewardPrecision,
 })
-const ENERGY_EPSILON = 0.000001
 
 // Округляет начисления, чтобы дробный бонус не накапливал ошибки floating point.
 const roundReward = (value: number): number => {
@@ -33,21 +32,24 @@ export const usePlayerStore = defineStore('player', () => {
   const availableEnergy: ComputedRef<number> = computed((): number =>
     Math.min(
       CLICKER_CONFIG.energyLimit,
-      Math.floor((energy.value + ENERGY_EPSILON) / CLICKER_CONFIG.energyCostPerClick),
+      Math.floor(
+        (energy.value + CLICKER_CONFIG.energyEpsilon) / CLICKER_CONFIG.energyCostPerClick,
+      ),
     ),
   )
   const energyPercent: ComputedRef<number> = computed(
     (): number => (energy.value / CLICKER_CONFIG.energyLimit) * 100,
   )
   const canClick: ComputedRef<boolean> = computed(
-    (): boolean => energy.value + ENERGY_EPSILON >= CLICKER_CONFIG.energyCostPerClick,
+    (): boolean =>
+      energy.value + CLICKER_CONFIG.energyEpsilon >= CLICKER_CONFIG.energyCostPerClick,
   )
   const millisecondsUntilNextEnergy: ComputedRef<number> = computed((): number => {
     if (energy.value >= CLICKER_CONFIG.energyLimit) return 0
 
     const fractionalEnergy: number = energy.value % CLICKER_CONFIG.energyCostPerClick
     const missingEnergy: number =
-      fractionalEnergy <= ENERGY_EPSILON
+      fractionalEnergy <= CLICKER_CONFIG.energyEpsilon
         ? CLICKER_CONFIG.energyCostPerClick
         : CLICKER_CONFIG.energyCostPerClick - fractionalEnergy
     const energyPerMillisecond: number =

@@ -3,10 +3,15 @@ import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { getLibraryAlbums, requireAlbum } from '@/data/albumRegistry'
-import { BLISTER_CONFIGS } from '@/data/mainConst'
+import {
+  BLISTER_CONFIGS,
+  DELETED_CARD_CONFIG,
+  MILLISECONDS_PER_DAY,
+} from '@/data/mainConst'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
 import { useGameGuideStore } from '@/stores/gameGuide'
+import { formatCardDisplayName } from '@/utils/cardDisplayName'
 import type {
   AlbumContentsItem,
   AlbumDefinition,
@@ -51,8 +56,6 @@ interface DeletedCollectionItem extends CollectionItem {
   deletedAt: number
 }
 
-const DAY_MS = 24 * 60 * 60 * 1000
-const DELETED_CARD_RETENTION_DAYS = 7
 
 const { t } = useI18n()
 const route = useRoute()
@@ -243,6 +246,11 @@ const visibleCollectionItems: ComputedRef<CollectionItem[]> = computed((): Colle
   })
 })
 
+const getCardDisplayName = (playerId: string): string => {
+  const card: CardDefinition | undefined = getCard(playerId)
+  return card ? formatCardDisplayName(card) : playerId
+}
+
 // Сохраняет порядок журнала удаления и связывает его с исходными экземплярами карточек.
 const deletedItems: ComputedRef<DeletedCollectionItem[]> = computed((): DeletedCollectionItem[] =>
   deletedCards.items
@@ -266,7 +274,9 @@ watch(activeAlbumId, (albumId: string): void => {
 const remainingRestoreDays = (deletedAt: number): number =>
   Math.max(
     1,
-    Math.ceil((deletedAt + DELETED_CARD_RETENTION_DAYS * DAY_MS - Date.now()) / DAY_MS),
+    Math.ceil(
+      (deletedAt + DELETED_CARD_CONFIG.retentionMs - Date.now()) / MILLISECONDS_PER_DAY,
+    ),
   )
 
 const restoreCard = async (instanceId: string): Promise<void> => {
@@ -458,7 +468,7 @@ watch(
                 type="button"
                 :aria-label="
                   t('album.collectionControls.previewCard', {
-                    name: getCard(item.instance.playerId)?.displayName ?? item.instance.playerId,
+                    name: getCardDisplayName(item.instance.playerId),
                   })
                 "
                 data-collection-card
@@ -478,7 +488,7 @@ watch(
                 />
                 <div class="mt-2 min-w-0">
                   <p class="break-words text-sm font-black leading-tight">
-                    {{ getCard(item.instance.playerId)?.displayName }}
+                    {{ getCardDisplayName(item.instance.playerId) }}
                   </p>
                   <p
                     class="mt-1 flex min-w-0 items-center gap-0.5 whitespace-nowrap text-[9px] font-black leading-none sm:gap-1 sm:text-[11px]"
@@ -561,7 +571,7 @@ watch(
               <div class="mt-2 flex items-start justify-between gap-2">
                 <div class="min-w-0">
                   <p class="truncate text-sm font-black">
-                    {{ getCard(item.instance.playerId)?.displayName }}
+                    {{ getCardDisplayName(item.instance.playerId) }}
                   </p>
                   <p class="text-[11px] font-semibold text-ink/50">
                     {{ t('album.location.deleted') }}

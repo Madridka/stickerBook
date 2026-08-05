@@ -19,13 +19,13 @@ export const PACK_PRICE: number = 20
 export const CARDS_PER_PACK: number = 5
 
 /** Стоимость отдельного блистера доступной эпохи журнала «История Томи». */
-export const KDV_BLISTER_COST: number = 100
+export const KDV_BLISTER_COST: number = 5
 
 /** Количество карточек в одном блистере журнала «История Томи». */
 export const KDV_BLISTER_CARD_COUNT: number = 1
 
-/** Абсолютный четырёхчасовой период недоступности блистера «История Томи». */
-export const KDV_BLISTER_COOLDOWN_MS: number = 4 * 60 * 60 * 1_000
+/** Период недоступности блистера «История Томи» после покупки. */
+export const KDV_BLISTER_COOLDOWN_MS: number = 50_000
 
 /** Настройки версии алгоритма выпадения и базового веса карточки. */
 export const DROP_ENGINE_CONFIG = {
@@ -133,6 +133,8 @@ export const CLICKER_CONFIG = {
   fullRechargeMs: 7_200_000,
   // Число знаков после запятой для монет и наград.
   rewardPrecision: 2,
+  // Допуск при сравнении дробного запаса энергии.
+  energyEpsilon: 0.000001,
 }
 
 /** Настройки визуальных эффектов и частоты обновления экрана кликера. */
@@ -141,6 +143,8 @@ export const HOME_VIEW_CONFIG = {
   clickEffectDurationMs: 700,
   // Интервал обновления восстановленной энергии в миллисекундах.
   energyRefreshIntervalMs: 1_000,
+  // Время показа уведомления о завершении стартового шага.
+  completionNoticeDurationMs: 4_500,
 }
 
 /** Количество повторов для обмена и число предлагаемых взамен карточек. */
@@ -157,10 +161,24 @@ export const DAILY_TASK_CONFIG = {
   rewardCandidateCount: 3,
 }
 
+/** Общая частота обновления экранных таймеров и календарных состояний. */
+export const CLOCK_CONFIG = {
+  refreshIntervalMs: 1_000,
+}
+
+/** Продолжительность календарного дня в миллисекундах. */
+export const MILLISECONDS_PER_DAY: number = 24 * 60 * 60 * 1_000
+
+/** Параметры хранения и восстановления удалённых карточек. */
+export const DELETED_CARD_CONFIG = {
+  retentionMs: 7 * MILLISECONDS_PER_DAY,
+  restoredQuality: 90,
+}
+
 /** Общие и индивидуальные параметры мини-игр, выдающих бесплатный пак. */
 export const PACK_HUNT_CONFIG = {
   // Пауза между двумя доступными бесплатными паками в миллисекундах.
-  cooldownMs: 14_400_000,
+  cooldownMs: 1_000,
   // Веса случайного выбора доступной мини-игры.
   games: [
     { id: 'signal', weight: 1 },
@@ -398,6 +416,34 @@ export const PACK_HUNT_CONFIG = {
     // Максимальный учитываемый промежуток между кадрами.
     maxFrameDeltaMs: 48,
   },
+  memory: {
+    roundsCount: 3,
+    cardsPerRarity: 2,
+    revealDurationMs: 3_200,
+    flipDurationMs: 500,
+    answerEnableExtraDelayMs: 150,
+    resultDelayMs: 1_800,
+    completionDelayMs: 1_000,
+  },
+  passCombo: {
+    positions: [
+      { key: 'leftBack', xPercent: 22, yPercent: 80 },
+      { key: 'center', xPercent: 50, yPercent: 54 },
+      { key: 'rightWinger', xPercent: 80, yPercent: 30 },
+      { key: 'striker', xPercent: 50, yPercent: 12 },
+    ] as const,
+    roundLengths: [3, 4, 5] as const,
+    highlightOnMs: 550,
+    highlightGapMs: 260,
+    sequenceStartDelayMs: 500,
+    mistakeFlashMs: 260,
+    mistakeReplayDelayMs: 900,
+    roundResultDelayMs: 1_300,
+    completionDelayMs: 1_000,
+    fastThresholdMs: 900,
+    threeStarMaximumMistakes: 0,
+    twoStarMaximumMistakes: 2,
+  },
 }
 
 /** Полный размер координатного поля мини-игр в процентах. */
@@ -416,6 +462,8 @@ export const PACK_ANIMATION_CONFIG = {
 /** Параметры интерактивной подготовки наклейки перед помещением в альбом. */
 export const STICKER_PREPARATION_CONFIG = {
   peel: {
+    // Качество полностью снятого защитного слоя.
+    successQuality: 100,
     // Начальная позиция ползунка снятия наклейки.
     initialPositionPercent: 12,
     // Начальная позиция движущейся цели до первого сброса.
@@ -470,6 +518,12 @@ export const STICKER_PREPARATION_CONFIG = {
     minimumQuality: 80,
     // Потеря качества за каждое нажатие углов не по порядку.
     mistakePenalty: 5,
+    zonePositions: [
+      { leftPercent: 8, topPercent: 8 },
+      { leftPercent: 72, topPercent: 8 },
+      { leftPercent: 72, topPercent: 76 },
+      { leftPercent: 8, topPercent: 76 },
+    ],
   },
   // Число последовательных этапов подготовки наклейки.
   stepCount: 3,
@@ -499,6 +553,17 @@ export const ALBUM_VIEW_CONFIG = {
 
 /** Минимальное движение указателя в пикселях, после которого начинается drag карточки. */
 export const STICKER_DRAG_THRESHOLD_PX: number = 10
+
+/** Пороговые значения физики размещения наклейки в альбоме. */
+export const STICKER_DROP_CONFIG = {
+  perfectDistance: 0.16,
+  nearDistance: 0.55,
+  perfectQuality: 100,
+  nearQuality: 85,
+  farQuality: 60,
+  maximumRotationOffset: 0.45,
+  maximumRotationDegrees: 18,
+}
 
 /**
  * Демонстрационный режим альбома: показывает весь каталог как уже вклеенный,

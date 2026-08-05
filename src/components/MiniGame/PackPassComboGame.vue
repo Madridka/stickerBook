@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 
-type Position = 'leftBack' | 'center' | 'rightWinger' | 'striker'
+type Position = (typeof PACK_HUNT_CONFIG.passCombo.positions)[number]['key']
 type Phase = 'sequence' | 'input' | 'mistake' | 'roundComplete'
 
 interface PositionMeta {
@@ -16,51 +17,35 @@ interface PositionMeta {
 const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()
 
-const POSITIONS: Position[] = ['leftBack', 'center', 'rightWinger', 'striker']
-const POSITION_META: PositionMeta[] = [
-  {
-    key: 'leftBack',
-    xPercent: 22,
-    yPercent: 80,
-    fullLabelKey: 'packHunt.passCombo.leftBackFull',
-    shortLabelKey: 'packHunt.passCombo.leftBackShort',
-  },
-  {
-    key: 'center',
-    xPercent: 50,
-    yPercent: 54,
-    fullLabelKey: 'packHunt.passCombo.centerFull',
-    shortLabelKey: 'packHunt.passCombo.centerShort',
-  },
-  {
-    key: 'rightWinger',
-    xPercent: 80,
-    yPercent: 30,
-    fullLabelKey: 'packHunt.passCombo.rightWingerFull',
-    shortLabelKey: 'packHunt.passCombo.rightWingerShort',
-  },
-  {
-    key: 'striker',
-    xPercent: 50,
-    yPercent: 12,
-    fullLabelKey: 'packHunt.passCombo.strikerFull',
-    shortLabelKey: 'packHunt.passCombo.strikerShort',
-  },
-]
+const passComboConfig = PACK_HUNT_CONFIG.passCombo
+
+const POSITIONS: Position[] = passComboConfig.positions.map(({ key }): Position => key)
+const POSITION_META: PositionMeta[] = passComboConfig.positions.map(
+  ({ key, xPercent, yPercent }): PositionMeta => ({
+    key,
+    xPercent,
+    yPercent,
+    fullLabelKey: `packHunt.passCombo.${key}Full`,
+    shortLabelKey: `packHunt.passCombo.${key}Short`,
+  }),
+)
 
 // Раунд 1 → 3 передачи, раунд 2 → 4, раунд 3 → 5 — классический Simon Says:
 // комбинация не пересоздаётся с нуля каждый раунд, а растёт на один шаг и
 // проигрывается заново целиком.
-const roundLengths: number[] = [3, 4, 5]
-
-const highlightOnMs: number = 550
-const highlightGapMs: number = 260
-const sequenceStartDelayMs: number = 500
-const mistakeFlashMs: number = 260
-const mistakeReplayDelayMs: number = 900
-const roundResultDelayMs: number = 1300
-const completionDelayMs: number = 1000
-const fastThresholdMs: number = 900
+const {
+  roundLengths,
+  highlightOnMs,
+  highlightGapMs,
+  sequenceStartDelayMs,
+  mistakeFlashMs,
+  mistakeReplayDelayMs,
+  roundResultDelayMs,
+  completionDelayMs,
+  fastThresholdMs,
+  threeStarMaximumMistakes,
+  twoStarMaximumMistakes,
+} = passComboConfig
 
 const roundIndex: Ref<number> = ref(0)
 const sequence: Ref<Position[]> = ref([])
@@ -110,13 +95,13 @@ const averageStepDurationMs: ComputedRef<number> = computed((): number => {
 // финальная длина комбинации), числу ошибок и средней скорости повтора.
 const starRating: ComputedRef<1 | 2 | 3> = computed((): 1 | 2 | 3 => {
   if (
-    totalMistakes.value === 0 &&
+    totalMistakes.value <= threeStarMaximumMistakes &&
     averageStepDurationMs.value > 0 &&
     averageStepDurationMs.value <= fastThresholdMs
   ) {
     return 3
   }
-  if (totalMistakes.value <= 2) return 2
+  if (totalMistakes.value <= twoStarMaximumMistakes) return 2
   return 1
 })
 

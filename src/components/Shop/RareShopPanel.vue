@@ -2,7 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { RARE_SHOP_CONFIG } from '@/data/mainConst'
+import { CLOCK_CONFIG, RARE_SHOP_CONFIG } from '@/data/mainConst'
 import albumContentsTeams, { type AlbumContentsTeam } from '@/data/wc-26/contents'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
@@ -119,7 +119,7 @@ onMounted(async (): Promise<void> => {
   showInfo.value = !rareShop.state.hasSeenRareShopInfo
   timerId = setInterval((): void => {
     void updateClock()
-  }, 1_000)
+  }, CLOCK_CONFIG.refreshIntervalMs)
 })
 
 onBeforeUnmount((): void => {

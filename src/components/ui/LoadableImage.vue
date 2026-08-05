@@ -123,7 +123,7 @@ const retry = (): void => {
       </span>
     </div>
 
-    <div class="absolute inset-0 z-20">
+    <div v-if="$slots.default" class="absolute inset-0 z-20">
       <slot />
     </div>
   </div>

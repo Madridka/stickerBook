@@ -13,6 +13,7 @@ import {
   recordDailyTaskEventsInTransaction,
 } from '@/features/dailyTasks/dailyTaskService'
 import { selectCardV2 } from '@/utils/dropEngine'
+import { resolveBlisterCooldownEnd } from '@/utils/blisterCooldown'
 import type {
   PackOpeningReward,
   PackOpeningSession,
@@ -136,10 +137,13 @@ export const purchaseBlister = async (
       }
       if (pendingSession) await database.packOpeningSessions.delete('pending')
       const cooldown = await database.blisterCooldowns.get(blister.id)
-      if (cooldown && cooldown.nextAvailableAt > now) {
+      const nextAvailableAt: number | undefined = cooldown
+        ? resolveBlisterCooldownEnd(cooldown, blister.cooldownMs, now)
+        : undefined
+      if (nextAvailableAt !== undefined && nextAvailableAt > now) {
         return {
           status: 'cooldown',
-          nextAvailableAt: cooldown.nextAvailableAt,
+          nextAvailableAt,
         }
       }
       const savedPlayer: PlayerState | undefined = await database.player.get(PLAYER_STATE_ID)
@@ -208,6 +212,7 @@ export const purchaseBlister = async (
       if (blister.cooldownMs > 0) {
         await database.blisterCooldowns.put({
           id: blister.id,
+          startedAt: now,
           nextAvailableAt: now + blister.cooldownMs,
         })
       }

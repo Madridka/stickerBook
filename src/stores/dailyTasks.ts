@@ -1,7 +1,7 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getLocalDateKey } from '@/utils/dailyDateKey'
-import { DAILY_TASK_CONFIG } from '@/data/mainConst'
+import { CLOCK_CONFIG, DAILY_TASK_CONFIG } from '@/data/mainConst'
 import { dailyTaskDefinitionById } from '@/features/dailyTasks/dailyTaskDefinitions'
 import {
   beginDailyTaskReward,
@@ -135,7 +135,7 @@ export const useDailyTasksStore = defineStore('dailyTasks', () => {
     const timestamp: number = Date.now()
     now.value = timestamp
     if (isLoaded.value && state.value.dayKey !== getLocalDateKey(timestamp)) void load(timestamp)
-  }, 1_000)
+  }, CLOCK_CONFIG.refreshIntervalMs)
 
   onScopeDispose((): void => {
     clearInterval(timer)

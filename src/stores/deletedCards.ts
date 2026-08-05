@@ -4,9 +4,7 @@ import { database } from '@/db/database'
 import { promoteDuplicate } from '@/db/stickerLifecycle'
 import type { DeletedCard, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
-
-const DELETED_CARD_RETENTION_MS = 7 * 24 * 60 * 60 * 1000
-const RESTORED_CARD_QUALITY = 90
+import { DELETED_CARD_CONFIG } from '@/data/mainConst'
 
 const normalizeRestoredCard = (
   instance: StickerInstance,
@@ -14,10 +12,10 @@ const normalizeRestoredCard = (
 ): StickerInstance => {
   const restored: StickerInstance = {
     ...instance,
-    quality: RESTORED_CARD_QUALITY,
+    quality: DELETED_CARD_CONFIG.restoredQuality,
     location,
     preparation: {
-      quality: RESTORED_CARD_QUALITY,
+      quality: DELETED_CARD_CONFIG.restoredQuality,
       alignmentX: 0,
       alignmentY: 0,
     },
@@ -37,7 +35,10 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
     const oldest: DeletedCard | undefined = items.value[items.value.length - 1]
     if (!oldest) return
 
-    const delay: number = Math.max(0, oldest.deletedAt + DELETED_CARD_RETENTION_MS - Date.now())
+    const delay: number = Math.max(
+      0,
+      oldest.deletedAt + DELETED_CARD_CONFIG.retentionMs - Date.now(),
+    )
     expirationTimer = setTimeout((): void => {
       void load()
     }, delay)
@@ -45,7 +46,7 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
 
   // Восстанавливает журнал удалённых карточек из IndexedDB.
   const load = async (): Promise<void> => {
-    const cutoff: number = Date.now() - DELETED_CARD_RETENTION_MS
+    const cutoff: number = Date.now() - DELETED_CARD_CONFIG.retentionMs
     const expired: DeletedCard[] = await database.deletedCards
       .where('deletedAt')
       .belowOrEqual(cutoff)
@@ -110,7 +111,10 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
       .where('instanceId')
       .equals(instanceId)
       .first()
-    if (!deletedCard || deletedCard.deletedAt + DELETED_CARD_RETENTION_MS <= Date.now()) {
+    if (
+      !deletedCard ||
+      deletedCard.deletedAt + DELETED_CARD_CONFIG.retentionMs <= Date.now()
+    ) {
       await load()
       return
     }

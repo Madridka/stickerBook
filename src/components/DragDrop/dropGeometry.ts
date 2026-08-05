@@ -4,6 +4,7 @@ import type {
   StickerPlacement,
   StickerPreparation,
 } from '@/types'
+import { STICKER_DROP_CONFIG, STICKER_PREPARATION_CONFIG } from '@/data/mainConst'
 
 interface DropCardIdentity {
   instanceId: string
@@ -11,26 +12,29 @@ interface DropCardIdentity {
   albumSlotId: string
 }
 
-const alignmentCardWidth: number = 112
-const alignmentCardHeight: number = 168
-const alignmentSnapAccuracy: number = 95
+const { cardWidth, cardHeight, perfectAccuracy, accuracyDistanceDivisor } =
+  STICKER_PREPARATION_CONFIG.alignment
 
 export const getStickerAlignmentAccuracy = (x: number, y: number): number =>
   Math.max(
     0,
     100 -
       Math.round(
-        Math.hypot(x * alignmentCardWidth, y * alignmentCardHeight) / 2,
+        Math.hypot(x * cardWidth, y * cardHeight) / accuracyDistanceDivisor,
       ),
   )
 
 export const shouldSnapStickerAlignment = (x: number, y: number): boolean =>
-  getStickerAlignmentAccuracy(x, y) > alignmentSnapAccuracy
+  getStickerAlignmentAccuracy(x, y) > perfectAccuracy
 
 const gradeDrop = (distance: number): { grade: StickerDropGrade; quality: number } => {
-  if (distance <= 0.16) return { grade: 'perfect', quality: 100 }
-  if (distance <= 0.55) return { grade: 'near', quality: 85 }
-  return { grade: 'far', quality: 60 }
+  if (distance <= STICKER_DROP_CONFIG.perfectDistance) {
+    return { grade: 'perfect', quality: STICKER_DROP_CONFIG.perfectQuality }
+  }
+  if (distance <= STICKER_DROP_CONFIG.nearDistance) {
+    return { grade: 'near', quality: STICKER_DROP_CONFIG.nearQuality }
+  }
+  return { grade: 'far', quality: STICKER_DROP_CONFIG.farQuality }
 }
 
 // Отвечает за поиск ближайшего слота и расстояние от курсора до его центра.
@@ -89,7 +93,14 @@ export const resolveStickerPlacement = (
     slotId: drop.slotId,
     x,
     y,
-    rotation: isCoarseMiss ? Math.round(Math.max(-0.45, Math.min(0.45, drop.x)) * 18) : 0,
+    rotation: isCoarseMiss
+      ? Math.round(
+          Math.max(
+            -STICKER_DROP_CONFIG.maximumRotationOffset,
+            Math.min(STICKER_DROP_CONFIG.maximumRotationOffset, drop.x),
+          ) * STICKER_DROP_CONFIG.maximumRotationDegrees,
+        )
+      : 0,
     accuracy: getStickerAlignmentAccuracy(x, y),
   }
 }

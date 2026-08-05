@@ -2,6 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import cards from '@/data/wc-26/catalog'
+import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 import type { CardDefinition, PlayerCardDefinition } from '@/types'
 import LoadableImage from '@/components/ui/LoadableImage.vue'
 import { preloadImage } from '@/utils/preloadImages'
@@ -20,13 +21,17 @@ const legendaryCards: PlayerCardDefinition[] = cards.filter(
     card.kind === 'player' && card.rarity === 'legendary',
 )
 
-const roundsCount: number = 3
-const cardsPerRarity: number = 2
-const revealDurationMs: number = 3200
-const flipDurationMs: number = 500
-const answerEnableDelayMs: number = flipDurationMs + 150
-const resultDelayMs: number = 1800
-const completionDelayMs: number = 1000
+const {
+  roundsCount,
+  cardsPerRarity,
+  revealDurationMs,
+  flipDurationMs,
+  answerEnableExtraDelayMs,
+  resultDelayMs,
+  completionDelayMs,
+} = PACK_HUNT_CONFIG.memory
+const answerEnableDelayMs: number = flipDurationMs + answerEnableExtraDelayMs
+const cardsPerRound: number = cardsPerRarity * 2
 
 const roundIndex: Ref<number> = ref(0)
 const phase: Ref<Phase> = ref('reveal')
@@ -198,7 +203,7 @@ onBeforeUnmount((): void => {
     </p>
 
     <div class="grid grid-cols-4 gap-2.5 sm:gap-4">
-      <div v-for="slot in 4" :key="slot" class="[perspective:1000px]">
+      <div v-for="slot in cardsPerRound" :key="slot" class="[perspective:1000px]">
         <button
           type="button"
           class="relative aspect-[3/4] w-full [transform-style:preserve-3d] transition-transform ease-in-out"

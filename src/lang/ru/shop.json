@@ -38,7 +38,7 @@
   "pointsPackName": "stickerBook",
   "wc-26": "ЧМ-26",
   "free": "БЕСПЛАТНЫЙ",
-  "cooldownPack": "Раз в 4 часа",
+  "cooldownPack": "Раз в {time}",
   "kdv": {
     "kicker": "Журнал «История Томи»",
     "shortName": "ТОМСК",

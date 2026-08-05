@@ -5,6 +5,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackHuntStore, type PackHuntClaimResult } from '@/stores/packHunt'
 import { formatCountdown } from '@/utils/formatCountdown'
+import { PACK_HUNT_CONFIG } from '@/data/mainConst'
 import {
   isPackMiniGameId,
   selectPackMiniGame,
@@ -54,6 +55,7 @@ const gameTranslationPrefix: ComputedRef<string> = computed(
 const cooldownText: ComputedRef<string> = computed((): string =>
   formatCountdown(packHunt.cooldownRemainingMs),
 )
+const cooldownPeriodText: string = formatCountdown(PACK_HUNT_CONFIG.cooldownMs)
 
 // Выдаёт уже найденную награду и синхронизирует общий инвентарь перед открытием.
 const saveReward = async (): Promise<void> => {
@@ -118,7 +120,7 @@ onMounted(async (): Promise<void> => {
             {{ t(`${gameTranslationPrefix}.title`) }}
           </h1>
           <span class="border border-ink/15 px-3 py-1 text-xs font-bold text-ink/55">
-            {{ t('packHunt.cooldownRule') }}
+            {{ t('packHunt.cooldownRule', { time: cooldownPeriodText }) }}
           </span>
         </div>
         <p class="mx-auto mt-0.5 hidden max-w-2xl text-xs leading-tight text-ink/55 md:block">

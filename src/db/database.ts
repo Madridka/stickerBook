@@ -81,6 +81,8 @@ export interface PackOpeningSession {
 export interface BlisterCooldown {
   // Идентификатор типа блистера одновременно служит первичным ключом.
   id: string
+  // Время начала позволяет пересчитывать окончание при изменении mainConst.
+  startedAt?: number
   nextAvailableAt: number
 }
 
@@ -322,3 +324,21 @@ database.version(14).upgrade(async (transaction): Promise<void> => {
 
 // Добавляет одно сохраняемое состояние текущей ротации ежедневных заданий.
 database.version(15).stores({ dailyTasks: 'id, dayKey' })
+
+// Сохраняет начало уже активных кулдаунов, чтобы их длительность определялась mainConst.
+database
+  .version(16)
+  .stores({ blisterCooldowns: 'id, nextAvailableAt' })
+  .upgrade(async (transaction): Promise<void> => {
+    const inventory: InventoryItem[] = await transaction.table('inventory').toArray()
+    await transaction
+      .table('blisterCooldowns')
+      .toCollection()
+      .modify((cooldown: BlisterCooldown): void => {
+        const latestPurchase: InventoryItem | undefined = inventory
+          .filter((item): boolean => item.type === 'pack' && item.packId === cooldown.id)
+          .sort((left, right): number => right.createdAt - left.createdAt)[0]
+        cooldown.startedAt =
+          latestPurchase?.createdAt ?? Math.min(Date.now(), cooldown.nextAvailableAt)
+      })
+  })

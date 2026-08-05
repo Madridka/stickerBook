@@ -1,7 +1,7 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type InventoryItem, type PackHuntProgress } from '@/db/database'
-import { BLISTER_CONFIGS, PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, CLOCK_CONFIG, PACK_HUNT_CONFIG } from '@/data/mainConst'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 
@@ -25,7 +25,7 @@ export const usePackHuntStore = defineStore('packHunt', () => {
   // Обновляет обратный отсчёт и сам открывает следующую игру по завершении паузы.
   const countdownInterval: number = window.setInterval((): void => {
     currentTime.value = Date.now()
-  }, 1000)
+  }, CLOCK_CONFIG.refreshIntervalMs)
   onScopeDispose((): void => window.clearInterval(countdownInterval))
 
   const load = async (): Promise<void> => {
@@ -35,7 +35,7 @@ export const usePackHuntStore = defineStore('packHunt', () => {
     isLoaded.value = true
   }
 
-  // Атомарно проверяет четырёхчасовую паузу, выдаёт набор и начинает новый отсчёт.
+  // Атомарно проверяет настроенную паузу, выдаёт набор и начинает новый отсчёт.
   const claimReward = async (): Promise<PackHuntClaimResult> => {
     if (isClaiming.value) return 'cooldown-active'
     isClaiming.value = true

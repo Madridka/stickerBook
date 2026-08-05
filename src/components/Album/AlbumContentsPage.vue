@@ -112,7 +112,7 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
               :class="
                 isTomskContents
                   ? 'h-[38%] min-h-0 w-[82%] shrink-0'
-                  : 'aspect-[3/2] w-[82%] rounded-[0.3cqw] border border-ink/15 shadow-[0_0.35cqw_0.6cqw_rgb(var(--color-ink)/0.2)]'
+                  : 'aspect-[3/2] w-[82%]'
               "
               :src="team.flag"
               alt=""

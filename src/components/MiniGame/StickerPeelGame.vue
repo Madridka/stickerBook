@@ -35,15 +35,11 @@ interface PeelOrigin {
 type PeelResult = 'playing' | 'success' | 'failure'
 
 interface PressZone {
-  className: string
+  leftPercent: number
+  topPercent: number
 }
 
-const pressZonePositions: PressZone[] = [
-  { className: 'left-[8%] top-[8%]' },
-  { className: 'left-[72%] top-[8%]' },
-  { className: 'left-[72%] top-[76%]' },
-  { className: 'left-[8%] top-[76%]' },
-]
+const pressZonePositions: PressZone[] = STICKER_PREPARATION_CONFIG.press.zonePositions
 
 const shufflePressZones = (): PressZone[] => {
   const zones: PressZone[] = [...pressZonePositions]
@@ -259,7 +255,7 @@ const previousStep = (): void => {
 // Объединяет качество снятия, совмещения и разглаживания в итог экземпляра.
 const completePreparation = (): void => {
   if (!props.item || pressedCount.value < pressZones.value.length) return
-  const peelQuality: number = 100
+  const peelQuality: number = peelConfig.successQuality
   const alignmentQuality: number = alignmentAccuracy.value
   const pressQuality: number = Math.max(
     pressConfig.minimumQuality,
@@ -474,9 +470,9 @@ onBeforeUnmount(clearPeelTimer)
         <button
           v-for="(zone, index) in pressZones"
           :key="index"
-          class="absolute flex h-10 w-10 items-center justify-center rounded-full border-2 text-sm font-black shadow transition"
+          class="absolute z-40 flex h-10 w-10 items-center justify-center rounded-full border-2 text-sm font-black shadow transition"
+          :style="{ left: `${zone.leftPercent}%`, top: `${zone.topPercent}%` }"
           :class="[
-            zone.className,
             index < pressedCount
               ? 'border-mint bg-mint text-ink'
               : index === pressedCount

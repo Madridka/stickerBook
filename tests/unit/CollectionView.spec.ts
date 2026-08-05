@@ -122,6 +122,37 @@ describe('CollectionView', () => {
     expect(wrapper.find('[data-album-id="spainClubsLogo"]').exists()).toBe(false)
   })
 
+  it('не запускает 801 скелетон одновременно для большой коллекции', () => {
+    const card = cards[0]
+    if (!card) throw new Error('Card catalog is empty')
+    const observe = vi.fn()
+    const unobserve = vi.fn()
+    vi.stubGlobal(
+      'IntersectionObserver',
+      vi.fn(() => ({ observe, unobserve, disconnect: vi.fn() })),
+    )
+    testState.collection.items = Array.from({ length: 801 }, (_, index: number) => ({
+      instance: {
+        id: `instance-${index}`,
+        playerId: card.id,
+        albumId: 'wc-26' as const,
+        quality: 100,
+        location: 'collection' as const,
+      },
+      duplicateCount: 0,
+    }))
+
+    const wrapper = mountCollection()
+
+    expect(wrapper.findAll('[data-collection-card]')).toHaveLength(801)
+    expect(wrapper.findAll('[data-image-loader]')).toHaveLength(0)
+    expect(wrapper.findAll('img')).toHaveLength(0)
+    expect(observe).toHaveBeenCalledTimes(801)
+    wrapper.unmount()
+    expect(unobserve).toHaveBeenCalledTimes(801)
+    vi.unstubAllGlobals()
+  })
+
   it('открывает карточку в диалоге, а подготовку запускает уже из него', async () => {
     const wrapper = mountCollection()
 

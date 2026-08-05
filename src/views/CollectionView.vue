@@ -485,6 +485,7 @@ watch(
                   :src="getCard(item.instance.playerId)?.image"
                   :alt="getCard(item.instance.playerId)?.displayName"
                   fit="cover"
+                  defer
                 />
                 <div class="mt-2 min-w-0">
                   <p class="break-words text-sm font-black leading-tight">
@@ -567,6 +568,7 @@ watch(
                 :src="getCard(item.instance.playerId)?.image"
                 :alt="getCard(item.instance.playerId)?.displayName"
                 fit="cover"
+                defer
               />
               <div class="mt-2 flex items-start justify-between gap-2">
                 <div class="min-w-0">

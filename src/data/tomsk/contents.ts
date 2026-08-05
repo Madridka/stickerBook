@@ -1,5 +1,5 @@
-import tom1996Logo from '../../../assets/game/tomsk/main/logos/tom-1996.gif?url'
-import tom2008Logo from '../../../assets/game/tomsk/main/logos/tom-2008.gif?url'
+import tom1996Logo from '../../../assets/game/tomsk/main/logos/tom-1996.webp?url'
+import tom2008Logo from '../../../assets/game/tomsk/main/logos/tom-2008.webp?url'
 import kdvLogo from '../../../assets/game/tomsk/main/logos/kdv-official.svg?url'
 import type { AlbumContentsItem } from '@/types'
 

@@ -11,7 +11,6 @@ const albums: readonly AlbumDefinition[] = getLibraryAlbums()
 const coverImages: Record<string, string> = import.meta.glob(
   [
     '../../assets/game/*/main/album/**/*.webp',
-    '../../assets/game/*/main/album/**/*.png',
     '!../../assets/game/*/main/album/source/**',
   ],
   { eager: true, import: 'default', query: '?url' },

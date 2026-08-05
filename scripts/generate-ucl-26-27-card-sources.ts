@@ -20,12 +20,12 @@ const DATA_ROOT = path.join(ROOT, 'src', 'data', 'ucl-26-27')
 const PUBLIC_ROOT = path.join(ROOT, 'public')
 const SOURCE_ROOT = path.join(PUBLIC_ROOT, 'ucl-26-27', 'card-sources')
 const PORTRAIT_CACHE = path.join(PUBLIC_ROOT, 'ucl-26-27', 'portrait-cache')
-const TEMPLATE = path.join(PUBLIC_ROOT, 'examples', 'ucl', 'ucl-26-27-clean-no-crest-source.png')
+const TEMPLATE = path.join(PUBLIC_ROOT, 'examples', 'ucl', 'ucl-26-27-clean-no-crest-source.webp')
 const JUDE_EXAMPLE = path.join(
   PUBLIC_ROOT,
   'examples',
   'ucl',
-  'jude-bellingham-real-madrid-card-source.png',
+  'jude-bellingham-real-madrid-card-source.webp',
 )
 
 const clubs: Record<string, { code: string; shortName: string; primary: string; secondary: string }> = {
@@ -64,7 +64,7 @@ const wcPortraits = (): Map<string, string> => {
   }
   if (fs.existsSync(PORTRAIT_CACHE)) {
     for (const filename of fs.readdirSync(PORTRAIT_CACHE)) {
-      if (filename.endsWith('.png')) result.set(path.basename(filename, '.png'), path.join(PORTRAIT_CACHE, filename))
+      if (filename.endsWith('.webp')) result.set(path.basename(filename, '.webp'), path.join(PORTRAIT_CACHE, filename))
     }
   }
   return result

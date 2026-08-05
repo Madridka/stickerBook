@@ -15,8 +15,7 @@ const normalizedInput: unknown = {
   collectionId: 'tomsk',
   teamId: 'tomsk',
   cards: rawCatalog.cards.map((card) => {
-    const image: string = card.image.replace(/^\/cards\/kdv\//, '/kdv/cards/')
-    if (card.kind !== 'player') return { ...card, image }
+    if (card.kind !== 'player') return card
 
     const rawPosition: string | undefined = card.position
     const position: PlayerPosition | undefined = rawPosition
@@ -25,7 +24,6 @@ const normalizedInput: unknown = {
     if (!position) throw new Error(`Unknown KDV player position: ${rawPosition ?? 'missing'}`)
     return {
       ...card,
-      image,
       personId: card.id,
       position,
     }

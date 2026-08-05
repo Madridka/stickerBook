@@ -108,7 +108,7 @@ export default {
     {
       id: 'wc26-cover',
       number: 1,
-      image: 'info/wc26-cover.png',
+      image: 'info/wc26-cover.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -116,7 +116,7 @@ export default {
     {
       id: 'wc26-hosts',
       number: 2,
-      image: 'info/wc26-info-left.png',
+      image: 'info/wc26-info-left.webp',
       width: 1536,
       height: 1200,
       slots: [],
@@ -124,7 +124,7 @@ export default {
     {
       id: 'wc26-format',
       number: 3,
-      image: 'info/wc26-info-right.png',
+      image: 'info/wc26-info-right.webp',
       width: 1536,
       height: 1200,
       slots: [],

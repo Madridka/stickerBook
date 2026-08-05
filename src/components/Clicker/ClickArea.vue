@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import logoUrl from '../../../assets/game/wc-26/main/logo.png'
+import logoUrl from '../../../assets/game/wc-26/main/logo.webp'
 
 import ClickEffect from '@/components/Clicker/ClickEffect.vue'
 

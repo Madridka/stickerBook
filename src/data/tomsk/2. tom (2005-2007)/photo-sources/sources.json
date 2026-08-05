@@ -1,4 +1,4 @@
-﻿{
+{
     "collection":  "Томь, 2005–2007",
     "note":  "Справочные фотографии для отбора исходника карточек. Права остаются у авторов и сайтов-источников.",
     "identityNotes":  {
@@ -8,7 +8,7 @@
                    {
                        "cardNumber":  "01",
                        "person":  "Валерий Петраков",
-                       "file":  "01-valeriy-petrakov/01.jpg",
+                       "file":  "01-valeriy-petrakov/01.webp",
                        "width":  770,
                        "height":  434,
                        "imageUrl":  "https://ss.sport-express.ru/userfiles/materials/100/1008612/large.jpg",
@@ -18,7 +18,7 @@
                    {
                        "cardNumber":  "01",
                        "person":  "Валерий Петраков",
-                       "file":  "01-valeriy-petrakov/02.jpg",
+                       "file":  "01-valeriy-petrakov/02.webp",
                        "width":  770,
                        "height":  434,
                        "imageUrl":  "https://ss.sport-express.ru/userfiles/materials/104/1041862/large.jpg",
@@ -28,7 +28,7 @@
                    {
                        "cardNumber":  "01",
                        "person":  "Валерий Петраков",
-                       "file":  "01-valeriy-petrakov/03.jpg",
+                       "file":  "01-valeriy-petrakov/03.webp",
                        "width":  800,
                        "height":  560,
                        "imageUrl":  "https://m.bk55.ru/fileadmin/bkinform/bk_info_204466_orig_1656912758.jpg",
@@ -38,7 +38,7 @@
                    {
                        "cardNumber":  "02",
                        "person":  "Сергей Парейко",
-                       "file":  "02-sergey-pareyko/01.jpg",
+                       "file":  "02-sergey-pareyko/01.webp",
                        "width":  480,
                        "height":  480,
                        "imageUrl":  "https://www.rusfootball.info/uploads/posts/2009-04/1240467084_1.jpg",
@@ -48,7 +48,7 @@
                    {
                        "cardNumber":  "02",
                        "person":  "Сергей Парейко",
-                       "file":  "02-sergey-pareyko/02.jpg",
+                       "file":  "02-sergey-pareyko/02.webp",
                        "width":  730,
                        "height":  1024,
                        "imageUrl":  "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/16/ee/4d3a653a941b7bbb_2010-09-11_soccer_zenit-tom_razina_20.jpg",
@@ -58,7 +58,7 @@
                    {
                        "cardNumber":  "02",
                        "person":  "Сергей Парейко",
-                       "file":  "02-sergey-pareyko/03.jpg",
+                       "file":  "02-sergey-pareyko/03.webp",
                        "width":  1200,
                        "height":  630,
                        "imageUrl":  "https://www.sports.ru/dynamic_images/post/253/738/5/share/37a1e8_no_logo_no_text.jpg",
@@ -68,7 +68,7 @@
                    {
                        "cardNumber":  "03",
                        "person":  "Василий Хомутовский",
-                       "file":  "03-vasiliy-khomutovskiy/01.jpg",
+                       "file":  "03-vasiliy-khomutovskiy/01.webp",
                        "width":  480,
                        "height":  469,
                        "imageUrl":  "https://www.readfootball.com/sites/default/files/photogalery/20140416200736.jpg",
@@ -78,7 +78,7 @@
                    {
                        "cardNumber":  "03",
                        "person":  "Василий Хомутовский",
-                       "file":  "03-vasiliy-khomutovskiy/02.jpg",
+                       "file":  "03-vasiliy-khomutovskiy/02.webp",
                        "width":  495,
                        "height":  300,
                        "imageUrl":  "https://www.readfootball.com/sites/default/files/photogalery/5449_ad2e87f83d4a76fda636578fa025d23a.jpg",
@@ -88,7 +88,7 @@
                    {
                        "cardNumber":  "03",
                        "person":  "Василий Хомутовский",
-                       "file":  "03-vasiliy-khomutovskiy/03.jpg",
+                       "file":  "03-vasiliy-khomutovskiy/03.webp",
                        "width":  637,
                        "height":  400,
                        "imageUrl":  "https://qol.az/img/pics/large/2022-10/170937_gxrfgegbi0.jpg",
@@ -98,7 +98,7 @@
                    {
                        "cardNumber":  "04",
                        "person":  "Альберт Борзенков",
-                       "file":  "04-albert-borzenkov/01.png",
+                       "file":  "04-albert-borzenkov/01.webp",
                        "width":  227,
                        "height":  269,
                        "imageUrl":  "https://playersfootball.ru/wp-content/uploads/2019/01/%D0%91%D0%BE%D1%80%D0%B7%D0%B5%D0%BD%D0%BA%D0%BE%D0%B2-%D0%90.png",
@@ -108,7 +108,7 @@
                    {
                        "cardNumber":  "04",
                        "person":  "Альберт Борзенков",
-                       "file":  "04-albert-borzenkov/02.jpg",
+                       "file":  "04-albert-borzenkov/02.webp",
                        "width":  306,
                        "height":  433,
                        "imageUrl":  "https://ss.sport-express.ru/userfiles/materials/0/4906/large.jpg",
@@ -118,7 +118,7 @@
                    {
                        "cardNumber":  "04",
                        "person":  "Альберт Борзенков",
-                       "file":  "04-albert-borzenkov/03.jpg",
+                       "file":  null,
                        "width":  220,
                        "height":  328,
                        "imageUrl":  "https://rusteam.su/players/photos/borzenkov/borzenkov_01.jpg",
@@ -128,7 +128,7 @@
                    {
                        "cardNumber":  "05",
                        "person":  "Валерий Катынсус",
-                       "file":  "05-valeriy-katynsus/01.jpg",
+                       "file":  "05-valeriy-katynsus/01.webp",
                        "width":  767,
                        "height":  1023,
                        "imageUrl":  "https://shinnik.com/upload/medialibrary/d21/ohjzahdp.jpg",
@@ -138,7 +138,7 @@
                    {
                        "cardNumber":  "05",
                        "person":  "Валерий Катынсус",
-                       "file":  "05-valeriy-katynsus/02.jpg",
+                       "file":  "05-valeriy-katynsus/02.webp",
                        "width":  276,
                        "height":  433,
                        "imageUrl":  "https://ss.sport-express.ru/userfiles/materials/1/11438/large.jpg",
@@ -148,7 +148,7 @@
                    {
                        "cardNumber":  "05",
                        "person":  "Валерий Катынсус",
-                       "file":  "05-valeriy-katynsus/03.jpg",
+                       "file":  null,
                        "width":  200,
                        "height":  266,
                        "imageUrl":  "https://russtrikers.ru/KatinsusValeriy.jpg",
@@ -158,7 +158,7 @@
                    {
                        "cardNumber":  "06",
                        "person":  "Евгений Калешин",
-                       "file":  "06-evgeniy-kaleshin/01.jpg",
+                       "file":  "06-evgeniy-kaleshin/01.webp",
                        "width":  618,
                        "height":  1212,
                        "imageUrl":  "https://dic.academic.ru/pictures/wiki/files/75/KaleshinEvgeniyIgorevich.jpg",
@@ -168,7 +168,7 @@
                    {
                        "cardNumber":  "06",
                        "person":  "Евгений Калешин",
-                       "file":  "06-evgeniy-kaleshin/02.jpg",
+                       "file":  "06-evgeniy-kaleshin/02.webp",
                        "width":  900,
                        "height":  500,
                        "imageUrl":  "https://storage.yandexcloud.net/s3-metaratings-storage/upload/iblock/7af/7afba374be9ab8bd548666bfaf300bf5.jpg",
@@ -178,7 +178,7 @@
                    {
                        "cardNumber":  "06",
                        "person":  "Евгений Калешин",
-                       "file":  "06-evgeniy-kaleshin/03.jpg",
+                       "file":  "06-evgeniy-kaleshin/03.webp",
                        "width":  340,
                        "height":  435,
                        "imageUrl":  "https://www.peoples.ru/sport/football/evgeniy_kaleshin/YMny1rpDIWssx.jpeg",
@@ -188,7 +188,7 @@
                    {
                        "cardNumber":  "07",
                        "person":  "Хрвое Вейич",
-                       "file":  "07-hrvoje-vejic/01.jpg",
+                       "file":  "07-hrvoje-vejic/01.webp",
                        "width":  450,
                        "height":  671,
                        "imageUrl":  "http://ljplus.ru/img4/a/w/aw_photo/AW_270908_CT_11.JPG",
@@ -198,7 +198,7 @@
                    {
                        "cardNumber":  "07",
                        "person":  "Хрвое Вейич",
-                       "file":  "07-hrvoje-vejic/02.png",
+                       "file":  "07-hrvoje-vejic/02.webp",
                        "width":  300,
                        "height":  390,
                        "imageUrl":  "https://img.a.transfermarkt.technology/portrait/big/25778-1674681939.png?lm=1",
@@ -208,7 +208,7 @@
                    {
                        "cardNumber":  "07",
                        "person":  "Хрвое Вейич",
-                       "file":  "07-hrvoje-vejic/03.jpg",
+                       "file":  "07-hrvoje-vejic/03.webp",
                        "width":  311,
                        "height":  433,
                        "imageUrl":  "https://ss.sport-express.ru/userfiles/materials/1/16683/large.jpg",
@@ -218,7 +218,7 @@
                    {
                        "cardNumber":  "08",
                        "person":  "Андрюс Скерла",
-                       "file":  "08-andrius-skerla/01.png",
+                       "file":  "08-andrius-skerla/01.webp",
                        "width":  300,
                        "height":  390,
                        "imageUrl":  "https://img.a.transfermarkt.technology/portrait/big/12641-1675434191.png?lm=1",
@@ -228,7 +228,7 @@
                    {
                        "cardNumber":  "08",
                        "person":  "Андрюс Скерла",
-                       "file":  "08-andrius-skerla/02.jpg",
+                       "file":  "08-andrius-skerla/02.webp",
                        "width":  341,
                        "height":  462,
                        "imageUrl":  "https://alchetron.com/cdn/andrius-skerla-ef4d4e50-2661-4413-8f28-79931b576e8-resize-750.jpeg",
@@ -238,7 +238,7 @@
                    {
                        "cardNumber":  "08",
                        "person":  "Андрюс Скерла",
-                       "file":  "08-andrius-skerla/03.jpg",
+                       "file":  "08-andrius-skerla/03.webp",
                        "width":  233,
                        "height":  300,
                        "imageUrl":  "https://www.laststicker.ru/i/cards/1597/152.jpg",
@@ -248,7 +248,7 @@
                    {
                        "cardNumber":  "09",
                        "person":  "Илья Изотов",
-                       "file":  "09-ilya-izotov/01.jpg",
+                       "file":  "09-ilya-izotov/01.webp",
                        "width":  1200,
                        "height":  675,
                        "imageUrl":  "https://ngs70.ru/html-to-img/og/IAb0KdY59Ld9n1yjnK0A3Q/article-id6485859-16x9.jpg?1754387675",
@@ -258,7 +258,7 @@
                    {
                        "cardNumber":  "09",
                        "person":  "Илья Изотов",
-                       "file":  "09-ilya-izotov/02.png",
+                       "file":  "09-ilya-izotov/02.webp",
                        "width":  300,
                        "height":  390,
                        "imageUrl":  "https://img.a.transfermarkt.technology/portrait/big/210245-1547496350.png?lm=1",
@@ -268,7 +268,7 @@
                    {
                        "cardNumber":  "09",
                        "person":  "Илья Изотов",
-                       "file":  "09-ilya-izotov/03.png",
+                       "file":  "09-ilya-izotov/03.webp",
                        "width":  300,
                        "height":  390,
                        "imageUrl":  "https://img.a.transfermarkt.technology/portrait/big/146150-1754395410.png?lm=1",
@@ -278,7 +278,7 @@
                    {
                        "cardNumber":  "10",
                        "person":  "Валерий Климов",
-                       "file":  "10-valeriy-klimov/01.jpg",
+                       "file":  "10-valeriy-klimov/01.webp",
                        "width":  1200,
                        "height":  600,
                        "imageUrl":  "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/5f/70/e6a0f13a6c6be4fb3c9d9f845d36574a632dd67a00f0f354848942.jpg",
@@ -288,7 +288,7 @@
                    {
                        "cardNumber":  "10",
                        "person":  "Валерий Климов",
-                       "file":  "10-valeriy-klimov/02.jpg",
+                       "file":  "10-valeriy-klimov/02.webp",
                        "width":  640,
                        "height":  426,
                        "imageUrl":  "https://storage.yandexcloud.net/s3-metaratings-storage/upload/iblock/e54/e5473a0c3baa822a57aa2d9c8786423a.jpg",
@@ -298,7 +298,7 @@
                    {
                        "cardNumber":  "10",
                        "person":  "Валерий Климов",
-                       "file":  "10-valeriy-klimov/03.jpg",
+                       "file":  "10-valeriy-klimov/03.webp",
                        "width":  345,
                        "height":  600,
                        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/f/f9/Valery_Klimov_IMG_2943.jpg",
@@ -308,7 +308,7 @@
                    {
                        "cardNumber":  "11",
                        "person":  "Сергей Скобляков",
-                       "file":  "11-sergey-skoblyakov/01.jpg",
+                       "file":  "11-sergey-skoblyakov/01.webp",
                        "width":  266,
                        "height":  596,
                        "imageUrl":  "https://dic.academic.ru/pictures/wiki/files/83/Skobl.JPG",
@@ -318,7 +318,7 @@
                    {
                        "cardNumber":  "11",
                        "person":  "Сергей Скобляков",
-                       "file":  "11-sergey-skoblyakov/02.jpg",
+                       "file":  "11-sergey-skoblyakov/02.webp",
                        "width":  374,
                        "height":  500,
                        "imageUrl":  "https://img.nagradion.ru/images/normal/m/player1873072301.jpg",
@@ -328,7 +328,7 @@
                    {
                        "cardNumber":  "11",
                        "person":  "Сергей Скобляков",
-                       "file":  "11-sergey-skoblyakov/03.jpg",
+                       "file":  null,
                        "width":  237,
                        "height":  300,
                        "imageUrl":  "https://www.laststicker.ru/i/cards/136/231.jpg",
@@ -338,7 +338,7 @@
                    {
                        "cardNumber":  "12",
                        "person":  "Бранислав Крунич",
-                       "file":  "12-branislav-krunic/01.jpg",
+                       "file":  "12-branislav-krunic/01.webp",
                        "width":  1180,
                        "height":  665,
                        "imageUrl":  "https://ss.sport-express.ru/userfiles/materials/219/2193022/1180x665.jpg",
@@ -348,7 +348,7 @@
                    {
                        "cardNumber":  "12",
                        "person":  "Бранислав Крунич",
-                       "file":  "12-branislav-krunic/02.jpg",
+                       "file":  "12-branislav-krunic/02.webp",
                        "width":  612,
                        "height":  484,
                        "imageUrl":  "https://media.gettyimages.com/id/73620759/photo/moscow-russia-branislav-krunic-of-fc-moskva-competes-for-the-ball-with-ruslan-mostovoy-of-fc.jpg?s=612x612\u0026w=gi\u0026k=20\u0026c=b6v8JQWqoB828KK6bVb-o9ey27t4LwmiMNsPbSttVOs=",
@@ -358,7 +358,7 @@
                    {
                        "cardNumber":  "12",
                        "person":  "Бранислав Крунич",
-                       "file":  "12-branislav-krunic/03.jpg",
+                       "file":  "12-branislav-krunic/03.webp",
                        "width":  1200,
                        "height":  600,
                        "imageUrl":  "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/93/aa/f98b8062a526b10bbddc5014fc1ab08263bbfeade5d17690838569.jpg",
@@ -368,7 +368,7 @@
                    {
                        "cardNumber":  "13",
                        "person":  "Александр Кульчий",
-                       "file":  "13-aleksandr-kulchiy/01.jpg",
+                       "file":  "13-aleksandr-kulchiy/01.webp",
                        "width":  1600,
                        "height":  800,
                        "imageUrl":  "https://betnews.by/wp-content/uploads/2024/06/aleksandr-kulchij.jpg",
@@ -378,7 +378,7 @@
                    {
                        "cardNumber":  "13",
                        "person":  "Александр Кульчий",
-                       "file":  "13-aleksandr-kulchiy/02.jpg",
+                       "file":  "13-aleksandr-kulchiy/02.webp",
                        "width":  450,
                        "height":  676,
                        "imageUrl":  "https://pro-soccer.ucoz.ru/_fr/0/1192043.jpg",
@@ -388,7 +388,7 @@
                    {
                        "cardNumber":  "13",
                        "person":  "Александр Кульчий",
-                       "file":  "13-aleksandr-kulchiy/03.png",
+                       "file":  "13-aleksandr-kulchiy/03.webp",
                        "width":  1193,
                        "height":  757,
                        "imageUrl":  "https://kazfootball.kz/uploads/images/2024/05/15/664476abc463f.png",
@@ -398,7 +398,7 @@
                    {
                        "cardNumber":  "14",
                        "person":  "Василий Янотовский",
-                       "file":  "14-vasiliy-yanotovskiy/01.jpg",
+                       "file":  "14-vasiliy-yanotovskiy/01.webp",
                        "width":  301,
                        "height":  451,
                        "imageUrl":  "https://fc-kuzbass.ru/uploaded/images/131010/19f59730e086a21e2ddb641acf2127db.JPG",
@@ -408,7 +408,7 @@
                    {
                        "cardNumber":  "14",
                        "person":  "Василий Янотовский",
-                       "file":  "14-vasiliy-yanotovskiy/02.jpg",
+                       "file":  "14-vasiliy-yanotovskiy/02.webp",
                        "width":  236,
                        "height":  299,
                        "imageUrl":  "https://www.laststicker.ru/i/cards/136/233.jpg",
@@ -418,7 +418,7 @@
                    {
                        "cardNumber":  "14",
                        "person":  "Василий Янотовский",
-                       "file":  "14-vasiliy-yanotovskiy/03.jpg",
+                       "file":  null,
                        "width":  200,
                        "height":  259,
                        "imageUrl":  "https://www.laststicker.ru/i/cards/46/225.jpg",
@@ -428,7 +428,7 @@
                    {
                        "cardNumber":  "15",
                        "person":  "Александар Младенов",
-                       "file":  "15-aleksandar-mladenov/01.jpg",
+                       "file":  "15-aleksandar-mladenov/01.webp",
                        "width":  250,
                        "height":  333,
                        "imageUrl":  "https://vladnews.ru/uploads/magazine/2008/05/393/e8c8bc28764c6391321dc64beacb8e89.jpg",
@@ -438,7 +438,7 @@
                    {
                        "cardNumber":  "15",
                        "person":  "Александар Младенов",
-                       "file":  "15-aleksandar-mladenov/02.jpg",
+                       "file":  "15-aleksandar-mladenov/02.webp",
                        "width":  190,
                        "height":  190,
                        "imageUrl":  "https://www.soccer.ru/sites/default/files/styles/n_d_u_prof/public/players-photo/853.jpg?itok=VyItYPlw",
@@ -448,7 +448,7 @@
                    {
                        "cardNumber":  "15",
                        "person":  "Александар Младенов",
-                       "file":  "15-aleksandar-mladenov/03.jpg",
+                       "file":  "15-aleksandar-mladenov/03.webp",
                        "width":  390,
                        "height":  585,
                        "imageUrl":  "https://tomsk-novosti.ru/wp-content/uploads/2013/06/Bozhevich.jpg",
@@ -458,7 +458,7 @@
                    {
                        "cardNumber":  "16",
                        "person":  "Дмитрий Тарасов",
-                       "file":  "16-dmitriy-tarasov/01.jpg",
+                       "file":  "16-dmitriy-tarasov/01.webp",
                        "width":  563,
                        "height":  920,
                        "imageUrl":  "https://www.readfootball.com/sites/default/files/photogalery/727270-dmitrij-tarasov.jpg",
@@ -468,7 +468,7 @@
                    {
                        "cardNumber":  "16",
                        "person":  "Дмитрий Тарасов",
-                       "file":  "16-dmitriy-tarasov/02.jpg",
+                       "file":  "16-dmitriy-tarasov/02.webp",
                        "width":  200,
                        "height":  261,
                        "imageUrl":  "https://russtrikers.ru/TarasovDmitriy.jpg",
@@ -478,7 +478,7 @@
                    {
                        "cardNumber":  "16",
                        "person":  "Дмитрий Тарасов",
-                       "file":  "16-dmitriy-tarasov/03.png",
+                       "file":  "16-dmitriy-tarasov/03.webp",
                        "width":  540,
                        "height":  578,
                        "imageUrl":  "https://ss.metronews.ru/userfiles/materials/172/1725018/858x540_1c3b8992.jpg",
@@ -488,7 +488,7 @@
                    {
                        "cardNumber":  "17",
                        "person":  "Олег Шишкин",
-                       "file":  "17-oleg-shishkin/01.jpg",
+                       "file":  "17-oleg-shishkin/01.webp",
                        "width":  640,
                        "height":  360,
                        "imageUrl":  "https://telegra.ph/file/c82ced1e42bb7d07711ed.jpg",
@@ -498,7 +498,7 @@
                    {
                        "cardNumber":  "17",
                        "person":  "Олег Шишкин",
-                       "file":  "17-oleg-shishkin/02.jpg",
+                       "file":  "17-oleg-shishkin/02.webp",
                        "width":  236,
                        "height":  300,
                        "imageUrl":  "https://www.laststicker.ru/i/cards/1012/56.jpg",
@@ -508,7 +508,7 @@
                    {
                        "cardNumber":  "17",
                        "person":  "Олег Шишкин",
-                       "file":  "17-oleg-shishkin/03.jpg",
+                       "file":  "17-oleg-shishkin/03.webp",
                        "width":  2414,
                        "height":  1499,
                        "imageUrl":  "http://www.cska-games.ru/Players1/ShishkinOleg.1.jpg",
@@ -518,7 +518,7 @@
                    {
                        "cardNumber":  "18",
                        "person":  "Денис Киселёв",
-                       "file":  "18-denis-kiselev/01.png",
+                       "file":  "18-denis-kiselev/01.webp",
                        "width":  300,
                        "height":  390,
                        "imageUrl":  "https://img.a.transfermarkt.technology/portrait/big/36013-1755645475.png?lm=1",
@@ -528,7 +528,7 @@
                    {
                        "cardNumber":  "18",
                        "person":  "Денис Киселёв",
-                       "file":  "18-denis-kiselev/02.jpg",
+                       "file":  "18-denis-kiselev/02.webp",
                        "width":  340,
                        "height":  453,
                        "imageUrl":  "https://www.peoples.ru/sport/football/denis_kiselev/ZHWniEGFQolqm.jpeg",
@@ -538,7 +538,7 @@
                    {
                        "cardNumber":  "18",
                        "person":  "Денис Киселёв",
-                       "file":  "18-denis-kiselev/03.jpg",
+                       "file":  "18-denis-kiselev/03.webp",
                        "width":  384,
                        "height":  500,
                        "imageUrl":  "https://img.nagradion.ru/images/normal/m/official2122828603.jpg",
@@ -548,7 +548,7 @@
                    {
                        "cardNumber":  "19",
                        "person":  "Павел Погребняк",
-                       "file":  "19-pavel-pogrebnyak/01.jpg",
+                       "file":  "19-pavel-pogrebnyak/01.webp",
                        "width":  480,
                        "height":  360,
                        "imageUrl":  "https://i.ytimg.com/vi/K0PV4z1m70A/hqdefault.jpg",
@@ -558,7 +558,7 @@
                    {
                        "cardNumber":  "19",
                        "person":  "Павел Погребняк",
-                       "file":  "19-pavel-pogrebnyak/02.jpg",
+                       "file":  "19-pavel-pogrebnyak/02.webp",
                        "width":  633,
                        "height":  433,
                        "imageUrl":  "https://ss.sport-express.ru/userfiles/materials/9/90172/large.jpg",
@@ -568,7 +568,7 @@
                    {
                        "cardNumber":  "19",
                        "person":  "Павел Погребняк",
-                       "file":  "19-pavel-pogrebnyak/03.jpg",
+                       "file":  "19-pavel-pogrebnyak/03.webp",
                        "width":  260,
                        "height":  377,
                        "imageUrl":  "http://img.gazeta.ru/files1/1092386/pogrebnyak.jpg",
@@ -578,7 +578,7 @@
                    {
                        "cardNumber":  "20",
                        "person":  "Алексей Медведев",
-                       "file":  "20-aleksey-medvedev/01.jpg",
+                       "file":  "20-aleksey-medvedev/01.webp",
                        "width":  453,
                        "height":  600,
                        "imageUrl":  "https://dic.academic.ru/pictures/wiki/files/65/Alexey_Medvedev.jpg",
@@ -588,7 +588,7 @@
                    {
                        "cardNumber":  "20",
                        "person":  "Алексей Медведев",
-                       "file":  "20-aleksey-medvedev/02.jpg",
+                       "file":  "20-aleksey-medvedev/02.webp",
                        "width":  1200,
                        "height":  630,
                        "imageUrl":  "https://www.sports.ru/dynamic_images/post/323/568/6/share/2dd0cd_no_logo_no_text.jpg",
@@ -598,7 +598,7 @@
                    {
                        "cardNumber":  "20",
                        "person":  "Алексей Медведев",
-                       "file":  "20-aleksey-medvedev/03.jpg",
+                       "file":  "20-aleksey-medvedev/03.webp",
                        "width":  480,
                        "height":  360,
                        "imageUrl":  "https://i.ytimg.com/vi/XrNbmWY2Kdc/hqdefault.jpg",

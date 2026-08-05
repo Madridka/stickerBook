@@ -36,7 +36,7 @@ const pages: AlbumGeometryPage[] = [
   {
     id: 'ucl-26-27-cover',
     number: 1,
-    image: 'info/cover.png',
+    image: 'info/cover.webp',
     width: PAGE_WIDTH,
     height: PAGE_HEIGHT,
     slots: [],
@@ -44,7 +44,7 @@ const pages: AlbumGeometryPage[] = [
   {
     id: 'ucl-26-27-season',
     number: 2,
-    image: 'info/cover.png',
+    image: 'info/cover.webp',
     width: PAGE_WIDTH,
     height: PAGE_HEIGHT,
     slots: [],
@@ -52,7 +52,7 @@ const pages: AlbumGeometryPage[] = [
   {
     id: 'ucl-26-27-collection',
     number: 3,
-    image: 'pages/team-page.png',
+    image: 'pages/team-page.webp',
     width: PAGE_WIDTH,
     height: PAGE_HEIGHT,
     slots: [],

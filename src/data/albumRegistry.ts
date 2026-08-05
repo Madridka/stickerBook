@@ -170,8 +170,8 @@ const wc26Album: AlbumDefinition = {
   description: 'album.library.items.wc-26.description',
   route: '/album/wc-26',
   theme: {
-    coverImage: 'info/wc26-cover.png',
-    previewImage: 'info/wc26-cover.png',
+    coverImage: 'info/wc26-cover.webp',
+    previewImage: 'info/wc26-cover.webp',
     accentClass: 'text-coral',
   },
   geometry: wc26Geometry,
@@ -342,8 +342,8 @@ const ucl2627Album: AlbumDefinition = {
   description: 'album.library.items.ucl-26-27.description',
   route: '/album/ucl-26-27',
   theme: {
-    coverImage: 'info/cover.png',
-    previewImage: 'info/cover.png',
+    coverImage: 'info/cover.webp',
+    previewImage: 'info/cover.webp',
     accentClass: 'text-coral',
   },
   geometry: ucl2627Geometry,

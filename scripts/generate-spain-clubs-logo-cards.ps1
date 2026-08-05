@@ -1,6 +1,6 @@
 param(
   [string]$SourcePath = 'src/data/spainClubsLogo/spain/la-liga/cards.json',
-  [string]$TemplatePath = 'public/spainClubsLogo/template.png',
+  [string]$TemplatePath = 'public/examples/clubLogos/template_spain.webp',
   [string]$LogoDirectory = 'public/spainClubsLogo/logos/spain/la-liga',
   [string]$OutputDirectory = 'public/spainClubsLogo/cards/spain/la-liga',
   [string]$CardId = '',
@@ -243,10 +243,9 @@ try {
   foreach ($card in $cards) {
     $logoPath = if ($UseCardImagePaths) {
       $logoRelative = ([string]$card.image) -replace '^/spainClubsLogo/cards/', 'spainClubsLogo/logos/'
-      $logoRelative = $logoRelative -replace '\.webp$', '.png'
       Join-Path (Join-Path $projectRoot 'public') $logoRelative
     } else {
-      Join-Path $logoRoot "$($card.id).png"
+      Join-Path $logoRoot "$($card.id).webp"
     }
     if (-not (Test-Path -LiteralPath $logoPath)) { throw "Missing logo: $logoPath" }
 

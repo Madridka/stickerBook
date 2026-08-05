@@ -18,7 +18,7 @@ The rarity distribution per club is seven common, six uncommon (including the te
 
 ## Visual assets
 
-The card layout is derived from `public/examples/ucl/ucl-26-27-clean-no-crest-source.png`; Jude Bellingham keeps the supplied completed example. Where a matching portrait card already exists in the local WC-26 collection it is reused inside the UCL frame. Cards without a local portrait use a deliberate club-colour illustrated identity with initials, rather than an incorrect player likeness. `scripts/generate-ucl-26-27-card-sources.ts` recreates the intermediate SVG sources used by the Sharp rendering step.
+The card layout is derived from `public/examples/ucl/ucl-26-27-clean-no-crest-source.webp`; Jude Bellingham keeps the supplied completed example. Where a matching portrait card already exists in the local WC-26 collection it is reused inside the UCL frame. Cards without a local portrait use a deliberate club-colour illustrated identity with initials, rather than an incorrect player likeness. `scripts/generate-ucl-26-27-card-sources.ts` recreates the intermediate SVG sources used by the Sharp rendering step.
 
 ## Provisional decisions
 

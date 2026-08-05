@@ -1,6 +1,7 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getLocalDateKey } from '@/utils/dailyDateKey'
+import { DAILY_TASK_CONFIG } from '@/data/mainConst'
 import { dailyTaskDefinitionById } from '@/features/dailyTasks/dailyTaskDefinitions'
 import {
   beginDailyTaskReward,
@@ -9,7 +10,6 @@ import {
   ensureDailyTasksState,
 } from '@/features/dailyTasks/dailyTaskService'
 import type {
-  DailyTaskId,
   DailyTaskRuntimeState,
   DailyTasksState,
   PendingDailyCardChoice,
@@ -20,7 +20,7 @@ const createLoadingState = (): DailyTasksState => ({
   id: 'current',
   dayKey: '',
   tasks: [],
-  pendingRewards: {},
+  rewardClaimed: false,
   updatedAt: 0,
 })
 
@@ -28,7 +28,7 @@ export const useDailyTasksStore = defineStore('dailyTasks', () => {
   const collection = useCollectionStore()
   const state: Ref<DailyTasksState> = ref(createLoadingState())
   const isLoaded: Ref<boolean> = ref(false)
-  const activeRewardTaskId: Ref<DailyTaskId | null> = ref(null)
+  const isRewardOpen: Ref<boolean> = ref(false)
   const selectedCardId: Ref<string | null> = ref(null)
   const isOpeningReward: Ref<boolean> = ref(false)
   const isClaimingReward: Ref<boolean> = ref(false)
@@ -50,6 +50,14 @@ export const useDailyTasksStore = defineStore('dailyTasks', () => {
   const completedCount: ComputedRef<number> = computed(
     (): number => tasks.value.filter(({ status }) => status !== 'in-progress').length,
   )
+  const allCompleted: ComputedRef<boolean> = computed(
+    (): boolean =>
+      tasks.value.length === DAILY_TASK_CONFIG.tasksPerDay &&
+      tasks.value.every(({ status }) => status === 'completed'),
+  )
+  const rewardAvailable: ComputedRef<boolean> = computed(
+    (): boolean => allCompleted.value && !state.value.rewardClaimed,
+  )
   const millisecondsUntilReset: ComputedRef<number> = computed((): number => {
     const date: Date = new Date(now.value)
     const nextMidnight: number = new Date(
@@ -61,32 +69,30 @@ export const useDailyTasksStore = defineStore('dailyTasks', () => {
   })
   const activePendingReward: ComputedRef<PendingDailyCardChoice | undefined> = computed(
     (): PendingDailyCardChoice | undefined =>
-      activeRewardTaskId.value
-        ? state.value.pendingRewards[activeRewardTaskId.value]
-        : undefined,
+      isRewardOpen.value ? state.value.pendingReward : undefined,
   )
 
   const load = async (timestamp: number = Date.now()): Promise<void> => {
     state.value = await ensureDailyTasksState(timestamp)
     if (
-      activeRewardTaskId.value &&
-      !state.value.pendingRewards[activeRewardTaskId.value]
+      isRewardOpen.value &&
+      !state.value.pendingReward
     ) {
-      activeRewardTaskId.value = null
+      isRewardOpen.value = false
       selectedCardId.value = null
     }
     now.value = timestamp
     isLoaded.value = true
   }
 
-  const openReward = async (taskId: DailyTaskId): Promise<boolean> => {
-    if (isOpeningReward.value || isClaimingReward.value || activeRewardTaskId.value) return false
+  const openReward = async (): Promise<boolean> => {
+    if (isOpeningReward.value || isClaimingReward.value || isRewardOpen.value) return false
     isOpeningReward.value = true
     try {
-      const result = await beginDailyTaskReward(taskId)
+      const result = await beginDailyTaskReward()
       state.value = result.state
       if (result.status !== 'ready') return false
-      activeRewardTaskId.value = taskId
+      isRewardOpen.value = true
       selectedCardId.value = null
       return true
     } finally {
@@ -96,21 +102,20 @@ export const useDailyTasksStore = defineStore('dailyTasks', () => {
 
   const closeReward = (): void => {
     if (isClaimingReward.value) return
-    activeRewardTaskId.value = null
+    isRewardOpen.value = false
     selectedCardId.value = null
   }
 
   const claimReward = async (): Promise<boolean> => {
-    const taskId: DailyTaskId | null = activeRewardTaskId.value
     const cardId: string | null = selectedCardId.value
-    if (!taskId || !cardId || isClaimingReward.value) return false
+    if (!cardId || isClaimingReward.value) return false
     isClaimingReward.value = true
     try {
-      const result = await claimDailyTaskReward(taskId, cardId)
+      const result = await claimDailyTaskReward(cardId)
       state.value = result.state
       if (result.status !== 'claimed') return false
       await collection.load()
-      activeRewardTaskId.value = null
+      isRewardOpen.value = false
       selectedCardId.value = null
       return true
     } finally {
@@ -144,8 +149,10 @@ export const useDailyTasksStore = defineStore('dailyTasks', () => {
     state,
     tasks,
     completedCount,
+    allCompleted,
+    rewardAvailable,
     millisecondsUntilReset,
-    activeRewardTaskId,
+    isRewardOpen,
     activePendingReward,
     selectedCardId,
     isLoaded,

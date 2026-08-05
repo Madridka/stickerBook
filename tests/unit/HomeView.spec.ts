@@ -39,6 +39,10 @@ const testState = vi.hoisted(() => ({
     lastCompletedGoalId: undefined,
     overallProgress: 0,
   },
+  dailyTasks: {
+    isLoaded: true,
+    tasks: [] as Array<Record<string, unknown>>,
+  },
 }))
 
 vi.mock('vue-router', async (importOriginal) => {
@@ -49,6 +53,7 @@ vi.mock('@/stores/player', () => ({ usePlayerStore: () => testState.player }))
 vi.mock('@/stores/inventory', () => ({ useInventoryStore: () => testState.inventory }))
 vi.mock('@/stores/collection', () => ({ useCollectionStore: () => testState.collection }))
 vi.mock('@/stores/goals', () => ({ useGoalsStore: () => testState.goals }))
+vi.mock('@/stores/dailyTasks', () => ({ useDailyTasksStore: () => testState.dailyTasks }))
 vi.mock('@/composables/useRecommendedAction', async () => {
   const { computed } = await import('vue')
   return {
@@ -91,6 +96,7 @@ describe('HomeView', () => {
     testState.goals.overallProgress = 0
     testState.collection.collectedTotal = 0
     testState.collection.total = 960
+    testState.dailyTasks.tasks = []
   })
 
   it('показывает текущую цель без ненужного перехода к кликеру', () => {
@@ -98,6 +104,58 @@ describe('HomeView', () => {
     expect(wrapper.get('[data-current-goal]').text()).toContain('Забивай голы')
     expect(wrapper.find('[data-goal-action]').exists()).toBe(false)
     expect(testState.push).not.toHaveBeenCalled()
+  })
+
+  it('заменяет текущую цель дневной тройкой, пока осталось незавершённое задание', () => {
+    testState.dailyTasks.tasks = [
+      {
+        taskId: 'logo-clicks-30',
+        progress: 12,
+        status: 'in-progress',
+        percent: 40,
+        definition: {
+          id: 'logo-clicks-30',
+          titleKey: 'dailyTasks.tasks.logoClicks30',
+          target: 30,
+        },
+      },
+      {
+        taskId: 'open-pack-1',
+        progress: 1,
+        status: 'completed',
+        percent: 100,
+        definition: {
+          id: 'open-pack-1',
+          titleKey: 'dailyTasks.tasks.openPack1',
+          target: 1,
+        },
+      },
+      {
+        taskId: 'place-cards-2',
+        progress: 2,
+        status: 'reward-claimed',
+        percent: 100,
+        definition: {
+          id: 'place-cards-2',
+          titleKey: 'dailyTasks.tasks.placeCards2',
+          target: 2,
+        },
+      },
+    ]
+    const wrapper = mountHome()
+    expect(wrapper.get('[data-home-daily-tasks]').text()).toContain('Нажми на логотип 30 раз')
+    expect(wrapper.find('[data-current-goal]').exists()).toBe(false)
+  })
+
+  it('возвращает текущую цель после выполнения всей дневной тройки', () => {
+    testState.dailyTasks.tasks = [
+      { status: 'completed' },
+      { status: 'reward-claimed' },
+      { status: 'completed' },
+    ]
+    const wrapper = mountHome()
+    expect(wrapper.find('[data-home-daily-tasks]').exists()).toBe(false)
+    expect(wrapper.get('[data-current-goal]').text()).toContain('Забивай голы')
   })
 
   it('показывает оба таймера при нулевой энергии', () => {

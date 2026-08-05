@@ -54,7 +54,10 @@ export interface DailyTasksState {
   id: 'current'
   dayKey: string
   tasks: DailyTaskProgress[]
-  pendingRewards: Partial<Record<DailyTaskId, PendingDailyCardChoice>>
+  rewardClaimed: boolean
+  pendingReward?: PendingDailyCardChoice
+  // Поле читается только для совместимости с первой версией сохранений.
+  pendingRewards?: Partial<Record<DailyTaskId, PendingDailyCardChoice>>
   updatedAt: number
 }
 
@@ -67,4 +70,3 @@ export interface DailyTaskRuntimeState extends DailyTaskProgress {
   definition: DailyTaskDefinition
   percent: number
 }
-

@@ -19,7 +19,7 @@ const createState = (): DailyTasksState => ({
     { taskId: 'spend-coins-20', progress: 0, status: 'in-progress' },
     { taskId: 'place-cards-2', progress: 0, status: 'in-progress' },
   ],
-  pendingRewards: {},
+  rewardClaimed: false,
   updatedAt: DAY_ONE,
 })
 
@@ -70,7 +70,7 @@ describe('daily task domain', () => {
   it('keeps same-day progress and clears it together with pending rewards next day', () => {
     const state = createState()
     state.tasks[0].progress = 7
-    state.pendingRewards['spend-coins-20'] = {
+    state.pendingReward = {
       albumId: 'wc-26',
       candidateCardIds: ['a', 'b', 'c'],
       createdAt: DAY_ONE,
@@ -80,7 +80,8 @@ describe('daily task domain', () => {
     const reset = resolveDailyTasksState(state, DAY_TWO, () => 0)
     expect(reset.dayKey).toBe('2026-08-06')
     expect(reset.tasks.every(({ progress }) => progress === 0)).toBe(true)
-    expect(reset.pendingRewards).toEqual({})
+    expect(reset.pendingReward).toBeUndefined()
+    expect(reset.rewardClaimed).toBe(false)
     expect(reset.tasks.map(({ taskId }) => taskId)).not.toEqual(
       state.tasks.map(({ taskId }) => taskId),
     )
@@ -98,5 +99,28 @@ describe('daily task domain', () => {
     const state = createDailyTasksState(DAY_ONE, () => 0.5)
     expect(state.tasks).toHaveLength(3)
     expect(state.tasks.every(({ status }) => status === 'in-progress')).toBe(true)
+  })
+
+  it('считает уже полученную награду старой версии единственным дневным пиком', () => {
+    const legacy = createState()
+    legacy.tasks[0] = {
+      taskId: 'restore-energy-15',
+      progress: 15,
+      status: 'reward-claimed',
+    }
+    legacy.pendingRewards = {
+      'spend-coins-20': {
+        albumId: 'wc-26',
+        candidateCardIds: ['a', 'b', 'c'],
+        createdAt: DAY_ONE,
+      },
+    }
+    delete (legacy as Partial<DailyTasksState>).rewardClaimed
+
+    const normalized = resolveDailyTasksState(legacy, DAY_ONE)
+    expect(normalized.rewardClaimed).toBe(true)
+    expect(normalized.tasks[0].status).toBe('completed')
+    expect(normalized.pendingReward).toBeUndefined()
+    expect(normalized.pendingRewards).toBeUndefined()
   })
 })

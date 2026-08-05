@@ -12,6 +12,7 @@ import type {
   DailyTaskId,
   DailyTaskProgress,
   DailyTasksState,
+  PendingDailyCardChoice,
 } from './types'
 
 export type DailyTaskRandomSource = () => number
@@ -58,7 +59,7 @@ export const createDailyTasksState = (
       status: 'in-progress',
     }),
   ),
-  pendingRewards: {},
+  rewardClaimed: false,
   updatedAt: now,
 })
 
@@ -81,7 +82,33 @@ export const resolveDailyTasksState = (
   const isValid: boolean = saved.tasks.every(({ taskId }): boolean =>
     dailyTaskDefinitionById.has(taskId),
   )
-  return isValid ? saved : createDailyTasksState(now, randomSource)
+  if (!isValid) return createDailyTasksState(now, randomSource)
+
+  // Первая версия могла выдать награду за отдельную задачу: это уже считается дневным пиком.
+  const hasLegacyClaim: boolean = saved.tasks.some(
+    ({ status }): boolean => status === 'reward-claimed',
+  )
+  const legacyPending: PendingDailyCardChoice | undefined = Object.values(
+    saved.pendingRewards ?? {},
+  ).find((pending): pending is PendingDailyCardChoice => Boolean(pending))
+  if (
+    saved.rewardClaimed !== undefined &&
+    !saved.pendingRewards &&
+    !hasLegacyClaim
+  ) {
+    return saved
+  }
+  const normalized: DailyTasksState = {
+    ...saved,
+    tasks: saved.tasks.map(
+      (task): DailyTaskProgress =>
+        task.status === 'reward-claimed' ? { ...task, status: 'completed' } : task,
+    ),
+    rewardClaimed: saved.rewardClaimed === true || hasLegacyClaim,
+    pendingReward: saved.pendingReward ?? (hasLegacyClaim ? undefined : legacyPending),
+  }
+  delete normalized.pendingRewards
+  return normalized
 }
 
 export const applyDailyTaskEvents = (

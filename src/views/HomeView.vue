@@ -10,6 +10,7 @@ import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { useGoalsStore } from '@/stores/goals'
+import { useDailyTasksStore } from '@/stores/dailyTasks'
 import { formatCountdown } from '@/utils/formatCountdown'
 
 import Button from 'primevue/button'
@@ -17,6 +18,7 @@ import ClickArea from '@/components/Clicker/ClickArea.vue'
 import ClickEnergyPanel from '@/components/Clicker/ClickEnergyPanel.vue'
 import CurrentGoalCard from '@/components/goals/CurrentGoalCard.vue'
 import NearestGoals from '@/components/goals/NearestGoals.vue'
+import HomeDailyTasksCard from '@/components/dailyTasks/HomeDailyTasksCard.vue'
 
 interface ClickEffectItem {
   id: number
@@ -31,6 +33,7 @@ const player = usePlayerStore()
 const collection = useCollectionStore()
 const inventory = useInventoryStore()
 const goals = useGoalsStore()
+const dailyTasks = useDailyTasksStore()
 const { recommendation, quickActions } = useRecommendedAction()
 const effects: Ref<ClickEffectItem[]> = ref([])
 let nextEffectId: number = 0
@@ -83,6 +86,11 @@ const nearestGoalsForHome: ComputedRef<GoalRuntimeState[]> = computed(() => {
     .filter(({ definition }): boolean => definition.id !== duplicateGoalId)
     .slice(0, 3)
 })
+const hasActiveDailyTasks: ComputedRef<boolean> = computed(
+  (): boolean =>
+    dailyTasks.isLoaded &&
+    dailyTasks.tasks.some(({ status }): boolean => status === 'in-progress'),
+)
 const nextEnergyLabel: ComputedRef<string> = computed((): string =>
   formatCountdown(player.millisecondsUntilNextEnergy),
 )
@@ -222,7 +230,16 @@ onBeforeUnmount((): void => {
       </section>
 
       <div class="order-2 flex min-w-0 flex-col gap-3 lg:col-start-2 lg:row-start-2">
-        <CurrentGoalCard :goal="recommendation" @action="navigateRecommendation" />
+        <HomeDailyTasksCard
+          v-if="hasActiveDailyTasks"
+          :tasks="dailyTasks.tasks"
+          @open="navigate({ name: 'goals' })"
+        />
+        <CurrentGoalCard
+          v-else
+          :goal="recommendation"
+          @action="navigateRecommendation"
+        />
         <NearestGoals :goals="nearestGoalsForHome" @open="navigate({ name: 'goals' })" />
 
         <section

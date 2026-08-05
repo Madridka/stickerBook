@@ -9,8 +9,6 @@ import {
 } from './dailyTaskDomain'
 import type {
   DailyTaskEvent,
-  DailyTaskId,
-  DailyTaskProgress,
   DailyTasksState,
   PendingDailyCardChoice,
 } from './types'
@@ -63,7 +61,6 @@ export const ensureDailyTasksState = async (
   )
 
 export const beginDailyTaskReward = async (
-  taskId: DailyTaskId,
   now: number = Date.now(),
 ): Promise<BeginDailyRewardResult> => {
   const result: BeginDailyRewardResult = await database.transaction(
@@ -74,14 +71,14 @@ export const beginDailyTaskReward = async (
         await database.dailyTasks.get('current'),
         now,
       )
-      const task: DailyTaskProgress | undefined = current.tasks.find(
-        (item): boolean => item.taskId === taskId,
-      )
-      if (!task || task.status !== 'completed') {
+      const allCompleted: boolean = current.tasks.every(
+        ({ status }): boolean => status === 'completed',
+      ) && current.tasks.length === DAILY_TASK_CONFIG.tasksPerDay
+      if (!allCompleted || current.rewardClaimed) {
         await database.dailyTasks.put(current)
         return { status: 'not-completed', state: current }
       }
-      if (current.pendingRewards[taskId]) return { status: 'ready', state: current }
+      if (current.pendingReward) return { status: 'ready', state: current }
 
       const album = getPlayerAlbumById(BLISTER_CONFIGS.standard.albumId)
       if (!album) return { status: 'not-completed', state: current }
@@ -96,7 +93,7 @@ export const beginDailyTaskReward = async (
       }
       const next: DailyTasksState = {
         ...current,
-        pendingRewards: { ...current.pendingRewards, [taskId]: pending },
+        pendingReward: pending,
         updatedAt: now,
       }
       await database.dailyTasks.put(next)
@@ -108,7 +105,6 @@ export const beginDailyTaskReward = async (
 }
 
 export const claimDailyTaskReward = async (
-  taskId: DailyTaskId,
   cardId: string,
   now: number = Date.now(),
 ): Promise<ClaimDailyRewardResult> => {
@@ -120,26 +116,21 @@ export const claimDailyTaskReward = async (
         await database.dailyTasks.get('current'),
         now,
       )
-      const task: DailyTaskProgress | undefined = current.tasks.find(
-        (item): boolean => item.taskId === taskId,
-      )
-      if (task?.status === 'reward-claimed') {
+      if (current.rewardClaimed) {
         return { status: 'already-claimed', state: current }
       }
-      const pending: PendingDailyCardChoice | undefined = current.pendingRewards[taskId]
-      if (!task || task.status !== 'completed' || !pending?.candidateCardIds.includes(cardId)) {
+      const allCompleted: boolean = current.tasks.every(
+        ({ status }): boolean => status === 'completed',
+      ) && current.tasks.length === DAILY_TASK_CONFIG.tasksPerDay
+      const pending: PendingDailyCardChoice | undefined = current.pendingReward
+      if (!allCompleted || !pending?.candidateCardIds.includes(cardId)) {
         return { status: 'invalid-choice', state: current }
       }
       await storeCardInstance(pending.albumId, cardId)
-      const pendingRewards = { ...current.pendingRewards }
-      delete pendingRewards[taskId]
       const next: DailyTasksState = {
         ...current,
-        tasks: current.tasks.map(
-          (item): DailyTaskProgress =>
-            item.taskId === taskId ? { ...item, status: 'reward-claimed' } : item,
-        ),
-        pendingRewards,
+        rewardClaimed: true,
+        pendingReward: undefined,
         updatedAt: now,
       }
       await database.dailyTasks.put(next)

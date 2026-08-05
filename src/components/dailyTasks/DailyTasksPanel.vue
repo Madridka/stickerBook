@@ -7,7 +7,6 @@ import { formatCountdown } from '@/utils/formatCountdown'
 import { useCollectionStore } from '@/stores/collection'
 import { useDailyTasksStore } from '@/stores/dailyTasks'
 import type { CardDefinition } from '@/types'
-import type { DailyTaskId } from '@/features/dailyTasks/types'
 
 import Button from 'primevue/button'
 import ProgressBar from 'primevue/progressbar'
@@ -35,9 +34,9 @@ const ownedCardIds: ComputedRef<Set<string>> = computed((): Set<string> => {
   return albumId ? collection.getCollectedCardIds(albumId) : new Set<string>()
 })
 
-const openReward = async (taskId: DailyTaskId): Promise<void> => {
+const openReward = async (): Promise<void> => {
   errorKey.value = null
-  if (!(await dailyTasks.openReward(taskId))) errorKey.value = 'dailyTasks.errors.open'
+  if (!(await dailyTasks.openReward())) errorKey.value = 'dailyTasks.errors.open'
 }
 
 const claimReward = async (): Promise<void> => {
@@ -106,35 +105,42 @@ const handleRewardVisibility = (visible: boolean): void => {
           :show-value="false"
         />
         <div class="mt-auto pt-3">
-          <Button
-            v-if="task.status === 'completed'"
-            class="w-full"
-            size="small"
-            icon="pi pi-gift"
-            :label="t('dailyTasks.claim')"
-            :loading="dailyTasks.isOpeningReward"
-            :disabled="dailyTasks.isClaimingReward || Boolean(dailyTasks.activeRewardTaskId)"
-            type="button"
-            @click="openReward(task.taskId)"
-          />
-          <p
-            v-else-if="task.status === 'reward-claimed'"
-            class="text-xs font-black text-emerald-700"
-          >
+          <p v-if="task.status === 'completed'" class="text-xs font-black text-emerald-700">
             <i class="pi pi-check-circle mr-1" aria-hidden="true" />
-            {{ t('dailyTasks.claimed') }}
+            {{ t('dailyTasks.completedTask') }}
           </p>
           <p v-else class="text-xs font-semibold text-ink/45">{{ t('dailyTasks.inProgress') }}</p>
         </div>
       </article>
     </div>
 
-    <p v-if="errorKey && !dailyTasks.activeRewardTaskId" class="mt-3 text-xs font-bold text-coral">
+    <div
+      v-if="dailyTasks.allCompleted"
+      class="mt-3 border border-ink/15 bg-gold/10 p-3"
+      data-daily-completion-reward
+    >
+      <p v-if="dailyTasks.state.rewardClaimed" class="text-sm font-black text-emerald-700">
+        <i class="pi pi-check-circle mr-1" aria-hidden="true" />
+        {{ t('dailyTasks.claimed') }}
+      </p>
+      <Button
+        v-else
+        class="w-full"
+        icon="pi pi-gift"
+        :label="t('dailyTasks.claimAll')"
+        :loading="dailyTasks.isOpeningReward"
+        :disabled="dailyTasks.isClaimingReward || dailyTasks.isRewardOpen"
+        type="button"
+        @click="openReward"
+      />
+    </div>
+
+    <p v-if="errorKey && !dailyTasks.isRewardOpen" class="mt-3 text-xs font-bold text-coral">
       {{ t(errorKey) }}
     </p>
 
     <CardChoiceDialog
-      :visible="Boolean(dailyTasks.activeRewardTaskId)"
+      :visible="dailyTasks.isRewardOpen"
       v-model:selected-id="dailyTasks.selectedCardId"
       :cards="rewardCards"
       :owned-card-ids="ownedCardIds"

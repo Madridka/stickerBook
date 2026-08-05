@@ -75,7 +75,7 @@ describe('spainClubsLogo journal UI', () => {
     expect(wrapper.emitted('navigate')).toEqual([[58]])
   })
 
-  it('replaces a missing draft image with the named logo slot', async () => {
+  it('shows the named slot and allows retrying a missing draft image', async () => {
     const draftCard = cards.find(({ leagueId }) => leagueId === 'esp2')
     expect(draftCard).toBeDefined()
     if (!draftCard) return
@@ -106,8 +106,12 @@ describe('spainClubsLogo journal UI', () => {
 
     expect(wrapper.find('img').exists()).toBe(true)
     await wrapper.find('img').trigger('error')
-    expect(wrapper.find('img').exists()).toBe(false)
+    expect(wrapper.find('img').exists()).toBe(true)
     expect(wrapper.text()).toContain(draftCard.displayName)
     expect(wrapper.attributes('data-occupied')).toBe('false')
+
+    await wrapper.get('[aria-label="common.imageRetry"]').trigger('click')
+    await wrapper.get('img').trigger('load')
+    expect(wrapper.attributes('data-occupied')).toBe('true')
   })
 })

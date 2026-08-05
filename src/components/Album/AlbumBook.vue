@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, type ComputedRef, type Ref } from 'vue'
+import { computed, onBeforeUnmount, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ALBUM_VIEW_CONFIG } from '@/data/mainConst'
+import { preloadImages } from '@/utils/preloadImages'
 
 import Button from 'primevue/button'
 
@@ -40,6 +41,39 @@ const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] => {
     (pageIndex: number): boolean => pageIndex < props.pages.length,
   )
 })
+
+// Держит в браузерном кэше текущий разворот и ближайшие страницы до начала перелистывания.
+watch(
+  [
+    (): number => props.currentPage,
+    (): number => props.pages.length,
+    (): string => props.displayMode,
+  ],
+  (): void => {
+    const preloadStart: number = Math.max(0, props.currentPage - pageStep.value)
+    const preloadEnd: number = Math.min(
+      props.pages.length,
+      props.currentPage + pageStep.value * 3 + 1,
+    )
+    const visibleEnd: number = Math.min(
+      props.pages.length,
+      props.currentPage + pageStep.value,
+    )
+    preloadImages(
+      props.pages
+        .slice(props.currentPage, visibleEnd)
+        .map(({ image }): string => image),
+      true,
+    )
+    preloadImages(
+      [
+        ...props.pages.slice(preloadStart, props.currentPage),
+        ...props.pages.slice(visibleEnd, preloadEnd),
+      ].map(({ image }): string => image),
+    )
+  },
+  { immediate: true },
+)
 type TurnDirection = 'forward' | 'backward'
 type TurnAction = 'previous' | 'next'
 const isTurning: Ref<boolean> = ref(false)

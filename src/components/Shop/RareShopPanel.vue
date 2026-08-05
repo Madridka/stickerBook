@@ -19,6 +19,7 @@ import { formatCountdown } from '@/utils/formatCountdown'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import ProgressBar from 'primevue/progressbar'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 const { t } = useI18n()
 const router = useRouter()
@@ -168,11 +169,12 @@ onBeforeUnmount((): void => {
         :data-rare-offer-id="offer.id"
       >
         <div class="flex items-start gap-3">
-          <img
+          <LoadableImage
             v-if="teamFor(offer.countryId)"
             :src="teamFor(offer.countryId)?.flag"
             :alt="t(teamFor(offer.countryId)?.nameKey ?? '')"
-            class="h-10 w-14 border border-ink/15 object-cover"
+            class="h-10 w-14 shrink-0 border border-ink/15"
+            fit="cover"
           />
           <div class="min-w-0">
             <p class="truncate text-[10px] font-black uppercase tracking-[0.16em] text-coral">

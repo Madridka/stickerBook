@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
+import { computed, onMounted, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { getPlayerAlbumCard } from '@/data/albumRegistry'
@@ -7,6 +7,7 @@ import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
 import type { CardDefinition } from '@/types'
+import { preloadImages } from '@/utils/preloadImages'
 
 import Button from 'primevue/button'
 
@@ -42,6 +43,17 @@ const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
   Boolean(packOpening.session?.rewards[currentIndex.value]?.isDuplicate),
 )
 
+const preloadRewardCards = (): void => {
+  const session = packOpening.session
+  if (!session) return
+
+  const upcomingImages: string[] = session.rewards
+    .slice(currentIndex.value, currentIndex.value + 3)
+    .map(({ playerId }): string => getPlayerAlbumCard(session.albumId, playerId)?.image ?? '')
+  preloadImages(upcomingImages.slice(0, 1), true)
+  preloadImages(upcomingImages.slice(1))
+}
+
 // Создаёт новую сохраняемую сессию или восстанавливает незавершённый показ.
 const initializeOpening = async (): Promise<void> => {
   const requestedPackId: string | undefined =
@@ -54,6 +66,7 @@ const initializeOpening = async (): Promise<void> => {
 
   isAnimationComplete.value = session.animationComplete
   isReady.value = true
+  preloadRewardCards()
 }
 
 // Сохраняет переход от анимации пака к первой карточке.
@@ -87,20 +100,26 @@ const navigateTo = async (name: 'home' | 'shop' | 'album' | 'collection'): Promi
 }
 
 onMounted(initializeOpening)
+watch(currentIndex, preloadRewardCards)
 </script>
 
 <template>
   <section
     class="mx-auto flex h-full min-h-0 w-full max-w-5xl flex-col items-center justify-center py-2"
   >
+    <div v-if="!isReady" class="flex flex-col items-center gap-3" role="status">
+      <i class="pi pi-spin pi-spinner text-4xl text-coral" aria-hidden="true" />
+      <p class="text-sm font-bold text-ink/60">{{ t('common.imageLoading') }}</p>
+    </div>
+
     <div
-      v-if="isReady && !isAnimationComplete"
+      v-else-if="!isAnimationComplete"
       class="flex w-full flex-1 items-center justify-center"
     >
       <PackAnimation @complete="handleAnimationComplete" />
     </div>
 
-    <template v-else-if="isReady && !isFinished && currentCard">
+    <template v-else-if="!isFinished && currentCard">
       <div class="mb-2 text-center">
         <p class="hidden text-xs font-bold uppercase tracking-[0.16em] text-coral sm:block">
           {{ t('packOpening.eyebrow') }}
@@ -120,7 +139,7 @@ onMounted(initializeOpening)
       />
     </template>
 
-    <div v-else-if="isReady" class="flex w-full flex-col items-center text-center">
+    <div v-else class="flex w-full flex-col items-center text-center">
       <div
         class="flex h-20 w-20 items-center justify-center rounded-full bg-mint text-4xl text-ink"
       >

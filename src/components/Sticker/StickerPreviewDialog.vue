@@ -5,6 +5,7 @@ import type { CardDefinition, StickerInstance } from '@/types'
 
 import Dialog from 'primevue/dialog'
 import Button from 'primevue/button'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface Props {
   visible: boolean
@@ -78,22 +79,28 @@ const prepare = (): void => {
           >
             <i class="pi pi-chevron-left" aria-hidden="true" />
           </button>
-          <button
+          <div
             class="[perspective:1000px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4"
-            type="button"
+            role="button"
+            tabindex="0"
             data-flip-card
             :aria-label="t('stickerPreview.flip')"
             @click="toggleFlip"
+            @keydown.enter.self="toggleFlip"
+            @keydown.space.self.prevent="toggleFlip"
           >
             <div
               class="relative aspect-[2/3] w-52 transition-transform duration-500 [transform-style:preserve-3d] md:w-72 2xl:w-80"
               data-sticker-flip
               :class="{ '[transform:rotateY(180deg)]': isFlipped }"
             >
-              <img
+              <LoadableImage
                 class="absolute inset-0 h-full w-full rounded-lg object-cover shadow-xl [backface-visibility:hidden]"
                 :src="card.image"
                 :alt="card.displayName"
+                eager
+                detailed-error
+                retryable
               />
               <div
                 class="absolute inset-0 flex flex-col justify-between rounded-lg bg-ink p-5 text-paper shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-7"
@@ -136,7 +143,7 @@ const prepare = (): void => {
                 </p>
               </div>
             </div>
-          </button>
+          </div>
           <button
             class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-ink/15 bg-paper text-ink shadow-sm transition hover:border-gold hover:bg-gold/10 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold sm:h-11 sm:w-11"
             type="button"

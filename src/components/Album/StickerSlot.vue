@@ -12,6 +12,7 @@ import type {
 } from '@/types'
 
 import { shouldSnapStickerAlignment } from '@/components/DragDrop/dropGeometry'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface Props {
   slot: AlbumGeometrySlot
@@ -33,11 +34,12 @@ const emit = defineEmits<{
 const { t } = useI18n()
 const album = useAlbumStore()
 const imageLoadFailed: Ref<boolean> = ref(false)
+const imageLoaded: Ref<boolean> = ref(false)
 const targetName: ComputedRef<string> = computed(
   (): string => props.targetCard?.displayName ?? props.slot.name,
 )
 const showsPlaceholder: ComputedRef<boolean> = computed(
-  (): boolean => !props.card || imageLoadFailed.value,
+  (): boolean => !props.card || !imageLoaded.value || imageLoadFailed.value,
 )
 const slotCode: ComputedRef<string> = computed((): string =>
   props.slot.id.toUpperCase().replace('-', ' '),
@@ -69,13 +71,19 @@ const cardStyle = (): Record<string, string> => {
 }
 
 const previewCard = (): void => {
-  if (props.instance && !imageLoadFailed.value) emit('preview', props.instance)
+  if (props.instance && imageLoaded.value && !imageLoadFailed.value) emit('preview', props.instance)
+}
+
+const handleImageLoad = (): void => {
+  imageLoaded.value = true
+  imageLoadFailed.value = false
 }
 
 watch(
   (): string | undefined => props.card?.image,
   (): void => {
     imageLoadFailed.value = false
+    imageLoaded.value = false
   },
 )
 </script>
@@ -112,17 +120,21 @@ watch(
         {{ targetName }}
       </span>
     </div>
-    <img
-      v-if="card && !imageLoadFailed"
+    <LoadableImage
+      v-if="card"
       class="absolute inset-0 z-10 h-full w-full cursor-pointer object-fill"
       :src="card.image"
       :alt="card.displayName"
+      fit="fill"
+      :show-loader="false"
+      retryable
       :style="cardStyle()"
+      @load="handleImageLoad"
       @error="imageLoadFailed = true"
       @click="previewCard"
     />
     <button
-      v-if="card && !imageLoadFailed && (variantCount ?? 0) > 1"
+      v-if="card && imageLoaded && !imageLoadFailed && (variantCount ?? 0) > 1"
       class="absolute right-[4%] top-[3%] z-20 flex items-center gap-1 rounded-full bg-ink/85 px-1.5 py-1 text-[clamp(0.34rem,0.5vw,0.58rem)] font-black text-paper shadow-md transition hover:bg-coral focus-visible:outline focus-visible:outline-2 focus-visible:outline-paper max-md:px-1 max-md:py-0.5"
       type="button"
       :aria-label="t('album.changeVariantAria', { name: targetName })"

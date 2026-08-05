@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { CardDefinition, StickerInstance } from '@/types'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface Props {
   card: CardDefinition
@@ -11,11 +12,11 @@ defineProps<Props>()
 
 <template>
   <div class="relative h-full w-full overflow-hidden rounded bg-white p-1">
-    <img
-      class="h-full w-full object-contain"
+    <LoadableImage
+      class="h-full w-full"
       :src="card.image"
       :alt="card.displayName"
-      draggable="false"
+      fit="contain"
     />
     <span class="absolute bottom-1 left-1 rounded bg-ink/85 px-1 text-[9px] font-bold text-paper">
       {{ instance.quality }}%

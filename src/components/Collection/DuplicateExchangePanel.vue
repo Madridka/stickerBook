@@ -13,6 +13,7 @@ import type { AlbumId, CardDefinition, StickerInstance } from '@/types'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import CardChoiceDialog from '@/components/Sticker/CardChoiceDialog.vue'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface DuplicateGroup {
   playerId: string
@@ -201,11 +202,12 @@ const chooseCandidateLabel = (name: string): string =>
         >
           ×{{ group.instances.length }}
         </span>
-        <img
+        <LoadableImage
           v-if="getCard(group.playerId)"
           class="aspect-[2/3] w-full bg-white object-cover"
           :src="getCard(group.playerId)?.image"
           :alt="getCard(group.playerId)?.displayName"
+          fit="cover"
         />
         <p class="mt-1 truncate text-xs font-black sm:text-sm">
           {{ getCard(group.playerId)?.displayName }}

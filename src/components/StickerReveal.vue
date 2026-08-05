@@ -5,6 +5,7 @@ import { playerPositionLabels } from '@/data/playerPositionLabels'
 import type { CardDefinition } from '@/types'
 
 import Button from 'primevue/button'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface Props {
   card: CardDefinition
@@ -18,6 +19,7 @@ const props: Props = withDefaults(defineProps<Props>(), { duplicate: false, adva
 const emit = defineEmits<{ next: [] }>()
 const { t } = useI18n()
 const isRevealed: Ref<boolean> = ref(false)
+const imageReady: Ref<boolean> = ref(false)
 const cardKindLabel: ComputedRef<string> = computed((): string =>
   props.card.kind === 'player'
     ? playerPositionLabels[props.card.position]
@@ -42,6 +44,7 @@ watch(
   () => props.card.id,
   (): void => {
     isRevealed.value = false
+    imageReady.value = false
   },
 )
 
@@ -52,12 +55,12 @@ const reveal = (): void => {
 }
 
 const showNext = (): void => {
-  if (!props.advancing) emit('next')
+  if (!props.advancing && imageReady.value) emit('next')
 }
 
 // Повторяет действия нижней кнопки при клике непосредственно по карточке
 const handleCardClick = (): void => {
-  if (isRevealed.value) {
+  if (isRevealed.value && imageReady.value) {
     showNext()
     return
   }
@@ -71,21 +74,34 @@ const handleCardClick = (): void => {
     <p class="text-sm font-bold uppercase tracking-[0.18em] text-coral">
       {{ t('packOpening.cardNumber', { current: index + 1, total }) }}
     </p>
-    <button
+    <div
       class="mt-5 h-[min(65dvh,32rem)] w-full max-w-sm overflow-hidden border-4 border-ink bg-paper p-3 text-left shadow-[10px_10px_0_rgb(var(--color-ink)/0.14)] transition-[transform,box-shadow] duration-[220ms] ease-[ease]"
       :class="
         isRevealed
           ? ''
           : 'hover:-translate-x-0.5 hover:-translate-y-0.5 hover:-rotate-1 hover:shadow-[12px_12px_0_rgb(var(--color-ink)/0.14)]'
       "
-      type="button"
+      role="button"
+      tabindex="0"
       :aria-label="isRevealed ? card.displayName : t('packOpening.reveal')"
       @click="handleCardClick"
+      @keydown.enter.self="handleCardClick"
+      @keydown.space.self.prevent="handleCardClick"
     >
       <div v-if="isRevealed" class="flex h-full min-h-0 flex-col overflow-hidden bg-white p-2">
         <div class="min-h-0 flex-1">
           <div class="relative h-full">
-            <img class="h-full w-full object-contain" :src="card.image" :alt="card.displayName" />
+            <LoadableImage
+              class="h-full w-full"
+              :src="card.image"
+              :alt="card.displayName"
+              fit="contain"
+              eager
+              detailed-error
+              retryable
+              @load="imageReady = true"
+              @error="imageReady = false"
+            />
             <span
               v-if="duplicate"
               class="absolute right-2 top-2 rounded bg-coral px-2 py-1 text-xs font-black uppercase tracking-wide text-white shadow"
@@ -116,7 +132,7 @@ const handleCardClick = (): void => {
           t('packOpening.reveal')
         }}</span>
       </div>
-    </button>
+    </div>
     <Button
       v-if="!isRevealed"
       class="mt-6"
@@ -130,7 +146,7 @@ const handleCardClick = (): void => {
       class="mt-6"
       :label="t('packOpening.next')"
       icon="pi pi-arrow-right"
-      :disabled="advancing"
+      :disabled="advancing || !imageReady"
       :loading="advancing"
       type="button"
       @click="showNext"

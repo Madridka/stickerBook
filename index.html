@@ -5,10 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f3eb" />
     <link rel="icon" type="image/webp" sizes="512x512" href="%BASE_URL%favicon.webp" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-width: 320px;
+        min-height: 100%;
+        background: #f7f3eb;
+        color: #17212b;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .app-bootstrap {
+        display: grid;
+        min-height: 100dvh;
+        place-items: center;
+        padding: 2rem;
+        box-sizing: border-box;
+      }
+
+      .app-bootstrap__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        text-align: center;
+      }
+
+      .app-bootstrap__spinner {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 4px solid rgb(23 33 43 / 14%);
+        border-top-color: #e86b52;
+        border-radius: 9999px;
+        animation: app-bootstrap-spin 0.8s linear infinite;
+      }
+
+      .app-bootstrap__title {
+        margin: 0;
+        font-size: 1.35rem;
+        font-weight: 900;
+      }
+
+      .app-bootstrap__text {
+        margin: 0;
+        color: rgb(23 33 43 / 60%);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      @keyframes app-bootstrap-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .app-bootstrap__spinner {
+          animation-duration: 1.8s;
+        }
+      }
+    </style>
     <title>Вклейка</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="app-bootstrap" role="status" aria-live="polite">
+        <div class="app-bootstrap__content">
+          <span class="app-bootstrap__spinner" aria-hidden="true"></span>
+          <p class="app-bootstrap__title">Вклейка</p>
+          <p class="app-bootstrap__text">Загружаем альбом и карточки…</p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

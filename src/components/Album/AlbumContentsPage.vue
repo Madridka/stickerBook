@@ -2,6 +2,7 @@
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { AlbumContentsItem } from '@/types'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface Props {
   pageNumber: number
@@ -105,16 +106,17 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
             :title="t(team.nameKey)"
             @click="emit('select', team.pageId)"
           >
-            <img
-              class="select-none object-contain transition-transform duration-200 group-hover:scale-105"
+            <LoadableImage
+              class="select-none"
+              image-class="transition-transform duration-200 group-hover:scale-105"
               :class="
                 isTomskContents
                   ? 'h-[38%] min-h-0 w-[82%] shrink-0'
-                  : 'w-[82%] rounded-[0.3cqw] border border-ink/15 shadow-[0_0.35cqw_0.6cqw_rgb(var(--color-ink)/0.2)]'
+                  : 'aspect-[3/2] w-[82%] rounded-[0.3cqw] border border-ink/15 shadow-[0_0.35cqw_0.6cqw_rgb(var(--color-ink)/0.2)]'
               "
               :src="team.flag"
               alt=""
-              aria-hidden="true"
+              fit="contain"
             />
             <strong
               v-if="isTomskContents"

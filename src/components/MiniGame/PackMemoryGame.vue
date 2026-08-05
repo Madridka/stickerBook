@@ -3,6 +3,8 @@ import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref }
 import { useI18n } from 'vue-i18n'
 import cards from '@/data/wc-26/catalog'
 import type { CardDefinition, PlayerCardDefinition } from '@/types'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
+import { preloadImage } from '@/utils/preloadImages'
 
 type Phase = 'reveal' | 'question' | 'result'
 
@@ -41,6 +43,7 @@ let revealTimer: number | undefined
 let answerEnableTimer: number | undefined
 let resultTimer: number | undefined
 let completionTimer: number | undefined
+let isUnmounted = false
 
 const phaseTranslationKey: ComputedRef<string> = computed((): string => {
   if (isComplete.value) return 'packHunt.memory.phaseComplete'
@@ -99,7 +102,18 @@ const initRound = (): void => {
   isOpen.value = true
   canAnswer.value = false
   phase.value = 'reveal'
-  revealTimer = window.setTimeout((): void => startQuestion(), revealDurationMs)
+  const roundCardIds: string = roundCards.value.map(({ id }): string => id).join('|')
+  void Promise.all(
+    roundCards.value.map(({ image }): Promise<boolean> => preloadImage(image, true)),
+  ).then((): void => {
+    if (
+      isUnmounted ||
+      roundCards.value.map(({ id }): string => id).join('|') !== roundCardIds
+    ) {
+      return
+    }
+    revealTimer = window.setTimeout((): void => startQuestion(), revealDurationMs)
+  })
 }
 
 // Промах не проваливает игру — раунд просто честно раскрывает, где лежала
@@ -132,6 +146,7 @@ onMounted((): void => {
 })
 
 onBeforeUnmount((): void => {
+  isUnmounted = true
   if (revealTimer !== undefined) window.clearTimeout(revealTimer)
   if (answerEnableTimer !== undefined) window.clearTimeout(answerEnableTimer)
   if (resultTimer !== undefined) window.clearTimeout(resultTimer)
@@ -211,11 +226,12 @@ onBeforeUnmount((): void => {
                   : 'border-ink'
             "
           >
-            <img
+            <LoadableImage
               class="h-full w-full object-contain"
               :src="roundCards[slot - 1]?.image"
               :alt="roundCards[slot - 1]?.displayName ?? ''"
-              draggable="false"
+              fit="contain"
+              eager
             />
             <span
               class="absolute right-1 top-1 rounded px-1.5 py-0.5 text-[7px] font-black uppercase tracking-wide text-white shadow sm:text-[9px]"

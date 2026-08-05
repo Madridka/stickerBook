@@ -6,6 +6,7 @@ import type { StickerPreparation, StickerTrayItem } from '@/types'
 
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface Props {
   visible: boolean
@@ -325,11 +326,14 @@ onBeforeUnmount(clearPeelTimer)
         <div
           class="relative mx-auto aspect-[2/3] w-28 overflow-hidden rounded border-2 border-ink bg-[#ece8dd] shadow-lg [transform:rotateY(180deg)]"
         >
-          <img
+          <LoadableImage
             v-if="item"
-            class="absolute inset-0 h-full w-full scale-x-[-1] object-cover opacity-20"
+            class="absolute inset-0 h-full w-full"
+            image-class="scale-x-[-1] opacity-20"
             :src="item.card.image"
             alt=""
+            fit="cover"
+            eager
           />
           <div class="absolute inset-2 rounded border border-dashed border-ink/25 bg-white/75" />
           <span
@@ -425,12 +429,13 @@ onBeforeUnmount(clearPeelTimer)
           @pointerup="finishAlignment"
           @pointercancel="finishAlignment"
         >
-          <img
+          <LoadableImage
             v-if="item"
-            class="pointer-events-none h-full w-full select-none object-cover"
+            class="pointer-events-none h-full w-full select-none"
             :src="item.card.image"
             :alt="item.card.displayName"
-            draggable="false"
+            fit="cover"
+            eager
           />
         </button>
       </div>
@@ -456,11 +461,15 @@ onBeforeUnmount(clearPeelTimer)
       <div
         class="relative mx-auto mt-3 aspect-[2/3] w-40 overflow-hidden rounded border-2 border-ink bg-white shadow-xl"
       >
-        <img
+        <LoadableImage
           v-if="item"
           class="h-full w-full object-cover"
           :src="item.card.image"
           :alt="item.card.displayName"
+          fit="cover"
+          eager
+          detailed-error
+          retryable
         />
         <button
           v-for="(zone, index) in pressZones"

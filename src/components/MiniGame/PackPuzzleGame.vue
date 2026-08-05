@@ -1,11 +1,20 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, type ComputedRef, type CSSProperties, type Ref } from 'vue'
+import {
+  computed,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  type ComputedRef,
+  type CSSProperties,
+  type Ref,
+} from 'vue'
 import { useI18n } from 'vue-i18n'
 import ProgressBar from 'primevue/progressbar'
 
 import { PACK_CONFIGS, PACK_HUNT_CONFIG } from '@/data/mainConst'
 import cards from '@/data/wc-26/catalog'
 import type { CardDefinition, PlayerCardDefinition } from '@/types'
+import { preloadImage } from '@/utils/preloadImages'
 
 interface PuzzleLayout {
   columns: number
@@ -64,8 +73,14 @@ const selectedPiece: Ref<number | undefined> = ref(undefined)
 const draggedPiece: Ref<number | undefined> = ref(undefined)
 const feedbackKey: Ref<string> = ref('packHunt.puzzle.selectPiece')
 const isComplete: Ref<boolean> = ref(false)
+const imageStatus: Ref<'loading' | 'loaded' | 'error'> = ref('loading')
 let feedbackTimer: number | undefined
 let completionTimer: number | undefined
+
+const loadPuzzleImage = async (): Promise<void> => {
+  imageStatus.value = 'loading'
+  imageStatus.value = (await preloadImage(card.image, true)) ? 'loaded' : 'error'
+}
 
 const placedCount: ComputedRef<number> = computed(
   (): number => placedSlots.value.filter((pieceId): boolean => pieceId !== undefined).length,
@@ -168,6 +183,10 @@ const handlePointerUp = (event: PointerEvent, pieceId: number): void => {
   if (Number.isInteger(slotIndex)) placePiece(pieceId, slotIndex)
 }
 
+onMounted((): void => {
+  void loadPuzzleImage()
+})
+
 onBeforeUnmount((): void => {
   if (feedbackTimer !== undefined) window.clearTimeout(feedbackTimer)
   if (completionTimer !== undefined) window.clearTimeout(completionTimer)
@@ -175,7 +194,31 @@ onBeforeUnmount((): void => {
 </script>
 
 <template>
-  <section class="w-full" :aria-label="t('packHunt.games.puzzle.title')">
+  <section class="relative w-full" :aria-label="t('packHunt.games.puzzle.title')">
+    <div
+      v-if="imageStatus !== 'loaded'"
+      class="absolute inset-0 z-50 flex min-h-64 items-center justify-center bg-paper/95 text-center"
+      role="status"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <i
+          class="text-3xl text-coral"
+          :class="imageStatus === 'loading' ? 'pi pi-spin pi-spinner' : 'pi pi-image'"
+          aria-hidden="true"
+        />
+        <p class="text-sm font-bold text-ink/60">
+          {{ t(imageStatus === 'loading' ? 'common.imageLoading' : 'common.imageLoadError') }}
+        </p>
+        <button
+          v-if="imageStatus === 'error'"
+          class="rounded bg-ink px-3 py-2 text-xs font-black text-paper"
+          type="button"
+          @click="loadPuzzleImage"
+        >
+          {{ t('common.imageRetry') }}
+        </button>
+      </div>
+    </div>
     <div class="mb-3 flex items-center justify-between gap-4">
       <div>
         <p class="text-xs font-black uppercase tracking-[0.14em] text-ink/45">

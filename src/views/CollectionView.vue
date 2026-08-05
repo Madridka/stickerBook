@@ -26,6 +26,7 @@ import Button from 'primevue/button'
 import CollectionControls from '@/components/Collection/CollectionControls.vue'
 import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
 import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 type CollectionFilter = 'all' | 'ready' | 'album'
 type CollectionSort = 'status' | 'album' | 'name'
@@ -468,11 +469,12 @@ watch(
                 >
                   {{ item.instance.quality }}%
                 </span>
-                <img
+                <LoadableImage
                   v-if="getCard(item.instance.playerId)"
                   class="aspect-[2/3] w-full bg-white object-cover"
                   :src="getCard(item.instance.playerId)?.image"
                   :alt="getCard(item.instance.playerId)?.displayName"
+                  fit="cover"
                 />
                 <div class="mt-2 min-w-0">
                   <p class="break-words text-sm font-black leading-tight">
@@ -548,11 +550,13 @@ watch(
               :key="item.instance.id"
               class="border-2 border-ink/40 bg-paper p-2 opacity-75 shadow-[4px_4px_0_rgb(var(--color-ink)/0.12)]"
             >
-              <img
+              <LoadableImage
                 v-if="getCard(item.instance.playerId)"
-                class="aspect-[2/3] w-full bg-white object-cover grayscale"
+                class="aspect-[2/3] w-full bg-white"
+                image-class="grayscale"
                 :src="getCard(item.instance.playerId)?.image"
                 :alt="getCard(item.instance.playerId)?.displayName"
+                fit="cover"
               />
               <div class="mt-2 flex items-start justify-between gap-2">
                 <div class="min-w-0">

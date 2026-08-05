@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router'
 import { getLibraryAlbums } from '@/data/albumRegistry'
 import { useCollectionStore } from '@/stores/collection'
 import type { AlbumDefinition, AlbumProgress } from '@/types'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 const { t } = useI18n()
 const collection = useCollectionStore()
@@ -69,11 +70,13 @@ const isCollectible = (album: AlbumDefinition): boolean => album.cards.length > 
           <div
             class="absolute inset-x-[3%] bottom-0 top-[9%] overflow-hidden rounded-lg rounded-tl-sm border-2 border-ink/20 bg-gold shadow-[5px_6px_0_rgb(var(--color-ink)/0.12)]"
           >
-            <img
+            <LoadableImage
               v-if="getCover(album)"
-              class="h-full w-full object-cover opacity-90 transition-transform duration-300 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
+              class="h-full w-full"
+              image-class="opacity-90 transition-transform duration-300 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
               :src="getCover(album)"
               :alt="t(album.name)"
+              fit="cover"
             />
           </div>
         </div>

@@ -3,6 +3,7 @@ import type { CardDefinition } from '@/types'
 
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
+import LoadableImage from '@/components/ui/LoadableImage.vue'
 
 interface Props {
   visible: boolean
@@ -77,10 +78,11 @@ const selectCard = (cardId: string): void => emit('update:selectedId', cardId)
         :data-card-id="card.id"
         @click="selectCard(card.id)"
       >
-        <img
+        <LoadableImage
           class="aspect-[2/3] w-full bg-white object-cover"
           :src="card.image"
           :alt="card.displayName"
+          fit="cover"
         />
         <strong class="mt-2 block truncate text-sm">{{ card.displayName }}</strong>
         <span

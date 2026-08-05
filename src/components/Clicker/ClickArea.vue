@@ -37,9 +37,13 @@ const { t } = useI18n()
       @click="emit('click', $event)"
     >
       <img
-        class="w-full object-contain drop-shadow-[0_18px_12px_rgb(var(--color-ink)/.2)] transition-transform duration-100 group-active:scale-95"
+        class="w-full object-contain transition-transform duration-100 group-active:scale-95"
         :src="logoUrl"
         :alt="t('home.logoAlt')"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        draggable="false"
       />
     </button>
     <!-- Отображение активных эффектов клика -->

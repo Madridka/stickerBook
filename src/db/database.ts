@@ -2,6 +2,7 @@ import Dexie, { type Table } from 'dexie'
 import type { AlbumId, DeletedCard, StickerInstance } from '@/types'
 import type { GoalCounter, GoalPlayerState } from '@/features/goals/types'
 import type { RareShopState } from '@/features/rareShop/types'
+import type { DailyTasksState } from '@/features/dailyTasks/types'
 
 export const PLAYER_STATE_ID = 'current'
 
@@ -108,6 +109,7 @@ interface StickerBookDatabase extends Dexie {
   goalCounters: Table<GoalCounter, string>
   rareShop: Table<RareShopState, string>
   blisterCooldowns: Table<BlisterCooldown, string>
+  dailyTasks: Table<DailyTasksState, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -317,3 +319,6 @@ database.version(14).upgrade(async (transaction): Promise<void> => {
       }))
     })
 })
+
+// Добавляет одно сохраняемое состояние текущей ротации ежедневных заданий.
+database.version(15).stores({ dailyTasks: 'id, dayKey' })

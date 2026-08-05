@@ -130,7 +130,7 @@ export const CLICKER_CONFIG = {
   // Количество энергии, расходуемое одним кликом.
   energyCostPerClick: 1,
   // Время полного восстановления энергии в миллисекундах.
-  fullRechargeMs: 3_600_000,
+  fullRechargeMs: 7_200_000,
   // Число знаков после запятой для монет и наград.
   rewardPrecision: 2,
 }
@@ -149,6 +149,12 @@ export const DUPLICATE_EXCHANGE_CONFIG = {
   tradeInCount: 5,
   // Количество уникальных кандидатов, показываемых после обмена.
   candidateCount: 5,
+}
+
+/** Размер ежедневной ротации и выбора карточки за выполненное задание. */
+export const DAILY_TASK_CONFIG = {
+  tasksPerDay: 3,
+  rewardCandidateCount: 3,
 }
 
 /** Общие и индивидуальные параметры мини-игр, выдающих бесплатный пак. */

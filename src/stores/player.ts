@@ -3,6 +3,11 @@ import { defineStore } from 'pinia'
 import { database, PLAYER_STATE_ID, type PlayerState } from '@/db/database'
 import { CLICKER_CONFIG } from '@/data/mainConst'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import {
+  notifyDailyTasksChanged,
+  recordDailyTaskEventsInTransaction,
+} from '@/features/dailyTasks/dailyTaskService'
+import type { DailyTaskEvent } from '@/features/dailyTasks/types'
 
 const COIN_FORMATTER: Intl.NumberFormat = new Intl.NumberFormat('ru-RU', {
   maximumFractionDigits: CLICKER_CONFIG.rewardPrecision,
@@ -57,6 +62,7 @@ export const usePlayerStore = defineStore('player', () => {
   })
   let hasLocalChanges: boolean = false
   let saveQueue: Promise<void> = Promise.resolve()
+  let pendingRestoredEnergy: number = 0
 
   // Восстанавливает энергию пропорционально времени, прошедшему в онлайне или офлайн.
   const refreshEnergy = (now: number = Date.now()): void => {
@@ -65,8 +71,11 @@ export const usePlayerStore = defineStore('player', () => {
     const regeneratedEnergy: number =
       (elapsedMs / CLICKER_CONFIG.fullRechargeMs) * CLICKER_CONFIG.energyLimit
 
+    const previousEnergy: number = energy.value
     energy.value = Math.min(CLICKER_CONFIG.energyLimit, energy.value + regeneratedEnergy)
+    pendingRestoredEnergy += Math.max(0, energy.value - previousEnergy)
     energyUpdatedAt.value = safeNow
+    if (isLoaded.value && pendingRestoredEnergy >= 1) save()
   }
 
   // Загружает сохранённые очки и энергию до первого взаимодействия с экраном.
@@ -83,12 +92,20 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   // Последовательно записывает изменения, чтобы быстрые клики не перетирали друг друга
-  const save = (earnedCoins: number = 0): void => {
+  const save = (earnedCoins: number = 0, logoClicks: number = 0): void => {
+    const restoredEnergy: number = pendingRestoredEnergy
+    pendingRestoredEnergy = 0
+    const dailyEvents: DailyTaskEvent[] = [
+      ...(restoredEnergy > 0
+        ? [{ type: 'energy-restored' as const, amount: restoredEnergy }]
+        : []),
+      ...(earnedCoins > 0 ? [{ type: 'coins-earned' as const, amount: earnedCoins }] : []),
+      ...(logoClicks > 0 ? [{ type: 'logo-clicked' as const, amount: logoClicks }] : []),
+    ]
     saveQueue = saveQueue.then(async (): Promise<void> => {
       await database.transaction(
         'rw',
-        database.player,
-        database.goalCounters,
+        [database.player, database.goalCounters, database.dailyTasks],
         async (): Promise<void> => {
           await database.player.put({
             id: PLAYER_STATE_ID,
@@ -104,9 +121,13 @@ export const usePlayerStore = defineStore('player', () => {
               updatedAt: Date.now(),
             })
           }
+          if (dailyEvents.length) {
+            await recordDailyTaskEventsInTransaction(dailyEvents)
+          }
         },
       )
       if (earnedCoins > 0) notifyGoalsChanged()
+      if (dailyEvents.length) notifyDailyTasksChanged()
     })
   }
 
@@ -134,7 +155,7 @@ export const usePlayerStore = defineStore('player', () => {
     hasLocalChanges = true
     energy.value = Math.max(0, energy.value - CLICKER_CONFIG.energyCostPerClick)
     coins.value = roundReward(coins.value + amount)
-    save(amount)
+    save(amount, 1)
     return true
   }
 

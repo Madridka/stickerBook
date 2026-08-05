@@ -12,6 +12,7 @@ import type { AlbumId, CardDefinition, StickerInstance } from '@/types'
 
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
+import CardChoiceDialog from '@/components/Sticker/CardChoiceDialog.vue'
 
 interface DuplicateGroup {
   playerId: string
@@ -24,7 +25,7 @@ const collection = useCollectionStore()
 const selectionLimit: number = DUPLICATE_EXCHANGE_CONFIG.tradeInCount
 const candidateCount: number = DUPLICATE_EXCHANGE_CONFIG.candidateCount
 const selectedInstanceIds: Ref<string[]> = ref([])
-const selectedCandidateId: Ref<string | undefined> = ref(undefined)
+const selectedCandidateId: Ref<string | null> = ref(null)
 const rewardCardId: Ref<string | undefined> = ref(undefined)
 const isConfirmVisible: Ref<boolean> = ref(false)
 const hasError: Ref<boolean> = ref(false)
@@ -47,6 +48,9 @@ const rewardCard: ComputedRef<CardDefinition | undefined> = computed(
   (): CardDefinition | undefined =>
     rewardCardId.value ? getCard(rewardCardId.value) : undefined,
 )
+const ownedCardIds: ComputedRef<Set<string>> = computed((): Set<string> =>
+  collection.getCollectedCardIds(collection.pendingExchange?.albumId ?? props.albumId),
+)
 const canSubmit: ComputedRef<boolean> = computed(
   (): boolean => selectedInstanceIds.value.length === selectionLimit && !collection.isExchanging,
 )
@@ -55,11 +59,6 @@ const getCard = (playerId: string): CardDefinition | undefined =>
   getAlbumCard(collection.pendingExchange?.albumId ?? props.albumId, playerId)
 const selectedCount = (group: DuplicateGroup): number =>
   group.instances.filter(({ id }): boolean => selectedInstanceIds.value.includes(id)).length
-const isOwned = (playerId: string): boolean =>
-  collection
-    .getCollectedCardIds(collection.pendingExchange?.albumId ?? props.albumId)
-    .has(playerId)
-
 const addFromGroup = (group: DuplicateGroup): void => {
   if (selectedInstanceIds.value.length >= selectionLimit) return
   const instance: StickerInstance | undefined = group.instances.find(
@@ -96,7 +95,7 @@ const confirmExchange = async (): Promise<void> => {
       return
     }
     selectedInstanceIds.value = []
-    selectedCandidateId.value = undefined
+    selectedCandidateId.value = null
     isConfirmVisible.value = false
   } catch {
     hasError.value = true
@@ -114,11 +113,13 @@ const claimCandidate = async (): Promise<void> => {
       return
     }
     rewardCardId.value = playerId
-    selectedCandidateId.value = undefined
+    selectedCandidateId.value = null
   } catch {
     hasError.value = true
   }
 }
+const chooseCandidateLabel = (name: string): string =>
+  t('duplicateExchange.chooseCandidate', { name })
 </script>
 
 <template>
@@ -293,75 +294,23 @@ const claimCandidate = async (): Promise<void> => {
       </template>
     </Dialog>
 
-    <Dialog
+    <CardChoiceDialog
       :visible="Boolean(collection.pendingExchange)"
-      modal
+      v-model:selected-id="selectedCandidateId"
+      :cards="candidateCards"
+      :owned-card-ids="ownedCardIds"
+      :eyebrow="t('duplicateExchange.pickEyebrow', { count: candidateCount })"
+      :title="t('duplicateExchange.pickTitle')"
+      :description="t('duplicateExchange.pickText', { count: candidateCount })"
+      :claim-label="t('duplicateExchange.claim')"
+      :claiming-label="t('duplicateExchange.claiming')"
+      :owned-label="t('duplicateExchange.alreadyOwned')"
+      :not-owned-label="t('duplicateExchange.notOwned')"
+      :choose-label="chooseCandidateLabel"
+      :error="hasError ? t('duplicateExchange.error') : ''"
+      :loading="collection.isExchanging"
       :closable="false"
-      :close-on-escape="false"
-      :dismissable-mask="false"
-      class="w-[calc(100vw-1rem)] max-w-6xl"
-    >
-      <template #header>
-        <div>
-          <p class="text-xs font-black uppercase tracking-[0.16em] text-coral">
-            {{ t('duplicateExchange.pickEyebrow', { count: candidateCount }) }}
-          </p>
-          <h2 class="mt-1 text-2xl font-black">{{ t('duplicateExchange.pickTitle') }}</h2>
-        </div>
-      </template>
-      <p class="mb-3 hidden text-xs text-ink/60 sm:block">
-        {{ t('duplicateExchange.pickText', { count: candidateCount }) }}
-      </p>
-      <p v-if="hasError" class="mb-3 text-sm font-bold text-coral" role="alert">
-        {{ t('duplicateExchange.error') }}
-      </p>
-      <div
-        class="grid auto-cols-[8rem] grid-flow-col gap-2 overflow-x-auto pb-2 sm:grid-flow-row sm:grid-cols-5 sm:auto-cols-auto sm:gap-3"
-      >
-        <button
-          v-for="card in candidateCards"
-          :key="card.id"
-          type="button"
-          class="min-w-36 border-4 bg-paper p-2 text-left transition-all"
-          :class="
-            selectedCandidateId === card.id
-              ? 'border-coral shadow-[6px_6px_0_rgb(var(--color-coral)/0.3)]'
-              : 'border-ink/20 hover:border-ink'
-          "
-          :aria-label="t('duplicateExchange.chooseCandidate', { name: card.displayName })"
-          :aria-pressed="selectedCandidateId === card.id"
-          data-exchange-candidate
-          :data-player-id="card.id"
-          @click="selectedCandidateId = card.id"
-        >
-          <img
-            class="aspect-[2/3] w-full bg-white object-cover"
-            :src="card.image"
-            :alt="card.displayName"
-          />
-          <strong class="mt-2 block truncate text-sm">{{ card.displayName }}</strong>
-          <span
-            class="mt-1 inline-block text-[10px] font-black uppercase tracking-wide"
-            :class="isOwned(card.id) ? 'text-coral' : 'text-emerald-700'"
-          >
-            {{
-              t(isOwned(card.id) ? 'duplicateExchange.alreadyOwned' : 'duplicateExchange.notOwned')
-            }}
-          </span>
-        </button>
-      </div>
-      <template #footer>
-        <Button
-          :label="
-            t(collection.isExchanging ? 'duplicateExchange.claiming' : 'duplicateExchange.claim')
-          "
-          icon="pi pi-check"
-          :disabled="!selectedCandidateId"
-          :loading="collection.isExchanging"
-          data-exchange-claim
-          @click="claimCandidate"
-        />
-      </template>
-    </Dialog>
+      @claim="claimCandidate"
+    />
   </section>
 </template>

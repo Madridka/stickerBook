@@ -27,6 +27,10 @@ import type {
   RareShopState,
 } from '@/features/rareShop/types'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import {
+  notifyDailyTasksChanged,
+  recordDailyTaskEventsInTransaction,
+} from '@/features/dailyTasks/dailyTaskService'
 
 export interface RareBlisterPurchaseResult {
   status: RareBlisterPurchaseStatus
@@ -241,6 +245,7 @@ export const useRareShopStore = defineStore('rareShop', () => {
           database.packOpeningSessions,
           database.rareShop,
           database.goalCounters,
+          database.dailyTasks,
         ],
         async (): Promise<RareBlisterPurchaseResult & { state?: RareShopState }> => {
           const saved: RareShopState = normalizeState(await database.rareShop.get('current'))
@@ -320,11 +325,21 @@ export const useRareShopStore = defineStore('rareShop', () => {
             value: (counter?.value ?? 0) + 1,
             updatedAt: now,
           })
+          await recordDailyTaskEventsInTransaction(
+            [
+              { type: 'coins-spent', amount: offer.price },
+              { type: 'packs-purchased', amount: 1 },
+            ],
+            now,
+          )
           return { status: 'purchased', player: updatedPlayer, item, state: next }
         },
       )
       if (result.state) state.value = result.state
-      if (result.status === 'purchased') notifyGoalsChanged()
+      if (result.status === 'purchased') {
+        notifyGoalsChanged()
+        notifyDailyTasksChanged()
+      }
       return result
     } finally {
       pendingOfferId.value = null

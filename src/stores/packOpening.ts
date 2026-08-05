@@ -12,6 +12,10 @@ import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 import { selectCardV2 } from '@/utils/dropEngine'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import {
+  notifyDailyTasksChanged,
+  recordDailyTaskEventsInTransaction,
+} from '@/features/dailyTasks/dailyTaskService'
 
 export type AdvancePackOpeningResult = 'advanced' | 'completed' | 'unavailable'
 
@@ -154,11 +158,14 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
   const finalize = async (): Promise<boolean> =>
     database.transaction(
       'rw',
-      database.inventory,
-      database.cards,
-      database.duplicates,
-      database.packOpeningSessions,
-      database.goalCounters,
+      [
+        database.inventory,
+        database.cards,
+        database.duplicates,
+        database.packOpeningSessions,
+        database.goalCounters,
+        database.dailyTasks,
+      ],
       async (): Promise<boolean> => {
         const pending: PackOpeningSession | undefined =
           await database.packOpeningSessions.get('pending')
@@ -193,6 +200,10 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
           value: (counter?.value ?? 0) + 1,
           updatedAt: Date.now(),
         })
+        await recordDailyTaskEventsInTransaction([
+          { type: 'packs-opened', amount: 1 },
+          { type: 'cards-received', amount: pending.rewards.length },
+        ])
         return true
       },
     )
@@ -211,7 +222,10 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
       }
 
       const completed = await finalize()
-      if (completed) notifyGoalsChanged()
+      if (completed) {
+        notifyGoalsChanged()
+        notifyDailyTasksChanged()
+      }
       session.value = { ...session.value, currentIndex: session.value.rewards.length }
       return 'completed'
     } finally {

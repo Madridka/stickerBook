@@ -8,6 +8,7 @@ import { useGoalsStore } from '@/stores/goals'
 import Button from 'primevue/button'
 import ProgressBar from 'primevue/progressbar'
 import GoalCard from '@/components/goals/GoalCard.vue'
+import DailyTasksPanel from '@/components/dailyTasks/DailyTasksPanel.vue'
 
 type CategoryFilter = GoalCategory | 'all'
 
@@ -62,6 +63,8 @@ const navigate = async (goal: GoalRuntimeState): Promise<void> => {
         :show-value="false"
       />
     </header>
+
+    <DailyTasksPanel />
 
     <nav class="mt-5 flex flex-wrap gap-2" :aria-label="t('goals.filter')">
       <Button

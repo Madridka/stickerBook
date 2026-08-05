@@ -8,6 +8,10 @@ import { BLISTER_CONFIGS, CLICKER_CONFIG, DROP_ENGINE_CONFIG } from '@/data/main
 import { getPlayerAlbumById, getPlayerBlisterById } from '@/data/albumRegistry'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import {
+  notifyDailyTasksChanged,
+  recordDailyTaskEventsInTransaction,
+} from '@/features/dailyTasks/dailyTaskService'
 import { selectCardV2 } from '@/utils/dropEngine'
 import type {
   PackOpeningReward,
@@ -60,9 +64,7 @@ export const purchasePack = async (price: number): Promise<PurchasePackResult> =
 
   const result = await database.transaction(
     'rw',
-    database.player,
-    database.inventory,
-    database.goalCounters,
+    [database.player, database.inventory, database.goalCounters, database.dailyTasks],
     async (): Promise<PurchasePackResult> => {
       const savedPlayer: PlayerState | undefined = await database.player.get(PLAYER_STATE_ID)
       if (!savedPlayer || savedPlayer.coins < price) {
@@ -91,10 +93,17 @@ export const purchasePack = async (price: number): Promise<PurchasePackResult> =
         value: (counter?.value ?? 0) + 1,
         updatedAt: Date.now(),
       })
+      await recordDailyTaskEventsInTransaction([
+        { type: 'coins-spent', amount: price },
+        { type: 'packs-purchased', amount: 1 },
+      ])
       return { status: 'purchased', item, player }
     },
   )
-  if (result.status === 'purchased') notifyGoalsChanged()
+  if (result.status === 'purchased') {
+    notifyGoalsChanged()
+    notifyDailyTasksChanged()
+  }
   return result
 }
 
@@ -117,6 +126,7 @@ export const purchaseBlister = async (
       database.packOpeningSessions,
       database.blisterCooldowns,
       database.goalCounters,
+      database.dailyTasks,
     ],
     async (): Promise<PurchaseBlisterResult> => {
       const pendingSession: PackOpeningSession | undefined =
@@ -207,10 +217,20 @@ export const purchaseBlister = async (
         value: (counter?.value ?? 0) + 1,
         updatedAt: now,
       })
+      await recordDailyTaskEventsInTransaction(
+        [
+          { type: 'coins-spent', amount: blister.cost },
+          { type: 'packs-purchased', amount: 1 },
+        ],
+        now,
+      )
       return { status: 'purchased', item, player, session }
     },
   )
 
-  if (result.status === 'purchased') notifyGoalsChanged()
+  if (result.status === 'purchased') {
+    notifyGoalsChanged()
+    notifyDailyTasksChanged()
+  }
   return result
 }

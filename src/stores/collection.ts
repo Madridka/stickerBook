@@ -1,7 +1,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type DuplicateExchange } from '@/db/database'
-import { reconcileOrphanedDuplicates } from '@/db/stickerLifecycle'
+import { reconcileOrphanedDuplicates, storeCardInstance } from '@/db/stickerLifecycle'
 import type {
   AlbumId,
   AlbumProgress,
@@ -11,9 +11,12 @@ import type {
 } from '@/types'
 import { getAlbumById, getPlayerAlbumById } from '@/data/albumRegistry'
 import { BLISTER_CONFIGS, DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
-import { createId } from '@/utils/createId'
 import { createDuplicateExchangeCandidates } from '@/utils/createDuplicateExchangeCandidates'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import {
+  notifyDailyTasksChanged,
+  recordDailyTaskEventsInTransaction,
+} from '@/features/dailyTasks/dailyTaskService'
 
 export type BeginDuplicateExchangeResult = 'started' | 'invalid-selection' | 'pending-exists'
 export type ClaimDuplicateExchangeResult = 'claimed' | 'invalid-choice'
@@ -100,38 +103,6 @@ export const useCollectionStore = defineStore('collection', () => {
       }),
     )
     isLoaded.value = true
-  }
-
-  // Сохраняет экземпляр в контексте журнала и исключает межальбомные конфликты id.
-  const storeCardInstance = async (
-    albumId: AlbumId,
-    playerId: string,
-    instanceId: string = createId(),
-  ): Promise<StickerInstance> => {
-    const targetAlbum = getPlayerAlbumById(albumId)
-    if (!targetAlbum?.cards.some(({ id }): boolean => id === playerId)) {
-      throw new Error(`Unknown or inaccessible card ${albumId}:${playerId}`)
-    }
-    const instance: StickerInstance = {
-      id: instanceId,
-      albumId,
-      playerId,
-      quality: 100,
-      location: 'inventory',
-    }
-    const card: StickerInstance | undefined = await database.cards
-      .where('[albumId+playerId]')
-      .equals([albumId, playerId])
-      .filter(({ location }): boolean => location !== 'deleted')
-      .first()
-    if (!card) {
-      await database.cards.add(instance)
-      return instance
-    }
-
-    const duplicate: StickerInstance = { ...instance, location: 'duplicate' }
-    await database.duplicates.add(duplicate)
-    return duplicate
   }
 
   const addCard = async (
@@ -245,13 +216,28 @@ export const useCollectionStore = defineStore('collection', () => {
       placement?: StickerPlacement
     },
   ): Promise<void> => {
-    await database.cards.update(instanceId, changes)
+    const current: CollectionItem | undefined = items.value.find(
+      ({ instance }): boolean => instance.id === instanceId,
+    )
+    const isNewPlacement: boolean =
+      Boolean(current) && current?.instance.location !== 'album' && changes.location === 'album'
+    await database.transaction(
+      'rw',
+      [database.cards, database.dailyTasks],
+      async (): Promise<void> => {
+        await database.cards.update(instanceId, changes)
+        if (isNewPlacement) {
+          await recordDailyTaskEventsInTransaction([{ type: 'cards-placed', amount: 1 }])
+        }
+      },
+    )
     items.value = items.value.map(
       (item): CollectionItem =>
         item.instance.id === instanceId
           ? { ...item, instance: { ...item.instance, ...changes } }
           : item,
     )
+    if (isNewPlacement) notifyDailyTasksChanged()
   }
 
   const setAlbumDisplay = async (instanceId: string, slotId: string): Promise<void> => {
@@ -331,7 +317,6 @@ export const useCollectionStore = defineStore('collection', () => {
     getCollectedCardIds,
     load,
     setAlbumDisplay,
-    storeCardInstance,
     updateCard,
   }
 })

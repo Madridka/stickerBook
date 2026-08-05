@@ -3,6 +3,7 @@ import album from '@/lang/ru/album.json'
 import app from '@/lang/ru/app.json'
 import common from '@/lang/ru/common.json'
 import duplicateExchange from '@/lang/ru/duplicateExchange.json'
+import dailyTasks from '@/lang/ru/dailyTasks.json'
 import home from '@/lang/ru/home.json'
 import goals from '@/lang/ru/goals.json'
 import packOpening from '@/lang/ru/packOpening.json'
@@ -18,6 +19,7 @@ const messages: {
     app: typeof app
     common: typeof common
     duplicateExchange: typeof duplicateExchange
+    dailyTasks: typeof dailyTasks
     home: typeof home
     goals: typeof goals
     packOpening: typeof packOpening
@@ -32,6 +34,7 @@ const messages: {
     app,
     common,
     duplicateExchange,
+    dailyTasks,
     home,
     goals,
     packOpening,

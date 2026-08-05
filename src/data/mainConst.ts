@@ -19,13 +19,13 @@ export const PACK_PRICE: number = 20
 export const CARDS_PER_PACK: number = 5
 
 /** Стоимость отдельного блистера доступной эпохи журнала «История Томи». */
-export const KDV_BLISTER_COST: number = 5
+export const KDV_BLISTER_COST: number = 50
 
 /** Количество карточек в одном блистере журнала «История Томи». */
 export const KDV_BLISTER_CARD_COUNT: number = 1
 
 /** Период недоступности блистера «История Томи» после покупки. */
-export const KDV_BLISTER_COOLDOWN_MS: number = 50_000
+export const KDV_BLISTER_COOLDOWN_MS: number = 4 * 60 * 60 * 1_000
 
 /** Настройки версии алгоритма выпадения и базового веса карточки. */
 export const DROP_ENGINE_CONFIG = {

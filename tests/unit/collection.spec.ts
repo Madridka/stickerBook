@@ -1,6 +1,6 @@
 import { createPinia, setActivePinia } from 'pinia'
 import type { StickerInstance } from '@/types'
-import cards from '@/data/wc-26/catalog'
+import { getPlayerAlbums } from '@/data/albumRegistry'
 
 const databaseState = vi.hoisted(() => ({
   cards: [] as StickerInstance[],
@@ -60,7 +60,11 @@ describe('collection store', () => {
     const collection = useCollectionStore()
     await collection.load()
 
-    expect(collection.total).toBe(new Set(cards.map(({ id }) => id)).size)
+    const totalCards: number = getPlayerAlbums().reduce(
+      (total, album): number => total + album.cards.length,
+      0,
+    )
+    expect(collection.total).toBe(totalCards)
     expect(collection.collectedTotal).toBe(2)
   })
 })

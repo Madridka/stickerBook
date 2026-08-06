@@ -115,8 +115,15 @@ export const purchaseBlister = async (
 ): Promise<PurchaseBlisterResult> => {
   const blister = getPlayerBlisterById(blisterId)
   if (!blister) return { status: 'unknown-blister' }
-  const album = getPlayerAlbumById(blister.albumId)
-  if (!album?.cards.length || !album.catalogs.length) return { status: 'empty-album' }
+  const albums = blister.albumIds
+    .map((albumId) => getPlayerAlbumById(albumId))
+    .filter((album) => album !== undefined)
+  if (
+    albums.length !== blister.albumIds.length ||
+    albums.some((album) => !album.cards.length || !album.catalogs.length)
+  ) {
+    return { status: 'empty-album' }
+  }
 
   const result: PurchaseBlisterResult = await database.transaction(
     'rw',
@@ -151,19 +158,18 @@ export const purchaseBlister = async (
         return { status: 'insufficient-funds', player: savedPlayer }
       }
 
-      const activeCards: StickerInstance[] = await database.cards
-        .where('albumId')
-        .equals(album.id)
-        .filter(({ location }): boolean => location !== 'deleted')
-        .toArray()
+      const albumIds: Set<string> = new Set(blister.albumIds)
+      const activeCards: StickerInstance[] = (await database.cards.toArray()).filter(
+        ({ albumId, location }): boolean => albumIds.has(albumId) && location !== 'deleted',
+      )
       const ownedCardIds: Set<string> = new Set(
-        activeCards.map(({ playerId }): string => playerId),
+        activeCards.map(({ albumId, playerId }): string => `${albumId}:${playerId}`),
       )
       const rewards: PackOpeningReward[] = Array.from(
         { length: blister.cardCount },
         (): PackOpeningReward => {
           const card: CardDefinition = selectCardV2({
-            catalogs: album.catalogs,
+            catalogs: albums.flatMap(({ catalogs }) => catalogs),
             packConfig: {
               cardsPerPack: blister.cardCount,
               rarityOdds: blister.rarityOdds,
@@ -172,11 +178,12 @@ export const purchaseBlister = async (
             defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
             randomSource: Math.random,
           }) as CardDefinition
-          const isDuplicate: boolean = ownedCardIds.has(card.id)
-          ownedCardIds.add(card.id)
+          const cardKey: string = `${card.albumId}:${card.id}`
+          const isDuplicate: boolean = ownedCardIds.has(cardKey)
+          ownedCardIds.add(cardKey)
           return {
             instanceId: createId(),
-            albumId: album.id,
+            albumId: card.albumId,
             playerId: card.id,
             isDuplicate,
           }
@@ -186,14 +193,14 @@ export const purchaseBlister = async (
         id: createId(),
         type: 'pack',
         packId: blister.id,
-        albumId: album.id,
+        albumId: blister.albumId,
         createdAt: now,
       }
       const session: PackOpeningSession = {
         id: 'pending',
         packId: item.id,
         blisterId: blister.id,
-        albumId: album.id,
+        albumId: rewards[0]?.albumId ?? blister.albumId,
         rewards,
         currentIndex: 0,
         animationComplete: false,

@@ -9,18 +9,20 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
   {
     id: 'logo-clicks-30',
     group: 'activity',
-    event: 'logo-clicked',
+    event: 'coins-earned',
     target: 30,
     titleKey: 'dailyTasks.tasks.logoClicks30',
     icon: 'pi pi-bolt',
+    route: { name: 'home', hash: '#goal-clicker' },
   },
   {
     id: 'logo-clicks-50',
     group: 'activity',
-    event: 'logo-clicked',
+    event: 'coins-earned',
     target: 50,
     titleKey: 'dailyTasks.tasks.logoClicks50',
     icon: 'pi pi-bolt',
+    route: { name: 'home', hash: '#goal-clicker' },
   },
   {
     id: 'earn-coins-35',
@@ -29,6 +31,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 35,
     titleKey: 'dailyTasks.tasks.earnCoins35',
     icon: 'pi pi-wallet',
+    route: { name: 'home', hash: '#goal-clicker' },
   },
   {
     id: 'restore-energy-15',
@@ -37,6 +40,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 15,
     titleKey: 'dailyTasks.tasks.restoreEnergy15',
     icon: 'pi pi-sync',
+    route: { name: 'home', hash: '#goal-clicker' },
   },
   {
     id: 'spend-coins-20',
@@ -45,6 +49,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 20,
     titleKey: 'dailyTasks.tasks.spendCoins20',
     icon: 'pi pi-shopping-bag',
+    route: { name: 'shop' },
   },
   {
     id: 'spend-coins-40',
@@ -53,6 +58,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 40,
     titleKey: 'dailyTasks.tasks.spendCoins40',
     icon: 'pi pi-shopping-bag',
+    route: { name: 'shop' },
   },
   {
     id: 'purchase-pack-1',
@@ -61,6 +67,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 1,
     titleKey: 'dailyTasks.tasks.purchasePack1',
     icon: 'pi pi-shopping-cart',
+    route: { name: 'shop' },
   },
   {
     id: 'open-pack-1',
@@ -69,6 +76,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 1,
     titleKey: 'dailyTasks.tasks.openPack1',
     icon: 'pi pi-box',
+    route: { name: 'shop' },
   },
   {
     id: 'open-packs-2',
@@ -77,6 +85,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 2,
     titleKey: 'dailyTasks.tasks.openPacks2',
     icon: 'pi pi-box',
+    route: { name: 'shop' },
   },
   {
     id: 'receive-cards-5',
@@ -85,6 +94,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 5,
     titleKey: 'dailyTasks.tasks.receiveCards5',
     icon: 'pi pi-images',
+    route: { name: 'shop' },
   },
   {
     id: 'receive-cards-10',
@@ -93,6 +103,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 10,
     titleKey: 'dailyTasks.tasks.receiveCards10',
     icon: 'pi pi-images',
+    route: { name: 'shop' },
   },
   {
     id: 'place-cards-2',
@@ -101,6 +112,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 2,
     titleKey: 'dailyTasks.tasks.placeCards2',
     icon: 'pi pi-book',
+    route: { name: 'collection', query: { filter: 'ready' } },
   },
   {
     id: 'place-cards-4',
@@ -109,6 +121,7 @@ export const dailyTaskDefinitions: readonly DailyTaskDefinition[] = [
     target: 4,
     titleKey: 'dailyTasks.tasks.placeCards4',
     icon: 'pi pi-book',
+    route: { name: 'collection', query: { filter: 'ready' } },
   },
 ] as const
 
@@ -124,4 +137,3 @@ export const DAILY_TASK_GROUPS: readonly DailyTaskGroup[] = [
   'economy',
   'collection',
 ]
-

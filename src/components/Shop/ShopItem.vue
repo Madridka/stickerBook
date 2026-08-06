@@ -1,30 +1,27 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { CARDS_PER_PACK } from '@/config/gameBalance'
 import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import { formatCountdown } from '@/utils/formatCountdown'
+import type { BlisterDefinition } from '@/types'
 
 import Button from 'primevue/button'
 import SelectButton from 'primevue/selectbutton'
+import BlisterShopCard from '@/components/Shop/BlisterShopCard.vue'
 
-type ShopSection = 'store' | 'packs'
+type ShopSection = 'store' | 'packs' | 'free'
 
 interface Props {
-  price: number
-  canBuy: boolean
-  purchasing?: boolean
+  blisters: BlisterDefinition[]
+  playerCoins: number
+  purchasingById: Readonly<Record<string, boolean>>
+  cooldownRemainingById: Readonly<Record<string, number>>
+  blistersLoaded: boolean
   cooldownRemainingMs: number
   miniGameLoaded: boolean
   ownedPackIds: string[]
   ownedPackDetails: Record<string, { label: string; cardCount: number }>
   inventoryLoaded: boolean
-  kdvPrice: number
-  kdvCanBuy: boolean
-  kdvPurchasing: boolean
-  kdvCooldownRemainingMs: number
-  kdvLoaded: boolean
-  kdvCardCount: number
 }
 
 interface ShopSectionOption {
@@ -34,40 +31,28 @@ interface ShopSectionOption {
   count?: number
 }
 
-const props: Props = withDefaults(defineProps<Props>(), { purchasing: false })
-const emit = defineEmits<{ purchase: []; 'purchase-kdv': []; play: []; open: [] }>()
+const props = defineProps<Props>()
+const emit = defineEmits<{
+  purchase: [blisterId: string]
+  play: []
+  open: [packId: string]
+}>()
 const { t } = useI18n()
 const activeSection: Ref<ShopSection> = ref('store')
-
-const formattedPrice: ComputedRef<string> = computed(() => props.price.toLocaleString('ru-RU'))
-const cooldownText: ComputedRef<string> = computed((): string =>
+const freeCooldownText: ComputedRef<string> = computed((): string =>
   formatCountdown(props.cooldownRemainingMs),
 )
-const cooldownPeriodText: string = formatCountdown(PACK_HUNT_CONFIG.cooldownMs)
-const kdvCooldownText: ComputedRef<string> = computed((): string =>
-  formatCountdown(props.kdvCooldownRemainingMs),
-)
-const formattedKdvPrice: ComputedRef<string> = computed(() =>
-  props.kdvPrice.toLocaleString('ru-RU'),
-)
+const freeCooldownPeriodText: string = formatCountdown(PACK_HUNT_CONFIG.cooldownMs)
 const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
-  {
-    value: 'store',
-    label: t('shop.sections.store'),
-    icon: 'pi pi-shopping-bag',
-  },
+  { value: 'store', label: t('shop.sections.store'), icon: 'pi pi-shopping-bag' },
   {
     value: 'packs',
     label: t('shop.sections.packs'),
     icon: 'pi pi-box',
     count: props.ownedPackIds.length,
   },
+  { value: 'free', label: t('shop.sections.free'), icon: 'pi pi-bolt' },
 ])
-
-const handlePurchase = (): void => emit('purchase')
-const handleKdvPurchase = (): void => emit('purchase-kdv')
-const handlePlay = (): void => emit('play')
-const handleOpen = (): void => emit('open')
 </script>
 
 <template>
@@ -98,160 +83,54 @@ const handleOpen = (): void => emit('open')
 
     <div
       v-if="activeSection === 'store'"
-      class="shop-items-grid mt-3 grid min-h-0 flex-1 auto-rows-max grid-cols-2 place-content-start gap-3 overflow-y-auto px-1 pb-2 sm:mt-4 sm:grid-cols-3 sm:place-content-center sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0"
+      class="mt-3 grid min-h-0 flex-1 auto-rows-max grid-cols-2 gap-3 overflow-y-auto px-1 pb-2 sm:mt-4 sm:grid-cols-3 lg:grid-cols-5"
       role="tabpanel"
     >
-      <article
-        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] snap-start flex-col justify-self-end overflow-hidden bg-ink p-3 text-paper shadow-[4px_4px_0_rgb(var(--color-coral)/0.42)] before:pointer-events-none before:absolute before:h-[42%] before:-rotate-[18deg] before:bg-coral/[.92] before:[inset:18%_-45%_auto_28%] before:content-[''] after:pointer-events-none after:absolute after:h-[12%] after:-rotate-[18deg] after:border-y after:border-paper/[.22] after:[inset:42%_-28%_auto_-38%] after:content-[''] sm:p-4 sm:shadow-[6px_6px_0_rgb(var(--color-coral)/0.42)]"
-      >
-        <div class="relative z-20 flex shrink-0 items-start justify-between gap-2">
-          <p class="text-[9px] font-black uppercase tracking-[0.2em] text-coral sm:text-[10px]">
-            {{ t('shop.paidKicker') }}
-          </p>
-          <span
-            class="border border-paper/25 bg-paper/10 px-1.5 py-0.5 text-[8px] font-black uppercase tracking-wider sm:text-[9px]"
-          >
-            {{ t('shop.packContents') }}
-          </span>
-        </div>
-
-        <div
-          class="relative z-10 flex min-h-0 flex-1 items-center justify-center overflow-hidden py-1"
-        >
-          <div
-            class="relative flex aspect-[9/14] w-[min(58%,5.5rem)] -rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-gold)),rgb(var(--color-coral))_55%,#9e2e51)] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-[''] sm:w-[min(78%,8.35rem)]"
-          >
-            <span
-              class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
-              >{{ t('shop.pointsPackName') }}</span
-            >
-            <strong
-              class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
-              >{{ t('shop.wc-26') }}</strong
-            >
-          </div>
-        </div>
-
-        <div class="relative z-10">
-          <h2 class="text-base font-black leading-none tracking-tight sm:text-xl">
-            {{ t('shop.paidTitle') }}
-          </h2>
-          <p class="mt-1 hidden text-[10px] leading-snug text-paper/65 sm:block">
-            {{ t('shop.paidDescription') }}
-          </p>
-          <Button
-            class="shop-card-button mt-2 w-full !border-paper !bg-paper !text-ink hover:!border-coral hover:!bg-coral hover:!text-white sm:mt-3 sm:text-sm"
-            :label="t('shop.buyFor', { price: formattedPrice })"
-            icon="pi pi-shopping-bag"
-            :disabled="!canBuy || purchasing"
-            :loading="purchasing"
-            type="button"
-            @click="handlePurchase"
-          />
-        </div>
-      </article>
-
-      <article
-        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] snap-start flex-col justify-self-start overflow-hidden bg-[linear-gradient(160deg,#192c52,#5e285d_58%,#d65735)] p-3 text-paper shadow-[4px_4px_0_rgb(var(--color-gold)/0.5)] sm:p-4 sm:shadow-[6px_6px_0_rgb(var(--color-gold)/0.5)]"
-      >
-        <div class="relative z-10 flex items-start justify-between gap-2">
-          <p class="text-[9px] font-black uppercase tracking-[0.2em] text-gold sm:text-[10px]">
-            {{ t('shop.kdv.kicker') }}
-          </p>
-          <span class="border border-paper/25 px-1.5 py-0.5 text-[8px] font-black uppercase">
-            {{ t('shop.kdv.contents', { count: kdvCardCount }) }}
-          </span>
-        </div>
-        <div class="relative z-10 flex min-h-0 flex-1 items-center justify-center">
-          <div
-            class="flex aspect-[9/14] w-[min(62%,8rem)] rotate-2 flex-col items-center justify-center border border-white/60 bg-[linear-gradient(145deg,#ea713d,#752957_52%,#1d3257)] text-white shadow-xl"
-          >
-            <span class="text-[10px] font-black uppercase tracking-[0.2em]">
-              {{ t('shop.pointsPackName') }}
-            </span>
-            <strong class="text-3xl font-black leading-none">{{ t('shop.kdv.shortName') }}</strong>
-          </div>
-        </div>
-        <div class="relative z-10">
-          <h2 class="text-base font-black leading-none sm:text-xl">{{ t('shop.kdv.title') }}</h2>
-          <p class="mt-1 text-[9px] font-bold leading-snug text-paper/70 sm:text-[10px]">
-            {{
-              kdvCooldownRemainingMs > 0
-                ? t('shop.kdv.cooldown', { time: kdvCooldownText })
-                : t('shop.kdv.description')
-            }}
-          </p>
-          <Button
-            class="shop-card-button mt-2 w-full !border-paper !bg-paper !text-ink hover:!border-gold hover:!bg-gold sm:mt-3 sm:text-sm"
-            :label="t('shop.buyFor', { price: formattedKdvPrice })"
-            icon="pi pi-gift"
-            :disabled="
-              !kdvLoaded || !kdvCanBuy || kdvPurchasing || kdvCooldownRemainingMs > 0
-            "
-            :loading="kdvPurchasing"
-            type="button"
-            @click="handleKdvPurchase"
-          />
-        </div>
-      </article>
-
-      <article
-        class="relative isolate flex aspect-[9/16] w-full max-w-[14rem] snap-start flex-col justify-self-start overflow-hidden bg-mint p-3 text-ink shadow-[4px_4px_0_rgb(var(--color-gold)/0.55)] before:pointer-events-none before:absolute before:h-[58%] before:rotate-[22deg] before:bg-gold/[.78] before:[inset:-10%_-60%_auto_10%] before:content-[''] after:pointer-events-none after:absolute after:-right-[12%] after:top-[42%] after:aspect-square after:w-[70%] after:rounded-full after:border after:border-ink/[.14] after:shadow-[0_0_0_1rem_rgb(var(--color-paper)/0.12),0_0_0_2rem_rgb(var(--color-paper)/0.08)] after:content-[''] sm:p-4 sm:shadow-[6px_6px_0_rgb(var(--color-gold)/0.55)]"
-      >
-        <div class="relative z-20 flex shrink-0 items-start justify-between gap-2">
-          <p class="text-[9px] font-black uppercase tracking-[0.2em] text-ink/60 sm:text-[10px]">
-            {{ t('shop.freeKicker') }}
-          </p>
-          <span
-            class="border border-ink/20 bg-paper/35 px-1.5 py-0.5 text-[8px] font-black uppercase tracking-wider sm:text-[9px]"
-          >
-            {{ t('shop.packContents') }}
-          </span>
-        </div>
-
-        <div
-          class="relative z-10 flex min-h-0 flex-1 items-center justify-center overflow-hidden py-1 sm:py-2"
-        >
-          <div
-            class="relative flex aspect-[9/14] w-[min(58%,5.5rem)] rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-ink)),#284f58_60%,rgb(var(--color-coral)))] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-[''] sm:w-[min(78%,8.35rem)]"
-          >
-            <span
-              class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
-              >{{ t('shop.free') }}</span
-            >
-            <strong
-              class="relative z-[1] text-[clamp(.9rem,3.2vw,1.25rem)] font-[950] leading-none tracking-[-.06em] sm:text-[clamp(1rem,4vw,2.2rem)] sm:tracking-[-.08em]"
-              >{{ t('shop.itemType') }}</strong
-            >
-            <span
-              class="relative z-[1] mt-[.35rem] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em] opacity-[.72]"
-              >{{ t('shop.cooldownPack', { time: cooldownPeriodText }) }}</span
-            >
-          </div>
-        </div>
-
-        <div class="relative z-10">
-          <h2 class="text-base font-black leading-none tracking-tight sm:text-xl">
-            {{ t('shop.freeTitle') }}
-          </h2>
-          <p class="mt-1 text-[9px] font-bold leading-snug text-ink/55 sm:text-[10px]">
-            {{
-              cooldownRemainingMs === 0
-                ? t('shop.gameAvailable')
-                : t('shop.cooldownRemaining', { time: cooldownText })
-            }}
-          </p>
-          <Button
-            class="shop-card-button mt-2 w-full sm:mt-3 sm:text-sm"
-            :label="t('shop.getFree')"
-            icon="pi pi-bolt"
-            :disabled="!miniGameLoaded || cooldownRemainingMs > 0"
-            type="button"
-            @click="handlePlay"
-          />
-        </div>
-      </article>
+      <BlisterShopCard
+        v-for="blister in blisters"
+        :key="blister.id"
+        :blister="blister"
+        :can-buy="playerCoins >= blister.cost"
+        :purchasing="purchasingById[blister.id] === true"
+        :cooldown-remaining-ms="cooldownRemainingById[blister.id] ?? 0"
+        :loaded="blistersLoaded"
+        @purchase="emit('purchase', blister.id)"
+      />
     </div>
+
+    <section
+      v-else-if="activeSection === 'free'"
+      class="mt-3 flex min-h-0 flex-1 items-center justify-center overflow-y-auto border border-dashed border-ink/20 bg-mint/15 p-5 sm:mt-4"
+      role="tabpanel"
+    >
+      <article class="w-full max-w-md border-2 border-ink bg-paper p-5 text-center shadow-[6px_6px_0_rgb(var(--color-gold)/0.6)]">
+        <span class="mx-auto grid size-14 place-items-center rounded-full bg-mint text-2xl text-ink">
+          <i class="pi pi-bolt" aria-hidden="true" />
+        </span>
+        <p class="mt-3 text-[10px] font-black uppercase tracking-[0.18em] text-coral">
+          {{ t('shop.freeKicker') }}
+        </p>
+        <h2 class="mt-1 text-2xl font-black">{{ t('shop.freeTitle') }}</h2>
+        <p class="mt-2 text-sm text-ink/60">
+          {{
+            cooldownRemainingMs === 0
+              ? t('shop.gameAvailable')
+              : t('shop.cooldownRemaining', { time: freeCooldownText })
+          }}
+        </p>
+        <p class="mt-1 text-xs font-bold text-ink/45">
+          {{ t('shop.cooldownPack', { time: freeCooldownPeriodText }) }}
+        </p>
+        <Button
+          class="mt-4 w-full"
+          :label="t('shop.getFree')"
+          icon="pi pi-bolt"
+          :disabled="!miniGameLoaded || cooldownRemainingMs > 0"
+          type="button"
+          @click="emit('play')"
+        />
+      </article>
+    </section>
 
     <section
       v-else
@@ -263,103 +142,49 @@ const handleOpen = (): void => emit('open')
           <p class="text-[10px] font-black uppercase tracking-[0.18em] text-coral">
             {{ t('shop.inventory') }}
           </p>
-          <h2 class="mt-0.5 text-xl font-black tracking-tight sm:text-2xl">
-            {{ t('shop.inventoryTitle') }}
-          </h2>
+          <h2 class="mt-0.5 text-xl font-black sm:text-2xl">{{ t('shop.inventoryTitle') }}</h2>
           <p class="mt-1 hidden text-xs text-ink/55 sm:block">{{ t('shop.inventoryText') }}</p>
         </div>
-        <strong class="text-3xl font-black leading-none tabular-nums sm:text-4xl">
-          {{ ownedPackIds.length }}
-        </strong>
+        <strong class="text-3xl font-black tabular-nums sm:text-4xl">{{ ownedPackIds.length }}</strong>
       </div>
 
-      <div
-        v-if="!inventoryLoaded"
-        class="flex min-h-52 items-center justify-center text-sm font-bold text-ink/45"
-      >
+      <div v-if="!inventoryLoaded" class="flex min-h-52 items-center justify-center text-sm font-bold text-ink/45">
         <i class="pi pi-spin pi-spinner mr-2" />
         {{ t('shop.inventoryLoading') }}
       </div>
-
-      <div
-        v-else-if="ownedPackIds.length"
-        class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-      >
+      <div v-else-if="ownedPackIds.length" class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         <article
           v-for="(packId, index) in ownedPackIds"
           :key="packId"
           class="border border-ink/15 bg-ink p-2.5 text-paper shadow-[4px_4px_0_rgb(var(--color-mint)/0.6)]"
         >
           <div class="flex aspect-[9/11] items-center justify-center bg-paper/5">
-            <div
-              class="relative flex aspect-[9/14] w-[min(62%,5.75rem)] -rotate-3 flex-col items-center justify-center overflow-hidden border border-white/[.55] bg-[linear-gradient(145deg,rgb(var(--color-gold)),rgb(var(--color-coral))_55%,#9e2e51)] text-white shadow-[0_12px_22px_rgb(0_0_0/.25)] [clip-path:polygon(4%_0,96%_0,100%_3%,97%_6%,100%_9%,97%_12%,100%_15%,97%_18%,100%_21%,97%_24%,100%_27%,97%_30%,100%_33%,97%_36%,100%_39%,97%_42%,100%_45%,97%_48%,100%_51%,97%_54%,100%_57%,97%_60%,100%_63%,97%_66%,100%_69%,97%_72%,100%_75%,97%_78%,100%_81%,97%_84%,100%_87%,97%_90%,100%_94%,96%_100%,4%_100%,0_94%,3%_90%,0_87%,3%_84%,0_81%,3%_78%,0_75%,3%_72%,0_69%,3%_66%,0_63%,3%_60%,0_57%,3%_54%,0_51%,3%_48%,0_45%,3%_42%,0_39%,3%_36%,0_33%,3%_30%,0_27%,3%_24%,0_21%,3%_18%,0_15%,3%_12%,0_9%,3%_6%,0_3%)] before:absolute before:inset-x-0 before:top-[6%] before:h-0.5 before:border-y before:border-dashed before:border-white/[.58] before:content-[''] after:absolute after:h-[28%] after:-rotate-[28deg] after:bg-white/[.18] after:[inset:auto_-45%_12%_24%] after:content-['']"
-            >
-              <span
-                class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
-                >{{ t('shop.ownedPackBrand') }}</span
-              >
-              <strong
-                class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
-                >{{ ownedPackDetails[packId]?.label ?? t('shop.wc-26') }}</strong
-              >
-              <span
-                class="relative z-[1] mt-[.35rem] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em] opacity-[.72]"
-                >{{
-                  t('shop.ownedPackContents', {
-                    count: ownedPackDetails[packId]?.cardCount ?? CARDS_PER_PACK,
-                  })
-                }}</span
-              >
+            <div class="flex aspect-[9/14] w-[62%] -rotate-3 flex-col items-center justify-center border border-white/50 bg-[linear-gradient(145deg,#12243d,#14754a_55%,#db5a3c)] px-1 text-center text-white shadow-xl">
+              <span class="text-[8px] font-black tracking-[.14em]">{{ t('shop.ownedPackBrand') }}</span>
+              <strong class="mt-1 break-words text-sm font-black leading-tight">
+                {{ ownedPackDetails[packId]?.label ?? t('shop.wc-26') }}
+              </strong>
+              <span class="mt-1 text-[8px] font-black opacity-70">
+                {{ t('shop.ownedPackContents', { count: ownedPackDetails[packId]?.cardCount ?? 0 }) }}
+              </span>
             </div>
           </div>
-          <p class="mt-2 truncate text-xs font-black">
-            {{ t('shop.ownedPackNumber', { number: index + 1 }) }}
-          </p>
+          <p class="mt-2 truncate text-xs font-black">{{ t('shop.ownedPackNumber', { number: index + 1 }) }}</p>
           <Button
-            class="mt-2 w-full !border-paper !bg-paper !text-ink text-xs hover:!border-coral hover:!bg-coral hover:!text-white"
+            class="mt-2 w-full !border-paper !bg-paper !text-ink text-xs"
             :label="t('shop.openOwnedPack')"
             icon="pi pi-gift"
             size="small"
             type="button"
-            @click="handleOpen"
+            @click="emit('open', packId)"
           />
         </article>
       </div>
-
-      <div
-        v-else
-        class="flex min-h-52 flex-col items-center justify-center border border-dashed border-ink/20 p-5 text-center"
-      >
-        <span class="flex size-12 items-center justify-center rounded-full bg-ink/5">
-          <i class="pi pi-box text-xl text-ink/30" />
-        </span>
+      <div v-else class="flex min-h-52 flex-col items-center justify-center border border-dashed border-ink/20 p-5 text-center">
+        <i class="pi pi-box text-3xl text-ink/25" />
         <strong class="mt-3 text-sm">{{ t('shop.emptyPacksTitle') }}</strong>
         <p class="mt-1 max-w-sm text-xs text-ink/50">{{ t('shop.emptyPacksText') }}</p>
       </div>
     </section>
   </div>
 </template>
-
-<style scoped>
-@media (max-width: 639px) {
-  .shop-card-button {
-    min-height: 2rem;
-    gap: 0.25rem;
-    padding: 0.4rem 0.45rem;
-    font-size: 0.625rem;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .shop-card-button :deep(.p-button-label) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .shop-card-button :deep(.p-button-icon) {
-    flex-shrink: 0;
-    font-size: 0.7rem;
-  }
-}
-</style>

@@ -22,7 +22,7 @@ const testState = vi.hoisted(() => ({
   collection: {
     albumProgress: 0,
     collectedTotal: 0,
-    total: 960,
+    total: 1680,
     isLoaded: true,
   },
   recommendation: {
@@ -95,7 +95,7 @@ describe('HomeView', () => {
     testState.inventory.packCount = 0
     testState.goals.overallProgress = 0
     testState.collection.collectedTotal = 0
-    testState.collection.total = 960
+    testState.collection.total = 1680
     testState.dailyTasks.tasks = []
   })
 
@@ -106,7 +106,7 @@ describe('HomeView', () => {
     expect(testState.push).not.toHaveBeenCalled()
   })
 
-  it('заменяет текущую цель дневной тройкой, пока осталось незавершённое задание', () => {
+  it('показывает дневную тройку после совета и игровой зоны', () => {
     testState.dailyTasks.tasks = [
       {
         taskId: 'logo-clicks-30',
@@ -143,18 +143,21 @@ describe('HomeView', () => {
       },
     ]
     const wrapper = mountHome()
-    expect(wrapper.get('[data-home-daily-tasks]').text()).toContain('Нажми на логотип 30 раз')
-    expect(wrapper.find('[data-current-goal]').exists()).toBe(false)
+    expect(wrapper.get('[data-home-daily-tasks]').text()).toContain('Заработай 30 голов')
+    expect(wrapper.find('[data-current-goal]').exists()).toBe(true)
+    expect(wrapper.get('[data-clicker]').element.compareDocumentPosition(
+      wrapper.get('[data-home-daily-tasks]').element,
+    ) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
   })
 
-  it('возвращает текущую цель после выполнения всей дневной тройки', () => {
+  it('оставляет выполненную дневную тройку доступной ниже игровой зоны', () => {
     testState.dailyTasks.tasks = [
       { status: 'completed' },
       { status: 'reward-claimed' },
       { status: 'completed' },
     ]
     const wrapper = mountHome()
-    expect(wrapper.find('[data-home-daily-tasks]').exists()).toBe(false)
+    expect(wrapper.find('[data-home-daily-tasks]').exists()).toBe(true)
     expect(wrapper.get('[data-current-goal]').text()).toContain('Забивай голы')
   })
 
@@ -171,6 +174,16 @@ describe('HomeView', () => {
   it('не выводит недоступные быстрые действия', () => {
     const wrapper = mountHome()
     expect(wrapper.find('[data-quick-action]').exists()).toBe(false)
+  })
+
+  it('показывает не больше двух советов', () => {
+    testState.quickActions = [
+      { id: 'first', titleKey: 'home.quick.openPack', priority: 1_000 },
+      { id: 'second', titleKey: 'home.quick.exchange', priority: 800 },
+      { id: 'third', titleKey: 'home.quick.prepare', priority: 600 },
+    ]
+    const wrapper = mountHome()
+    expect(wrapper.findAll('[data-quick-action]')).toHaveLength(2)
   })
 
   it('показывает компактный блок ближайших целей', () => {

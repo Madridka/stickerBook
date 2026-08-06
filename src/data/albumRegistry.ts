@@ -7,8 +7,9 @@ import wc26Cards, { catalogs as wc26Catalogs } from './wc-26/catalog'
 import wc26Contents from './wc-26/contents'
 import ucl2627Geometry from './ucl-26-27/album'
 import ucl2627Cards, { catalogs as ucl2627Catalogs } from './ucl-26-27/catalog'
+import ucl2627Contents from './ucl-26-27/contents'
 import tomskGeometry from './tomsk/album'
-import tomskCards, { catalogs as tomskCatalogs } from './tomsk/5. kdv (2022)/catalog'
+import tomskCards, { catalogs as tomskCatalogs } from './tomsk/catalog'
 import tomskContents from './tomsk/contents'
 import spainClubsLogoGeometry from './spainClubsLogo/album'
 import spainClubsLogoCards, { catalogs as spainClubsLogoCatalogs } from './spainClubsLogo/catalog'
@@ -37,7 +38,10 @@ const toBlisterDefinition = (
 ): BlisterDefinition => ({
   id: config.id,
   albumId: config.albumId,
+  albumIds: config.albumIds,
   titleKey: config.titleKey,
+  descriptionKey: config.descriptionKey,
+  shortNameKey: config.shortNameKey,
   cost: config.cost,
   cardCount: config.cardsPerPack,
   cooldownMs: config.cooldownMs,
@@ -246,7 +250,10 @@ const wc26Album: AlbumDefinition = {
     poolId: 'standard',
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
-  blisters: [toBlisterDefinition(BLISTER_CONFIGS.standard)],
+  blisters: [
+    toBlisterDefinition(BLISTER_CONFIGS.mixed),
+    toBlisterDefinition(BLISTER_CONFIGS.standard),
+  ],
   metadata: { edition: 1 },
 }
 
@@ -333,7 +340,7 @@ const tomskAlbum: AlbumDefinition = {
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   blisters: [toBlisterDefinition(BLISTER_CONFIGS.kdv)],
-  metadata: { club: 'tomsk', cardAssetAlbumId: 'kdv', allowEmptySlots: true },
+  metadata: { club: 'tomsk', cardAssetAlbumIds: ['tomsk', 'kdv'] },
 }
 
 const ucl2627Album: AlbumDefinition = {
@@ -352,7 +359,7 @@ const ucl2627Album: AlbumDefinition = {
   spreads: createSpreads('ucl-26-27', ucl2627Geometry.pages.map(({ id }) => id)),
   cards: ucl2627Cards,
   catalogs: ucl2627Catalogs,
-  contents: [],
+  contents: ucl2627Contents,
   editorialPages: [
     {
       pageId: 'ucl-26-27-cover',
@@ -362,26 +369,6 @@ const ucl2627Album: AlbumDefinition = {
       description: 'album.editorial.ucl2627.cover.description',
       tone: 'dark',
       hideCoverCopy: true,
-    },
-    {
-      pageId: 'ucl-26-27-season',
-      kind: 'contents',
-      eyebrow: 'album.editorial.ucl2627.contents.eyebrow',
-      title: 'album.editorial.ucl2627.contents.title',
-      description: 'album.editorial.ucl2627.contents.description',
-      contentsSections: [
-        {
-          title: 'album.editorial.ucl2627.contents.clubs',
-          items: [
-            { label: 'album.editorial.ucl2627.contents.realMadrid', pages: '04–05', targetPage: 4 },
-            { label: 'album.editorial.ucl2627.contents.barcelona', pages: '06–07', targetPage: 6 },
-            { label: 'album.editorial.ucl2627.contents.bayern', pages: '08–09', targetPage: 8 },
-            { label: 'album.editorial.ucl2627.contents.dortmund', pages: '10–11', targetPage: 10 },
-            { label: 'album.editorial.ucl2627.contents.psg', pages: '12–13', targetPage: 12 },
-            { label: 'album.editorial.ucl2627.contents.arsenal', pages: '14–15', targetPage: 14 },
-          ],
-        },
-      ],
     },
     {
       pageId: 'ucl-26-27-collection',
@@ -408,13 +395,17 @@ const ucl2627Album: AlbumDefinition = {
   ],
   layout: {
     openStartPage: 1,
+    contentsFirstPage: 2,
+    contentsLastPage: 4,
+    contentsPageSize: 12,
+    contentsVariant: 'flat',
   },
   dropSettings: {
     poolId: 'ucl-26-27-standard',
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
-  blisters: [],
-  metadata: { season: '2026/27', clubs: 6 },
+  blisters: [toBlisterDefinition(BLISTER_CONFIGS.ucl)],
+  metadata: { season: '2026/27', clubs: ucl2627Contents.length },
 }
 
 const spainClubsLogoAlbum: AlbumDefinition = {
@@ -519,7 +510,7 @@ const spainClubsLogoAlbum: AlbumDefinition = {
     poolId: 'spain-clubs-logo-development',
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
-  blisters: [],
+  blisters: [toBlisterDefinition(BLISTER_CONFIGS.spainLogos)],
   metadata: {
     kind: 'club-logos',
     countries: Array.from(
@@ -558,10 +549,15 @@ const blisters: ReadonlyMap<string, BlisterDefinition> = new Map(
 const validateAlbum = (album: AlbumDefinition): void => {
   const assetAlbumId: string =
     typeof album.metadata.assetAlbumId === 'string' ? album.metadata.assetAlbumId : album.id
-  const cardAssetAlbumId: string =
-    typeof album.metadata.cardAssetAlbumId === 'string'
-      ? album.metadata.cardAssetAlbumId
-      : assetAlbumId
+  const cardAssetAlbumIds: string[] = Array.isArray(album.metadata.cardAssetAlbumIds)
+    ? album.metadata.cardAssetAlbumIds.filter(
+        (id: unknown): id is string => typeof id === 'string',
+      )
+    : [
+        typeof album.metadata.cardAssetAlbumId === 'string'
+          ? album.metadata.cardAssetAlbumId
+          : assetAlbumId,
+      ]
   const allowEmptySlots: boolean = album.metadata.allowEmptySlots === true
   const cardIds: string[] = album.cards.map(({ id }) => id)
   const cardNumbers: string[] = album.cards.map(
@@ -590,7 +586,11 @@ const validateAlbum = (album: AlbumDefinition): void => {
       throw new Error(`${album.id}: card ${card.id} belongs to another album`)
     }
     if (!card.image) throw new Error(`${album.id}: card ${card.id} has no image`)
-    if (!card.image.includes(`/${cardAssetAlbumId}/cards/`)) {
+    if (
+      !cardAssetAlbumIds.some((cardAssetAlbumId) =>
+        card.image.includes(`/${cardAssetAlbumId}/cards/`),
+      )
+    ) {
       throw new Error(`${album.id}: card ${card.id} has an invalid image path`)
     }
   }

@@ -59,15 +59,16 @@ const clickLabel: ComputedRef<string> = computed((): string =>
     ? t('home.clickPrompt', { reward: formattedClickReward.value })
     : t('home.noEnergy'),
 )
-const orderedQuickActions: ComputedRef<QuickAction[]> = computed((): QuickAction[] =>
-  player.canClick
+const orderedQuickActions: ComputedRef<QuickAction[]> = computed((): QuickAction[] => {
+  const actions: QuickAction[] = player.canClick
     ? quickActions.value
     : [...quickActions.value].sort(
         (left: QuickAction, right: QuickAction): number =>
           Number(left.requiresEnergy) - Number(right.requiresEnergy) ||
           right.priority - left.priority,
-      ),
-)
+      )
+  return actions.slice(0, 2)
+})
 const nearestGoalsForHome: ComputedRef<GoalRuntimeState[]> = computed(() => {
   const recommendedGoalIds: Partial<Record<string, string>> = {
     'buy-pack': 'buy-first-pack',
@@ -87,11 +88,6 @@ const nearestGoalsForHome: ComputedRef<GoalRuntimeState[]> = computed(() => {
     .filter(({ definition }): boolean => definition.id !== duplicateGoalId)
     .slice(0, 3)
 })
-const hasActiveDailyTasks: ComputedRef<boolean> = computed(
-  (): boolean =>
-    dailyTasks.isLoaded &&
-    dailyTasks.tasks.some(({ status }): boolean => status === 'in-progress'),
-)
 const nextEnergyLabel: ComputedRef<string> = computed((): string =>
   formatCountdown(player.millisecondsUntilNextEnergy),
 )
@@ -145,13 +141,13 @@ onBeforeUnmount((): void => {
 
 <template>
   <section
-    class="mx-auto h-full min-h-0 w-full max-w-6xl overflow-x-hidden overflow-y-auto py-1 pr-1"
+    class="mx-auto h-full min-h-0 w-full max-w-6xl scroll-smooth overflow-x-hidden overflow-y-auto py-1 pr-1"
     data-home-view
   >
     <h1 class="sr-only">{{ t('home.hubTitle') }}</h1>
 
     <div
-      class="grid min-h-full min-w-0 gap-3 lg:h-full lg:min-h-0 lg:grid-cols-[minmax(0,1.12fr)_minmax(20rem,.88fr)] lg:grid-rows-[auto_auto_minmax(0,1fr)]"
+      class="grid min-h-full min-w-0 gap-4 pb-3 lg:h-full lg:min-h-0 lg:grid-cols-[minmax(0,1.12fr)_minmax(20rem,.88fr)] lg:grid-rows-[auto_auto_minmax(0,1fr)] lg:pb-0"
     >
       <section
         class="order-1 grid min-w-0 grid-cols-4 overflow-hidden border-2 border-ink bg-paper shadow-[4px_4px_0_rgb(var(--color-gold)/0.5)] lg:col-start-2 lg:row-start-1"
@@ -230,22 +226,67 @@ onBeforeUnmount((): void => {
         </button>
       </section>
 
-      <div class="order-2 flex min-w-0 flex-col gap-3 lg:col-start-2 lg:row-start-2">
-        <HomeDailyTasksCard
-          v-if="hasActiveDailyTasks"
-          :tasks="dailyTasks.tasks"
-          @open="navigate({ name: 'goals' })"
-        />
+      <!-- Совет и все доступные действия образуют одну точку входа для нового игрока. -->
+      <section
+        class="order-2 min-w-0 border-2 border-ink bg-mint/20 p-3 shadow-[5px_5px_0_rgb(var(--color-coral)/0.28)] lg:col-start-2 lg:row-start-2"
+        aria-labelledby="home-advice-title"
+        data-home-advice
+      >
+        <div class="mb-2 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-[10px] font-black uppercase tracking-[0.18em] text-coral">
+              {{ t('home.advice.eyebrow') }}
+            </p>
+            <h2 id="home-advice-title" class="text-lg font-black">
+              {{ t('home.advice.title') }}
+            </h2>
+          </div>
+          <span
+            v-if="orderedQuickActions.length"
+            class="rounded-full bg-ink px-2 py-0.5 text-xs font-black text-paper"
+          >
+            {{ orderedQuickActions.length }}
+          </span>
+        </div>
+
         <CurrentGoalCard
-          v-else
           :goal="recommendation"
+          embedded
           @action="navigateRecommendation"
         />
-        <NearestGoals :goals="nearestGoalsForHome" @open="navigate({ name: 'goals' })" />
 
-        <section
+        <p v-if="!player.canClick" class="mt-2 text-xs text-ink/55">
+          {{ t('home.quick.whileRecovering') }}
+        </p>
+        <div v-if="orderedQuickActions.length" class="mt-2 grid gap-1.5 sm:grid-cols-2 lg:grid-cols-1">
+          <Button
+            v-for="action in orderedQuickActions"
+            :key="action.id"
+            class="quick-action min-w-0 justify-start border-ink/15 bg-paper/70 text-left"
+            outlined
+            size="small"
+            type="button"
+            :data-quick-action="action.id"
+            @click="navigate(action.route)"
+          >
+            <span class="min-w-0 flex-1">
+              <strong class="block truncate text-sm">{{ t(action.titleKey) }}</strong>
+              <small v-if="action.descriptionKey" class="block truncate text-ink/55">
+                {{ t(action.descriptionKey, { count: action.badge ?? 0 }) }}
+              </small>
+            </span>
+            <span
+              v-if="action.badge !== undefined"
+              class="ml-2 rounded-full bg-coral/15 px-2 py-0.5 text-xs font-black text-coral"
+            >
+              {{ action.badge }}
+            </span>
+          </Button>
+        </div>
+
+        <aside
           v-if="!player.canClick"
-          class="border-l-4 border-coral bg-coral/10 p-3"
+          class="mt-2 border-l-4 border-coral bg-coral/10 p-2.5"
           data-zero-energy
         >
           <h2 class="font-black">{{ t('home.zeroEnergy.title') }}</h2>
@@ -253,12 +294,13 @@ onBeforeUnmount((): void => {
             {{ t('home.zeroEnergy.next', { time: nextEnergyLabel }) }}
             · {{ t('home.zeroEnergy.full', { time: fullEnergyLabel }) }}
           </p>
-        </section>
-      </div>
+        </aside>
+      </section>
 
       <div class="order-3 min-w-0 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:min-h-0">
         <section
-          class="flex min-h-[20rem] flex-col items-center border border-ink/10 bg-white/20 p-3 transition-opacity sm:min-h-[24rem] lg:h-full lg:min-h-0"
+          id="goal-clicker"
+          class="flex min-h-[20rem] scroll-mt-20 flex-col items-center border border-dashed border-ink/20 bg-white/25 p-3 transition-opacity sm:min-h-[24rem] lg:h-full lg:min-h-0"
           :class="{ 'opacity-60': !player.canClick }"
           data-clicker
         >
@@ -288,47 +330,19 @@ onBeforeUnmount((): void => {
         </section>
       </div>
 
-      <section
-        v-if="orderedQuickActions.length"
-        class="order-4 min-w-0 border-2 border-ink bg-mint/20 p-3 shadow-[5px_5px_0_rgb(var(--color-coral)/0.35)] lg:col-start-2 lg:row-start-3 lg:min-h-0 lg:overflow-y-auto"
-        aria-labelledby="quick-actions-title"
+      <!-- Вторичный прогресс расположен после игровой зоны и визуально разбит на карточки. -->
+      <div
+        class="order-4 flex min-w-0 flex-col gap-4 lg:col-start-2 lg:row-start-3 lg:min-h-0 lg:overflow-y-auto lg:pr-1"
+        data-home-progress
       >
-        <div class="flex items-center justify-between gap-3">
-          <h2 id="quick-actions-title" class="text-lg font-black">
-            {{ t('home.quick.title') }}
-          </h2>
-          <span class="rounded-full bg-ink px-2 py-0.5 text-xs font-black text-paper">
-            {{ orderedQuickActions.length }}
-          </span>
-        </div>
-        <p v-if="!player.canClick" class="mb-2 text-xs text-ink/55">
-          {{ t('home.quick.whileRecovering') }}
-        </p>
-        <div class="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1">
-          <Button
-            v-for="action in orderedQuickActions"
-            :key="action.id"
-            class="quick-action min-w-0 justify-start text-left"
-            outlined
-            type="button"
-            :data-quick-action="action.id"
-            @click="navigate(action.route)"
-          >
-            <span class="min-w-0 flex-1">
-              <strong class="block truncate text-sm">{{ t(action.titleKey) }}</strong>
-              <small v-if="action.descriptionKey" class="block truncate text-ink/55">
-                {{ t(action.descriptionKey, { count: action.badge ?? 0 }) }}
-              </small>
-            </span>
-            <span
-              v-if="action.badge !== undefined"
-              class="ml-2 rounded-full bg-coral/15 px-2 py-0.5 text-xs font-black text-coral"
-            >
-              {{ action.badge }}
-            </span>
-          </Button>
-        </div>
-      </section>
+        <HomeDailyTasksCard
+          v-if="dailyTasks.isLoaded && dailyTasks.tasks.length"
+          :tasks="dailyTasks.tasks"
+          @navigate="navigate"
+          @open="navigate({ name: 'goals' })"
+        />
+        <NearestGoals :goals="nearestGoalsForHome" @open="navigate({ name: 'goals' })" />
+      </div>
     </div>
 
     <Transition name="goal-notice">

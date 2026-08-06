@@ -6,15 +6,6 @@ export const PACK_PRICE: number = 20
 /** Количество карточек, которое игрок получает из одного стандартного пака. */
 export const CARDS_PER_PACK: number = 5
 
-/** Стоимость блистера доступной эпохи журнала «История Томи». */
-export const KDV_BLISTER_COST: number = 50
-
-/** Количество карточек в блистере журнала «История Томи». */
-export const KDV_BLISTER_CARD_COUNT: number = 1
-
-/** Период недоступности блистера «История Томи» после покупки. */
-export const KDV_BLISTER_COOLDOWN_MS: number = 4 * 60 * 60 * 1_000
-
 /** Период недоступности бесплатного пака после завершения мини-игры. */
 export const FREE_PACK_COOLDOWN_MS: number = 4 * 60 * 60 * 1_000
 
@@ -39,10 +30,26 @@ export const PACK_CONFIGS = {
 
 /** Экономика, содержимое и кулдауны покупаемых блистеров. */
 export const BLISTER_CONFIGS = {
+  mixed: {
+    id: 'mixed',
+    albumId: 'wc-26',
+    albumIds: ['wc-26', 'tomsk', 'ucl-26-27', 'spainClubsLogo'],
+    titleKey: 'shop.blisters.mixed.title',
+    descriptionKey: 'shop.blisters.mixed.description',
+    shortNameKey: 'shop.blisters.mixed.shortName',
+    cost: 40,
+    cardsPerPack: 5,
+    cooldownMs: 0,
+    poolId: '*',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
   standard: {
     id: 'standard',
     albumId: 'wc-26',
-    titleKey: 'shop.paidTitle',
+    albumIds: ['wc-26'],
+    titleKey: 'shop.blisters.wc26.title',
+    descriptionKey: 'shop.blisters.wc26.description',
+    shortNameKey: 'shop.blisters.wc26.shortName',
     cost: PACK_PRICE,
     cardsPerPack: CARDS_PER_PACK,
     cooldownMs: 0,
@@ -52,11 +59,40 @@ export const BLISTER_CONFIGS = {
   kdv: {
     id: 'kdv',
     albumId: 'tomsk',
-    titleKey: 'shop.kdv.title',
-    cost: KDV_BLISTER_COST,
-    cardsPerPack: KDV_BLISTER_CARD_COUNT,
-    cooldownMs: KDV_BLISTER_COOLDOWN_MS,
+    albumIds: ['tomsk'],
+    titleKey: 'shop.blisters.tomsk.title',
+    descriptionKey: 'shop.blisters.tomsk.description',
+    shortNameKey: 'shop.blisters.tomsk.shortName',
+    cost: 50,
+    cardsPerPack: 3,
+    cooldownMs: 60 * 60 * 1_000,
     poolId: 'standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  ucl: {
+    id: 'ucl',
+    albumId: 'ucl-26-27',
+    albumIds: ['ucl-26-27'],
+    titleKey: 'shop.blisters.ucl.title',
+    descriptionKey: 'shop.blisters.ucl.description',
+    shortNameKey: 'shop.blisters.ucl.shortName',
+    cost: 30,
+    cardsPerPack: 4,
+    cooldownMs: 30 * 60 * 1_000,
+    poolId: 'ucl-26-27-standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  spainLogos: {
+    id: 'spain-logos',
+    albumId: 'spainClubsLogo',
+    albumIds: ['spainClubsLogo'],
+    titleKey: 'shop.blisters.spainLogos.title',
+    descriptionKey: 'shop.blisters.spainLogos.description',
+    shortNameKey: 'shop.blisters.spainLogos.shortName',
+    cost: 10,
+    cardsPerPack: 5,
+    cooldownMs: 0,
+    poolId: 'spain-clubs-logo-development',
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
 } satisfies Record<string, BlisterConfig>

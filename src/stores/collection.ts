@@ -9,7 +9,7 @@ import type {
   StickerInstance,
   StickerPlacement,
 } from '@/types'
-import { getAlbumById, getPlayerAlbumById } from '@/data/albumRegistry'
+import { getAlbumById, getPlayerAlbumById, getPlayerAlbums } from '@/data/albumRegistry'
 import { BLISTER_CONFIGS, DUPLICATE_EXCHANGE_CONFIG } from '@/config/gameBalance'
 import { createDuplicateExchangeCandidates } from '@/utils/createDuplicateExchangeCandidates'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
@@ -281,6 +281,19 @@ export const useCollectionStore = defineStore('collection', () => {
   const defaultProgress: ComputedRef<AlbumProgress> = computed(() =>
     getAlbumProgress(DEFAULT_ALBUM_ID),
   )
+  // Общая сводка учитывает карточки каждого доступного игроку журнала.
+  const collectionTotal: ComputedRef<number> = computed((): number =>
+    getPlayerAlbums().reduce(
+      (total, album): number => total + album.cards.length,
+      0,
+    ),
+  )
+  const collectedTotal: ComputedRef<number> = computed((): number =>
+    getPlayerAlbums().reduce(
+      (total, album): number => total + getCollectedCardIds(album.id).size,
+      0,
+    ),
+  )
 
   void load()
 
@@ -290,10 +303,14 @@ export const useCollectionStore = defineStore('collection', () => {
     pendingExchange,
     isLoaded,
     isExchanging,
-    total: computed((): number => defaultProgress.value.totalCards),
-    collectedTotal: computed((): number => defaultProgress.value.collectedCards),
-    duplicateTotal: computed((): number => defaultProgress.value.duplicateCards),
-    progress: computed((): number => defaultProgress.value.completionPercent),
+    total: collectionTotal,
+    collectedTotal,
+    duplicateTotal: computed((): number => duplicates.value.length),
+    progress: computed((): number =>
+      collectionTotal.value
+        ? Math.min(100, Math.round((collectedTotal.value / collectionTotal.value) * 100))
+        : 0,
+    ),
     albumProgress: computed((): number => {
       const album = getAlbumById(DEFAULT_ALBUM_ID)
       const slotCount: number =

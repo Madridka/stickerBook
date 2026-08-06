@@ -66,6 +66,7 @@ export interface AlbumLayout {
   contentsFirstPage?: number
   contentsLastPage?: number
   contentsPageSize?: number
+  contentsVariant?: 'grouped' | 'flat'
 }
 
 export interface AlbumDropSettings {
@@ -76,7 +77,10 @@ export interface AlbumDropSettings {
 export interface BlisterDefinition {
   id: string
   albumId: AlbumId
+  albumIds: readonly AlbumId[]
   titleKey: string
+  descriptionKey: string
+  shortNameKey: string
   cost: number
   cardCount: number
   cooldownMs: number

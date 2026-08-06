@@ -52,7 +52,7 @@ const selectWeighted = <T>(
 }
 
 const isAvailableFromPack = (catalog: CardCatalog, card: Card, poolId: string): boolean =>
-  (card.acquisition ?? catalog.defaults.acquisition).some(
+  poolId === '*' || (card.acquisition ?? catalog.defaults.acquisition).some(
     (source) => source.type === 'pack' && source.poolId === poolId,
   )
 

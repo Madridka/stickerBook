@@ -76,6 +76,41 @@
     "back": "Перейти к оглавлению",
     "label": "Оглавление",
     "group": "Группа {group}",
+    "ucl": {
+      "hint": "Выберите клуб",
+      "navigation": "Переход к клубам",
+      "openClub": "Открыть клуб {club}",
+      "teams": {
+        "real-madrid": "Real Madrid CF",
+        "barcelona": "FC Barcelona",
+        "bayern-munich": "FC Bayern München",
+        "borussia-dortmund": "Borussia Dortmund",
+        "paris-saint-germain": "Paris Saint-Germain",
+        "arsenal": "Arsenal FC",
+        "aston-villa": "Aston Villa FC",
+        "liverpool": "Liverpool FC",
+        "manchester-city": "Manchester City",
+        "manchester-united": "Manchester United",
+        "atletico-madrid": "Atlético de Madrid",
+        "real-betis": "Real Betis",
+        "villarreal": "Villarreal CF",
+        "lens": "RC Lens",
+        "lille": "LOSC Lille",
+        "feyenoord": "Feyenoord",
+        "psv": "PSV Eindhoven",
+        "porto": "FC Porto",
+        "sporting": "Sporting CP",
+        "club-brugge": "Club Brugge",
+        "slavia-praha": "Slavia Praha",
+        "galatasaray": "Galatasaray",
+        "como": "Como 1907",
+        "inter": "Inter",
+        "napoli": "SSC Napoli",
+        "roma": "AS Roma",
+        "rb-leipzig": "RB Leipzig",
+        "stuttgart": "VfB Stuttgart"
+      }
+    },
     "tomsk": {
       "hint": "Выберите эпоху томского футбола",
       "navigation": "Переход к эпохам",
@@ -168,7 +203,7 @@
       "ucl-26-27": {
         "title": "UCL 2026/27",
         "shortTitle": "UCL 26/27",
-        "description": "Коллекционный журнал шести европейских клубов сезона 2026/27."
+        "description": "Коллекционный журнал 28 европейских клубов сезона 2026/27."
       },
       "tomsk": {
         "title": "Эпохи Томского футбола",
@@ -398,8 +433,8 @@
       "cover": {
         "eyebrow": "Коллекционный журнал · сезон 2026/27",
         "title": "UCL 26/27",
-        "description": "Шесть клубов, двенадцать командных страниц и 120 карточек в единой тёмно-синей коллекционной серии.",
-        "footer": "Madrid · Barcelona · Munich · Dortmund · Paris · London"
+        "description": "Двадцать восемь клубов, пятьдесят шесть командных страниц и 560 карточек в единой тёмно-синей коллекционной серии.",
+        "footer": "28 клубов · 560 карточек · ещё 8 участников определятся позже"
       },
       "contents": {
         "eyebrow": "02 / Оглавление",
@@ -416,14 +451,14 @@
       "season": {
         "eyebrow": "02 / Новый сезон",
         "title": "Европейские клубы в одном коллекционном выпуске",
-        "description": "Первый выпуск объединяет шесть составов и задаёт основу для дальнейшего расширения журнала по мере подтверждения участников.",
+        "description": "Выпуск объединяет 28 определившихся составов; ещё восемь участников будут добавлены после завершения отбора.",
         "features": {
           "clubs": {
-            "title": "6 клубов",
-            "description": "Real Madrid, Barcelona, Bayern, Borussia Dortmund, Paris Saint-Germain и Arsenal."
+            "title": "28 клубов",
+            "description": "Все команды из текущего списка участников, без восьми ещё не определившихся мест."
           },
           "cards": {
-            "title": "120 карточек",
+            "title": "560 карточек",
             "description": "У каждого клуба есть эмблема, главный тренер и восемнадцать игроков."
           },
           "style": {
@@ -433,7 +468,7 @@
         }
       },
       "collection": {
-        "eyebrow": "03 / Структура журнала",
+        "eyebrow": "05 / Структура журнала",
         "title": "Один разворот на каждый состав",
         "description": "Двадцать карточек клуба распределены по двум страницам, чтобы команда всегда открывалась цельным разворотом.",
         "features": {

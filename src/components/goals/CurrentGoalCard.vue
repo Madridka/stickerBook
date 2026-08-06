@@ -5,20 +5,24 @@ import { useI18n } from 'vue-i18n'
 import Button from 'primevue/button'
 import ProgressBar from 'primevue/progressbar'
 
-defineProps<{ goal: RecommendedAction }>()
+withDefaults(defineProps<{ goal: RecommendedAction; embedded?: boolean }>(), {
+  embedded: false,
+})
 const emit = defineEmits<{ action: [] }>()
 const { t } = useI18n()
 </script>
 
 <template>
   <article
-    class="border-2 border-ink bg-paper p-4 shadow-[5px_5px_0_rgb(var(--color-coral))] sm:p-5"
+    :class="embedded
+      ? 'border-l-4 border-coral bg-paper/70 p-3'
+      : 'border-2 border-ink bg-paper p-4 shadow-[5px_5px_0_rgb(var(--color-coral))] sm:p-5'"
     data-current-goal
   >
     <p class="text-[10px] font-black uppercase tracking-[0.18em] text-coral">
       {{ t('home.goal.eyebrow') }}
     </p>
-    <h2 class="mt-1 text-xl font-black leading-tight sm:text-2xl">
+    <h2 class="mt-1 text-lg font-black leading-tight sm:text-xl">
       {{ t(goal.titleKey) }}
     </h2>
     <p class="mt-1.5 text-sm leading-relaxed text-ink/65">
@@ -39,7 +43,7 @@ const { t } = useI18n()
 
     <Button
       v-if="goal.action"
-      class="mt-4 w-full"
+      class="mt-3 w-full"
       :label="t(goal.action.labelKey)"
       icon="pi pi-arrow-right"
       icon-pos="right"

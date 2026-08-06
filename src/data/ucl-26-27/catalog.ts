@@ -1,11 +1,16 @@
 import manifest from './manifest.json'
+import provisionalCatalogs from './provisionalCatalogs'
 import { loadCardCatalogs } from '../cardCatalogLoader.ts'
 import type { CardDefinition, NormalizedCardCatalog } from '../../types/cardCatalog.ts'
 
-const catalogModules = import.meta.glob<unknown>('./*/cards.json', {
+const discoveredCatalogModules = import.meta.glob<unknown>('./*/cards.json', {
   eager: true,
   import: 'default',
 })
+const catalogModules: Record<string, unknown> = {
+  ...discoveredCatalogModules,
+  ...provisionalCatalogs,
+}
 
 export const catalogs: NormalizedCardCatalog[] = loadCardCatalogs(
   Object.values(catalogModules),

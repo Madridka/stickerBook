@@ -33,10 +33,8 @@ const isFinished: ComputedRef<boolean> = computed(
 )
 const currentCard: ComputedRef<CardDefinition | undefined> = computed(
   (): CardDefinition | undefined => {
-    const playerId: string | undefined =
-      packOpening.session?.rewards[currentIndex.value]?.playerId
-    const albumId: string | undefined = packOpening.session?.albumId
-    return playerId && albumId ? getPlayerAlbumCard(albumId, playerId) : undefined
+    const reward = packOpening.session?.rewards[currentIndex.value]
+    return reward ? getPlayerAlbumCard(reward.albumId, reward.playerId) : undefined
   },
 )
 const isCurrentDuplicate: ComputedRef<boolean> = computed((): boolean =>
@@ -49,7 +47,7 @@ const preloadRewardCards = (): void => {
 
   const upcomingImages: string[] = session.rewards
     .slice(currentIndex.value, currentIndex.value + 3)
-    .map(({ playerId }): string => getPlayerAlbumCard(session.albumId, playerId)?.image ?? '')
+    .map(({ albumId, playerId }): string => getPlayerAlbumCard(albumId, playerId)?.image ?? '')
   preloadImages(upcomingImages.slice(0, 1), true)
   preloadImages(upcomingImages.slice(1))
 }

@@ -6,6 +6,8 @@ import type { Router } from 'vue-router'
 // Описывает маршруты основных разделов приложения
 const router: Router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior: (to) =>
+    to.hash ? { el: to.hash, behavior: 'smooth' } : { top: 0 },
   routes: [
     {
       path: '/',

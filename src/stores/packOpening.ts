@@ -6,7 +6,11 @@ import {
   type PackOpeningReward,
   type PackOpeningSession,
 } from '@/db/database'
-import { getPlayerAlbumById, getPlayerBlisterById } from '@/data/albumRegistry'
+import {
+  getPlayerAlbumById,
+  getPlayerAlbumCard,
+  getPlayerBlisterById,
+} from '@/data/albumRegistry'
 import { BLISTER_CONFIGS, DROP_ENGINE_CONFIG } from '@/config/gameBalance'
 import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
@@ -25,23 +29,19 @@ const resolvePlayerBlister = (blisterId: string) =>
 const isPlayerPack = (item: InventoryItem): boolean => {
   if (item.type !== 'pack') return false
   const blister = resolvePlayerBlister(item.packId ?? BLISTER_CONFIGS.standard.id)
-  const album = getPlayerAlbumById(
-    item.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
-  )
-  return Boolean(blister && album && blister.albumId === album.id)
+  const albumId: string = item.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId
+  return Boolean(blister && blister.albumIds.includes(albumId))
 }
 
 const isPlayerSession = (candidate?: PackOpeningSession): candidate is PackOpeningSession => {
   if (!candidate) return false
   const blister = resolvePlayerBlister(candidate.blisterId)
-  const album = getPlayerAlbumById(candidate.albumId)
   return Boolean(
     blister &&
-      album &&
-      blister.albumId === album.id &&
+      getPlayerAlbumById(candidate.albumId) &&
       candidate.rewards.every(
         ({ albumId, playerId }): boolean =>
-          albumId === album.id && album.cards.some(({ id }): boolean => id === playerId),
+          blister.albumIds.includes(albumId) && Boolean(getPlayerAlbumCard(albumId, playerId)),
       ),
   )
 }
@@ -87,24 +87,26 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
           if (!pack || !isPlayerPack(pack)) return undefined
           const blisterId: string = pack.packId ?? BLISTER_CONFIGS.standard.id
           const blister = resolvePlayerBlister(blisterId)
-          const album = getPlayerAlbumById(
-            pack.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
-          )
-          if (!blister || !album?.cards.length) return undefined
+          const albums = (blister?.albumIds ?? [])
+            .map((albumId) => getPlayerAlbumById(albumId))
+            .filter((album) => album !== undefined)
+          if (!blister || albums.length !== blister.albumIds.length) return undefined
 
-          const activeCards: StickerInstance[] = await database.cards
-            .where('albumId')
-            .equals(album.id)
-            .filter(({ location }: StickerInstance): boolean => location !== 'deleted')
-            .toArray()
+          const albumIds: Set<string> = new Set(blister.albumIds)
+          const activeCards: StickerInstance[] = (await database.cards.toArray()).filter(
+            ({ albumId, location }: StickerInstance): boolean =>
+              albumIds.has(albumId) && location !== 'deleted',
+          )
           const ownedPlayerIds: Set<string> = new Set(
-            activeCards.map(({ playerId }: StickerInstance): string => playerId),
+            activeCards.map(
+              ({ albumId, playerId }: StickerInstance): string => `${albumId}:${playerId}`,
+            ),
           )
           const rewards: PackOpeningReward[] = Array.from(
             { length: blister.cardCount },
             (): PackOpeningReward => {
               const card: CardDefinition = selectCardV2({
-                catalogs: album.catalogs,
+                catalogs: albums.flatMap(({ catalogs }) => catalogs),
                 packConfig: {
                   cardsPerPack: blister.cardCount,
                   rarityOdds: blister.rarityOdds,
@@ -113,11 +115,12 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
                 defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
                 randomSource: Math.random,
               }) as CardDefinition
-              const isDuplicate: boolean = ownedPlayerIds.has(card.id)
-              ownedPlayerIds.add(card.id)
+              const cardKey: string = `${card.albumId}:${card.id}`
+              const isDuplicate: boolean = ownedPlayerIds.has(cardKey)
+              ownedPlayerIds.add(cardKey)
               return {
                 instanceId: createId(),
-                albumId: album.id,
+                albumId: card.albumId,
                 playerId: card.id,
                 isDuplicate,
               }
@@ -127,7 +130,7 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             id: 'pending',
             packId: pack.id,
             blisterId,
-            albumId: album.id,
+            albumId: rewards[0]?.albumId ?? blister.albumId,
             rewards,
             currentIndex: 0,
             animationComplete: false,

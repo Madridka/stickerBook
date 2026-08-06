@@ -6,8 +6,9 @@ import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
 import { useBlistersStore } from '@/stores/blisters'
-import { BLISTER_CONFIGS, CARDS_PER_PACK, PACK_PRICE } from '@/config/gameBalance'
+import { BLISTER_CONFIGS } from '@/config/gameBalance'
 import {
+  getBlisters,
   getPlayerAlbumById,
   getPlayerBlisterById,
 } from '@/data/albumRegistry'
@@ -30,13 +31,9 @@ const player = usePlayerStore()
 const inventory = useInventoryStore()
 const packHunt = usePackHuntStore()
 const blisters = useBlistersStore()
-const standardBlister: BlisterDefinition | undefined = getPlayerBlisterById(
-  BLISTER_CONFIGS.standard.id,
-)
-const kdvBlister: BlisterDefinition | undefined = getPlayerBlisterById('kdv')
+const availableBlisters: BlisterDefinition[] = [...getBlisters()]
 const router = useRouter()
-const isPurchasing: Ref<boolean> = ref(false)
-const isPurchasingKdv: Ref<boolean> = ref(false)
+const purchasingById: Ref<Record<string, boolean>> = ref({})
 const hasPurchaseError: Ref<boolean> = ref(false)
 const activeCatalogSection: Ref<ShopCatalogSection> = ref('regular')
 const catalogSections: ComputedRef<Array<{ value: ShopCatalogSection; label: string }>> =
@@ -54,7 +51,7 @@ const isPlayerPack = (item: InventoryItem): boolean => {
   const album = getPlayerAlbumById(
     item.albumId ?? blister?.albumId ?? BLISTER_CONFIGS.standard.albumId,
   )
-  return Boolean(blister && album && blister.albumId === album.id)
+  return Boolean(blister && album && blister.albumIds.includes(album.id))
 }
 
 const ownedPackIds: ComputedRef<string[]> = computed(() =>
@@ -74,57 +71,38 @@ const ownedPackDetails: ComputedRef<
         return [
           item.id,
           {
-            label: album ? t(album.shortName) : t('shop.wc-26'),
-            cardCount: blister?.cardCount ?? CARDS_PER_PACK,
+            label: blister ? t(blister.shortNameKey) : album ? t(album.shortName) : t('shop.wc-26'),
+            cardCount: blister?.cardCount ?? 0,
           },
         ]
       }),
   ),
 )
 
-// Покупает пак одной транзакцией и синхронизирует UI только после её фиксации.
-const buyPack = async (): Promise<void> => {
-  if (!standardBlister || isPurchasing.value || player.coins < standardBlister.cost) return
+const cooldownRemainingById: ComputedRef<Record<string, number>> = computed(() =>
+  Object.fromEntries(
+    availableBlisters.map((blister): [string, number] => [
+      blister.id,
+      blisters.getCooldownRemainingMs(blister.id),
+    ]),
+  ),
+)
 
-  isPurchasing.value = true
-  hasPurchaseError.value = false
-  try {
-    try {
-      await player.flushSaves()
-      const result: PurchaseBlisterResult = await purchaseBlister(standardBlister.id)
-      if (result.status !== 'purchased') {
-        if (result.player) player.applyPersistedState(result.player)
-        hasPurchaseError.value = true
-        return
-      }
-
-      player.applyPersistedState(result.player)
-      inventory.applyPersistedItem(result.item)
-      await router.push({ name: 'pack-opening', query: { pack: result.item.id } })
-    } catch {
-      hasPurchaseError.value = true
-      return
-    }
-  } finally {
-    isPurchasing.value = false
-  }
-}
-
-// Покупает блистер «История Томи» вместе с неизменяемой сессией и запуском кулдауна.
-const buyKdvBlister = async (): Promise<void> => {
+// Единый поток покупки работает для любого блистера из реестра журналов.
+const buyBlister = async (blisterId: string): Promise<void> => {
+  const blister: BlisterDefinition | undefined = getPlayerBlisterById(blisterId)
   if (
-    !kdvBlister ||
-    isPurchasingKdv.value ||
-    player.coins < kdvBlister.cost ||
-    blisters.getCooldownRemainingMs(kdvBlister.id) > 0
-  ) {
-    return
-  }
-  isPurchasingKdv.value = true
+    !blister ||
+    purchasingById.value[blisterId] ||
+    player.coins < blister.cost ||
+    blisters.getCooldownRemainingMs(blisterId) > 0
+  ) return
+
+  purchasingById.value = { ...purchasingById.value, [blisterId]: true }
   hasPurchaseError.value = false
   try {
     await player.flushSaves()
-    const result: PurchaseBlisterResult = await purchaseBlister(kdvBlister.id)
+    const result: PurchaseBlisterResult = await purchaseBlister(blister.id)
     if (result.status !== 'purchased') {
       if (result.player) player.applyPersistedState(result.player)
       hasPurchaseError.value = result.status !== 'cooldown'
@@ -138,7 +116,7 @@ const buyKdvBlister = async (): Promise<void> => {
   } catch {
     hasPurchaseError.value = true
   } finally {
-    isPurchasingKdv.value = false
+    purchasingById.value = { ...purchasingById.value, [blisterId]: false }
   }
 }
 
@@ -148,9 +126,9 @@ const playPackHunt = async (): Promise<void> => {
   await router.push({ name: 'pack-hunt', query: { game } })
 }
 
-const openOwnedPack = async (): Promise<void> => {
-  if (!inventory.isLoaded || ownedPackIds.value.length <= 0) return
-  await router.push({ name: 'pack-opening' })
+const openOwnedPack = async (packId: string): Promise<void> => {
+  if (!inventory.isLoaded || !ownedPackIds.value.includes(packId)) return
+  await router.push({ name: 'pack-opening', query: { pack: packId } })
 }
 
 onMounted(async (): Promise<void> => {
@@ -197,24 +175,17 @@ onMounted(async (): Promise<void> => {
     <ShopItem
       v-if="activeCatalogSection === 'regular'"
       class="mt-3 sm:mt-4"
-      :price="PACK_PRICE"
-      :can-buy="player.coins >= PACK_PRICE"
-      :purchasing="isPurchasing"
+      :blisters="availableBlisters"
+      :player-coins="player.coins"
+      :purchasing-by-id="purchasingById"
+      :cooldown-remaining-by-id="cooldownRemainingById"
+      :blisters-loaded="blisters.isLoaded"
       :cooldown-remaining-ms="packHunt.cooldownRemainingMs"
       :mini-game-loaded="packHunt.isLoaded"
       :owned-pack-ids="ownedPackIds"
       :owned-pack-details="ownedPackDetails"
       :inventory-loaded="inventory.isLoaded"
-      :kdv-price="kdvBlister?.cost ?? 0"
-      :kdv-can-buy="Boolean(kdvBlister) && player.coins >= (kdvBlister?.cost ?? Infinity)"
-      :kdv-purchasing="isPurchasingKdv"
-      :kdv-cooldown-remaining-ms="
-        kdvBlister ? blisters.getCooldownRemainingMs(kdvBlister.id) : 0
-      "
-      :kdv-loaded="blisters.isLoaded"
-      :kdv-card-count="kdvBlister?.cardCount ?? 0"
-      @purchase="buyPack"
-      @purchase-kdv="buyKdvBlister"
+      @purchase="buyBlister"
       @play="playPackHunt"
       @open="openOwnedPack"
     />

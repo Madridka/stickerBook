@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+import type { RouteLocationRaw } from 'vue-router'
 import { getAlbumCard } from '@/data/albumRegistry'
 import { DAILY_TASK_CONFIG } from '@/config/gameBalance'
 import { formatCountdown } from '@/utils/formatCountdown'
@@ -13,6 +15,7 @@ import ProgressBar from 'primevue/progressbar'
 import CardChoiceDialog from '@/components/Sticker/CardChoiceDialog.vue'
 
 const { t } = useI18n()
+const router = useRouter()
 const dailyTasks = useDailyTasksStore()
 const collection = useCollectionStore()
 const errorKey: Ref<string | null> = ref(null)
@@ -52,6 +55,9 @@ const chooseCardLabel = (name: string): string => t('dailyTasks.reward.choose', 
 const handleRewardVisibility = (visible: boolean): void => {
   if (!visible) closeReward()
 }
+const navigate = async (route: RouteLocationRaw): Promise<void> => {
+  await router.push(route)
+}
 </script>
 
 <template>
@@ -81,11 +87,14 @@ const handleRewardVisibility = (visible: boolean): void => {
 
     <!-- Компактная дневная тройка остаётся читаемой на мобильном и в одну строку на desktop. -->
     <div class="mt-3 grid gap-3 lg:grid-cols-3">
-      <article
+      <button
         v-for="task in dailyTasks.tasks"
         :key="task.taskId"
-        class="flex min-h-32 flex-col border border-ink/15 bg-mint/10 p-3"
+        class="group flex min-h-32 flex-col border border-ink/15 bg-mint/10 p-3 text-left transition hover:-translate-y-0.5 hover:border-coral hover:bg-gold/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-coral"
         :data-daily-task-id="task.taskId"
+        type="button"
+        :aria-label="t('dailyTasks.openAction', { task: t(task.definition.titleKey) })"
+        @click="navigate(task.definition.route)"
       >
         <div class="flex items-start gap-2">
           <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-coral/15 text-coral">
@@ -105,13 +114,19 @@ const handleRewardVisibility = (visible: boolean): void => {
           :show-value="false"
         />
         <div class="mt-auto pt-3">
-          <p v-if="task.status === 'completed'" class="text-xs font-black text-emerald-700">
+          <p v-if="task.status !== 'in-progress'" class="text-xs font-black text-emerald-700">
             <i class="pi pi-check-circle mr-1" aria-hidden="true" />
             {{ t('dailyTasks.completedTask') }}
           </p>
-          <p v-else class="text-xs font-semibold text-ink/45">{{ t('dailyTasks.inProgress') }}</p>
+          <p v-else class="flex items-center justify-between text-xs font-semibold text-ink/45">
+            <span>{{ t('dailyTasks.inProgress') }}</span>
+            <i
+              class="pi pi-arrow-right text-coral transition-transform group-hover:translate-x-0.5"
+              aria-hidden="true"
+            />
+          </p>
         </div>
-      </article>
+      </button>
     </div>
 
     <div

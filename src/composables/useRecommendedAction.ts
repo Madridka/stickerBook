@@ -210,7 +210,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       titleKey: state.hasPendingOpening ? 'home.quick.continueOpening' : 'home.quick.openPack',
       badge: state.packCount || '…',
       route: { name: 'pack-opening' },
-      priority: 900,
+      priority: 1_000,
       requiresEnergy: false,
     })
   }
@@ -220,7 +220,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       titleKey: 'home.quick.place',
       badge: state.preparedStickers,
       route: { name: 'album-detail', params: { albumId: 'wc-26' } },
-      priority: 800,
+      priority: 700,
       requiresEnergy: false,
     })
   }
@@ -230,7 +230,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       titleKey: 'home.quick.prepare',
       badge: state.cardsToPrepare,
       route: { name: 'collection', query: { filter: 'ready' } },
-      priority: 700,
+      priority: 600,
       requiresEnergy: false,
     })
   }
@@ -240,7 +240,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       titleKey: 'home.quick.minigame',
       descriptionKey: 'home.quick.minigameAvailable',
       route: { name: 'pack-hunt', query: { game: 'signal' } },
-      priority: 600,
+      priority: 900,
       requiresEnergy: false,
     })
   }
@@ -250,7 +250,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       titleKey: 'home.quick.exchange',
       badge: state.duplicateCount,
       route: { name: 'collection', query: { tab: 'duplicates' } },
-      priority: 500,
+      priority: 800,
       requiresEnergy: false,
     })
   }
@@ -260,7 +260,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       titleKey: 'home.quick.album',
       descriptionKey: 'home.quick.albumProgress',
       route: { name: 'album-detail', params: { albumId: 'wc-26' } },
-      priority: 300,
+      priority: 650,
       requiresEnergy: false,
     })
   }

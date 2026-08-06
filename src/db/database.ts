@@ -342,3 +342,61 @@ database
           latestPurchase?.createdAt ?? Math.min(Date.now(), cooldown.nextAvailableAt)
       })
   })
+
+const TOMSK_ERA_ID_MIGRATIONS: Readonly<Record<string, string>> = {
+  'tom-2000': 'tom04',
+  'tom-2005': 'tom07',
+  'tom-2008': 'tom12',
+  'tom-2013': 'tom22',
+}
+
+// Переводит старые ID эпох Томи, сохраняя номер карточки и необязательный суффикс слота.
+const migrateTomskEraId = (value: string): string => {
+  for (const [legacyPrefix, eraId] of Object.entries(TOMSK_ERA_ID_MIGRATIONS)) {
+    if (value === legacyPrefix || value.startsWith(`${legacyPrefix}-`)) {
+      return `${eraId}${value.slice(legacyPrefix.length)}`
+    }
+  }
+  return value
+}
+
+// Сохраняет ранее полученные карточки и их вклейки после разграничения исторических эпох.
+database.version(17).upgrade(async (transaction): Promise<void> => {
+  const migrateInstance = (instance: StickerInstance): void => {
+    if (instance.albumId !== 'tomsk') return
+    const legacySlotId: string = instance.placement?.slotId ?? ''
+    const migratedSlotId: string = migrateTomskEraId(legacySlotId)
+    const migratedPlayerId: string = migrateTomskEraId(instance.playerId)
+    instance.playerId =
+      migratedPlayerId === instance.playerId && migratedSlotId !== legacySlotId
+        ? migratedSlotId.replace(/-slot$/, '')
+        : migratedPlayerId
+    if (instance.placement && migratedSlotId !== legacySlotId) {
+      instance.placement.slotId = migratedSlotId
+    }
+  }
+  const migrateDeletedCard = (item: DeletedCard): void => {
+    if (item.albumId === 'tomsk') item.playerId = migrateTomskEraId(item.playerId)
+  }
+
+  await transaction.table('cards').toCollection().modify(migrateInstance)
+  await transaction.table('duplicates').toCollection().modify(migrateInstance)
+  await transaction.table('deletedCards').toCollection().modify(migrateDeletedCard)
+  await transaction
+    .table('duplicateExchanges')
+    .toCollection()
+    .modify((exchange: DuplicateExchange): void => {
+      if (exchange.albumId !== 'tomsk') return
+      exchange.candidatePlayerIds = exchange.candidatePlayerIds.map(migrateTomskEraId)
+    })
+  await transaction
+    .table('packOpeningSessions')
+    .toCollection()
+    .modify((session: PackOpeningSession): void => {
+      session.rewards = session.rewards.map((reward) =>
+        reward.albumId === 'tomsk'
+          ? { ...reward, playerId: migrateTomskEraId(reward.playerId) }
+          : reward,
+      )
+    })
+})

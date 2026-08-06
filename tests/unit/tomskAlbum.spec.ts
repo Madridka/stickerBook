@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest'
+import { existsSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { getLibraryAlbums, requireAlbum } from '@/data/albumRegistry'
 
 describe('Tomsk football history journal', () => {
@@ -13,10 +15,10 @@ describe('Tomsk football history journal', () => {
       contentsPageSize: 4,
     })
     expect(album.contents.map(({ pageId }) => pageId)).toEqual([
-      'tom-2000-left',
-      'tom-2005-left',
-      'tom-2008-left',
-      'tom-2013-left',
+      'tom04-left',
+      'tom07-left',
+      'tom12-left',
+      'tom22-left',
       'kdv-left',
     ])
     expect(getLibraryAlbums().some(({ id }) => id === 'tomsk')).toBe(true)
@@ -25,7 +27,7 @@ describe('Tomsk football history journal', () => {
   it('uses Tomsk-owned WebP assets and a dedicated two-page background for every era', () => {
     expect(album.theme.coverImage).toBe('info/cover.webp')
     expect(album.metadata.assetAlbumId).toBeUndefined()
-    expect(album.metadata.cardAssetAlbumId).toBe('kdv')
+    expect(album.metadata.cardAssetAlbumIds).toEqual(['tomsk', 'kdv'])
 
     const eraImages = album.pages
       .filter(({ number }) => number >= 6)
@@ -37,16 +39,20 @@ describe('Tomsk football history journal', () => {
     )
   })
 
-  it('keeps the first four eras empty and the KDV era collectible', () => {
-    const emptyEraPages = album.pages.filter(({ id }) => id.startsWith('tom-'))
+  it('registers all five eras as a 100-card collectible catalog', () => {
+    const historicalEraIds = ['tom04', 'tom07', 'tom12', 'tom22']
+    const historicalEraPages = album.pages.filter(({ id }) =>
+      historicalEraIds.some((eraId) => id.startsWith(`${eraId}-`)),
+    )
     const kdvPages = album.pages.filter(({ id }) => id.startsWith('kdv-'))
 
-    expect(emptyEraPages).toHaveLength(8)
-    expect(emptyEraPages.flatMap(({ slots }) => slots)).toHaveLength(80)
+    expect(album.cards).toHaveLength(100)
+    expect(historicalEraPages).toHaveLength(8)
+    expect(historicalEraPages.flatMap(({ slots }) => slots)).toHaveLength(80)
     expect(
-      emptyEraPages
+      historicalEraPages
         .flatMap(({ slots }) => slots)
-        .every(({ playerId }) => !album.cards.some(({ id }) => id === playerId)),
+        .every(({ playerId }) => album.cards.some(({ id }) => id === playerId)),
     ).toBe(true)
     expect(kdvPages.flatMap(({ slots }) => slots)).toHaveLength(20)
     expect(
@@ -54,5 +60,18 @@ describe('Tomsk football history journal', () => {
         .flatMap(({ slots }) => slots)
         .every(({ playerId }) => album.cards.some(({ id }) => id === playerId)),
     ).toBe(true)
+    expect(
+      album.cards.every(({ image }) =>
+        existsSync(resolve('public', image.replace(/^\/+/, ''))),
+      ),
+    ).toBe(true)
+  })
+
+  it('offers three cards from every Tomsk era with a one-hour cooldown', () => {
+    const blister = album.blisters.find(({ id }) => id === 'kdv')
+    expect(blister).toMatchObject({ cost: 50, cardCount: 3, cooldownMs: 60 * 60 * 1_000 })
+    expect(new Set(album.catalogs.map(({ teamId }) => teamId))).toEqual(
+      new Set(['tom04', 'tom07', 'tom12', 'tom22', 'kdv']),
+    )
   })
 })

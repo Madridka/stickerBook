@@ -3,8 +3,8 @@ export const ALBUM_VISIBILITY_CONFIG: Record<string, boolean> = {
   info: true,
   'wc-26': true,
   tomsk: true,
-  'ucl-26-27': false,
-  spainClubsLogo: false,
+  'ucl-26-27': true,
+  spainClubsLogo: true,
 }
 
 /** Настройки содержимого, навигации и адаптивного режима журнала. */

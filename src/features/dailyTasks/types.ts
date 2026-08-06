@@ -1,4 +1,5 @@
 import type { AlbumId } from '@/types'
+import type { RouteLocationRaw } from 'vue-router'
 
 export type DailyTaskStatus = 'in-progress' | 'completed' | 'reward-claimed'
 
@@ -36,6 +37,7 @@ export interface DailyTaskDefinition {
   target: number
   titleKey: string
   icon: string
+  route: RouteLocationRaw
 }
 
 export interface DailyTaskProgress {

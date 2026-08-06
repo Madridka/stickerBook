@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "tomsk",
+  "teamId": "tom22",
+  "defaults": {
+    "rarity": "common",
+    "series": "base",
+    "finish": "standard",
+    "acquisition": [
+      {
+        "type": "pack",
+        "poolId": "standard"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "tom22-01",
+      "cardNumber": "01",
+      "albumSlot": 1,
+      "displayName": "Vasiliy Baskakov",
+      "image": "/tomsk/cards/tom22/TOM22-01-vasiliy-baskakov.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "coach",
+      "personId": "vasiliy-baskakov",
+      "role": "HEAD_COACH"
+    },
+    {
+      "id": "tom22-02",
+      "cardNumber": "02",
+      "albumSlot": 2,
+      "displayName": "Aleksandr Melikhov",
+      "image": "/tomsk/cards/tom22/TOM22-02-aleksandr-melikhov.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "goalkeeper"
+    },
+    {
+      "id": "tom22-03",
+      "cardNumber": "03",
+      "albumSlot": 3,
+      "displayName": "Aleksey Solosin",
+      "image": "/tomsk/cards/tom22/TOM22-03-aleksey-solosin.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "goalkeeper"
+    },
+    {
+      "id": "tom22-04",
+      "cardNumber": "04",
+      "albumSlot": 4,
+      "displayName": "Sergey Omelyanchuk",
+      "image": "/tomsk/cards/tom22/TOM22-04-sergey-omelyanchuk.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "defender"
+    },
+    {
+      "id": "tom22-05",
+      "cardNumber": "05",
+      "albumSlot": 5,
+      "displayName": "Sergey Bendz",
+      "image": "/tomsk/cards/tom22/TOM22-05-sergey-bendz.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "defender"
+    },
+    {
+      "id": "tom22-06",
+      "cardNumber": "06",
+      "albumSlot": 6,
+      "displayName": "Ante Puljic",
+      "image": "/tomsk/cards/tom22/TOM22-06-ante-puljic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "defender"
+    },
+    {
+      "id": "tom22-07",
+      "cardNumber": "07",
+      "albumSlot": 7,
+      "displayName": "Martin Jiranek",
+      "image": "/tomsk/cards/tom22/TOM22-07-martin-jiranek.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "defender"
+    },
+    {
+      "id": "tom22-08",
+      "cardNumber": "08",
+      "albumSlot": 8,
+      "displayName": "Ivan Temnikov",
+      "image": "/tomsk/cards/tom22/TOM22-08-ivan-temnikov.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "defender"
+    },
+    {
+      "id": "tom22-09",
+      "cardNumber": "09",
+      "albumSlot": 9,
+      "displayName": "Evgeniy Bashkirov",
+      "image": "/tomsk/cards/tom22/TOM22-09-evgeniy-bashkirov.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-10",
+      "cardNumber": "10",
+      "albumSlot": 10,
+      "displayName": "Valeriy Chuperka",
+      "image": "/tomsk/cards/tom22/TOM22-10-valeriy-chuperka.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Pavel Nekhaychik",
+      "image": "/tomsk/cards/tom22/TOM22-11-pavel-nekhaychik.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-12",
+      "cardNumber": "12",
+      "albumSlot": 12,
+      "displayName": "Ilya Kukharchuk",
+      "image": "/tomsk/cards/tom22/TOM22-12-ilya-kukharchuk.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-13",
+      "cardNumber": "13",
+      "albumSlot": 13,
+      "displayName": "Anton Makurin",
+      "image": "/tomsk/cards/tom22/TOM22-13-anton-makurin.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-14",
+      "cardNumber": "14",
+      "albumSlot": 14,
+      "displayName": "Nikita Gvineyskiy",
+      "image": "/tomsk/cards/tom22/TOM22-14-nikita-gvineyskiy.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-15",
+      "cardNumber": "15",
+      "albumSlot": 15,
+      "displayName": "Aleksey Pugin",
+      "image": "/tomsk/cards/tom22/TOM22-15-aleksey-pugin.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-16",
+      "cardNumber": "16",
+      "albumSlot": 16,
+      "displayName": "Nikolay Kalinskiy",
+      "image": "/tomsk/cards/tom22/TOM22-16-nikolay-kalinskiy.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "midfielder"
+    },
+    {
+      "id": "tom22-17",
+      "cardNumber": "17",
+      "albumSlot": 17,
+      "displayName": "Nikita Bazhenov",
+      "image": "/tomsk/cards/tom22/TOM22-17-nikita-bazhenov.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "forward"
+    },
+    {
+      "id": "tom22-18",
+      "cardNumber": "18",
+      "albumSlot": 18,
+      "displayName": "Aleksandr Sobolev",
+      "image": "/tomsk/cards/tom22/TOM22-18-aleksandr-sobolev.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "forward"
+    },
+    {
+      "id": "tom22-19",
+      "cardNumber": "19",
+      "albumSlot": 19,
+      "displayName": "Kirill Panchenko",
+      "image": "/tomsk/cards/tom22/TOM22-19-kirill-panchenko.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "forward"
+    },
+    {
+      "id": "tom22-20",
+      "cardNumber": "20",
+      "albumSlot": 20,
+      "displayName": "Anzor Sanaya",
+      "image": "/tomsk/cards/tom22/TOM22-20-anzor-sanaya.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "common",
+      "kind": "player",
+      "position": "forward"
+    }
+  ]
+}

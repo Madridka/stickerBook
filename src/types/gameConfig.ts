@@ -15,7 +15,10 @@ export interface PackConfig {
 export interface BlisterConfig extends PackConfig {
   id: string
   albumId: string
+  albumIds: readonly string[]
   titleKey: string
+  descriptionKey: string
+  shortNameKey: string
   cost: number
   cooldownMs: number
   poolId: string

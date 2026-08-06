@@ -272,13 +272,15 @@ const getPlacedCards = (slotId: string): PlacedCard[] => {
     return catalogCardsByAlbumSlot.get(normalizeSlotId(slotId)) ?? []
   }
 
+  const normalizedSlotId: string = normalizeSlotId(slotId)
+
   return collection.items
     .filter(
       ({ instance }): boolean => {
         if (instance.albumId !== albumDefinition.id || instance.location === 'deleted') return false
         return (
           instance.location === 'album' &&
-          normalizeSlotId(instance.placement?.slotId ?? '') === slotId
+          normalizeSlotId(instance.placement?.slotId ?? '') === normalizedSlotId
         )
       },
     )
@@ -664,6 +666,7 @@ onBeforeUnmount((): void => {
               "
               :page-number="pages[pageIndex].geometry.number"
               :teams="getContentsTeams(pages[pageIndex].geometry.number)"
+              :variant="albumDefinition.layout.contentsVariant"
               @select="openTeam"
             />
             <template v-else>

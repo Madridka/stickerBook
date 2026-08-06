@@ -1,11 +1,12 @@
-import tom2000Cards from './1. tom (2000-2004)/cards.json'
-import tom2005Cards from './2. tom (2005-2007)/cards.json'
-import tom2008Cards from './3. tom (2008-2012)/cards.json'
-import tom2013Cards from './4. tom (2013-2022)/cards.json'
+import tom04Cards from './tom04/cards.json'
+import tom07Cards from './tom07/cards.json'
+import tom12Cards from './tom12/cards.json'
+import tom22Cards from './tom22/cards.json'
 import kdvPages from './5. kdv (2022)/pages.json'
 import type { AlbumGeometryData, AlbumGeometryPage, AlbumGeometrySlot } from '@/types'
 
 type EraCard = {
+  id: string
   cardNumber: string
   displayName: string
 }
@@ -39,8 +40,7 @@ const createEraPage = (
   slots: cards.map((card, index): AlbumGeometrySlot => {
     const position = slotPositions[index]
     if (!position) throw new Error(`${eraId}: too many cards on ${side} page`)
-    const id = `${eraId}-${card.cardNumber}`
-    return { id, playerId: id, name: card.displayName, ...position }
+    return { id: card.id, playerId: card.id, name: card.displayName, ...position }
   }),
 })
 
@@ -107,10 +107,10 @@ const tomskAlbum: AlbumGeometryData = {
       height: 1200,
       slots: [],
     },
-    ...createEraSpread('tom-2000', 'album.sectionTitles.tomsk.tom2000', 6, tom2000Cards.cards),
-    ...createEraSpread('tom-2005', 'album.sectionTitles.tomsk.tom2005', 8, tom2005Cards.cards),
-    ...createEraSpread('tom-2008', 'album.sectionTitles.tomsk.tom2008', 10, tom2008Cards.cards),
-    ...createEraSpread('tom-2013', 'album.sectionTitles.tomsk.tom2013', 12, tom2013Cards.cards),
+    ...createEraSpread('tom04', 'album.sectionTitles.tomsk.tom2000', 6, tom04Cards.cards),
+    ...createEraSpread('tom07', 'album.sectionTitles.tomsk.tom2005', 8, tom07Cards.cards),
+    ...createEraSpread('tom12', 'album.sectionTitles.tomsk.tom2008', 10, tom12Cards.cards),
+    ...createEraSpread('tom22', 'album.sectionTitles.tomsk.tom2013', 12, tom22Cards.cards),
     ...kdvPlayerPages,
   ],
 }

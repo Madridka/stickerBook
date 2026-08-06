@@ -119,7 +119,7 @@ describe('spainClubsLogo journal', () => {
     expect(getPlayerAlbums().some(({ id }) => id === 'spainClubsLogo')).toBe(true)
     expect(getPlayerAlbumById('spainClubsLogo')).toBe(definition)
     expect(getPlayerAlbumCard('spainClubsLogo', cards[0].id)).toBe(cards[0])
-    expect(getBlisters().some(({ albumId }) => albumId === 'spainClubsLogo')).toBe(false)
+    expect(getBlisters().some(({ albumId }) => albumId === 'spainClubsLogo')).toBe(true)
     expect(
       cards.every(({ acquisition }) =>
         acquisition.every(

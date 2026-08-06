@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import type { RouteLocationRaw } from 'vue-router'
 import type { DailyTaskRuntimeState } from '@/features/dailyTasks/types'
 
 import Button from 'primevue/button'
 import ProgressBar from 'primevue/progressbar'
 
 defineProps<{ tasks: DailyTaskRuntimeState[] }>()
-const emit = defineEmits<{ open: [] }>()
+const emit = defineEmits<{ open: []; navigate: [route: RouteLocationRaw] }>()
 const { t } = useI18n()
 </script>
 
@@ -31,23 +32,30 @@ const { t } = useI18n()
 
     <!-- Показывает всю дневную тройку без вытеснения остальных блоков главного экрана. -->
     <div class="mt-2 grid gap-1.5">
-      <div
+      <button
         v-for="task in tasks"
         :key="task.taskId"
-        class="grid grid-cols-[1fr_auto] items-center gap-x-2 border-l-2 px-2 py-1"
+        class="group grid w-full grid-cols-[1fr_auto_auto] items-center gap-x-2 border-l-2 px-2 py-1 text-left transition-colors hover:bg-gold/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-coral"
         :class="task.status === 'in-progress' ? 'border-coral bg-coral/5' : 'border-mint bg-mint/10'"
+        type="button"
+        :aria-label="t('dailyTasks.openAction', { task: t(task.definition.titleKey) })"
+        @click="emit('navigate', task.definition.route)"
       >
         <span class="truncate text-xs font-black">{{ t(task.definition.titleKey) }}</span>
         <span class="text-[11px] font-black tabular-nums text-ink/55">
           {{ Math.min(task.definition.target, Math.floor(task.progress)) }} /
           {{ task.definition.target }}
         </span>
+        <i
+          class="pi pi-arrow-right text-[10px] text-coral transition-transform group-hover:translate-x-0.5"
+          aria-hidden="true"
+        />
         <ProgressBar
-          class="home-daily-progress col-span-2 mt-1 h-1.5"
+          class="home-daily-progress col-span-3 mt-1 h-1.5"
           :value="task.percent"
           :show-value="false"
         />
-      </div>
+      </button>
     </div>
 
     <Button
@@ -68,4 +76,3 @@ const { t } = useI18n()
   background: rgb(var(--color-coral));
 }
 </style>
-

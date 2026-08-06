@@ -27,7 +27,7 @@ $players = @(
 )
 
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
-$targetRoot = Join-Path $repositoryRoot 'src\data\tomsk\2. tom (2005-2007)\photo-sources'
+$targetRoot = Join-Path $repositoryRoot 'src\data\tomsk\tom07\photo-sources'
 New-Item -ItemType Directory -Force -Path $targetRoot | Out-Null
 
 $headers = @{ 'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36' }

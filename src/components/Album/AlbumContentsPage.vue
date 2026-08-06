@@ -7,6 +7,7 @@ import LoadableImage from '@/components/ui/LoadableImage.vue'
 interface Props {
   pageNumber: number
   teams: AlbumContentsItem[]
+  variant?: 'grouped' | 'flat'
 }
 
 interface Emits {
@@ -21,8 +22,25 @@ interface ContentsGroup {
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
+const isFlatContents: ComputedRef<boolean> = computed(
+  (): boolean => props.variant === 'flat',
+)
 const isTomskContents: ComputedRef<boolean> = computed((): boolean =>
-  props.teams.some(({ id }): boolean => id === 'kdv' || id.startsWith('tom-')),
+  props.teams.some(({ id }): boolean => id === 'kdv' || /^tom(?:04|07|12|22)$/.test(id)),
+)
+const hintKey: ComputedRef<string> = computed((): string =>
+  isTomskContents.value
+    ? 'album.contents.tomsk.hint'
+    : isFlatContents.value
+      ? 'album.contents.ucl.hint'
+      : 'album.contents.hint',
+)
+const navigationKey: ComputedRef<string> = computed((): string =>
+  isTomskContents.value
+    ? 'album.contents.tomsk.navigation'
+    : isFlatContents.value
+      ? 'album.contents.ucl.navigation'
+      : 'album.contents.navigation',
 )
 
 const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => {
@@ -53,19 +71,42 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
         {{ t('album.contents.title') }}
       </h2>
       <p class="mt-[0.35cqw] text-[clamp(7px,1cqw,15px)] font-semibold text-ink/55">
-        {{ t(isTomskContents ? 'album.contents.tomsk.hint' : 'album.contents.hint') }}
+        {{ t(hintKey) }}
       </p>
     </header>
 
     <nav
       class="mx-auto mt-[1.8cqw] grid min-h-0 w-full flex-1 gap-[1.1cqw]"
-      :class="isTomskContents ? 'grid-rows-1' : 'grid-rows-3'"
-      :aria-label="
-        t(isTomskContents ? 'album.contents.tomsk.navigation' : 'album.contents.navigation')
+      :class="
+        isFlatContents
+          ? 'grid-cols-4 grid-rows-3 gap-[1.35cqw]'
+          : isTomskContents
+            ? 'grid-rows-1'
+            : 'grid-rows-3'
       "
+      :aria-label="t(navigationKey)"
     >
+      <!-- Плоское оглавление сохраняет на странице сетку 4×3 без искусственных групп. -->
+      <button
+        v-for="team in isFlatContents ? teams : []"
+        :key="team.id"
+        class="group grid min-h-0 place-items-center rounded-[1.1cqw] border border-ink/10 bg-paper/95 px-[0.8cqw] shadow-[0_0.45cqw_1.2cqw_rgb(var(--color-ink)/0.1)] transition duration-200 hover:-translate-y-[0.25cqw] hover:border-coral/45 hover:bg-white hover:shadow-[0_0.7cqw_1.6cqw_rgb(var(--color-ink)/0.16)] focus-visible:outline focus-visible:outline-[0.3cqw] focus-visible:outline-offset-[0.25cqw] focus-visible:outline-gold"
+        type="button"
+        :aria-label="t('album.contents.ucl.openClub', { club: t(team.nameKey) })"
+        :title="t(team.nameKey)"
+        @click="emit('select', team.pageId)"
+      >
+        <LoadableImage
+          class="h-[86%] min-h-0 w-[78%] select-none"
+          image-class="transition-transform duration-200 group-hover:scale-105"
+          :src="team.flag"
+          alt=""
+          fit="contain"
+        />
+      </button>
+
       <section
-        v-for="group in groupRows"
+        v-for="group in isFlatContents ? [] : groupRows"
         :key="group.id"
         class="grid min-h-0 grid-cols-[10cqw_minmax(0,1fr)] items-stretch gap-[1cqw]"
       >

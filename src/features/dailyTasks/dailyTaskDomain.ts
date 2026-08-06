@@ -1,5 +1,5 @@
 import { getLocalDateKey } from '@/utils/dailyDateKey'
-import { DAILY_TASK_CONFIG } from '@/data/mainConst'
+import { DAILY_TASK_CONFIG } from '@/config/gameBalance'
 import {
   DAILY_TASK_GROUPS,
   dailyTaskDefinitionById,

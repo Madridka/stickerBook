@@ -2,7 +2,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { getAlbumCard } from '@/data/albumRegistry'
-import { DAILY_TASK_CONFIG } from '@/data/mainConst'
+import { DAILY_TASK_CONFIG } from '@/config/gameBalance'
 import { formatCountdown } from '@/utils/formatCountdown'
 import { useCollectionStore } from '@/stores/collection'
 import { useDailyTasksStore } from '@/stores/dailyTasks'

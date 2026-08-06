@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { PACK_ANIMATION_CONFIG } from '@/data/mainConst'
+import { PACK_ANIMATION_CONFIG } from '@/config/runtimeConfig'
 
 const emit = defineEmits<{ complete: [] }>()
 const { t } = useI18n()

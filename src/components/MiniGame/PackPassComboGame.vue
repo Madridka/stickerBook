@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 
 type Position = (typeof PACK_HUNT_CONFIG.passCombo.positions)[number]['key']
 type Phase = 'sequence' | 'input' | 'mistake' | 'roundComplete'

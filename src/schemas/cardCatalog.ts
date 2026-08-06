@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { CARD_CATALOG_CONFIG, COLLECTION_CONFIG } from '../data/mainConst.ts'
+import { CARD_CATALOG_CONFIG, COLLECTION_CONFIG } from '@/config/catalogConfig'
 import type {
   CardCatalog,
   CardFinish,
@@ -95,111 +95,111 @@ const cardCatalogObjectSchema = z.strictObject({
 })
 
 // Создаёт схему с независимым числом слотов для конкретного журнала.
-export const createCardCatalogSchema = (expectedSlotCount: number) =>
+export const createCardCatalogSchema = (expectedSlotCount: number): z.ZodType<CardCatalog> =>
   cardCatalogObjectSchema.superRefine((catalog, context) => {
-  const cardsById = new Map(catalog.cards.map((card) => [card.id, card]))
-  const seenIds = new Set<string>()
-  const seenCardNumbers = new Set<string>()
+    const cardsById = new Map(catalog.cards.map((card) => [card.id, card]))
+    const seenIds = new Set<string>()
+    const seenCardNumbers = new Set<string>()
 
-  catalog.cards.forEach((card, index) => {
-    if (seenIds.has(card.id)) {
-      context.addIssue({
-        code: 'custom',
-        path: ['cards', index, 'id'],
-        message: 'Duplicate card id',
-      })
-    }
-    seenIds.add(card.id)
-
-    if (seenCardNumbers.has(card.cardNumber)) {
-      context.addIssue({
-        code: 'custom',
-        path: ['cards', index, 'cardNumber'],
-        message: 'Duplicate card number',
-      })
-    }
-    seenCardNumbers.add(card.cardNumber)
-
-    if (card.series === 'base' && card.albumSlot === undefined) {
-      context.addIssue({
-        code: 'custom',
-        path: ['cards', index, 'albumSlot'],
-        message: 'Base card requires an album slot',
-      })
-    }
-
-    if (card.series !== 'base' && card.albumSlot !== undefined) {
-      context.addIssue({
-        code: 'custom',
-        path: ['cards', index, 'albumSlot'],
-        message: 'Additional card must not occupy a base album slot',
-      })
-    }
-
-    if (card.series === 'special' && !card.baseCardId) {
-      context.addIssue({
-        code: 'custom',
-        path: ['cards', index, 'baseCardId'],
-        message: 'Special card requires a baseCardId',
-      })
-    }
-
-    if (card.baseCardId) {
-      const baseCard = cardsById.get(card.baseCardId)
-      if (card.baseCardId === card.id) {
+    catalog.cards.forEach((card, index) => {
+      if (seenIds.has(card.id)) {
         context.addIssue({
           code: 'custom',
-          path: ['cards', index, 'baseCardId'],
-          message: 'Card must not reference itself',
-        })
-      } else if (!baseCard) {
-        context.addIssue({
-          code: 'custom',
-          path: ['cards', index, 'baseCardId'],
-          message: 'Referenced base card does not exist in this team',
-        })
-      } else if (baseCard.series !== 'base') {
-        context.addIssue({
-          code: 'custom',
-          path: ['cards', index, 'baseCardId'],
-          message: 'baseCardId must reference a base-series card',
+          path: ['cards', index, 'id'],
+          message: 'Duplicate card id',
         })
       }
-    }
-  })
+      seenIds.add(card.id)
 
-  const baseCards = catalog.cards.filter((card) => card.series === 'base')
-  if (catalog.cards.length < expectedSlotCount) {
-    context.addIssue({
-      code: 'custom',
-      path: ['cards'],
-      message: 'Catalog has too few total cards',
+      if (seenCardNumbers.has(card.cardNumber)) {
+        context.addIssue({
+          code: 'custom',
+          path: ['cards', index, 'cardNumber'],
+          message: 'Duplicate card number',
+        })
+      }
+      seenCardNumbers.add(card.cardNumber)
+
+      if (card.series === 'base' && card.albumSlot === undefined) {
+        context.addIssue({
+          code: 'custom',
+          path: ['cards', index, 'albumSlot'],
+          message: 'Base card requires an album slot',
+        })
+      }
+
+      if (card.series !== 'base' && card.albumSlot !== undefined) {
+        context.addIssue({
+          code: 'custom',
+          path: ['cards', index, 'albumSlot'],
+          message: 'Additional card must not occupy a base album slot',
+        })
+      }
+
+      if (card.series === 'special' && !card.baseCardId) {
+        context.addIssue({
+          code: 'custom',
+          path: ['cards', index, 'baseCardId'],
+          message: 'Special card requires a baseCardId',
+        })
+      }
+
+      if (card.baseCardId) {
+        const baseCard = cardsById.get(card.baseCardId)
+        if (card.baseCardId === card.id) {
+          context.addIssue({
+            code: 'custom',
+            path: ['cards', index, 'baseCardId'],
+            message: 'Card must not reference itself',
+          })
+        } else if (!baseCard) {
+          context.addIssue({
+            code: 'custom',
+            path: ['cards', index, 'baseCardId'],
+            message: 'Referenced base card does not exist in this team',
+          })
+        } else if (baseCard.series !== 'base') {
+          context.addIssue({
+            code: 'custom',
+            path: ['cards', index, 'baseCardId'],
+            message: 'baseCardId must reference a base-series card',
+          })
+        }
+      }
     })
-  }
-  if (baseCards.length !== expectedSlotCount) {
-    context.addIssue({
-      code: 'custom',
-      path: ['cards'],
-      message: `Expected ${expectedSlotCount} base cards, received ${baseCards.length}`,
-    })
-  }
 
-  const baseSlots = baseCards.flatMap((card) =>
-    card.albumSlot === undefined ? [] : [card.albumSlot],
-  )
-  if (new Set(baseSlots).size !== baseSlots.length) {
-    context.addIssue({ code: 'custom', path: ['cards'], message: 'Duplicate base album slot' })
-  }
-
-  for (let slot = 1; slot <= expectedSlotCount; slot += 1) {
-    if (!baseSlots.includes(slot)) {
+    const baseCards = catalog.cards.filter((card) => card.series === 'base')
+    if (catalog.cards.length < expectedSlotCount) {
       context.addIssue({
         code: 'custom',
         path: ['cards'],
-        message: `Missing base album slot ${slot}`,
+        message: 'Catalog has too few total cards',
       })
     }
-  }
+    if (baseCards.length !== expectedSlotCount) {
+      context.addIssue({
+        code: 'custom',
+        path: ['cards'],
+        message: `Expected ${expectedSlotCount} base cards, received ${baseCards.length}`,
+      })
+    }
+
+    const baseSlots = baseCards.flatMap((card) =>
+      card.albumSlot === undefined ? [] : [card.albumSlot],
+    )
+    if (new Set(baseSlots).size !== baseSlots.length) {
+      context.addIssue({ code: 'custom', path: ['cards'], message: 'Duplicate base album slot' })
+    }
+
+    for (let slot = 1; slot <= expectedSlotCount; slot += 1) {
+      if (!baseSlots.includes(slot)) {
+        context.addIssue({
+          code: 'custom',
+          path: ['cards'],
+          message: `Missing base album slot ${slot}`,
+        })
+      }
+    }
   })
 
 export const cardCatalogSchema = createCardCatalogSchema(
@@ -209,4 +209,4 @@ export const cardCatalogSchema = createCardCatalogSchema(
 export const parseCardCatalog = (
   input: unknown,
   expectedSlotCount: number = COLLECTION_CONFIG.baseAlbumSlotsPerTeam,
-): CardCatalog => createCardCatalogSchema(expectedSlotCount).parse(input) as CardCatalog
+): CardCatalog => createCardCatalogSchema(expectedSlotCount).parse(input)

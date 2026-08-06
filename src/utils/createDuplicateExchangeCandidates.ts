@@ -1,4 +1,4 @@
-import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '../data/mainConst.ts'
+import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '@/config/gameBalance'
 import type { CardDefinition, NormalizedCardCatalog } from '../types/cardCatalog.ts'
 import { selectCardV2, type RandomSource } from './dropEngine.ts'
 

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { CARD_CATALOG_CONFIG } from '@/data/mainConst'
+import { CARD_CATALOG_CONFIG } from '@/config/catalogConfig'
 import type { TeamCard } from '@/types/cardCatalog'
 
 const clubCardSchema = z.strictObject({

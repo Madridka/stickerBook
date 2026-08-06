@@ -6,7 +6,7 @@ import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
 import { useBlistersStore } from '@/stores/blisters'
-import { BLISTER_CONFIGS, CARDS_PER_PACK, PACK_PRICE } from '@/data/mainConst'
+import { BLISTER_CONFIGS, CARDS_PER_PACK, PACK_PRICE } from '@/config/gameBalance'
 import {
   getPlayerAlbumById,
   getPlayerBlisterById,

@@ -1,7 +1,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, PLAYER_STATE_ID, type PlayerState } from '@/db/database'
-import { CLICKER_CONFIG } from '@/data/mainConst'
+import { CLICKER_CONFIG } from '@/config/gameBalance'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 import {
   notifyDailyTasksChanged,

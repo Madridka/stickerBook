@@ -1,4 +1,4 @@
-import { PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 
 export type PackMiniGameId =
   | 'signal'

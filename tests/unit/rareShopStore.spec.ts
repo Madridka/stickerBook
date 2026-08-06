@@ -6,7 +6,7 @@ import type {
   PlayerState,
 } from '@/db/database'
 import type { RareShopState } from '@/features/rareShop/types'
-import { RARE_SHOP_CONFIG } from '@/data/mainConst'
+import { RARE_SHOP_CONFIG } from '@/config/gameBalance'
 
 const persisted = vi.hoisted(() => ({
   rareShop: null as RareShopState | null,

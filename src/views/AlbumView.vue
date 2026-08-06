@@ -13,9 +13,9 @@ import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import { resolveAlbumPageAsset } from '@/data/albumPageAssets'
 import {
   ALBUM_VIEW_CONFIG,
-  BLISTER_CONFIGS,
   PLACE_ALL_COLLECTED_CARDS,
-} from '@/data/mainConst'
+} from '@/config/albumConfig'
+import { BLISTER_CONFIGS } from '@/config/gameBalance'
 import { getAlbumById, getPlayerAlbumById, requireAlbum } from '@/data/albumRegistry'
 import { useAlbumStore } from '@/stores/album'
 import { useCollectionStore } from '@/stores/collection'

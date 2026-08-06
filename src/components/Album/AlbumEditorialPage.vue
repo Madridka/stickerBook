@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { ALBUM_VIEW_CONFIG } from '@/data/mainConst'
+import { ALBUM_VIEW_CONFIG } from '@/config/albumConfig'
 import type { AlbumEditorialPageDefinition } from '@/types'
 
 interface AlbumReleaseNote {

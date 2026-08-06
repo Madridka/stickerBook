@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ALBUM_VIEW_CONFIG } from '@/data/mainConst'
+import { ALBUM_VIEW_CONFIG } from '@/config/albumConfig'
 import { preloadImages } from '@/utils/preloadImages'
 
 import Button from 'primevue/button'

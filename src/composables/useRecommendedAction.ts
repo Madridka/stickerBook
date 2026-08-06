@@ -1,6 +1,6 @@
 import { computed, type ComputedRef } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
-import { DUPLICATE_EXCHANGE_CONFIG, PACK_PRICE } from '@/data/mainConst'
+import { DUPLICATE_EXCHANGE_CONFIG, PACK_PRICE } from '@/config/gameBalance'
 import { useCollectionStore } from '@/stores/collection'
 import { useGameGuideStore, type GuideStepDefinition } from '@/stores/gameGuide'
 import { useInventoryStore } from '@/stores/inventory'

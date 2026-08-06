@@ -4,7 +4,7 @@ import { database } from '@/db/database'
 import { promoteDuplicate } from '@/db/stickerLifecycle'
 import type { DeletedCard, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
-import { DELETED_CARD_CONFIG } from '@/data/mainConst'
+import { DELETED_CARD_CONFIG } from '@/config/gameBalance'
 
 const normalizeRestoredCard = (
   instance: StickerInstance,

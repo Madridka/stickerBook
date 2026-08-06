@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { database } from '@/db/database'
 import { useTheme } from '@/composables/useTheme'
-import { HOME_VIEW_CONFIG } from '@/data/mainConst'
+import { HOME_VIEW_CONFIG } from '@/config/runtimeConfig'
 import { usePlayerStore } from '@/stores/player'
 
 import Menu from 'primevue/menu'

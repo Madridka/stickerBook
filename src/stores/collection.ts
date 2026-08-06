@@ -10,7 +10,7 @@ import type {
   StickerPlacement,
 } from '@/types'
 import { getAlbumById, getPlayerAlbumById } from '@/data/albumRegistry'
-import { BLISTER_CONFIGS, DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, DUPLICATE_EXCHANGE_CONFIG } from '@/config/gameBalance'
 import { createDuplicateExchangeCandidates } from '@/utils/createDuplicateExchangeCandidates'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 import {

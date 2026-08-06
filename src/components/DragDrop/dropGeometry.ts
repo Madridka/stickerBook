@@ -4,7 +4,7 @@ import type {
   StickerPlacement,
   StickerPreparation,
 } from '@/types'
-import { STICKER_DROP_CONFIG, STICKER_PREPARATION_CONFIG } from '@/data/mainConst'
+import { STICKER_DROP_CONFIG, STICKER_PREPARATION_CONFIG } from '@/config/stickerEngineConfig'
 
 interface DropCardIdentity {
   instanceId: string

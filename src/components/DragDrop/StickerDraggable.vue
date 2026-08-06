@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { STICKER_DRAG_THRESHOLD_PX } from '@/data/mainConst'
+import { STICKER_DRAG_THRESHOLD_PX } from '@/config/stickerEngineConfig'
 import type { CardDefinition, StickerDropResult, StickerInstance } from '@/types'
 import { formatCardDisplayName } from '@/utils/cardDisplayName'
 

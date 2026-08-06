@@ -7,7 +7,7 @@ import {
   BLISTER_CONFIGS,
   DELETED_CARD_CONFIG,
   MILLISECONDS_PER_DAY,
-} from '@/data/mainConst'
+} from '@/config/gameBalance'
 import { useCollectionStore } from '@/stores/collection'
 import { useDeletedCardsStore } from '@/stores/deletedCards'
 import { useGameGuideStore } from '@/stores/gameGuide'

@@ -5,7 +5,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackHuntStore, type PackHuntClaimResult } from '@/stores/packHunt'
 import { formatCountdown } from '@/utils/formatCountdown'
-import { PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import {
   isPackMiniGameId,
   selectPackMiniGame,

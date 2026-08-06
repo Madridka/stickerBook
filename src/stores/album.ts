@@ -1,7 +1,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getAlbumById, requireAlbum } from '@/data/albumRegistry'
-import { BLISTER_CONFIGS } from '@/data/mainConst'
+import { BLISTER_CONFIGS } from '@/config/gameBalance'
 import { createAlbumGeometry, type AlbumGeometry } from '@/utils/AlbumGeometry'
 import type {
   AlbumDefinition,

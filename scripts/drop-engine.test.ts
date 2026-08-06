@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '../src/data/mainConst.ts'
+import { DROP_ENGINE_CONFIG, PACK_CONFIGS } from '../src/config/gameBalance.ts'
 import type { Card, CardCatalog, CardRarity } from '../src/types/cardCatalog.ts'
 import {
   getRenormalizedRarityOdds,

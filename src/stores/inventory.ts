@@ -2,7 +2,7 @@ import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type InventoryItem, type InventoryItemType } from '@/db/database'
 import { createId } from '@/utils/createId'
-import { BLISTER_CONFIGS } from '@/data/mainConst'
+import { BLISTER_CONFIGS } from '@/config/gameBalance'
 
 export const useInventoryStore = defineStore('inventory', () => {
   const items: Ref<InventoryItem[]> = ref([])

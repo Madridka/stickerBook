@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { STICKER_PREPARATION_CONFIG } from '@/data/mainConst'
+import { STICKER_PREPARATION_CONFIG } from '@/config/stickerEngineConfig'
 import type { StickerPreparation, StickerTrayItem } from '@/types'
 
 import Button from 'primevue/button'

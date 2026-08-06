@@ -7,7 +7,7 @@ import {
   type PackOpeningSession,
   type PlayerState,
 } from '@/db/database'
-import { BLISTER_CONFIGS, CLICKER_CONFIG, RARE_SHOP_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, CLICKER_CONFIG, RARE_SHOP_CONFIG } from '@/config/gameBalance'
 import { catalogs } from '@/data/wc-26/catalog'
 import type { NormalizedCardCatalog, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'

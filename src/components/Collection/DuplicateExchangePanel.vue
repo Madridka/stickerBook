@@ -2,7 +2,7 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { getAlbumCard } from '@/data/albumRegistry'
-import { DUPLICATE_EXCHANGE_CONFIG } from '@/data/mainConst'
+import { DUPLICATE_EXCHANGE_CONFIG } from '@/config/gameBalance'
 import {
   useCollectionStore,
   type BeginDuplicateExchangeResult,

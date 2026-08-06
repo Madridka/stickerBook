@@ -1,4 +1,5 @@
-import { ALBUM_VISIBILITY_CONFIG, BLISTER_CONFIGS, PACK_CONFIGS } from './mainConst'
+import { ALBUM_VISIBILITY_CONFIG } from '@/config/albumConfig'
+import { BLISTER_CONFIGS, PACK_CONFIGS } from '@/config/gameBalance'
 import { hasAlbumPageAsset } from './albumPageAssets'
 import infoGeometry from './info/album'
 import wc26Geometry from './wc-26/album'

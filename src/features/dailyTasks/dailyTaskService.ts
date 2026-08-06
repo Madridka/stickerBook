@@ -1,5 +1,5 @@
 import { database } from '@/db/database'
-import { BLISTER_CONFIGS, DAILY_TASK_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, DAILY_TASK_CONFIG } from '@/config/gameBalance'
 import { getPlayerAlbumById } from '@/data/albumRegistry'
 import { storeCardInstance } from '@/db/stickerLifecycle'
 import { createDuplicateExchangeCandidates } from '@/utils/createDuplicateExchangeCandidates'

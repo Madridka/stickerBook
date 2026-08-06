@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { CARDS_PER_PACK, PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { CARDS_PER_PACK } from '@/config/gameBalance'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import { formatCountdown } from '@/utils/formatCountdown'
 
 import Button from 'primevue/button'

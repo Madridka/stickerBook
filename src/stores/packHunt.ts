@@ -1,7 +1,9 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type InventoryItem, type PackHuntProgress } from '@/db/database'
-import { BLISTER_CONFIGS, CLOCK_CONFIG, PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS } from '@/config/gameBalance'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
+import { CLOCK_CONFIG } from '@/config/runtimeConfig'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 

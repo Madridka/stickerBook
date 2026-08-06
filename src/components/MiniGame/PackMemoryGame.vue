@@ -2,7 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import cards from '@/data/wc-26/catalog'
-import { PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import type { CardDefinition, PlayerCardDefinition } from '@/types'
 import LoadableImage from '@/components/ui/LoadableImage.vue'
 import { preloadImage } from '@/utils/preloadImages'

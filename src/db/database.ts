@@ -81,7 +81,7 @@ export interface PackOpeningSession {
 export interface BlisterCooldown {
   // Идентификатор типа блистера одновременно служит первичным ключом.
   id: string
-  // Время начала позволяет пересчитывать окончание при изменении mainConst.
+  // Время начала позволяет пересчитывать окончание при изменении gameBalance.
   startedAt?: number
   nextAvailableAt: number
 }
@@ -325,7 +325,7 @@ database.version(14).upgrade(async (transaction): Promise<void> => {
 // Добавляет одно сохраняемое состояние текущей ротации ежедневных заданий.
 database.version(15).stores({ dailyTasks: 'id, dayKey' })
 
-// Сохраняет начало уже активных кулдаунов, чтобы их длительность определялась mainConst.
+// Сохраняет начало уже активных кулдаунов, чтобы их длительность определялась gameBalance.
 database
   .version(16)
   .stores({ blisterCooldowns: 'id, nextAvailableAt' })

@@ -9,7 +9,7 @@ import {
   type Ref,
 } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { MINI_GAME_FIELD_PERCENT, PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { MINI_GAME_FIELD_PERCENT, PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import { createMiniGamePath, type MiniGamePoint } from '@/utils/createMiniGamePath'
 
 import Button from 'primevue/button'

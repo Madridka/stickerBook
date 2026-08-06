@@ -1,7 +1,7 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type BlisterCooldown } from '@/db/database'
-import { CLOCK_CONFIG } from '@/data/mainConst'
+import { CLOCK_CONFIG } from '@/config/runtimeConfig'
 import { getPlayerBlisterById } from '@/data/albumRegistry'
 import { resolveBlisterCooldownEnd } from '@/utils/blisterCooldown'
 

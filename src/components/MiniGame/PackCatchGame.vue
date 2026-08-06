@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 
 import ProgressBar from 'primevue/progressbar'
 
@@ -100,7 +100,7 @@ const currentSpawnIntervalMs: ComputedRef<number> = computed((): number =>
   lerp(spawnIntervalStartMs, spawnIntervalEndMs, sessionProgress.value),
 )
 
-function lerp(from: number, to: number, progress: number): number {
+const lerp = (from: number, to: number, progress: number): number => {
   return from + (to - from) * Math.min(1, Math.max(0, progress))
 }
 

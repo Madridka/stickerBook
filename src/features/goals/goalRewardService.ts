@@ -4,7 +4,7 @@ import {
   type InventoryItem,
   type PlayerState,
 } from '@/db/database'
-import { CLICKER_CONFIG } from '@/data/mainConst'
+import { CLICKER_CONFIG } from '@/config/gameBalance'
 import { createId } from '@/utils/createId'
 import type { GoalDefinition, GoalPlayerState } from './types'
 

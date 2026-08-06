@@ -11,7 +11,8 @@ import {
 import { useI18n } from 'vue-i18n'
 import ProgressBar from 'primevue/progressbar'
 
-import { PACK_CONFIGS, PACK_HUNT_CONFIG } from '@/data/mainConst'
+import { PACK_CONFIGS } from '@/config/gameBalance'
+import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import cards from '@/data/wc-26/catalog'
 import type { CardDefinition, PlayerCardDefinition } from '@/types'
 import { preloadImage } from '@/utils/preloadImages'

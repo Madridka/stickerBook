@@ -4,11 +4,11 @@ import path from 'node:path'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
 import {
-  COLLECTION_CONFIG,
   DROP_ENGINE_CONFIG,
   DUPLICATE_EXCHANGE_CONFIG,
   PACK_CONFIGS,
-} from '../src/data/mainConst.ts'
+} from '../src/config/gameBalance.ts'
+import { COLLECTION_CONFIG } from '../src/config/catalogConfig.ts'
 import { loadCardCatalogs } from '../src/data/cardCatalogLoader.ts'
 import type { CardRarity } from '../src/types/cardCatalog.ts'
 import { createDuplicateExchangeCandidates } from '../src/utils/createDuplicateExchangeCandidates.ts'

@@ -7,7 +7,7 @@ import {
   type PackOpeningSession,
 } from '@/db/database'
 import { getPlayerAlbumById, getPlayerBlisterById } from '@/data/albumRegistry'
-import { BLISTER_CONFIGS, DROP_ENGINE_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, DROP_ENGINE_CONFIG } from '@/config/gameBalance'
 import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 import { selectCardV2 } from '@/utils/dropEngine'

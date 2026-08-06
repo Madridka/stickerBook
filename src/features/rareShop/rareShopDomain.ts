@@ -1,4 +1,4 @@
-import { DROP_ENGINE_CONFIG, PACK_CONFIGS, RARE_SHOP_CONFIG } from '@/data/mainConst'
+import { DROP_ENGINE_CONFIG, PACK_CONFIGS, RARE_SHOP_CONFIG } from '@/config/gameBalance'
 import type {
   CardDefinition,
   CardRarity,

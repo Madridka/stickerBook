@@ -2,7 +2,7 @@ import type { BlisterCooldown } from '@/db/database'
 
 /**
  * Вычисляет окончание кулдауна из времени его запуска и текущей конфигурации.
- * Благодаря этому изменение mainConst применяется и к уже начатому кулдауну.
+ * Благодаря этому изменение баланса в gameBalance применяется и к уже начатому кулдауну.
  */
 export const resolveBlisterCooldownEnd = (
   cooldown: BlisterCooldown,

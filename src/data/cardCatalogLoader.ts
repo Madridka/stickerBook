@@ -1,4 +1,5 @@
-import { COLLECTION_CONFIG, DROP_ENGINE_CONFIG } from './mainConst.ts'
+import { COLLECTION_CONFIG } from '@/config/catalogConfig'
+import { DROP_ENGINE_CONFIG } from '@/config/gameBalance'
 import { parseCardCatalog } from '../schemas/cardCatalog.ts'
 import type {
   Card,

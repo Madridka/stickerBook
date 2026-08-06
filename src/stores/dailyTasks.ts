@@ -1,7 +1,8 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getLocalDateKey } from '@/utils/dailyDateKey'
-import { CLOCK_CONFIG, DAILY_TASK_CONFIG } from '@/data/mainConst'
+import { DAILY_TASK_CONFIG } from '@/config/gameBalance'
+import { CLOCK_CONFIG } from '@/config/runtimeConfig'
 import { dailyTaskDefinitionById } from '@/features/dailyTasks/dailyTaskDefinitions'
 import {
   beginDailyTaskReward,

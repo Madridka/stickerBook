@@ -4,7 +4,7 @@ import {
   type InventoryItem,
   type PlayerState,
 } from '@/db/database'
-import { BLISTER_CONFIGS, CLICKER_CONFIG, DROP_ENGINE_CONFIG } from '@/data/mainConst'
+import { BLISTER_CONFIGS, CLICKER_CONFIG, DROP_ENGINE_CONFIG } from '@/config/gameBalance'
 import { getPlayerAlbumById, getPlayerBlisterById } from '@/data/albumRegistry'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'

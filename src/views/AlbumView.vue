@@ -225,6 +225,7 @@ const normalizeSlotId = (slotId: string): string => slotId.replace(/-slot$/, '')
 const getCard = (playerId: string): CardDefinition | undefined =>
   cards.find(({ id }): boolean => id === playerId)
 const getCardAlbumSlotId = (playerId: string): string => getCard(playerId)?.baseCardId ?? playerId
+const getSectionTitle = (titleKey: string | undefined): string => (titleKey ? t(titleKey) : '')
 const selectedCatalogCardIds: Ref<Record<string, string>> = ref({})
 
 type PlacedCard = {
@@ -667,10 +668,10 @@ onBeforeUnmount((): void => {
             />
             <template v-else>
               <h2
-                v-if="pages[pageIndex].geometry.sectionTitle"
+                v-if="pages[pageIndex].geometry.sectionTitleKey"
                 class="pointer-events-none absolute left-[8%] right-[8%] top-[3.5%] z-20 text-center text-[clamp(8px,1.25cqw,19px)] font-black uppercase tracking-[0.12em] text-[#a71920]"
               >
-                {{ pages[pageIndex].geometry.sectionTitle }}
+                {{ getSectionTitle(pages[pageIndex].geometry.sectionTitleKey) }}
               </h2>
               <StickerSlot
                 v-for="slot in pages[pageIndex].geometry.slots"

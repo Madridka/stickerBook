@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import type { GoalRuntimeState } from '@/features/goals/types'
+
+import Button from 'primevue/button'
 
 defineProps<{ goals: GoalRuntimeState[] }>()
 const emit = defineEmits<{ open: [] }>()
+const { t } = useI18n()
 </script>
 
 <template>
@@ -13,10 +17,14 @@ const emit = defineEmits<{ open: [] }>()
     data-nearest-goals
   >
     <div class="flex items-center justify-between gap-3">
-      <h2 id="nearest-goals-title" class="text-base font-black">Ближайшие цели</h2>
-      <button class="text-xs font-black text-coral hover:underline" type="button" @click="emit('open')">
-        Все цели
-      </button>
+      <h2 id="nearest-goals-title" class="text-base font-black">{{ t('goals.nearest') }}</h2>
+      <Button
+        class="text-xs"
+        :label="t('goals.allGoals')"
+        text
+        type="button"
+        @click="emit('open')"
+      />
     </div>
     <ul class="mt-2 grid gap-1.5">
       <li
@@ -26,7 +34,7 @@ const emit = defineEmits<{ open: [] }>()
       >
         <span class="min-w-0 truncate font-bold">
           <i v-if="goal.isRewardAvailable" class="pi pi-gift mr-1 text-coral" />
-          {{ goal.definition.title }}
+          {{ t(goal.definition.titleKey) }}
         </span>
         <strong class="shrink-0 tabular-nums">
           {{ goal.progress.current }} / {{ goal.progress.target }}

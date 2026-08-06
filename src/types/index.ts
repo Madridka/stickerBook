@@ -96,7 +96,7 @@ export interface AlbumGeometryPage {
   image: string
   width: number
   height: number
-  sectionTitle?: string
+  sectionTitleKey?: string
   slots: AlbumGeometrySlot[]
 }
 

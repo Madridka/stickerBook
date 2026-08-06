@@ -57,8 +57,8 @@ describe('goalProgressResolver', () => {
     const definition: GoalDefinition = {
       id: 'next',
       category: 'packs',
-      title: 'Next',
-      description: 'Next',
+      titleKey: 'goals.test.next.title',
+      descriptionKey: 'goals.test.next.description',
       order: 2,
       requirements: [
         { type: 'goal-completed', goalId: 'previous' },
@@ -73,8 +73,8 @@ describe('goalProgressResolver', () => {
     const definition: GoalDefinition = {
       id: 'goal',
       category: 'packs',
-      title: 'Goal',
-      description: 'Goal',
+      titleKey: 'goals.test.goal.title',
+      descriptionKey: 'goals.test.goal.description',
       order: 1,
       requirements: [{ type: 'packs-opened', target: 5 }],
       reward: [{ type: 'coins', amount: 1 }],
@@ -93,8 +93,8 @@ describe('goalProgressResolver', () => {
     const definition: GoalDefinition = {
       id: 'legacy-collection',
       category: 'collection',
-      title: 'Legacy',
-      description: 'Legacy',
+      titleKey: 'goals.test.legacy.title',
+      descriptionKey: 'goals.test.legacy.description',
       order: 1,
       requirements: [{ type: 'unique-cards-collected', target: 10 }],
       reward: [{ type: 'coins', amount: 1 }],

@@ -25,7 +25,7 @@ const slotPositions: ReadonlyArray<Pick<AlbumGeometrySlot, 'x' | 'y' | 'width'>>
 
 const createEraPage = (
   eraId: string,
-  title: string,
+  titleKey: string,
   side: 'left' | 'right',
   number: number,
   cards: EraCard[],
@@ -35,7 +35,7 @@ const createEraPage = (
   image: `eras/${eraId}-${side}.webp`,
   width: 1536,
   height: 1200,
-  sectionTitle: title,
+  sectionTitleKey: titleKey,
   slots: cards.map((card, index): AlbumGeometrySlot => {
     const position = slotPositions[index]
     if (!position) throw new Error(`${eraId}: too many cards on ${side} page`)
@@ -46,12 +46,12 @@ const createEraPage = (
 
 const createEraSpread = (
   eraId: string,
-  title: string,
+  titleKey: string,
   firstPageNumber: number,
   cards: EraCard[],
 ): AlbumGeometryPage[] => [
-  createEraPage(eraId, title, 'left', firstPageNumber, cards.slice(0, 10)),
-  createEraPage(eraId, title, 'right', firstPageNumber + 1, cards.slice(10, 20)),
+  createEraPage(eraId, titleKey, 'left', firstPageNumber, cards.slice(0, 10)),
+  createEraPage(eraId, titleKey, 'right', firstPageNumber + 1, cards.slice(10, 20)),
 ]
 
 const kdvPlayerPages: AlbumGeometryPage[] = kdvPages.map(
@@ -59,7 +59,7 @@ const kdvPlayerPages: AlbumGeometryPage[] = kdvPages.map(
     ...page,
     number: index + 14,
     image: `eras/${page.id}.webp`,
-    sectionTitle: '5 том · КДВ · с 2025',
+    sectionTitleKey: 'album.sectionTitles.tomsk.kdv',
   }),
 )
 
@@ -107,10 +107,10 @@ const tomskAlbum: AlbumGeometryData = {
       height: 1200,
       slots: [],
     },
-    ...createEraSpread('tom-2000', '1 том · Томь · 2000–2004', 6, tom2000Cards.cards),
-    ...createEraSpread('tom-2005', '2 том · Томь · 2005–2007', 8, tom2005Cards.cards),
-    ...createEraSpread('tom-2008', '3 том · Томь · 2008–2012', 10, tom2008Cards.cards),
-    ...createEraSpread('tom-2013', '4 том · Томь · 2013–2022', 12, tom2013Cards.cards),
+    ...createEraSpread('tom-2000', 'album.sectionTitles.tomsk.tom2000', 6, tom2000Cards.cards),
+    ...createEraSpread('tom-2005', 'album.sectionTitles.tomsk.tom2005', 8, tom2005Cards.cards),
+    ...createEraSpread('tom-2008', 'album.sectionTitles.tomsk.tom2008', 10, tom2008Cards.cards),
+    ...createEraSpread('tom-2013', 'album.sectionTitles.tomsk.tom2013', 12, tom2013Cards.cards),
     ...kdvPlayerPages,
   ],
 }

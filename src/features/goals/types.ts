@@ -44,13 +44,13 @@ export type GoalReward =
 export interface GoalDefinition {
   id: string
   category: GoalCategory
-  title: string
-  description: string
+  titleKey: string
+  descriptionKey: string
   order: number
   requirements: GoalRequirement[]
   reward: GoalReward[]
   action?: {
-    label: string
+    labelKey: string
     route: RouteLocationRaw
   }
 }

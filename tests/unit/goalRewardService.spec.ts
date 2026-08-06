@@ -55,8 +55,8 @@ import { claimGoalReward } from '@/features/goals/goalRewardService'
 const definition = (reward: GoalReward[]): GoalDefinition => ({
   id: 'reward-goal',
   category: 'progression',
-  title: 'Reward',
-  description: 'Reward',
+  titleKey: 'goals.test.reward.title',
+  descriptionKey: 'goals.test.reward.description',
   order: 1,
   requirements: [{ type: 'coins-earned', target: 1 }],
   reward,

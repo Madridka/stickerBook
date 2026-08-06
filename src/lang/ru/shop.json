@@ -33,6 +33,8 @@
   "inventoryText": "Все полученные наборы ждут открытия здесь.",
   "inventoryLoading": "Загружаем блистеры",
   "ownedPackNumber": "Блистер №{number}",
+  "ownedPackBrand": "VKLEYKI",
+  "ownedPackContents": "{count} STICKERS",
   "emptyPacksTitle": "Блистеров пока нет",
   "emptyPacksText": "Купи набор или получи бесплатный в магазине — он появится в этом разделе.",
   "pointsPackName": "stickerBook",

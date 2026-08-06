@@ -295,7 +295,7 @@ const handleOpen = (): void => emit('open')
             >
               <span
                 class="relative z-[1] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em]"
-                >VKLEYKI</span
+                >{{ t('shop.ownedPackBrand') }}</span
               >
               <strong
                 class="relative z-[1] text-[clamp(1.25rem,4vw,2.2rem)] font-[950] leading-none tracking-[-.08em]"
@@ -303,8 +303,11 @@ const handleOpen = (): void => emit('open')
               >
               <span
                 class="relative z-[1] mt-[.35rem] text-[clamp(.55rem,1.2vw,.79rem)] font-black tracking-[.16em] opacity-[.72]"
-                >{{ ownedPackDetails[packId]?.cardCount ?? CARDS_PER_PACK }}
-                STICKERS</span
+                >{{
+                  t('shop.ownedPackContents', {
+                    count: ownedPackDetails[packId]?.cardCount ?? CARDS_PER_PACK,
+                  })
+                }}</span
               >
             </div>
           </div>

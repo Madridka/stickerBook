@@ -34,7 +34,7 @@ const progressPercent: ComputedRef<number> = computed(() =>
         <p class="text-[10px] font-black uppercase tracking-widest text-coral">
           {{ t(`goals.categories.${goal.definition.category}`) }}
         </p>
-        <h3 class="mt-1 text-lg font-black leading-tight">{{ goal.definition.title }}</h3>
+        <h3 class="mt-1 text-lg font-black leading-tight">{{ t(goal.definition.titleKey) }}</h3>
       </div>
       <span class="goal-card__status shrink-0 rounded-full px-2 py-1 text-[10px] font-black uppercase">
         {{ t(`goals.status.${goal.status}`) }}
@@ -42,7 +42,7 @@ const progressPercent: ComputedRef<number> = computed(() =>
     </div>
 
     <p class="mt-2 flex-1 text-sm leading-relaxed text-ink/65">
-      {{ goal.definition.description }}
+      {{ t(goal.definition.descriptionKey) }}
     </p>
 
     <div class="mt-4">
@@ -90,7 +90,7 @@ const progressPercent: ComputedRef<number> = computed(() =>
       <Button
         v-else-if="goal.definition.action && goal.status === 'active'"
         class="flex-1"
-        :label="goal.definition.action.label"
+        :label="t(goal.definition.action.labelKey)"
         icon="pi pi-arrow-right"
         icon-pos="right"
         outlined

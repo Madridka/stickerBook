@@ -176,7 +176,7 @@ describe('HomeView', () => {
   it('показывает компактный блок ближайших целей', () => {
     testState.goals.nearestGoals = [
       {
-        definition: { id: 'near', title: 'Открыть 5 наборов' },
+        definition: { id: 'near', titleKey: 'goals.items.open5Packs.title' },
         progress: { current: 3, target: 5 },
         status: 'active',
         isRewardAvailable: false,

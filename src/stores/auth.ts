@@ -15,7 +15,6 @@ interface AuthResponse {
 export interface RegisterInput {
   username: string
   password: string
-  inviteCode: string
   migrateLocalProgress: boolean
 }
 
@@ -55,7 +54,6 @@ export const useAuthStore = defineStore('auth', () => {
         body: JSON.stringify({
           username: input.username,
           password: input.password,
-          inviteCode: input.inviteCode,
         }),
       })
       await cloudSave.initialize(input.migrateLocalProgress)

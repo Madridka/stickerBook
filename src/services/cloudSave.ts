@@ -82,6 +82,9 @@ const replaceLocalData = async (snapshot: CloudSnapshot): Promise<void> => {
   })
 }
 
+export const exportLocalSaveJson = async (): Promise<string> =>
+  JSON.stringify(await exportSnapshot(), null, 2)
+
 export const clearLocalGameData = async (): Promise<void> => {
   await database.transaction('rw', database.tables, async (): Promise<void> => {
     for (const rawTable of database.tables) await asGenericTable(rawTable).clear()
@@ -145,6 +148,20 @@ class CloudSaveService {
       if (this.dirty && cloudSyncStatus.value !== 'conflict') this.scheduleSave()
     })
     return this.savePromise
+  }
+
+  // Проверяет и целиком заменяет локальный снимок, после чего сразу отправляет его в аккаунт.
+  async importLocalSaveJson(value: string): Promise<void> {
+    const snapshot: CloudSnapshot = parseSnapshot(JSON.parse(value) as unknown)
+    this.isApplyingRemote = true
+    try {
+      await replaceLocalData(snapshot)
+    } finally {
+      this.isApplyingRemote = false
+    }
+    this.localRevision += 1
+    this.dirty = true
+    if (this.started) await this.flush()
   }
 
   private async saveCurrentSnapshot(): Promise<void> {

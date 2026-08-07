@@ -152,9 +152,18 @@ describe('HomeView', () => {
 
   it('оставляет выполненную дневную тройку доступной ниже игровой зоны', () => {
     testState.dailyTasks.tasks = [
-      { status: 'completed' },
-      { status: 'reward-claimed' },
-      { status: 'completed' },
+      {
+        status: 'completed',
+        definition: { titleKey: 'dailyTasks.tasks.logoClicks30', route: { name: 'home' } },
+      },
+      {
+        status: 'reward-claimed',
+        definition: { titleKey: 'dailyTasks.tasks.openPack1', route: { name: 'shop' } },
+      },
+      {
+        status: 'completed',
+        definition: { titleKey: 'dailyTasks.tasks.placeCards2', route: { name: 'collection' } },
+      },
     ]
     const wrapper = mountHome()
     expect(wrapper.find('[data-home-daily-tasks]').exists()).toBe(true)

@@ -16,7 +16,6 @@ const auth = useAuthStore()
 const mode: Ref<AuthMode> = ref('login')
 const username: Ref<string> = ref('')
 const password: Ref<string> = ref('')
-const inviteCode: Ref<string> = ref('')
 const migrateLocalProgress: Ref<boolean> = ref(true)
 
 const errorMessage: ComputedRef<string> = computed((): string =>
@@ -36,7 +35,6 @@ const submit = async (): Promise<void> => {
   await auth.register({
     username: username.value,
     password: password.value,
-    inviteCode: inviteCode.value,
     migrateLocalProgress: migrateLocalProgress.value,
   })
 }
@@ -93,11 +91,6 @@ const submit = async (): Promise<void> => {
             maxlength="128"
             required
           />
-        </label>
-
-        <label v-if="mode === 'register'" class="block">
-          <span class="mb-1.5 block text-sm font-bold">{{ t('auth.inviteCode') }}</span>
-          <InputText v-model="inviteCode" class="w-full" autocomplete="off" />
         </label>
 
         <div v-if="mode === 'register'" class="flex items-start gap-2">

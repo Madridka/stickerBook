@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import AppShell from '@/components/AppShell.vue'
-import AuthView from '@/components/auth/AuthView.vue'
+import ProgressExportView from '@/components/ProgressExportView.vue'
 import { useAuthStore } from '@/stores/auth'
 
 const { t } = useI18n()
 const auth = useAuthStore()
 void auth.initialize()
 
-const isAdmin = true
+const isAdmin = false
 </script>
 
 <template>
@@ -21,5 +21,5 @@ const isAdmin = true
   </div>
   <div v-if="isAdmin">пока что тут нечего смотреть</div>
   <AppShell v-else-if="auth.user" />
-  <AuthView v-else />
+  <ProgressExportView v-else />
 </template>

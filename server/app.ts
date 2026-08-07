@@ -18,7 +18,6 @@ import { hashPassword, verifyPassword } from './password.ts'
 interface AuthBody {
   username?: unknown
   password?: unknown
-  inviteCode?: unknown
 }
 
 interface SaveBody {
@@ -87,12 +86,6 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   server.post<{ Body: AuthBody }>('/api/auth/register', async (request, reply) => {
     const credentials = readCredentials(request.body ?? {})
     if (!credentials) return reply.code(400).send({ code: 'invalid-credentials' })
-    if (
-      config.inviteCode &&
-      (typeof request.body.inviteCode !== 'string' || request.body.inviteCode !== config.inviteCode)
-    ) {
-      return reply.code(403).send({ code: 'invalid-invite-code' })
-    }
     if (storage.findUserByNormalizedUsername(credentials.normalizedUsername)) {
       return reply.code(409).send({ code: 'username-taken' })
     }

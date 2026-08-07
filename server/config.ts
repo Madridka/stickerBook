@@ -4,7 +4,6 @@ export interface ServerConfig {
   databasePath: string
   distPath: string
   host: string
-  inviteCode?: string
   port: number
   secureCookie: boolean
 }
@@ -18,7 +17,6 @@ export const loadServerConfig = (): ServerConfig => ({
   databasePath: resolve(process.env.STICKER_BOOK_DATABASE_PATH ?? 'server/data/sticker-book.sqlite'),
   distPath: resolve('dist'),
   host: process.env.STICKER_BOOK_HOST ?? '0.0.0.0',
-  inviteCode: process.env.STICKER_BOOK_INVITE_CODE?.trim() || undefined,
   port: parsePort(process.env.STICKER_BOOK_PORT),
   secureCookie: process.env.NODE_ENV === 'production',
 })

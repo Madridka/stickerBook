@@ -83,6 +83,8 @@ temp/
 # Dexie / IndexedDB export files
 *.db
 *.sqlite
+*.sqlite-shm
+*.sqlite-wal
 
 
 # =========================

@@ -1,17 +1,25 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import AppShell from '@/components/AppShell.vue'
-import { ref } from 'vue'
-import type { Ref } from 'vue'
+import AuthView from '@/components/auth/AuthView.vue'
+import { useAuthStore } from '@/stores/auth'
 
-const isAdmin: Ref<boolean> = ref(false)
-const halaMadrid = 'https://i.pinimg.com/originals/60/0e/19/600e1949da76a5a2b715ac009e1ac378.jpg'
+const { t } = useI18n()
+const auth = useAuthStore()
+void auth.initialize()
+
+const isAdmin = true
 </script>
 
 <template>
-  <!-- Корневой shell приложения -->
-  <AppShell v-if="isAdmin" />
-  <div v-else class="flex min-h-screen w-full flex-col items-center justify-center gap-6">
-    <p>ты не админ, не лазь сюда. как починю, так верну</p>
-    <img class="h-auto max-h-[70vh] max-w-full" :src="halaMadrid" alt="Hala Madrid" />
+  <!-- Авторизация завершается до создания игровых stores и загрузки локального прогресса. -->
+  <div
+    v-if="auth.isInitializing"
+    class="flex min-h-dvh items-center justify-center bg-paper text-sm font-bold text-ink"
+  >
+    {{ t('auth.loading') }}
   </div>
+  <div v-if="isAdmin">пока что тут нечего смотреть</div>
+  <AppShell v-else-if="auth.user" />
+  <AuthView v-else />
 </template>

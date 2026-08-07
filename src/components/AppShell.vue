@@ -2,9 +2,10 @@
 import { computed, onBeforeUnmount, onMounted, ref, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
-import { database } from '@/db/database'
 import { useTheme } from '@/composables/useTheme'
 import { HOME_VIEW_CONFIG } from '@/config/runtimeConfig'
+import { clearLocalGameData, cloudSave, cloudSyncStatus } from '@/services/cloudSave'
+import { useAuthStore } from '@/stores/auth'
 import { usePlayerStore } from '@/stores/player'
 
 import Menu from 'primevue/menu'
@@ -15,6 +16,7 @@ const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()
 const route = useRoute()
 const router = useRouter()
+const auth = useAuthStore()
 const player = usePlayerStore()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
 const isAlbumWorkspace = computed((): boolean => route.meta.albumWorkspace === true)
@@ -32,7 +34,38 @@ const resetProgressItem = computed(() => ({
   },
 }))
 
-const desktopMenuItems = computed(() => [resetProgressItem.value])
+const accountItem = computed(() => ({
+  label: auth.user?.username ?? '',
+  icon: 'pi pi-user',
+  disabled: true,
+}))
+
+const syncItem = computed(() => ({
+  label: t(`auth.sync.${cloudSyncStatus.value}`),
+  icon:
+    cloudSyncStatus.value === 'conflict' || cloudSyncStatus.value === 'offline'
+      ? 'pi pi-exclamation-triangle'
+      : cloudSyncStatus.value === 'saving' || cloudSyncStatus.value === 'loading'
+        ? 'pi pi-sync pi-spin'
+        : 'pi pi-cloud-upload',
+  disabled: true,
+}))
+
+const logoutItem = computed(() => ({
+  label: t('auth.logout'),
+  icon: 'pi pi-sign-out',
+  command: (): void => {
+    void auth.logout()
+  },
+}))
+
+const desktopMenuItems = computed(() => [
+  accountItem.value,
+  syncItem.value,
+  { separator: true },
+  resetProgressItem.value,
+  logoutItem.value,
+])
 
 // На мобильном экране объединяет основную навигацию и административный сброс.
 const mobileMenuItems = computed(() => [
@@ -77,7 +110,11 @@ const mobileMenuItems = computed(() => [
     command: toggleTheme,
   },
   { separator: true },
+  accountItem.value,
+  syncItem.value,
+  { separator: true },
   resetProgressItem.value,
+  logoutItem.value,
 ])
 
 const toggleDesktopMenu = (event: MouseEvent): void => desktopMenuRef.value?.toggle(event)
@@ -89,7 +126,8 @@ const resetProgress = async (): Promise<void> => {
   isResetting.value = true
 
   try {
-    await database.delete()
+    await clearLocalGameData()
+    await cloudSave.flush()
     window.location.reload()
   } finally {
     isResetting.value = false

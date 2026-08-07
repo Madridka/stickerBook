@@ -1,6 +1,7 @@
 import { createI18n, type I18n } from 'vue-i18n'
 import album from '@/lang/ru/album.json'
 import app from '@/lang/ru/app.json'
+import auth from '@/lang/ru/auth.json'
 import common from '@/lang/ru/common.json'
 import duplicateExchange from '@/lang/ru/duplicateExchange.json'
 import dailyTasks from '@/lang/ru/dailyTasks.json'
@@ -17,6 +18,7 @@ const messages: {
   ru: {
     album: typeof album
     app: typeof app
+    auth: typeof auth
     common: typeof common
     duplicateExchange: typeof duplicateExchange
     dailyTasks: typeof dailyTasks
@@ -32,6 +34,7 @@ const messages: {
   ru: {
     album,
     app,
+    auth,
     common,
     duplicateExchange,
     dailyTasks,

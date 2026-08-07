@@ -1,0 +1,170 @@
+import { mkdirSync } from 'node:fs'
+import { dirname } from 'node:path'
+import { createHash, randomBytes, randomUUID } from 'node:crypto'
+import { DatabaseSync, type StatementSync } from 'node:sqlite'
+
+export interface UserRecord {
+  id: string
+  username: string
+  passwordHash: string
+  createdAt: number
+}
+
+export interface PublicUser {
+  id: string
+  username: string
+}
+
+export interface CloudSaveRecord {
+  version: number
+  updatedAt: number
+  data: unknown
+}
+
+interface RawUserRecord {
+  id: string
+  username: string
+  password_hash: string
+  created_at: number
+}
+
+interface RawSaveRecord {
+  version: number
+  updated_at: number
+  data_json: string
+}
+
+const SESSION_LIFETIME_MS: number = 30 * 24 * 60 * 60 * 1_000
+
+const hashSessionToken = (token: string): string =>
+  createHash('sha256').update(token).digest('base64url')
+
+const toUserRecord = (record: RawUserRecord): UserRecord => ({
+  id: record.id,
+  username: record.username,
+  passwordHash: record.password_hash,
+  createdAt: record.created_at,
+})
+
+export class StickerBookServerDatabase {
+  readonly database: DatabaseSync
+
+  constructor(path: string) {
+    if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true })
+    this.database = new DatabaseSync(path)
+    this.database.exec('PRAGMA foreign_keys = ON; PRAGMA journal_mode = WAL; PRAGMA busy_timeout = 5000;')
+    this.database.exec(`
+      CREATE TABLE IF NOT EXISTS users (
+        id TEXT PRIMARY KEY,
+        username TEXT NOT NULL,
+        username_normalized TEXT NOT NULL UNIQUE,
+        password_hash TEXT NOT NULL,
+        created_at INTEGER NOT NULL
+      );
+      CREATE TABLE IF NOT EXISTS sessions (
+        token_hash TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        created_at INTEGER NOT NULL,
+        expires_at INTEGER NOT NULL
+      );
+      CREATE INDEX IF NOT EXISTS sessions_user_id_index ON sessions(user_id);
+      CREATE INDEX IF NOT EXISTS sessions_expires_at_index ON sessions(expires_at);
+      CREATE TABLE IF NOT EXISTS cloud_saves (
+        user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+        version INTEGER NOT NULL,
+        updated_at INTEGER NOT NULL,
+        data_json TEXT NOT NULL
+      );
+    `)
+  }
+
+  createUser(username: string, normalizedUsername: string, passwordHash: string): PublicUser {
+    const user: PublicUser = { id: randomUUID(), username }
+    this.database
+      .prepare(
+        `INSERT INTO users (id, username, username_normalized, password_hash, created_at)
+         VALUES (?, ?, ?, ?, ?)`,
+      )
+      .run(user.id, username, normalizedUsername, passwordHash, Date.now())
+    return user
+  }
+
+  findUserByNormalizedUsername(normalizedUsername: string): UserRecord | undefined {
+    const record = this.database
+      .prepare(
+        `SELECT id, username, password_hash, created_at
+         FROM users WHERE username_normalized = ?`,
+      )
+      .get(normalizedUsername) as RawUserRecord | undefined
+    return record ? toUserRecord(record) : undefined
+  }
+
+  createSession(userId: string): { token: string; expiresAt: number } {
+    const token: string = randomBytes(32).toString('base64url')
+    const now: number = Date.now()
+    const expiresAt: number = now + SESSION_LIFETIME_MS
+    this.database
+      .prepare(
+        `INSERT INTO sessions (token_hash, user_id, created_at, expires_at)
+         VALUES (?, ?, ?, ?)`,
+      )
+      .run(hashSessionToken(token), userId, now, expiresAt)
+    return { token, expiresAt }
+  }
+
+  findUserBySession(token: string): PublicUser | undefined {
+    const now: number = Date.now()
+    const record = this.database
+      .prepare(
+        `SELECT users.id, users.username
+         FROM sessions
+         JOIN users ON users.id = sessions.user_id
+         WHERE sessions.token_hash = ? AND sessions.expires_at > ?`,
+      )
+      .get(hashSessionToken(token), now) as PublicUser | undefined
+    return record
+  }
+
+  deleteSession(token: string): void {
+    this.database.prepare('DELETE FROM sessions WHERE token_hash = ?').run(hashSessionToken(token))
+  }
+
+  deleteExpiredSessions(): void {
+    this.database.prepare('DELETE FROM sessions WHERE expires_at <= ?').run(Date.now())
+  }
+
+  getCloudSave(userId: string): CloudSaveRecord | undefined {
+    const record = this.database
+      .prepare('SELECT version, updated_at, data_json FROM cloud_saves WHERE user_id = ?')
+      .get(userId) as RawSaveRecord | undefined
+    if (!record) return undefined
+    return {
+      version: record.version,
+      updatedAt: record.updated_at,
+      data: JSON.parse(record.data_json) as unknown,
+    }
+  }
+
+  putCloudSave(userId: string, baseVersion: number, data: unknown): CloudSaveRecord | undefined {
+    const current: CloudSaveRecord | undefined = this.getCloudSave(userId)
+    if ((current?.version ?? 0) !== baseVersion) return undefined
+
+    const version: number = baseVersion + 1
+    const updatedAt: number = Date.now()
+    const serialized: string = JSON.stringify(data)
+    const statement: StatementSync = this.database.prepare(`
+      INSERT INTO cloud_saves (user_id, version, updated_at, data_json)
+      VALUES (?, ?, ?, ?)
+      ON CONFLICT(user_id) DO UPDATE SET
+        version = excluded.version,
+        updated_at = excluded.updated_at,
+        data_json = excluded.data_json
+    `)
+    statement.run(userId, version, updatedAt, serialized)
+    return { version, updatedAt, data }
+  }
+
+  close(): void {
+    this.database.close()
+  }
+}

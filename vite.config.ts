@@ -21,5 +21,8 @@ export default defineConfig({
       preflightContinue: true,
     },
     port: 4040,
+    proxy: {
+      '/api': 'http://127.0.0.1:4041',
+    },
   },
 })

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "collectionId": "tomsk",
-  "teamId": "tom04",
+  "teamId": "tom07",
   "defaults": {
     "rarity": "common",
     "series": "base",
@@ -15,24 +15,24 @@
   },
   "cards": [
     {
-      "id": "tom04-01",
+      "id": "tom07-01",
       "cardNumber": "01",
       "albumSlot": 1,
-      "displayName": "Aleksandr Gostenin",
-      "image": "/tomsk/cards/tom04/TOM04-01-aleksandr-gostenin.webp",
+      "displayName": "Valeriy Petrakov",
+      "image": "/tomsk/cards/2.tom07/TOM07-01-valeriy-petrakov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "rare",
       "kind": "coach",
-      "personId": "aleksandr-gostenin",
+      "personId": "valeriy-petrakov",
       "role": "HEAD_COACH"
     },
     {
-      "id": "tom04-02",
+      "id": "tom07-02",
       "cardNumber": "02",
       "albumSlot": 2,
-      "displayName": "Aleksandr Surovtsev",
-      "image": "/tomsk/cards/tom04/TOM04-02-aleksandr-surovtsev.webp",
+      "displayName": "Sergey Pareyko",
+      "image": "/tomsk/cards/2.tom07/TOM07-02-sergey-pareyko.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -40,11 +40,11 @@
       "position": "goalkeeper"
     },
     {
-      "id": "tom04-03",
+      "id": "tom07-03",
       "cardNumber": "03",
       "albumSlot": 3,
-      "displayName": "Pavel Dyakonov",
-      "image": "/tomsk/cards/tom04/TOM04-03-pavel-dyakonov.webp",
+      "displayName": "Vasiliy Khomutovskiy",
+      "image": "/tomsk/cards/2.tom07/TOM07-03-vasiliy-khomutovskiy.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -52,11 +52,11 @@
       "position": "goalkeeper"
     },
     {
-      "id": "tom04-04",
+      "id": "tom07-04",
       "cardNumber": "04",
       "albumSlot": 4,
-      "displayName": "Dmitriy Godunok",
-      "image": "/tomsk/cards/tom04/TOM04-04-dmitriy-godunok.webp",
+      "displayName": "Albert Borzenkov",
+      "image": "/tomsk/cards/2.tom07/TOM07-04-albert-borzenkov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -64,11 +64,11 @@
       "position": "defender"
     },
     {
-      "id": "tom04-05",
+      "id": "tom07-05",
       "cardNumber": "05",
       "albumSlot": 5,
-      "displayName": "Eduard Baryshev",
-      "image": "/tomsk/cards/tom04/TOM04-05-eduard-baryshev.webp",
+      "displayName": "Valeriy Katynsus",
+      "image": "/tomsk/cards/2.tom07/TOM07-05-valeriy-katynsus.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -76,11 +76,11 @@
       "position": "defender"
     },
     {
-      "id": "tom04-06",
+      "id": "tom07-06",
       "cardNumber": "06",
       "albumSlot": 6,
-      "displayName": "Aleksey Bugaev",
-      "image": "/tomsk/cards/tom04/TOM04-06-aleksey-bugaev.webp",
+      "displayName": "Evgeniy Kaleshin",
+      "image": "/tomsk/cards/2.tom07/TOM07-06-evgeniy-kaleshin.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -88,11 +88,11 @@
       "position": "defender"
     },
     {
-      "id": "tom04-07",
+      "id": "tom07-07",
       "cardNumber": "07",
       "albumSlot": 7,
-      "displayName": "Aleksandr Familcev",
-      "image": "/tomsk/cards/tom04/TOM04-07-aleksandr-familcev.webp",
+      "displayName": "Hrvoje Vejic",
+      "image": "/tomsk/cards/2.tom07/TOM07-07-hrvoje-vejic.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -100,11 +100,11 @@
       "position": "defender"
     },
     {
-      "id": "tom04-08",
+      "id": "tom07-08",
       "cardNumber": "08",
       "albumSlot": 8,
-      "displayName": "Tomas Vykhodil",
-      "image": "/tomsk/cards/tom04/TOM04-08-tomas-vykhodil.webp",
+      "displayName": "Andrius Skerla",
+      "image": "/tomsk/cards/2.tom07/TOM07-08-andrius-skerla.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -112,11 +112,11 @@
       "position": "defender"
     },
     {
-      "id": "tom04-09",
+      "id": "tom07-09",
       "cardNumber": "09",
       "albumSlot": 9,
-      "displayName": "Sergey Rekhtin",
-      "image": "/tomsk/cards/tom04/TOM04-09-sergey-rekhtin.webp",
+      "displayName": "Ilya Izotov",
+      "image": "/tomsk/cards/2.tom07/TOM07-09-ilya-izotov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -124,11 +124,11 @@
       "position": "defender"
     },
     {
-      "id": "tom04-10",
+      "id": "tom07-10",
       "cardNumber": "10",
       "albumSlot": 10,
-      "displayName": "Valeriy Konovalov",
-      "image": "/tomsk/cards/tom04/TOM04-10-valeriy-konovalov.webp",
+      "displayName": "Valeriy Klimov",
+      "image": "/tomsk/cards/2.tom07/TOM07-10-valeriy-klimov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -136,11 +136,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom04-11",
+      "id": "tom07-11",
       "cardNumber": "11",
       "albumSlot": 11,
-      "displayName": "Sergey Zhukov",
-      "image": "/tomsk/cards/tom04/TOM04-11-sergey-zhukov.webp",
+      "displayName": "Sergey Skoblyakov",
+      "image": "/tomsk/cards/2.tom07/TOM07-11-sergey-skoblyakov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -148,11 +148,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom04-12",
+      "id": "tom07-12",
       "cardNumber": "12",
       "albumSlot": 12,
-      "displayName": "Aleksey Kandalintsev",
-      "image": "/tomsk/cards/tom04/TOM04-12-aleksey-kandalintsev.webp",
+      "displayName": "Branislav Krunic",
+      "image": "/tomsk/cards/2.tom07/TOM07-12-branislav-krunic.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -160,11 +160,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom04-13",
+      "id": "tom07-13",
       "cardNumber": "13",
       "albumSlot": 13,
-      "displayName": "Aleksandr Studzinskiy",
-      "image": "/tomsk/cards/tom04/TOM04-13-aleksandr-studzinskiy.webp",
+      "displayName": "Aleksandr Kulchiy",
+      "image": "/tomsk/cards/2.tom07/TOM07-13-aleksandr-kulchiy.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -172,11 +172,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom04-14",
+      "id": "tom07-14",
       "cardNumber": "14",
       "albumSlot": 14,
-      "displayName": "Aleksey Vereshchak",
-      "image": "/tomsk/cards/tom04/TOM04-14-aleksey-vereshchak.webp",
+      "displayName": "Vasiliy Yanotovskiy",
+      "image": "/tomsk/cards/2.tom07/TOM07-14-vasiliy-yanotovskiy.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -184,11 +184,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom04-15",
+      "id": "tom07-15",
       "cardNumber": "15",
       "albumSlot": 15,
-      "displayName": "Andrey Silyutin",
-      "image": "/tomsk/cards/tom04/TOM04-15-andrey-silyutin.webp",
+      "displayName": "Aleksandar Mladenov",
+      "image": "/tomsk/cards/2.tom07/TOM07-15-aleksandar-mladenov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -196,11 +196,11 @@
       "position": "midfielder"
     },
     {
-      "id": "tom04-16",
+      "id": "tom07-16",
       "cardNumber": "16",
       "albumSlot": 16,
-      "displayName": "Stanislav Kharlamov",
-      "image": "/tomsk/cards/tom04/TOM04-16-stanislav-kharlamov.webp",
+      "displayName": "Dmitriy Tarasov",
+      "image": "/tomsk/cards/2.tom07/TOM07-16-dmitriy-tarasov.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -208,23 +208,23 @@
       "position": "midfielder"
     },
     {
-      "id": "tom04-17",
+      "id": "tom07-17",
       "cardNumber": "17",
       "albumSlot": 17,
-      "displayName": "Viktor Sebelev",
-      "image": "/tomsk/cards/tom04/TOM04-17-viktor-sebelev.webp",
+      "displayName": "Oleg Shishkin",
+      "image": "/tomsk/cards/2.tom07/TOM07-17-oleg-shishkin.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "forward"
+      "position": "midfielder"
     },
     {
-      "id": "tom04-18",
+      "id": "tom07-18",
       "cardNumber": "18",
       "albumSlot": 18,
-      "displayName": "Sergey Ageev",
-      "image": "/tomsk/cards/tom04/TOM04-18-sergey-ageev.webp",
+      "displayName": "Denis Kiselev",
+      "image": "/tomsk/cards/2.tom07/TOM07-18-denis-kiselev.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -232,11 +232,11 @@
       "position": "forward"
     },
     {
-      "id": "tom04-19",
+      "id": "tom07-19",
       "cardNumber": "19",
       "albumSlot": 19,
-      "displayName": "Aleksandr Antipenko",
-      "image": "/tomsk/cards/tom04/TOM04-19-aleksandr-antipenko.webp",
+      "displayName": "Pavel Pogrebnyak",
+      "image": "/tomsk/cards/2.tom07/TOM07-19-pavel-pogrebnyak.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",
@@ -244,11 +244,11 @@
       "position": "forward"
     },
     {
-      "id": "tom04-20",
+      "id": "tom07-20",
       "cardNumber": "20",
       "albumSlot": 20,
-      "displayName": "Sergey Perednya",
-      "image": "/tomsk/cards/tom04/TOM04-20-sergey-perednya.webp",
+      "displayName": "Aleksey Medvedev",
+      "image": "/tomsk/cards/2.tom07/TOM07-20-aleksey-medvedev.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "common",

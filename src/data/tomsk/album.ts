@@ -1,7 +1,7 @@
-import tom04Cards from './tom04/cards.json'
-import tom07Cards from './tom07/cards.json'
-import tom12Cards from './tom12/cards.json'
-import tom22Cards from './tom22/cards.json'
+import tom04Cards from './1. tom04/cards.json'
+import tom07Cards from './2. tom07/cards.json'
+import tom12Cards from './3. tom12/cards.json'
+import tom22Cards from './4. tom22/cards.json'
 import kdvPages from './5. kdv (2022)/pages.json'
 import type { AlbumGeometryData, AlbumGeometryPage, AlbumGeometrySlot } from '@/types'
 
@@ -12,8 +12,8 @@ type EraCard = {
 }
 
 const slotPositions: ReadonlyArray<Pick<AlbumGeometrySlot, 'x' | 'y' | 'width'>> = [
-  { x: 500, y: 130, width: 200 },
-  { x: 836, y: 130, width: 200 },
+  { x: 512, y: 130, width: 200 },
+  { x: 844, y: 130, width: 200 },
   { x: 180, y: 465, width: 200 },
   { x: 512, y: 465, width: 200 },
   { x: 844, y: 465, width: 200 },

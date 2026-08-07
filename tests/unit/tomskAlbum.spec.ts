@@ -39,6 +39,17 @@ describe('Tomsk football history journal', () => {
     )
   })
 
+  it('aligns the two-card top row with the four-card grid below it', () => {
+    const historicalLeftPages = album.pages.filter(({ id }) =>
+      ['tom04-left', 'tom07-left', 'tom12-left', 'tom22-left'].includes(id),
+    )
+
+    for (const page of historicalLeftPages) {
+      expect(page.slots[0]?.x).toBe(page.slots[3]?.x)
+      expect(page.slots[1]?.x).toBe(page.slots[4]?.x)
+    }
+  })
+
   it('registers all five eras as a 100-card collectible catalog', () => {
     const historicalEraIds = ['tom04', 'tom07', 'tom12', 'tom22']
     const historicalEraPages = album.pages.filter(({ id }) =>

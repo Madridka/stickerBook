@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import AppShell from '@/components/AppShell.vue'
-import ProgressExportView from '@/components/ProgressExportView.vue'
+import AuthView from '@/components/auth/AuthView.vue'
 import { useAuthStore } from '@/stores/auth'
 
 const { t } = useI18n()
 const auth = useAuthStore()
 void auth.initialize()
-
-const isAdmin = false
 </script>
 
 <template>
@@ -19,7 +17,6 @@ const isAdmin = false
   >
     {{ t('auth.loading') }}
   </div>
-  <div v-if="isAdmin">пока что тут нечего смотреть</div>
   <AppShell v-else-if="auth.user" />
-  <ProgressExportView v-else />
+  <AuthView v-else />
 </template>

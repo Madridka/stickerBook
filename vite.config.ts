@@ -17,12 +17,18 @@ export default defineConfig({
   },
   server: {
     host: true,
+    allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
     cors: {
       preflightContinue: true,
     },
     port: 4040,
+    strictPort: true,
     proxy: {
       '/api': 'http://127.0.0.1:4041',
     },
+  },
+  preview: {
+    host: true,
+    allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
   },
 })

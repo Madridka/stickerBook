@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { exportLocalSaveJson } from '@/services/cloudSave'
 import { useAuthStore } from '@/stores/auth'
 
 import Button from 'primevue/button'
 import Checkbox from 'primevue/checkbox'
+import Dialog from 'primevue/dialog'
 import InputText from 'primevue/inputtext'
 import Message from 'primevue/message'
 import Password from 'primevue/password'
+import Textarea from 'primevue/textarea'
 
 type AuthMode = 'login' | 'register'
 
@@ -17,6 +20,10 @@ const mode: Ref<AuthMode> = ref('login')
 const username: Ref<string> = ref('')
 const password: Ref<string> = ref('')
 const migrateLocalProgress: Ref<boolean> = ref(true)
+const isSaveViewerVisible: Ref<boolean> = ref(false)
+const isSaveLoading: Ref<boolean> = ref(false)
+const saveJson: Ref<string> = ref('')
+const saveReadFailed: Ref<boolean> = ref(false)
 
 const errorMessage: ComputedRef<string> = computed((): string =>
   auth.errorCode ? t(`auth.errors.${auth.errorCode}`) : '',
@@ -37,6 +44,20 @@ const submit = async (): Promise<void> => {
     password: password.value,
     migrateLocalProgress: migrateLocalProgress.value,
   })
+}
+
+// Показывает тот же снимок Dexie, который переносится в аккаунт при регистрации.
+const showLocalSave = async (): Promise<void> => {
+  isSaveLoading.value = true
+  saveReadFailed.value = false
+  try {
+    saveJson.value = await exportLocalSaveJson()
+    isSaveViewerVisible.value = true
+  } catch {
+    saveReadFailed.value = true
+  } finally {
+    isSaveLoading.value = false
+  }
 }
 </script>
 
@@ -111,6 +132,38 @@ const submit = async (): Promise<void> => {
           type="submit"
         />
       </form>
+
+      <div class="mt-4 border-t border-ink/15 pt-4">
+        <Button
+          class="w-full"
+          icon="pi pi-code"
+          :label="t('auth.showSaveJson')"
+          :loading="isSaveLoading"
+          outlined
+          severity="secondary"
+          type="button"
+          @click="showLocalSave"
+        />
+        <Message v-if="saveReadFailed" class="mt-3" severity="error" :closable="false">
+          {{ t('auth.errors.save-read-failed') }}
+        </Message>
+      </div>
     </section>
+
+    <Dialog
+      v-model:visible="isSaveViewerVisible"
+      modal
+      :draggable="false"
+      :header="t('auth.saveJsonTitle')"
+      :style="{ width: 'min(48rem, calc(100vw - 2rem))' }"
+    >
+      <p class="mb-3 text-sm leading-relaxed text-ink/65">{{ t('auth.saveJsonDescription') }}</p>
+      <Textarea
+        class="h-[min(26rem,55dvh)] w-full resize-none font-mono text-xs"
+        :model-value="saveJson"
+        readonly
+        spellcheck="false"
+      />
+    </Dialog>
   </main>
 </template>

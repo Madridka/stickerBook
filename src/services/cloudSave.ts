@@ -1,16 +1,17 @@
 import Dexie, { type Table } from 'dexie'
 import { ref, type Ref } from 'vue'
+import { SERVER_SYNC_CONFIG } from '@/config/runtimeConfig'
 import { database } from '@/db/database'
 import { ApiError, apiRequest } from '@/services/api'
 
-interface CloudTableSnapshot {
+export interface LocalSaveTableSnapshot {
   name: string
   rows: unknown[]
 }
 
-interface CloudSnapshot {
+export interface LocalSaveSnapshot {
   schemaVersion: 1
-  tables: CloudTableSnapshot[]
+  tables: LocalSaveTableSnapshot[]
 }
 
 interface CloudSave {
@@ -27,43 +28,45 @@ export type CloudSyncStatus = 'idle' | 'loading' | 'saved' | 'saving' | 'offline
 
 export const cloudSyncStatus: Ref<CloudSyncStatus> = ref('idle')
 
-const SYNC_DEBOUNCE_MS: number = 600
-const POLL_INTERVAL_MS: number = 15_000
-
 const asGenericTable = (table: Table): Table<unknown, unknown, unknown> =>
   table as Table<unknown, unknown, unknown>
 
-const exportSnapshot = async (): Promise<CloudSnapshot> => ({
+export const exportLocalSave = async (): Promise<LocalSaveSnapshot> => ({
   schemaVersion: 1,
   tables: await Promise.all(
-    database.tables.map(async (rawTable): Promise<CloudTableSnapshot> => {
+    database.tables.map(async (rawTable): Promise<LocalSaveTableSnapshot> => {
       const table = asGenericTable(rawTable)
       return { name: table.name, rows: await table.toArray() }
     }),
   ),
 })
 
-const parseSnapshot = (value: unknown): CloudSnapshot => {
+export const exportLocalSaveJson = async (): Promise<string> =>
+  JSON.stringify(await exportLocalSave(), null, 2)
+
+const parseSnapshot = (value: unknown): LocalSaveSnapshot => {
   if (!value || typeof value !== 'object') throw new Error('Invalid cloud save')
-  const candidate = value as Partial<CloudSnapshot>
+  const candidate = value as Partial<LocalSaveSnapshot>
   if (candidate.schemaVersion !== 1 || !Array.isArray(candidate.tables)) {
     throw new Error('Unsupported cloud save schema')
   }
-  const tables: CloudTableSnapshot[] = candidate.tables.map((table): CloudTableSnapshot => {
-    if (
-      !table ||
-      typeof table !== 'object' ||
-      typeof table.name !== 'string' ||
-      !Array.isArray(table.rows)
-    ) {
-      throw new Error('Invalid cloud save table')
-    }
-    return { name: table.name, rows: table.rows }
-  })
+  const tables: LocalSaveTableSnapshot[] = candidate.tables.map(
+    (table): LocalSaveTableSnapshot => {
+      if (
+        !table ||
+        typeof table !== 'object' ||
+        typeof table.name !== 'string' ||
+        !Array.isArray(table.rows)
+      ) {
+        throw new Error('Invalid cloud save table')
+      }
+      return { name: table.name, rows: table.rows }
+    },
+  )
   return { schemaVersion: 1, tables }
 }
 
-const replaceLocalData = async (snapshot: CloudSnapshot): Promise<void> => {
+const replaceLocalData = async (snapshot: LocalSaveSnapshot): Promise<void> => {
   const rowsByTable: Map<string, unknown[]> = new Map(
     snapshot.tables.map(({ name, rows }): [string, unknown[]] => [name, rows]),
   )
@@ -105,7 +108,7 @@ class CloudSaveService {
     this.scheduleSave()
   }
 
-  async initialize(useLocalDataWhenEmpty: boolean): Promise<void> {
+  initialize = async (useLocalDataWhenEmpty: boolean): Promise<void> => {
     this.stop()
     cloudSyncStatus.value = 'loading'
     const response: CloudSaveResponse = await apiRequest('/api/save')
@@ -126,18 +129,21 @@ class CloudSaveService {
     Dexie.on.storagemutated.subscribe(this.handleStorageMutation)
     if (this.dirty) await this.flush()
     cloudSyncStatus.value = 'saved'
-    this.pollTimer = window.setInterval((): void => void this.poll(), POLL_INTERVAL_MS)
-  }
-
-  private scheduleSave(): void {
-    if (this.debounceTimer !== undefined) window.clearTimeout(this.debounceTimer)
-    this.debounceTimer = window.setTimeout(
-      (): void => void this.flush().catch((): undefined => undefined),
-      SYNC_DEBOUNCE_MS,
+    this.pollTimer = window.setInterval(
+      (): void => void this.poll(),
+      SERVER_SYNC_CONFIG.pollIntervalMs,
     )
   }
 
-  async flush(): Promise<void> {
+  private readonly scheduleSave = (): void => {
+    if (this.debounceTimer !== undefined) window.clearTimeout(this.debounceTimer)
+    this.debounceTimer = window.setTimeout(
+      (): void => void this.flush().catch((): undefined => undefined),
+      SERVER_SYNC_CONFIG.saveDebounceMs,
+    )
+  }
+
+  flush = async (): Promise<void> => {
     if (!this.started || !this.dirty) return
     if (this.savePromise) return this.savePromise
     this.savePromise = this.saveCurrentSnapshot().finally((): void => {
@@ -147,11 +153,11 @@ class CloudSaveService {
     return this.savePromise
   }
 
-  private async saveCurrentSnapshot(): Promise<void> {
+  private readonly saveCurrentSnapshot = async (): Promise<void> => {
     const revision: number = this.localRevision
     cloudSyncStatus.value = 'saving'
     try {
-      const snapshot: CloudSnapshot = await exportSnapshot()
+      const snapshot: LocalSaveSnapshot = await exportLocalSave()
       const response: CloudSaveResponse = await apiRequest('/api/save', {
         method: 'PUT',
         body: JSON.stringify({ baseVersion: this.version, data: snapshot }),
@@ -171,7 +177,7 @@ class CloudSaveService {
     }
   }
 
-  private async poll(): Promise<void> {
+  private readonly poll = async (): Promise<void> => {
     if (!this.started || this.dirty || this.savePromise) return
     try {
       const response: CloudSaveResponse = await apiRequest('/api/save')
@@ -190,7 +196,7 @@ class CloudSaveService {
     }
   }
 
-  stop(): void {
+  stop = (): void => {
     if (this.started) Dexie.on.storagemutated.unsubscribe(this.handleStorageMutation)
     if (this.debounceTimer !== undefined) window.clearTimeout(this.debounceTimer)
     if (this.pollTimer !== undefined) window.clearInterval(this.pollTimer)

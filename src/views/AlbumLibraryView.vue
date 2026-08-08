@@ -39,7 +39,9 @@ const isCollectible = (album: AlbumDefinition): boolean => album.cards.length > 
 
 <template>
   <!-- Каталог оставляет свободное рабочее пространство для будущих журналов. -->
-  <section class="flex h-full min-h-0 w-full flex-col bg-paper">
+  <section
+    class="flex h-full min-h-0 w-full flex-col overflow-x-hidden overflow-y-auto overscroll-contain bg-paper pr-1"
+  >
     <header class="shrink-0 pb-3">
       <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-coral max-sm:hidden">
         {{ t('app.album') }}

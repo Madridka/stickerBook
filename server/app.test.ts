@@ -8,6 +8,12 @@ let server: FastifyInstance
 before(async (): Promise<void> => {
   server = await createServer({
     adminUsername: 'admin',
+    backup: {
+      directory: 'unused-memory-backups',
+      enabled: false,
+      intervalMs: 24 * 60 * 60 * 1_000,
+      retentionCount: 14,
+    },
     databasePath: ':memory:',
     distPath: 'missing-dist',
     host: '127.0.0.1',
@@ -69,6 +75,17 @@ test('rejects an invalid password', async (): Promise<void> => {
     payload: { username: 'player-one', password: 'wrong-password' },
   })
   assert.equal(response.statusCode, 401)
+})
+
+test('publishes an OpenAPI schema and Swagger UI', async (): Promise<void> => {
+  const schema = await server.inject({ method: 'GET', url: '/api/docs/openapi.json' })
+  assert.equal(schema.statusCode, 200)
+  assert.equal(schema.json().openapi, '3.1.0')
+  assert.ok(schema.json().paths['/api/save'])
+
+  const swagger = await server.inject({ method: 'GET', url: '/api/docs' })
+  assert.equal(swagger.statusCode, 200)
+  assert.match(swagger.body, /SwaggerUIBundle/)
 })
 
 test('logs out and invalidates the session', async (): Promise<void> => {

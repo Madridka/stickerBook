@@ -72,7 +72,6 @@ export interface AlbumLayout {
 export interface AlbumDropSettings {
   poolId: string
   rarityOdds: Record<CardRarity, number>
-  pityEligible: boolean
 }
 
 export interface BlisterDefinition {
@@ -87,6 +86,7 @@ export interface BlisterDefinition {
   cooldownMs: number
   poolId: string
   rarityOdds: Record<CardRarity, number>
+  pityEligible: boolean
 }
 
 export interface AlbumDefinition<TMetadata extends Record<string, unknown> = Record<string, unknown>> {

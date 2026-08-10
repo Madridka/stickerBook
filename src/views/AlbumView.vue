@@ -1,20 +1,10 @@
 <script setup lang="ts">
-import {
-  computed,
-  onBeforeUnmount,
-  onMounted,
-  ref,
-  type ComputedRef,
-  type Ref,
-} from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
 import { resolveAlbumPageAsset } from '@/data/albumPageAssets'
-import {
-  ALBUM_VIEW_CONFIG,
-  PLACE_ALL_COLLECTED_CARDS,
-} from '@/config/albumConfig'
+import { ALBUM_VIEW_CONFIG, PLACE_ALL_COLLECTED_CARDS } from '@/config/albumConfig'
 import { BLISTER_CONFIGS } from '@/config/gameBalance'
 import { getAlbumById, getPlayerAlbumById, requireAlbum } from '@/data/albumRegistry'
 import { useAlbumStore } from '@/stores/album'
@@ -99,9 +89,8 @@ const requestedAlbumId: string =
     ? route.params.albumId
     : typeof route.meta.developmentAlbumId === 'string'
       ? route.meta.developmentAlbumId
-    : BLISTER_CONFIGS.standard.albumId
-const isDevelopmentAlbumRoute: boolean =
-  route.meta.developmentAlbumId === requestedAlbumId
+      : BLISTER_CONFIGS.standard.albumId
+const isDevelopmentAlbumRoute: boolean = route.meta.developmentAlbumId === requestedAlbumId
 const requestedAlbumDefinition: AlbumDefinition | undefined = isDevelopmentAlbumRoute
   ? getAlbumById(requestedAlbumId)
   : getPlayerAlbumById(requestedAlbumId)
@@ -115,16 +104,16 @@ album.selectAlbum(albumDefinition.id)
 const cards: CardDefinition[] = albumDefinition.cards
 const albumContentsTeams: AlbumContentsItem[] = albumDefinition.contents
 const editorialPages: Record<string, AlbumEditorialPageDefinition> = Object.fromEntries(
-  albumDefinition.editorialPages.map(
-    (page): [string, AlbumEditorialPageDefinition] => [page.pageId, page],
-  ),
+  albumDefinition.editorialPages.map((page): [string, AlbumEditorialPageDefinition] => [
+    page.pageId,
+    page,
+  ]),
 )
 const contentsPageSize: number =
   albumDefinition.layout.contentsPageSize ?? ALBUM_VIEW_CONFIG.contentsPageSize
 const contentsFirstPage: number =
   albumDefinition.layout.contentsFirstPage ?? Number.MAX_SAFE_INTEGER
-const contentsLastPage: number =
-  albumDefinition.layout.contentsLastPage ?? Number.MIN_SAFE_INTEGER
+const contentsLastPage: number = albumDefinition.layout.contentsLastPage ?? Number.MIN_SAFE_INTEGER
 const collection = useCollectionStore()
 const deletedCards = useDeletedCardsStore()
 const currentPage: Ref<number> = ref(0)
@@ -166,8 +155,7 @@ const displayMode: ComputedRef<'spread' | 'page'> = computed((): 'spread' | 'pag
   isDesktopSpread.value ? 'spread' : 'page',
 )
 const isDesktopSpreadVisible: ComputedRef<boolean> = computed(
-  (): boolean =>
-    isDesktopSpread.value && currentPage.value >= albumDefinition.layout.openStartPage,
+  (): boolean => isDesktopSpread.value && currentPage.value >= albumDefinition.layout.openStartPage,
 )
 const pageStep: ComputedRef<number> = computed((): number => (isDesktopSpread.value ? 2 : 1))
 const visiblePageIndexes: ComputedRef<number[]> = computed((): number[] =>
@@ -181,17 +169,17 @@ const visibleGeometries: ComputedRef<AlbumGeometryPage[]> = computed((): AlbumGe
     (pageIndex: number): AlbumGeometryPage => pages.value[pageIndex].geometry,
   ),
 )
-const isTeamPageVisible: ComputedRef<boolean> = computed((): boolean =>
-  albumContentsTeams.length > 0 &&
-  visibleGeometries.value.some(({ slots }: AlbumGeometryPage): boolean => slots.length > 0),
+const isTeamPageVisible: ComputedRef<boolean> = computed(
+  (): boolean =>
+    albumContentsTeams.length > 0 &&
+    visibleGeometries.value.some(({ slots }: AlbumGeometryPage): boolean => slots.length > 0),
 )
 const visiblePageLabel: ComputedRef<string> = computed((): string =>
   visibleGeometries.value.map(({ number }): string => String(number).padStart(2, '0')).join('–'),
 )
 const visiblePageTypeLabel: ComputedRef<string> = computed((): string => {
   const visibleEditorialPages: AlbumEditorialPageDefinition[] = visibleGeometries.value.flatMap(
-    ({ id }): AlbumEditorialPageDefinition[] =>
-      editorialPages[id] ? [editorialPages[id]] : [],
+    ({ id }): AlbumEditorialPageDefinition[] => (editorialPages[id] ? [editorialPages[id]] : []),
   )
   if (visibleEditorialPages.some(({ kind }) => kind === 'cover')) {
     return t('album.editorial.coverLabel')
@@ -261,8 +249,7 @@ const syncDesktopSpread = (event: MediaQueryList | MediaQueryListEvent): void =>
   isDesktopSpread.value = event.matches
   const openStartPage: number = albumDefinition.layout.openStartPage
   if (event.matches && currentPage.value >= openStartPage) {
-    currentPage.value =
-      openStartPage + Math.floor((currentPage.value - openStartPage) / 2) * 2
+    currentPage.value = openStartPage + Math.floor((currentPage.value - openStartPage) / 2) * 2
   }
 }
 
@@ -275,15 +262,13 @@ const getPlacedCards = (slotId: string): PlacedCard[] => {
   const normalizedSlotId: string = normalizeSlotId(slotId)
 
   return collection.items
-    .filter(
-      ({ instance }): boolean => {
-        if (instance.albumId !== albumDefinition.id || instance.location === 'deleted') return false
-        return (
-          instance.location === 'album' &&
-          normalizeSlotId(instance.placement?.slotId ?? '') === normalizedSlotId
-        )
-      },
-    )
+    .filter(({ instance }): boolean => {
+      if (instance.albumId !== albumDefinition.id || instance.location === 'deleted') return false
+      return (
+        instance.location === 'album' &&
+        normalizeSlotId(instance.placement?.slotId ?? '') === normalizedSlotId
+      )
+    })
     .map(({ instance }): PlacedCard | undefined => {
       const card: CardDefinition | undefined = getCard(instance.playerId)
       if (!card) return undefined
@@ -674,7 +659,15 @@ onBeforeUnmount((): void => {
                 v-if="pages[pageIndex].geometry.sectionTitleKey"
                 class="pointer-events-none absolute left-[8%] right-[8%] top-[3.5%] z-20 text-center text-[clamp(8px,1.25cqw,19px)] font-black uppercase tracking-[0.12em] text-[#a71920]"
               >
-                {{ getSectionTitle(pages[pageIndex].geometry.sectionTitleKey) }}
+                <span
+                  :class="
+                    albumDefinition.id === 'tomsk'
+                      ? 'inline-block rounded-[0.7cqw] border border-ink/10 bg-paper/95 px-[1.2cqw] py-[0.3cqw] shadow-[0_0.35cqw_1cqw_rgb(var(--color-ink)/0.12)]'
+                      : ''
+                  "
+                >
+                  {{ getSectionTitle(pages[pageIndex].geometry.sectionTitleKey) }}
+                </span>
               </h2>
               <StickerSlot
                 v-for="slot in pages[pageIndex].geometry.slots"

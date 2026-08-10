@@ -7,6 +7,7 @@ let server: FastifyInstance
 
 before(async (): Promise<void> => {
   server = await createServer({
+    adminUsername: 'admin',
     databasePath: ':memory:',
     distPath: 'missing-dist',
     host: '127.0.0.1',

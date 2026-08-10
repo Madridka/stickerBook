@@ -15,6 +15,19 @@ import { BLISTER_CONFIGS, DROP_ENGINE_CONFIG } from '@/config/gameBalance'
 import type { CardDefinition, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 import { selectCardV2 } from '@/utils/dropEngine'
+import { storeCardInstance } from '@/db/stickerLifecycle'
+import {
+  getAlbumPityContext,
+  logPityApplied,
+  logPityNaturalSuccess,
+  logPityProtectionArmed,
+  registerEligiblePackOutcome,
+} from '@/features/pity/albumPityService'
+import {
+  createPityPackRewards,
+  isPityPackTypeEligible,
+  shouldProtectPack,
+} from '@/features/pity/pityDomain'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
 import {
   notifyDailyTasksChanged,
@@ -72,6 +85,7 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
         database.inventory,
         database.cards,
         database.packOpeningSessions,
+        database.albumPityStates,
         async (): Promise<PackOpeningSession | undefined> => {
           const pending: PackOpeningSession | undefined =
             await database.packOpeningSessions.get('pending')
@@ -102,9 +116,57 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
               ({ albumId, playerId }: StickerInstance): string => `${albumId}:${playerId}`,
             ),
           )
-          const rewards: PackOpeningReward[] = Array.from(
-            { length: blister.cardCount },
-            (): PackOpeningReward => {
+          const isPityEligiblePack: boolean = isPityPackTypeEligible(
+            blisterId,
+            blister.albumIds,
+            blister.pityEligible,
+          )
+          const pityAlbum = isPityEligiblePack ? albums[0] : undefined
+          const collectedPlayerIds: Set<string> = new Set(
+            pityAlbum
+              ? activeCards
+                  .filter(
+                    ({ albumId, playerId }): boolean =>
+                      albumId === pityAlbum.id &&
+                      pityAlbum.cards.some(({ id }): boolean => id === playerId),
+                  )
+                  .map(({ playerId }): string => playerId)
+              : [],
+          )
+          const pityContext = pityAlbum
+            ? await getAlbumPityContext(
+                pityAlbum.id,
+                collectedPlayerIds.size,
+                pityAlbum.cards.length,
+              )
+            : { eligible: false, dryPackCount: 0 }
+          const protectionArmed: boolean =
+            pityContext.eligible && shouldProtectPack(pityContext.dryPackCount)
+          if (pityAlbum && protectionArmed) logPityProtectionArmed(pityAlbum.id)
+
+          let pityApplied = false
+          let rewards: PackOpeningReward[]
+          if (pityAlbum) {
+            const generated = createPityPackRewards({
+              albumId: pityAlbum.id,
+              catalogs: pityAlbum.catalogs,
+              cardCount: blister.cardCount,
+              poolId: blister.poolId,
+              rarityOdds: blister.rarityOdds,
+              defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
+              ownedPlayerIds: collectedPlayerIds,
+              protectionArmed,
+              randomSource: Math.random,
+              createInstanceId: createId,
+            })
+            rewards = generated.rewards
+            pityApplied = generated.pityApplied
+            if (protectionArmed && generated.hasNewCard && !generated.pityApplied) {
+              logPityNaturalSuccess(pityAlbum.id)
+            }
+            if (generated.pityApplied) logPityApplied(pityAlbum.id)
+          } else {
+            rewards = Array.from({ length: blister.cardCount }, (): PackOpeningReward => {
               const card: CardDefinition = selectCardV2({
                 catalogs: albums.flatMap(({ catalogs }) => catalogs),
                 packConfig: {
@@ -124,8 +186,8 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
                 playerId: card.id,
                 isDuplicate,
               }
-            },
-          )
+            })
+          }
           const created: PackOpeningSession = {
             id: 'pending',
             packId: pack.id,
@@ -135,6 +197,11 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             currentIndex: 0,
             animationComplete: false,
             createdAt: Date.now(),
+            pityEligible: pityContext.eligible,
+            pityApplied,
+            pityDryPackCountBefore: pityContext.eligible
+              ? pityContext.dryPackCount
+              : undefined,
           }
 
           await database.packOpeningSessions.add(created)
@@ -168,31 +235,27 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
         database.packOpeningSessions,
         database.goalCounters,
         database.dailyTasks,
+        database.albumPityStates,
       ],
       async (): Promise<boolean> => {
         const pending: PackOpeningSession | undefined =
           await database.packOpeningSessions.get('pending')
         if (!isPlayerSession(pending)) return false
 
+        const newAlbumIds: Set<string> = new Set()
         for (const reward of pending.rewards) {
-          const instance: StickerInstance = {
-            id: reward.instanceId,
-            albumId: reward.albumId,
-            playerId: reward.playerId,
-            quality: 100,
-            location: 'inventory',
-          }
-          const existing: StickerInstance | undefined = await database.cards
-            .where('[albumId+playerId]')
-            .equals([reward.albumId, reward.playerId])
-            .filter(({ location }: StickerInstance): boolean => location !== 'deleted')
-            .first()
-
-          if (existing) {
-            await database.duplicates.add({ ...instance, location: 'duplicate' })
-          } else {
-            await database.cards.add(instance)
-          }
+          const stored: StickerInstance = await storeCardInstance(
+            reward.albumId,
+            reward.playerId,
+            reward.instanceId,
+          )
+          if (stored.location !== 'duplicate') newAlbumIds.add(reward.albumId)
+        }
+        if (pending.pityEligible) {
+          await registerEligiblePackOutcome(
+            pending.albumId,
+            newAlbumIds.has(pending.albumId),
+          )
         }
 
         await database.inventory.delete(pending.packId)

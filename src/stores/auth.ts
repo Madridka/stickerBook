@@ -1,5 +1,6 @@
 import { ref, type Ref } from 'vue'
 import { defineStore } from 'pinia'
+import { AUTH_UI_CONFIG } from '@/config/runtimeConfig'
 import { ApiError, apiRequest } from '@/services/api'
 import { clearLocalGameData, cloudSave } from '@/services/cloudSave'
 
@@ -25,6 +26,7 @@ export interface LoginInput {
 
 export const useAuthStore = defineStore('auth', () => {
   const user: Ref<AuthUser | null> = ref(null)
+  const isGuest: Ref<boolean> = ref(false)
   const isInitializing: Ref<boolean> = ref(true)
   const isSubmitting: Ref<boolean> = ref(false)
   const errorCode: Ref<string | null> = ref(null)
@@ -32,14 +34,24 @@ export const useAuthStore = defineStore('auth', () => {
   const initialize = async (): Promise<void> => {
     isInitializing.value = true
     errorCode.value = null
+    if (localStorage.getItem(AUTH_UI_CONFIG.guestModeStorageKey) === 'true') {
+      cloudSave.stop()
+      user.value = null
+      isGuest.value = true
+      isInitializing.value = false
+      return
+    }
     try {
       const response: AuthResponse = await apiRequest('/api/auth/session')
       // Если аккаунт был создан, но его первый upload прервался, не удаляем исходный Dexie.
       await cloudSave.initialize(true)
       user.value = response.user
+      isGuest.value = false
+      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
     } catch (error: unknown) {
       if (!(error instanceof ApiError && error.status === 401)) errorCode.value = 'server-unavailable'
       user.value = null
+      isGuest.value = localStorage.getItem(AUTH_UI_CONFIG.guestModeStorageKey) === 'true'
     } finally {
       isInitializing.value = false
     }
@@ -58,6 +70,8 @@ export const useAuthStore = defineStore('auth', () => {
       })
       await cloudSave.initialize(input.migrateLocalProgress)
       user.value = response.user
+      isGuest.value = false
+      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
       return true
     } catch (error: unknown) {
       errorCode.value = error instanceof ApiError ? (error.body.code ?? 'request-failed') : 'server-unavailable'
@@ -77,6 +91,8 @@ export const useAuthStore = defineStore('auth', () => {
       })
       await cloudSave.initialize(false)
       user.value = response.user
+      isGuest.value = false
+      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
       return true
     } catch (error: unknown) {
       errorCode.value = error instanceof ApiError ? (error.body.code ?? 'request-failed') : 'server-unavailable'
@@ -104,8 +120,23 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
+  const startGuest = (): void => {
+    cloudSave.stop()
+    errorCode.value = null
+    user.value = null
+    isGuest.value = true
+    localStorage.setItem(AUTH_UI_CONFIG.guestModeStorageKey, 'true')
+  }
+
+  const exitGuest = (): void => {
+    cloudSave.stop()
+    isGuest.value = false
+    localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
+  }
+
   return {
     user,
+    isGuest,
     isInitializing,
     isSubmitting,
     errorCode,
@@ -113,5 +144,7 @@ export const useAuthStore = defineStore('auth', () => {
     register,
     login,
     logout,
+    startGuest,
+    exitGuest,
   }
 })

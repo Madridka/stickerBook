@@ -21,6 +21,11 @@ export interface CloudSaveRecord {
   data: unknown
 }
 
+export interface AdminUserRecord extends PublicUser {
+  createdAt: number
+  save: CloudSaveRecord | null
+}
+
 interface RawUserRecord {
   id: string
   username: string
@@ -34,6 +39,15 @@ interface RawSaveRecord {
   data_json: string
 }
 
+interface RawAdminUserRecord {
+  id: string
+  username: string
+  created_at: number
+  version: number | null
+  updated_at: number | null
+  data_json: string | null
+}
+
 const SESSION_LIFETIME_MS: number = 30 * 24 * 60 * 60 * 1_000
 
 const hashSessionToken = (token: string): string =>
@@ -44,6 +58,20 @@ const toUserRecord = (record: RawUserRecord): UserRecord => ({
   username: record.username,
   passwordHash: record.password_hash,
   createdAt: record.created_at,
+})
+
+const toAdminUserRecord = (record: RawAdminUserRecord): AdminUserRecord => ({
+  id: record.id,
+  username: record.username,
+  createdAt: record.created_at,
+  save:
+    record.version === null || record.updated_at === null || record.data_json === null
+      ? null
+      : {
+          version: record.version,
+          updatedAt: record.updated_at,
+          data: JSON.parse(record.data_json) as unknown,
+        },
 })
 
 export class StickerBookServerDatabase {
@@ -143,6 +171,43 @@ export class StickerBookServerDatabase {
       updatedAt: record.updated_at,
       data: JSON.parse(record.data_json) as unknown,
     }
+  }
+
+  listUsers(search: string, limit: number, offset: number): {
+    users: AdminUserRecord[]
+    total: number
+  } {
+    const normalizedSearch: string = `%${search.toLocaleLowerCase()}%`
+    const filter: string = search ? 'WHERE username_normalized LIKE ?' : ''
+    const parameters: Array<string | number> = search ? [normalizedSearch] : []
+    const countRecord = this.database
+      .prepare(`SELECT COUNT(*) AS total FROM users ${filter}`)
+      .get(...parameters) as { total: number }
+    const records = this.database
+      .prepare(
+        `SELECT users.id, users.username, users.created_at,
+                cloud_saves.version, cloud_saves.updated_at, cloud_saves.data_json
+         FROM users
+         LEFT JOIN cloud_saves ON cloud_saves.user_id = users.id
+         ${filter}
+         ORDER BY COALESCE(cloud_saves.updated_at, users.created_at) DESC
+         LIMIT ? OFFSET ?`,
+      )
+      .all(...parameters, limit, offset) as unknown as RawAdminUserRecord[]
+    return { users: records.map(toAdminUserRecord), total: countRecord.total }
+  }
+
+  getAdminUser(userId: string): AdminUserRecord | undefined {
+    const record = this.database
+      .prepare(
+        `SELECT users.id, users.username, users.created_at,
+                cloud_saves.version, cloud_saves.updated_at, cloud_saves.data_json
+         FROM users
+         LEFT JOIN cloud_saves ON cloud_saves.user_id = users.id
+         WHERE users.id = ?`,
+      )
+      .get(userId) as RawAdminUserRecord | undefined
+    return record ? toAdminUserRecord(record) : undefined
   }
 
   putCloudSave(userId: string, baseVersion: number, data: unknown): CloudSaveRecord | undefined {

@@ -14,6 +14,7 @@ import {
   type UserRecord,
 } from './database.ts'
 import { hashPassword, verifyPassword } from './password.ts'
+import { registerAdmin } from './admin.ts'
 
 interface AuthBody {
   username?: unknown
@@ -76,6 +77,8 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   }
 
   server.get('/api/health', async (): Promise<{ status: 'ok' }> => ({ status: 'ok' }))
+
+  registerAdmin(server, storage, config)
 
   server.get('/api/auth/session', async (request, reply) => {
     const user: PublicUser | undefined = currentUser(request)
@@ -156,7 +159,9 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   if (existsSync(config.distPath)) {
     await server.register(fastifyStatic, { root: config.distPath })
     server.setNotFoundHandler(async (request, reply) => {
-      if (request.url.startsWith('/api/')) return reply.code(404).send({ code: 'not-found' })
+      if (request.url.startsWith('/api/') || request.url === '/admin' || request.url.startsWith('/admin/')) {
+        return reply.code(404).send({ code: 'not-found' })
+      }
       return reply.sendFile('index.html')
     })
   }

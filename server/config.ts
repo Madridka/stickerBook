@@ -1,6 +1,8 @@
 import { resolve } from 'node:path'
 
 export interface ServerConfig {
+  adminPassword?: string
+  adminUsername: string
   databasePath: string
   distPath: string
   host: string
@@ -14,6 +16,8 @@ const parsePort = (value: string | undefined): number => {
 }
 
 export const loadServerConfig = (): ServerConfig => ({
+  adminPassword: process.env.STICKER_BOOK_ADMIN_PASSWORD,
+  adminUsername: process.env.STICKER_BOOK_ADMIN_USERNAME?.trim() || 'admin',
   databasePath: resolve(process.env.STICKER_BOOK_DATABASE_PATH ?? 'server/data/sticker-book.sqlite'),
   distPath: resolve('dist'),
   host: process.env.STICKER_BOOK_HOST ?? '0.0.0.0',

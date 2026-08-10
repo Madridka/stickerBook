@@ -3,6 +3,7 @@ import type { AlbumId, DeletedCard, StickerInstance } from '@/types'
 import type { GoalCounter, GoalPlayerState } from '@/features/goals/types'
 import type { RareShopState } from '@/features/rareShop/types'
 import type { DailyTasksState } from '@/features/dailyTasks/types'
+import type { AlbumPityState } from '@/features/pity/types'
 
 export const PLAYER_STATE_ID = 'current'
 
@@ -76,6 +77,10 @@ export interface PackOpeningSession {
   currentIndex: number
   animationComplete: boolean
   createdAt: number
+  // Диагностические поля скрытой механики; результат пака уже зафиксирован в rewards.
+  pityEligible?: boolean
+  pityApplied?: boolean
+  pityDryPackCountBefore?: number
 }
 
 export interface BlisterCooldown {
@@ -112,6 +117,7 @@ interface StickerBookDatabase extends Dexie {
   rareShop: Table<RareShopState, string>
   blisterCooldowns: Table<BlisterCooldown, string>
   dailyTasks: Table<DailyTasksState, string>
+  albumPityStates: Table<AlbumPityState, AlbumId>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -400,3 +406,6 @@ database.version(17).upgrade(async (transaction): Promise<void> => {
       )
     })
 })
+
+// Добавляет независимый сохраняемый счётчик неудачных паков для каждого журнала.
+database.version(18).stores({ albumPityStates: 'albumId, updatedAt' })

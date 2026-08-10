@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { formatEnergy } from '@/utils/format'
 
 import ProgressBar from 'primevue/progressbar'
 
@@ -37,7 +38,7 @@ const recoveryTime: ComputedRef<string> = computed((): string => {
         {{ t('home.energyTitle') }}
       </span>
       <span class="tabular-nums text-ink">
-        {{ t('home.energyValue', { current, limit }) }}
+        {{ t('home.energyValue', { current: current, limit: limit }) }}
       </span>
     </div>
 

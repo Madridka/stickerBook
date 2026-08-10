@@ -113,6 +113,7 @@ export const useCollectionStore = defineStore('collection', () => {
       'rw',
       database.cards,
       database.duplicates,
+      database.albumPityStates,
       async (): Promise<StickerInstance> => storeCardInstance(albumId, playerId),
     )
     await load()
@@ -187,6 +188,7 @@ export const useCollectionStore = defineStore('collection', () => {
         database.duplicates,
         database.duplicateExchanges,
         database.goalCounters,
+        database.albumPityStates,
         async (): Promise<ClaimDuplicateExchangeResult> => {
           const pending: DuplicateExchange | undefined =
             await database.duplicateExchanges.get('pending')

@@ -2,6 +2,7 @@
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { GoalRuntimeState } from '@/features/goals/types'
+import { formatEnergy } from '@/utils/format'
 
 import Button from 'primevue/button'
 import ProgressBar from 'primevue/progressbar'
@@ -68,7 +69,7 @@ const progressPercent: ComputedRef<number> = computed(() =>
           <i class="pi pi-wallet mr-1" />{{ t('goals.rewards.coins') }} {{ reward.amount }}
         </template>
         <template v-else-if="reward.type === 'energy'">
-          <i class="pi pi-bolt mr-1" />{{ reward.amount }} {{ t('goals.rewards.energy') }}
+          <i class="pi pi-bolt mr-1" />{{ formatEnergy(reward.amount) }} {{ t('goals.rewards.energy') }}
         </template>
         <template v-else>
           <i class="pi pi-box mr-1" />{{ reward.amount }} {{ t('goals.rewards.pack') }}

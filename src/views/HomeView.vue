@@ -42,7 +42,9 @@ let completionTimer: number | undefined
 const completionNotice: Ref<boolean> = ref(false)
 
 const clickReward: ComputedRef<number> = computed((): number => {
-  const rawReward: number = CLICKER_CONFIG.baseReward * (1 + collection.albumProgress / 100)
+  const progressRatio: number = Math.min(1, Math.max(0, collection.albumProgress / 100))
+  const rawReward: number =
+    CLICKER_CONFIG.baseReward * (1 + CLICKER_CONFIG.maxAlbumProgressBonus * progressRatio)
   const multiplier: number = 10 ** CLICKER_CONFIG.rewardPrecision
   return Math.round((rawReward + Number.EPSILON) * multiplier) / multiplier
 })

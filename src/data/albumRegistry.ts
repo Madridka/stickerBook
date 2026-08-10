@@ -47,6 +47,7 @@ const toBlisterDefinition = (
   cooldownMs: config.cooldownMs,
   poolId: config.poolId,
   rarityOdds: config.rarityOdds,
+  pityEligible: config.pityEligible,
 })
 
 const infoEditorialPages: AlbumEditorialPageDefinition[] = [

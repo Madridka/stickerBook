@@ -14,6 +14,13 @@ export const DROP_ENGINE_CONFIG = {
   defaultSelectionWeight: 1,
 }
 
+/** Скрытая защита late-game коллекции от серии паков без новых карточек. */
+export const PITY_CONFIG = {
+  minCompletionRatio: 0.95,
+  dryPacksBeforeGuarantee: 4,
+  guaranteedMissingCards: 1,
+} as const
+
 /** Содержимое и вероятность выпадения редкостей для каждого типа пака. */
 export const PACK_CONFIGS = {
   standard: {
@@ -41,6 +48,7 @@ export const BLISTER_CONFIGS = {
     cardsPerPack: 5,
     cooldownMs: 0,
     poolId: '*',
+    pityEligible: false,
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   standard: {
@@ -54,6 +62,7 @@ export const BLISTER_CONFIGS = {
     cardsPerPack: CARDS_PER_PACK,
     cooldownMs: 0,
     poolId: 'standard',
+    pityEligible: true,
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   kdv: {
@@ -67,6 +76,7 @@ export const BLISTER_CONFIGS = {
     cardsPerPack: 3,
     cooldownMs: 60 * 60 * 1_000,
     poolId: 'standard',
+    pityEligible: true,
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   ucl: {
@@ -80,6 +90,7 @@ export const BLISTER_CONFIGS = {
     cardsPerPack: 4,
     cooldownMs: 30 * 60 * 1_000,
     poolId: 'ucl-26-27-standard',
+    pityEligible: true,
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   spainLogos: {
@@ -93,6 +104,7 @@ export const BLISTER_CONFIGS = {
     cardsPerPack: 5,
     cooldownMs: 0,
     poolId: 'spain-clubs-logo-development',
+    pityEligible: true,
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
 } satisfies Record<string, BlisterConfig>
@@ -110,6 +122,8 @@ export const RARE_SHOP_CONFIG = {
 /** Баланс энергии и начислений кликера. */
 export const CLICKER_CONFIG = {
   baseReward: 1,
+  /** Максимальная прибавка к награде при полностью заполненном журнале: +50%. */
+  maxAlbumProgressBonus: 0.5,
   energyLimit: 100,
   energyCostPerClick: 1,
   fullRechargeMs: 7_200_000,

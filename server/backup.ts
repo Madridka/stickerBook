@@ -27,14 +27,23 @@ const toBackupFileName = (now: number, reason: DatabaseBackupRecord['reason']): 
 
 export class DatabaseBackupService {
   private activeBackup: Promise<DatabaseBackupRecord> | undefined
+  private readonly config: DatabaseBackupConfig
+  private readonly databasePath: string
   private interval: ReturnType<typeof setInterval> | undefined
+  private readonly logger: FastifyBaseLogger
+  private readonly storage: StickerBookServerDatabase
 
   constructor(
-    private readonly storage: StickerBookServerDatabase,
-    private readonly databasePath: string,
-    private readonly config: DatabaseBackupConfig,
-    private readonly logger: FastifyBaseLogger,
-  ) {}
+    storage: StickerBookServerDatabase,
+    databasePath: string,
+    config: DatabaseBackupConfig,
+    logger: FastifyBaseLogger,
+  ) {
+    this.storage = storage
+    this.databasePath = databasePath
+    this.config = config
+    this.logger = logger
+  }
 
   isEnabled = (): boolean => this.config.enabled && this.databasePath !== ':memory:'
 

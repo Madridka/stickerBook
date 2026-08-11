@@ -70,7 +70,7 @@ Authorization: Basic ...
 | Переменная | Значение по умолчанию |
 | --- | --- |
 | `STICKER_BOOK_PORT` | `4041` |
-| `STICKER_BOOK_HOST` | `::` (dual-stack IPv6/IPv4) |
+| `STICKER_BOOK_HOST` | `0.0.0.0` |
 | `STICKER_BOOK_DATABASE_PATH` | `server/data/sticker-book.sqlite` |
 | `STICKER_BOOK_BACKUP_ENABLED` | `true` |
 | `STICKER_BOOK_BACKUP_DIRECTORY` | каталог `backups` рядом с БД |

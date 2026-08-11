@@ -16,9 +16,7 @@ export default defineConfig({
     },
   },
   server: {
-    // A dual-stack listener and localhost proxy keep local traffic working when
-    // a VPN intercepts either the IPv4 or IPv6 loopback route.
-    host: '::',
+    host: true,
     allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
     cors: {
       preflightContinue: true,
@@ -26,12 +24,12 @@ export default defineConfig({
     port: 4040,
     strictPort: true,
     proxy: {
-      '/api': 'http://localhost:4041',
-      '/admin': 'http://localhost:4041',
+      '/api': 'http://127.0.0.1:4041',
+      '/admin': 'http://127.0.0.1:4041',
     },
   },
   preview: {
-    host: '::',
+    host: true,
     allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
   },
 })

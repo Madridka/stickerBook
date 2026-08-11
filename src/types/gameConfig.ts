@@ -22,6 +22,7 @@ export interface BlisterConfig extends PackConfig {
   cost: number
   cooldownMs: number
   poolId: string
+  pityEligible: boolean
 }
 
 export interface CardCatalogConfig {

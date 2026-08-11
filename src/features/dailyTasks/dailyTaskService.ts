@@ -110,7 +110,7 @@ export const claimDailyTaskReward = async (
 ): Promise<ClaimDailyRewardResult> => {
   const result: ClaimDailyRewardResult = await database.transaction(
     'rw',
-    [database.dailyTasks, database.cards, database.duplicates],
+    [database.dailyTasks, database.cards, database.duplicates, database.albumPityStates],
     async (): Promise<ClaimDailyRewardResult> => {
       const current: DailyTasksState = resolveDailyTasksState(
         await database.dailyTasks.get('current'),

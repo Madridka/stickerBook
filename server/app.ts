@@ -14,6 +14,9 @@ import {
   type UserRecord,
 } from './database.ts'
 import { hashPassword, verifyPassword } from './password.ts'
+import { registerAdmin } from './admin.ts'
+import { DatabaseBackupService } from './backup.ts'
+import { registerOpenApi } from './openapi.ts'
 
 interface AuthBody {
   username?: unknown
@@ -66,9 +69,21 @@ const setSessionCookie = (
 export const createServer = async (config: ServerConfig): Promise<FastifyInstance> => {
   const server: FastifyInstance = Fastify({ logger: true, bodyLimit: MAX_SAVE_BYTES })
   const storage = new StickerBookServerDatabase(config.databasePath)
+  const backupService = new DatabaseBackupService(
+    storage,
+    config.databasePath,
+    config.backup,
+    server.log,
+  )
   await server.register(cookie)
 
-  server.addHook('onClose', async (): Promise<void> => storage.close())
+  server.addHook('onClose', async (): Promise<void> => {
+    try {
+      await backupService.stop()
+    } finally {
+      storage.close()
+    }
+  })
 
   const currentUser = (request: FastifyRequest): PublicUser | undefined => {
     const token: string | undefined = request.cookies[SESSION_COOKIE]
@@ -76,6 +91,9 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   }
 
   server.get('/api/health', async (): Promise<{ status: 'ok' }> => ({ status: 'ok' }))
+
+  registerOpenApi(server)
+  registerAdmin(server, storage, backupService, config)
 
   server.get('/api/auth/session', async (request, reply) => {
     const user: PublicUser | undefined = currentUser(request)
@@ -152,11 +170,16 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   })
 
   storage.deleteExpiredSessions()
+  await backupService.start().catch((error: unknown): void => {
+    server.log.error({ error }, 'Initial database backup failed')
+  })
 
   if (existsSync(config.distPath)) {
     await server.register(fastifyStatic, { root: config.distPath })
     server.setNotFoundHandler(async (request, reply) => {
-      if (request.url.startsWith('/api/')) return reply.code(404).send({ code: 'not-found' })
+      if (request.url.startsWith('/api/') || request.url === '/admin' || request.url.startsWith('/admin/')) {
+        return reply.code(404).send({ code: 'not-found' })
+      }
       return reply.sendFile('index.html')
     })
   }

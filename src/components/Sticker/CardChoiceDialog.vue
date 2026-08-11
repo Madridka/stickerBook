@@ -59,7 +59,7 @@ const selectCard = (cardId: string): void => emit('update:selectedId', cardId)
 
     <!-- Единый выбор наградной карточки для повторок и ежедневных заданий. -->
     <div
-      class="grid auto-cols-[9rem] grid-flow-col justify-center gap-3 overflow-x-auto pb-2 sm:grid-flow-row sm:grid-cols-3 sm:auto-cols-auto"
+      class="grid auto-cols-[9rem] grid-flow-col justify-start gap-3 overflow-x-auto pb-2 sm:grid-flow-row sm:grid-cols-3 sm:auto-cols-auto"
     >
       <button
         v-for="card in cards"

@@ -17,6 +17,12 @@ export const SERVER_SYNC_CONFIG = {
   pollIntervalMs: 15_000,
 }
 
+/** Настройки экрана авторизации и локального гостевого режима. */
+export const AUTH_UI_CONFIG = {
+  guestModeStorageKey: 'sticker-book-guest-mode',
+  showLocalSaveJson: false,
+}
+
 /** Тайминги анимации открытия пака. */
 export const PACK_ANIMATION_CONFIG = {
   stepCount: 3,

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently --kill-others --names server,web \"npm:dev:server\" \"npm:dev:web\"",
     "dev:web": "vite --config vite.config.ts",
-    "dev:server": "node --env-file-if-exists=.env --experimental-strip-types server/index.ts",
+    "dev:server": "node --watch --env-file-if-exists=.env --experimental-strip-types server/index.ts",
     "build": "vue-tsc --project tsconfig.app.json --noEmit && tsc --project tsconfig.server.json && vite build",
     "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.ts",
     "typecheck": "vue-tsc --project tsconfig.app.json --noEmit",

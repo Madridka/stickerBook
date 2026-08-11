@@ -81,13 +81,22 @@
       "id": "ucl-26-27-bar-06",
       "cardNumber": "06",
       "albumSlot": 6,
+<<<<<<< HEAD
       "displayName": "Jules Koundé",
       "image": "/ucl-26-27/cards/barcelona/UCL-BAR-06-jules-kounde.webp",
+=======
+      "displayName": "Gerard Martín",
+      "image": "/ucl-26-27/cards/barcelona/UCL-BAR-06-gerard-martin.webp",
+>>>>>>> 10d8fb1387697e5346dd678aa908ccc99fb799ad
       "series": "base",
       "finish": "standard",
       "rarity": "rare",
       "kind": "player",
+<<<<<<< HEAD
       "personId": "jules-kounde",
+=======
+      "personId": "gerard-martin",
+>>>>>>> 10d8fb1387697e5346dd678aa908ccc99fb799ad
       "position": "DF"
     },
     {

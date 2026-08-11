@@ -7,6 +7,7 @@ import { HOME_VIEW_CONFIG } from '@/config/runtimeConfig'
 import { clearLocalGameData, cloudSave, cloudSyncStatus } from '@/services/cloudSave'
 import { useAuthStore } from '@/stores/auth'
 import { usePlayerStore } from '@/stores/player'
+import { formatEnergy } from '@/utils/format'
 
 import Menu from 'primevue/menu'
 import Dialog from 'primevue/dialog'
@@ -35,15 +36,16 @@ const resetProgressItem = computed(() => ({
 }))
 
 const accountItem = computed(() => ({
-  label: auth.user?.username ?? '',
+  label: auth.isGuest ? t('auth.guestAccount') : (auth.user?.username ?? ''),
   icon: 'pi pi-user',
   disabled: true,
 }))
 
 const syncItem = computed(() => ({
-  label: t(`auth.sync.${cloudSyncStatus.value}`),
-  icon:
-    cloudSyncStatus.value === 'conflict' || cloudSyncStatus.value === 'offline'
+  label: auth.isGuest ? t('auth.guestLocalSave') : t(`auth.sync.${cloudSyncStatus.value}`),
+  icon: auth.isGuest
+    ? 'pi pi-desktop'
+    : cloudSyncStatus.value === 'conflict' || cloudSyncStatus.value === 'offline'
       ? 'pi pi-exclamation-triangle'
       : cloudSyncStatus.value === 'saving' || cloudSyncStatus.value === 'loading'
         ? 'pi pi-sync pi-spin'
@@ -55,6 +57,10 @@ const logoutItem = computed(() => ({
   label: t('auth.logout'),
   icon: 'pi pi-sign-out',
   command: (): void => {
+    if (auth.isGuest) {
+      auth.exitGuest()
+      return
+    }
     void auth.logout()
   },
 }))

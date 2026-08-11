@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { AUTH_UI_CONFIG } from '@/config/runtimeConfig'
 import { exportLocalSaveJson } from '@/services/cloudSave'
 import { useAuthStore } from '@/stores/auth'
 
@@ -24,6 +25,7 @@ const isSaveViewerVisible: Ref<boolean> = ref(false)
 const isSaveLoading: Ref<boolean> = ref(false)
 const saveJson: Ref<string> = ref('')
 const saveReadFailed: Ref<boolean> = ref(false)
+const isGuestDialogVisible: Ref<boolean> = ref(false)
 
 const errorMessage: ComputedRef<string> = computed((): string =>
   auth.errorCode ? t(`auth.errors.${auth.errorCode}`) : '',
@@ -58,6 +60,16 @@ const showLocalSave = async (): Promise<void> => {
   } finally {
     isSaveLoading.value = false
   }
+}
+
+const returnToRegistration = (): void => {
+  isGuestDialogVisible.value = false
+  setMode('register')
+}
+
+const continueAsGuest = (): void => {
+  isGuestDialogVisible.value = false
+  auth.startGuest()
 }
 </script>
 
@@ -136,6 +148,17 @@ const showLocalSave = async (): Promise<void> => {
       <div class="mt-4 border-t border-ink/15 pt-4">
         <Button
           class="w-full"
+          icon="pi pi-play"
+          :label="t('auth.guestAction')"
+          outlined
+          type="button"
+          @click="isGuestDialogVisible = true"
+        />
+      </div>
+
+      <div v-if="AUTH_UI_CONFIG.showLocalSaveJson" class="mt-3">
+        <Button
+          class="w-full"
           icon="pi pi-code"
           :label="t('auth.showSaveJson')"
           :loading="isSaveLoading"
@@ -149,6 +172,33 @@ const showLocalSave = async (): Promise<void> => {
         </Message>
       </div>
     </section>
+
+    <Dialog
+      v-model:visible="isGuestDialogVisible"
+      modal
+      :draggable="false"
+      :header="t('auth.guestDialogTitle')"
+      :style="{ width: 'min(30rem, calc(100vw - 2rem))' }"
+    >
+      <p class="text-sm leading-relaxed text-ink/70">
+        {{ t('auth.guestDialogDescription') }}
+      </p>
+
+      <template #footer>
+        <Button
+          :label="t('auth.guestBack')"
+          text
+          type="button"
+          @click="returnToRegistration"
+        />
+        <Button
+          :label="t('auth.guestContinue')"
+          icon="pi pi-play"
+          type="button"
+          @click="continueAsGuest"
+        />
+      </template>
+    </Dialog>
 
     <Dialog
       v-model:visible="isSaveViewerVisible"

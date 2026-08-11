@@ -5,6 +5,7 @@ import { promoteDuplicate } from '@/db/stickerLifecycle'
 import type { DeletedCard, StickerInstance } from '@/types'
 import { createId } from '@/utils/createId'
 import { DELETED_CARD_CONFIG } from '@/config/gameBalance'
+import { resetAlbumPity } from '@/features/pity/albumPityService'
 
 const normalizeRestoredCard = (
   instance: StickerInstance,
@@ -58,6 +59,7 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
         database.cards,
         database.duplicates,
         database.deletedCards,
+        database.albumPityStates,
         async (): Promise<void> => {
           await database.cards.bulkDelete(expired.map(({ instanceId }): string => instanceId))
           await database.deletedCards.bulkDelete(expired.map(({ id }): string => id))
@@ -97,9 +99,11 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
       database.cards,
       database.duplicates,
       database.deletedCards,
+      database.albumPityStates,
       async (): Promise<void> => {
         await database.cards.update(instance.id, { location: 'deleted' })
         await database.deletedCards.add(deletedCard)
+        await resetAlbumPity(instance.albumId)
       },
     )
     items.value = [deletedCard, ...items.value]
@@ -124,6 +128,7 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
       database.cards,
       database.duplicates,
       database.deletedCards,
+      database.albumPityStates,
       async (): Promise<void> => {
         const instance: StickerInstance | undefined = await database.cards.get(instanceId)
         if (!instance) {
@@ -146,6 +151,7 @@ export const useDeletedCardsStore = defineStore('deletedCards', () => {
           await database.duplicates.put(restoredDuplicate)
         } else {
           await database.cards.put(normalizeRestoredCard(instance, 'inventory'))
+          await resetAlbumPity(deletedCard.albumId)
         }
         await database.deletedCards.delete(deletedCard.id)
       },

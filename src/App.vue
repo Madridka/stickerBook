@@ -17,6 +17,6 @@ void auth.initialize()
   >
     {{ t('auth.loading') }}
   </div>
-  <AppShell v-else-if="auth.user" />
+  <AppShell v-else-if="auth.user || auth.isGuest" />
   <AuthView v-else />
 </template>

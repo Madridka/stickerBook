@@ -16,7 +16,9 @@ export default defineConfig({
     },
   },
   server: {
-    host: true,
+    // Bind explicitly to every local IPv4 interface. This keeps the dev server
+    // reachable when a VPN adds/removes interfaces and changes their priority.
+    host: '0.0.0.0',
     allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
     cors: {
       preflightContinue: true,
@@ -29,7 +31,7 @@ export default defineConfig({
     },
   },
   preview: {
-    host: true,
+    host: '0.0.0.0',
     allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
   },
 })

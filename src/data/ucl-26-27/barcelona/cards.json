@@ -81,13 +81,13 @@
       "id": "ucl-26-27-bar-06",
       "cardNumber": "06",
       "albumSlot": 6,
-      "displayName": "Ronald Araujo",
-      "image": "/ucl-26-27/cards/barcelona/UCL-BAR-06-ronald-araujo.webp",
+      "displayName": "Gerard Martín",
+      "image": "/ucl-26-27/cards/barcelona/UCL-BAR-06-gerard-martin.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "rare",
       "kind": "player",
-      "personId": "ronald-araujo",
+      "personId": "gerard-martin",
       "position": "DF"
     },
     {

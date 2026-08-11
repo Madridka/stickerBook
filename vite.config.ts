@@ -16,9 +16,9 @@ export default defineConfig({
     },
   },
   server: {
-    // Bind explicitly to every local IPv4 interface. This keeps the dev server
-    // reachable when a VPN adds/removes interfaces and changes their priority.
-    host: '0.0.0.0',
+    // A dual-stack listener and localhost proxy keep local traffic working when
+    // a VPN intercepts either the IPv4 or IPv6 loopback route.
+    host: '::',
     allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
     cors: {
       preflightContinue: true,
@@ -26,12 +26,12 @@ export default defineConfig({
     port: 4040,
     strictPort: true,
     proxy: {
-      '/api': 'http://127.0.0.1:4041',
-      '/admin': 'http://127.0.0.1:4041',
+      '/api': 'http://localhost:4041',
+      '/admin': 'http://localhost:4041',
     },
   },
   preview: {
-    host: '0.0.0.0',
+    host: '::',
     allowedHosts: ['sticker-book.ru', 'www.sticker-book.ru'],
   },
 })

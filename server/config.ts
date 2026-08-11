@@ -51,7 +51,9 @@ export const loadServerConfig = (): ServerConfig => {
     },
     databasePath,
     distPath: resolve('dist'),
-    host: process.env.STICKER_BOOK_HOST ?? '0.0.0.0',
+    // The IPv6 wildcard is dual-stack in Node and remains reachable over IPv4.
+    // It also provides an IPv6 loopback path when a VPN intercepts 127.0.0.1.
+    host: process.env.STICKER_BOOK_HOST ?? '::',
     port: parsePort(process.env.STICKER_BOOK_PORT),
     secureCookie: process.env.NODE_ENV === 'production',
   }

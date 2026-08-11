@@ -13,7 +13,12 @@ process.on('SIGINT', (): void => void stop())
 process.on('SIGTERM', (): void => void stop())
 
 try {
-  await server.listen({ host: config.host, port: config.port })
+  const address: string = await server.listen({
+    host: config.host,
+    port: config.port,
+    ipv6Only: false,
+  })
+  server.log.info({ address }, 'StickerBook server is ready')
 } catch (error: unknown) {
   server.log.error(error)
   process.exit(1)

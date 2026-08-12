@@ -76,8 +76,9 @@ const createRewards = (
   })
 
 describe('pity domain', () => {
-  it('remains disabled below the exact 95% ratio and at 100%', () => {
-    expect(isPityCompletionEligible(9499, 10000)).toBe(false)
+  it('uses the same rounded completion percentage as the UI and disables at 100%', () => {
+    expect(isPityCompletionEligible(9449, 10000)).toBe(false)
+    expect(isPityCompletionEligible(9450, 10000)).toBe(true)
     expect(isPityCompletionEligible(9500, 10000)).toBe(true)
     expect(isPityCompletionEligible(10000, 10000)).toBe(false)
   })
@@ -158,7 +159,7 @@ describe('pity domain', () => {
     expect(result.pityApplied).toBe(true)
   })
 
-  it('falls back to normal RNG when the blister pool has no eligible missing card', () => {
+  it('guarantees a missing card even when it is outside the regular blister pool', () => {
     const duplicate = createCard('owned')
     const unavailableMissing = {
       ...createCard('event-only'),
@@ -171,8 +172,8 @@ describe('pity domain', () => {
       createSequenceRandom(Array.from({ length: 12 }, (): number => 0)),
     )
 
-    expect(result.hasNewCard).toBe(false)
-    expect(result.pityApplied).toBe(false)
-    expect(result.rewards.every(({ playerId }) => playerId === duplicate.id)).toBe(true)
+    expect(result.hasNewCard).toBe(true)
+    expect(result.pityApplied).toBe(true)
+    expect(result.rewards[4]?.playerId).toBe(unavailableMissing.id)
   })
 })

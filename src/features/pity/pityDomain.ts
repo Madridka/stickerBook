@@ -25,10 +25,14 @@ export interface CreatePityPackRewardsResult {
 export const isPityCompletionEligible = (
   collectedCards: number,
   totalCards: number,
-): boolean =>
-  totalCards > 0 &&
-  collectedCards < totalCards &&
-  collectedCards / totalCards >= PITY_CONFIG.minCompletionRatio
+): boolean => {
+  if (totalCards <= 0 || collectedCards >= totalCards) return false
+
+  // Используем тот же округлённый процент, который отображается игроку в интерфейсе коллекции.
+  const displayedCompletionRatio: number =
+    Math.round((collectedCards / totalCards) * 100) / 100
+  return displayedCompletionRatio >= PITY_CONFIG.minCompletionRatio
+}
 
 export const shouldProtectPack = (dryPackCount: number): boolean =>
   dryPackCount >= PITY_CONFIG.dryPacksBeforeGuarantee
@@ -39,7 +43,7 @@ export const isPityPackTypeEligible = (
   pityEligible: boolean,
 ): boolean => pityEligible && blisterId !== 'rare' && albumIds.length === 1
 
-// Оставляет исходные каталоги и их defaults, отсекая только уже собранные карточки.
+// Оставляет исходные каталоги и их значения по умолчанию, отсекая только уже собранные карточки.
 export const createMissingOnlyCatalogs = (
   catalogs: readonly NormalizedCardCatalog[],
   ownedPlayerIds: ReadonlySet<string>,
@@ -94,11 +98,21 @@ export const createPityPackRewards = (
     if (canForceMissing) {
       try {
         card = selectFromDropEngine(options, missingCatalogs)
-        pityApplied = true
       } catch {
-        // В pool блистера может не оказаться доступных missing-карт — сохраняем обычный RNG.
-        card = selectFromDropEngine(options, options.catalogs)
+        // Система защиты гарантирует пополнение коллекции, даже если оставшаяся карточка
+        // обычно доступна только из другого источника получения.
+        card = selectCardV2({
+          catalogs: missingCatalogs,
+          packConfig: {
+            cardsPerPack: options.cardCount,
+            rarityOdds: options.rarityOdds,
+          },
+          poolId: '*',
+          defaultSelectionWeight: options.defaultSelectionWeight,
+          randomSource: options.randomSource,
+        }) as CardDefinition
       }
+      pityApplied = true
     } else {
       card = selectFromDropEngine(options, options.catalogs)
     }

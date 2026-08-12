@@ -33,6 +33,9 @@ export const getAlbumPityContext = async (
   }
 
   const dryPackCount: number = normalizeDryPackCount(state?.dryPackCount)
+  if (!state || state.dryPackCount !== dryPackCount) {
+    await database.albumPityStates.put({ albumId, dryPackCount, updatedAt: now })
+  }
   logPity(
     `album=${albumId} completion=${(collectedCards / totalCards).toFixed(3)} dryPackCount=${dryPackCount}`,
   )

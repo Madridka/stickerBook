@@ -40,6 +40,18 @@ describe('album pity persistence', () => {
     })
   })
 
+  it('persists an eligible zero counter so admin diagnostics can see it', async () => {
+    await expect(getAlbumPityContext('wc-26', 95, 100, 7)).resolves.toEqual({
+      eligible: true,
+      dryPackCount: 0,
+    })
+    expect(persisted.get('wc-26')).toEqual({
+      albumId: 'wc-26',
+      dryPackCount: 0,
+      updatedAt: 7,
+    })
+  })
+
   it('resets on any new reward while a duplicate reward leaves it unchanged', async () => {
     persisted.set('wc-26', { albumId: 'wc-26', dryPackCount: 3, updatedAt: 1 })
     await registerCardAcquisition('wc-26', false, 2)

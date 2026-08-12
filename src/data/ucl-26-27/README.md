@@ -18,7 +18,9 @@ The rarity distribution per club is seven common, six uncommon (including the te
 
 ## Visual assets
 
-The card layout is derived from `public/examples/ucl/ucl-26-27-clean-no-crest-source.webp`; Jude Bellingham keeps the supplied completed example. Where a matching portrait card already exists in the local WC-26 collection it is reused inside the UCL frame. Cards without a local portrait use a deliberate club-colour illustrated identity with initials, rather than an incorrect player likeness. `scripts/generate-ucl-26-27-card-sources.ts` recreates the intermediate SVG sources used by the Sharp rendering step.
+The card layout is derived from `public/examples/ucl/ucl-26-27-clean-no-crest-source.webp` and the completed Real Madrid set. Real Madrid is kept unchanged as the visual reference. The other 27 clubs use real crests plus the best available portrait in this order: an attributed online image in the temporary portrait cache, a matching local WC-26 portrait, or a deliberate club-colour illustrated identity when no reliable likeness is available. Online source URLs and lookup results are recorded in `src/data/ucl-26-27/media-sources.json`; downloaded working images stay under `tmp` and are not shipped with the app.
+
+`scripts/collect-ucl-26-27-media.ts` collects Wikimedia fallbacks, while the two `collect-ucl-26-27-sportsdb-*.ps1` scripts collect club rosters and remaining people through the rate-limited TheSportsDB API. `scripts/prepare-ucl-26-27-render-cache.ps1` builds the temporary PNG cache, `scripts/generate-ucl-26-27-card-sources.ts` recreates the intermediate SVG sources under `tmp`, and `scripts/render-ucl-26-27-cards.ps1` renders the 540 non-RMA WebP files with Sharp. The PNG cache is needed because the current SVG renderer does not reliably decode nested WebP data URIs.
 
 ## Provisional decisions
 

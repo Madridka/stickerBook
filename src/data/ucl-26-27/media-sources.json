@@ -1,0 +1,4531 @@
+[
+    {
+        "key":  "abdallah-sima",
+        "query":  "Abdallah Sima",
+        "pageTitle":  "Abdallah Sima",
+        "pageUrl":  "https://www.thesportsdb.com/search/Abdallah%20Sima",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gepjg71766006228.png",
+        "localFile":  "abdallah-sima.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "abde-ezzalzouli",
+        "query":  "Abde Ezzalzouli",
+        "pageTitle":  "Abde Ezzalzouli",
+        "pageUrl":  "https://www.thesportsdb.com/search/Abde%20Ezzalzouli",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/c7fznc1762602800.png",
+        "localFile":  "abde-ezzalzouli.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "abdoul-kone",
+        "query":  "Abdoul KonГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "abdukodir-khusanov",
+        "query":  "Abdukodir Khusanov",
+        "pageTitle":  "Abdukodir Khusanov",
+        "pageUrl":  "https://www.thesportsdb.com/search/Abdukodir%20Khusanov",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/da8tg41769182137.png",
+        "localFile":  "abdukodir-khusanov.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "abdulkerim-bardakci",
+        "query":  "AbdГјlkerim BardakcД±",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "achraf-hakimi",
+        "query":  "Achraf Hakimi",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ademola-lookman",
+        "query":  "Ademola Lookman",
+        "pageTitle":  "Ademola Lookman",
+        "pageUrl":  "https://en.wikipedia.org/?curid=48501213",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/b/b7/Ademola_Lookman_%282019%29_%28cropped%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "ademola-lookman.jpg",
+        "description":  "Nigerian-English association football player (born 1997)",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alan-varela",
+        "query":  "Alan Varela",
+        "pageTitle":  "Alan Varela",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alan%20Varela",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/2dgo351750441440.png",
+        "localFile":  "alan-varela.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alassane-diatta",
+        "query":  "Alassane Diatta",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "alberto-costa",
+        "query":  "Alberto Costa",
+        "pageTitle":  "Alberto Costa",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alberto%20Costa",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/q9pfp31750330908.png",
+        "localFile":  "alberto-costa.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alberto-moleiro",
+        "query":  "Alberto Moleiro",
+        "pageTitle":  "Alberto Moleiro",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alberto%20Moleiro",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/89qaq61762888929.png",
+        "localFile":  "alberto-moleiro.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alejandro-balde",
+        "query":  "Alejandro Balde",
+        "localFile":  "alejandro-balde.jpg",
+        "status":  "cached"
+    },
+    {
+        "key":  "alejandro-garnacho",
+        "query":  "Alejandro Garnacho",
+        "pageTitle":  "Alejandro Garnacho",
+        "pageUrl":  "https://en.wikipedia.org/?curid=70248902",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/a/ab/Alejandro_Garnacho_7_August_2022_%28cropped%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "alejandro-garnacho.jpg",
+        "description":  "Spanish-Argentine association football player",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alejandro-grimaldo",
+        "query":  "Alejandro Grimaldo",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "aleksandar-pavlovic",
+        "query":  "Aleksandar Pavlovic",
+        "pageTitle":  "Aleksandar Pavlović",
+        "pageUrl":  "https://www.thesportsdb.com/search/Aleksandar%20Pavlovi%C4%87",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/22ti3z1756408943.png",
+        "localFile":  "aleksandar-pavlovic.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "aleksandar-stankovic",
+        "query":  "Aleksandar StankoviД‡",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "alessandro-bastoni",
+        "query":  "Alessandro Bastoni",
+        "pageTitle":  "Alessandro Bastoni",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alessandro%20Bastoni",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/hwixpa1759408795.png",
+        "localFile":  "alessandro-bastoni.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alessandro-buongiorno",
+        "query":  "Alessandro Buongiorno",
+        "pageTitle":  "Alessandro Buongiorno",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alessandro%20Buongiorno",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/01fcb61762288142.png",
+        "localFile":  "alessandro-buongiorno.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alexander-isak",
+        "query":  "Alexander Isak",
+        "pageTitle":  "Alexander Isak",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alexander%20Isak",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3qj7z41757088281.png",
+        "localFile":  "alexander-isak.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alexander-sorloth",
+        "query":  "Alexander SГёrloth",
+        "pageTitle":  "Alexander Sørloth",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alexander%20S%C3%B8rloth",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/v3of4b1762288730.png",
+        "localFile":  "alexander-sorloth.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alex-baena",
+        "query":  "ГЃlex Baena",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "alex-freeman",
+        "query":  "Alex Freeman",
+        "pageTitle":  "Alex Freeman",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alex%20Freeman",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/9ik1yx1766511635.png",
+        "localFile":  "alex-freeman.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alexis-mac-allister",
+        "query":  "Alexis Mac Allister",
+        "pageTitle":  "Alexis Mac Allister",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alexis%20Mac%20Allister",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/96dmuf1757087513.png",
+        "localFile":  "alexis-mac-allister.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alex-meret",
+        "query":  "Alex Meret",
+        "pageTitle":  "Alex Meret",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alex%20Meret",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jh5q3x1764089642.png",
+        "localFile":  "alex-meret.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alexsandro",
+        "query":  "Alexsandro",
+        "pageTitle":  "Alexsandro",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alexsandro",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/7ldspy1766077352.png",
+        "localFile":  "alexsandro.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alex-valle",
+        "query":  "ГЃlex Valle",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "alisson",
+        "query":  "Alisson",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "alisson-santos",
+        "query":  "Alisson Santos",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "alphonso-davies",
+        "query":  "Alphonso Davies",
+        "pageTitle":  "Alphonso Davies",
+        "pageUrl":  "https://www.thesportsdb.com/search/Alphonso%20Davies",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/11afh31756409066.png",
+        "localFile":  "alphonso-davies.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "alvaro-fidalgo",
+        "query":  "ГЃlvaro Fidalgo",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "alvaro-valles",
+        "query":  "ГЃlvaro Valles",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "amad-diallo",
+        "query":  "Amad Diallo",
+        "pageTitle":  "Amad Diallo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Amad%20Diallo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8p6wbg1766826668.png",
+        "localFile":  "amad-diallo.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "amadou-haidara",
+        "query":  "Amadou Haidara",
+        "pageTitle":  "Amadou Haidara",
+        "pageUrl":  "https://www.thesportsdb.com/search/Amadou%20Haidara",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/cg0n8a1763561145.png",
+        "localFile":  "amadou-haidara.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "amadou-onana",
+        "query":  "Amadou Onana",
+        "pageTitle":  "Amadou Onana",
+        "pageUrl":  "https://www.thesportsdb.com/search/Amadou%20Onana",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/q2bvps1725359471.png",
+        "localFile":  "amadou-onana.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "amir-rrahmani",
+        "query":  "Amir Rrahmani",
+        "pageTitle":  "Amir Rrahmani",
+        "pageUrl":  "https://www.thesportsdb.com/search/Amir%20Rrahmani",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/hvd5tq1762288248.png",
+        "localFile":  "amir-rrahmani.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "anastasios-douvikas",
+        "query":  "Anastasios Douvikas",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "andoni-iraola",
+        "query":  "Andoni Iraola",
+        "pageTitle":  "Andoni Iraola",
+        "pageUrl":  "https://www.thesportsdb.com/search/Andoni%20Iraola",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5dfc3n1780603232.png",
+        "localFile":  "andoni-iraola.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "andrey-santos",
+        "query":  "Andrey Santos",
+        "pageTitle":  "Andrey Santos",
+        "pageUrl":  "https://www.thesportsdb.com/search/Andrey%20Santos",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jt1o7i1757010267.png",
+        "localFile":  "andrey-santos.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "andrija-bulatovic",
+        "query":  "Andrija Bulatovic",
+        "pageTitle":  "Andrija Bulatović",
+        "pageUrl":  "https://www.thesportsdb.com/search/Andrija%20Bulatovi%C4%87",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/xhaaq21766005398.png",
+        "localFile":  "andrija-bulatovic.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "andy-diouf",
+        "query":  "Andy Diouf",
+        "pageTitle":  "Andy Diouf",
+        "pageUrl":  "https://www.thesportsdb.com/search/Andy%20Diouf",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/38x9vh1759408128.png",
+        "localFile":  "andy-diouf.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "anel-ahmedhodzic",
+        "query":  "Anel Ahmedhodzic",
+        "pageTitle":  "Anel Ahmedhodzic",
+        "pageUrl":  "https://www.thesportsdb.com/search/Anel%20Ahmedhodzic",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/tp4zw91758187079.png",
+        "localFile":  "anel-ahmedhodzic.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "angel-ortiz",
+        "query":  "ГЃngel Ortiz",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "angelo-stiller",
+        "query":  "Angelo Stiller",
+        "pageTitle":  "Angelo Stiller",
+        "pageUrl":  "https://www.thesportsdb.com/search/Angelo%20Stiller",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/fjia5b1763586463.png",
+        "localFile":  "angelo-stiller.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ange-n-guessan",
+        "query":  "Ange N\u0027Guessan",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "ange-yoan-bonny",
+        "query":  "Ange-Yoan Bonny",
+        "pageTitle":  "Ange-Yoan Bonny",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ange-Yoan%20Bonny",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/d7uly91759408116.png",
+        "localFile":  "ange-yoan-bonny.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "anis-hadj-moussa",
+        "query":  "Anis Hadj Moussa",
+        "pageTitle":  "Anis Hadj Moussa",
+        "pageUrl":  "https://www.thesportsdb.com/search/Anis%20Hadj%20Moussa",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/54rafl1732695177.png",
+        "localFile":  "anis-hadj-moussa.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "anthony-gordon",
+        "query":  "Anthony Gordon",
+        "pageTitle":  "Anthony Gordon",
+        "pageUrl":  "https://www.thesportsdb.com/search/Anthony%20Gordon",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8ztck61766824986.png",
+        "localFile":  "anthony-gordon.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "antoine-semenyo",
+        "query":  "Antoine Semenyo",
+        "pageTitle":  "Antoine Semenyo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Antoine%20Semenyo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/9y2ge41768393433.png",
+        "localFile":  "antoine-semenyo.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "antonio-nusa",
+        "query":  "Antonio Nusa",
+        "pageTitle":  "Antonio Nusa",
+        "pageUrl":  "https://www.thesportsdb.com/search/Antonio%20Nusa",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/yo19551763561296.png",
+        "localFile":  "antonio-nusa.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "antonio-vergara",
+        "query":  "Antonio Vergara",
+        "pageTitle":  "Antonio Vergara",
+        "pageUrl":  "https://www.thesportsdb.com/search/Antonio%20Vergara",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/49ahmp1764089705.png",
+        "localFile":  "antonio-vergara.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "antony",
+        "query":  "Antony",
+        "pageTitle":  "Antony",
+        "pageUrl":  "https://www.thesportsdb.com/search/Antony",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/vmgket1761255257.png",
+        "localFile":  "antony.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "arijon-ibrahimovic",
+        "query":  "Arijon Ibrahimovic",
+        "pageTitle":  "Arijon Ibrahimović",
+        "pageUrl":  "https://www.thesportsdb.com/search/Arijon%20Ibrahimovi%C4%87",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/q7d6oi1763154547.png",
+        "localFile":  "arijon-ibrahimovic.png",
+        "description":  "Player artwork from TheSportsDB; catalog club bayern-munich",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "armando-obispo",
+        "query":  "Armando Obispo",
+        "pageTitle":  "Armando Obispo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Armando%20Obispo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ja4e471764595048.png",
+        "localFile":  "armando-obispo.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "arnaud-bodart",
+        "query":  "Arnaud Bodart",
+        "pageTitle":  "Arnaud Bodart",
+        "pageUrl":  "https://www.thesportsdb.com/search/Arnaud%20Bodart",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/lyge411766077401.png",
+        "localFile":  "arnaud-bodart.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "aron-yaakobishvili",
+        "query":  "ГЃron Yaakobishvili",
+        "localFile":  "aron-yaakobishvili.jpg",
+        "status":  "cached"
+    },
+    {
+        "key":  "arsenal-team-logo",
+        "query":  "Arsenal",
+        "pageTitle":  "Arsenal",
+        "pageUrl":  "https://www.thesportsdb.com/team/133604",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/uyhbfe1612467038.png",
+        "localFile":  "arsenal-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "arthur-vermeeren",
+        "query":  "Arthur Vermeeren",
+        "pageTitle":  "Arthur Vermeeren",
+        "pageUrl":  "https://www.thesportsdb.com/search/Arthur%20Vermeeren",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/tm5tdu1766153562.png",
+        "localFile":  "arthur-vermeeren.png",
+        "description":  "Player artwork from TheSportsDB; catalog club rb-leipzig",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "assane-diao",
+        "query":  "Assane Diao",
+        "pageTitle":  "Assane Diao",
+        "pageUrl":  "https://www.thesportsdb.com/search/Assane%20Diao",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/bt2ue81764278241.png",
+        "localFile":  "assane-diao.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "assan-ouedraogo",
+        "query":  "Assan OuГ©draogo",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "aston-villa-team-logo",
+        "query":  "Aston Villa",
+        "pageTitle":  "Aston Villa",
+        "pageUrl":  "https://www.thesportsdb.com/team/133601",
+        "imageUrl":  "https://www.thesportsdb.com/images/media/team/badge/cgvxt61785930389.png",
+        "localFile":  "aston-villa-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "atakan-karazor",
+        "query":  "Atakan Karazor",
+        "pageTitle":  "Atakan Karazor",
+        "pageUrl":  "https://www.thesportsdb.com/search/Atakan%20Karazor",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ph1o781763586281.png",
+        "localFile":  "atakan-karazor.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "atletico-madrid-team-logo",
+        "query":  "Atletico Madrid",
+        "pageTitle":  "Atlético Madrid",
+        "pageUrl":  "https://www.thesportsdb.com/team/133729",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/0ulh3q1719984315.png",
+        "localFile":  "atletico-madrid-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ayase-ueda",
+        "query":  "Ayase Ueda",
+        "pageTitle":  "Ayase Ueda",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ayase%20Ueda",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5ezc8v1758188908.png",
+        "localFile":  "ayase-ueda.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ayden-heaven",
+        "query":  "Ayden Heaven",
+        "pageTitle":  "Ayden Heaven",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ayden%20Heaven",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/10d8d61766826718.png",
+        "localFile":  "ayden-heaven.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ayyoub-bouaddi",
+        "query":  "Ayyoub Bouaddi",
+        "pageTitle":  "Ayyoub Bouaddi",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ayyoub%20Bouaddi",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/g1bppf1766077416.png",
+        "localFile":  "ayyoub-bouaddi.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "barcelona-team-logo",
+        "query":  "FC Barcelona",
+        "localFile":  "barcelona-team-logo.svg",
+        "status":  "cached"
+    },
+    {
+        "key":  "baris-alper-yilmaz",
+        "query":  "BarД±Еџ Alper YД±lmaz",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "bayern-munich-team-logo",
+        "query":  "FC Bayern Munich",
+        "pageTitle":  "FC Bayern Munich",
+        "pageUrl":  "https://en.wikipedia.org/?curid=172326",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/8/8d/FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "bayern-munich-team-logo.svg",
+        "description":  "association football club in Munich, Germany",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "benjamin-andre",
+        "query":  "Benjamin AndrГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "benjamin-sesko",
+        "query":  "Benjamin Sesko",
+        "pageTitle":  "Benjamin Šeško",
+        "pageUrl":  "https://www.thesportsdb.com/search/Benjamin%20%C5%A0e%C5%A1ko",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/lm21y71766827016.png",
+        "localFile":  "benjamin-sesko.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "berat-lus",
+        "query":  "Berat LuЕџ",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "berke-ozer",
+        "query":  "Berke Г–zer",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "bilal-el-khannouss",
+        "query":  "Bilal El Khannouss",
+        "pageTitle":  "Bilal El Khannouss",
+        "pageUrl":  "https://www.thesportsdb.com/search/Bilal%20El%20Khannouss",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ii2jau1763586312.png",
+        "localFile":  "bilal-el-khannouss.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "billy-gilmour",
+        "query":  "Billy Gilmour",
+        "pageTitle":  "Billy Gilmour",
+        "pageUrl":  "https://www.thesportsdb.com/search/Billy%20Gilmour",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/axk63s1764089469.png",
+        "localFile":  "billy-gilmour.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "borja-sainz",
+        "query":  "Borja Sainz",
+        "pageTitle":  "Borja Sainz",
+        "pageUrl":  "https://www.thesportsdb.com/search/Borja%20Sainz",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/6tno7m1695293388.png",
+        "localFile":  "borja-sainz.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "borussia-dortmund-team-logo",
+        "query":  "Borussia Dortmund",
+        "pageTitle":  "Borussia Dortmund",
+        "pageUrl":  "https://www.thesportsdb.com/team/133650",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/tqo8ge1716960353.png",
+        "localFile":  "borussia-dortmund-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "boubacar-kamara",
+        "query":  "Boubacar Kamara",
+        "pageTitle":  "Boubacar Kamara",
+        "pageUrl":  "https://www.thesportsdb.com/search/Boubacar%20Kamara",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/6ki4781756984876.png",
+        "localFile":  "boubacar-kamara.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "bradley-barcola",
+        "query":  "Bradley Barcola",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "brajan-gruda",
+        "query":  "Brajan Gruda",
+        "pageTitle":  "Brajan Gruda",
+        "pageUrl":  "https://www.thesportsdb.com/search/Brajan%20Gruda",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/wwtykz1756994315.png",
+        "localFile":  "brajan-gruda.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "bruno-fernandes",
+        "query":  "Bruno Fernandes",
+        "pageTitle":  "Bruno Fernandes",
+        "pageUrl":  "https://www.thesportsdb.com/search/Bruno%20Fernandes",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jhasls1766826690.png",
+        "localFile":  "bruno-fernandes.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "bruno-guimaraes",
+        "query":  "Bruno GuimarГЈes",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "bryan-cristante",
+        "query":  "Bryan Cristante",
+        "pageTitle":  "Bryan Cristante",
+        "pageUrl":  "https://www.thesportsdb.com/search/Bryan%20Cristante",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/0b2tmm1758815345.png",
+        "localFile":  "bryan-cristante.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "bryan-mbeumo",
+        "query":  "Bryan Mbeumo",
+        "pageTitle":  "Bryan Mbeumo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Bryan%20Mbeumo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/op28s81755176679.png",
+        "localFile":  "bryan-mbeumo.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "bukayo-saka",
+        "query":  "Bukayo Saka",
+        "pageTitle":  "Bukayo Saka",
+        "pageUrl":  "https://www.thesportsdb.com/search/Bukayo%20Saka",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/xfwok41769331816.png",
+        "localFile":  "bukayo-saka.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "calvin-verdonk",
+        "query":  "Calvin Verdonk",
+        "pageTitle":  "Calvin Verdonk",
+        "pageUrl":  "https://www.thesportsdb.com/search/Calvin%20Verdonk",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/sxex7w1766077734.png",
+        "localFile":  "calvin-verdonk.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "carlos-augusto",
+        "query":  "Carlos Augusto",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "carlos-forbs",
+        "query":  "Carlos Forbs",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "carlos-macia",
+        "query":  "Carlos MaciГ ",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "carlos-romero",
+        "query":  "Carlos Romero",
+        "pageTitle":  "Carlos Romero",
+        "pageUrl":  "https://www.thesportsdb.com/search/Carlos%20Romero",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/j0a4yr1762378897.png",
+        "localFile":  "carlos-romero.png",
+        "description":  "Player artwork from TheSportsDB; catalog club villarreal",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "carney-chukwuemeka",
+        "query":  "Carney Chukwuemeka",
+        "pageTitle":  "Carney Chukwuemeka",
+        "pageUrl":  "https://www.thesportsdb.com/search/Carney%20Chukwuemeka",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/oa3p4i1741868651.png",
+        "localFile":  "carney-chukwuemeka.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "casper-tengstedt",
+        "query":  "Casper Tengstedt",
+        "pageTitle":  "Casper Tengstedt",
+        "pageUrl":  "https://www.thesportsdb.com/search/Casper%20Tengstedt",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/nlsq5n1764436787.png",
+        "localFile":  "casper-tengstedt.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "castello-lukeba",
+        "query":  "Castello Lukeba",
+        "pageTitle":  "Castello Lukeba",
+        "pageUrl":  "https://www.thesportsdb.com/search/Castello%20Lukeba",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3wfwi21763561231.png",
+        "localFile":  "castello-lukeba.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "cesc-fabregas",
+        "query":  "Cesc FГ bregas",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "chema-andres",
+        "query":  "Chema AndrГ©s",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "cheveyo-tsawa",
+        "query":  "Cheveyo Tsawa",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "christoph-baumgartner",
+        "query":  "Christoph Baumgartner",
+        "pageTitle":  "Christoph Baumgartner",
+        "pageUrl":  "https://www.thesportsdb.com/search/Christoph%20Baumgartner",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/7gy4ar1763561036.png",
+        "localFile":  "christoph-baumgartner.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "club-brugge-team-logo",
+        "query":  "Club Brugge KV",
+        "pageTitle":  "Club Brugge KV",
+        "pageUrl":  "https://en.wikipedia.org/?curid=563623",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/9/97/Club_brugge.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "club-brugge-team-logo.png",
+        "description":  "association football club in Belgium",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "cody-gakpo",
+        "query":  "Cody Gakpo",
+        "pageTitle":  "Cody Gakpo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Cody%20Gakpo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/lwkl5n1757088091.png",
+        "localFile":  "cody-gakpo.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "como-team-logo",
+        "query":  "Como 1907",
+        "pageTitle":  "Como 1907 Women",
+        "pageUrl":  "https://www.thesportsdb.com/team/153307",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/tbbve01758341739.png",
+        "localFile":  "como-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "conor-bradley",
+        "query":  "Conor Bradley",
+        "pageTitle":  "Conor Bradley",
+        "pageUrl":  "https://www.thesportsdb.com/search/Conor%20Bradley",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/yojnr41757087630.png",
+        "localFile":  "conor-bradley.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "conrad-harder",
+        "query":  "Conrad Harder",
+        "pageTitle":  "Conrad Harder",
+        "pageUrl":  "https://www.thesportsdb.com/search/Conrad%20Harder",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/2sim021763561160.png",
+        "localFile":  "conrad-harder.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "couhaib-driouech",
+        "query":  "Couhaib Driouech",
+        "pageTitle":  "Couhaib Driouech",
+        "pageUrl":  "https://www.thesportsdb.com/search/Couhaib%20Driouech",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/cjlexr1764594758.png",
+        "localFile":  "couhaib-driouech.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "cristian-chivu",
+        "query":  "Cristian Chivu",
+        "pageTitle":  "Cristian Chivu",
+        "pageUrl":  "https://en.wikipedia.org/?curid=1174686",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/0/06/Chivu2018.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "cristian-chivu.jpg",
+        "description":  "Romanian association football player",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "cucho-hernandez",
+        "query":  "Cucho HernГЎndez",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "curtis-jones",
+        "query":  "Curtis Jones",
+        "pageTitle":  "Curtis Jones",
+        "pageUrl":  "https://www.thesportsdb.com/search/Curtis%20Jones",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ghs3g51757088342.png",
+        "localFile":  "curtis-jones.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "daniel-braganca",
+        "query":  "Daniel BraganГ§a",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "daniele-ghilardi",
+        "query":  "Daniele Ghilardi",
+        "pageTitle":  "Daniele Ghilardi",
+        "pageUrl":  "https://www.thesportsdb.com/search/Daniele%20Ghilardi",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/0j4b8v1758815751.png",
+        "localFile":  "daniele-ghilardi.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "daniel-svensson",
+        "query":  "Daniel Svensson",
+        "pageTitle":  "Daniel Svensson",
+        "pageUrl":  "https://www.thesportsdb.com/search/Daniel%20Svensson",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/q4wdbj1756326141.png",
+        "localFile":  "daniel-svensson.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "danijel-sturm",
+        "query":  "Danijel Sturm",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "dani-olmo",
+        "query":  "Dani Olmo",
+        "pageTitle":  "Dani Olmo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Dani%20Olmo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/s9hzoh1725611346.png",
+        "localFile":  "dani-olmo.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "david-doudera",
+        "query":  "David Doudera",
+        "pageTitle":  "David Douděra",
+        "pageUrl":  "https://www.thesportsdb.com/search/David%20Doud%C4%9Bra",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ecwvvp1718736744.png",
+        "localFile":  "david-doudera.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "davide-ancelotti",
+        "query":  "Davide Ancelotti",
+        "pageTitle":  "Davide Ancelotti",
+        "pageUrl":  "https://www.thesportsdb.com/search/Davide%20Ancelotti",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/9wn1fa1752177800.jpg",
+        "localFile":  "davide-ancelotti.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "davide-frattesi",
+        "query":  "Davide Frattesi",
+        "pageTitle":  "Davide Frattesi",
+        "pageUrl":  "https://www.thesportsdb.com/search/Davide%20Frattesi",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/z58bx11759408884.png",
+        "localFile":  "davide-frattesi.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "david-hancko",
+        "query":  "DГЎvid Hancko",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "david-jurasek",
+        "query":  "David JurГЎsek",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "david-moses",
+        "query":  "David Moses",
+        "pageTitle":  "David Moses",
+        "pageUrl":  "https://www.thesportsdb.com/search/David%20Moses",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8zc9kj1762292167.png",
+        "localFile":  "david-moses.png",
+        "description":  "Player artwork from TheSportsDB; catalog club slavia-praha",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "david-neres",
+        "query":  "David Neres",
+        "pageTitle":  "David Neres",
+        "pageUrl":  "https://www.thesportsdb.com/search/David%20Neres",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8i5j8e1762288449.png",
+        "localFile":  "david-neres.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "david-raum",
+        "query":  "David Raum",
+        "pageTitle":  "David Raum",
+        "pageUrl":  "https://www.thesportsdb.com/search/David%20Raum",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/wxbgdk1763561343.png",
+        "localFile":  "david-raum.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "david-raya",
+        "query":  "David Raya",
+        "pageTitle":  "David Raya",
+        "pageUrl":  "https://www.thesportsdb.com/search/David%20Raya",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/21rp2q1769331784.png",
+        "localFile":  "david-raya.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "david-zima",
+        "query":  "David Zima",
+        "pageTitle":  "David Zima",
+        "pageUrl":  "https://www.thesportsdb.com/search/David%20Zima",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ci8r011762291782.png",
+        "localFile":  "david-zima.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "davinson-sanchez",
+        "query":  "Davinson SГЎnchez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "dayot-upamecano",
+        "query":  "Dayot Upamecano",
+        "pageTitle":  "Dayot Upamecano",
+        "pageUrl":  "https://www.thesportsdb.com/search/Dayot%20Upamecano",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/a1hyfj1756416177.png",
+        "localFile":  "dayot-upamecano.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "declan-rice",
+        "query":  "Declan Rice",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "deniz-undav",
+        "query":  "Deniz Undav",
+        "pageTitle":  "Deniz Undav",
+        "pageUrl":  "https://www.thesportsdb.com/search/Deniz%20Undav",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/hcxx8s1763586492.png",
+        "localFile":  "deniz-undav.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "dennis-man",
+        "query":  "Dennis Man",
+        "pageTitle":  "Dennis Man",
+        "pageUrl":  "https://www.thesportsdb.com/search/Dennis%20Man",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/mgnf751762288836.png",
+        "localFile":  "dennis-man.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "dennis-seimen",
+        "query":  "Dennis Seimen",
+        "pageTitle":  "Dennis Seimen",
+        "pageUrl":  "https://www.thesportsdb.com/search/Dennis%20Seimen",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/urr8431773411956.png",
+        "localFile":  "dennis-seimen.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "desire-doue",
+        "query":  "DГ©sirГ© DouГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "devis-vasquez",
+        "query":  "Devis VГЎsquez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "diant-ramaj",
+        "query":  "Diant Ramaj",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "diego-conde",
+        "query":  "Diego Conde",
+        "pageTitle":  "Diego Conde",
+        "pageUrl":  "https://www.thesportsdb.com/search/Diego%20Conde",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/7q0ic61762888783.png",
+        "localFile":  "diego-conde.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "diego-llorente",
+        "query":  "Diego Llorente",
+        "pageTitle":  "Diego Llorente",
+        "pageUrl":  "https://www.thesportsdb.com/search/Diego%20Llorente",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/b3medr1762603041.png",
+        "localFile":  "diego-llorente.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "diego-simeone",
+        "query":  "Diego Simeone",
+        "pageTitle":  "Diego Simeone",
+        "pageUrl":  "https://www.thesportsdb.com/search/Diego%20Simeone",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3xg9gq1534530862.png",
+        "localFile":  "diego-simeone.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "dino-toppmoller",
+        "query":  "Dino ToppmГ¶ller",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "diogo-costa",
+        "query":  "Diogo Costa",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "diogo-dalot",
+        "query":  "Diogo Dalot",
+        "pageTitle":  "Diogo Dalot",
+        "pageUrl":  "https://www.thesportsdb.com/search/Diogo%20Dalot",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ow1nh31766826552.png",
+        "localFile":  "diogo-dalot.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "dominik-szoboszlai",
+        "query":  "Dominik Szoboszlai",
+        "pageTitle":  "Dominik Szoboszlai",
+        "pageUrl":  "https://www.thesportsdb.com/search/Dominik%20Szoboszlai",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/0n431m1757088795.png",
+        "localFile":  "dominik-szoboszlai.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "donyell-malen",
+        "query":  "Donyell Malen",
+        "pageTitle":  "Donyell Malen",
+        "pageUrl":  "https://www.thesportsdb.com/search/Donyell%20Malen",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/t2xdih1777708654.png",
+        "localFile":  "donyell-malen.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "dzenan-pejcinovic",
+        "query":  "Dzenan Pejcinovic",
+        "pageTitle":  "Dzenan Pejcinovic",
+        "pageUrl":  "https://www.thesportsdb.com/search/Dzenan%20Pejcinovic",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5nzpym1763669520.png",
+        "localFile":  "dzenan-pejcinovic.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "eberechi-eze",
+        "query":  "Eberechi Eze",
+        "pageTitle":  "Eberechi Eze",
+        "pageUrl":  "https://www.thesportsdb.com/search/Eberechi%20Eze",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jcabmd1769330240.png",
+        "localFile":  "eberechi-eze.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "eduardo-quaresma",
+        "query":  "Eduardo Quaresma",
+        "pageTitle":  "Eduardo Quaresma",
+        "pageUrl":  "https://www.thesportsdb.com/search/Eduardo%20Quaresma",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/cj5ovd1680034400.png",
+        "localFile":  "eduardo-quaresma.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "el-chadaille-bitshiabu",
+        "query":  "El Chadaille Bitshiabu",
+        "pageTitle":  "El Chadaille Bitshiabu",
+        "pageUrl":  "https://www.thesportsdb.com/search/El%20Chadaille%20Bitshiabu",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/usty7f1763561053.png",
+        "localFile":  "el-chadaille-bitshiabu.png",
+        "description":  "Player artwork from TheSportsDB; catalog club rb-leipzig",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "elliot-anderson",
+        "query":  "Elliot Anderson",
+        "pageTitle":  "Elliot Anderson",
+        "pageUrl":  "https://www.thesportsdb.com/search/Elliot%20Anderson",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rhm8q21757162869.png",
+        "localFile":  "elliot-anderson.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "emil-audero",
+        "query":  "Emil Audero",
+        "pageTitle":  "Emil Audero",
+        "pageUrl":  "https://www.thesportsdb.com/search/Emil%20Audero",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4at7s91758885959.png",
+        "localFile":  "emil-audero.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "emiliano-buendia",
+        "query":  "Emiliano BuendГ­a",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "emiliano-martinez",
+        "query":  "Emiliano MartГ­nez",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "enzo-maresca",
+        "query":  "Enzo Maresca",
+        "pageTitle":  "Enzo Maresca",
+        "pageUrl":  "https://www.thesportsdb.com/search/Enzo%20Maresca",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/gclale1689775058.jpg",
+        "localFile":  "enzo-maresca.jpg",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "eric-garcia",
+        "query":  "Eric GarcГ­a",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "erling-haaland",
+        "query":  "Erling Haaland",
+        "pageTitle":  "Erling Haaland",
+        "pageUrl":  "https://www.thesportsdb.com/search/Erling%20Haaland",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/un3jr11769182465.png",
+        "localFile":  "erling-haaland.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ermedin-demirovic",
+        "query":  "Ermedin Demirovic",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "esmir-bajraktarevic",
+        "query":  "Esmir Bajraktarevic",
+        "pageTitle":  "Esmir Bajraktarević",
+        "pageUrl":  "https://www.thesportsdb.com/search/Esmir%20Bajraktarevi%C4%87",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/896xbs1764594499.png",
+        "localFile":  "esmir-bajraktarevic.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ethan-mbappe",
+        "query":  "Ethan MbappГ©",
+        "pageTitle":  "Kylian MbappГ©",
+        "pageUrl":  "https://en.wikipedia.org/?curid=48711857",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/9/95/Kylian_Mbappe_France_v_Senegal_16_June_2026-391_%28cropped%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "ethan-mbappe.jpg",
+        "description":  "French association football player (born 1998)",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "evan-ndicka",
+        "query":  "Evan Ndicka",
+        "pageTitle":  "Evan Ndicka",
+        "pageUrl":  "https://www.thesportsdb.com/search/Evan%20Ndicka",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8ark361758816299.png",
+        "localFile":  "evan-ndicka.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "evann-guessand",
+        "query":  "Evann Guessand",
+        "pageTitle":  "Evann Guessand",
+        "pageUrl":  "https://www.thesportsdb.com/search/Evann%20Guessand",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/x99loi1772141649.png",
+        "localFile":  "evann-guessand.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ezri-konsa",
+        "query":  "Ezri Konsa",
+        "pageTitle":  "Ezri Konsa",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ezri%20Konsa",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rnu4al1756984921.png",
+        "localFile":  "ezri-konsa.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "fabian-bredlow",
+        "query":  "Fabian Bredlow",
+        "pageTitle":  "Fabian Bredlow",
+        "pageUrl":  "https://www.thesportsdb.com/search/Fabian%20Bredlow",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/b2dgsk1763586075.png",
+        "localFile":  "fabian-bredlow.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "fabian-ruiz",
+        "query":  "FabiГЎn Ruiz",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "fabio-silva",
+        "query":  "FГЎbio Silva",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "facundo-bernal",
+        "query":  "Facundo Bernal",
+        "pageTitle":  "Facundo Bernal",
+        "pageUrl":  "https://www.thesportsdb.com/search/Facundo%20Bernal",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/j6adlh1750614219.png",
+        "localFile":  "facundo-bernal.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "federico-dimarco",
+        "query":  "Federico Dimarco",
+        "pageTitle":  "Federico Dimarco",
+        "pageUrl":  "https://www.thesportsdb.com/search/Federico%20Dimarco",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/0rhwx41759408849.png",
+        "localFile":  "federico-dimarco.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "felix-correia",
+        "query":  "FГ©lix Correia",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "felix-lemarechal",
+        "query":  "FГ©lix LemarГ©chal",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "felix-nmecha",
+        "query":  "Felix Nmecha",
+        "pageTitle":  "Felix Nmecha",
+        "pageUrl":  "https://www.thesportsdb.com/search/Felix%20Nmecha",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/g7bqrz1756326448.png",
+        "localFile":  "felix-nmecha.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "fermin-lopez",
+        "query":  "FermГ­n LГіpez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ferran-torres",
+        "query":  "Ferran Torres",
+        "pageTitle":  "Ferran Torres",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ferran%20Torres",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/feey201726510461.png",
+        "localFile":  "ferran-torres.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "feyenoord-team-logo",
+        "query":  "Feyenoord",
+        "pageTitle":  "Feyenoord",
+        "pageUrl":  "https://www.thesportsdb.com/team/133758",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/uturtx1473534803.png",
+        "localFile":  "feyenoord-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "finn-jeltsch",
+        "query":  "Finn Jeltsch",
+        "pageTitle":  "Finn Jeltsch",
+        "pageUrl":  "https://www.thesportsdb.com/search/Finn%20Jeltsch",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/s1hwx41763586265.png",
+        "localFile":  "finn-jeltsch.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "florian-thauvin",
+        "query":  "Florian Thauvin",
+        "pageTitle":  "Florian Thauvin",
+        "pageUrl":  "https://www.thesportsdb.com/search/Florian%20Thauvin",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/r1e4vt1766006281.png",
+        "localFile":  "florian-thauvin.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "florian-wirtz",
+        "query":  "Florian Wirtz",
+        "pageTitle":  "Florian Wirtz",
+        "pageUrl":  "https://www.thesportsdb.com/search/Florian%20Wirtz",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8t6bzo1757088899.png",
+        "localFile":  "florian-wirtz.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "fotis-ioannidis",
+        "query":  "Fotis Ioannidis",
+        "pageTitle":  "Fotis Ioannidis",
+        "pageUrl":  "https://www.thesportsdb.com/search/Fotis%20Ioannidis",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/x1wub91762290869.png",
+        "localFile":  "fotis-ioannidis.png",
+        "description":  "Player artwork from TheSportsDB; catalog club sporting",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "francesco-farioli",
+        "query":  "Francesco Farioli",
+        "pageTitle":  "Francesco Farioli",
+        "pageUrl":  "https://www.thesportsdb.com/search/Francesco%20Farioli",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/sr90xq1722966593.jpg",
+        "localFile":  "francesco-farioli.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "francisco-moura",
+        "query":  "Francisco Moura",
+        "pageTitle":  "Francisco Moura",
+        "pageUrl":  "https://www.thesportsdb.com/search/Francisco%20Moura",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jqerh71750440732.png",
+        "localFile":  "francisco-moura.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "fran-garcia",
+        "query":  "Fran GarcГ­a",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "frank-anguissa",
+        "query":  "Frank Anguissa",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "freddie-potts",
+        "query":  "Freddie Potts",
+        "pageTitle":  "Freddie Potts",
+        "pageUrl":  "https://www.thesportsdb.com/search/Freddie%20Potts",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/7mnvq31772133690.png",
+        "localFile":  "freddie-potts.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "frenkie-de-jong",
+        "query":  "Frenkie de Jong",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "gabriel",
+        "query":  "Gabriel",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "gabriel-martinelli",
+        "query":  "Gabriel Martinelli",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "gabriel-sara",
+        "query":  "Gabriel Sara",
+        "pageTitle":  "Gabriel Sara",
+        "pageUrl":  "https://www.thesportsdb.com/search/Gabriel%20Sara",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rwwlzp1769177840.png",
+        "localFile":  "gabriel-sara.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "gabri-veiga",
+        "query":  "Gabri Veiga",
+        "pageTitle":  "Gabri Veiga",
+        "pageUrl":  "https://www.thesportsdb.com/search/Gabri%20Veiga",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/sfrp5w1750441360.png",
+        "localFile":  "gabri-veiga.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "galatasaray-team-logo",
+        "query":  "Galatasaray",
+        "pageTitle":  "Galatasaray",
+        "pageUrl":  "https://www.thesportsdb.com/team/133804",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/io7jk21767941298.png",
+        "localFile":  "galatasaray-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "geny-catamo",
+        "query":  "Geny Catamo",
+        "pageTitle":  "Beto (footballer, born 1998)",
+        "pageUrl":  "https://en.wikipedia.org/?curid=61485478",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/1/1c/Fulham_v_Everton_10052025_%287%29_%28Beto%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "geny-catamo.jpg",
+        "description":  "Portuguese association football player",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "georges-mikautadze",
+        "query":  "Georges Mikautadze",
+        "pageTitle":  "Georges Mikautadze",
+        "pageUrl":  "https://www.thesportsdb.com/search/Georges%20Mikautadze",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ytdm1g1762888910.png",
+        "localFile":  "georges-mikautadze.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "gerard-martin",
+        "query":  "Gerard MartГ­n",
+        "localFile":  "gerard-martin.jpg",
+        "status":  "cached"
+    },
+    {
+        "key":  "gianluca-mancini",
+        "query":  "Gianluca Mancini",
+        "pageTitle":  "Gianluca Mancini",
+        "pageUrl":  "https://www.thesportsdb.com/search/Gianluca%20Mancini",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/tnamt91758815939.png",
+        "localFile":  "gianluca-mancini.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "gianluigi-donnarumma",
+        "query":  "Gianluigi Donnarumma",
+        "pageTitle":  "Gianluigi Donnarumma",
+        "pageUrl":  "https://www.thesportsdb.com/search/Gianluigi%20Donnarumma",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jyx9bq1769182577.png",
+        "localFile":  "gianluigi-donnarumma.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "gian-piero-gasperini",
+        "query":  "Gian Piero Gasperini",
+        "pageTitle":  "Gian Piero Gasperini",
+        "pageUrl":  "https://www.thesportsdb.com/search/Gian%20Piero%20Gasperini",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/1aspvv1598890523.png",
+        "localFile":  "gian-piero-gasperini.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "gijs-smal",
+        "query":  "Gijs Smal",
+        "pageTitle":  "Gijs Smal",
+        "pageUrl":  "https://www.thesportsdb.com/search/Gijs%20Smal",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gjl7gb1758188742.png",
+        "localFile":  "gijs-smal.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "giorgi-mamardashvili",
+        "query":  "Giorgi Mamardashvili",
+        "pageTitle":  "Giorgi Mamardashvili",
+        "pageUrl":  "https://www.thesportsdb.com/search/Giorgi%20Mamardashvili",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3yoja81757088527.png",
+        "localFile":  "giorgi-mamardashvili.png",
+        "description":  "Player artwork from TheSportsDB; catalog club liverpool",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "giovani-lo-celso",
+        "query":  "Giovani Lo Celso",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "giovanni-di-lorenzo",
+        "query":  "Giovanni Di Lorenzo",
+        "pageTitle":  "Giovanni Di Lorenzo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Giovanni%20Di%20Lorenzo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/s9kuam1762288353.png",
+        "localFile":  "giovanni-di-lorenzo.png",
+        "description":  "Player artwork from TheSportsDB; catalog club napoli",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "giovanni-leoni",
+        "query":  "Giovanni Leoni",
+        "pageTitle":  "Giovanni Leoni",
+        "pageUrl":  "https://www.thesportsdb.com/search/Giovanni%20Leoni",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8aws9t1766829004.png",
+        "localFile":  "giovanni-leoni.png",
+        "description":  "Player artwork from TheSportsDB; catalog club liverpool",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "giovanni-van-bronckhorst",
+        "query":  "Giovanni van Bronckhorst",
+        "pageTitle":  "Giovanni van Bronckhorst",
+        "pageUrl":  "https://www.thesportsdb.com/search/Giovanni%20van%20Bronckhorst",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/zw4zfy1752169553.png",
+        "localFile":  "giovanni-van-bronckhorst.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "giuliano-simeone",
+        "query":  "Giuliano Simeone",
+        "pageTitle":  "Giuliano Simeone",
+        "pageUrl":  "https://www.thesportsdb.com/search/Giuliano%20Simeone",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/j97npy1762288635.png",
+        "localFile":  "giuliano-simeone.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "givairo-read",
+        "query":  "Givairo Read",
+        "pageTitle":  "Givairo Read",
+        "pageUrl":  "https://www.thesportsdb.com/search/Givairo%20Read",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/o6773q1758187563.png",
+        "localFile":  "givairo-read.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "gjivai-zechiel",
+        "query":  "Gjivai ZechiГ«l",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "goncalo-borges",
+        "query":  "GonГ§alo Borges",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "goncalo-inacio",
+        "query":  "GonГ§alo InГЎcio",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "gregor-kobel",
+        "query":  "Gregor Kobel",
+        "pageTitle":  "Gregor Kobel",
+        "pageUrl":  "https://www.thesportsdb.com/search/Gregor%20Kobel",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/vri4zw1756326279.png",
+        "localFile":  "gregor-kobel.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "guus-til",
+        "query":  "Guus Til",
+        "pageTitle":  "Guus Til",
+        "pageUrl":  "https://www.thesportsdb.com/search/Guus%20Til",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/y654101764609008.png",
+        "localFile":  "guus-til.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "hakon-arnar-haraldsson",
+        "query":  "HГЎkon Arnar Haraldsson",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "hamza-igamane",
+        "query":  "Hamza Igamane",
+        "pageTitle":  "Hamza Igamane",
+        "pageUrl":  "https://www.thesportsdb.com/search/Hamza%20Igamane",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/s2bjyy1766077535.png",
+        "localFile":  "hamza-igamane.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "han-beom-lee",
+        "query":  "Han-beom Lee",
+        "pageTitle":  "Han-beom Lee",
+        "pageUrl":  "https://www.thesportsdb.com/search/Han-beom%20Lee",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/mzl0v11765385562.png",
+        "localFile":  "han-beom-lee.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "hansi-flick",
+        "query":  "Hansi Flick",
+        "localFile":  "hansi-flick.jpg",
+        "status":  "cached"
+    },
+    {
+        "key":  "hans-vanaken",
+        "query":  "Hans Vanaken",
+        "pageTitle":  "Hans Vanaken",
+        "pageUrl":  "https://www.thesportsdb.com/search/Hans%20Vanaken",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/r681jn1767640917.png",
+        "localFile":  "hans-vanaken.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "harry-kane",
+        "query":  "Harry Kane",
+        "pageTitle":  "Harry Kane",
+        "pageUrl":  "https://www.thesportsdb.com/search/Harry%20Kane",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/j4ouvd1756408895.png",
+        "localFile":  "harry-kane.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "hector-fort",
+        "query":  "HГ©ctor Fort",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "hugo-ekitike",
+        "query":  "Hugo EkitikГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "hugo-siquet",
+        "query":  "Hugo Siquet",
+        "pageTitle":  "Hugo Siquet",
+        "pageUrl":  "https://www.thesportsdb.com/search/Hugo%20Siquet",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/git3px1767640823.png",
+        "localFile":  "hugo-siquet.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "hugo-vetlesen",
+        "query":  "Hugo Vetlesen",
+        "pageTitle":  "Hugo Vetlesen",
+        "pageUrl":  "https://www.thesportsdb.com/search/Hugo%20Vetlesen",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/zon1cj1767640953.png",
+        "localFile":  "hugo-vetlesen.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ian-maatsen",
+        "query":  "Ian Maatsen",
+        "pageTitle":  "Ian Maatsen",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ian%20Maatsen",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/9cu0ow1725359392.png",
+        "localFile":  "ian-maatsen.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ibrahima-ba",
+        "query":  "Ibrahima Ba",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "igoh-ogbu",
+        "query":  "Igoh Ogbu",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "ilias-akhomach",
+        "query":  "Ilias Akhomach",
+        "pageTitle":  "Ilias Akhomach",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ilias%20Akhomach",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ngqrqj1762888704.png",
+        "localFile":  "ilias-akhomach.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "illan-meslier",
+        "query":  "Illan Meslier",
+        "pageTitle":  "Illan Meslier",
+        "pageUrl":  "https://www.thesportsdb.com/search/Illan%20Meslier",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/qw61t91757078451.png",
+        "localFile":  "illan-meslier.png",
+        "description":  "Player artwork from TheSportsDB; catalog club arsenal",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ilya-zabarnyi",
+        "query":  "Ilya Zabarnyi",
+        "pageTitle":  "Ilya Zabarnyi",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ilya%20Zabarnyi",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/p0mun41766335563.png",
+        "localFile":  "ilya-zabarnyi.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "inigo-perez",
+        "query":  "IГ±igo PГ©rez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "inter-team-logo",
+        "query":  "Inter Milan",
+        "pageTitle":  "Inter Milan",
+        "pageUrl":  "https://en.wikipedia.org/?curid=15116",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "inter-team-logo.svg",
+        "description":  "association football club based in Milan, Lombardy, Italy",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "isaac-cossier",
+        "query":  "Isaac Cossier",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ismaelo-ganiou",
+        "query":  "IsmaГ«lo Ganiou",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ismael-saibari",
+        "query":  "Ismael Saibari",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "ismail-jakobs",
+        "query":  "Ismail Jakobs",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "issa-doumbia",
+        "query":  "Issa Doumbia",
+        "pageTitle":  "Issa Doumbia",
+        "pageUrl":  "https://www.thesportsdb.com/search/Issa%20Doumbia",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/2xp31t1741955337.jpg",
+        "localFile":  "issa-doumbia.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club sporting",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ivan-fresneda",
+        "query":  "IvГЎn Fresneda",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ivan-leko",
+        "query":  "Ivan Leko",
+        "pageTitle":  "Ivan Leko",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ivan%20Leko",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/zc0jm91767625002.jpg",
+        "localFile":  "ivan-leko.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ivan-provedel",
+        "query":  "Ivan Provedel",
+        "pageTitle":  "Ivan Provedel",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ivan%20Provedel",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3skyav1764242674.png",
+        "localFile":  "ivan-provedel.png",
+        "description":  "Player artwork from TheSportsDB; catalog club inter",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jacobo-ramon",
+        "query":  "Jacobo RamГіn",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "jakub-kiwior",
+        "query":  "Jakub Kiwior",
+        "pageTitle":  "Jakub Kiwior",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jakub%20Kiwior",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/s9vp9d1694204099.png",
+        "localFile":  "jakub-kiwior.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jakub-markovic",
+        "query":  "Jakub Markovic",
+        "pageTitle":  "Jakub Markovič",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jakub%20Markovi%C4%8D",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/xfp62x1762292009.png",
+        "localFile":  "jakub-markovic.png",
+        "description":  "Player artwork from TheSportsDB; catalog club slavia-praha",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jakub-moder",
+        "query":  "Jakub Moder",
+        "pageTitle":  "Jakub Moder",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jakub%20Moder",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/v9fk7c1758187336.png",
+        "localFile":  "jakub-moder.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jamal-musiala",
+        "query":  "Jamal Musiala",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "jamie-leweling",
+        "query":  "Jamie Leweling",
+        "pageTitle":  "Jamie Leweling",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jamie%20Leweling",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/xnk4yp1763586329.png",
+        "localFile":  "jamie-leweling.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jan-bednarek",
+        "query":  "Jan Bednarek",
+        "pageTitle":  "Jan Bednarek",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jan%20Bednarek",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4kcmv01725548431.png",
+        "localFile":  "jan-bednarek.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jankat-yilmaz",
+        "query":  "Jankat YД±lmaz",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "jan-oblak",
+        "query":  "Jan Oblak",
+        "pageTitle":  "Jan Oblak",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jan%20Oblak",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/akfmb31762287556.png",
+        "localFile":  "jan-oblak.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jan-virgili",
+        "query":  "Jan Virgili",
+        "pageTitle":  "Jan Virgili",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jan%20Virgili",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/1iflze1762524616.png",
+        "localFile":  "jan-virgili.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jan-ziolkowski",
+        "query":  "Jan Ziolkowski",
+        "pageTitle":  "Jan Ziolkowski",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jan%20Ziolkowski",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4wjqvf1764103153.png",
+        "localFile":  "jan-ziolkowski.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jayden-addai",
+        "query":  "Jayden Addai",
+        "pageTitle":  "Jayden Addai",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jayden%20Addai",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/winzss1764278091.png",
+        "localFile":  "jayden-addai.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jean-butez",
+        "query":  "Jean Butez",
+        "pageTitle":  "Jean Butez",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jean%20Butez",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/eowrvr1764278140.png",
+        "localFile":  "jean-butez.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jeff-chabot",
+        "query":  "Jeff Chabot",
+        "pageTitle":  "Jeff Chabot",
+        "pageUrl":  "https://en.wikipedia.org/?curid=55287475",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/4/45/Jeff_Chabot_%282018%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "jeff-chabot.jpg",
+        "description":  "German association football player (born 1998)",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jerdy-schouten",
+        "query":  "Jerdy Schouten",
+        "pageTitle":  "Jerdy Schouten",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jerdy%20Schouten",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/wjok7s1764608972.png",
+        "localFile":  "jerdy-schouten.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jeremie-frimpong",
+        "query":  "Jeremie Frimpong",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "jeremy-doku",
+        "query":  "JГ©rГ©my Doku",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "jeremy-jacquet",
+        "query":  "JГ©rГ©my Jacquet",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "jesus-rodriguez",
+        "query":  "JesГєs RodrГ­guez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "jindrich-trpisovsky",
+        "query":  "Jindrich Trpisovsky",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "joane-gadou",
+        "query":  "Joane Gadou",
+        "pageTitle":  "Joane Gadou",
+        "pageUrl":  "https://www.thesportsdb.com/search/Joane%20Gadou",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rps4361769721996.png",
+        "localFile":  "joane-gadou.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "joan-garcia",
+        "query":  "Joan GarcГ­a",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "joao-afonso",
+        "query":  "JoГЈo Afonso",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "joao-gomes",
+        "query":  "JoГЈo Gomes",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "joao-neves",
+        "query":  "JoГЈo Neves",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "joao-simoes",
+        "query":  "JoГЈo SimГµes",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "joao-virginia",
+        "query":  "JoГЈo VirgГ­nia",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "joaquin-seys",
+        "query":  "Joaquin Seys",
+        "pageTitle":  "Joaquin Seys",
+        "pageUrl":  "https://www.thesportsdb.com/search/Joaquin%20Seys",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/34zoma1767634511.png",
+        "localFile":  "joaquin-seys.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jobe-bellingham",
+        "query":  "Jobe Bellingham",
+        "localFile":  "jobe-bellingham.jpg",
+        "status":  "cached"
+    },
+    {
+        "key":  "joel-ordonez",
+        "query":  "Joel OrdГіГ±ez",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "joey-veerman",
+        "query":  "Joey Veerman",
+        "pageTitle":  "Joey Veerman",
+        "pageUrl":  "https://www.thesportsdb.com/search/Joey%20Veerman",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gktpip1764609026.png",
+        "localFile":  "joey-veerman.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "johan-bakayoko",
+        "query":  "Johan Bakayoko",
+        "pageTitle":  "Johan Bakayoko",
+        "pageUrl":  "https://www.thesportsdb.com/search/Johan%20Bakayoko",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/47l15r1763560990.png",
+        "localFile":  "johan-bakayoko.png",
+        "description":  "Player artwork from TheSportsDB; catalog club rb-leipzig",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "johan-manzambi",
+        "query":  "Johan Manzambi",
+        "status":  "missing"
+    },
+    {
+        "key":  "johnny-cardoso",
+        "query":  "Johnny Cardoso",
+        "pageTitle":  "Johnny Cardoso",
+        "pageUrl":  "https://www.thesportsdb.com/search/Johnny%20Cardoso",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ho9k5z1762288241.png",
+        "localFile":  "johnny-cardoso.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "john-stones",
+        "query":  "John Stones",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "jonas-urbig",
+        "query":  "Jonas Urbig",
+        "pageTitle":  "Jonas Urbig",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jonas%20Urbig",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/tulqq91756408991.png",
+        "localFile":  "jonas-urbig.png",
+        "description":  "Player artwork from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jonathan-tah",
+        "query":  "Jonathan Tah",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "jordan-bos",
+        "query":  "Jordan Bos",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "jorne-spileers",
+        "query":  "Jorne Spileers",
+        "pageTitle":  "Jorne Spileers",
+        "pageUrl":  "https://www.thesportsdb.com/search/Jorne%20Spileers",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/6id8rd1767640841.png",
+        "localFile":  "jorne-spileers.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "josep-martinez",
+        "query":  "Josep MartГ­nez",
+        "pageTitle":  "Josep Samitier",
+        "pageUrl":  "https://en.wikipedia.org/?curid=3543342",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/8/86/Josep_Samitier.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "josep-martinez.jpg",
+        "description":  "Spanish football player and manager (1902вЂ“1972)",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "josha-vagnoman",
+        "query":  "Josha Vagnoman",
+        "pageTitle":  "Josha Vagnoman",
+        "pageUrl":  "https://www.thesportsdb.com/search/Josha%20Vagnoman",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/imqnl11763586510.png",
+        "localFile":  "josha-vagnoman.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "josip-stanisic",
+        "query":  "Josip Stanisic",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "josko-gvardiol",
+        "query":  "Josko Gvardiol",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "juan-musso",
+        "query":  "Juan Musso",
+        "pageTitle":  "Juan Musso",
+        "pageUrl":  "https://www.thesportsdb.com/search/Juan%20Musso",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/401mle1762287491.png",
+        "localFile":  "juan-musso.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jules-kounde",
+        "query":  "Jules KoundГ©",
+        "localFile":  "jules-kounde.jpg",
+        "status":  "cached"
+    },
+    {
+        "key":  "julian-alvarez",
+        "query":  "JuliГЎn Alvarez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "julian-ryerson",
+        "query":  "Julian Ryerson",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "junior-firpo",
+        "query":  "Junior Firpo",
+        "pageTitle":  "Junior Firpo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Junior%20Firpo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gj251x1762602955.png",
+        "localFile":  "junior-firpo.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "jurrien-timber",
+        "query":  "JurriГ«n Timber",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "kai-havertz",
+        "query":  "Kai Havertz",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "kaiki",
+        "query":  "Kaiki",
+        "pageTitle":  "Kaiki",
+        "pageUrl":  "https://www.thesportsdb.com/search/Kaiki",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/glj9od1767454348.png",
+        "localFile":  "kaiki.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "kang-in-lee",
+        "query":  "Kang-in Lee",
+        "pageTitle":  "Kang-in Lee",
+        "pageUrl":  "https://www.thesportsdb.com/search/Kang-in%20Lee",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3jhw2d1766335293.png",
+        "localFile":  "kang-in-lee.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "karim-adeyemi",
+        "query":  "Karim Adeyemi",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "karl-darlow",
+        "query":  "Karl Darlow",
+        "pageTitle":  "Karl Darlow",
+        "pageUrl":  "https://www.thesportsdb.com/search/Karl%20Darlow",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/j9t1rt1757080269.png",
+        "localFile":  "karl-darlow.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-united",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "khvicha-kvaratskhelia",
+        "query":  "Khvicha Kvaratskhelia",
+        "pageTitle":  "Khvicha Kvaratskhelia",
+        "pageUrl":  "https://www.thesportsdb.com/search/Khvicha%20Kvaratskhelia",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/n4iv5t1766335312.png",
+        "localFile":  "khvicha-kvaratskhelia.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "kiliann-sildillia",
+        "query":  "Kiliann Sildillia",
+        "pageTitle":  "Kiliann Sildillia",
+        "pageUrl":  "https://www.thesportsdb.com/search/Kiliann%20Sildillia",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/lf73f51764608992.png",
+        "localFile":  "kiliann-sildillia.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "kobbie-mainoo",
+        "query":  "Kobbie Mainoo",
+        "pageTitle":  "Kobbie Mainoo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Kobbie%20Mainoo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8qrveo1766826836.png",
+        "localFile":  "kobbie-mainoo.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-united",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "konrad-laimer",
+        "query":  "Konrad Laimer",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "konstantinos-karetsas",
+        "query":  "Konstantinos Karetsas",
+        "pageTitle":  "Konstantinos Karetsas",
+        "pageUrl":  "https://www.thesportsdb.com/search/Konstantinos%20Karetsas",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/kttsl71767641854.png",
+        "localFile":  "konstantinos-karetsas.png",
+        "description":  "Player artwork from TheSportsDB; catalog club borussia-dortmund",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "konstantinos-koulierakis",
+        "query":  "Konstantinos Koulierakis",
+        "pageTitle":  "Konstantinos Koulierakis",
+        "pageUrl":  "https://www.thesportsdb.com/search/Konstantinos%20Koulierakis",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/h9a8ov1763669363.png",
+        "localFile":  "konstantinos-koulierakis.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "kosta-nedeljkovic",
+        "query":  "Kosta Nedeljkovic",
+        "pageTitle":  "Kosta NedeljkoviД‡",
+        "pageUrl":  "https://en.wikipedia.org/?curid=74168244",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/d/d6/FC_Zenit_Saint_Petersburg_vs._Red_Star_Belgrade%2C_4_July_2023_%2845%29_%28cropped%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "kosta-nedeljkovic.jpg",
+        "description":  "Serbian association football player (2005-)",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "kyllian-antonio",
+        "query":  "Kyllian Antonio",
+        "pageTitle":  "Kyllian Antonio",
+        "pageUrl":  "https://www.thesportsdb.com/search/Kyllian%20Antonio",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/hcypvm1766004727.png",
+        "localFile":  "kyllian-antonio.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "kyriani-sabbe",
+        "query":  "Kyriani Sabbe",
+        "pageTitle":  "Kyriani Sabbe",
+        "pageUrl":  "https://www.thesportsdb.com/search/Kyriani%20Sabbe",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/sast6o1767634481.png",
+        "localFile":  "kyriani-sabbe.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lamare-bogarde",
+        "query":  "Lamare Bogarde",
+        "pageTitle":  "Lamare Bogarde",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lamare%20Bogarde",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/m7hi9k1725311106.png",
+        "localFile":  "lamare-bogarde.png",
+        "description":  "Player artwork from TheSportsDB; catalog club aston-villa",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lamine-yamal",
+        "query":  "Lamine Yamal",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "lautaro-martinez",
+        "query":  "Lautaro MartГ­nez",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "lennart-karl",
+        "query":  "Lennart Karl",
+        "pageTitle":  "Lennart Karl",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lennart%20Karl",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3w7etc1756408662.png",
+        "localFile":  "lennart-karl.png",
+        "description":  "Player artwork from TheSportsDB; catalog club bayern-munich",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lens-team-logo",
+        "query":  "Lens",
+        "pageTitle":  "Lens",
+        "pageUrl":  "https://www.thesportsdb.com/team/133822",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/3pxoum1598797195.png",
+        "localFile":  "lens-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "leny-yoro",
+        "query":  "Leny Yoro",
+        "pageTitle":  "Leny Yoro",
+        "pageUrl":  "https://www.thesportsdb.com/search/Leny%20Yoro",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/pn8gp91766827044.png",
+        "localFile":  "leny-yoro.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-united",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "leroy-sane",
+        "query":  "Leroy SanГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "lesley-ugochukwu",
+        "query":  "Lesley Ugochukwu",
+        "pageTitle":  "Lesley Ugochukwu",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lesley%20Ugochukwu",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/joik2s1757177541.png",
+        "localFile":  "lesley-ugochukwu.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "liam-bossin",
+        "query":  "Liam Bossin",
+        "pageTitle":  "Liam Bossin",
+        "pageUrl":  "https://www.thesportsdb.com/search/Liam%20Bossin",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/zdb87l1764360951.png",
+        "localFile":  "liam-bossin.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lille-team-logo",
+        "query":  "Lille",
+        "pageTitle":  "Lille",
+        "pageUrl":  "https://www.thesportsdb.com/team/151561",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/txcsg21741597962.png",
+        "localFile":  "lille-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lisandro-martinez",
+        "query":  "Lisandro MartГ­nez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "liverpool-team-logo",
+        "query":  "Liverpool",
+        "pageTitle":  "Liverpool",
+        "pageUrl":  "https://www.thesportsdb.com/team/133602",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/kfaher1737969724.png",
+        "localFile":  "liverpool-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "logan-costa",
+        "query":  "Logan Costa",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "lorenzo-lucca",
+        "query":  "Lorenzo Lucca",
+        "pageTitle":  "Lorenzo Lucca",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lorenzo%20Lucca",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5o32ei1764089547.png",
+        "localFile":  "lorenzo-lucca.png",
+        "description":  "Player artwork from TheSportsDB; catalog club napoli",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lorenzo-pellegrini",
+        "query":  "Lorenzo Pellegrini",
+        "pageTitle":  "Lorenzo Pellegrini",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lorenzo%20Pellegrini",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/wq1jr81758815397.png",
+        "localFile":  "lorenzo-pellegrini.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "luca-jaquez",
+        "query":  "Luca Jaquez",
+        "pageTitle":  "Luca Jaquez",
+        "pageUrl":  "https://www.thesportsdb.com/search/Luca%20Jaquez",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/tt71dl1763586249.png",
+        "localFile":  "luca-jaquez.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "luca-reggiani",
+        "query":  "Luca Reggiani",
+        "pageTitle":  "Luca Reggiani",
+        "pageUrl":  "https://www.thesportsdb.com/search/Luca%20Reggiani",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/6kn1261773670363.png",
+        "localFile":  "luca-reggiani.png",
+        "description":  "Player artwork from TheSportsDB; catalog club borussia-dortmund",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lucas-beraldo",
+        "query":  "Lucas Beraldo",
+        "pageTitle":  "Lucas Beraldo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lucas%20Beraldo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/v6nvhs1766334559.png",
+        "localFile":  "lucas-beraldo.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lucas-chevalier",
+        "query":  "Lucas Chevalier",
+        "pageTitle":  "Lucas Chevalier",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lucas%20Chevalier",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4fuexc1766334585.png",
+        "localFile":  "lucas-chevalier.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "lucas-da-cunha",
+        "query":  "Lucas Da Cunha",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "lucas-torreira",
+        "query":  "Lucas Torreira",
+        "pageTitle":  "Lucas Torreira",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lucas%20Torreira",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/123f851769178178.png",
+        "localFile":  "lucas-torreira.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "luciano-valente",
+        "query":  "Luciano Valente",
+        "pageTitle":  "Luciano Valente",
+        "pageUrl":  "https://www.thesportsdb.com/search/Luciano%20Valente",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8ceukg1764436990.png",
+        "localFile":  "luciano-valente.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "luis-diaz",
+        "query":  "Luis DГ­az",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "luis-enrique",
+        "query":  "Luis Enrique",
+        "pageTitle":  "Luis Enrique",
+        "pageUrl":  "https://www.thesportsdb.com/search/Luis%20Enrique",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ph0a3h1688640332.png",
+        "localFile":  "luis-enrique.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "luis-guilherme",
+        "query":  "LuГ­s Guilherme",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "luis-henrique",
+        "query":  "Luis Henrique",
+        "pageTitle":  "Luís Henrique",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lu%C3%ADs%20Henrique",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/nazanp1527521197.jpg",
+        "localFile":  "luis-henrique.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club inter",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "luis-suarez",
+        "query":  "Luis SuГЎrez",
+        "pageTitle":  "Luis SuГЎrez",
+        "pageUrl":  "https://en.wikipedia.org/?curid=7819615",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/f/f7/Luis_Su%C3%A1rez_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "luis-suarez.jpg",
+        "description":  "Uruguayan association football player",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "luiz-junior",
+        "query":  "Luiz JГєnior",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "lukas-provod",
+        "query":  "Lukas Provod",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "lutsharel-geertruida",
+        "query":  "Lutsharel Geertruida",
+        "pageTitle":  "Lutsharel Geertruida",
+        "pageUrl":  "https://www.thesportsdb.com/search/Lutsharel%20Geertruida",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/f72hv61762198555.png",
+        "localFile":  "lutsharel-geertruida.png",
+        "description":  "Player artwork from TheSportsDB; catalog club rb-leipzig",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "maarten-vandevoordt",
+        "query":  "Maarten Vandevoordt",
+        "pageTitle":  "Maarten Vandevoordt",
+        "pageUrl":  "https://www.thesportsdb.com/search/Maarten%20Vandevoordt",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/tgffgm1763561395.png",
+        "localFile":  "maarten-vandevoordt.png",
+        "description":  "Player artwork from TheSportsDB; catalog club rb-leipzig",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "maghnes-akliouche",
+        "query":  "Maghnes Akliouche",
+        "pageTitle":  "Maghnes Akliouche",
+        "pageUrl":  "https://www.thesportsdb.com/search/Maghnes%20Akliouche",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/2x2cfx1766237890.png",
+        "localFile":  "maghnes-akliouche.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "mamadou-diakhon",
+        "query":  "Mamadou Diakhon",
+        "pageTitle":  "Mamadou Diakhon",
+        "pageUrl":  "https://www.thesportsdb.com/search/Mamadou%20Diakhon",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/an9rvr1767634306.png",
+        "localFile":  "mamadou-diakhon.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "manchester-city-team-logo",
+        "query":  "Manchester City",
+        "pageTitle":  "Manchester City",
+        "pageUrl":  "https://www.thesportsdb.com/team/133613",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/vwpvry1467462651.png",
+        "localFile":  "manchester-city-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "manchester-united-team-logo",
+        "query":  "Manchester United",
+        "pageTitle":  "Manchester United",
+        "pageUrl":  "https://www.thesportsdb.com/team/133612",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/xzqdr11517660252.png",
+        "localFile":  "manchester-united-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "manuel-akanji",
+        "query":  "Manuel Akanji",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "manuel-neuer",
+        "query":  "Manuel Neuer",
+        "pageTitle":  "Manuel Neuer",
+        "pageUrl":  "https://www.thesportsdb.com/search/Manuel%20Neuer",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/udq0so1756416089.png",
+        "localFile":  "manuel-neuer.png",
+        "description":  "Player artwork from TheSportsDB; catalog club bayern-munich",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "manuel-pellegrini",
+        "query":  "Manuel Pellegrini",
+        "pageTitle":  "Manuel Pellegrini",
+        "pageUrl":  "https://www.thesportsdb.com/search/Manuel%20Pellegrini",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/0l2l4x1549370848.jpg",
+        "localFile":  "manuel-pellegrini.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "manuel-ugarte",
+        "query":  "Manuel Ugarte",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "manu-kone",
+        "query":  "Manu KonГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "marc-bernal",
+        "query":  "Marc Bernal",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "marcel-sabitzer",
+        "query":  "Marcel Sabitzer",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "marc-guehi",
+        "query":  "Marc GuГ©hi",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "marco-bizot",
+        "query":  "Marco Bizot",
+        "pageTitle":  "Marco Bizot",
+        "pageUrl":  "https://www.thesportsdb.com/search/Marco%20Bizot",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/26w3dr1756984606.png",
+        "localFile":  "marco-bizot.png",
+        "description":  "Player artwork from TheSportsDB; catalog club aston-villa",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "marcos-llorente",
+        "query":  "Marcos Llorente",
+        "pageTitle":  "Marcos Llorente",
+        "pageUrl":  "https://www.thesportsdb.com/search/Marcos%20Llorente",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/god7pd1762288454.png",
+        "localFile":  "marcos-llorente.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "marc-pubill",
+        "query":  "Marc Pubill",
+        "pageTitle":  "Marc Pubill",
+        "pageUrl":  "https://www.thesportsdb.com/search/Marc%20Pubill",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jf6st71762288533.png",
+        "localFile":  "marc-pubill.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "marcus-bettinelli",
+        "query":  "Marcus Bettinelli",
+        "pageTitle":  "Marcus Bettinelli",
+        "pageUrl":  "https://www.thesportsdb.com/search/Marcus%20Bettinelli",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/btq0zz1769183655.png",
+        "localFile":  "marcus-bettinelli.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-city",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "marcus-rashford",
+        "query":  "Marcus Rashford",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "marcus-thuram",
+        "query":  "Marcus Thuram",
+        "pageTitle":  "Marcus Thuram",
+        "pageUrl":  "https://www.thesportsdb.com/search/Marcus%20Thuram",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/aykui01759408989.png",
+        "localFile":  "marcus-thuram.png",
+        "description":  "Player artwork from TheSportsDB; catalog club inter",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "mario-lemina",
+        "query":  "Mario Lemina",
+        "pageTitle":  "Mario Lemina",
+        "pageUrl":  "https://www.thesportsdb.com/search/Mario%20Lemina",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/scl5lc1769177813.png",
+        "localFile":  "mario-lemina.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "marquinhos",
+        "query":  "Marquinhos",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "martim-fernandes",
+        "query":  "Martim Fernandes",
+        "pageTitle":  "Martim Fernandes",
+        "pageUrl":  "https://www.thesportsdb.com/search/Martim%20Fernandes",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rihdcv1750440579.png",
+        "localFile":  "martim-fernandes.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "martin-baturina",
+        "query":  "Martin Baturina",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "martin-demichelis",
+        "query":  "MartГ­n Demichelis",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "martin-odegaard",
+        "query":  "Martin Гdegaard",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "martin-zubimendi",
+        "query":  "MartГ­n Zubimendi",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "massimiliano-allegri",
+        "query":  "Massimiliano Allegri",
+        "pageTitle":  "Massimiliano Allegri",
+        "pageUrl":  "https://www.thesportsdb.com/search/Massimiliano%20Allegri",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/0s8se61717146488.png",
+        "localFile":  "massimiliano-allegri.png",
+        "description":  "Player artwork from TheSportsDB; catalog club napoli",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "matej-kovar",
+        "query":  "Matej Kovar",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "matheus-cunha",
+        "query":  "Matheus Cunha",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "matheus-nunes",
+        "query":  "Matheus Nunes",
+        "pageTitle":  "Matheus Nunes",
+        "pageUrl":  "https://www.thesportsdb.com/search/Matheus%20Nunes",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/qsv6us1757098631.png",
+        "localFile":  "matheus-nunes.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-city",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "mathias-olivera",
+        "query":  "MathГ­as Olivera",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "mathieu-gorgelin",
+        "query":  "Mathieu Gorgelin",
+        "pageTitle":  "Mathieu Gorgelin",
+        "pageUrl":  "https://www.thesportsdb.com/search/Mathieu%20Gorgelin",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/zsnfw31702297663.png",
+        "localFile":  "mathieu-gorgelin.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "mathis-albert",
+        "query":  "Mathis Albert",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "matias-fernandez-pardo",
+        "query":  "Matias Fernandez-Pardo",
+        "pageTitle":  "Matias Fernandez-Pardo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Matias%20Fernandez-Pardo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8vhxnr1766077473.png",
+        "localFile":  "matias-fernandez-pardo.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "matias-soule",
+        "query":  "MatГ­as SoulГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "matteo-ruggeri",
+        "query":  "Matteo Ruggeri",
+        "pageTitle":  "Matteo Ruggeri",
+        "pageUrl":  "https://www.thesportsdb.com/search/Matteo%20Ruggeri",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/a9q51s1762890169.png",
+        "localFile":  "matteo-ruggeri.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "matthieu-udol",
+        "query":  "Matthieu Udol",
+        "pageTitle":  "Matthieu Udol",
+        "pageUrl":  "https://www.thesportsdb.com/search/Matthieu%20Udol",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/q8zhfd1766006311.png",
+        "localFile":  "matthieu-udol.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "matthijs-de-ligt",
+        "query":  "Matthijs de Ligt",
+        "pageTitle":  "Matthijs de Ligt",
+        "pageUrl":  "https://www.thesportsdb.com/search/Matthijs%20de%20Ligt",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ag2gx31766826741.png",
+        "localFile":  "matthijs-de-ligt.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-united",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "matty-cash",
+        "query":  "Matty Cash",
+        "pageTitle":  "Matty Cash",
+        "pageUrl":  "https://www.thesportsdb.com/search/Matty%20Cash",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/on5cl81756984765.png",
+        "localFile":  "matty-cash.png",
+        "description":  "Player artwork from TheSportsDB; catalog club aston-villa",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "matvey-safonov",
+        "query":  "Matvey Safonov",
+        "pageTitle":  "Matvey Safonov",
+        "pageUrl":  "https://www.thesportsdb.com/search/Matvey%20Safonov",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/j9y7db1766335525.png",
+        "localFile":  "matvey-safonov.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "mauro-junior",
+        "query":  "Mauro JГєnior",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "maxence-caqueret",
+        "query":  "Maxence Caqueret",
+        "pageTitle":  "Maxence Caqueret",
+        "pageUrl":  "https://www.thesportsdb.com/search/Maxence%20Caqueret",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/1sm2uu1764278154.png",
+        "localFile":  "maxence-caqueret.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "maxi-araujo",
+        "query":  "Maxi AraГєjo",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "maxime-esteve",
+        "query":  "Maxime EstГЁve",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "maximilian-beier",
+        "query":  "Maximilian Beier",
+        "pageTitle":  "Maximilian Beier",
+        "pageUrl":  "https://www.thesportsdb.com/search/Maximilian%20Beier",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/bfzp1g1756325953.png",
+        "localFile":  "maximilian-beier.png",
+        "description":  "Player artwork from TheSportsDB; catalog club borussia-dortmund",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "maximilian-mittelstadt",
+        "query":  "Maximilian MittelstГ¤dt",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "maximo-perrone",
+        "query":  "MГЎximo Perrone",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "michael-carrick",
+        "query":  "Michael Carrick",
+        "pageTitle":  "Michael Carrick",
+        "pageUrl":  "https://www.thesportsdb.com/search/Michael%20Carrick",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4dr86w1731789002.png",
+        "localFile":  "michael-carrick.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-united",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "michael-cuisance",
+        "query":  "MichaГ«l Cuisance",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "michael-olise",
+        "query":  "Michael Olise",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "michal-sadilek",
+        "query":  "Michal SadГ­lek",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "michal-skoras",
+        "query":  "Michal Skoras",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "mika-marmol",
+        "query":  "Mika MГЎrmol",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "mikel-arteta",
+        "query":  "Mikel Arteta",
+        "pageTitle":  "Mikel Arteta",
+        "pageUrl":  "https://www.thesportsdb.com/search/Mikel%20Arteta",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/2ljkmz1586766347.png",
+        "localFile":  "mikel-arteta.png",
+        "description":  "Player artwork from TheSportsDB; catalog club arsenal",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "mile-svilar",
+        "query":  "Mile Svilar",
+        "pageTitle":  "Mile Svilar",
+        "pageUrl":  "https://www.thesportsdb.com/search/Mile%20Svilar",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5udtco1758815713.png",
+        "localFile":  "mile-svilar.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "milos-kerkez",
+        "query":  "Milos Kerkez",
+        "pageTitle":  "Milos Kerkez",
+        "pageUrl":  "https://www.thesportsdb.com/search/Milos%20Kerkez",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/otux671757089023.png",
+        "localFile":  "milos-kerkez.png",
+        "description":  "Player artwork from TheSportsDB; catalog club liverpool",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "modou-keba-cisse",
+        "query":  "Modou KГ©ba CissГ©",
+        "status":  "missing"
+    },
+    {
+        "key":  "mojmir-chytil",
+        "query":  "MojmГ­r Chytil",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "morten-hjulmand",
+        "query":  "Morten Hjulmand",
+        "pageTitle":  "Morten Hjulmand",
+        "pageUrl":  "https://en.wikipedia.org/?curid=58419899",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/6/64/MortenHjulmandSporting24.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "morten-hjulmand.jpg",
+        "description":  "Danish association football player (born 1999)",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "myles-lewis-skelly",
+        "query":  "Myles Lewis-Skelly",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "nabil-bentaleb",
+        "query":  "Nabil Bentaleb",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "nacho-ferri",
+        "query":  "Nacho Ferri",
+        "pageTitle":  "Nacho Ferri",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nacho%20Ferri",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rv8o4q1767097565.png",
+        "localFile":  "nacho-ferri.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "napoli-team-logo",
+        "query":  "Napoli",
+        "pageTitle":  "Napoli",
+        "pageUrl":  "https://www.thesportsdb.com/team/133670",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/l8qyxv1742982541.png",
+        "localFile":  "napoli-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "natan",
+        "query":  "Natan",
+        "pageTitle":  "Natan",
+        "pageUrl":  "https://www.thesportsdb.com/search/Natan",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gi059x1762602815.png",
+        "localFile":  "natan.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nathaniel-brown",
+        "query":  "Nathaniel Brown",
+        "pageTitle":  "Nathaniel Brown",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nathaniel%20Brown",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4a4ydy1762287286.png",
+        "localFile":  "nathaniel-brown.png",
+        "description":  "Player artwork from TheSportsDB; catalog club bayern-munich",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nathan-ngoy",
+        "query":  "Nathan Ngoy",
+        "pageTitle":  "Nathan Ngoy",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nathan%20Ngoy",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/dj91a01766077637.png",
+        "localFile":  "nathan-ngoy.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nazar-domchak",
+        "query":  "Nazar Domchak",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nehuen-perez",
+        "query":  "NehuГ©n PГ©rez",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "neil-el-aynaoui",
+        "query":  "Neil El Aynaoui",
+        "pageTitle":  "Neil El Aynaoui",
+        "pageUrl":  "https://www.thesportsdb.com/search/Neil%20El%20Aynaoui",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/wbm4lk1758815430.png",
+        "localFile":  "neil-el-aynaoui.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nelson-deossa",
+        "query":  "Nelson Deossa",
+        "pageTitle":  "Nelson Deossa",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nelson%20Deossa",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/vlvlt21762602938.png",
+        "localFile":  "nelson-deossa.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ngal-ayel-mukau",
+        "query":  "Ngal\u0027ayel Mukau",
+        "pageTitle":  "Ngal\u0027ayel Mukau",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ngal\u0027ayel%20Mukau",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/grieht1766077620.png",
+        "localFile":  "ngal-ayel-mukau.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "niccolo-pisilli",
+        "query":  "NiccolГІ Pisilli",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nick-olij",
+        "query":  "Nick Olij",
+        "pageTitle":  "Nick Olij",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nick%20Olij",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gqnf8g1764595128.png",
+        "localFile":  "nick-olij.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nicolas-kuhn",
+        "query":  "Nicolas KГјhn",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "nicolas-pepe",
+        "query":  "Nicolas PГ©pГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nicolas-seiwald",
+        "query":  "Nicolas Seiwald",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nicolo-barella",
+        "query":  "NicolГІ Barella",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nicolo-tresoldi",
+        "query":  "NicolГІ Tresoldi",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nico-o-reilly",
+        "query":  "Nico O\u0027Reilly",
+        "pageTitle":  "Nico O\u0027Reilly",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nico%20O\u0027Reilly",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/hoxsam1769182257.png",
+        "localFile":  "nico-o-reilly.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-city",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nico-paz",
+        "query":  "Nico Paz",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nico-schlotterbeck",
+        "query":  "Nico Schlotterbeck",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "nidal-celik",
+        "query":  "Nidal Celik",
+        "pageTitle":  "Nidal Čelik",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nidal%20%C4%8Celik",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/6gk0ur1779017519.png",
+        "localFile":  "nidal-celik.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "niko-kovac",
+        "query":  "Niko Kovac",
+        "pageTitle":  "Niko Kovač",
+        "pageUrl":  "https://www.thesportsdb.com/search/Niko%20Kova%C4%8D",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/vf2rm61610651813.jpg",
+        "localFile":  "niko-kovac.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club borussia-dortmund",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nikolas-nartey",
+        "query":  "Nikolas Nartey",
+        "pageTitle":  "Nikolas Nartey",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nikolas%20Nartey",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/meti721763586384.png",
+        "localFile":  "nikolas-nartey.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "noa-lang",
+        "query":  "Noa Lang",
+        "pageTitle":  "Noa Lang",
+        "pageUrl":  "https://www.thesportsdb.com/search/Noa%20Lang",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/xl1q291772105450.png",
+        "localFile":  "noa-lang.png",
+        "description":  "Player artwork from TheSportsDB; catalog club napoli",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "noni-madueke",
+        "query":  "Noni Madueke",
+        "pageTitle":  "Noni Madueke",
+        "pageUrl":  "https://www.thesportsdb.com/search/Noni%20Madueke",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/0x05ou1769330933.png",
+        "localFile":  "noni-madueke.png",
+        "description":  "Player artwork from TheSportsDB; catalog club arsenal",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nordin-jackers",
+        "query":  "Nordin Jackers",
+        "pageTitle":  "Nordin Jackers",
+        "pageUrl":  "https://www.thesportsdb.com/search/Nordin%20Jackers",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/sk1sae1767634333.png",
+        "localFile":  "nordin-jackers.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "nuno-mendes",
+        "query":  "Nuno Mendes",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "odsonne-edouard",
+        "query":  "Odsonne Г‰douard",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "okan-buruk",
+        "query":  "Okan Buruk",
+        "pageTitle":  "Okan Buruk",
+        "pageUrl":  "https://www.thesportsdb.com/search/Okan%20Buruk",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/oe7pbb1662473613.png",
+        "localFile":  "okan-buruk.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ollie-watkins",
+        "query":  "Ollie Watkins",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "omar-marmoush",
+        "query":  "Omar Marmoush",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "orjan-nyland",
+        "query":  "Гrjan Nyland",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "osame-sahraoui",
+        "query":  "Osame Sahraoui",
+        "pageTitle":  "Osame Sahraoui",
+        "pageUrl":  "https://www.thesportsdb.com/search/Osame%20Sahraoui",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ijzyjx1766077685.png",
+        "localFile":  "osame-sahraoui.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "oscar",
+        "query":  "Oscar",
+        "pageTitle":  "Oscar",
+        "pageUrl":  "https://www.thesportsdb.com/search/Oscar",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/wetmw11707938584.png",
+        "localFile":  "oscar.png",
+        "description":  "Player artwork from TheSportsDB; catalog club slavia-praha",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "oskar-pietuszewski",
+        "query":  "Oskar Pietuszewski",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ousmane-dembele",
+        "query":  "Ousmane DembГ©lГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "oussama-targhalline",
+        "query":  "Oussama Targhalline",
+        "pageTitle":  "Oussama Targhalline",
+        "pageUrl":  "https://www.thesportsdb.com/search/Oussama%20Targhalline",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rji6u01758188760.png",
+        "localFile":  "oussama-targhalline.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pablo-barrios",
+        "query":  "Pablo Barrios",
+        "pageTitle":  "Pablo Barrios",
+        "pageUrl":  "https://www.thesportsdb.com/search/Pablo%20Barrios",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/6h070j1762288225.png",
+        "localFile":  "pablo-barrios.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pablo-fornals",
+        "query":  "Pablo Fornals",
+        "pageTitle":  "Pablo Fornals",
+        "pageUrl":  "https://www.thesportsdb.com/search/Pablo%20Fornals",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/07ezrh1762602970.png",
+        "localFile":  "pablo-fornals.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pablo-garcia",
+        "query":  "Pablo GarcГ­a",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "pablo-rosario",
+        "query":  "Pablo Rosario",
+        "pageTitle":  "Pablo Rosario",
+        "pageUrl":  "https://www.thesportsdb.com/search/Pablo%20Rosario",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4ksqzj1700558601.png",
+        "localFile":  "pablo-rosario.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pape-gueye",
+        "query":  "Pape Gueye",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "paris-saint-germain-team-logo",
+        "query":  "Paris Saint-Germain FC",
+        "localFile":  "paris-saint-germain-team-logo.svg",
+        "status":  "cached"
+    },
+    {
+        "key":  "patrick-dorgu",
+        "query":  "Patrick Dorgu",
+        "pageTitle":  "Patrick Dorgu",
+        "pageUrl":  "https://www.thesportsdb.com/search/Patrick%20Dorgu",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3bm5kb1766826589.png",
+        "localFile":  "patrick-dorgu.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-united",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pau-cubarsi",
+        "query":  "Pau CubarsГ­",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "paulo-dybala",
+        "query":  "Paulo Dybala",
+        "pageTitle":  "Paulo Dybala",
+        "pageUrl":  "https://www.thesportsdb.com/search/Paulo%20Dybala",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/pjupvq1758815223.png",
+        "localFile":  "paulo-dybala.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "paul-wanner",
+        "query":  "Paul Wanner",
+        "pageTitle":  "Paul Wanner",
+        "pageUrl":  "https://www.thesportsdb.com/search/Paul%20Wanner",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rbijya1764608918.png",
+        "localFile":  "paul-wanner.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pau-navarro",
+        "query":  "Pau Navarro",
+        "pageTitle":  "Pau Navarro",
+        "pageUrl":  "https://www.thesportsdb.com/search/Pau%20Navarro",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jjod9r1762889004.png",
+        "localFile":  "pau-navarro.png",
+        "description":  "Player artwork from TheSportsDB; catalog club villarreal",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pau-torres",
+        "query":  "Pau Torres",
+        "pageTitle":  "Pau Torres",
+        "pageUrl":  "https://www.thesportsdb.com/search/Pau%20Torres",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/pxsy2h1756987313.png",
+        "localFile":  "pau-torres.png",
+        "description":  "Player artwork from TheSportsDB; catalog club aston-villa",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "pedri",
+        "query":  "Pedri",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "pedro-goncalves",
+        "query":  "Pedro GonГ§alves",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "pepe",
+        "query":  "PepГЄ",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "petar-sucic",
+        "query":  "Petar SuДЌiД‡",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "peter-bosz",
+        "query":  "Peter Bosz",
+        "pageTitle":  "Peter Bosz",
+        "pageUrl":  "https://www.thesportsdb.com/search/Peter%20Bosz",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/l2b5uv1658762316.jpg",
+        "localFile":  "peter-bosz.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "peter-gulacsi",
+        "query":  "PГ©ter GulГЎcsi",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "phil-foden",
+        "query":  "Phil Foden",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "piero-hincapie",
+        "query":  "Piero HincapiГ©",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "pio-esposito",
+        "query":  "Pio Esposito",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "porto-team-logo",
+        "query":  "FC Porto",
+        "pageTitle":  "FC Porto Juniors",
+        "pageUrl":  "https://www.thesportsdb.com/team/147944",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/w8yspj1705225875.png",
+        "localFile":  "porto-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "psv-team-logo",
+        "query":  "PSV Eindhoven",
+        "pageTitle":  "PSV Eindhoven",
+        "pageUrl":  "https://www.thesportsdb.com/team/133768",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/xfsz6i1721297428.png",
+        "localFile":  "psv-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rafa-marin",
+        "query":  "Rafa MarГ­n",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "ramon-hendriks",
+        "query":  "Ramon Hendriks",
+        "pageTitle":  "Ramon Hendriks",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ramon%20Hendriks",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/qafofe1763586234.png",
+        "localFile":  "ramon-hendriks.png",
+        "description":  "Player artwork from TheSportsDB; catalog club stuttgart",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "raphinha",
+        "query":  "Raphinha",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "rasmus-hojlund",
+        "query":  "Rasmus HГёjlund",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "rayan-cherki",
+        "query":  "Rayan Cherki",
+        "pageTitle":  "Rayan Cherki",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rayan%20Cherki",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/emcyjy1769182115.png",
+        "localFile":  "rayan-cherki.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-city",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rayan-fofana",
+        "query":  "Rayan Fofana",
+        "pageTitle":  "Rayan Fofana",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rayan%20Fofana",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gk598r1766005554.png",
+        "localFile":  "rayan-fofana.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rb-leipzig-team-logo",
+        "query":  "RB Leipzig",
+        "pageTitle":  "RB Leipzig",
+        "pageUrl":  "https://www.thesportsdb.com/team/134695",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/zjgapo1594244951.png",
+        "localFile":  "rb-leipzig-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "real-betis-team-logo",
+        "query":  "Real Betis",
+        "pageTitle":  "Real Betis",
+        "pageUrl":  "https://www.thesportsdb.com/team/133722",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/2oqulv1663245386.png",
+        "localFile":  "real-betis-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "renato-nhaga",
+        "query":  "Renato Nhaga",
+        "pageTitle":  "Renato Nhaga",
+        "pageUrl":  "https://www.thesportsdb.com/search/Renato%20Nhaga",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/qkfsp51780062813.png",
+        "localFile":  "renato-nhaga.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "renato-veiga",
+        "query":  "Renato Veiga",
+        "pageTitle":  "Renato Veiga",
+        "pageUrl":  "https://www.thesportsdb.com/search/Renato%20Veiga",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/rxefp81762889381.png",
+        "localFile":  "renato-veiga.png",
+        "description":  "Player artwork from TheSportsDB; catalog club villarreal",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ricardo-pepi",
+        "query":  "Ricardo Pepi",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "riccardo-calafiori",
+        "query":  "Riccardo Calafiori",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "rio-ngumoha",
+        "query":  "Rio Ngumoha",
+        "pageTitle":  "Rio Ngumoha",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rio%20Ngumoha",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ay5j761773955893.png",
+        "localFile":  "rio-ngumoha.png",
+        "description":  "Player artwork from TheSportsDB; catalog club liverpool",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "robinio-vaz",
+        "query":  "Robinio Vaz",
+        "pageTitle":  "Robinio Vaz",
+        "pageUrl":  "https://www.thesportsdb.com/search/Robinio%20Vaz",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5gjrgx1771676640.png",
+        "localFile":  "robinio-vaz.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "robin-le-normand",
+        "query":  "Robin Le Normand",
+        "pageTitle":  "Robin Le Normand",
+        "pageUrl":  "https://www.thesportsdb.com/search/Robin%20Le%20Normand",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ubsd6x1762288701.png",
+        "localFile":  "robin-le-normand.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "robin-risser",
+        "query":  "Robin Risser",
+        "pageTitle":  "Robin Risser",
+        "pageUrl":  "https://www.thesportsdb.com/search/Robin%20Risser",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/tqtcbn1766004778.png",
+        "localFile":  "robin-risser.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rodri",
+        "query":  "Rodri",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "rodrigo-mendoza",
+        "query":  "Rodrigo Mendoza",
+        "pageTitle":  "Rodrigo Mendoza",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rodrigo%20Mendoza",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/qxbxie1762371952.png",
+        "localFile":  "rodrigo-mendoza.png",
+        "description":  "Player artwork from TheSportsDB; catalog club atletico-madrid",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rodrigo-mora",
+        "query":  "Rodrigo Mora",
+        "pageTitle":  "Rodrigo Mora",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rodrigo%20Mora",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/t8dncf1750440274.png",
+        "localFile":  "rodrigo-mora.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rodrigo-riquelme",
+        "query":  "Rodrigo Riquelme",
+        "pageTitle":  "Rodrigo Riquelme",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rodrigo%20Riquelme",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ywns2y1762603075.png",
+        "localFile":  "rodrigo-riquelme.png",
+        "description":  "Player artwork from TheSportsDB; catalog club real-betis",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rodrigo-zalazar",
+        "query":  "Rodrigo Zalazar",
+        "pageTitle":  "Rodrigo Zalazar",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rodrigo%20Zalazar",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/0t6l6f1724524204.png",
+        "localFile":  "rodrigo-zalazar.png",
+        "description":  "Player artwork from TheSportsDB; catalog club sporting",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "roland-sallai",
+        "query":  "Roland Sallai",
+        "pageTitle":  "Roland Sallai",
+        "pageUrl":  "https://www.thesportsdb.com/search/Roland%20Sallai",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/h7ra051773916380.png",
+        "localFile":  "roland-sallai.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "romain-perraud",
+        "query":  "Romain Perraud",
+        "pageTitle":  "Romain Perraud",
+        "pageUrl":  "https://www.thesportsdb.com/search/Romain%20Perraud",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/i8bqez1766077669.png",
+        "localFile":  "romain-perraud.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "roma-team-logo",
+        "query":  "Roma",
+        "pageTitle":  "Roma",
+        "pageUrl":  "https://www.thesportsdb.com/team/133682",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/jwro2s1760820674.png",
+        "localFile":  "roma-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "romeo-vermant",
+        "query":  "Romeo Vermant",
+        "pageTitle":  "Romeo Vermant",
+        "pageUrl":  "https://www.thesportsdb.com/search/Romeo%20Vermant",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/h9lf251767640936.png",
+        "localFile":  "romeo-vermant.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "romulo",
+        "query":  "RГґmulo",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)"
+    },
+    {
+        "key":  "ronald-araujo",
+        "query":  "Ronald Araujo",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ruben-dias",
+        "query":  "RГєben Dias",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ruben-van-bommel",
+        "query":  "Ruben van Bommel",
+        "pageTitle":  "Ruben van Bommel",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ruben%20van%20Bommel",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5dpmqr1764594626.png",
+        "localFile":  "ruben-van-bommel.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "rui-borges",
+        "query":  "Rui Borges",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "rui-silva",
+        "query":  "Rui Silva",
+        "pageTitle":  "Rui Silva",
+        "pageUrl":  "https://www.thesportsdb.com/search/Rui%20Silva",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/30bu6h1762291097.png",
+        "localFile":  "rui-silva.png",
+        "description":  "Player artwork from TheSportsDB; catalog club sporting",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ryan-flamingo",
+        "query":  "Ryan Flamingo",
+        "pageTitle":  "Ryan Flamingo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Ryan%20Flamingo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jj3s441770198707.png",
+        "localFile":  "ryan-flamingo.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "ryan-gravenberch",
+        "query":  "Ryan Gravenberch",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "sam-beukema",
+        "query":  "Sam Beukema",
+        "pageTitle":  "Sam Beukema",
+        "pageUrl":  "https://www.thesportsdb.com/search/Sam%20Beukema",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/ohe2oz1764089427.png",
+        "localFile":  "sam-beukema.png",
+        "description":  "Player artwork from TheSportsDB; catalog club napoli",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "samson-baidoo",
+        "query":  "Samson Baidoo",
+        "pageTitle":  "Samson Baidoo",
+        "pageUrl":  "https://www.thesportsdb.com/search/Samson%20Baidoo",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/m41uua1766006836.png",
+        "localFile":  "samson-baidoo.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "samu-aghehowa",
+        "query":  "Samu Aghehowa",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "samuele-inacio",
+        "query":  "Samuele InГЎcio",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "santiago-castro",
+        "query":  "Santiago Castro",
+        "pageTitle":  "Santiago Castro",
+        "pageUrl":  "https://www.thesportsdb.com/search/Santiago%20Castro",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/mrbdis1758896882.png",
+        "localFile":  "santiago-castro.png",
+        "description":  "Player artwork from TheSportsDB; catalog club roma",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "santiago-mourino",
+        "query":  "Santiago MouriГ±o",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "santi-comesana",
+        "query":  "Santi ComesaГ±a",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "saud-abdulhamid",
+        "query":  "Saud Abdulhamid",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "savinho",
+        "query":  "Savinho",
+        "pageTitle":  "Savinho",
+        "pageUrl":  "https://www.thesportsdb.com/search/Savinho",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/khqgy21769183420.png",
+        "localFile":  "savinho.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-city",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "scott-mctominay",
+        "query":  "Scott McTominay",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "sebastian-hoeness",
+        "query":  "Sebastian HoeneГџ",
+        "pageTitle":  "Sebastian HoeneГџ",
+        "pageUrl":  "https://en.wikipedia.org/?curid=64658684",
+        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/1/12/Sebastian_hoeness.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=original",
+        "localFile":  "sebastian-hoeness.jpg",
+        "description":  "German footballer and manager",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "sem-steijn",
+        "query":  "Sem Steijn",
+        "pageTitle":  "Sem Steijn",
+        "pageUrl":  "https://www.thesportsdb.com/search/Sem%20Steijn",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/egxjz61758189381.png",
+        "localFile":  "sem-steijn.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "senne-lammens",
+        "query":  "Senne Lammens",
+        "pageTitle":  "Senne Lammens",
+        "pageUrl":  "https://www.thesportsdb.com/search/Senne%20Lammens",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/8xh9d61766826762.png",
+        "localFile":  "senne-lammens.png",
+        "description":  "Player artwork from TheSportsDB; catalog club manchester-united",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "senny-mayulu",
+        "query":  "Senny Mayulu",
+        "pageTitle":  "Senny Mayulu",
+        "pageUrl":  "https://www.thesportsdb.com/search/Senny%20Mayulu",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/5kz2aa1766335365.png",
+        "localFile":  "senny-mayulu.png",
+        "description":  "Player artwork from TheSportsDB; catalog club paris-saint-germain",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "serge-gnabry",
+        "query":  "Serge Gnabry",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "sergi-altimira",
+        "query":  "Sergi Altimira",
+        "pageTitle":  "Sergi Altimira",
+        "pageUrl":  "https://www.thesportsdb.com/search/Sergi%20Altimira",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/3mdhc41762602830.png",
+        "localFile":  "sergi-altimira.png",
+        "description":  "Player artwork from TheSportsDB; catalog club sporting",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "sergino-dest",
+        "query":  "SergiГ±o Dest",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "serhou-guirassy",
+        "query":  "Serhou Guirassy",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "slavia-praha-team-logo",
+        "query":  "Slavia Prague",
+        "pageTitle":  "Slavia Prague",
+        "pageUrl":  "https://www.thesportsdb.com/team/136036",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/l7kl4n1759252139.png",
+        "localFile":  "slavia-praha-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "sporting-team-logo",
+        "query":  "Sporting CP",
+        "pageTitle":  "Sporting CP",
+        "pageUrl":  "https://www.thesportsdb.com/team/135708",
+        "imageUrl":  "https://www.thesportsdb.com/images/media/team/badge/5hiuk71783137875.png",
+        "localFile":  "sporting-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "stanislav-lobotka",
+        "query":  "Stanislav Lobotka",
+        "pageTitle":  "Stanislav Lobotka",
+        "pageUrl":  "https://www.thesportsdb.com/search/Stanislav%20Lobotka",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/spo0qz1762288279.png",
+        "localFile":  "stanislav-lobotka.png",
+        "description":  "Player artwork from TheSportsDB; catalog club napoli",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "stefan-posch",
+        "query":  "Stefan Posch",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "stepan-chaloupek",
+        "query":  "Stepan Chaloupek",
+        "pageTitle":  "Štěpán Chaloupek",
+        "pageUrl":  "https://www.thesportsdb.com/search/%C5%A0t%C4%9Bp%C3%A1n%20Chaloupek",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/gbjykc1762291812.png",
+        "localFile":  "stepan-chaloupek.png",
+        "description":  "Player artwork from TheSportsDB; catalog club slavia-praha",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "stuttgart-team-logo",
+        "query":  "VfB Stuttgart",
+        "pageTitle":  "Stuttgart",
+        "pageUrl":  "https://www.thesportsdb.com/team/133660",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/yppyux1473454085.png",
+        "localFile":  "stuttgart-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "suleman-sani",
+        "query":  "Suleman Sani",
+        "status":  "missing"
+    },
+    {
+        "key":  "sven-mijnans",
+        "query":  "Sven Mijnans",
+        "pageTitle":  "Sven Mijnans",
+        "pageUrl":  "https://www.thesportsdb.com/search/Sven%20Mijnans",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/yzd6t91722969579.png",
+        "localFile":  "sven-mijnans.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "tajon-buchanan",
+        "query":  "Tajon Buchanan",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "tammy-abraham",
+        "query":  "Tammy Abraham",
+        "pageTitle":  "Tammy Abraham",
+        "pageUrl":  "https://www.thesportsdb.com/search/Tammy%20Abraham",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/2etthn1770199634.png",
+        "localFile":  "tammy-abraham.png",
+        "description":  "Player artwork from TheSportsDB; catalog club aston-villa",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "tani-oluwaseyi",
+        "query":  "Tani Oluwaseyi",
+        "pageTitle":  "Tani Oluwaseyi",
+        "pageUrl":  "https://www.thesportsdb.com/search/Tani%20Oluwaseyi",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/6kcri81762889021.png",
+        "localFile":  "tani-oluwaseyi.png",
+        "description":  "Player artwork from TheSportsDB; catalog club villarreal",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "thorgan-hazard",
+        "query":  "Thorgan Hazard",
+        "pageTitle":  "Thorgan Hazard",
+        "pageUrl":  "https://www.thesportsdb.com/search/Thorgan%20Hazard",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/eonxp41768080576.png",
+        "localFile":  "thorgan-hazard.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "tiago-santos",
+        "query":  "Tiago Santos",
+        "pageTitle":  "Tiago Santos",
+        "pageUrl":  "https://www.thesportsdb.com/search/Tiago%20Santos",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/lh5qbg1766077705.png",
+        "localFile":  "tiago-santos.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lille",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "tiago-tomas",
+        "query":  "Tiago TomГЎs",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "tijjani-reijnders",
+        "query":  "Tijjani Reijnders",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "tjark-ernst",
+        "query":  "Tjark Ernst",
+        "pageTitle":  "Tjark Ernst",
+        "pageUrl":  "https://www.thesportsdb.com/search/Tjark%20Ernst",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/bpq42w1773085334.png",
+        "localFile":  "tjark-ernst.png",
+        "description":  "Player artwork from TheSportsDB; catalog club feyenoord",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "tomas-chory",
+        "query":  "Tomas Chory",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "tomas-vlcek",
+        "query":  "Tomas Vlcek",
+        "pageTitle":  "Tomáš Vlček",
+        "pageUrl":  "https://www.thesportsdb.com/search/Tom%C3%A1%C5%A1%20Vl%C4%8Dek",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/jm9rl51762291715.png",
+        "localFile":  "tomas-vlcek.png",
+        "description":  "Player artwork from TheSportsDB; catalog club slavia-praha",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "tom-bischof",
+        "query":  "Tom Bischof",
+        "pageTitle":  "Tom Bischof",
+        "pageUrl":  "https://www.thesportsdb.com/search/Tom%20Bischof",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/1frfvu1756409037.png",
+        "localFile":  "tom-bischof.png",
+        "description":  "Player artwork from TheSportsDB; catalog club bayern-munich",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "toumani-diakite",
+        "query":  "Toumani Diakite",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "trevoh-chalobah",
+        "query":  "Trevoh Chalobah",
+        "pageTitle":  "Trevoh Chalobah",
+        "pageUrl":  "https://www.thesportsdb.com/search/Trevoh%20Chalobah",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/leg9s71757002495.png",
+        "localFile":  "trevoh-chalobah.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "tsuyoshi-watanabe",
+        "query":  "Tsuyoshi Watanabe",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "ugurcan-cakir",
+        "query":  "UДџurcan Г‡akД±r",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "unai-emery",
+        "query":  "Unai Emery",
+        "pageTitle":  "Unai Emery",
+        "pageUrl":  "https://www.thesportsdb.com/search/Unai%20Emery",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/thumb/gthgk01549363867.jpg",
+        "localFile":  "unai-emery.jpg",
+        "description":  "Player artwork from TheSportsDB; catalog club aston-villa",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "valentin-gomez",
+        "query":  "ValentГ­n GГіmez",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "vanja-milinkovic-savic",
+        "query":  "Vanja MilinkoviД‡-SaviД‡",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "victor-froholdt",
+        "query":  "Victor Froholdt",
+        "pageTitle":  "Victor Froholdt",
+        "pageUrl":  "https://www.thesportsdb.com/search/Victor%20Froholdt",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/wge6av1742468170.png",
+        "localFile":  "victor-froholdt.png",
+        "description":  "Player artwork from TheSportsDB; catalog club porto",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "victor-munoz",
+        "query":  "VГ­ctor MuГ±oz",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "victor-nelsson",
+        "query":  "Victor Nelsson",
+        "pageTitle":  "Victor Nelsson",
+        "pageUrl":  "https://www.thesportsdb.com/search/Victor%20Nelsson",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/re4pgn1759246093.png",
+        "localFile":  "victor-nelsson.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "victor-osimhen",
+        "query":  "Victor Osimhen",
+        "pageTitle":  "Victor Osimhen",
+        "pageUrl":  "https://www.thesportsdb.com/search/Victor%20Osimhen",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/lw0qcf1769177786.png",
+        "localFile":  "victor-osimhen.png",
+        "description":  "Player artwork from TheSportsDB; catalog club galatasaray",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "viktor-gyokeres",
+        "query":  "Viktor GyГ¶keres",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "villarreal-team-logo",
+        "query":  "Villarreal",
+        "pageTitle":  "Villarreal",
+        "pageUrl":  "https://www.thesportsdb.com/team/133740",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/team/badge/vrypqy1473503073.png",
+        "localFile":  "villarreal-team-logo.png",
+        "description":  "Club badge from TheSportsDB",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "vincent-kompany",
+        "query":  "Vincent Kompany",
+        "pageTitle":  "Vincent Kompany",
+        "pageUrl":  "https://www.thesportsdb.com/search/Vincent%20Kompany",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/y2l0lx1557831514.png",
+        "localFile":  "vincent-kompany.png",
+        "description":  "Player artwork from TheSportsDB; catalog club bayern-munich",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "vitinha",
+        "query":  "Vitinha",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "waldemar-anton",
+        "query":  "Waldemar Anton",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "warren-zaire-emery",
+        "query":  "Warren ZaГЇre-Emery",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "wesley",
+        "query":  "Wesley",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "wilfried-singo",
+        "query":  "Wilfried Singo",
+        "status":  "error",
+        "error":  "Error: 429 Too Many Requests"
+    },
+    {
+        "key":  "william-gomes",
+        "query":  "William Gomes",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "william-saliba",
+        "query":  "William Saliba",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "willian-pacho",
+        "query":  "Willian Pacho",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "yacine-titraoui",
+        "query":  "Yacine Titraoui",
+        "pageTitle":  "Yacine Titraoui",
+        "pageUrl":  "https://www.thesportsdb.com/search/Yacine%20Titraoui",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/u8k8vz1767730925.png",
+        "localFile":  "yacine-titraoui.png",
+        "description":  "Player artwork from TheSportsDB; catalog club lens",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "yan-couto",
+        "query":  "Yan Couto",
+        "pageTitle":  "Yan Couto",
+        "pageUrl":  "https://www.thesportsdb.com/search/Yan%20Couto",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/hadu641756326239.png",
+        "localFile":  "yan-couto.png",
+        "description":  "Player artwork from TheSportsDB; catalog club como",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "yann-bisseck",
+        "query":  "Yann Bisseck",
+        "pageTitle":  "Yann Bisseck",
+        "pageUrl":  "https://www.thesportsdb.com/search/Yann%20Bisseck",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/4unlga1759408810.png",
+        "localFile":  "yann-bisseck.png",
+        "description":  "Player artwork from TheSportsDB; catalog club inter",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "yann-sommer",
+        "query":  "Yann Sommer",
+        "pageTitle":  "Yann Sommer",
+        "pageUrl":  "https://www.thesportsdb.com/search/Yann%20Sommer",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/urnrqp1759408970.png",
+        "localFile":  "yann-sommer.png",
+        "description":  "Player artwork from TheSportsDB; catalog club club-brugge",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "yarek-gasiorowski",
+        "query":  "Yarek Gasiorowski",
+        "pageTitle":  "Yarek Gąsiorowski",
+        "pageUrl":  "https://www.thesportsdb.com/search/Yarek%20G%C4%85siorowski",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/vqql121759839767.png",
+        "localFile":  "yarek-gasiorowski.png",
+        "description":  "Player artwork from TheSportsDB; catalog club psv",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "youri-tielemans",
+        "query":  "Youri Tielemans",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "youssoupha-sanyang",
+        "query":  "Youssoupha Sanyang",
+        "pageTitle":  "Youssoupha Sanyang",
+        "pageUrl":  "https://www.thesportsdb.com/search/Youssoupha%20Sanyang",
+        "imageUrl":  "https://r2.thesportsdb.com/images/media/player/cutout/68u7a31762291927.png",
+        "localFile":  "youssoupha-sanyang.png",
+        "description":  "Player artwork from TheSportsDB; catalog club slavia-praha",
+        "status":  "downloaded"
+    },
+    {
+        "key":  "yunus-akgun",
+        "query":  "Yunus AkgГјn",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    },
+    {
+        "key":  "zeno-debast",
+        "query":  "Zeno Debast",
+        "status":  "error",
+        "error":  "Error: 429 Too many requests (f061ab2)"
+    }
+]

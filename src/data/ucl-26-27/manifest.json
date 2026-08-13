@@ -13,13 +13,67 @@
   "baseCardCount": 560,
   "clubs": [
     {
-      "teamId": "real-madrid",
-      "code": "RMA",
-      "displayName": "Real Madrid CF",
+      "teamId": "arsenal",
+      "code": "ARS",
+      "displayName": "Arsenal FC",
+      "countryCode": "ENG",
+      "status": "qualified",
+      "primaryColor": "#EF0107",
+      "secondaryColor": "#063672"
+    },
+    {
+      "teamId": "roma",
+      "code": "ROM",
+      "displayName": "AS Roma",
+      "countryCode": "ITA",
+      "status": "qualified",
+      "primaryColor": "#8E1F2F",
+      "secondaryColor": "#F0BC42"
+    },
+    {
+      "teamId": "aston-villa",
+      "code": "AVL",
+      "displayName": "Aston Villa FC",
+      "countryCode": "ENG",
+      "status": "qualified",
+      "primaryColor": "#670E36",
+      "secondaryColor": "#95BFE5"
+    },
+    {
+      "teamId": "atletico-madrid",
+      "code": "ATM",
+      "displayName": "Atlético de Madrid",
       "countryCode": "ESP",
       "status": "qualified",
-      "primaryColor": "#FEBE10",
-      "secondaryColor": "#00529F"
+      "primaryColor": "#CB3524",
+      "secondaryColor": "#272E61"
+    },
+    {
+      "teamId": "borussia-dortmund",
+      "code": "BVB",
+      "displayName": "Borussia Dortmund",
+      "countryCode": "GER",
+      "status": "qualified",
+      "primaryColor": "#FDE100",
+      "secondaryColor": "#111111"
+    },
+    {
+      "teamId": "club-brugge",
+      "code": "BRU",
+      "displayName": "Club Brugge",
+      "countryCode": "BEL",
+      "status": "qualified",
+      "primaryColor": "#0071C8",
+      "secondaryColor": "#111111"
+    },
+    {
+      "teamId": "como",
+      "code": "COM",
+      "displayName": "Como 1907",
+      "countryCode": "ITA",
+      "status": "qualified",
+      "primaryColor": "#0054A6",
+      "secondaryColor": "#FFFFFF"
     },
     {
       "teamId": "barcelona",
@@ -40,40 +94,40 @@
       "secondaryColor": "#0066B2"
     },
     {
-      "teamId": "borussia-dortmund",
-      "code": "BVB",
-      "displayName": "Borussia Dortmund",
-      "countryCode": "GER",
+      "teamId": "porto",
+      "code": "POR",
+      "displayName": "FC Porto",
+      "countryCode": "POR",
       "status": "qualified",
-      "primaryColor": "#FDE100",
+      "primaryColor": "#003DA5",
+      "secondaryColor": "#FFFFFF"
+    },
+    {
+      "teamId": "feyenoord",
+      "code": "FEY",
+      "displayName": "Feyenoord",
+      "countryCode": "NED",
+      "status": "qualified",
+      "primaryColor": "#E21E25",
+      "secondaryColor": "#FFFFFF"
+    },
+    {
+      "teamId": "galatasaray",
+      "code": "GAL",
+      "displayName": "Galatasaray",
+      "countryCode": "TUR",
+      "status": "qualified",
+      "primaryColor": "#A90432",
+      "secondaryColor": "#FDB912"
+    },
+    {
+      "teamId": "inter",
+      "code": "INT",
+      "displayName": "Inter",
+      "countryCode": "ITA",
+      "status": "qualified",
+      "primaryColor": "#0068A8",
       "secondaryColor": "#111111"
-    },
-    {
-      "teamId": "paris-saint-germain",
-      "code": "PSG",
-      "displayName": "Paris Saint-Germain",
-      "countryCode": "FRA",
-      "status": "qualified",
-      "primaryColor": "#004170",
-      "secondaryColor": "#DA291C"
-    },
-    {
-      "teamId": "arsenal",
-      "code": "ARS",
-      "displayName": "Arsenal FC",
-      "countryCode": "ENG",
-      "status": "qualified",
-      "primaryColor": "#EF0107",
-      "secondaryColor": "#063672"
-    },
-    {
-      "teamId": "aston-villa",
-      "code": "AVL",
-      "displayName": "Aston Villa FC",
-      "countryCode": "ENG",
-      "status": "qualified",
-      "primaryColor": "#670E36",
-      "secondaryColor": "#95BFE5"
     },
     {
       "teamId": "liverpool",
@@ -83,6 +137,15 @@
       "status": "qualified",
       "primaryColor": "#C8102E",
       "secondaryColor": "#00B2A9"
+    },
+    {
+      "teamId": "lille",
+      "code": "LIL",
+      "displayName": "LOSC Lille",
+      "countryCode": "FRA",
+      "status": "qualified",
+      "primaryColor": "#E01E35",
+      "secondaryColor": "#1B2B55"
     },
     {
       "teamId": "manchester-city",
@@ -103,58 +166,13 @@
       "secondaryColor": "#FBE122"
     },
     {
-      "teamId": "atletico-madrid",
-      "code": "ATM",
-      "displayName": "Atlético de Madrid",
-      "countryCode": "ESP",
-      "status": "qualified",
-      "primaryColor": "#CB3524",
-      "secondaryColor": "#272E61"
-    },
-    {
-      "teamId": "real-betis",
-      "code": "BET",
-      "displayName": "Real Betis",
-      "countryCode": "ESP",
-      "status": "qualified",
-      "primaryColor": "#0BB363",
-      "secondaryColor": "#FFFFFF"
-    },
-    {
-      "teamId": "villarreal",
-      "code": "VIL",
-      "displayName": "Villarreal CF",
-      "countryCode": "ESP",
-      "status": "qualified",
-      "primaryColor": "#F7E632",
-      "secondaryColor": "#005187"
-    },
-    {
-      "teamId": "lens",
-      "code": "LEN",
-      "displayName": "RC Lens",
+      "teamId": "paris-saint-germain",
+      "code": "PSG",
+      "displayName": "Paris Saint-Germain",
       "countryCode": "FRA",
       "status": "qualified",
-      "primaryColor": "#E2001A",
-      "secondaryColor": "#FFD100"
-    },
-    {
-      "teamId": "lille",
-      "code": "LIL",
-      "displayName": "LOSC Lille",
-      "countryCode": "FRA",
-      "status": "qualified",
-      "primaryColor": "#E01E35",
-      "secondaryColor": "#1B2B55"
-    },
-    {
-      "teamId": "feyenoord",
-      "code": "FEY",
-      "displayName": "Feyenoord",
-      "countryCode": "NED",
-      "status": "qualified",
-      "primaryColor": "#E21E25",
-      "secondaryColor": "#FFFFFF"
+      "primaryColor": "#004170",
+      "secondaryColor": "#DA291C"
     },
     {
       "teamId": "psv",
@@ -166,12 +184,48 @@
       "secondaryColor": "#FFFFFF"
     },
     {
-      "teamId": "porto",
-      "code": "POR",
-      "displayName": "FC Porto",
-      "countryCode": "POR",
+      "teamId": "rb-leipzig",
+      "code": "RBL",
+      "displayName": "RB Leipzig",
+      "countryCode": "GER",
       "status": "qualified",
-      "primaryColor": "#003DA5",
+      "primaryColor": "#DD0741",
+      "secondaryColor": "#001F47"
+    },
+    {
+      "teamId": "lens",
+      "code": "LEN",
+      "displayName": "RC Lens",
+      "countryCode": "FRA",
+      "status": "qualified",
+      "primaryColor": "#E2001A",
+      "secondaryColor": "#FFD100"
+    },
+    {
+      "teamId": "real-betis",
+      "code": "BET",
+      "displayName": "Real Betis",
+      "countryCode": "ESP",
+      "status": "qualified",
+      "primaryColor": "#0BB363",
+      "secondaryColor": "#FFFFFF"
+    },
+    {
+      "teamId": "real-madrid",
+      "code": "RMA",
+      "displayName": "Real Madrid CF",
+      "countryCode": "ESP",
+      "status": "qualified",
+      "primaryColor": "#FEBE10",
+      "secondaryColor": "#00529F"
+    },
+    {
+      "teamId": "slavia-praha",
+      "code": "SLA",
+      "displayName": "Slavia Praha",
+      "countryCode": "CZE",
+      "status": "qualified",
+      "primaryColor": "#D71920",
       "secondaryColor": "#FFFFFF"
     },
     {
@@ -184,51 +238,6 @@
       "secondaryColor": "#FFFFFF"
     },
     {
-      "teamId": "club-brugge",
-      "code": "BRU",
-      "displayName": "Club Brugge",
-      "countryCode": "BEL",
-      "status": "qualified",
-      "primaryColor": "#0071C8",
-      "secondaryColor": "#111111"
-    },
-    {
-      "teamId": "slavia-praha",
-      "code": "SLA",
-      "displayName": "Slavia Praha",
-      "countryCode": "CZE",
-      "status": "qualified",
-      "primaryColor": "#D71920",
-      "secondaryColor": "#FFFFFF"
-    },
-    {
-      "teamId": "galatasaray",
-      "code": "GAL",
-      "displayName": "Galatasaray",
-      "countryCode": "TUR",
-      "status": "qualified",
-      "primaryColor": "#A90432",
-      "secondaryColor": "#FDB912"
-    },
-    {
-      "teamId": "como",
-      "code": "COM",
-      "displayName": "Como 1907",
-      "countryCode": "ITA",
-      "status": "qualified",
-      "primaryColor": "#0054A6",
-      "secondaryColor": "#FFFFFF"
-    },
-    {
-      "teamId": "inter",
-      "code": "INT",
-      "displayName": "Inter",
-      "countryCode": "ITA",
-      "status": "qualified",
-      "primaryColor": "#0068A8",
-      "secondaryColor": "#111111"
-    },
-    {
       "teamId": "napoli",
       "code": "NAP",
       "displayName": "SSC Napoli",
@@ -238,24 +247,6 @@
       "secondaryColor": "#FFFFFF"
     },
     {
-      "teamId": "roma",
-      "code": "ROM",
-      "displayName": "AS Roma",
-      "countryCode": "ITA",
-      "status": "qualified",
-      "primaryColor": "#8E1F2F",
-      "secondaryColor": "#F0BC42"
-    },
-    {
-      "teamId": "rb-leipzig",
-      "code": "RBL",
-      "displayName": "RB Leipzig",
-      "countryCode": "GER",
-      "status": "qualified",
-      "primaryColor": "#DD0741",
-      "secondaryColor": "#001F47"
-    },
-    {
       "teamId": "stuttgart",
       "code": "VFB",
       "displayName": "VfB Stuttgart",
@@ -263,6 +254,15 @@
       "status": "qualified",
       "primaryColor": "#E32219",
       "secondaryColor": "#FFFFFF"
+    },
+    {
+      "teamId": "villarreal",
+      "code": "VIL",
+      "displayName": "Villarreal CF",
+      "countryCode": "ESP",
+      "status": "qualified",
+      "primaryColor": "#F7E632",
+      "secondaryColor": "#005187"
     }
   ]
 }

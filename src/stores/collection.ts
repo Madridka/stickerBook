@@ -159,6 +159,8 @@ export const useCollectionStore = defineStore('collection', () => {
               targetAlbum.catalogs,
               excludedPlayerIds,
               DUPLICATE_EXCHANGE_CONFIG.candidateCount,
+              Math.random,
+              targetAlbum.dropSettings.poolId,
             ),
             createdAt: Date.now(),
           }

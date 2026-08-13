@@ -8,6 +8,7 @@ export const createDuplicateExchangeCandidates = (
   excludedPlayerIds: Set<string>,
   candidateCount: number,
   randomSource: RandomSource = Math.random,
+  poolId: string = 'standard',
 ): string[] => {
   let availableCatalogs: NormalizedCardCatalog[] = catalogs.map((catalog) => ({
     ...catalog,
@@ -26,7 +27,7 @@ export const createDuplicateExchangeCandidates = (
     const candidate = selectCardV2({
       catalogs: availableCatalogs,
       packConfig: PACK_CONFIGS.standard,
-      poolId: 'standard',
+      poolId,
       defaultSelectionWeight: DROP_ENGINE_CONFIG.defaultSelectionWeight,
       randomSource,
     }) as CardDefinition

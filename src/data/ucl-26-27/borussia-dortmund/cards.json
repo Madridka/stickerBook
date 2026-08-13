@@ -49,7 +49,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "gregor-kobel",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Switzerland"
     },
     {
       "id": "ucl-26-27-bvb-04",
@@ -62,7 +63,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "diant-ramaj",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bvb-05",
@@ -75,7 +77,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "nico-schlotterbeck",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bvb-06",
@@ -88,7 +91,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "julian-ryerson",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Norway"
     },
     {
       "id": "ucl-26-27-bvb-07",
@@ -101,7 +105,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "daniel-svensson",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Sweden"
     },
     {
       "id": "ucl-26-27-bvb-08",
@@ -114,7 +119,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "joane-gadou",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-bvb-09",
@@ -127,7 +133,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "waldemar-anton",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bvb-10",
@@ -140,7 +147,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "luca-reggiani",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-bvb-11",
@@ -153,7 +161,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "felix-nmecha",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bvb-12",
@@ -166,7 +175,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "jobe-bellingham",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-bvb-13",
@@ -179,7 +189,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "konstantinos-karetsas",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Greece"
     },
     {
       "id": "ucl-26-27-bvb-14",
@@ -192,7 +203,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "carney-chukwuemeka",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-bvb-15",
@@ -205,7 +217,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "marcel-sabitzer",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-bvb-16",
@@ -218,7 +231,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "maximilian-beier",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bvb-17",
@@ -231,7 +245,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "serhou-guirassy",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Guinea"
     },
     {
       "id": "ucl-26-27-bvb-18",
@@ -244,7 +259,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "fabio-silva",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-bvb-19",
@@ -257,7 +273,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "samuele-inacio",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-bvb-20",
@@ -270,7 +287,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "mathis-albert",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "United States"
     }
   ]
 }

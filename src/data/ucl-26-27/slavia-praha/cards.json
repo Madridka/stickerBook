@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "nazar-domchak",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Ukraine"
     },
     {
       "id": "ucl-26-27-sla-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jakub-markovic",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "stepan-chaloupek",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "david-zima",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "igoh-ogbu",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Nigeria"
     },
     {
       "id": "ucl-26-27-sla-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "david-jurasek",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ange-n-guessan",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Côte d'Ivoire"
     },
     {
       "id": "ucl-26-27-sla-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "tomas-vlcek",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "david-moses",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Nigeria"
     },
     {
       "id": "ucl-26-27-sla-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "michal-sadilek",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "oscar",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Liberia"
     },
     {
       "id": "ucl-26-27-sla-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "david-doudera",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "toumani-diakite",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Mali"
     },
     {
       "id": "ucl-26-27-sla-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lukas-provod",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "mojmir-chytil",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "youssoupha-sanyang",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Gambia"
     },
     {
       "id": "ucl-26-27-sla-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "tomas-chory",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-sla-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "danijel-sturm",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Slovenia"
     }
   ]
 }

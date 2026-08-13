@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "alvaro-valles",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bet-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "diego-conde",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bet-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "natan",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-bet-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "valentin-gomez",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-bet-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "fran-garcia",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bet-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "angel-ortiz",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bet-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "junior-firpo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Dominican Republic"
     },
     {
       "id": "ucl-26-27-bet-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "diego-llorente",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bet-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "nelson-deossa",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Colombia"
     },
     {
       "id": "ucl-26-27-bet-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "pablo-fornals",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bet-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "giovani-lo-celso",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-bet-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "facundo-bernal",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-bet-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alvaro-fidalgo",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Mexico"
     },
     {
       "id": "ucl-26-27-bet-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "abde-ezzalzouli",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-bet-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "antony",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-bet-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "cucho-hernandez",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Colombia"
     },
     {
       "id": "ucl-26-27-bet-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "pablo-garcia",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bet-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "rodrigo-riquelme",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     }
   ]
 }

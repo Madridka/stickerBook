@@ -49,7 +49,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "jonas-urbig",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-04",
@@ -62,7 +63,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "manuel-neuer",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-05",
@@ -75,7 +77,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "dayot-upamecano",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-bay-06",
@@ -88,7 +91,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "nathaniel-brown",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-07",
@@ -101,7 +105,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alphonso-davies",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Canada"
     },
     {
       "id": "ucl-26-27-bay-08",
@@ -114,7 +119,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "josip-stanisic",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Croatia"
     },
     {
       "id": "ucl-26-27-bay-09",
@@ -127,7 +133,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "konrad-laimer",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-bay-10",
@@ -140,7 +147,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jonathan-tah",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-11",
@@ -153,7 +161,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "jamal-musiala",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-12",
@@ -166,7 +175,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "aleksandar-pavlovic",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-13",
@@ -179,7 +189,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "lennart-karl",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-14",
@@ -192,7 +203,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ismael-saibari",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-bay-15",
@@ -205,7 +217,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "tom-bischof",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-16",
@@ -218,7 +231,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "michael-olise",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-bay-17",
@@ -231,7 +245,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "luis-diaz",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Colombia"
     },
     {
       "id": "ucl-26-27-bay-18",
@@ -244,7 +259,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "harry-kane",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-bay-19",
@@ -257,7 +273,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "serge-gnabry",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bay-20",
@@ -270,7 +287,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "arijon-ibrahimovic",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     }
   ]
 }

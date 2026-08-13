@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "dennis-seimen",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "fabian-bredlow",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "finn-jeltsch",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ramon-hendriks",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-vfb-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "maximilian-mittelstadt",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jeff-chabot",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "luca-jaquez",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Switzerland"
     },
     {
       "id": "ucl-26-27-vfb-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "josha-vagnoman",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "angelo-stiller",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "bilal-el-khannouss",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-vfb-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "chema-andres",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-vfb-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "nikolas-nartey",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-vfb-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "atakan-karazor",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-vfb-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jamie-leweling",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "ermedin-demirovic",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Bosnia and Herzegovina"
     },
     {
       "id": "ucl-26-27-vfb-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "deniz-undav",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "tiago-tomas",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-vfb-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "dzenan-pejcinovic",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     }
   ]
 }

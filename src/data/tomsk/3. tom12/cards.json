@@ -37,7 +37,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "goalkeeper"
+      "position": "goalkeeper",
+      "nationality": "Czechia"
     },
     {
       "id": "tom12-03",
@@ -49,7 +50,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "goalkeeper"
+      "position": "goalkeeper",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-04",
@@ -61,7 +63,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "defender"
+      "position": "defender",
+      "nationality": "Serbia"
     },
     {
       "id": "tom12-05",
@@ -73,7 +76,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "defender"
+      "position": "defender",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-06",
@@ -85,7 +89,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "defender"
+      "position": "defender",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-07",
@@ -97,7 +102,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "defender"
+      "position": "defender",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-08",
@@ -109,7 +115,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "defender"
+      "position": "defender",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-09",
@@ -121,7 +128,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "defender"
+      "position": "defender",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-10",
@@ -133,7 +141,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "midfielder",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-11",
@@ -145,7 +154,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "midfielder",
+      "nationality": "South Korea"
     },
     {
       "id": "tom12-12",
@@ -157,7 +167,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "midfielder",
+      "nationality": "Slovenia"
     },
     {
       "id": "tom12-13",
@@ -169,7 +180,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "midfielder",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-14",
@@ -181,7 +193,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "midfielder",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-15",
@@ -193,7 +206,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "midfielder",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-16",
@@ -205,7 +219,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "midfielder"
+      "position": "midfielder",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-17",
@@ -217,7 +232,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "forward"
+      "position": "forward",
+      "nationality": "Russia"
     },
     {
       "id": "tom12-18",
@@ -229,7 +245,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "forward"
+      "position": "forward",
+      "nationality": "Belarus"
     },
     {
       "id": "tom12-19",
@@ -241,7 +258,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "forward"
+      "position": "forward",
+      "nationality": "North Macedonia"
     },
     {
       "id": "tom12-20",
@@ -253,7 +271,8 @@
       "finish": "standard",
       "rarity": "common",
       "kind": "player",
-      "position": "forward"
+      "position": "forward",
+      "nationality": "Russia"
     }
   ]
 }

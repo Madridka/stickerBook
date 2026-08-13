@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "josep-martinez",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-int-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ivan-provedel",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-int-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alessandro-bastoni",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-int-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "yann-bisseck",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-int-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "federico-dimarco",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-int-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "carlos-augusto",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-int-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "manuel-akanji",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Switzerland"
     },
     {
       "id": "ucl-26-27-int-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "john-stones",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-int-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "nicolo-barella",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-int-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "petar-sucic",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Croatia"
     },
     {
       "id": "ucl-26-27-int-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "aleksandar-stankovic",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Serbia"
     },
     {
       "id": "ucl-26-27-int-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "davide-frattesi",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-int-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "andy-diouf",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-int-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lautaro-martinez",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-int-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "marcus-thuram",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-int-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "pio-esposito",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-int-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ange-yoan-bonny",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-int-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "luis-henrique",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     }
   ]
 }

@@ -126,6 +126,9 @@ const validateCatalog = (
       if (personIds.has(card.personId)) failures.push(`${card.id}: duplicate personId in club`)
       personIds.add(card.personId)
     }
+    if (card.kind === 'player' && !card.nationality?.trim()) {
+      failures.push(`${card.id}: player nationality is required`)
+    }
   }
 }
 

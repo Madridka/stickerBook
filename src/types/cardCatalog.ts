@@ -29,6 +29,7 @@ export interface BaseCard {
   albumSlot?: number
   kind: CardKind
   displayName: string
+  nationality?: string
   image: string
   series: CardSeries
   finish: CardFinish

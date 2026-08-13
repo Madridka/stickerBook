@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "ugurcan-cakir",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-gal-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jankat-yilmaz",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-gal-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "wilfried-singo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Côte d'Ivoire"
     },
     {
       "id": "ucl-26-27-gal-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "davinson-sanchez",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Colombia"
     },
     {
       "id": "ucl-26-27-gal-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "roland-sallai",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Hungary"
     },
     {
       "id": "ucl-26-27-gal-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ismail-jakobs",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Senegal"
     },
     {
       "id": "ucl-26-27-gal-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "abdulkerim-bardakci",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-gal-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "victor-nelsson",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-gal-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "gabriel-sara",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-gal-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "lesley-ugochukwu",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-gal-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lucas-torreira",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-gal-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "renato-nhaga",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Guinea-Bissau"
     },
     {
       "id": "ucl-26-27-gal-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "mario-lemina",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Gabon"
     },
     {
       "id": "ucl-26-27-gal-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "victor-osimhen",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Nigeria"
     },
     {
       "id": "ucl-26-27-gal-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "baris-alper-yilmaz",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-gal-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "leroy-sane",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-gal-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "yunus-akgun",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-gal-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "berat-lus",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Türkiye"
     }
   ]
 }

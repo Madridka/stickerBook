@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "mile-svilar",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Serbia"
     },
     {
       "id": "ucl-26-27-rom-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "devis-vasquez",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Colombia"
     },
     {
       "id": "ucl-26-27-rom-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "wesley",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-rom-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "evan-ndicka",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Côte d'Ivoire"
     },
     {
       "id": "ucl-26-27-rom-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "konstantinos-koulierakis",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Greece"
     },
     {
       "id": "ucl-26-27-rom-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "daniele-ghilardi",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-rom-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "gianluca-mancini",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-rom-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jan-ziolkowski",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Poland"
     },
     {
       "id": "ucl-26-27-rom-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "manu-kone",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rom-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "neil-el-aynaoui",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-rom-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "niccolo-pisilli",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-rom-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "lorenzo-pellegrini",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-rom-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "bryan-cristante",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-rom-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "donyell-malen",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-rom-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "matias-soule",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-rom-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "santiago-castro",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-rom-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "robinio-vaz",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rom-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "paulo-dybala",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     }
   ]
 }

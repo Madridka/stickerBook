@@ -25,6 +25,7 @@ interface HistoricalRawCard {
   id: string
   cardNumber: string
   displayName: string
+  nationality?: string
   image: string
   kind: string
   position?: string

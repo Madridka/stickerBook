@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "jan-oblak",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Slovenia"
     },
     {
       "id": "ucl-26-27-atm-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "juan-musso",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-atm-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "david-hancko",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Slovakia"
     },
     {
       "id": "ucl-26-27-atm-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "marc-pubill",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-atm-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "cristian-romero",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-atm-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "robin-le-normand",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-atm-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alejandro-grimaldo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-atm-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "marcos-llorente",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-atm-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "pablo-barrios",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-atm-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "morten-hjulmand",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-atm-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "kang-in-lee",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "South Korea"
     },
     {
       "id": "ucl-26-27-atm-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "rodrigo-mendoza",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-atm-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "johnny-cardoso",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "United States"
     },
     {
       "id": "ucl-26-27-atm-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "julian-alvarez",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-atm-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "alex-baena",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-atm-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ademola-lookman",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Nigeria"
     },
     {
       "id": "ucl-26-27-atm-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "giuliano-simeone",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-atm-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "alexander-sorloth",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Norway"
     }
   ]
 }

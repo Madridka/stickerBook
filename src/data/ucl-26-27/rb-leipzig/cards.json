@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "maarten-vandevoordt",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-rbl-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "orjan-nyland",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Norway"
     },
     {
       "id": "ucl-26-27-rbl-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "castello-lukeba",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rbl-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "maxime-esteve",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rbl-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "david-raum",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-rbl-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lutsharel-geertruida",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-rbl-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "el-chadaille-bitshiabu",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rbl-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "abdoul-kone",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rbl-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "christoph-baumgartner",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-rbl-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "assan-ouedraogo",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-rbl-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "brajan-gruda",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-rbl-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "nicolas-seiwald",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-rbl-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "arthur-vermeeren",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-rbl-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "antonio-nusa",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Norway"
     },
     {
       "id": "ucl-26-27-rbl-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "romulo",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-rbl-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "johan-bakayoko",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-rbl-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "conrad-harder",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-rbl-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "suleman-sani",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Nigeria"
     }
   ]
 }

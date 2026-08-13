@@ -49,7 +49,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "thibaut-courtois",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-rma-04",
@@ -62,7 +63,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "andriy-lunin",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Ukraine"
     },
     {
       "id": "ucl-26-27-rma-05",
@@ -75,7 +77,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "dean-huijsen",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-rma-06",
@@ -88,7 +91,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "marc-cucurella",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-rma-07",
@@ -101,7 +105,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "trent-alexander-arnold",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-rma-08",
@@ -114,7 +119,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "alvaro-carreras",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-rma-09",
@@ -127,7 +133,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "ibrahima-konate",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rma-10",
@@ -140,7 +147,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "denzel-dumfries",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-rma-11",
@@ -153,7 +161,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "jude-bellingham",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-rma-12",
@@ -166,7 +175,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "federico-valverde",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-rma-13",
@@ -179,7 +189,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "arda-guler",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-rma-14",
@@ -192,7 +203,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "aurelien-tchouameni",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rma-15",
@@ -205,7 +217,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "eduardo-camavinga",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rma-16",
@@ -218,7 +231,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "kylian-mbappe",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rma-17",
@@ -231,7 +245,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "vinicius-junior",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-rma-18",
@@ -244,7 +259,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "yan-diomande",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Côte d'Ivoire"
     },
     {
       "id": "ucl-26-27-rma-19",
@@ -257,7 +273,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "rodrygo",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-rma-20",
@@ -270,7 +287,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "endrick",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     }
   ]
 }

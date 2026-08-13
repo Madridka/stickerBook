@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "matej-kovar",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Czechia"
     },
     {
       "id": "ucl-26-27-psv-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "nick-olij",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "yarek-gasiorowski",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-psv-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "mauro-junior",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-psv-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "sergino-dest",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "United States"
     },
     {
       "id": "ucl-26-27-psv-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ryan-flamingo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "kiliann-sildillia",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-psv-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "armando-obispo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "joey-veerman",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "paul-wanner",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-psv-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jerdy-schouten",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "guus-til",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "sven-mijnans",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ricardo-pepi",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "United States"
     },
     {
       "id": "ucl-26-27-psv-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "dennis-man",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Romania"
     },
     {
       "id": "ucl-26-27-psv-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ruben-van-bommel",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-psv-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "esmir-bajraktarevic",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Bosnia and Herzegovina"
     },
     {
       "id": "ucl-26-27-psv-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "couhaib-driouech",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Morocco"
     }
   ]
 }

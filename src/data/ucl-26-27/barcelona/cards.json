@@ -49,7 +49,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "joan-garcia",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-04",
@@ -62,7 +63,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "aron-yaakobishvili",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Hungary"
     },
     {
       "id": "ucl-26-27-bar-05",
@@ -75,7 +77,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "pau-cubarsi",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-06",
@@ -88,7 +91,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "jules-kounde",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-bar-07",
@@ -101,7 +105,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alejandro-balde",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-08",
@@ -114,7 +119,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "eric-garcia",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-09",
@@ -127,7 +133,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "gerard-martin",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-10",
@@ -140,7 +147,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "hector-fort",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-11",
@@ -153,7 +161,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "pedri",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-12",
@@ -166,7 +175,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "fermin-lopez",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-13",
@@ -179,7 +189,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "dani-olmo",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-14",
@@ -192,7 +203,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "frenkie-de-jong",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-bar-15",
@@ -205,7 +217,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "marc-bernal",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-16",
@@ -218,7 +231,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lamine-yamal",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-17",
@@ -231,7 +245,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "anthony-gordon",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-bar-18",
@@ -244,7 +259,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "raphinha",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-bar-19",
@@ -257,7 +273,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ferran-torres",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bar-20",
@@ -270,7 +287,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "karim-adeyemi",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     }
   ]
 }

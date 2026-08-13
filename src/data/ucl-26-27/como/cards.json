@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "jean-butez",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-com-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "emil-audero",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Indonesia"
     },
     {
       "id": "ucl-26-27-com-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "trevoh-chalobah",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-com-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jacobo-ramon",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-com-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "yan-couto",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-com-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "kaiki",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-com-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alex-valle",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-com-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "stefan-posch",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-com-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "nico-paz",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-com-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "martin-baturina",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Croatia"
     },
     {
       "id": "ucl-26-27-com-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "maximo-perrone",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-com-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "lucas-da-cunha",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-com-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "maxence-caqueret",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-com-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jesus-rodriguez",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-com-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "assane-diao",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Senegal"
     },
     {
       "id": "ucl-26-27-com-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "anastasios-douvikas",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Greece"
     },
     {
       "id": "ucl-26-27-com-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jayden-addai",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-com-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "nicolas-kuhn",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     }
   ]
 }

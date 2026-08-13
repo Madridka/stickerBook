@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "rui-silva",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-scp-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "joao-virginia",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-scp-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "goncalo-inacio",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-scp-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "maxi-araujo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-scp-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "zeno-debast",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-scp-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "eduardo-quaresma",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-scp-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ivan-fresneda",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-scp-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ibrahima-ba",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Senegal"
     },
     {
       "id": "ucl-26-27-scp-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "rodrigo-zalazar",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-scp-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "sergi-altimira",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-scp-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "issa-doumbia",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-scp-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "joao-simoes",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-scp-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "daniel-braganca",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-scp-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "luis-suarez",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Colombia"
     },
     {
       "id": "ucl-26-27-scp-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "pedro-goncalves",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-scp-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "geny-catamo",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Mozambique"
     },
     {
       "id": "ucl-26-27-scp-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "fotis-ioannidis",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Greece"
     },
     {
       "id": "ucl-26-27-scp-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "luis-guilherme",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     }
   ]
 }

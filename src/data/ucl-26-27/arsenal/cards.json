@@ -49,7 +49,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "david-raya",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-ars-04",
@@ -62,7 +63,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "illan-meslier",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-ars-05",
@@ -75,7 +77,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "william-saliba",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-ars-06",
@@ -88,7 +91,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "gabriel",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-ars-07",
@@ -101,7 +105,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "jurrien-timber",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-ars-08",
@@ -114,7 +119,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "riccardo-calafiori",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-ars-09",
@@ -127,7 +133,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "piero-hincapie",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Ecuador"
     },
     {
       "id": "ucl-26-27-ars-10",
@@ -140,7 +147,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "myles-lewis-skelly",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-ars-11",
@@ -153,7 +161,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "declan-rice",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-ars-12",
@@ -166,7 +175,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "martin-zubimendi",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-ars-13",
@@ -179,7 +189,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "bruno-guimaraes",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-ars-14",
@@ -192,7 +203,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "martin-odegaard",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Norway"
     },
     {
       "id": "ucl-26-27-ars-15",
@@ -205,7 +217,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "eberechi-eze",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-ars-16",
@@ -218,7 +231,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "bukayo-saka",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-ars-17",
@@ -231,7 +245,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "viktor-gyokeres",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Sweden"
     },
     {
       "id": "ucl-26-27-ars-18",
@@ -244,7 +259,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "kai-havertz",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-ars-19",
@@ -257,7 +273,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "noni-madueke",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-ars-20",
@@ -270,7 +287,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "gabriel-martinelli",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     }
   ]
 }

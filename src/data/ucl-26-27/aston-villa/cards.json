@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "emiliano-martinez",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-avl-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "marco-bizot",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-avl-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ezri-konsa",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-avl-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ian-maatsen",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-avl-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "matty-cash",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Poland"
     },
     {
       "id": "ucl-26-27-avl-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "pau-torres",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-avl-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "modou-keba-cisse",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Senegal"
     },
     {
       "id": "ucl-26-27-avl-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "kosta-nedeljkovic",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Serbia"
     },
     {
       "id": "ucl-26-27-avl-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "johan-manzambi",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Switzerland"
     },
     {
       "id": "ucl-26-27-avl-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "amadou-onana",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-avl-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "boubacar-kamara",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-avl-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "joao-gomes",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-avl-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "lamare-bogarde",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-avl-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "alejandro-garnacho",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-avl-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "evann-guessand",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Côte d'Ivoire"
     },
     {
       "id": "ucl-26-27-avl-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ollie-watkins",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-avl-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "tammy-abraham",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-avl-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "emiliano-buendia",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Argentina"
     }
   ]
 }

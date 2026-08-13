@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "gianluigi-donnarumma",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-mci-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "marcus-bettinelli",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-mci-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "marc-guehi",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-mci-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "josko-gvardiol",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Croatia"
     },
     {
       "id": "ucl-26-27-mci-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "nico-o-reilly",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-mci-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ruben-dias",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-mci-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "abdukodir-khusanov",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Uzbekistan"
     },
     {
       "id": "ucl-26-27-mci-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "matheus-nunes",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-mci-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "elliot-anderson",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-mci-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "rayan-cherki",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-mci-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "phil-foden",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-mci-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "rodri",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-mci-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "tijjani-reijnders",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-mci-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "erling-haaland",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Norway"
     },
     {
       "id": "ucl-26-27-mci-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "antoine-semenyo",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Ghana"
     },
     {
       "id": "ucl-26-27-mci-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "jeremy-doku",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-mci-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "omar-marmoush",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Egypt"
     },
     {
       "id": "ucl-26-27-mci-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "savinho",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     }
   ]
 }

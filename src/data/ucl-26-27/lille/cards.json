@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "berke-ozer",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Türkiye"
     },
     {
       "id": "ucl-26-27-lil-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "arnaud-bodart",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-lil-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "nathan-ngoy",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-lil-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "alexsandro",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-lil-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "tiago-santos",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-lil-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "romain-perraud",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-lil-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "isaac-cossier",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-lil-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "calvin-verdonk",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Indonesia"
     },
     {
       "id": "ucl-26-27-lil-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ayyoub-bouaddi",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-lil-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "hakon-arnar-haraldsson",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Iceland"
     },
     {
       "id": "ucl-26-27-lil-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ngal-ayel-mukau",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Democratic Republic of the Congo"
     },
     {
       "id": "ucl-26-27-lil-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "nabil-bentaleb",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Algeria"
     },
     {
       "id": "ucl-26-27-lil-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "benjamin-andre",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-lil-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "matias-fernandez-pardo",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-lil-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "hamza-igamane",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-lil-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "felix-correia",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-lil-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "osame-sahraoui",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-lil-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "ethan-mbappe",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     }
   ]
 }

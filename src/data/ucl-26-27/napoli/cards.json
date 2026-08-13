@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "vanja-milinkovic-savic",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Serbia"
     },
     {
       "id": "ucl-26-27-nap-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "alex-meret",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-nap-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alessandro-buongiorno",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-nap-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "sam-beukema",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-nap-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "mathias-olivera",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-nap-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "rafa-marin",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-nap-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "amir-rrahmani",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Kosovo"
     },
     {
       "id": "ucl-26-27-nap-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "giovanni-di-lorenzo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-nap-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "scott-mctominay",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Scotland"
     },
     {
       "id": "ucl-26-27-nap-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "billy-gilmour",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Scotland"
     },
     {
       "id": "ucl-26-27-nap-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "frank-anguissa",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Cameroon"
     },
     {
       "id": "ucl-26-27-nap-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "antonio-vergara",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Italy"
     },
     {
       "id": "ucl-26-27-nap-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "stanislav-lobotka",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Slovakia"
     },
     {
       "id": "ucl-26-27-nap-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "rasmus-hojlund",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-nap-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "alisson-santos",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-nap-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "david-neres",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-nap-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "noa-lang",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-nap-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "lorenzo-lucca",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Italy"
     }
   ]
 }

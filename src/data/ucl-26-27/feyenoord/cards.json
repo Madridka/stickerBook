@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "tjark-ernst",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-fey-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "liam-bossin",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Ireland"
     },
     {
       "id": "ucl-26-27-fey-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "givairo-read",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-fey-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jordan-bos",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Australia"
     },
     {
       "id": "ucl-26-27-fey-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "tsuyoshi-watanabe",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Japan"
     },
     {
       "id": "ucl-26-27-fey-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "anel-ahmedhodzic",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Bosnia and Herzegovina"
     },
     {
       "id": "ucl-26-27-fey-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "mika-marmol",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-fey-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "gijs-smal",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-fey-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "luciano-valente",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-fey-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "oussama-targhalline",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-fey-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "sem-steijn",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-fey-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "jakub-moder",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Poland"
     },
     {
       "id": "ucl-26-27-fey-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "gjivai-zechiel",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-fey-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "anis-hadj-moussa",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Algeria"
     },
     {
       "id": "ucl-26-27-fey-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "ayase-ueda",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Japan"
     },
     {
       "id": "ucl-26-27-fey-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "nacho-ferri",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-fey-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "casper-tengstedt",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-fey-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "goncalo-borges",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Portugal"
     }
   ]
 }

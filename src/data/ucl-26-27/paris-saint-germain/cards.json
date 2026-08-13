@@ -49,7 +49,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "matvey-safonov",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Russia"
     },
     {
       "id": "ucl-26-27-psg-04",
@@ -62,7 +63,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lucas-chevalier",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-psg-05",
@@ -75,7 +77,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "willian-pacho",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Ecuador"
     },
     {
       "id": "ucl-26-27-psg-06",
@@ -88,7 +91,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "nuno-mendes",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-psg-07",
@@ -101,7 +105,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "achraf-hakimi",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-psg-08",
@@ -114,7 +119,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ilya-zabarnyi",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Ukraine"
     },
     {
       "id": "ucl-26-27-psg-09",
@@ -127,7 +133,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "marquinhos",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-psg-10",
@@ -140,7 +147,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lucas-beraldo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-psg-11",
@@ -153,7 +161,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "vitinha",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-psg-12",
@@ -166,7 +175,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "joao-neves",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-psg-13",
@@ -179,7 +189,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "warren-zaire-emery",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-psg-14",
@@ -192,7 +203,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "senny-mayulu",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-psg-15",
@@ -205,7 +217,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "fabian-ruiz",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-psg-16",
@@ -218,7 +231,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "khvicha-kvaratskhelia",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Georgia"
     },
     {
       "id": "ucl-26-27-psg-17",
@@ -231,7 +245,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "desire-doue",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-psg-18",
@@ -244,7 +259,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ousmane-dembele",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-psg-19",
@@ -257,7 +273,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "bradley-barcola",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-psg-20",
@@ -270,7 +287,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "maghnes-akliouche",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     }
   ]
 }

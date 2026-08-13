@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "luiz-junior",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-vil-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "peter-gulacsi",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Hungary"
     },
     {
       "id": "ucl-26-27-vil-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "renato-veiga",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-vil-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "carlos-romero",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-vil-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "santiago-mourino",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-vil-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "logan-costa",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Cape Verde"
     },
     {
       "id": "ucl-26-27-vil-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "pau-navarro",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-vil-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "alex-freeman",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "United States"
     },
     {
       "id": "ucl-26-27-vil-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alberto-moleiro",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-vil-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "pape-gueye",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Senegal"
     },
     {
       "id": "ucl-26-27-vil-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "santi-comesana",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-vil-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "carlos-macia",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-vil-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "alassane-diatta",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Senegal"
     },
     {
       "id": "ucl-26-27-vil-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "georges-mikautadze",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Georgia"
     },
     {
       "id": "ucl-26-27-vil-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "ilias-akhomach",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-vil-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "tajon-buchanan",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Canada"
     },
     {
       "id": "ucl-26-27-vil-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "tani-oluwaseyi",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Canada"
     },
     {
       "id": "ucl-26-27-vil-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "nicolas-pepe",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Côte d'Ivoire"
     }
   ]
 }

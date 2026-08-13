@@ -39,6 +39,7 @@ const baseCardShape = {
   cardNumber: z.string().min(1),
   albumSlot: z.number().int().positive().optional(),
   displayName: z.string().min(1),
+  nationality: z.string().min(1).optional(),
   image: z.string().min(1),
   series: cardSeriesSchema,
   finish: cardFinishSchema,

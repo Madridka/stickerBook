@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "senne-lammens",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-mun-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "karl-darlow",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Wales"
     },
     {
       "id": "ucl-26-27-mun-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "leny-yoro",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-mun-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "lisandro-martinez",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-mun-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "patrick-dorgu",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-mun-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "matthijs-de-ligt",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-mun-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "ayden-heaven",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-mun-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "diogo-dalot",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-mun-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "kobbie-mainoo",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-mun-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "andrey-santos",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-mun-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "youri-tielemans",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-mun-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "bruno-fernandes",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-mun-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "manuel-ugarte",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Uruguay"
     },
     {
       "id": "ucl-26-27-mun-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "bryan-mbeumo",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Cameroon"
     },
     {
       "id": "ucl-26-27-mun-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "matheus-cunha",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-mun-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "benjamin-sesko",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Slovenia"
     },
     {
       "id": "ucl-26-27-mun-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "amad-diallo",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Côte d'Ivoire"
     },
     {
       "id": "ucl-26-27-mun-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "marcus-rashford",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "England"
     }
   ]
 }

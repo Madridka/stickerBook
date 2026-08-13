@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "yann-sommer",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Switzerland"
     },
     {
       "id": "ucl-26-27-bru-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "nordin-jackers",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-bru-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "joel-ordonez",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Ecuador"
     },
     {
       "id": "ucl-26-27-bru-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "joaquin-seys",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-bru-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "kyriani-sabbe",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-bru-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "hugo-siquet",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-bru-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "han-beom-lee",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "South Korea"
     },
     {
       "id": "ucl-26-27-bru-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "jorne-spileers",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-bru-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "freddie-potts",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-bru-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "cheveyo-tsawa",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Switzerland"
     },
     {
       "id": "ucl-26-27-bru-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "felix-lemarechal",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-bru-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "hugo-vetlesen",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Norway"
     },
     {
       "id": "ucl-26-27-bru-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "hans-vanaken",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-bru-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "nicolo-tresoldi",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-bru-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "carlos-forbs",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Portugal"
     },
     {
       "id": "ucl-26-27-bru-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "jan-virgili",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-bru-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "romeo-vermant",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-bru-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "mamadou-diakhon",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Senegal"
     }
   ]
 }

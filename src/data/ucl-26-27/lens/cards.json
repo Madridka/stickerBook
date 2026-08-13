@@ -50,7 +50,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "robin-risser",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-04",
@@ -63,7 +64,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "mathieu-gorgelin",
-      "position": "GK"
+      "position": "GK",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-05",
@@ -76,7 +78,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "samson-baidoo",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-len-06",
@@ -89,7 +92,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ismaelo-ganiou",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-07",
@@ -102,7 +106,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "saud-abdulhamid",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Saudi Arabia"
     },
     {
       "id": "ucl-26-27-len-08",
@@ -115,7 +120,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "matthieu-udol",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-09",
@@ -128,7 +134,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "nidal-celik",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "Bosnia and Herzegovina"
     },
     {
       "id": "ucl-26-27-len-10",
@@ -141,7 +148,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "kyllian-antonio",
-      "position": "DF"
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-11",
@@ -154,7 +162,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "andrija-bulatovic",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Montenegro"
     },
     {
       "id": "ucl-26-27-len-12",
@@ -167,7 +176,8 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "yacine-titraoui",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Algeria"
     },
     {
       "id": "ucl-26-27-len-13",
@@ -180,7 +190,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "amadou-haidara",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Mali"
     },
     {
       "id": "ucl-26-27-len-14",
@@ -193,7 +204,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "michael-cuisance",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-15",
@@ -206,7 +218,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "thorgan-hazard",
-      "position": "MF"
+      "position": "MF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-len-16",
@@ -219,7 +232,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "odsonne-edouard",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-17",
@@ -232,7 +246,8 @@
       "rarity": "epic",
       "kind": "player",
       "personId": "rayan-fofana",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-18",
@@ -245,7 +260,8 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "abdallah-sima",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Senegal"
     },
     {
       "id": "ucl-26-27-len-19",
@@ -258,7 +274,8 @@
       "rarity": "common",
       "kind": "player",
       "personId": "florian-thauvin",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-len-20",
@@ -271,7 +288,8 @@
       "rarity": "legendary",
       "kind": "player",
       "personId": "michal-skoras",
-      "position": "FW"
+      "position": "FW",
+      "nationality": "Poland"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import type { BlisterConfig, PackConfig } from '@/types/gameConfig'
+import type { BlisterConfig, PackConfig } from '../types/gameConfig.ts'
 
 /** Стоимость одного стандартного пака в игровых монетах. */
 export const PACK_PRICE: number = 20

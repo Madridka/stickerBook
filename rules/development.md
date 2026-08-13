@@ -177,9 +177,22 @@ Sticker
 Pack
 Collection
 
-Все визуальные материалы:
+Исходники и визуальные материалы журналов хранить по идентификатору альбома:
 
-assets/game/wc-26/{team}/
+`assets/game/{albumId}/{teamId}/`
+
+Общие для альбома материалы хранить в:
+
+`assets/game/{albumId}/main/`
+
+Готовые карточки, которые должны раздаваться по стабильному URL без импорта в JavaScript-бандл, хранить в:
+
+`public/{albumId}/cards/{teamId}/`
+
+Примеры для UCL 2026/27:
+
+- страницы и исходники: `assets/game/ucl-26-27/main/`;
+- готовые карточки: `public/ucl-26-27/cards/{teamId}/`.
 
 # Code comments
 

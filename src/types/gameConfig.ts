@@ -5,7 +5,7 @@ import type {
   CardSeries,
   CoachRole,
   PlayerPosition,
-} from './cardCatalog'
+} from './cardCatalog.ts'
 
 export interface PackConfig {
   cardsPerPack: number

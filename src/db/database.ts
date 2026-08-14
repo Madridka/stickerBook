@@ -1,7 +1,6 @@
 import Dexie, { type Table } from 'dexie'
 import type { AlbumId, DeletedCard, StickerInstance } from '@/types'
 import type { GoalCounter, GoalPlayerState } from '@/features/goals/types'
-import type { RareShopState } from '@/features/rareShop/types'
 import type { DailyTasksState } from '@/features/dailyTasks/types'
 import type { AlbumPityState } from '@/features/pity/types'
 
@@ -38,8 +37,6 @@ export interface InventoryItem {
   packId?: string
   // Журнал, карточки которого содержит блистер.
   albumId?: AlbumId
-  // Страна тематического редкого блистера.
-  countryId?: string
   // Время создания предмета
   createdAt: number
 }
@@ -81,6 +78,8 @@ export interface PackOpeningSession {
   pityEligible?: boolean
   pityApplied?: boolean
   pityDryPackCountBefore?: number
+  // Новые сессии фиксируют результат pity сразу; поле защищает от повторного учёта при finalize.
+  pityOutcomeRecorded?: boolean
 }
 
 export interface BlisterCooldown {
@@ -114,7 +113,6 @@ interface StickerBookDatabase extends Dexie {
   gameGuideProgress: Table<GameGuideProgress, string>
   goalStates: Table<GoalPlayerState, string>
   goalCounters: Table<GoalCounter, string>
-  rareShop: Table<RareShopState, string>
   blisterCooldowns: Table<BlisterCooldown, string>
   dailyTasks: Table<DailyTasksState, string>
   albumPityStates: Table<AlbumPityState, AlbumId>
@@ -224,7 +222,6 @@ database.version(12).stores({
   gameGuideProgress: 'id, completed, updatedAt',
   goalStates: 'goalId, completedAt, claimedAt',
   goalCounters: 'id, updatedAt',
-  rareShop: 'id',
 })
 
 type LegacyStickerInstance = Omit<StickerInstance, 'albumId'> & { albumId?: AlbumId }
@@ -256,7 +253,6 @@ database
     gameGuideProgress: 'id, completed, updatedAt',
     goalStates: 'goalId, completedAt, claimedAt',
     goalCounters: 'id, updatedAt',
-    rareShop: 'id',
     blisterCooldowns: 'id, nextAvailableAt',
   })
   .upgrade(async (transaction): Promise<void> => {

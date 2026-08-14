@@ -88,11 +88,10 @@ describe('pity domain', () => {
     expect(shouldProtectPack(PITY_CONFIG.dryPacksBeforeGuarantee)).toBe(true)
   })
 
-  it('excludes rare and mixed packs from accumulation and protection', () => {
-    expect(isPityPackTypeEligible('standard', ['wc-26'], true)).toBe(true)
-    expect(isPityPackTypeEligible('rare', ['wc-26'], true)).toBe(false)
-    expect(isPityPackTypeEligible('mixed', ['wc-26', 'ucl-26-27'], false)).toBe(false)
-    expect(isPityPackTypeEligible('special', ['wc-26'], false)).toBe(false)
+  it('requires one album and an eligible blister', () => {
+    expect(isPityPackTypeEligible(['wc-26'], true)).toBe(true)
+    expect(isPityPackTypeEligible(['wc-26', 'ucl-26-27'], false)).toBe(false)
+    expect(isPityPackTypeEligible(['wc-26'], false)).toBe(false)
   })
 
   it('forces a missing card only into the last slot of a protected dry pack', () => {

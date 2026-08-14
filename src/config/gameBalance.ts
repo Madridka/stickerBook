@@ -109,16 +109,6 @@ export const BLISTER_CONFIGS = {
   },
 } satisfies Record<string, BlisterConfig>
 
-/** Стоимость, содержимое и расписание редких блистеров. */
-export const RARE_SHOP_CONFIG = {
-  price: 80,
-  cardsPerPack: 4,
-  missingCardChance: 0.8,
-  offersPerRotation: 3,
-  rotationDurationMs: 4 * 60 * 60 * 1_000,
-  extensionDurationMs: 4 * 60 * 60 * 1_000,
-}
-
 /** Баланс энергии и начислений кликера. */
 export const CLICKER_CONFIG = {
   baseReward: 1,

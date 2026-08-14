@@ -21,10 +21,6 @@ import { selectPackMiniGame, type PackMiniGameId } from '@/utils/selectPackMiniG
 import type { InventoryItem } from '@/db/database'
 
 import ShopItem from '@/components/Shop/ShopItem.vue'
-import RareShopPanel from '@/components/Shop/RareShopPanel.vue'
-import SelectButton from 'primevue/selectbutton'
-
-type ShopCatalogSection = 'regular' | 'rare'
 
 const { t } = useI18n()
 const player = usePlayerStore()
@@ -35,15 +31,9 @@ const availableBlisters: BlisterDefinition[] = [...getBlisters()]
 const router = useRouter()
 const purchasingById: Ref<Record<string, boolean>> = ref({})
 const hasPurchaseError: Ref<boolean> = ref(false)
-const activeCatalogSection: Ref<ShopCatalogSection> = ref('regular')
-const catalogSections: ComputedRef<Array<{ value: ShopCatalogSection; label: string }>> =
-  computed(() => [
-    { value: 'regular', label: t('shop.catalogSections.regular') },
-    { value: 'rare', label: t('shop.catalogSections.rare') },
-  ])
 
 const resolvePlayerBlister = (blisterId: string): BlisterDefinition | undefined =>
-  getPlayerBlisterById(blisterId === 'rare' ? BLISTER_CONFIGS.standard.id : blisterId)
+  getPlayerBlisterById(blisterId)
 
 const isPlayerPack = (item: InventoryItem): boolean => {
   if (item.type !== 'pack') return false
@@ -160,20 +150,8 @@ onMounted(async (): Promise<void> => {
     <!-- Краткое описание ассортимента -->
     <p class="mt-1 hidden text-xs text-ink/55 md:block">{{ t('shop.text') }}</p>
 
-    <SelectButton
-      v-model="activeCatalogSection"
-      class="mt-3 shrink-0 self-start"
-      :options="catalogSections"
-      option-label="label"
-      option-value="value"
-      :allow-empty="false"
-      size="small"
-      :aria-label="t('shop.catalogSections.ariaLabel')"
-    />
-
     <!-- Доступные товары магазина -->
     <ShopItem
-      v-if="activeCatalogSection === 'regular'"
       class="mt-3 sm:mt-4"
       :blisters="availableBlisters"
       :player-coins="player.coins"
@@ -189,9 +167,8 @@ onMounted(async (): Promise<void> => {
       @play="playPackHunt"
       @open="openOwnedPack"
     />
-    <RareShopPanel v-else />
     <p
-      v-if="activeCatalogSection === 'regular' && hasPurchaseError"
+      v-if="hasPurchaseError"
       class="mt-4 text-sm font-bold text-coral"
       role="alert"
     >

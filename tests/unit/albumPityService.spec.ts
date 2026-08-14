@@ -32,6 +32,22 @@ describe('album pity persistence', () => {
     expect(persisted.get('ucl-26-27')).toBeUndefined()
   })
 
+  it('counts three all-duplicate packs at 96% completion as three dry packs', async () => {
+    for (let packNumber = 1; packNumber <= 3; packNumber += 1) {
+      await expect(getAlbumPityContext('wc-26', 96, 100, packNumber)).resolves.toEqual({
+        eligible: true,
+        dryPackCount: packNumber - 1,
+      })
+      await registerEligiblePackOutcome('wc-26', false, packNumber)
+    }
+
+    expect(persisted.get('wc-26')).toEqual({
+      albumId: 'wc-26',
+      dryPackCount: 3,
+      updatedAt: 3,
+    })
+  })
+
   it('restores a saved counter after service reinitialization', async () => {
     persisted.set('wc-26', { albumId: 'wc-26', dryPackCount: 3, updatedAt: 1 })
     await expect(getAlbumPityContext('wc-26', 95, 100)).resolves.toEqual({
@@ -68,7 +84,7 @@ describe('album pity persistence', () => {
 
   it('clears stale state below 95% and for a completed album', async () => {
     persisted.set('wc-26', { albumId: 'wc-26', dryPackCount: 4, updatedAt: 1 })
-    await expect(getAlbumPityContext('wc-26', 9499, 10000, 2)).resolves.toEqual({
+    await expect(getAlbumPityContext('wc-26', 9449, 10000, 2)).resolves.toEqual({
       eligible: false,
       dryPackCount: 0,
     })

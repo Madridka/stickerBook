@@ -38,10 +38,9 @@ export const shouldProtectPack = (dryPackCount: number): boolean =>
   dryPackCount >= PITY_CONFIG.dryPacksBeforeGuarantee
 
 export const isPityPackTypeEligible = (
-  blisterId: string,
   albumIds: readonly AlbumId[],
   pityEligible: boolean,
-): boolean => pityEligible && blisterId !== 'rare' && albumIds.length === 1
+): boolean => pityEligible && albumIds.length === 1
 
 // Оставляет исходные каталоги и их значения по умолчанию, отсекая только уже собранные карточки.
 export const createMissingOnlyCatalogs = (

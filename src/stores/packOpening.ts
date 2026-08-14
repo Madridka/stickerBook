@@ -37,7 +37,7 @@ import {
 export type AdvancePackOpeningResult = 'advanced' | 'completed' | 'unavailable'
 
 const resolvePlayerBlister = (blisterId: string) =>
-  getPlayerBlisterById(blisterId === 'rare' ? 'standard' : blisterId)
+  getPlayerBlisterById(blisterId)
 
 const isPlayerPack = (item: InventoryItem): boolean => {
   if (item.type !== 'pack') return false
@@ -117,7 +117,6 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             ),
           )
           const isPityEligiblePack: boolean = isPityPackTypeEligible(
-            blisterId,
             blister.albumIds,
             blister.pityEligible,
           )
@@ -161,6 +160,9 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             })
             rewards = generated.rewards
             pityApplied = generated.pityApplied
+            if (pityContext.eligible) {
+              await registerEligiblePackOutcome(pityAlbum.id, generated.hasNewCard)
+            }
             if (protectionArmed && generated.hasNewCard && !generated.pityApplied) {
               logPityNaturalSuccess(pityAlbum.id)
             }
@@ -202,6 +204,7 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             pityDryPackCountBefore: pityContext.eligible
               ? pityContext.dryPackCount
               : undefined,
+            pityOutcomeRecorded: pityContext.eligible,
           }
 
           await database.packOpeningSessions.add(created)
@@ -251,7 +254,8 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
           )
           if (stored.location !== 'duplicate') newAlbumIds.add(reward.albumId)
         }
-        if (pending.pityEligible) {
+        // Сессии, созданные до переноса учёта pity в start(), завершаем по старой схеме один раз.
+        if (pending.pityEligible && !pending.pityOutcomeRecorded) {
           await registerEligiblePackOutcome(
             pending.albumId,
             newAlbumIds.has(pending.albumId),

@@ -22,18 +22,11 @@ const getCover = (album: AlbumDefinition): string =>
     `../../assets/game/${typeof album.metadata.assetAlbumId === 'string' ? album.metadata.assetAlbumId : album.id}/main/album/${album.theme.coverImage}`
   ] ?? ''
 
-// Рассчитывает заполнение конкретного журнала только по вклеенным в него карточкам.
+// Процент и счётчик используют одну метрику: уникальные собранные карточки журнала.
 const getProgress = (album: AlbumDefinition): AlbumProgress =>
   collection.getAlbumProgress(album.id)
-const getPlacedPercent = (album: AlbumDefinition): number => {
-  const slotCount: number = album.pages.reduce(
-    (total, page): number => total + page.slots.length,
-    0,
-  )
-  return slotCount
-    ? Math.min(100, Math.round((getProgress(album).placedCards / slotCount) * 100))
-    : 0
-}
+const getCollectedPercent = (album: AlbumDefinition): number =>
+  getProgress(album).completionPercent
 const isCollectible = (album: AlbumDefinition): boolean => album.cards.length > 0
 </script>
 
@@ -91,7 +84,7 @@ const isCollectible = (album: AlbumDefinition): boolean => album.cards.length > 
             {{ t(album.description) }}
           </span>
           <span v-if="isCollectible(album)" class="mt-1 block text-xs font-bold text-ink/55">
-            {{ t('album.library.progress', { progress: getPlacedPercent(album) }) }}
+            {{ t('album.library.progress', { progress: getCollectedPercent(album) }) }}
           </span>
           <span
             v-if="isCollectible(album)"
@@ -99,7 +92,7 @@ const isCollectible = (album: AlbumDefinition): boolean => album.cards.length > 
           >
             <span
               class="block h-full rounded-full bg-coral transition-[width] duration-300"
-              :style="{ width: `${getPlacedPercent(album)}%` }"
+              :style="{ width: `${getCollectedPercent(album)}%` }"
             />
           </span>
           <span

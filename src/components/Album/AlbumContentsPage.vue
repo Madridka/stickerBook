@@ -167,7 +167,7 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
             </strong>
             <span
               v-if="isTomskContents && team.descriptionKey"
-              class="flex min-h-0 max-w-[94%] flex-1 items-start justify-center overflow-hidden text-center text-[clamp(6px,1.08cqw,16px)] font-semibold leading-[1.22] text-ink/70"
+              class="flex min-h-0 w-full max-w-[94%] flex-1 items-start justify-center overflow-hidden px-[0.25cqw] text-center text-[clamp(8px,1.42cqw,18px)] font-semibold leading-[1.22] text-ink/70 [hyphens:auto] [overflow-wrap:anywhere] max-md:text-[clamp(4px,1.05cqw,6px)]"
             >
               {{ t(team.descriptionKey) }}
             </span>

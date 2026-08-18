@@ -123,13 +123,13 @@ const mobileMenuItems = computed(() => [
       void router.push('/goals')
     },
   },
-  {
-    label: t('app.leaderboard'),
-    icon: 'pi pi-trophy',
-    command: (): void => {
-      void router.push('/leaderboard')
-    },
-  },
+  // {
+  //   label: t('app.leaderboard'),
+  //   icon: 'pi pi-trophy',
+  //   command: (): void => {
+  //     void router.push('/leaderboard')
+  //   },
+  // },
   {
     label: t('common.theme'),
     icon: 'pi pi-palette',

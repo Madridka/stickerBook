@@ -72,7 +72,7 @@ const handleRowClick = (event: DataTableRowClickEvent<LeaderboardPlayer>): void 
         <template #body="{ data }">
           <Button
             link
-            class="!p-0 !font-black !text-ink hover:!text-coral"
+            class="!border-0 !bg-transparent !p-0 !font-black !text-ink hover:!bg-transparent hover:!text-coral"
             icon="pi pi-chevron-right"
             icon-pos="right"
             :label="data.username"

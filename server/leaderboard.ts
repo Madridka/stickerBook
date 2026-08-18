@@ -195,7 +195,9 @@ export const registerLeaderboard = (
       minimumCards: LEADERBOARD_CONFIG.minimumCards,
       generatedAt: snapshot.generatedAt,
       nextRefreshAt: snapshot.nextRefreshAt,
-      players: snapshot.players.map(toRatingPlayer),
+      players: snapshot.players.map((player, index): LeaderboardPlayer =>
+        toRatingPlayer(player, index + 1),
+      ),
     }
     return response
   })

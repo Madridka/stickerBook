@@ -199,6 +199,8 @@ test('publishes a cached leaderboard and profiles for qualified collectors', asy
   const player = body.players.find(({ username }: { username: string }) => username === 'ranked-player')
   assert.ok(player)
   assert.equal(body.players.some(({ username }: { username: string }) => username === 'under-fifty'), false)
+  assert.equal(player.position, 1)
+  assert.equal(player.username, 'ranked-player')
   assert.equal(player.totalCards, 55)
   assert.deepEqual(player.albums, {
     [wc26AlbumId]: 21,

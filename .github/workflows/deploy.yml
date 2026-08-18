@@ -57,7 +57,7 @@ jobs:
         run: cp dist/index.html dist/404.html
 
       - name: Upload build
-        uses: actions/upload-pages-artifact@v4.0.0
+        uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: ./dist
 

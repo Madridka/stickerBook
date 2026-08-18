@@ -80,7 +80,9 @@ export class StickerBookServerDatabase {
   constructor(path: string) {
     if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true })
     this.database = new DatabaseSync(path)
-    this.database.exec('PRAGMA foreign_keys = ON; PRAGMA journal_mode = WAL; PRAGMA busy_timeout = 5000;')
+    this.database.exec(
+      'PRAGMA foreign_keys = ON; PRAGMA trusted_schema = OFF; PRAGMA secure_delete = ON; PRAGMA journal_mode = WAL; PRAGMA busy_timeout = 5000;',
+    )
     this.database.exec(`
       CREATE TABLE IF NOT EXISTS users (
         id TEXT PRIMARY KEY,
@@ -210,22 +212,39 @@ export class StickerBookServerDatabase {
     return record ? toAdminUserRecord(record) : undefined
   }
 
-  putCloudSave(userId: string, baseVersion: number, data: unknown): CloudSaveRecord | undefined {
-    const current: CloudSaveRecord | undefined = this.getCloudSave(userId)
-    if ((current?.version ?? 0) !== baseVersion) return undefined
+  listUsersWithSaves = (): AdminUserRecord[] => {
+    const records = this.database
+      .prepare(
+        `SELECT users.id, users.username, users.created_at,
+                cloud_saves.version, cloud_saves.updated_at, cloud_saves.data_json
+         FROM users
+         JOIN cloud_saves ON cloud_saves.user_id = users.id`,
+      )
+      .all() as unknown as RawAdminUserRecord[]
+    return records.map(toAdminUserRecord)
+  }
 
+  putCloudSave(userId: string, baseVersion: number, data: unknown): CloudSaveRecord | undefined {
     const version: number = baseVersion + 1
     const updatedAt: number = Date.now()
     const serialized: string = JSON.stringify(data)
-    const statement: StatementSync = this.database.prepare(`
-      INSERT INTO cloud_saves (user_id, version, updated_at, data_json)
-      VALUES (?, ?, ?, ?)
-      ON CONFLICT(user_id) DO UPDATE SET
-        version = excluded.version,
-        updated_at = excluded.updated_at,
-        data_json = excluded.data_json
-    `)
-    statement.run(userId, version, updatedAt, serialized)
+    const statement: StatementSync =
+      baseVersion === 0
+        ? this.database.prepare(`
+            INSERT INTO cloud_saves (user_id, version, updated_at, data_json)
+            VALUES (?, ?, ?, ?)
+            ON CONFLICT(user_id) DO NOTHING
+          `)
+        : this.database.prepare(`
+            UPDATE cloud_saves
+            SET version = ?, updated_at = ?, data_json = ?
+            WHERE user_id = ? AND version = ?
+          `)
+    const result =
+      baseVersion === 0
+        ? statement.run(userId, version, updatedAt, serialized)
+        : statement.run(version, updatedAt, serialized, userId, baseVersion)
+    if (result.changes !== 1) return undefined
     return { version, updatedAt, data }
   }
 

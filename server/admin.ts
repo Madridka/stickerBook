@@ -1,6 +1,6 @@
-import { randomUUID, timingSafeEqual } from 'node:crypto'
+import { randomBytes, randomUUID, timingSafeEqual } from 'node:crypto'
 import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify'
-import { BLISTER_CONFIGS } from '../src/config/gameBalance.ts'
+import { BLISTER_CONFIGS, PITY_CONFIG } from '../src/config/gameBalance.ts'
 import type { ServerConfig } from './config.ts'
 import type { DatabaseBackupService } from './backup.ts'
 import {
@@ -8,16 +8,13 @@ import {
   type CloudSaveRecord,
   StickerBookServerDatabase,
 } from './database.ts'
-
-interface SnapshotTable {
-  name: string
-  rows: unknown[]
-}
-
-interface Snapshot {
-  schemaVersion: number
-  tables: SnapshotTable[]
-}
+import { verifyPassword } from './password.ts'
+import {
+  parseSaveSnapshot,
+  type SaveSnapshot as Snapshot,
+  type SaveSnapshotTable as SnapshotTable,
+} from './save-validation.ts'
+import { RequestRateLimiter, sendRateLimit } from './security.ts'
 
 interface SaveBody {
   baseVersion?: unknown
@@ -43,7 +40,12 @@ interface AdminSummary {
   goalsCompleted: number
   goalsClaimed: number
   albums: Array<{ id: string; cards: number; placed: number }>
-  pity: Array<{ albumId: string; dryPackCount: number; updatedAt: number }>
+  pity: Array<{
+    albumId: string
+    dryPackCount: number
+    dryPacksBeforeGuarantee: number | null
+    updatedAt: number
+  }>
 }
 
 const emptySummary = (): AdminSummary => ({
@@ -66,21 +68,6 @@ const asRecord = (value: unknown): Record<string, unknown> | undefined =>
 
 const asNumber = (value: unknown): number =>
   typeof value === 'number' && Number.isFinite(value) ? value : 0
-
-const readSnapshot = (data: unknown): Snapshot | undefined => {
-  const snapshot = asRecord(data)
-  if (!snapshot || snapshot.schemaVersion !== 1 || !Array.isArray(snapshot.tables)) return undefined
-  const tables: SnapshotTable[] = []
-  const names = new Set<string>()
-  for (const candidate of snapshot.tables) {
-    const table = asRecord(candidate)
-    if (!table || typeof table.name !== 'string' || !Array.isArray(table.rows)) return undefined
-    if (names.has(table.name)) return undefined
-    names.add(table.name)
-    tables.push({ name: table.name, rows: table.rows })
-  }
-  return { schemaVersion: 1, tables }
-}
 
 const getOrCreateTable = (snapshot: Snapshot, name: string): SnapshotTable => {
   let table = snapshot.tables.find((candidate) => candidate.name === name)
@@ -185,7 +172,7 @@ const grantItems = (
 }
 
 const summarize = (save: CloudSaveRecord | null): AdminSummary => {
-  const snapshot = save ? readSnapshot(save.data) : undefined
+  const snapshot = save ? parseSaveSnapshot(save.data) : undefined
   if (!snapshot) return emptySummary()
   const tables = new Map(snapshot.tables.map((table) => [table.name, table.rows]))
   const player = asRecord(tables.get('player')?.[0])
@@ -224,9 +211,17 @@ const summarize = (save: CloudSaveRecord | null): AdminSummary => {
       .flatMap((value): AdminSummary['pity'] => {
         const state = asRecord(value)
         if (!state || typeof state.albumId !== 'string') return []
+        const rawTarget = asNumber(state.dryPacksBeforeGuarantee)
+        const dryPacksBeforeGuarantee =
+          Number.isInteger(rawTarget) &&
+          rawTarget >= PITY_CONFIG.minDryPacksBeforeGuarantee &&
+          rawTarget <= PITY_CONFIG.maxDryPacksBeforeGuarantee
+            ? rawTarget
+            : null
         return [{
           albumId: state.albumId,
           dryPackCount: Math.max(0, Math.floor(asNumber(state.dryPackCount))),
+          dryPacksBeforeGuarantee,
           updatedAt: asNumber(state.updatedAt),
         }]
       })
@@ -260,8 +255,8 @@ const adminHtml = `<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Вклейка · Админка</title>
-  <style>
-    :root{color-scheme:dark;--bg:#0b1020;--panel:#131a2b;--line:#27324a;--muted:#8f9bb4;--text:#eef2ff;--accent:#7c5cff;--green:#34d399;--danger:#fb7185}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#19213a 0,var(--bg) 40%);color:var(--text);font:14px/1.5 Inter,system-ui,sans-serif}button,input,select,textarea{font:inherit}.shell{max-width:1280px;margin:auto;padding:32px 24px}.top{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.top-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}h1{font-size:30px;margin:0}.eyebrow{color:#9c8cff;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.16em}.muted{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat,.panel{background:rgba(19,26,43,.94);border:1px solid var(--line);border-radius:16px}.stat{padding:16px}.stat b{display:block;font-size:24px}.toolbar{display:flex;gap:10px;margin-bottom:14px}input,select,textarea{width:100%;color:var(--text);background:#0c1221;border:1px solid var(--line);border-radius:10px;padding:10px 12px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--accent)}button{color:white;background:var(--accent);border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}button.secondary{background:#263149}button:disabled{opacity:.55;cursor:not-allowed}.panel{overflow:hidden}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:900px}th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}tbody tr{cursor:pointer}tbody tr:hover{background:#192239}.name{font-weight:750}.pill{display:inline-flex;padding:3px 8px;border-radius:99px;background:#24304a;color:#cfd7ed;font-size:12px}.empty{padding:48px;text-align:center;color:var(--muted)}.pager{display:flex;justify-content:space-between;align-items:center;padding:13px 16px}.drawer{position:fixed;inset:0;display:none;background:#050812b8;z-index:5}.drawer.open{display:flex;justify-content:flex-end}.sheet{width:min(720px,100%);height:100%;overflow:auto;background:var(--bg);border-left:1px solid var(--line);padding:26px}.sheet-head{display:flex;justify-content:space-between;gap:16px}.close{font-size:20px;padding:6px 12px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}.mini{padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.mini b{display:block;font-size:20px}.albums{margin:18px 0}.album{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}.grant{margin:22px 0;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.grant h3{margin:0 0 4px}.grant-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.grant-actions{display:flex;align-items:center;gap:12px;margin-top:12px}.grant-actions .message{flex:1;margin:0}textarea{min-height:360px;resize:vertical;font:12px/1.5 ui-monospace,Consolas,monospace}.editor-head{display:flex;justify-content:space-between;align-items:center;margin:18px 0 8px}.message{min-height:22px;margin-top:8px;color:var(--green)}.message.error{color:var(--danger)}@media(max-width:700px){.shell{padding:20px 12px}.top{align-items:start;flex-direction:column}.stats{grid-template-columns:1fr}.grid,.grant-grid{grid-template-columns:1fr 1fr}.sheet{padding:18px}}
+  <style nonce="__CSP_NONCE__">
+    :root{color-scheme:dark;--bg:#0b1020;--panel:#131a2b;--line:#27324a;--muted:#8f9bb4;--text:#eef2ff;--accent:#7c5cff;--green:#34d399;--danger:#fb7185}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#19213a 0,var(--bg) 40%);color:var(--text);font:14px/1.5 Inter,system-ui,sans-serif}button,input,select,textarea{font:inherit}.shell{max-width:1280px;margin:auto;padding:32px 24px}.top{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.top-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}h1{font-size:30px;margin:0}.eyebrow{color:#9c8cff;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.16em}.muted{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat,.panel{background:rgba(19,26,43,.94);border:1px solid var(--line);border-radius:16px}.stat{padding:16px}.stat b{display:block;font-size:24px}.toolbar{display:flex;gap:10px;margin-bottom:14px}input,select,textarea{width:100%;color:var(--text);background:#0c1221;border:1px solid var(--line);border-radius:10px;padding:10px 12px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--accent)}button{color:white;background:var(--accent);border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}button.secondary{background:#263149}button:disabled{opacity:.55;cursor:not-allowed}.panel{overflow:hidden}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:900px}th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}tbody tr{cursor:pointer}tbody tr:hover{background:#192239}.name{font-weight:750}.pill{display:inline-flex;padding:3px 8px;border-radius:99px;background:#24304a;color:#cfd7ed;font-size:12px}.empty{padding:48px;text-align:center;color:var(--muted)}.pager{display:flex;justify-content:space-between;align-items:center;padding:13px 16px}.drawer{position:fixed;inset:0;display:none;background:#050812b8;z-index:5}.drawer.open{display:flex;justify-content:flex-end}.sheet{width:min(720px,100%);height:100%;overflow:auto;background:var(--bg);border-left:1px solid var(--line);padding:26px}.sheet-head{display:flex;justify-content:space-between;gap:16px}.close{font-size:20px;padding:6px 12px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}.mini{padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.mini b{display:block;font-size:20px}.albums{margin:18px 0}.album{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}.grant{margin:22px 0;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.grant h3{margin:0 0 4px}.grant-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.grant-actions{display:flex;align-items:center;gap:12px;margin-top:12px}.grant-actions .message{flex:1;margin:0}textarea{min-height:360px;resize:vertical;font:12px/1.5 ui-monospace,Consolas,monospace}.editor-head{display:flex;justify-content:space-between;align-items:center;margin:18px 0 8px}.editor-title{margin:0}.message{min-height:22px;margin-top:8px;color:var(--green)}.message.error{color:var(--danger)}@media(max-width:700px){.shell{padding:20px 12px}.top{align-items:start;flex-direction:column}.stats{grid-template-columns:1fr}.grid,.grant-grid{grid-template-columns:1fr 1fr}.sheet{padding:18px}}
   </style>
 </head>
 <body>
@@ -271,15 +266,15 @@ const adminHtml = `<!doctype html>
     <div class="toolbar"><input id="search" type="search" placeholder="Поиск по имени…" autocomplete="off"><button id="searchButton">Найти</button></div>
     <section class="panel"><div class="table-wrap"><table><thead><tr><th>Пользователь</th><th>Создан</th><th>Последнее сохранение</th><th>Монеты</th><th>Энергия</th><th>Карточки</th><th>В альбоме</th><th>Дубли</th></tr></thead><tbody id="rows"></tbody></table><div id="empty" class="empty" hidden>Пользователи не найдены</div></div><div class="pager"><button id="prev" class="secondary">Назад</button><span id="page" class="muted"></span><button id="next" class="secondary">Дальше</button></div></section>
   </main>
-  <aside id="drawer" class="drawer"><div class="sheet"><div class="sheet-head"><div><div class="eyebrow">Пользователь</div><h2 id="detailName"></h2><div id="detailMeta" class="muted"></div></div><button id="close" class="secondary close">×</button></div><div id="detailStats" class="grid"></div><div id="packWarning" class="grant" hidden><h3>Найдены некорректные паки</h3><div id="packWarningText" class="muted"></div><div class="grant-actions"><button id="repairPacks">Исправить паки</button><div id="repairMessage" class="message"></div></div></div><div class="albums"><h3>Альбомы</h3><div id="albums"></div></div><div class="albums"><h3>Pity system</h3><div id="pity"></div></div><section class="grant"><h3>Выдать предмет</h3><div class="muted">Предмет сразу появится в сохранении игрока</div><div class="grant-grid"><label><span class="muted">Тип</span><select id="grantType"><option value="card">Карточка</option><option value="pack">Пак</option></select></label><label id="grantAlbumField"><span class="muted">Альбом карточки</span><select id="grantAlbum">${ADMIN_ALBUM_OPTIONS}</select></label><label id="grantCardField"><span class="muted">ID карточки</span><input id="grantId" placeholder="Например: arg-01"></label><label id="grantPackField" hidden><span class="muted">Блистер</span><select id="grantPackId">${ADMIN_PACK_OPTIONS}</select></label><label><span class="muted">Количество</span><input id="grantQuantity" type="number" min="1" max="100" value="1"></label><label id="qualityField"><span class="muted">Качество, %</span><input id="grantQuality" type="number" min="1" max="100" value="100"></label></div><div class="grant-actions"><button id="grantButton">Выдать</button><div id="grantMessage" class="message"></div></div></section><div class="editor-head"><div><h3 style="margin:0">JSON сохранения</h3><span class="muted">Расширенное ручное редактирование</span></div><button id="save">Сохранить JSON</button></div><textarea id="json" spellcheck="false"></textarea><div id="message" class="message"></div></div></aside>
-  <script>
+  <aside id="drawer" class="drawer"><div class="sheet"><div class="sheet-head"><div><div class="eyebrow">Пользователь</div><h2 id="detailName"></h2><div id="detailMeta" class="muted"></div></div><button id="close" class="secondary close">×</button></div><div id="detailStats" class="grid"></div><div id="packWarning" class="grant" hidden><h3>Найдены некорректные паки</h3><div id="packWarningText" class="muted"></div><div class="grant-actions"><button id="repairPacks">Исправить паки</button><div id="repairMessage" class="message"></div></div></div><div class="albums"><h3>Альбомы</h3><div id="albums"></div></div><div class="albums"><h3>Pity system</h3><div id="pity"></div></div><section class="grant"><h3>Выдать предмет</h3><div class="muted">Предмет сразу появится в сохранении игрока</div><div class="grant-grid"><label><span class="muted">Тип</span><select id="grantType"><option value="card">Карточка</option><option value="pack">Пак</option></select></label><label id="grantAlbumField"><span class="muted">Альбом карточки</span><select id="grantAlbum">${ADMIN_ALBUM_OPTIONS}</select></label><label id="grantCardField"><span class="muted">ID карточки</span><input id="grantId" placeholder="Например: arg-01"></label><label id="grantPackField" hidden><span class="muted">Блистер</span><select id="grantPackId">${ADMIN_PACK_OPTIONS}</select></label><label><span class="muted">Количество</span><input id="grantQuantity" type="number" min="1" max="100" value="1"></label><label id="qualityField"><span class="muted">Качество, %</span><input id="grantQuality" type="number" min="1" max="100" value="100"></label></div><div class="grant-actions"><button id="grantButton">Выдать</button><div id="grantMessage" class="message"></div></div></section><div class="editor-head"><div><h3 class="editor-title">JSON сохранения</h3><span class="muted">Расширенное ручное редактирование</span></div><button id="save">Сохранить JSON</button></div><textarea id="json" spellcheck="false"></textarea><div id="message" class="message"></div></div></aside>
+  <script nonce="__CSP_NONCE__">
     const state={offset:0,limit:25,total:0,search:'',selected:null};
     const el=id=>document.getElementById(id); const fmt=value=>value?new Intl.DateTimeFormat('ru-RU',{dateStyle:'short',timeStyle:'short'}).format(value):'—'; const fmtEnergy=value=>Number.isFinite(value)?value.toFixed(2):'0.00';
     const api=async(url,options)=>{const response=await fetch(url,options);if(!response.ok){const body=await response.json().catch(()=>({}));throw new Error(body.code||('HTTP '+response.status))}return response.status===204?null:response.json()};
     const cell=(row,text,cls)=>{const td=document.createElement('td');td.textContent=text;if(cls)td.className=cls;row.append(td)};
     const load=async()=>{const params=new URLSearchParams({offset:String(state.offset),limit:String(state.limit)});if(state.search)params.set('search',state.search);const data=await api('/api/admin/users?'+params);state.total=data.total;el('rows').replaceChildren();for(const user of data.users){const row=document.createElement('tr');cell(row,user.username,'name');cell(row,fmt(user.createdAt));cell(row,fmt(user.updatedAt));cell(row,String(user.summary.coins));cell(row,fmtEnergy(user.summary.energy));cell(row,String(user.summary.cards));cell(row,String(user.summary.albums.reduce((sum,a)=>sum+a.placed,0)));cell(row,String(user.summary.duplicates));row.onclick=()=>openUser(user.id);el('rows').append(row)}el('empty').hidden=data.users.length>0;el('total').textContent=String(data.total);el('saved').textContent=String(data.users.filter(u=>u.version!==null).length);el('cards').textContent=String(data.users.reduce((sum,u)=>sum+u.summary.cards,0));const current=Math.floor(state.offset/state.limit)+1,totalPages=Math.max(1,Math.ceil(state.total/state.limit));el('page').textContent='Страница '+current+' из '+totalPages;el('prev').disabled=state.offset===0;el('next').disabled=state.offset+state.limit>=state.total}
     const mini=(label,value)=>'<div class="mini"><span class="muted">'+label+'</span><b>'+value+'</b></div>';
-    const openUser=async(id)=>{const data=await api('/api/admin/users/'+encodeURIComponent(id));state.selected=data.user;const u=data.user,s=u.summary;el('detailName').textContent=u.username;el('detailMeta').textContent='Создан: '+fmt(u.createdAt)+' · save v'+(u.save?.version??0);el('detailStats').innerHTML=mini('Монеты',s.coins)+mini('Энергия',fmtEnergy(s.energy))+mini('Карточки',s.cards)+mini('Дубли',s.duplicates)+mini('Наборы',s.packs)+mini('Цели',s.goalsCompleted)+mini('Награды',s.goalsClaimed);el('packWarning').hidden=s.invalidPacks===0;el('packWarningText').textContent='Некорректных записей: '+s.invalidPacks+'. Они не отображаются в магазине.';el('repairMessage').textContent='';el('albums').replaceChildren();for(const a of s.albums){const row=document.createElement('div');row.className='album';const name=document.createElement('b');name.textContent=a.id;const value=document.createElement('span');value.textContent=a.placed+' вклеено · '+a.cards+' карточек';row.append(name,value);el('albums').append(row)}if(!s.albums.length)el('albums').textContent='Нет карточек';el('pity').replaceChildren();for(const p of s.pity){const row=document.createElement('div');row.className='album';const name=document.createElement('b');name.textContent=p.albumId;const value=document.createElement('span');value.textContent=p.dryPackCount+' dry pack · '+fmt(p.updatedAt);row.append(name,value);el('pity').append(row)}if(!s.pity.length)el('pity').textContent='Нет накопленного pity';el('json').value=JSON.stringify(u.save?.data??{schemaVersion:1,tables:[]},null,2);el('message').textContent='';el('grantMessage').textContent='';el('drawer').classList.add('open')}
+    const openUser=async(id)=>{const data=await api('/api/admin/users/'+encodeURIComponent(id));state.selected=data.user;const u=data.user,s=u.summary;el('detailName').textContent=u.username;el('detailMeta').textContent='Создан: '+fmt(u.createdAt)+' · save v'+(u.save?.version??0);el('detailStats').innerHTML=mini('Монеты',s.coins)+mini('Энергия',fmtEnergy(s.energy))+mini('Карточки',s.cards)+mini('Дубли',s.duplicates)+mini('Наборы',s.packs)+mini('Цели',s.goalsCompleted)+mini('Награды',s.goalsClaimed);el('packWarning').hidden=s.invalidPacks===0;el('packWarningText').textContent='Некорректных записей: '+s.invalidPacks+'. Они не отображаются в магазине.';el('repairMessage').textContent='';el('albums').replaceChildren();for(const a of s.albums){const row=document.createElement('div');row.className='album';const name=document.createElement('b');name.textContent=a.id;const value=document.createElement('span');value.textContent=a.placed+' вклеено · '+a.cards+' карточек';row.append(name,value);el('albums').append(row)}if(!s.albums.length)el('albums').textContent='Нет карточек';el('pity').replaceChildren();for(const p of s.pity){const row=document.createElement('div');row.className='album';const name=document.createElement('b');name.textContent=p.albumId;const value=document.createElement('span');value.textContent=p.dryPackCount+'/'+(p.dryPacksBeforeGuarantee??'?')+' dry pack · '+fmt(p.updatedAt);row.append(name,value);el('pity').append(row)}if(!s.pity.length)el('pity').textContent='Нет накопленного pity';el('json').value=JSON.stringify(u.save?.data??{schemaVersion:1,tables:[]},null,2);el('message').textContent='';el('grantMessage').textContent='';el('drawer').classList.add('open')}
     const save=async()=>{if(!state.selected)return;let data;try{data=JSON.parse(el('json').value)}catch{el('message').textContent='JSON содержит синтаксическую ошибку';el('message').className='message error';return}el('save').disabled=true;try{const result=await api('/api/admin/users/'+encodeURIComponent(state.selected.id)+'/save',{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify({baseVersion:state.selected.save?.version??0,data})});el('message').textContent='Сохранено: версия '+result.save.version;el('message').className='message';await openUser(state.selected.id);await load()}catch(error){el('message').textContent='Не сохранено: '+error.message;el('message').className='message error'}finally{el('save').disabled=false}}
     const updateGrantForm=()=>{const pack=el('grantType').value==='pack';el('grantAlbumField').hidden=pack;el('grantCardField').hidden=pack;el('grantPackField').hidden=!pack;el('qualityField').hidden=pack}
     const grant=async()=>{if(!state.selected)return;const type=el('grantType').value,itemId=type==='pack'?el('grantPackId').value:el('grantId').value.trim();if(!itemId){el('grantMessage').textContent='Укажите ID карточки';el('grantMessage').className='message error';return}el('grantButton').disabled=true;try{const result=await api('/api/admin/users/'+encodeURIComponent(state.selected.id)+'/grant',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({baseVersion:state.selected.save?.version??0,type,albumId:el('grantAlbum').value,itemId,quantity:Number(el('grantQuantity').value),quality:Number(el('grantQuality').value)})});await openUser(state.selected.id);el('grantMessage').textContent='Выдано: '+result.granted.quantity;el('grantMessage').className='message';await load()}catch(error){el('grantMessage').textContent='Не выдано: '+error.message;el('grantMessage').className='message error'}finally{el('grantButton').disabled=false}}
@@ -297,33 +292,47 @@ export const registerAdmin = (
   backupService: DatabaseBackupService,
   config: ServerConfig,
 ): void => {
-  const enabled: boolean = Boolean(config.adminPassword && config.adminPassword.length >= 12)
+  const enabled: boolean = Boolean(config.adminPasswordHash)
+  const limiter = new RequestRateLimiter()
 
   const authorize = async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
     if (!enabled) {
       await reply.code(404).send({ code: 'not-found' })
       return
     }
+    const rateKey = `admin:${request.ip}`
+    const retryAfter = limiter.consume(rateKey, 8, 15 * 60 * 1_000)
+    if (retryAfter !== undefined) {
+      await sendRateLimit(reply, retryAfter)
+      return
+    }
     const credentials = readBasicCredentials(request.headers.authorization)
+    const passwordMatches = credentials
+      ? await verifyPassword(credentials.password, config.adminPasswordHash ?? '')
+      : false
     if (
       !credentials ||
       !safeEqual(credentials.username, config.adminUsername) ||
-      !safeEqual(credentials.password, config.adminPassword ?? '')
+      !passwordMatches
     ) {
       reply.header('WWW-Authenticate', 'Basic realm="Sticker Book Admin", charset="UTF-8"')
       await reply.code(401).send({ code: 'admin-unauthorized' })
+      return
     }
+    limiter.reset(rateKey)
   }
 
-  const sendAdminPage = async (_request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> =>
-    reply
+  const sendAdminPage = async (_request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> => {
+    const nonce: string = randomBytes(18).toString('base64')
+    return reply
       .header('Cache-Control', 'no-store')
       .header(
         'Content-Security-Policy',
-        "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self'",
+        `default-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'; style-src 'nonce-${nonce}'; script-src 'nonce-${nonce}'; connect-src 'self'`,
       )
       .type('text/html; charset=utf-8')
-      .send(adminHtml)
+      .send(adminHtml.replaceAll('__CSP_NONCE__', nonce))
+  }
 
   server.get('/admin', { preHandler: authorize }, sendAdminPage)
   server.get('/admin/', { preHandler: authorize }, sendAdminPage)
@@ -380,10 +389,11 @@ export const registerAdmin = (
       const user = storage.getAdminUser(request.params.id)
       if (!user) return reply.code(404).send({ code: 'user-not-found' })
       const { baseVersion, data } = request.body ?? {}
-      if (!Number.isInteger(baseVersion) || Number(baseVersion) < 0 || !readSnapshot(data)) {
+      const snapshot = parseSaveSnapshot(data)
+      if (!Number.isInteger(baseVersion) || Number(baseVersion) < 0 || !snapshot) {
         return reply.code(400).send({ code: 'invalid-save' })
       }
-      const save = storage.putCloudSave(user.id, Number(baseVersion), data)
+      const save = storage.putCloudSave(user.id, Number(baseVersion), snapshot)
       if (!save) {
         return reply.code(409).send({ code: 'save-conflict', save: storage.getCloudSave(user.id) })
       }
@@ -417,7 +427,7 @@ export const registerAdmin = (
       }
 
       const snapshot = user.save
-        ? readSnapshot(user.save.data)
+        ? parseSaveSnapshot(user.save.data)
         : { schemaVersion: 1, tables: [] }
       if (!snapshot) return reply.code(400).send({ code: 'invalid-current-save' })
       const granted = grantItems(snapshot, {
@@ -445,7 +455,7 @@ export const registerAdmin = (
       if (!Number.isInteger(baseVersion) || Number(baseVersion) < 0) {
         return reply.code(400).send({ code: 'invalid-save-version' })
       }
-      const snapshot = user.save ? readSnapshot(user.save.data) : undefined
+      const snapshot = user.save ? parseSaveSnapshot(user.save.data) : undefined
       if (!snapshot) return reply.code(400).send({ code: 'invalid-current-save' })
       const inventory = getOrCreateTable(snapshot, 'inventory')
       let repaired = 0

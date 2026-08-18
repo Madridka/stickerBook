@@ -14,12 +14,20 @@ export const CLOCK_CONFIG = {
 export const SERVER_SYNC_CONFIG = {
   requestTimeoutMs: 10_000,
   saveDebounceMs: 600,
+  maxRetryDelayMs: 30_000,
   pollIntervalMs: 15_000,
 }
+
+/** Техническая частота пересчёта и HTTP-кэширования публичного рейтинга. */
+export const LEADERBOARD_RUNTIME_CONFIG = {
+  cacheTtlMs: 60 * 60 * 1_000,
+  staleWhileRevalidateSeconds: 60,
+} as const
 
 /** Настройки экрана авторизации и локального гостевого режима. */
 export const AUTH_UI_CONFIG = {
   guestModeStorageKey: 'sticker-book-guest-mode',
+  authenticatedUserStorageKey: 'sticker-book-authenticated-user',
   showLocalSaveJson: false,
 }
 

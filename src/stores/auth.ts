@@ -13,6 +13,29 @@ interface AuthResponse {
   user: AuthUser
 }
 
+const readCachedUser = (): AuthUser | null => {
+  try {
+    const raw: string | null = localStorage.getItem(AUTH_UI_CONFIG.authenticatedUserStorageKey)
+    if (!raw) return null
+    const value: unknown = JSON.parse(raw)
+    if (!value || typeof value !== 'object') return null
+    const candidate = value as Partial<AuthUser>
+    return typeof candidate.id === 'string' && typeof candidate.username === 'string'
+      ? { id: candidate.id, username: candidate.username }
+      : null
+  } catch {
+    return null
+  }
+}
+
+const cacheUser = (value: AuthUser | null): void => {
+  if (value) {
+    localStorage.setItem(AUTH_UI_CONFIG.authenticatedUserStorageKey, JSON.stringify(value))
+  } else {
+    localStorage.removeItem(AUTH_UI_CONFIG.authenticatedUserStorageKey)
+  }
+}
+
 export interface RegisterInput {
   username: string
   password: string
@@ -43,15 +66,35 @@ export const useAuthStore = defineStore('auth', () => {
     }
     try {
       const response: AuthResponse = await apiRequest('/api/auth/session')
-      // Если аккаунт был создан, но его первый upload прервался, не удаляем исходный Dexie.
-      await cloudSave.initialize(true)
+      cacheUser(response.user)
       user.value = response.user
       isGuest.value = false
       localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
+      try {
+        // Если первый upload аккаунта прервался, локальный прогресс остаётся источником
+        // изменений и будет догружен при восстановлении соединения.
+        await cloudSave.initialize(response.user.id, true)
+      } catch {
+        await cloudSave.initializeOffline(response.user.id)
+        errorCode.value = 'server-unavailable'
+      }
     } catch (error: unknown) {
-      if (!(error instanceof ApiError && error.status === 401)) errorCode.value = 'server-unavailable'
-      user.value = null
-      isGuest.value = localStorage.getItem(AUTH_UI_CONFIG.guestModeStorageKey) === 'true'
+      if (error instanceof ApiError && error.status === 401) {
+        cacheUser(null)
+        user.value = null
+        isGuest.value = false
+      } else {
+        const cachedUser: AuthUser | null = readCachedUser()
+        if (cachedUser) {
+          await cloudSave.initializeOffline(cachedUser.id)
+          user.value = cachedUser
+          isGuest.value = false
+        } else {
+          user.value = null
+          isGuest.value = false
+        }
+        errorCode.value = 'server-unavailable'
+      }
     } finally {
       isInitializing.value = false
     }
@@ -68,10 +111,16 @@ export const useAuthStore = defineStore('auth', () => {
           password: input.password,
         }),
       })
-      await cloudSave.initialize(input.migrateLocalProgress)
       user.value = response.user
       isGuest.value = false
+      cacheUser(response.user)
       localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
+      try {
+        await cloudSave.initialize(response.user.id, input.migrateLocalProgress)
+      } catch {
+        await cloudSave.initializeOffline(response.user.id)
+        errorCode.value = 'server-unavailable'
+      }
       return true
     } catch (error: unknown) {
       errorCode.value = error instanceof ApiError ? (error.body.code ?? 'request-failed') : 'server-unavailable'
@@ -89,10 +138,16 @@ export const useAuthStore = defineStore('auth', () => {
         method: 'POST',
         body: JSON.stringify(input),
       })
-      await cloudSave.initialize(false)
       user.value = response.user
       isGuest.value = false
+      cacheUser(response.user)
       localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
+      try {
+        await cloudSave.initialize(response.user.id, false)
+      } catch {
+        await cloudSave.initializeOffline(response.user.id)
+        errorCode.value = 'server-unavailable'
+      }
       return true
     } catch (error: unknown) {
       errorCode.value = error instanceof ApiError ? (error.body.code ?? 'request-failed') : 'server-unavailable'
@@ -112,6 +167,7 @@ export const useAuthStore = defineStore('auth', () => {
         method: 'POST',
         body: JSON.stringify({}),
       })
+      cacheUser(null)
       await clearLocalGameData()
       window.location.reload()
     } catch (error: unknown) {
@@ -122,6 +178,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   const startGuest = (): void => {
     cloudSave.stop()
+    cacheUser(null)
     errorCode.value = null
     user.value = null
     isGuest.value = true

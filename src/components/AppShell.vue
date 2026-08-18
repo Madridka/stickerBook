@@ -124,6 +124,13 @@ const mobileMenuItems = computed(() => [
     },
   },
   {
+    label: t('app.leaderboard'),
+    icon: 'pi pi-trophy',
+    command: (): void => {
+      void router.push('/leaderboard')
+    },
+  },
+  {
     label: t('common.theme'),
     icon: 'pi pi-palette',
     command: toggleTheme,
@@ -214,7 +221,7 @@ onBeforeUnmount((): void => {
         <!-- Навигация, переключатель темы и меню -->
         <div
           v-if="!isPackOpening"
-          class="hidden items-center gap-4 text-sm font-semibold md:ml-4 md:flex md:gap-7"
+          class="hidden items-center gap-5 text-sm font-semibold xl:ml-4 xl:flex"
         >
           <RouterLink class="transition-colors hover:text-coral" to="/">{{
             t('app.home')
@@ -230,6 +237,9 @@ onBeforeUnmount((): void => {
           }}</RouterLink>
           <RouterLink class="transition-colors hover:text-coral" to="/goals">{{
             t('app.goals')
+          }}</RouterLink>
+          <RouterLink class="transition-colors hover:text-coral" to="/leaderboard">{{
+            t('app.leaderboard')
           }}</RouterLink>
           <button
             class="theme-toggle__button"
@@ -256,7 +266,7 @@ onBeforeUnmount((): void => {
           <Menu ref="desktopMenuRef" :model="desktopMenuItems" :popup="true" />
         </div>
 
-        <div v-if="!isPackOpening" class="ml-1 flex items-center md:hidden">
+        <div v-if="!isPackOpening" class="ml-1 flex items-center xl:hidden">
           <Button
             class="app-menu-button"
             text

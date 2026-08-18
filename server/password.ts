@@ -5,6 +5,7 @@ const SCRYPT_COST: number = 2 ** 17
 const SCRYPT_BLOCK_SIZE: number = 8
 const SCRYPT_PARALLELIZATION: number = 1
 const SCRYPT_MAX_MEMORY: number = 192 * 1024 * 1024
+const SALT_LENGTH: number = 16
 
 const deriveKey = (password: string, salt: Buffer): Promise<Buffer> =>
   new Promise((resolve, reject): void => {
@@ -26,7 +27,7 @@ const deriveKey = (password: string, salt: Buffer): Promise<Buffer> =>
   })
 
 export const hashPassword = async (password: string): Promise<string> => {
-  const salt: Buffer = randomBytes(16)
+  const salt: Buffer = randomBytes(SALT_LENGTH)
   const key: Buffer = await deriveKey(password, salt)
   return [
     'scrypt',
@@ -51,7 +52,13 @@ export const verifyPassword = async (password: string, encoded: string): Promise
     return false
   }
 
-  const expected: Buffer = Buffer.from(keyValue, 'base64url')
-  const actual: Buffer = await deriveKey(password, Buffer.from(saltValue, 'base64url'))
-  return expected.length === actual.length && timingSafeEqual(expected, actual)
+  try {
+    const salt: Buffer = Buffer.from(saltValue, 'base64url')
+    const expected: Buffer = Buffer.from(keyValue, 'base64url')
+    if (salt.length !== SALT_LENGTH || expected.length !== KEY_LENGTH) return false
+    const actual: Buffer = await deriveKey(password, salt)
+    return timingSafeEqual(expected, actual)
+  } catch {
+    return false
+  }
 }

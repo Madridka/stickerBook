@@ -1,5 +1,7 @@
 import type { BlisterConfig, PackConfig } from '../types/gameConfig.ts'
 
+export type PackHuntRewardSelection = 'fixed' | 'random' | 'rotation'
+
 /** Стоимость одного стандартного пака в игровых монетах. */
 export const PACK_PRICE: number = 20
 
@@ -14,10 +16,19 @@ export const DROP_ENGINE_CONFIG = {
   defaultSelectionWeight: 1,
 }
 
+/** Правила допуска в публичный рейтинг и отображаемые в нём журналы. */
+export const LEADERBOARD_CONFIG = {
+  minimumCards: 50,
+  albumIds: ['wc-26', 'ucl-26-27', 'tomsk', 'spainClubsLogo'],
+} as const
+
+export type LeaderboardAlbumId = (typeof LEADERBOARD_CONFIG.albumIds)[number]
+
 /** Скрытая защита late-game коллекции от серии паков без новых карточек. */
 export const PITY_CONFIG = {
   minCompletionRatio: 0.95,
-  dryPacksBeforeGuarantee: 4,
+  minDryPacksBeforeGuarantee: 2,
+  maxDryPacksBeforeGuarantee: 6,
   guaranteedMissingCards: 1,
 } as const
 
@@ -108,6 +119,23 @@ export const BLISTER_CONFIGS = {
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
 } satisfies Record<string, BlisterConfig>
+
+/** Выбор бесплатного блистера за мини-игру. */
+export const PACK_HUNT_REWARD_CONFIG = {
+  /**
+   * fixed — всегда первый блистер из blisterIds;
+   * random — случайный блистер из списка;
+   * rotation — смена блистера по времени с начала локального дня.
+   */
+  selection: 'random' as PackHuntRewardSelection,
+  blisterIds: [
+    BLISTER_CONFIGS.standard.id,
+    BLISTER_CONFIGS.ucl.id,
+    BLISTER_CONFIGS.kdv.id,
+    BLISTER_CONFIGS.spainLogos.id,
+  ],
+  rotationIntervalMs: FREE_PACK_COOLDOWN_MS,
+}
 
 /** Баланс энергии и начислений кликера. */
 export const CLICKER_CONFIG = {

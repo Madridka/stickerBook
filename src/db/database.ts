@@ -46,6 +46,10 @@ export interface PackHuntProgress {
   id: 'cooldown'
   // Момент получения награды, от которого отсчитывается перерыв
   lastClaimedAt: number
+  // Недавние завершённые игры исключаются из выбора до полного прохода ротации.
+  recentGameIds?: string[]
+  // Недавние наградные блистеры исключаются из случайного выбора до полного прохода ротации.
+  recentRewardPackIds?: string[]
 }
 
 export interface DuplicateExchange {
@@ -78,6 +82,7 @@ export interface PackOpeningSession {
   pityEligible?: boolean
   pityApplied?: boolean
   pityDryPackCountBefore?: number
+  pityDryPacksBeforeGuarantee?: number
   // Новые сессии фиксируют результат pity сразу; поле защищает от повторного учёта при finalize.
   pityOutcomeRecorded?: boolean
 }

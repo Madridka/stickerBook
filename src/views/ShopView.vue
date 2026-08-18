@@ -112,7 +112,7 @@ const buyBlister = async (blisterId: string): Promise<void> => {
 
 const playPackHunt = async (): Promise<void> => {
   if (!packHunt.canPlay) return
-  const game: PackMiniGameId = selectPackMiniGame()
+  const game: PackMiniGameId = selectPackMiniGame(packHunt.recentGameIds)
   await router.push({ name: 'pack-hunt', query: { game } })
 }
 

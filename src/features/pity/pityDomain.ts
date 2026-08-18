@@ -34,8 +34,24 @@ export const isPityCompletionEligible = (
   return displayedCompletionRatio >= PITY_CONFIG.minCompletionRatio
 }
 
-export const shouldProtectPack = (dryPackCount: number): boolean =>
-  dryPackCount >= PITY_CONFIG.dryPacksBeforeGuarantee
+export const selectPityDryPackTarget = (
+  randomSource: RandomSource = Math.random,
+): number => {
+  const roll: number = randomSource()
+  const normalizedRoll: number = Number.isFinite(roll)
+    ? Math.min(Math.max(roll, 0), 1 - Number.EPSILON)
+    : 0
+  const targetCount: number =
+    PITY_CONFIG.maxDryPacksBeforeGuarantee -
+    PITY_CONFIG.minDryPacksBeforeGuarantee +
+    1
+  return PITY_CONFIG.minDryPacksBeforeGuarantee + Math.floor(normalizedRoll * targetCount)
+}
+
+export const shouldProtectPack = (
+  dryPackCount: number,
+  dryPacksBeforeGuarantee: number,
+): boolean => dryPackCount >= dryPacksBeforeGuarantee
 
 export const isPityPackTypeEligible = (
   albumIds: readonly AlbumId[],

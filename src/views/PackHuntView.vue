@@ -34,7 +34,9 @@ const packHunt = usePackHuntStore()
 const phase: Ref<HuntPhase> = ref('loading')
 const requestedGame: unknown = route.query.game
 const selectedGame: Ref<PackMiniGameId> = ref(
-  isPackMiniGameId(requestedGame) ? requestedGame : selectPackMiniGame(),
+  isPackMiniGameId(requestedGame)
+    ? requestedGame
+    : selectPackMiniGame(packHunt.recentGameIds),
 )
 const gameComponents: Record<PackMiniGameId, Component> = {
   signal: PackHuntGame,
@@ -61,7 +63,7 @@ const cooldownPeriodText: string = formatCountdown(PACK_HUNT_CONFIG.cooldownMs)
 const saveReward = async (): Promise<void> => {
   phase.value = 'saving'
   try {
-    const result: PackHuntClaimResult = await packHunt.claimReward()
+    const result: PackHuntClaimResult = await packHunt.claimReward(selectedGame.value)
     if (result === 'cooldown-active') {
       phase.value = 'cooldown'
       return
@@ -78,7 +80,10 @@ const handleGameComplete = (): void => {
 }
 
 const openPack = async (): Promise<void> => {
-  await router.push({ name: 'pack-opening' })
+  await router.push({
+    name: 'pack-opening',
+    query: packHunt.claimedPackId ? { pack: packHunt.claimedPackId } : undefined,
+  })
 }
 
 const returnToShop = async (): Promise<void> => {
@@ -94,7 +99,11 @@ watch(
 
 onMounted(async (): Promise<void> => {
   await packHunt.load()
-  if (!isPackMiniGameId(requestedGame)) {
+  if (
+    !isPackMiniGameId(requestedGame) ||
+    packHunt.recentGameIds.includes(requestedGame)
+  ) {
+    selectedGame.value = selectPackMiniGame(packHunt.recentGameIds)
     await router.replace({ query: { ...route.query, game: selectedGame.value } })
   }
   phase.value = packHunt.canPlay ? 'playing' : 'cooldown'

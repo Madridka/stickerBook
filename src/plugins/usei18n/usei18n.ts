@@ -6,6 +6,7 @@ import common from '@/lang/ru/common.json'
 import duplicateExchange from '@/lang/ru/duplicateExchange.json'
 import dailyTasks from '@/lang/ru/dailyTasks.json'
 import home from '@/lang/ru/home.json'
+import leaderboard from '@/lang/ru/leaderboard.json'
 import goals from '@/lang/ru/goals.json'
 import packOpening from '@/lang/ru/packOpening.json'
 import packHunt from '@/lang/ru/packHunt.json'
@@ -23,6 +24,7 @@ const messages: {
     duplicateExchange: typeof duplicateExchange
     dailyTasks: typeof dailyTasks
     home: typeof home
+    leaderboard: typeof leaderboard
     goals: typeof goals
     packOpening: typeof packOpening
     packHunt: typeof packHunt
@@ -39,6 +41,7 @@ const messages: {
     duplicateExchange,
     dailyTasks,
     home,
+    leaderboard,
     goals,
     packOpening,
     packHunt,

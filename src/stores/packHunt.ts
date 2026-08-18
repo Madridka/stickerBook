@@ -1,18 +1,32 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database, type InventoryItem, type PackHuntProgress } from '@/db/database'
-import { BLISTER_CONFIGS } from '@/config/gameBalance'
 import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import { CLOCK_CONFIG } from '@/config/runtimeConfig'
 import { createId } from '@/utils/createId'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import {
+  appendRecentPackMiniGame,
+  isPackMiniGameId,
+  type PackMiniGameId,
+} from '@/utils/selectPackMiniGame'
+import {
+  appendRecentPackHuntReward,
+  selectPackHuntReward,
+} from '@/utils/selectPackHuntReward'
 
 export type PackHuntClaimResult = 'claimed' | 'cooldown-active'
+
+type PackHuntClaimTransactionResult =
+  | { status: 'claimed'; item: InventoryItem }
+  | { status: 'cooldown-active' }
 
 const PROGRESS_ID: PackHuntProgress['id'] = 'cooldown'
 
 export const usePackHuntStore = defineStore('packHunt', () => {
   const lastClaimedAt: Ref<number> = ref(0)
+  const recentGameIds: Ref<PackMiniGameId[]> = ref([])
+  const claimedPackId: Ref<string | undefined> = ref(undefined)
   const currentTime: Ref<number> = ref(Date.now())
   const isLoaded: Ref<boolean> = ref(false)
   const isClaiming: Ref<boolean> = ref(false)
@@ -33,38 +47,51 @@ export const usePackHuntStore = defineStore('packHunt', () => {
   const load = async (): Promise<void> => {
     const progress: PackHuntProgress | undefined = await database.packHuntProgress.get(PROGRESS_ID)
     lastClaimedAt.value = progress?.lastClaimedAt ?? 0
+    recentGameIds.value = (progress?.recentGameIds ?? []).filter(isPackMiniGameId)
     currentTime.value = Date.now()
     isLoaded.value = true
   }
 
   // Атомарно проверяет настроенную паузу, выдаёт набор и начинает новый отсчёт.
-  const claimReward = async (): Promise<PackHuntClaimResult> => {
+  const claimReward = async (completedGameId: PackMiniGameId): Promise<PackHuntClaimResult> => {
     if (isClaiming.value) return 'cooldown-active'
     isClaiming.value = true
 
     try {
-      const result: PackHuntClaimResult = await database.transaction(
+      const result: PackHuntClaimTransactionResult = await database.transaction(
         'rw',
         database.packHuntProgress,
         database.inventory,
         database.goalCounters,
-        async (): Promise<PackHuntClaimResult> => {
+        async (): Promise<PackHuntClaimTransactionResult> => {
           const claimedAt: number = Date.now()
           const saved: PackHuntProgress | undefined =
             await database.packHuntProgress.get(PROGRESS_ID)
 
-          if (saved && claimedAt < saved.lastClaimedAt + cooldownMs) return 'cooldown-active'
+          if (saved && claimedAt < saved.lastClaimedAt + cooldownMs) {
+            return { status: 'cooldown-active' }
+          }
+
+          const reward = selectPackHuntReward(claimedAt, saved?.recentRewardPackIds)
 
           const item: InventoryItem = {
             id: createId(),
             type: 'pack',
-            packId: BLISTER_CONFIGS.standard.id,
-            albumId: BLISTER_CONFIGS.standard.albumId,
+            packId: reward.packId,
+            albumId: reward.albumId,
             createdAt: claimedAt,
           }
           const progress: PackHuntProgress = {
             id: PROGRESS_ID,
             lastClaimedAt: claimedAt,
+            recentGameIds: appendRecentPackMiniGame(
+              (saved?.recentGameIds ?? []).filter(isPackMiniGameId),
+              completedGameId,
+            ),
+            recentRewardPackIds: appendRecentPackHuntReward(
+              saved?.recentRewardPackIds ?? [],
+              reward.packId,
+            ),
           }
 
           await database.inventory.add(item)
@@ -75,13 +102,16 @@ export const usePackHuntStore = defineStore('packHunt', () => {
             value: (counter?.value ?? 0) + 1,
             updatedAt: claimedAt,
           })
-          return 'claimed'
+          return { status: 'claimed', item }
         },
       )
 
-      if (result === 'claimed') notifyGoalsChanged()
+      if (result.status === 'claimed') {
+        claimedPackId.value = result.item.id
+        notifyGoalsChanged()
+      }
       await load()
-      return result
+      return result.status
     } finally {
       isClaiming.value = false
     }
@@ -91,6 +121,8 @@ export const usePackHuntStore = defineStore('packHunt', () => {
 
   return {
     lastClaimedAt,
+    recentGameIds,
+    claimedPackId,
     cooldownMs,
     cooldownRemainingMs,
     isLoaded,

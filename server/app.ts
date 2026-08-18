@@ -1,4 +1,5 @@
 import { existsSync } from 'node:fs'
+import { randomBytes } from 'node:crypto'
 import Fastify, {
   type FastifyInstance,
   type FastifyReply,
@@ -17,6 +18,9 @@ import { hashPassword, verifyPassword } from './password.ts'
 import { registerAdmin } from './admin.ts'
 import { DatabaseBackupService } from './backup.ts'
 import { registerOpenApi } from './openapi.ts'
+import { registerLeaderboard } from './leaderboard.ts'
+import { parseSaveSnapshot } from './save-validation.ts'
+import { registerSecurity, RequestRateLimiter, sendRateLimit } from './security.ts'
 
 interface AuthBody {
   username?: unknown
@@ -28,14 +32,16 @@ interface SaveBody {
   data?: unknown
 }
 
-const SESSION_COOKIE: string = 'sticker_book_session'
 const USERNAME_PATTERN: RegExp = /^[\p{L}\p{N}_.-]+$/u
-const MAX_SAVE_BYTES: number = 10 * 1024 * 1024
+const MAX_SAVE_BYTES: number = 2 * 1024 * 1024
+const AUTH_RATE_WINDOW_MS: number = 15 * 60 * 1_000
+const REGISTRATION_RATE_WINDOW_MS: number = 60 * 60 * 1_000
 
 const normalizeUsername = (username: string): string => username.normalize('NFKC').toLowerCase()
 
 const readCredentials = (
   body: AuthBody,
+  minimumPasswordLength: number = 8,
 ): { username: string; normalizedUsername: string; password: string } | undefined => {
   if (typeof body.username !== 'string' || typeof body.password !== 'string') return undefined
   const username: string = body.username.trim().normalize('NFKC')
@@ -43,7 +49,7 @@ const readCredentials = (
     username.length < 3 ||
     username.length > 32 ||
     !USERNAME_PATTERN.test(username) ||
-    body.password.length < 8 ||
+    body.password.length < minimumPasswordLength ||
     body.password.length > 128
   ) {
     return undefined
@@ -53,11 +59,12 @@ const readCredentials = (
 
 const setSessionCookie = (
   reply: FastifyReply,
+  name: string,
   token: string,
   expiresAt: number,
   secure: boolean,
 ): void => {
-  reply.setCookie(SESSION_COOKIE, token, {
+  reply.setCookie(name, token, {
     path: '/',
     httpOnly: true,
     sameSite: 'lax',
@@ -67,7 +74,18 @@ const setSessionCookie = (
 }
 
 export const createServer = async (config: ServerConfig): Promise<FastifyInstance> => {
-  const server: FastifyInstance = Fastify({ logger: true, bodyLimit: MAX_SAVE_BYTES })
+  const isProduction: boolean = config.isProduction ?? config.secureCookie
+  const logLevel = config.logLevel ?? (isProduction ? 'warn' : 'info')
+  const server: FastifyInstance = Fastify({
+    bodyLimit: MAX_SAVE_BYTES,
+    logger: logLevel === 'silent' ? false : { level: logLevel },
+    trustProxy: config.trustProxy ?? false,
+  })
+  const sessionCookie: string = config.secureCookie
+    ? '__Host-sticker_book_session'
+    : 'sticker_book_session'
+  const authLimiter = new RequestRateLimiter()
+  const invalidPasswordHash: string = await hashPassword(randomBytes(32).toString('base64url'))
   const storage = new StickerBookServerDatabase(config.databasePath)
   const backupService = new DatabaseBackupService(
     storage,
@@ -76,6 +94,23 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
     server.log,
   )
   await server.register(cookie)
+  registerSecurity(server, config)
+
+  server.setErrorHandler(async (error, _request, reply): Promise<void> => {
+    const statusCode: number =
+      typeof error.statusCode === 'number' && error.statusCode >= 400 && error.statusCode < 600
+        ? error.statusCode
+        : 500
+    if (statusCode >= 500) server.log.error({ error }, 'Unhandled server error')
+    await reply.code(statusCode).send({
+      code:
+        statusCode === 413
+          ? 'payload-too-large'
+          : statusCode >= 500
+            ? 'internal-server-error'
+            : 'invalid-request',
+    })
+  })
 
   server.addHook('onClose', async (): Promise<void> => {
     try {
@@ -86,14 +121,28 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   })
 
   const currentUser = (request: FastifyRequest): PublicUser | undefined => {
-    const token: string | undefined = request.cookies[SESSION_COOKIE]
+    const token: string | undefined = request.cookies[sessionCookie]
     return token ? storage.findUserBySession(token) : undefined
+  }
+
+  const applyRateLimit = async (
+    key: string,
+    limit: number,
+    windowMs: number,
+    reply: FastifyReply,
+  ): Promise<boolean> => {
+    if (!isProduction) return false
+    const retryAfter = authLimiter.consume(key, limit, windowMs)
+    if (retryAfter === undefined) return false
+    await sendRateLimit(reply, retryAfter)
+    return true
   }
 
   server.get('/api/health', async (): Promise<{ status: 'ok' }> => ({ status: 'ok' }))
 
-  registerOpenApi(server)
+  if (config.apiDocsEnabled ?? !isProduction) registerOpenApi(server)
   registerAdmin(server, storage, backupService, config)
+  registerLeaderboard(server, storage)
 
   server.get('/api/auth/session', async (request, reply) => {
     const user: PublicUser | undefined = currentUser(request)
@@ -102,7 +151,9 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   })
 
   server.post<{ Body: AuthBody }>('/api/auth/register', async (request, reply) => {
-    const credentials = readCredentials(request.body ?? {})
+    const rateKey = `register:${request.ip}`
+    if (await applyRateLimit(rateKey, 20, REGISTRATION_RATE_WINDOW_MS, reply)) return
+    const credentials = readCredentials(request.body ?? {}, 12)
     if (!credentials) return reply.code(400).send({ code: 'invalid-credentials' })
     if (storage.findUserByNormalizedUsername(credentials.normalizedUsername)) {
       return reply.code(409).send({ code: 'username-taken' })
@@ -120,28 +171,43 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
       return reply.code(409).send({ code: 'username-taken' })
     }
     const session = storage.createSession(user.id)
-    setSessionCookie(reply, session.token, session.expiresAt, config.secureCookie)
+    setSessionCookie(reply, sessionCookie, session.token, session.expiresAt, config.secureCookie)
     return reply.code(201).send({ user })
   })
 
   server.post<{ Body: AuthBody }>('/api/auth/login', async (request, reply) => {
+    const rateKey = `login:${request.ip}`
+    if (await applyRateLimit(rateKey, 100, AUTH_RATE_WINDOW_MS, reply)) return
     const credentials = readCredentials(request.body ?? {})
     if (!credentials) return reply.code(400).send({ code: 'invalid-credentials' })
+    const accountRateKey = `login-account:${credentials.normalizedUsername}`
+    if (await applyRateLimit(accountRateKey, 10, AUTH_RATE_WINDOW_MS, reply)) return
     const user: UserRecord | undefined = storage.findUserByNormalizedUsername(
       credentials.normalizedUsername,
     )
-    if (!user || !(await verifyPassword(credentials.password, user.passwordHash))) {
+    const passwordMatches = await verifyPassword(
+      credentials.password,
+      user?.passwordHash ?? invalidPasswordHash,
+    )
+    if (!user || !passwordMatches) {
       return reply.code(401).send({ code: 'invalid-login' })
     }
     const session = storage.createSession(user.id)
-    setSessionCookie(reply, session.token, session.expiresAt, config.secureCookie)
+    setSessionCookie(reply, sessionCookie, session.token, session.expiresAt, config.secureCookie)
+    authLimiter.reset(rateKey)
+    authLimiter.reset(accountRateKey)
     return { user: { id: user.id, username: user.username } }
   })
 
   server.post('/api/auth/logout', async (request, reply) => {
-    const token: string | undefined = request.cookies[SESSION_COOKIE]
+    const token: string | undefined = request.cookies[sessionCookie]
     if (token) storage.deleteSession(token)
-    reply.clearCookie(SESSION_COOKIE, { path: '/' })
+    reply.clearCookie(sessionCookie, {
+      path: '/',
+      httpOnly: true,
+      sameSite: 'lax',
+      secure: config.secureCookie,
+    })
     return reply.code(204).send()
   })
 
@@ -155,13 +221,14 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
     const user: PublicUser | undefined = currentUser(request)
     if (!user) return reply.code(401).send({ code: 'unauthorized' })
     const { baseVersion, data } = request.body ?? {}
-    if (!Number.isInteger(baseVersion) || Number(baseVersion) < 0 || data === undefined) {
+    const snapshot = parseSaveSnapshot(data)
+    if (!Number.isInteger(baseVersion) || Number(baseVersion) < 0 || !snapshot) {
       return reply.code(400).send({ code: 'invalid-save' })
     }
     const save: CloudSaveRecord | undefined = storage.putCloudSave(
       user.id,
       Number(baseVersion),
-      data,
+      snapshot,
     )
     if (!save) {
       return reply.code(409).send({ code: 'save-conflict', save: storage.getCloudSave(user.id) })

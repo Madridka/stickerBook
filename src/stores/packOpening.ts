@@ -138,9 +138,17 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
                 collectedPlayerIds.size,
                 pityAlbum.cards.length,
               )
-            : { eligible: false, dryPackCount: 0 }
+            : {
+                eligible: false,
+                dryPackCount: 0,
+                dryPacksBeforeGuarantee: 0,
+              }
           const protectionArmed: boolean =
-            pityContext.eligible && shouldProtectPack(pityContext.dryPackCount)
+            pityContext.eligible &&
+            shouldProtectPack(
+              pityContext.dryPackCount,
+              pityContext.dryPacksBeforeGuarantee,
+            )
           if (pityAlbum && protectionArmed) logPityProtectionArmed(pityAlbum.id)
 
           let pityApplied = false
@@ -203,6 +211,9 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
             pityApplied,
             pityDryPackCountBefore: pityContext.eligible
               ? pityContext.dryPackCount
+              : undefined,
+            pityDryPacksBeforeGuarantee: pityContext.eligible
+              ? pityContext.dryPacksBeforeGuarantee
               : undefined,
             pityOutcomeRecorded: pityContext.eligible,
           }

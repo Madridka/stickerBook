@@ -1,4 +1,5 @@
 import type { FastifyInstance, FastifyReply } from 'fastify'
+import { LEADERBOARD_CONFIG } from '../src/config/gameBalance.ts'
 
 const openApiDocument = {
   openapi: '3.1.0',
@@ -12,6 +13,7 @@ const openApiDocument = {
     { name: 'System' },
     { name: 'Auth' },
     { name: 'Save' },
+    { name: 'Leaderboard' },
     { name: 'Admin' },
   ],
   components: {
@@ -55,6 +57,68 @@ const openApiDocument = {
           reason: { enum: ['manual', 'scheduled', 'startup'] },
           sizeBytes: { type: 'integer', minimum: 0 },
         },
+      },
+      LeaderboardPlayer: {
+        type: 'object',
+        required: ['position', 'userId', 'username', 'totalCards', 'albums'],
+        properties: {
+          position: { type: 'integer', minimum: 1 },
+          userId: { type: 'string', format: 'uuid' },
+          username: { type: 'string' },
+          totalCards: { type: 'integer', minimum: 0 },
+          albums: {
+            type: 'object',
+            required: [...LEADERBOARD_CONFIG.albumIds],
+            properties: Object.fromEntries(
+              LEADERBOARD_CONFIG.albumIds.map((albumId) => [
+                albumId,
+                { type: 'integer', minimum: 0 },
+              ]),
+            ),
+          },
+        },
+      },
+      LeaderboardAlbumDetails: {
+        type: 'object',
+        required: ['albumId', 'totalCards', 'placedCards'],
+        properties: {
+          albumId: { type: 'string' },
+          totalCards: { type: 'integer', minimum: 0 },
+          placedCards: { type: 'integer', minimum: 0 },
+        },
+      },
+      LeaderboardPlayerProfile: {
+        allOf: [
+          { $ref: '#/components/schemas/LeaderboardPlayer' },
+          {
+            type: 'object',
+            required: [
+              'uniqueCards',
+              'duplicateCards',
+              'placedCards',
+              'completedTasks',
+              'completedGoals',
+              'completedDailyTasks',
+              'createdAt',
+              'saveUpdatedAt',
+              'albumDetails',
+            ],
+            properties: {
+              uniqueCards: { type: 'integer', minimum: 0 },
+              duplicateCards: { type: 'integer', minimum: 0 },
+              placedCards: { type: 'integer', minimum: 0 },
+              completedTasks: { type: 'integer', minimum: 0 },
+              completedGoals: { type: 'integer', minimum: 0 },
+              completedDailyTasks: { type: 'integer', minimum: 0 },
+              createdAt: { type: 'integer' },
+              saveUpdatedAt: { type: 'integer' },
+              albumDetails: {
+                type: 'array',
+                items: { $ref: '#/components/schemas/LeaderboardAlbumDetails' },
+              },
+            },
+          },
+        ],
       },
     },
   },
@@ -128,6 +192,67 @@ const openApiDocument = {
           },
         },
         responses: { 200: { description: 'Сохранение записано' }, 409: { description: 'Конфликт версии' } },
+      },
+    },
+    '/api/leaderboard': {
+      get: {
+        tags: ['Leaderboard'],
+        summary: 'Получить рейтинг коллекционеров',
+        responses: {
+          200: {
+            description: `Игроки с ${LEADERBOARD_CONFIG.minimumCards} и более карточками; снимок обновляется раз в час`,
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  required: ['minimumCards', 'generatedAt', 'nextRefreshAt', 'players'],
+                  properties: {
+                    minimumCards: { type: 'integer', minimum: 0 },
+                    generatedAt: { type: 'integer' },
+                    nextRefreshAt: { type: 'integer' },
+                    players: {
+                      type: 'array',
+                      items: { $ref: '#/components/schemas/LeaderboardPlayer' },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/leaderboard/{userId}': {
+      get: {
+        tags: ['Leaderboard'],
+        summary: 'Получить публичную статистику игрока из рейтинга',
+        parameters: [
+          {
+            name: 'userId',
+            in: 'path',
+            required: true,
+            schema: { type: 'string', format: 'uuid' },
+          },
+        ],
+        responses: {
+          200: {
+            description: 'Профиль и статистика по журналам',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  required: ['generatedAt', 'nextRefreshAt', 'player'],
+                  properties: {
+                    generatedAt: { type: 'integer' },
+                    nextRefreshAt: { type: 'integer' },
+                    player: { $ref: '#/components/schemas/LeaderboardPlayerProfile' },
+                  },
+                },
+              },
+            },
+          },
+          404: { description: 'Игрок не входит в рейтинг' },
+        },
       },
     },
     '/api/admin/users': {

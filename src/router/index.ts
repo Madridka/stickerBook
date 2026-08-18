@@ -78,6 +78,14 @@ const router: Router = createRouter({
       },
     },
     {
+      path: '/leaderboard',
+      name: 'leaderboard',
+      component: () => import('@/views/LeaderboardView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('app.leaderboard'),
+      },
+    },
+    {
       path: '/pack-opening',
       name: 'pack-opening',
       component: () => import('@/views/PackOpeningView.vue'),

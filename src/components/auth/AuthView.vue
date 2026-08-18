@@ -120,7 +120,7 @@ const continueAsGuest = (): void => {
             :feedback="false"
             :toggle-mask="true"
             :autocomplete="mode === 'login' ? 'current-password' : 'new-password'"
-            minlength="8"
+            :minlength="mode === 'register' ? 12 : 8"
             maxlength="128"
             required
           />

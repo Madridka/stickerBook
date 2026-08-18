@@ -81,7 +81,11 @@ vi.mock('@/data/albumRegistry', () => ({
 }))
 
 vi.mock('@/features/pity/albumPityService', () => ({
-  getAlbumPityContext: vi.fn(async () => ({ eligible: true, dryPackCount: 0 })),
+  getAlbumPityContext: vi.fn(async () => ({
+    eligible: true,
+    dryPackCount: 0,
+    dryPacksBeforeGuarantee: 4,
+  })),
   registerEligiblePackOutcome: testState.registerEligiblePackOutcome,
   logPityApplied: vi.fn(),
   logPityNaturalSuccess: vi.fn(),
@@ -120,6 +124,8 @@ describe('pack opening pity persistence', () => {
     expect(testState.registerEligiblePackOutcome).toHaveBeenCalledOnce()
     expect(testState.registerEligiblePackOutcome).toHaveBeenCalledWith('wc-26', false)
     expect(session?.pityOutcomeRecorded).toBe(true)
+    expect(session?.pityDryPacksBeforeGuarantee).toBe(4)
     expect(testState.addedSession?.pityOutcomeRecorded).toBe(true)
+    expect(testState.addedSession?.pityDryPacksBeforeGuarantee).toBe(4)
   })
 })

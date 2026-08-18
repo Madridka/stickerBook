@@ -19,14 +19,14 @@
 | `/api/auth/logout` | Выход | Cookie |
 | `/api/auth/session` | Текущая сессия | Cookie |
 | `/api/save` | Чтение и запись сохранения | Cookie |
-| `/api/docs` | Swagger UI | Нет |
-| `/api/docs/openapi.json` | OpenAPI 3.1 | Нет |
+| `/api/docs` | Swagger UI, выключен в production | Нет |
+| `/api/docs/openapi.json` | OpenAPI 3.1, выключен в production | Нет |
 | `/api/admin/*` | Управление игроками и БД | HTTP Basic |
 
 Запись `/api/save` оптимистично блокируется полем `baseVersion`. Конфликт возвращает HTTP
 409 и актуальное сохранение, поэтому старое устройство не перезаписывает более новую версию.
-Swagger UI загружает статические ресурсы `swagger-ui-dist` с CDN; сама OpenAPI-схема всегда
-отдаётся локально и остаётся доступной без CDN.
+Swagger UI загружает статические ресурсы `swagger-ui-dist` с CDN только в явно включённом
+режиме документации. В production маршруты документации по умолчанию не регистрируются.
 
 ## Бэкапы
 
@@ -77,7 +77,11 @@ Authorization: Basic ...
 | `STICKER_BOOK_BACKUP_INTERVAL_HOURS` | `24` |
 | `STICKER_BOOK_BACKUP_RETENTION` | `14` |
 | `STICKER_BOOK_ADMIN_USERNAME` | `admin` |
-| `STICKER_BOOK_ADMIN_PASSWORD` | админка выключена |
+| `STICKER_BOOK_ADMIN_PASSWORD_HASH` | админка выключена |
+| `STICKER_BOOK_ALLOWED_ORIGINS` | только origin текущего Host |
+| `STICKER_BOOK_API_DOCS_ENABLED` | `false` в production |
+| `STICKER_BOOK_LOG_LEVEL` | `warn` в production |
+| `STICKER_BOOK_TRUST_PROXY` | `false` |
 
 Backup-каталог не следует размещать внутри публичного `dist`. Для внешнего `/admin` и
 Swagger с административной авторизацией требуется HTTPS reverse proxy.

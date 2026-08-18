@@ -5,6 +5,7 @@ import {
   createPityPackRewards,
   isPityCompletionEligible,
   isPityPackTypeEligible,
+  selectPityDryPackTarget,
   shouldProtectPack,
 } from '@/features/pity/pityDomain'
 import type { RandomSource, RarityOdds } from '@/utils/dropEngine'
@@ -83,9 +84,19 @@ describe('pity domain', () => {
     expect(isPityCompletionEligible(10000, 10000)).toBe(false)
   })
 
-  it('arms only after four completed dry packs', () => {
-    expect([0, 1, 2, 3].map(shouldProtectPack)).toEqual([false, false, false, false])
-    expect(shouldProtectPack(PITY_CONFIG.dryPacksBeforeGuarantee)).toBe(true)
+  it('selects an inclusive random target from two to six dry packs', () => {
+    expect(selectPityDryPackTarget(() => 0)).toBe(PITY_CONFIG.minDryPacksBeforeGuarantee)
+    expect(selectPityDryPackTarget(() => 0.2)).toBe(3)
+    expect(selectPityDryPackTarget(() => 0.999999)).toBe(
+      PITY_CONFIG.maxDryPacksBeforeGuarantee,
+    )
+  })
+
+  it('arms when the saved random dry-pack target is reached', () => {
+    expect(shouldProtectPack(1, 2)).toBe(false)
+    expect(shouldProtectPack(2, 2)).toBe(true)
+    expect(shouldProtectPack(5, 6)).toBe(false)
+    expect(shouldProtectPack(6, 6)).toBe(true)
   })
 
   it('requires one album and an eligible blister', () => {

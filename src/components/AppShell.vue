@@ -21,11 +21,24 @@ const auth = useAuthStore()
 const player = usePlayerStore()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
 const isAlbumWorkspace = computed((): boolean => route.meta.albumWorkspace === true)
+const isRouteLoading: Ref<boolean> = ref(false)
 const desktopMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const mobileMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const isResetConfirmOpen: Ref<boolean> = ref(false)
 const isResetting: Ref<boolean> = ref(false)
 let resourceTimer: number | undefined
+
+// Ленивые экраны могут загружаться заметное время, поэтому показываем состояние
+// перехода, пока роутер получает и подготавливает следующий раздел.
+const removeRouteLoadingStart = router.beforeEach((): void => {
+  isRouteLoading.value = true
+})
+const removeRouteLoadingEnd = router.afterEach((): void => {
+  isRouteLoading.value = false
+})
+const removeRouteLoadingError = router.onError((): void => {
+  isRouteLoading.value = false
+})
 
 const resetProgressItem = computed(() => ({
   label: t('app.resetProgress'),
@@ -150,6 +163,9 @@ onMounted((): void => {
 
 onBeforeUnmount((): void => {
   if (resourceTimer !== undefined) window.clearInterval(resourceTimer)
+  removeRouteLoadingStart()
+  removeRouteLoadingEnd()
+  removeRouteLoadingError()
 })
 </script>
 
@@ -263,10 +279,28 @@ onBeforeUnmount((): void => {
 
     <!-- Область отображения текущего маршрута -->
     <main
-      class="flex min-h-0 w-full flex-1 items-center overflow-hidden"
+      class="relative flex min-h-0 w-full flex-1 items-center overflow-hidden"
       :class="isAlbumWorkspace ? 'max-w-none p-0' : 'mx-auto max-w-6xl px-5 py-2 sm:px-8 sm:py-4'"
+      :aria-busy="isRouteLoading"
     >
       <RouterView />
+
+      <Transition name="route-loading">
+        <div
+          v-if="isRouteLoading"
+          class="absolute inset-0 z-50 flex items-center justify-center bg-paper/85 backdrop-blur-[2px]"
+          role="status"
+          aria-live="polite"
+          data-route-loading
+        >
+          <div
+            class="flex items-center gap-3 border-2 border-ink bg-paper px-5 py-4 font-black shadow-[5px_5px_0_rgb(var(--color-coral))]"
+          >
+            <i class="pi pi-spin pi-spinner text-2xl text-coral" aria-hidden="true" />
+            <span>{{ t('common.sectionLoading') }}</span>
+          </div>
+        </div>
+      </Transition>
     </main>
 
     <Dialog
@@ -300,3 +334,15 @@ onBeforeUnmount((): void => {
     </Dialog>
   </div>
 </template>
+
+<style scoped>
+.route-loading-enter-active,
+.route-loading-leave-active {
+  transition: opacity 150ms ease;
+}
+
+.route-loading-enter-from,
+.route-loading-leave-to {
+  opacity: 0;
+}
+</style>

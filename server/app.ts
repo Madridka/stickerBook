@@ -97,9 +97,13 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   registerSecurity(server, config)
 
   server.setErrorHandler(async (error, _request, reply): Promise<void> => {
-    const statusCode: number =
-      typeof error.statusCode === 'number' && error.statusCode >= 400 && error.statusCode < 600
+    const errorStatusCode =
+      typeof error === 'object' && error !== null && 'statusCode' in error
         ? error.statusCode
+        : undefined
+    const statusCode: number =
+      typeof errorStatusCode === 'number' && errorStatusCode >= 400 && errorStatusCode < 600
+        ? errorStatusCode
         : 500
     if (statusCode >= 500) server.log.error({ error }, 'Unhandled server error')
     await reply.code(statusCode).send({

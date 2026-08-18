@@ -426,7 +426,7 @@ export const registerAdmin = (
         return reply.code(400).send({ code: 'invalid-grant' })
       }
 
-      const snapshot = user.save
+      const snapshot: Snapshot | undefined = user.save
         ? parseSaveSnapshot(user.save.data)
         : { schemaVersion: 1, tables: [] }
       if (!snapshot) return reply.code(400).send({ code: 'invalid-current-save' })

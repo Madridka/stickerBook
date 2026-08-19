@@ -47,6 +47,8 @@ import croatiaPages from './croatia/pages.json'
 import ghanaPages from './ghana/pages.json'
 import panamaPages from './panama/pages.json'
 
+const topRowSlotX: readonly number[] = [512, 844]
+
 const visibleTeamPages = [
   ...mexicoPages,
   ...southAfricaPages,
@@ -99,6 +101,10 @@ const visibleTeamPages = [
 ].map((page, index) => ({
   ...page,
   number: index + 8,
+  slots: page.slots.map((slot, slotIndex) => ({
+    ...slot,
+    x: topRowSlotX[slotIndex] ?? slot.x,
+  })),
 }))
 
 export default {

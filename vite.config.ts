@@ -37,7 +37,7 @@ const productionCsp = (): Plugin => ({
       attrs: {
         'http-equiv': 'Content-Security-Policy',
         content:
-          "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'",
+          "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://cdn.jsdelivr.net; font-src 'self' data:; connect-src 'self'",
       },
       injectTo: 'head-prepend',
     }],

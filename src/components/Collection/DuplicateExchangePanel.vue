@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, type ComputedRef, type Ref } from 'vue'
+import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { getAlbumCard } from '@/data/albumRegistry'
 import { DUPLICATE_EXCHANGE_CONFIG } from '@/config/gameBalance'
@@ -30,6 +30,19 @@ const selectedCandidateId: Ref<string | null> = ref(null)
 const rewardCardId: Ref<string | undefined> = ref(undefined)
 const isConfirmVisible: Ref<boolean> = ref(false)
 const hasError: Ref<boolean> = ref(false)
+
+// Выбор относится только к текущему журналу: при переключении журнала старые
+// идентификаторы не должны попадать в счётчик и запрос нового обмена.
+watch(
+  (): AlbumId => props.albumId,
+  (): void => {
+    selectedInstanceIds.value = []
+    selectedCandidateId.value = null
+    rewardCardId.value = undefined
+    isConfirmVisible.value = false
+    hasError.value = false
+  },
+)
 
 const duplicateGroups: ComputedRef<DuplicateGroup[]> = computed((): DuplicateGroup[] => {
   const groups: Map<string, StickerInstance[]> = new Map()

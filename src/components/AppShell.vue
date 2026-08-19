@@ -1,11 +1,25 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, type Ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { useTheme } from '@/composables/useTheme'
 import { HOME_VIEW_CONFIG } from '@/config/runtimeConfig'
-import { clearLocalGameData, cloudSave, cloudSyncStatus } from '@/services/cloudSave'
+import {
+  clearLocalGameData,
+  cloudSave,
+  cloudSaveRevision,
+  cloudSyncStatus,
+} from '@/services/cloudSave'
 import { useAuthStore } from '@/stores/auth'
+import { useBlistersStore } from '@/stores/blisters'
+import { useCollectionStore } from '@/stores/collection'
+import { useDailyTasksStore } from '@/stores/dailyTasks'
+import { useDeletedCardsStore } from '@/stores/deletedCards'
+import { useGameGuideStore } from '@/stores/gameGuide'
+import { useGoalsStore } from '@/stores/goals'
+import { useInventoryStore } from '@/stores/inventory'
+import { usePackHuntStore } from '@/stores/packHunt'
+import { usePackOpeningStore } from '@/stores/packOpening'
 import { usePlayerStore } from '@/stores/player'
 import { formatEnergy } from '@/utils/format'
 
@@ -19,6 +33,15 @@ const route = useRoute()
 const router = useRouter()
 const auth = useAuthStore()
 const player = usePlayerStore()
+const inventory = useInventoryStore()
+const collection = useCollectionStore()
+const deletedCards = useDeletedCardsStore()
+const packOpening = usePackOpeningStore()
+const packHunt = usePackHuntStore()
+const blisters = useBlistersStore()
+const dailyTasks = useDailyTasksStore()
+const goals = useGoalsStore()
+const gameGuide = useGameGuideStore()
 const isPackOpening = computed((): boolean => route.meta.packOpening === true)
 const isAlbumWorkspace = computed((): boolean => route.meta.albumWorkspace === true)
 const isRouteLoading: Ref<boolean> = ref(false)
@@ -27,6 +50,29 @@ const mobileMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const isResetConfirmOpen: Ref<boolean> = ref(false)
 const isResetting: Ref<boolean> = ref(false)
 let resourceTimer: number | undefined
+
+// Обновляет реактивные stores после принятия облачного сохранения без перезагрузки страницы.
+const refreshSyncedGameState = async (): Promise<void> => {
+  await Promise.all([
+    player.reload(),
+    inventory.load(),
+    collection.load(),
+    deletedCards.load(),
+    packOpening.load(),
+    packHunt.load(),
+    blisters.load(),
+    dailyTasks.load(),
+  ])
+  await Promise.all([goals.reload(), gameGuide.reload()])
+}
+
+watch(
+  cloudSaveRevision,
+  (): void => {
+    void refreshSyncedGameState()
+  },
+  { immediate: true },
+)
 
 // Ленивые экраны могут загружаться заметное время, поэтому показываем состояние
 // перехода, пока роутер получает и подготавливает следующий раздел.
@@ -123,13 +169,13 @@ const mobileMenuItems = computed(() => [
       void router.push('/goals')
     },
   },
-  // {
-  //   label: t('app.leaderboard'),
-  //   icon: 'pi pi-trophy',
-  //   command: (): void => {
-  //     void router.push('/leaderboard')
-  //   },
-  // },
+  {
+    label: t('app.leaderboard'),
+    icon: 'pi pi-trophy',
+    command: (): void => {
+      void router.push('/leaderboard')
+    },
+  },
   {
     label: t('common.theme'),
     icon: 'pi pi-palette',

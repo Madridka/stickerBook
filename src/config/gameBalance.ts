@@ -127,8 +127,9 @@ export const PACK_HUNT_REWARD_CONFIG = {
    * random — случайный блистер из списка;
    * rotation — смена блистера по времени с начала локального дня.
    */
-  selection: 'random' as PackHuntRewardSelection,
+  selection: 'fixed' as PackHuntRewardSelection,
   blisterIds: [
+    BLISTER_CONFIGS.mixed.id,
     BLISTER_CONFIGS.standard.id,
     BLISTER_CONFIGS.ucl.id,
     BLISTER_CONFIGS.kdv.id,

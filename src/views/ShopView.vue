@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
+import { usePackOpeningStore } from '@/stores/packOpening'
 import { useBlistersStore } from '@/stores/blisters'
 import { BLISTER_CONFIGS } from '@/config/gameBalance'
 import {
@@ -26,6 +27,7 @@ const { t } = useI18n()
 const player = usePlayerStore()
 const inventory = useInventoryStore()
 const packHunt = usePackHuntStore()
+const packOpening = usePackOpeningStore()
 const blisters = useBlistersStore()
 const availableBlisters: BlisterDefinition[] = [...getBlisters()]
 const router = useRouter()
@@ -45,7 +47,9 @@ const isPlayerPack = (item: InventoryItem): boolean => {
 }
 
 const ownedPackIds: ComputedRef<string[]> = computed(() =>
-  inventory.items.filter(isPlayerPack).map(({ id }) => id),
+  inventory.items
+    .filter((item): boolean => isPlayerPack(item) && item.id !== packOpening.session?.packId)
+    .map(({ id }) => id),
 )
 const ownedPackDetails: ComputedRef<
   Record<string, { label: string; cardCount: number }>
@@ -101,6 +105,7 @@ const buyBlister = async (blisterId: string): Promise<void> => {
     }
     player.applyPersistedState(result.player)
     inventory.applyPersistedItem(result.item)
+    packOpening.applyPersistedSession(result.session)
     await blisters.load()
     await router.push({ name: 'pack-opening', query: { pack: result.item.id } })
   } catch {
@@ -122,7 +127,7 @@ const openOwnedPack = async (packId: string): Promise<void> => {
 }
 
 onMounted(async (): Promise<void> => {
-  await Promise.all([packHunt.load(), inventory.load(), blisters.load()])
+  await Promise.all([packHunt.load(), packOpening.load(), inventory.load(), blisters.load()])
 })
 </script>
 

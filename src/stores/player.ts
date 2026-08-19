@@ -81,14 +81,18 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   // Загружает сохранённые очки и энергию до первого взаимодействия с экраном.
-  const load = async (): Promise<void> => {
+  const load = async (force: boolean = false): Promise<void> => {
     const savedPlayer: PlayerState | undefined = await database.player.get(PLAYER_STATE_ID)
 
-    if (!hasLocalChanges && savedPlayer) {
-      coins.value = savedPlayer.coins
-      energy.value = savedPlayer.energy ?? CLICKER_CONFIG.energyLimit
-      energyUpdatedAt.value = savedPlayer.energyUpdatedAt ?? Date.now()
-      refreshEnergy()
+    if (force) {
+      hasLocalChanges = false
+      pendingRestoredEnergy = 0
+    }
+    if (force || !hasLocalChanges) {
+      coins.value = savedPlayer?.coins ?? 0
+      energy.value = savedPlayer?.energy ?? CLICKER_CONFIG.energyLimit
+      energyUpdatedAt.value = savedPlayer?.energyUpdatedAt ?? Date.now()
+      if (savedPlayer) refreshEnergy()
     }
     isLoaded.value = true
   }
@@ -147,6 +151,8 @@ export const usePlayerStore = defineStore('player', () => {
     isLoaded.value = true
   }
 
+  const reload = async (): Promise<void> => load(true)
+
   // Расходует фиксированную энергию и начисляет награду, не меняя размер запаса из-за бонуса.
   const addCoin = (amount: number = CLICKER_CONFIG.baseReward): boolean => {
     if (!Number.isFinite(amount) || amount <= 0) return false
@@ -184,6 +190,7 @@ export const usePlayerStore = defineStore('player', () => {
     addCoin,
     applyPersistedState,
     flushSaves,
+    reload,
     refreshEnergy,
     resetCoins,
   }

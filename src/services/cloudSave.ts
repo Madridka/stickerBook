@@ -37,6 +37,7 @@ interface CloudSaveResponse {
 export type CloudSyncStatus = 'idle' | 'loading' | 'saved' | 'saving' | 'offline' | 'conflict'
 
 export const cloudSyncStatus: Ref<CloudSyncStatus> = ref('idle')
+export const cloudSaveRevision: Ref<number> = ref(0)
 
 const EMPTY_SNAPSHOT: LocalSaveSnapshot = { schemaVersion: 1, tables: [] }
 
@@ -98,6 +99,7 @@ const replaceLocalData = async (snapshot: LocalSaveSnapshot): Promise<void> => {
       if (rows.length) await table.bulkAdd(rows)
     }
   })
+  cloudSaveRevision.value += 1
 }
 
 export const clearLocalGameData = async (): Promise<void> => {
@@ -310,8 +312,8 @@ class CloudSaveService {
           await writeSyncState(state)
 
           if (unchangedDuringRequest) {
-            const needsReload: boolean = !snapshotsEqual(localSnapshot, uploadSnapshot)
-            if (needsReload) {
+            const needsLocalRefresh: boolean = !snapshotsEqual(localSnapshot, uploadSnapshot)
+            if (needsLocalRefresh) {
               this.isApplyingRemote = true
               try {
                 await replaceLocalData(uploadSnapshot)
@@ -326,7 +328,6 @@ class CloudSaveService {
             setPendingSync(this.userId, false)
             this.retryDelayMs = SERVER_SYNC_CONFIG.saveDebounceMs
             cloudSyncStatus.value = 'saved'
-            if (needsReload) window.location.reload()
           } else {
             this.dirty = true
             setPendingSync(this.userId, true)
@@ -388,7 +389,6 @@ class CloudSaveService {
         await writeSyncState(this.syncState)
         setPendingSync(this.userId, false)
         cloudSyncStatus.value = 'saved'
-        window.location.reload()
       } finally {
         this.isApplyingRemote = false
       }

@@ -228,6 +228,11 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
     packHunt.load(),
   ]).then(load)
 
+  const reload = async (): Promise<void> => {
+    await initializationPromise
+    await load()
+  }
+
   return {
     completedStepIds,
     currentStep,
@@ -236,6 +241,7 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
     isLoaded,
     consumeAutoPreparation,
     markCollectionViewed,
+    reload,
     reconcile,
   }
 })

@@ -81,7 +81,7 @@ const setSecurityHeaders = (reply: FastifyReply, secure: boolean): void => {
     .header('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=(), usb=()')
     .header(
       'Content-Security-Policy',
-      "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'",
+      "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://cdn.jsdelivr.net; font-src 'self' data:; connect-src 'self'",
     )
   if (secure) {
     reply.header('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')

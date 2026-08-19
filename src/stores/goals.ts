@@ -202,6 +202,11 @@ export const useGoalsStore = defineStore('goals', () => {
     reconcileCompleted()
   }
 
+  const reload = async (): Promise<void> => {
+    await Promise.all([collection.load(), inventory.load(), loadPersisted()])
+    reconcileCompleted()
+  }
+
   const claim = async (goalId: string): Promise<ClaimGoalResult> => {
     if (claimingGoalIds.value.has(goalId)) return 'already-claimed'
     const runtime = goals.value.find(({ definition }) => definition.id === goalId)
@@ -253,6 +258,7 @@ export const useGoalsStore = defineStore('goals', () => {
     lastCompletedGoalId,
     visibleGoals,
     claim,
+    reload,
     refresh,
   }
 })

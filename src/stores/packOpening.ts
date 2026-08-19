@@ -74,8 +74,22 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
     return session.value
   }
 
+  // При покупке сессия уже атомарно сохранена вместе с блистером, поэтому сразу
+  // передаём её экрану открытия и не зависим от промежуточного повторного чтения.
+  const applyPersistedSession = (persistedSession: PackOpeningSession): void => {
+    session.value = persistedSession
+    isLoaded.value = true
+  }
+
   // Один раз рассчитывает содержимое пака и резервирует его сохраняемой сессией.
   const start = async (requestedPackId?: string): Promise<PackOpeningSession | undefined> => {
+    if (
+      requestedPackId &&
+      session.value?.packId === requestedPackId &&
+      isPlayerSession(session.value)
+    ) {
+      return session.value
+    }
     if (isStarting.value) return session.value
     isStarting.value = true
 
@@ -319,6 +333,7 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
     isLoaded,
     isStarting,
     isAdvancing,
+    applyPersistedSession,
     load,
     start,
     markAnimationComplete,

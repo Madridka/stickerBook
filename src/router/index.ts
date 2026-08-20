@@ -44,12 +44,6 @@ const router: Router = createRouter({
           path: ':albumId',
           name: 'album-detail',
           component: () => import('@/views/AlbumView.vue'),
-          beforeEnter: async (to) => {
-            const { getPlayerAlbumById } = await import('@/data/albumRegistry')
-            return typeof to.params.albumId === 'string' && getPlayerAlbumById(to.params.albumId)
-              ? true
-              : { name: 'album' }
-          },
           meta: {
             title: (i18n.global.t as (key: string) => string)('app.album'),
             albumWorkspace: true,

@@ -123,9 +123,12 @@ class CloudSaveService {
   private dirty: boolean = false
   private isApplyingRemote: boolean = false
   private savePromise: Promise<void> | undefined
+  private saveAbortController: AbortController | undefined
   private debounceTimer: number | undefined
+  private maxWaitTimer: number | undefined
   private pollTimer: number | undefined
   private started: boolean = false
+  private lifecycleRevision: number = 0
   private retryDelayMs: number = SERVER_SYNC_CONFIG.saveDebounceMs
 
   private readonly handleStorageMutation = (): void => {
@@ -133,7 +136,7 @@ class CloudSaveService {
     this.localRevision += 1
     this.dirty = true
     setPendingSync(this.userId, true)
-    this.scheduleSave()
+    if (!this.savePromise) this.scheduleSave()
   }
 
   private readonly handleOnline = (): void => {
@@ -237,28 +240,56 @@ class CloudSaveService {
     cloudSyncStatus.value = 'offline'
   }
 
-  private readonly scheduleSave = (delayMs: number = this.retryDelayMs): void => {
+  private readonly clearSaveTimers = (): void => {
     if (this.debounceTimer !== undefined) window.clearTimeout(this.debounceTimer)
-    this.debounceTimer = window.setTimeout(
-      (): void => void this.flush().catch((): undefined => undefined),
-      delayMs,
-    )
+    if (this.maxWaitTimer !== undefined) window.clearTimeout(this.maxWaitTimer)
+    this.debounceTimer = undefined
+    this.maxWaitTimer = undefined
+  }
+
+  // Любой из двух таймеров завершает текущий batch и отменяет второй таймер.
+  private readonly runScheduledSave = (): void => {
+    this.clearSaveTimers()
+    if (!this.started || !this.dirty || !this.userId) return
+    void this.flush().catch((): undefined => undefined)
+  }
+
+  private readonly scheduleSave = (delayMs: number = this.retryDelayMs): void => {
+    if (!this.started || !this.dirty || !this.userId || this.savePromise) return
+    if (this.debounceTimer !== undefined) window.clearTimeout(this.debounceTimer)
+    this.debounceTimer = window.setTimeout(this.runScheduledSave, delayMs)
+    if (this.maxWaitTimer === undefined) {
+      this.maxWaitTimer = window.setTimeout(
+        this.runScheduledSave,
+        Math.max(SERVER_SYNC_CONFIG.saveMaxWaitMs, delayMs),
+      )
+    }
   }
 
   flush = async (): Promise<void> => {
     if (!this.started || !this.dirty || !this.userId) return
     if (this.savePromise) {
       await this.savePromise
-      if (this.dirty && cloudSyncStatus.value === 'saving') return this.flush()
       return
     }
-    const currentSave: Promise<void> = this.saveCurrentSnapshot()
-    this.savePromise = currentSave.finally((): void => {
+    this.clearSaveTimers()
+    const userId: string = this.userId
+    const lifecycleRevision: number = this.lifecycleRevision
+    const abortController: AbortController = new AbortController()
+    this.saveAbortController = abortController
+    const currentSave: Promise<void> = this.saveCurrentSnapshot(
+      userId,
+      lifecycleRevision,
+      abortController.signal,
+    )
+    const trackedSave: Promise<void> = currentSave.finally((): void => {
+      if (this.savePromise !== trackedSave) return
       this.savePromise = undefined
-      if (this.dirty) this.scheduleSave()
+      this.saveAbortController = undefined
+      if (this.started && this.dirty && this.userId) this.scheduleSave()
     })
-    await this.savePromise
-    if (this.dirty && cloudSyncStatus.value === 'saving') return this.flush()
+    this.savePromise = trackedSave
+    await trackedSave
   }
 
   private ensureSyncState = async (): Promise<PersistedSyncState> => {
@@ -277,11 +308,21 @@ class CloudSaveService {
     return this.syncState
   }
 
-  private readonly saveCurrentSnapshot = async (): Promise<void> => {
-    if (!this.userId) return
+  private readonly isCurrentLifecycle = (
+    userId: string,
+    lifecycleRevision: number,
+  ): boolean =>
+    this.started && this.userId === userId && this.lifecycleRevision === lifecycleRevision
+
+  private readonly saveCurrentSnapshot = async (
+    userId: string,
+    lifecycleRevision: number,
+    signal: AbortSignal,
+  ): Promise<void> => {
     cloudSyncStatus.value = 'saving'
     try {
       let state: PersistedSyncState = await this.ensureSyncState()
+      if (!this.isCurrentLifecycle(userId, lifecycleRevision)) return
 
       for (let conflictAttempt: number = 0; conflictAttempt < 4; conflictAttempt += 1) {
         const revision: number = this.localRevision
@@ -296,12 +337,13 @@ class CloudSaveService {
           const response: CloudSaveResponse = await apiRequest('/api/save', {
             method: 'PUT',
             body: JSON.stringify({ baseVersion: state.serverVersion, data: uploadSnapshot }),
+            signal,
           })
+          if (!this.isCurrentLifecycle(userId, lifecycleRevision)) return
           if (!response.save) throw new Error('Server returned an empty save')
 
-          const unchangedDuringRequest: boolean = this.localRevision === revision
           state = {
-            userId: this.userId,
+            userId,
             serverVersion: response.save.version,
             serverSnapshot: uploadSnapshot,
             // До замены локальной БД она всё ещё является производной localSnapshot.
@@ -310,8 +352,9 @@ class CloudSaveService {
           }
           this.syncState = state
           await writeSyncState(state)
+          if (!this.isCurrentLifecycle(userId, lifecycleRevision)) return
 
-          if (unchangedDuringRequest) {
+          if (this.localRevision === revision) {
             const needsLocalRefresh: boolean = !snapshotsEqual(localSnapshot, uploadSnapshot)
             if (needsLocalRefresh) {
               this.isApplyingRemote = true
@@ -324,15 +367,16 @@ class CloudSaveService {
             state = { ...state, localBaseSnapshot: uploadSnapshot }
             this.syncState = state
             await writeSyncState(state)
-            this.dirty = false
-            setPendingSync(this.userId, false)
-            this.retryDelayMs = SERVER_SYNC_CONFIG.saveDebounceMs
-            cloudSyncStatus.value = 'saved'
-          } else {
-            this.dirty = true
-            setPendingSync(this.userId, true)
-            cloudSyncStatus.value = 'saving'
+            if (!this.isCurrentLifecycle(userId, lifecycleRevision)) return
           }
+
+          const unchangedDuringSave: boolean = this.localRevision === revision
+          this.dirty = !unchangedDuringSave
+          setPendingSync(userId, !unchangedDuringSave)
+          this.retryDelayMs = SERVER_SYNC_CONFIG.saveDebounceMs
+          if (unchangedDuringSave) {
+            cloudSyncStatus.value = 'saved'
+          } else cloudSyncStatus.value = 'saving'
           return
         } catch (error: unknown) {
           if (!(error instanceof ApiError && error.status === 409)) throw error
@@ -345,14 +389,16 @@ class CloudSaveService {
           }
           this.syncState = state
           await writeSyncState(state)
+          if (!this.isCurrentLifecycle(userId, lifecycleRevision)) return
           cloudSyncStatus.value = 'conflict'
         }
       }
       cloudSyncStatus.value = 'conflict'
       throw new Error('Cloud save changed too many times during synchronization')
     } catch (error: unknown) {
+      if (!this.isCurrentLifecycle(userId, lifecycleRevision)) return
       this.dirty = true
-      setPendingSync(this.userId, true)
+      setPendingSync(userId, true)
       this.retryDelayMs = Math.min(
         SERVER_SYNC_CONFIG.maxRetryDelayMs,
         Math.max(SERVER_SYNC_CONFIG.saveDebounceMs, this.retryDelayMs * 2),
@@ -398,12 +444,14 @@ class CloudSaveService {
   }
 
   stop = (): void => {
+    this.lifecycleRevision += 1
     if (this.started) Dexie.on.storagemutated.unsubscribe(this.handleStorageMutation)
     window.removeEventListener('online', this.handleOnline)
     document.removeEventListener('visibilitychange', this.handleVisibilityChange)
-    if (this.debounceTimer !== undefined) window.clearTimeout(this.debounceTimer)
+    this.clearSaveTimers()
     if (this.pollTimer !== undefined) window.clearInterval(this.pollTimer)
-    this.debounceTimer = undefined
+    this.saveAbortController?.abort()
+    this.saveAbortController = undefined
     this.pollTimer = undefined
     this.started = false
     this.dirty = false

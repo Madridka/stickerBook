@@ -11,6 +11,36 @@ const CLIENT_ENV_ALLOWLIST: ReadonlySet<string> = new Set([
   'SSR',
 ])
 
+const ALBUM_DATA_CHUNKS: ReadonlyArray<readonly [directory: string, chunk: string]> = [
+  ['wc-26', 'album-wc-26'],
+  ['ucl-26-27', 'album-ucl-26-27'],
+  ['tomsk', 'album-tomsk'],
+  ['spainClubsLogo', 'album-spain-clubs-logo'],
+  ['russiaClubsLogo', 'album-russia-clubs-logo'],
+]
+
+const resolveManualChunk = (id: string): string | undefined => {
+  const normalizedId: string = id.replaceAll('\\', '/')
+  const albumChunk = ALBUM_DATA_CHUNKS.find(([directory]) =>
+    normalizedId.includes(`/src/data/${directory}/`) ||
+    normalizedId.includes(`/assets/game/${directory}/`),
+  )
+  if (albumChunk) return albumChunk[1]
+
+  if (!normalizedId.includes('/node_modules/')) return undefined
+  if (
+    /\/node_modules\/(?:vue|@vue|vue-router|vue-i18n|pinia|@vueuse)\//.test(normalizedId)
+  ) {
+    return 'vendor-vue'
+  }
+  if (/\/node_modules\/(?:primevue|@primevue)\//.test(normalizedId)) {
+    return 'vendor-primevue'
+  }
+  if (normalizedId.includes('/node_modules/dexie/')) return 'vendor-storage'
+  if (normalizedId.includes('/node_modules/zod/')) return 'vendor-validation'
+  return 'vendor'
+}
+
 const preventClientSecrets = (): Plugin => ({
   name: 'prevent-client-secrets',
   enforce: 'pre',
@@ -59,6 +89,11 @@ export default defineConfig(({ mode }) => {
       : '/',
     build: {
       sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks: resolveManualChunk,
+        },
+      },
     },
     esbuild: production ? { drop: ['console', 'debugger'] } : undefined,
     resolve: {

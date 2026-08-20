@@ -13,7 +13,8 @@ export const CLOCK_CONFIG = {
 /** Сетевые интервалы API и синхронизации серверного сохранения. */
 export const SERVER_SYNC_CONFIG = {
   requestTimeoutMs: 10_000,
-  saveDebounceMs: 600,
+  saveDebounceMs: 2_000,
+  saveMaxWaitMs: 10_000,
   maxRetryDelayMs: 30_000,
   pollIntervalMs: 15_000,
 }

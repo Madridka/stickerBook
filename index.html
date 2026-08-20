@@ -55,6 +55,21 @@
         font-weight: 600;
       }
 
+      .app-bootstrap--error .app-bootstrap__content {
+        max-width: 32rem;
+      }
+
+      .app-bootstrap__retry {
+        border: 2px solid #17212b;
+        background: #e86b52;
+        color: #fff;
+        cursor: pointer;
+        padding: 0.6rem 1rem;
+        font: inherit;
+        font-weight: 800;
+        box-shadow: 3px 3px 0 #17212b;
+      }
+
       @keyframes app-bootstrap-spin {
         to {
           transform: rotate(360deg);
@@ -79,6 +94,7 @@
         </div>
       </div>
     </div>
+    <script type="module" src="/src/bootstrapError.ts"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

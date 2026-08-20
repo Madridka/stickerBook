@@ -1,5 +1,4 @@
 import i18n from '@/plugins/usei18n/usei18n'
-import { getPlayerAlbumById } from '@/data/albumRegistry'
 import { createRouter, createWebHistory } from 'vue-router'
 import type { Router } from 'vue-router'
 
@@ -45,10 +44,12 @@ const router: Router = createRouter({
           path: ':albumId',
           name: 'album-detail',
           component: () => import('@/views/AlbumView.vue'),
-          beforeEnter: (to) =>
-            typeof to.params.albumId === 'string' && getPlayerAlbumById(to.params.albumId)
+          beforeEnter: async (to) => {
+            const { getPlayerAlbumById } = await import('@/data/albumRegistry')
+            return typeof to.params.albumId === 'string' && getPlayerAlbumById(to.params.albumId)
               ? true
-              : { name: 'album' },
+              : { name: 'album' }
+          },
           meta: {
             title: (i18n.global.t as (key: string) => string)('app.album'),
             albumWorkspace: true,
@@ -60,6 +61,11 @@ const router: Router = createRouter({
       path: '/spainClubsLogo',
       name: 'spain-clubs-logo',
       redirect: { name: 'album-detail', params: { albumId: 'spainClubsLogo' } },
+    },
+    {
+      path: '/russiaClubsLogo',
+      name: 'russia-clubs-logo',
+      redirect: { name: 'album-detail', params: { albumId: 'russiaClubsLogo' } },
     },
     {
       path: '/collection',

@@ -19,7 +19,7 @@ export const DROP_ENGINE_CONFIG = {
 /** Правила допуска в публичный рейтинг и отображаемые в нём журналы. */
 export const LEADERBOARD_CONFIG = {
   minimumCards: 50,
-  albumIds: ['wc-26', 'ucl-26-27', 'tomsk', 'spainClubsLogo'],
+  albumIds: ['wc-26', 'ucl-26-27', 'tomsk', 'spainClubsLogo', 'russiaClubsLogo'],
 } as const
 
 export type LeaderboardAlbumId = (typeof LEADERBOARD_CONFIG.albumIds)[number]
@@ -51,7 +51,7 @@ export const BLISTER_CONFIGS = {
   mixed: {
     id: 'mixed',
     albumId: 'wc-26',
-    albumIds: ['wc-26', 'tomsk', 'ucl-26-27', 'spainClubsLogo'],
+    albumIds: ['wc-26', 'tomsk', 'ucl-26-27', 'spainClubsLogo', 'russiaClubsLogo'],
     titleKey: 'shop.blisters.mixed.title',
     descriptionKey: 'shop.blisters.mixed.description',
     shortNameKey: 'shop.blisters.mixed.shortName',
@@ -118,6 +118,20 @@ export const BLISTER_CONFIGS = {
     pityEligible: true,
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
+  russiaLogos: {
+    id: 'russia-logos',
+    albumId: 'russiaClubsLogo',
+    albumIds: ['russiaClubsLogo'],
+    titleKey: 'shop.blisters.russiaLogos.title',
+    descriptionKey: 'shop.blisters.russiaLogos.description',
+    shortNameKey: 'shop.blisters.russiaLogos.shortName',
+    cost: 10,
+    cardsPerPack: 5,
+    cooldownMs: 0,
+    poolId: 'russia-clubs-logo-standard',
+    pityEligible: true,
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
 } satisfies Record<string, BlisterConfig>
 
 /** Выбор бесплатного блистера за мини-игру. */
@@ -134,6 +148,7 @@ export const PACK_HUNT_REWARD_CONFIG = {
     BLISTER_CONFIGS.ucl.id,
     BLISTER_CONFIGS.kdv.id,
     BLISTER_CONFIGS.spainLogos.id,
+    BLISTER_CONFIGS.russiaLogos.id,
   ],
   rotationIntervalMs: FREE_PACK_COOLDOWN_MS,
 }

@@ -4,9 +4,10 @@
   "version": "1.10.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently --kill-others --names server,web \"npm:dev:server\" \"npm:dev:web\"",
-    "dev:web": "vite --config vite.config.ts",
-    "dev:server": "node --watch --env-file-if-exists=.env --experimental-strip-types server/index.ts",
+    "dev": "npm run dev:web",
+    "dev:web": "concurrently --kill-others --names server,web \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "vite --config vite.config.ts",
+    "dev:server": "node --watch --env-file-if-exists=.env --experimental-strip-types server/dev.ts",
     "build": "vue-tsc --project tsconfig.app.json --noEmit && tsc --project tsconfig.server.json && vite build && node scripts/verify-production-build.mjs",
     "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.ts",
     "hash:admin-password": "node --experimental-strip-types scripts/hash-admin-password.ts",

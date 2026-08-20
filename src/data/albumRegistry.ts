@@ -13,6 +13,8 @@ import tomskCards, { catalogs as tomskCatalogs } from './tomsk/catalog'
 import tomskContents from './tomsk/contents'
 import spainClubsLogoGeometry from './spainClubsLogo/album'
 import spainClubsLogoCards, { catalogs as spainClubsLogoCatalogs } from './spainClubsLogo/catalog'
+import russiaClubsLogoGeometry from './russiaClubsLogo/album'
+import russiaClubsLogoCards, { catalogs as russiaClubsLogoCatalogs } from './russiaClubsLogo/catalog'
 import type {
   AlbumDefinition,
   AlbumEditorialPageDefinition,
@@ -531,12 +533,111 @@ const spainClubsLogoAlbum: AlbumDefinition = {
   },
 }
 
+const russiaClubsLogoAlbum: AlbumDefinition = {
+  id: 'russiaClubsLogo',
+  name: 'album.library.items.russiaClubsLogo.title',
+  shortName: 'album.library.items.russiaClubsLogo.shortTitle',
+  description: 'album.library.items.russiaClubsLogo.description',
+  route: '/album/russiaClubsLogo',
+  theme: {
+    coverImage: 'info/cover.webp',
+    previewImage: 'info/cover.webp',
+    accentClass: 'text-coral',
+  },
+  geometry: russiaClubsLogoGeometry,
+  pages: russiaClubsLogoGeometry.pages,
+  spreads: createSpreads('russiaClubsLogo', russiaClubsLogoGeometry.pages.map(({ id }) => id)),
+  cards: russiaClubsLogoCards,
+  catalogs: russiaClubsLogoCatalogs,
+  contents: [],
+  editorialPages: [
+    {
+      pageId: 'russia-clubs-logo-cover',
+      kind: 'cover',
+      eyebrow: 'album.editorial.russiaClubsLogo.cover.eyebrow',
+      title: 'album.editorial.russiaClubsLogo.cover.title',
+      description: 'album.editorial.russiaClubsLogo.cover.description',
+      footer: 'album.editorial.russiaClubsLogo.cover.footer',
+      tone: 'dark',
+    },
+    {
+      pageId: 'russia-clubs-logo-history',
+      kind: 'article',
+      eyebrow: 'album.editorial.russiaClubsLogo.history.eyebrow',
+      title: 'album.editorial.russiaClubsLogo.history.title',
+      description: 'album.editorial.russiaClubsLogo.history.description',
+      align: 'left',
+      features: [
+        {
+          title: 'album.editorial.russiaClubsLogo.history.features.pyramid.title',
+          description: 'album.editorial.russiaClubsLogo.history.features.pyramid.description',
+        },
+        {
+          title: 'album.editorial.russiaClubsLogo.history.features.divisionA.title',
+          description: 'album.editorial.russiaClubsLogo.history.features.divisionA.description',
+        },
+        {
+          title: 'album.editorial.russiaClubsLogo.history.features.divisionB.title',
+          description: 'album.editorial.russiaClubsLogo.history.features.divisionB.description',
+        },
+        {
+          title: 'album.editorial.russiaClubsLogo.history.features.identity.title',
+          description: 'album.editorial.russiaClubsLogo.history.features.identity.description',
+        },
+      ],
+    },
+    {
+      pageId: 'russia-clubs-logo-contents',
+      kind: 'contents',
+      eyebrow: 'album.editorial.russiaClubsLogo.contents.eyebrow',
+      title: 'album.editorial.russiaClubsLogo.contents.title',
+      description: 'album.editorial.russiaClubsLogo.contents.description',
+      contentsSections: [
+        {
+          title: 'album.editorial.russiaClubsLogo.contents.sections.national',
+          items: [
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.rpl', pages: '04–05', targetPage: 4 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.firstLeague', pages: '06–07', targetPage: 6 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.secondA', group: 'Золото', pages: '08–09', targetPage: 8 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.secondA', group: 'Серебро', pages: '10–11', targetPage: 10 },
+          ],
+        },
+        {
+          title: 'album.editorial.russiaClubsLogo.contents.sections.secondB',
+          items: Array.from({ length: 4 }, (_value, index) => ({
+            label: 'album.editorial.russiaClubsLogo.contents.labels.secondB',
+            group: String(index + 1),
+            pages: `${12 + index * 2}–${13 + index * 2}`,
+            targetPage: 12 + index * 2,
+          })),
+        },
+      ],
+    },
+  ],
+  layout: {
+    openStartPage: 1,
+  },
+  dropSettings: {
+    poolId: 'russia-clubs-logo-standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  blisters: [toBlisterDefinition(BLISTER_CONFIGS.russiaLogos)],
+  metadata: {
+    kind: 'club-logos',
+    season: '2026/27',
+    countries: ['Россия'],
+    leagues: ['rus1', 'rus2', 'rus3', 'rus4'],
+    clubs: 109,
+  },
+}
+
 const definitions: AlbumDefinition[] = [
   infoAlbum,
   wc26Album,
   ucl2627Album,
   tomskAlbum,
   spainClubsLogoAlbum,
+  russiaClubsLogoAlbum,
 ]
 const registry: ReadonlyMap<AlbumId, AlbumDefinition> = new Map(
   definitions.map((album): [AlbumId, AlbumDefinition] => [album.id, album]),

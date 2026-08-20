@@ -5,6 +5,7 @@ export const ALBUM_VISIBILITY_CONFIG: Record<string, boolean> = {
   tomsk: true,
   'ucl-26-27': true,
   spainClubsLogo: true,
+  russiaClubsLogo: true,
 }
 
 /** Настройки содержимого, навигации и адаптивного режима журнала. */

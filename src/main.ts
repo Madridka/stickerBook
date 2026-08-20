@@ -9,17 +9,12 @@ import i18n from '@/plugins/usei18n/usei18n'
 import '@/assets/main.css'
 import 'primeicons/primeicons.css'
 
-// Установка router запускает начальную навигацию, но статический экран из index.html
-// остаётся видимым, пока lazy-маршрут не будет готов к первому рендеру.
-const app = createApp(App)
+// Монтируем корневой экран сразу: начальная навигация и ленивые маршруты не должны
+// удерживать статический экран загрузки, особенно во время первой компиляции Vite.
+createApp(App)
   .use(createPinia())
   .use(router)
   .use(i18n)
   .use(MotionPlugin)
   .use(PrimeVue, { theme: { preset: Aura } })
-
-const mountApplication = (): void => {
-  app.mount('#app')
-}
-
-void router.isReady().then(mountApplication, mountApplication)
+  .mount('#app')

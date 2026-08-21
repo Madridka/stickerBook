@@ -110,7 +110,8 @@ $sections = @(
   @{ Id = 'second-b-g1'; Code = 'RUS4'; Primary = '#8B243B'; Secondary = '#FFFFFF' },
   @{ Id = 'second-b-g2'; Code = 'RUS4'; Primary = '#225B86'; Secondary = '#FFFFFF' },
   @{ Id = 'second-b-g3'; Code = 'RUS4'; Primary = '#277052'; Secondary = '#FFFFFF' },
-  @{ Id = 'second-b-g4'; Code = 'RUS4'; Primary = '#5B397A'; Secondary = '#FFFFFF' }
+  @{ Id = 'second-b-g4'; Code = 'RUS4'; Primary = '#5B397A'; Secondary = '#FFFFFF' },
+  @{ Id = 'media-league'; Code = 'MFL'; Primary = '#E83A25'; Secondary = '#FFFFFF' }
 )
 
 foreach ($section in $sections) {
@@ -124,26 +125,27 @@ foreach ($section in $sections) {
 }
 
 $coverSource = Join-Path $temporaryRoot 'cover-source.png'
-if (-not (Test-Path -LiteralPath $coverSource)) { throw 'Missing generated cover source' }
-$coverImage = [System.Drawing.Image]::FromFile($coverSource)
-$coverBitmap = [System.Drawing.Bitmap]::new(1536, 1200)
-$coverGraphics = [System.Drawing.Graphics]::FromImage($coverBitmap)
-$coverGraphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
-$sourceRatio = $coverImage.Width / $coverImage.Height
-$targetRatio = 1536 / 1200
-if ($sourceRatio -gt $targetRatio) {
-  $sourceWidth = [int]($coverImage.Height * $targetRatio)
-  $sourceX = [int](($coverImage.Width - $sourceWidth) / 2)
-  $sourceRect = [System.Drawing.Rectangle]::new($sourceX, 0, $sourceWidth, $coverImage.Height)
-} else {
-  $sourceHeight = [int]($coverImage.Width / $targetRatio)
-  $sourceY = [int](($coverImage.Height - $sourceHeight) / 2)
-  $sourceRect = [System.Drawing.Rectangle]::new(0, $sourceY, $coverImage.Width, $sourceHeight)
+if (Test-Path -LiteralPath $coverSource) {
+  $coverImage = [System.Drawing.Image]::FromFile($coverSource)
+  $coverBitmap = [System.Drawing.Bitmap]::new(1536, 1200)
+  $coverGraphics = [System.Drawing.Graphics]::FromImage($coverBitmap)
+  $coverGraphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+  $sourceRatio = $coverImage.Width / $coverImage.Height
+  $targetRatio = 1536 / 1200
+  if ($sourceRatio -gt $targetRatio) {
+    $sourceWidth = [int]($coverImage.Height * $targetRatio)
+    $sourceX = [int](($coverImage.Width - $sourceWidth) / 2)
+    $sourceRect = [System.Drawing.Rectangle]::new($sourceX, 0, $sourceWidth, $coverImage.Height)
+  } else {
+    $sourceHeight = [int]($coverImage.Width / $targetRatio)
+    $sourceY = [int](($coverImage.Height - $sourceHeight) / 2)
+    $sourceRect = [System.Drawing.Rectangle]::new(0, $sourceY, $coverImage.Width, $sourceHeight)
+  }
+  $coverGraphics.DrawImage($coverImage, [System.Drawing.Rectangle]::new(0, 0, 1536, 1200), $sourceRect, [System.Drawing.GraphicsUnit]::Pixel)
+  $coverPng = Join-Path $temporaryRoot 'cover.png'
+  $coverBitmap.Save($coverPng, [System.Drawing.Imaging.ImageFormat]::Png)
+  $coverGraphics.Dispose(); $coverBitmap.Dispose(); $coverImage.Dispose()
 }
-$coverGraphics.DrawImage($coverImage, [System.Drawing.Rectangle]::new(0, 0, 1536, 1200), $sourceRect, [System.Drawing.GraphicsUnit]::Pixel)
-$coverPng = Join-Path $temporaryRoot 'cover.png'
-$coverBitmap.Save($coverPng, [System.Drawing.Imaging.ImageFormat]::Png)
-$coverGraphics.Dispose(); $coverBitmap.Dispose(); $coverImage.Dispose()
 
 New-InfoSurface (Join-Path $temporaryRoot 'info-left.png') 'Left'
 New-InfoSurface (Join-Path $temporaryRoot 'info-right.png') 'Right'

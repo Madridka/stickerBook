@@ -42,6 +42,7 @@ const sections: AlbumSectionDefinition[] = [
   { id: 'second-b-g2' },
   { id: 'second-b-g3' },
   { id: 'second-b-g4' },
+  { id: 'media-league' },
 ]
 
 const createSlots = (pageClubs: RussianClub[]): AlbumGeometrySlot[] =>

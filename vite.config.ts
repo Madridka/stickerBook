@@ -17,6 +17,7 @@ const ALBUM_DATA_CHUNKS: ReadonlyArray<readonly [directory: string, chunk: strin
   ['tomsk', 'album-tomsk'],
   ['spainClubsLogo', 'album-spain-clubs-logo'],
   ['russiaClubsLogo', 'album-russia-clubs-logo'],
+  ['englandClubsLogo', 'album-england-clubs-logo'],
 ]
 
 const resolveManualChunk = (id: string): string | undefined => {

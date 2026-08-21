@@ -62,6 +62,11 @@ const router: Router = createRouter({
       redirect: { name: 'album-detail', params: { albumId: 'russiaClubsLogo' } },
     },
     {
+      path: '/englandClubsLogo',
+      name: 'england-clubs-logo',
+      redirect: { name: 'album-detail', params: { albumId: 'englandClubsLogo' } },
+    },
+    {
       path: '/collection',
       name: 'collection',
       component: () => import('@/views/CollectionView.vue'),

@@ -1,15 +1,19 @@
 param(
   [string]$CardsRoot = 'src/data/russiaClubsLogo/russia',
   [string]$ClubsPath = 'src/data/russiaClubsLogo/russia/clubs.json',
-  [string]$TemplatePath = 'public/examples/clubLogos/template_russia.webp'
+  [string]$TemplatePath = 'public/examples/clubLogos/template_russia.webp',
+  [string]$TemporaryName = 'russiaClubsLogo-cards',
+  [switch]$SkipAlphaCrop,
+  [switch]$SkipMissingLogos,
+  [string]$CardIdPrefix = ''
 )
 
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $projectRoot = if ($PSScriptRoot) { Split-Path -Parent $PSScriptRoot } else { (Get-Location).Path }
-$temporaryRoot = Join-Path $projectRoot 'tmp/russiaClubsLogo-cards'
+$temporaryRoot = Join-Path $projectRoot "tmp/$TemporaryName"
 $convertedRoot = Join-Path $temporaryRoot 'webp'
-$templatePng = Join-Path $temporaryRoot 'template_russia.png'
+$templatePng = Join-Path $temporaryRoot (([IO.Path]::GetFileNameWithoutExtension($TemplatePath)) + '.png')
 New-Item -ItemType Directory -Force -Path $temporaryRoot, $convertedRoot | Out-Null
 
 if (-not (Test-Path -LiteralPath $templatePng)) {
@@ -24,6 +28,7 @@ Get-ChildItem -LiteralPath (Join-Path $projectRoot $CardsRoot) -Recurse -File -F
     $cards += Get-Content -Raw -Encoding UTF8 $_.FullName | ConvertFrom-Json
   }
 $clubs = Get-Content -Raw -Encoding UTF8 (Join-Path $projectRoot $ClubsPath) | ConvertFrom-Json
+$cards = @($cards | Where-Object { -not $CardIdPrefix -or ([string]$_.id).StartsWith($CardIdPrefix) })
 $clubsById = @{}
 $clubs | ForEach-Object { $clubsById[$_.id] = $_ }
 $leagueNames = @{
@@ -31,6 +36,7 @@ $leagueNames = @{
   rus2 = '1 ' + [char]1051 + [char]1048 + [char]1043 + [char]1040
   rus3 = '2 ' + [char]1051 + [char]1048 + [char]1043 + [char]1040 + ' ' + [char]1040
   rus4 = '2 ' + [char]1051 + [char]1048 + [char]1043 + [char]1040 + ' ' + [char]1041
+  eng1 = 'PREMIER LEAGUE'
 }
 
 function New-FittedFont {
@@ -90,10 +96,25 @@ function Draw-ContainedImage {
   param(
     [System.Drawing.Graphics]$Graphics,
     [System.Drawing.Image]$Image,
-    [System.Drawing.RectangleF]$Bounds
+    [System.Drawing.RectangleF]$Bounds,
+    [switch]$SkipCrop
   )
 
   $bitmap = [System.Drawing.Bitmap]::new($Image)
+  if ($SkipCrop) {
+    $scale = [Math]::Min($Bounds.Width / $bitmap.Width, $Bounds.Height / $bitmap.Height)
+    $targetWidth = $bitmap.Width * $scale
+    $targetHeight = $bitmap.Height * $scale
+    $Graphics.DrawImage(
+      $bitmap,
+      [float]($Bounds.X + (($Bounds.Width - $targetWidth) / 2)),
+      [float]($Bounds.Y + (($Bounds.Height - $targetHeight) / 2)),
+      [float]$targetWidth,
+      [float]$targetHeight
+    )
+    $bitmap.Dispose()
+    return
+  }
   $rectangle = [System.Drawing.Rectangle]::new(0, 0, $bitmap.Width, $bitmap.Height)
   $data = $bitmap.LockBits(
     $rectangle,
@@ -153,7 +174,10 @@ try {
     $club = $clubsById[$card.id]
     if (-not $club) { throw "Missing club metadata: $($card.id)" }
     $logoPath = Join-Path $projectRoot ('public' + ([string]$club.logo -replace '/', '\'))
-    if (-not (Test-Path -LiteralPath $logoPath)) { throw "Missing logo: $logoPath" }
+    if (-not (Test-Path -LiteralPath $logoPath)) {
+      if ($SkipMissingLogos) { continue }
+      throw "Missing logo: $logoPath"
+    }
 
     $canvas = [System.Drawing.Bitmap]::new($template.Width, $template.Height)
     $graphics = [System.Drawing.Graphics]::FromImage($canvas)
@@ -163,15 +187,19 @@ try {
     $graphics.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
     $graphics.DrawImage($template, 0, 0, $canvas.Width, $canvas.Height)
 
-    $leagueName = [string]$leagueNames[[string]$card.leagueId]
+    $leagueName = if ($club.leagueLabel) { ([string]$club.leagueLabel).ToUpperInvariant() } else { [string]$leagueNames[[string]$card.leagueId] }
     if (-not $leagueName) { throw "Missing league label: $($card.leagueId)" }
-    $leagueFont = New-FittedFont $graphics $leagueName 'Arial Black' 66 28 330 ([System.Drawing.FontStyle]::Bold)
+    $leagueFont = New-FittedFont $graphics $leagueName 'Arial Black' 66 20 315 ([System.Drawing.FontStyle]::Bold)
     $numberFont = [System.Drawing.Font]::new('Arial Black', 112, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
     Draw-CenteredText $graphics $leagueName $leagueFont $white ([System.Drawing.RectangleF]::new(225, 42, 330, 120))
     Draw-CenteredText $graphics $card.cardNumber $numberFont $ink ([System.Drawing.RectangleF]::new(785, 37, 210, 145))
 
+    $logoBounds = [System.Drawing.RectangleF]::new(287, 384, 450, 520)
+    if ($card.id -eq 'rusmfl-15') {
+      $logoBounds = [System.Drawing.RectangleF]::new(321, 423, 383, 442)
+    }
     $logo = [System.Drawing.Image]::FromFile($logoPath)
-    Draw-ContainedImage $graphics $logo ([System.Drawing.RectangleF]::new(287, 384, 450, 520))
+    Draw-ContainedImage $graphics $logo $logoBounds -SkipCrop:$SkipAlphaCrop
     $logo.Dispose()
 
     $stadium = ([string]$card.stadium).ToUpperInvariant()
@@ -211,4 +239,4 @@ try {
   $white.Dispose(); $ink.Dispose(); $template.Dispose()
 }
 
-Write-Output "Generated $($cards.Count) Russian club preview cards"
+Write-Output "Generated $($generated.Count) club cards"

@@ -15,6 +15,8 @@ import spainClubsLogoGeometry from './spainClubsLogo/album'
 import spainClubsLogoCards, { catalogs as spainClubsLogoCatalogs } from './spainClubsLogo/catalog'
 import russiaClubsLogoGeometry from './russiaClubsLogo/album'
 import russiaClubsLogoCards, { catalogs as russiaClubsLogoCatalogs } from './russiaClubsLogo/catalog'
+import englandClubsLogoGeometry from './englandClubsLogo/album'
+import englandClubsLogoCards, { catalogs as englandClubsLogoCatalogs } from './englandClubsLogo/catalog'
 import type {
   AlbumDefinition,
   AlbumEditorialPageDefinition,
@@ -611,6 +613,12 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
             targetPage: 12 + index * 2,
           })),
         },
+        {
+          title: 'album.editorial.russiaClubsLogo.contents.sections.mediaLeague',
+          items: [
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.mediaLeague', pages: '20–21', targetPage: 20 },
+          ],
+        },
       ],
     },
   ],
@@ -625,9 +633,99 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
   metadata: {
     kind: 'club-logos',
     season: '2026/27',
-    countries: ['Россия'],
-    leagues: ['rus1', 'rus2', 'rus3', 'rus4'],
-    clubs: 109,
+    countries: ['Россия', 'Абхазия'],
+    leagues: ['rus1', 'rus2', 'rus3', 'rus4', 'rusmfl'],
+    clubs: 125,
+  },
+}
+
+const englandClubsLogoAlbum: AlbumDefinition = {
+  id: 'englandClubsLogo',
+  name: 'album.library.items.englandClubsLogo.title',
+  shortName: 'album.library.items.englandClubsLogo.shortTitle',
+  description: 'album.library.items.englandClubsLogo.description',
+  route: '/album/englandClubsLogo',
+  theme: {
+    coverImage: 'info/cover.webp',
+    previewImage: 'info/cover.webp',
+    accentClass: 'text-coral',
+  },
+  geometry: englandClubsLogoGeometry,
+  pages: englandClubsLogoGeometry.pages,
+  spreads: createSpreads('englandClubsLogo', englandClubsLogoGeometry.pages.map(({ id }) => id)),
+  cards: englandClubsLogoCards,
+  catalogs: englandClubsLogoCatalogs,
+  contents: [],
+  editorialPages: [
+    {
+      pageId: 'england-clubs-logo-cover',
+      kind: 'cover',
+      eyebrow: 'album.editorial.englandClubsLogo.cover.eyebrow',
+      title: 'album.editorial.englandClubsLogo.cover.title',
+      description: 'album.editorial.englandClubsLogo.cover.description',
+      footer: 'album.editorial.englandClubsLogo.cover.footer',
+      tone: 'dark',
+    },
+    {
+      pageId: 'england-clubs-logo-history',
+      kind: 'article',
+      eyebrow: 'album.editorial.englandClubsLogo.history.eyebrow',
+      title: 'album.editorial.englandClubsLogo.history.title',
+      description: 'album.editorial.englandClubsLogo.history.description',
+      align: 'left',
+      features: [
+        {
+          title: 'album.editorial.englandClubsLogo.history.features.pyramid.title',
+          description: 'album.editorial.englandClubsLogo.history.features.pyramid.description',
+        },
+        {
+          title: 'album.editorial.englandClubsLogo.history.features.nls.title',
+          description: 'album.editorial.englandClubsLogo.history.features.nls.description',
+        },
+        {
+          title: 'album.editorial.englandClubsLogo.history.features.logos.title',
+          description: 'album.editorial.englandClubsLogo.history.features.logos.description',
+        },
+        {
+          title: 'album.editorial.englandClubsLogo.fullIssue.featureTitle',
+          description: 'album.editorial.englandClubsLogo.fullIssue.featureDescription',
+        },
+      ],
+    },
+    {
+      pageId: 'england-clubs-logo-contents',
+      kind: 'contents',
+      eyebrow: 'album.editorial.englandClubsLogo.contents.eyebrow',
+      title: 'album.editorial.englandClubsLogo.contents.title',
+      description: 'album.editorial.englandClubsLogo.fullIssue.contentsDescription',
+      contentsSections: [
+        {
+          title: 'album.editorial.englandClubsLogo.fullIssue.sectionTitle',
+          items: [
+            {
+              label: 'album.editorial.englandClubsLogo.fullIssue.sectionLabel',
+              group: '795 клубов',
+              pages: '04–115',
+              targetPage: 4,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  layout: { openStartPage: 1 },
+  dropSettings: {
+    poolId: 'england-clubs-logo-standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  blisters: [toBlisterDefinition(BLISTER_CONFIGS.englandLogos)],
+  metadata: {
+    kind: 'club-logos',
+    season: '2026/27',
+    countries: ['England'],
+    leagues: ['eng1', 'eng2', 'eng3', 'eng4', 'eng5', 'eng6', 'eng7', 'eng8', 'eng9', 'eng10'],
+    clubs: 795,
+    pyramidClubs: 1088,
   },
 }
 
@@ -638,6 +736,7 @@ const definitions: AlbumDefinition[] = [
   tomskAlbum,
   spainClubsLogoAlbum,
   russiaClubsLogoAlbum,
+  englandClubsLogoAlbum,
 ]
 const registry: ReadonlyMap<AlbumId, AlbumDefinition> = new Map(
   definitions.map((album): [AlbumId, AlbumDefinition] => [album.id, album]),

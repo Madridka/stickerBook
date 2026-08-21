@@ -20,6 +20,7 @@ const sections = [
   'second-b-g2',
   'second-b-g3',
   'second-b-g4',
+  'media-league',
 ]
 
 for (const section of sections) {
@@ -27,7 +28,7 @@ for (const section of sections) {
   const cards = sectionClubs.map((club) => {
     const sourceSlug = club.sourcePage.split('/').filter(Boolean).at(-1)
     const fileName = previewFileNames[club.id]
-      ?? `${club.id.toUpperCase()}-${sourceSlug}.webp`
+      ?? `${club.id.toUpperCase()}-${club.assetSlug ?? sourceSlug}.webp`
     return {
       id: club.id,
       cardNumber: String(club.albumSlot).padStart(2, '0'),

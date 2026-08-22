@@ -40,6 +40,10 @@ export interface AlbumEditorialContentsItem {
   pages: string
   targetPage: number
   group?: string
+  logo?: string
+  badge?: string
+  badgeTheme?: 'england' | 'spain' | 'russia'
+  translateLabel?: boolean
 }
 
 export interface AlbumEditorialContentsSection {

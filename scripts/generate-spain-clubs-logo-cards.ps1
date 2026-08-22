@@ -18,8 +18,9 @@ $template = Join-Path $projectRoot $TemplatePath
 $logoRoot = Join-Path $projectRoot $LogoDirectory
 $outputRoot = Join-Path $projectRoot $OutputDirectory
 $temporaryRoot = Join-Path $projectRoot 'tmp/spainClubsLogo'
+$temporaryLogoRoot = Join-Path $temporaryRoot 'logos'
 
-New-Item -ItemType Directory -Force -Path $outputRoot, $temporaryRoot | Out-Null
+New-Item -ItemType Directory -Force -Path $outputRoot, $temporaryRoot, $temporaryLogoRoot | Out-Null
 $cards = Get-Content -LiteralPath $source -Raw -Encoding UTF8 | ConvertFrom-Json
 if ($CardId) { $cards = @($cards | Where-Object { $_.id -eq $CardId }) }
 if ($cards.Count -eq 0) { throw "No cards selected" }
@@ -238,16 +239,35 @@ $black = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(16, 1
 $white = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::White)
 $accent = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(224, 48, 24))
 
+$logoPaths = @{}
+$webpLogoPaths = [Collections.Generic.List[string]]::new()
+foreach ($card in $cards) {
+  $sourceLogoPath = if ($UseCardImagePaths) {
+    $logoRelative = ([string]$card.image) -replace '^/spainClubsLogo/cards/', 'spainClubsLogo/logos/'
+    Join-Path (Join-Path $projectRoot 'public') $logoRelative
+  } else {
+    Join-Path $logoRoot "$($card.id).webp"
+  }
+  if (-not (Test-Path -LiteralPath $sourceLogoPath)) { throw "Missing logo: $sourceLogoPath" }
+  $logoPaths[[string]$card.id] = $sourceLogoPath
+  if ([IO.Path]::GetExtension($sourceLogoPath) -eq '.webp') { $webpLogoPaths.Add($sourceLogoPath) }
+}
+
+if ($webpLogoPaths.Count -gt 0) {
+  & npx.cmd -y sharp-cli -i @($webpLogoPaths) -o $temporaryLogoRoot -f png | Out-Null
+  if ($LASTEXITCODE -ne 0) { throw 'Club logo conversion failed' }
+  foreach ($card in $cards) {
+    $sourceLogoPath = [string]$logoPaths[[string]$card.id]
+    if ([IO.Path]::GetExtension($sourceLogoPath) -eq '.webp') {
+      $logoPaths[[string]$card.id] = Join-Path $temporaryLogoRoot (([IO.Path]::GetFileNameWithoutExtension($sourceLogoPath)) + '.png')
+    }
+  }
+}
+
 try {
   $generatedCards = [Collections.Generic.List[object]]::new()
   foreach ($card in $cards) {
-    $logoPath = if ($UseCardImagePaths) {
-      $logoRelative = ([string]$card.image) -replace '^/spainClubsLogo/cards/', 'spainClubsLogo/logos/'
-      Join-Path (Join-Path $projectRoot 'public') $logoRelative
-    } else {
-      Join-Path $logoRoot "$($card.id).webp"
-    }
-    if (-not (Test-Path -LiteralPath $logoPath)) { throw "Missing logo: $logoPath" }
+    $logoPath = [string]$logoPaths[[string]$card.id]
 
     $canvas = [System.Drawing.Bitmap]::new($templateImage.Width, $templateImage.Height)
     $graphics = [System.Drawing.Graphics]::FromImage($canvas)

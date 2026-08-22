@@ -14,6 +14,45 @@ function Get-ThemeColor {
   return [System.Drawing.ColorTranslator]::FromHtml($Hex)
 }
 
+function New-FittedFont {
+  param([System.Drawing.Graphics]$Graphics, [string]$Text, [float]$MaximumSize, [float]$MinimumSize, [float]$MaximumWidth)
+  for ($size = $MaximumSize; $size -ge $MinimumSize; $size -= 1) {
+    $font = [System.Drawing.Font]::new('Impact', $size, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+    if ($Graphics.MeasureString($Text, $font).Width -le $MaximumWidth) { return $font }
+    $font.Dispose()
+  }
+  return [System.Drawing.Font]::new('Impact', $MinimumSize, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+}
+
+function Get-SpainLeagueLogoPath {
+  param([string]$Code)
+  switch ($Code) {
+    'ESP1' { return (Join-Path $projectRoot 'public/leagueLogos/spain/la-liga.png') }
+    'ESP2' { return (Join-Path $projectRoot 'public/leagueLogos/spain/la-liga-2.png') }
+    'ESP3' { return (Join-Path $projectRoot 'public/leagueLogos/spain/primera-federacion.png') }
+    'ESP4' { return (Join-Path $projectRoot 'public/leagueLogos/spain/segunda-federacion.png') }
+    default { return (Join-Path $projectRoot 'public/leagueLogos/spain/tercera-federacion.png') }
+  }
+}
+
+function Draw-SpainLeagueLogo {
+  param([System.Drawing.Graphics]$Graphics, [string]$Path, [System.Drawing.Color]$PrimaryColor)
+  $panel = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(248, 255, 255, 255))
+  $accent = [System.Drawing.SolidBrush]::new($PrimaryColor)
+  $Graphics.FillRectangle($panel, 30, 20, 185, 172)
+  $Graphics.FillRectangle($accent, 30, 184, 185, 8)
+  $image = [System.Drawing.Image]::FromFile($Path)
+  try {
+    $bounds = [System.Drawing.RectangleF]::new(43, 30, 159, 145)
+    $scale = [Math]::Min($bounds.Width / $image.Width, $bounds.Height / $image.Height)
+    $width = $image.Width * $scale
+    $height = $image.Height * $scale
+    $Graphics.DrawImage($image, [float]($bounds.X + (($bounds.Width - $width) / 2)), [float]($bounds.Y + (($bounds.Height - $height) / 2)), [float]$width, [float]$height)
+  } finally {
+    $image.Dispose(); $accent.Dispose(); $panel.Dispose()
+  }
+}
+
 function New-AlbumImage {
   param(
     [string]$Path,
@@ -84,19 +123,15 @@ function New-AlbumImage {
     $graphics.FillRectangle($ink, 0, 0, 3, 1200)
   }
 
-  $titleFont = [System.Drawing.Font]::new('Impact', 70, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+  $titleFont = New-FittedFont $graphics $League.ToUpperInvariant() 66 30 1180
   $subtitleFont = [System.Drawing.Font]::new('Arial Narrow', 31, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
-  $codeFont = [System.Drawing.Font]::new('Arial Narrow', 24, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
   $format = [System.Drawing.StringFormat]::new()
   $format.Alignment = [System.Drawing.StringAlignment]::Center
   $format.LineAlignment = [System.Drawing.StringAlignment]::Center
-  $graphics.DrawString('SPANISH CLUB LOGOS', $titleFont, $white, [System.Drawing.RectangleF]::new(180, 12, 1176, 120), $format)
-  $subtitle = if ($Group) { "SPAIN  $([char]0x2022)  $League  $([char]0x2022)  GRUPO $Group" } else { "SPAIN  $([char]0x2022)  $League" }
-  $graphics.DrawString($subtitle, $subtitleFont, $secondary, [System.Drawing.RectangleF]::new(180, 132, 1176, 54), $format)
-
-  $codeBrush = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(225, $primaryColor))
-  $graphics.FillRectangle($codeBrush, 38, 66, 112, 54)
-  $graphics.DrawString($Code, $codeFont, $white, [System.Drawing.RectangleF]::new(38, 66, 112, 54), $format)
+  Draw-SpainLeagueLogo $graphics (Get-SpainLeagueLogoPath $Code) $primaryColor
+  $graphics.DrawString($League.ToUpperInvariant(), $titleFont, $white, [System.Drawing.RectangleF]::new(230, 18, 1220, 105), $format)
+  $subtitle = if ($Group) { "ESPA$([char]0x00D1)A  $([char]0x2022)  GRUPO $Group  $([char]0x2022)  TEMPORADA 2026/27" } else { "ESPA$([char]0x00D1)A  $([char]0x2022)  TEMPORADA 2026/27" }
+  $graphics.DrawString($subtitle, $subtitleFont, $secondary, [System.Drawing.RectangleF]::new(230, 128, 1220, 54), $format)
 
   if ($Divider) {
     $dividerPanel = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(224, 255, 255, 255))
@@ -113,9 +148,7 @@ function New-AlbumImage {
 
   $bitmap.Save($Path, [System.Drawing.Imaging.ImageFormat]::Png)
 
-  $codeBrush.Dispose()
   $format.Dispose()
-  $codeFont.Dispose()
   $subtitleFont.Dispose()
   $titleFont.Dispose()
   $gutter.Dispose()

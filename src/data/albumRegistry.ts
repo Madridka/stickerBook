@@ -15,7 +15,7 @@ import spainClubsLogoGeometry from './spainClubsLogo/album'
 import spainClubsLogoCards, { catalogs as spainClubsLogoCatalogs } from './spainClubsLogo/catalog'
 import russiaClubsLogoGeometry from './russiaClubsLogo/album'
 import russiaClubsLogoCards, { catalogs as russiaClubsLogoCatalogs } from './russiaClubsLogo/catalog'
-import englandClubsLogoGeometry from './englandClubsLogo/album'
+import englandClubsLogoGeometry, { englandDivisionPageRanges } from './englandClubsLogo/album'
 import englandClubsLogoCards, { catalogs as englandClubsLogoCatalogs } from './englandClubsLogo/catalog'
 import type {
   AlbumDefinition,
@@ -476,22 +476,23 @@ const spainClubsLogoAlbum: AlbumDefinition = {
         {
           title: 'album.editorial.spainClubsLogo.contents.sections.main',
           items: [
-            { label: 'album.editorial.spainClubsLogo.contents.labels.laLiga', pages: '04–05', targetPage: 4 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.segunda', pages: '06–09', targetPage: 6 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.primera', group: '1', pages: '10–11', targetPage: 10 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.primera', group: '2', pages: '12–13', targetPage: 12 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '1', pages: '14–15', targetPage: 14 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '2', pages: '16–17', targetPage: 16 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '3', pages: '18–19', targetPage: 18 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '4', pages: '20–21', targetPage: 20 },
-            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', group: '5', pages: '22–23', targetPage: 22 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.laLiga', logo: '/leagueLogos/spain/la-liga.png', pages: '04–05', targetPage: 4 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segunda', logo: '/leagueLogos/spain/la-liga-2.png', pages: '06–09', targetPage: 6 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.primera', logo: '/leagueLogos/spain/primera-federacion.png', group: 'Grupo 1', pages: '10–11', targetPage: 10 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.primera', logo: '/leagueLogos/spain/primera-federacion.png', group: 'Grupo 2', pages: '12–13', targetPage: 12 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', logo: '/leagueLogos/spain/segunda-federacion.png', group: 'Grupo 1', pages: '14–15', targetPage: 14 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', logo: '/leagueLogos/spain/segunda-federacion.png', group: 'Grupo 2', pages: '16–17', targetPage: 16 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', logo: '/leagueLogos/spain/segunda-federacion.png', group: 'Grupo 3', pages: '18–19', targetPage: 18 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', logo: '/leagueLogos/spain/segunda-federacion.png', group: 'Grupo 4', pages: '20–21', targetPage: 20 },
+            { label: 'album.editorial.spainClubsLogo.contents.labels.segundaFederacion', logo: '/leagueLogos/spain/segunda-federacion.png', group: 'Grupo 5', pages: '22–23', targetPage: 22 },
           ],
         },
         {
           title: 'album.editorial.spainClubsLogo.contents.sections.terceraFirst',
           items: Array.from({ length: 9 }, (_value, index) => ({
             label: 'album.editorial.spainClubsLogo.contents.labels.tercera',
-            group: String(index + 1).padStart(2, '0'),
+            logo: '/leagueLogos/spain/tercera-federacion.png',
+            group: `Grupo ${String(index + 1).padStart(2, '0')}`,
             pages: `${String(24 + index * 2).padStart(2, '0')}–${String(25 + index * 2).padStart(2, '0')}`,
             targetPage: 24 + index * 2,
           })),
@@ -500,7 +501,8 @@ const spainClubsLogoAlbum: AlbumDefinition = {
           title: 'album.editorial.spainClubsLogo.contents.sections.terceraSecond',
           items: Array.from({ length: 9 }, (_value, index) => ({
             label: 'album.editorial.spainClubsLogo.contents.labels.tercera',
-            group: String(index + 10).padStart(2, '0'),
+            logo: '/leagueLogos/spain/tercera-federacion.png',
+            group: `Grupo ${String(index + 10).padStart(2, '0')}`,
             pages: `${42 + index * 2}–${43 + index * 2}`,
             targetPage: 42 + index * 2,
           })),
@@ -598,17 +600,18 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
         {
           title: 'album.editorial.russiaClubsLogo.contents.sections.national',
           items: [
-            { label: 'album.editorial.russiaClubsLogo.contents.labels.rpl', pages: '04–05', targetPage: 4 },
-            { label: 'album.editorial.russiaClubsLogo.contents.labels.firstLeague', pages: '06–07', targetPage: 6 },
-            { label: 'album.editorial.russiaClubsLogo.contents.labels.secondA', group: 'Золото', pages: '08–09', targetPage: 8 },
-            { label: 'album.editorial.russiaClubsLogo.contents.labels.secondA', group: 'Серебро', pages: '10–11', targetPage: 10 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.rpl', logo: '/leagueLogos/russia/rpl.png', pages: '04–05', targetPage: 4 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.firstLeague', logo: '/leagueLogos/russia/first-league.png', pages: '06–07', targetPage: 6 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.secondA', logo: '/leagueLogos/russia/second-league.png', group: 'Золото', pages: '08–09', targetPage: 8 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.secondA', logo: '/leagueLogos/russia/second-league.png', group: 'Серебро', pages: '10–11', targetPage: 10 },
           ],
         },
         {
           title: 'album.editorial.russiaClubsLogo.contents.sections.secondB',
           items: Array.from({ length: 4 }, (_value, index) => ({
             label: 'album.editorial.russiaClubsLogo.contents.labels.secondB',
-            group: String(index + 1),
+            logo: '/leagueLogos/russia/second-league.png',
+            group: `Группа ${index + 1}`,
             pages: `${12 + index * 2}–${13 + index * 2}`,
             targetPage: 12 + index * 2,
           })),
@@ -616,7 +619,7 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
         {
           title: 'album.editorial.russiaClubsLogo.contents.sections.mediaLeague',
           items: [
-            { label: 'album.editorial.russiaClubsLogo.contents.labels.mediaLeague', pages: '20–21', targetPage: 20 },
+            { label: 'album.editorial.russiaClubsLogo.contents.labels.mediaLeague', logo: '/leagueLogos/russia/media-league.png', pages: '20–21', targetPage: 20 },
           ],
         },
       ],
@@ -664,7 +667,7 @@ const englandClubsLogoAlbum: AlbumDefinition = {
       title: 'album.editorial.englandClubsLogo.cover.title',
       description: 'album.editorial.englandClubsLogo.cover.description',
       footer: 'album.editorial.englandClubsLogo.cover.footer',
-      tone: 'dark',
+      tone: 'light',
     },
     {
       pageId: 'england-clubs-logo-history',
@@ -699,18 +702,24 @@ const englandClubsLogoAlbum: AlbumDefinition = {
       title: 'album.editorial.englandClubsLogo.contents.title',
       description: 'album.editorial.englandClubsLogo.fullIssue.contentsDescription',
       contentsSections: [
-        {
-          title: 'album.editorial.englandClubsLogo.fullIssue.sectionTitle',
-          items: [
-            {
-              label: 'album.editorial.englandClubsLogo.fullIssue.sectionLabel',
-              group: '795 клубов',
-              pages: '04–115',
-              targetPage: 4,
-            },
-          ],
-        },
-      ],
+        { title: 'professional', levels: [1, 2, 3, 4] },
+        { title: 'national', levels: [5, 6] },
+        { title: 'step3', levels: [7] },
+        { title: 'step4', levels: [8] },
+        { title: 'step5', levels: [9] },
+        { title: 'step6', levels: [10] },
+      ].map(({ title, levels }) => ({
+        title: `album.editorial.englandClubsLogo.contents.sections.${title}`,
+        items: englandDivisionPageRanges
+          .filter(({ level }) => levels.includes(level))
+          .map(({ division, endPage, logo, startPage }) => ({
+            logo,
+            label: division,
+            pages: `${String(startPage).padStart(2, '0')}–${String(endPage).padStart(2, '0')}`,
+            targetPage: startPage,
+            translateLabel: false,
+          })),
+      })),
     },
   ],
   layout: { openStartPage: 1 },
@@ -725,7 +734,6 @@ const englandClubsLogoAlbum: AlbumDefinition = {
     countries: ['England'],
     leagues: ['eng1', 'eng2', 'eng3', 'eng4', 'eng5', 'eng6', 'eng7', 'eng8', 'eng9', 'eng10'],
     clubs: 795,
-    pyramidClubs: 1088,
   },
 }
 

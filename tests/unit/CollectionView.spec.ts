@@ -72,6 +72,18 @@ const mountCollection = () =>
         Tab: slotStub,
         TabPanels: slotStub,
         TabPanel: slotStub,
+        Select: {
+          props: ['modelValue', 'options'],
+          template: `
+            <div data-album-select>
+              <span
+                v-for="option in options"
+                :key="option.value"
+                :data-album-id="option.value"
+              >{{ option.label }}</span>
+            </div>
+          `,
+        },
         CollectionControls: true,
         DuplicateExchangePanel: true,
         StickerPreviewDialog: {
@@ -113,13 +125,15 @@ describe('CollectionView', () => {
     testState.gameGuide.markCollectionViewed.mockReset()
   })
 
-  it('скрывает вкладки альбомов, отключённых в ALBUM_VISIBILITY_CONFIG', () => {
+  it('показывает все доступные журналы в компактном выборе', () => {
     const wrapper = mountCollection()
 
     expect(wrapper.find('[data-album-id="wc-26"]').exists()).toBe(true)
     expect(wrapper.find('[data-album-id="tomsk"]').exists()).toBe(true)
-    expect(wrapper.find('[data-album-id="ucl-26-27"]').exists()).toBe(false)
-    expect(wrapper.find('[data-album-id="spainClubsLogo"]').exists()).toBe(false)
+    expect(wrapper.find('[data-album-id="ucl-26-27"]').exists()).toBe(true)
+    expect(wrapper.find('[data-album-id="spainClubsLogo"]').exists()).toBe(true)
+    expect(wrapper.find('[data-album-id="russiaClubsLogo"]').exists()).toBe(true)
+    expect(wrapper.find('[data-album-id="englandClubsLogo"]').exists()).toBe(true)
   })
 
   it('не запускает 801 скелетон одновременно для большой коллекции', () => {

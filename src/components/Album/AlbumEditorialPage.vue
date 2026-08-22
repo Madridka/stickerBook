@@ -131,13 +131,26 @@ const { t } = useI18n()
               >
                 <button
                   type="button"
-                  class="group flex w-full cursor-pointer items-baseline gap-[0.6cqw] rounded-[0.35cqw] border-0 bg-transparent px-[0.25cqw] py-[0.48cqw] text-left text-[#17212b] transition-colors hover:bg-[#c83d36]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#c83d36]"
+                  class="group flex w-full cursor-pointer items-center gap-[0.55cqw] rounded-[0.35cqw] border-0 bg-transparent px-[0.25cqw] py-[0.34cqw] text-left text-[#17212b] transition-colors hover:bg-[#c83d36]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#c83d36]"
                   @click.stop="emit('navigate', item.targetPage)"
                 >
                   <span
+                    v-if="item.logo || item.badge"
+                    class="flex h-[1.65cqw] w-[1.65cqw] shrink-0 items-center justify-center bg-white p-[0.12cqw] shadow-[0_0.15cqw_0_rgb(23_33_43_/_18%)]"
+                    :class="{
+                      'border border-[#c8102e] text-[#c8102e]': !item.logo && item.badgeTheme === 'england',
+                      'border border-[#aa151b] bg-[#f1bf00] text-[#6b1115]': !item.logo && item.badgeTheme === 'spain',
+                      'border border-[#17467b] text-[#c51e3a]': !item.logo && item.badgeTheme === 'russia',
+                    }"
+                    aria-hidden="true"
+                  >
+                    <img v-if="item.logo" :src="item.logo" alt="" class="h-full w-full object-contain" />
+                    <template v-else>{{ item.badge }}</template>
+                  </span>
+                  <span
                     class="min-w-0 text-[clamp(6px,0.79cqw,12px)] font-bold leading-[1.15] group-hover:text-[#c83d36] max-md:text-[clamp(4px,0.79cqw,6px)]"
                   >
-                    {{ t(item.label) }}<template v-if="item.group"> · G{{ item.group }}</template>
+                    {{ item.translateLabel === false ? item.label : t(item.label) }}<template v-if="item.group"> · {{ item.group }}</template>
                   </span>
                   <span class="min-w-[1cqw] flex-1 border-b border-dotted border-[#17212b]/30" />
                   <strong

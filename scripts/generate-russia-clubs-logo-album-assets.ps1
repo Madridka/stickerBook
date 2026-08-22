@@ -9,6 +9,45 @@ $temporaryRoot = Join-Path $projectRoot 'tmp/russiaClubsLogo-album'
 $clubs = Get-Content -Raw -Encoding UTF8 (Join-Path $projectRoot 'src/data/russiaClubsLogo/russia/clubs.json') | ConvertFrom-Json
 New-Item -ItemType Directory -Force -Path $outputRoot, $infoRoot, $temporaryRoot | Out-Null
 
+function New-FittedFont {
+  param([System.Drawing.Graphics]$Graphics, [string]$Text, [float]$MaximumSize, [float]$MinimumSize, [float]$MaximumWidth)
+  for ($size = $MaximumSize; $size -ge $MinimumSize; $size -= 1) {
+    $font = [System.Drawing.Font]::new('Arial Black', $size, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+    if ($Graphics.MeasureString($Text, $font).Width -le $MaximumWidth) { return $font }
+    $font.Dispose()
+  }
+  return [System.Drawing.Font]::new('Arial Black', $MinimumSize, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+}
+
+function Get-RussiaLeagueLogoPath {
+  param([string]$Code)
+  switch ($Code) {
+    'RUS1' { return (Join-Path $projectRoot 'public/leagueLogos/russia/rpl.png') }
+    'RUS2' { return (Join-Path $projectRoot 'public/leagueLogos/russia/first-league.png') }
+    'RUS3' { return (Join-Path $projectRoot 'public/leagueLogos/russia/second-league.png') }
+    'RUS4' { return (Join-Path $projectRoot 'public/leagueLogos/russia/second-league.png') }
+    default { return (Join-Path $projectRoot 'public/leagueLogos/russia/media-league.png') }
+  }
+}
+
+function Draw-RussiaLeagueLogo {
+  param([System.Drawing.Graphics]$Graphics, [string]$Path, [System.Drawing.Color]$PrimaryColor)
+  $panel = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(248, 255, 255, 255))
+  $accent = [System.Drawing.SolidBrush]::new($PrimaryColor)
+  $Graphics.FillRectangle($panel, 30, 20, 185, 172)
+  $Graphics.FillRectangle($accent, 30, 184, 185, 8)
+  $image = [System.Drawing.Image]::FromFile($Path)
+  try {
+    $bounds = [System.Drawing.RectangleF]::new(43, 30, 159, 145)
+    $scale = [Math]::Min($bounds.Width / $image.Width, $bounds.Height / $image.Height)
+    $width = $image.Width * $scale
+    $height = $image.Height * $scale
+    $Graphics.DrawImage($image, [float]($bounds.X + (($bounds.Width - $width) / 2)), [float]($bounds.Y + (($bounds.Height - $height) / 2)), [float]$width, [float]$height)
+  } finally {
+    $image.Dispose(); $accent.Dispose(); $panel.Dispose()
+  }
+}
+
 function New-PageSurface {
   param(
     [string]$Path,
@@ -64,17 +103,15 @@ function New-PageSurface {
   $format = [System.Drawing.StringFormat]::new()
   $format.Alignment = [System.Drawing.StringAlignment]::Center
   $format.LineAlignment = [System.Drawing.StringAlignment]::Center
-  $titleFont = [System.Drawing.Font]::new('Arial Black', 56, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+  $titleFont = New-FittedFont $graphics $Title.ToUpperInvariant() 54 22 1190
   $subtitleFont = [System.Drawing.Font]::new('Arial Narrow', 30, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
-  $codeFont = [System.Drawing.Font]::new('Arial Black', 22, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
-  $graphics.DrawString($Title.ToUpperInvariant(), $titleFont, $white, [System.Drawing.RectangleF]::new(180, 15, 1176, 112), $format)
-  $subtitle = if ($Group) { $Group.ToUpperInvariant() } else { $Code }
-  $graphics.DrawString($subtitle, $subtitleFont, $secondary, [System.Drawing.RectangleF]::new(180, 132, 1176, 54), $format)
-  $graphics.FillRectangle($primary, 38, 66, 112, 54)
-  $graphics.DrawString($Code, $codeFont, $white, [System.Drawing.RectangleF]::new(38, 66, 112, 54), $format)
+  Draw-RussiaLeagueLogo $graphics (Get-RussiaLeagueLogoPath $Code) $primaryColor
+  $graphics.DrawString($Title.ToUpperInvariant(), $titleFont, $white, [System.Drawing.RectangleF]::new(230, 15, 1220, 112), $format)
+  $subtitle = if ($Group) { "$($Group.ToUpperInvariant())  $([char]0x2022)  2026/27" } else { '2026/27' }
+  $graphics.DrawString($subtitle, $subtitleFont, $secondary, [System.Drawing.RectangleF]::new(230, 132, 1220, 54), $format)
   $bitmap.Save($Path, [System.Drawing.Imaging.ImageFormat]::Png)
 
-  $codeFont.Dispose(); $subtitleFont.Dispose(); $titleFont.Dispose(); $format.Dispose()
+  $subtitleFont.Dispose(); $titleFont.Dispose(); $format.Dispose()
   $gutter.Dispose(); $guide.Dispose(); $outline.Dispose(); $soft.Dispose()
   $secondary.Dispose(); $primary.Dispose(); $white.Dispose(); $ink.Dispose()
   $graphics.Dispose(); $bitmap.Dispose()

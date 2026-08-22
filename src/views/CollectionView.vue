@@ -27,6 +27,7 @@ import TabPanel from 'primevue/tabpanel'
 import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
 import Button from 'primevue/button'
+import Select from 'primevue/select'
 
 import CollectionControls from '@/components/Collection/CollectionControls.vue'
 import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
@@ -351,33 +352,38 @@ watch(
         </div>
       </div>
 
-      <div
-        class="grid min-w-0 flex-1 grid-cols-2 gap-1.5 sm:ml-auto sm:max-w-md sm:gap-2"
-        role="radiogroup"
+      <Select
+        v-model="activeAlbumId"
+        class="ml-auto min-w-0 flex-1 border-2 border-ink text-sm font-black sm:max-w-md"
+        :options="albumOptions"
+        option-label="label"
+        option-value="value"
+        filter
+        :aria-label="t('album.collectionControls.albumLabel')"
+        :pt="{
+          label: { class: '!py-2 !font-black sm:!py-2.5' },
+          option: { class: '!py-2 text-sm font-bold' },
+        }"
       >
-        <button
-          v-for="album in albumOptions"
-          :key="album.value"
-          :data-album-id="album.value"
-          class="flex min-w-0 items-center justify-center gap-1.5 border-2 px-2 py-2 text-sm font-black transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral sm:px-4 sm:py-2.5"
-          :class="
-            activeAlbumId === album.value
-              ? 'border-ink bg-ink text-paper shadow-[2px_2px_0_rgb(var(--color-coral)/0.65)]'
-              : 'border-ink/15 bg-ink/[.04] text-ink hover:border-coral hover:bg-coral/10'
-          "
-          type="button"
-          role="radio"
-          :aria-checked="activeAlbumId === album.value"
-          @click="activeAlbumId = album.value"
-        >
-          <i
-            class="shrink-0 text-xs"
-            :class="activeAlbumId === album.value ? 'pi pi-check-circle' : 'pi pi-circle'"
-            aria-hidden="true"
-          />
-          <span class="truncate">{{ album.label }}</span>
-        </button>
-      </div>
+        <template #value="{ value }">
+          <span class="flex min-w-0 items-center gap-2">
+            <i class="pi pi-book shrink-0 text-coral" aria-hidden="true" />
+            <span class="truncate">
+              {{ albumOptions.find((album) => album.value === value)?.label }}
+            </span>
+          </span>
+        </template>
+        <template #option="{ option }">
+          <span :data-album-id="option.value" class="flex min-w-0 items-center gap-2">
+            <i
+              class="shrink-0"
+              :class="activeAlbumId === option.value ? 'pi pi-check-circle text-coral' : 'pi pi-book text-ink/35'"
+              aria-hidden="true"
+            />
+            <span class="truncate">{{ option.label }}</span>
+          </span>
+        </template>
+      </Select>
     </nav>
 
     <Tabs v-model:value="activeTab" class="flex min-h-0 flex-1 flex-col">

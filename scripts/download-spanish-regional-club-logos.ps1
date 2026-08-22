@@ -38,7 +38,7 @@ $catalogPages = @{
   'esp5-g11-03' = 'ESCUDO+U.D.%20ARENAL'
   'esp5-g11-18' = 'ESCUDO+C.E.%20SINEU'
   'esp5-g12-01' = 'ESCUDO+U.D.%20A%C3%91AZA'
-  'esp5-g12-14' = 'ESCUDO+A.D.%20SAN%20MIGUEL'
+  # CD Arcángel San Miguel is sourced separately from its official club identity.
   'esp5-g12-18' = 'ESCUDO+S.D.%20VILLAVERDE%20NORTE-'
   'esp5-g13-03' = 'ESCUDO+C.D.%20ALGAR'
   'esp5-g13-15' = 'ESCUDO+C.D.%20SAN%20JAVIER'

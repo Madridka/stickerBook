@@ -3,6 +3,7 @@ param(
   [string]$ClubsPath = 'src/data/russiaClubsLogo/russia/clubs.json',
   [string]$TemplatePath = 'public/examples/clubLogos/template_russia.webp',
   [string]$TemporaryName = 'russiaClubsLogo-cards',
+  [string]$StructurePath = '',
   [switch]$SkipAlphaCrop,
   [switch]$SkipMissingLogos,
   [string]$CardIdPrefix = ''
@@ -31,6 +32,15 @@ $clubs = Get-Content -Raw -Encoding UTF8 (Join-Path $projectRoot $ClubsPath) | C
 $cards = @($cards | Where-Object { -not $CardIdPrefix -or ([string]$_.id).StartsWith($CardIdPrefix) })
 $clubsById = @{}
 $clubs | ForEach-Object { $clubsById[$_.id] = $_ }
+$leagueLabelsByClubId = @{}
+if ($StructurePath) {
+  $structure = Get-Content -Raw -Encoding UTF8 (Join-Path $projectRoot $StructurePath) | ConvertFrom-Json
+  foreach ($division in $structure.divisions) {
+    foreach ($divisionClub in $division.clubs) {
+      $leagueLabelsByClubId[[string]$divisionClub.id] = [string]$division.league
+    }
+  }
+}
 $leagueNames = @{
   rus1 = ([string][char]1056) + [char]1055 + [char]1051
   rus2 = '1 ' + [char]1051 + [char]1048 + [char]1043 + [char]1040
@@ -59,6 +69,76 @@ function New-FittedFont {
 }
 
 function Draw-CenteredText {
+  param(
+    [System.Drawing.Graphics]$Graphics,
+    [string]$Text,
+    [System.Drawing.Font]$Font,
+    [System.Drawing.Brush]$Brush,
+    [System.Drawing.RectangleF]$Bounds
+  )
+
+  $format = [System.Drawing.StringFormat]::new()
+  $format.Alignment = [System.Drawing.StringAlignment]::Center
+  $format.LineAlignment = [System.Drawing.StringAlignment]::Center
+  $format.FormatFlags = [System.Drawing.StringFormatFlags]::NoWrap
+  $Graphics.DrawString($Text, $Font, $Brush, $Bounds, $format)
+  $format.Dispose()
+}
+
+function Get-BalancedHeaderText {
+  param(
+    [System.Drawing.Graphics]$Graphics,
+    [string]$Text,
+    [string]$Family = 'Arial Black'
+  )
+
+  $words = @($Text -split '\s+' | Where-Object { $_ })
+  if ($words.Count -lt 3) { return $Text }
+
+  $probeFont = [System.Drawing.Font]::new($Family, 32, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+  try {
+    $bestText = $Text
+    $bestScore = [double]::PositiveInfinity
+    for ($split = 1; $split -lt $words.Count; $split += 1) {
+      $first = ($words[0..($split - 1)] -join ' ')
+      $second = ($words[$split..($words.Count - 1)] -join ' ')
+      $firstWidth = $Graphics.MeasureString($first, $probeFont).Width
+      $secondWidth = $Graphics.MeasureString($second, $probeFont).Width
+      $score = [Math]::Max($firstWidth, $secondWidth) + ([Math]::Abs($firstWidth - $secondWidth) * 0.18)
+      if ($score -lt $bestScore) {
+        $bestScore = $score
+        $bestText = "$first`n$second"
+      }
+    }
+    return $bestText
+  } finally {
+    $probeFont.Dispose()
+  }
+}
+
+function New-FittedBlockFont {
+  param(
+    [System.Drawing.Graphics]$Graphics,
+    [string]$Text,
+    [string]$Family,
+    [float]$MaximumSize,
+    [float]$MinimumSize,
+    [System.Drawing.RectangleF]$Bounds,
+    [System.Drawing.FontStyle]$Style = [System.Drawing.FontStyle]::Regular
+  )
+
+  $lines = @($Text -split "`r?`n")
+  for ($size = $MaximumSize; $size -ge $MinimumSize; $size -= 1) {
+    $font = [System.Drawing.Font]::new($Family, $size, $Style, [System.Drawing.GraphicsUnit]::Pixel)
+    $maximumLineWidth = ($lines | ForEach-Object { $Graphics.MeasureString($_, $font).Width } | Measure-Object -Maximum).Maximum
+    $blockHeight = $font.GetHeight($Graphics) * $lines.Count
+    if ($maximumLineWidth -le ($Bounds.Width - 2) -and $blockHeight -le ($Bounds.Height - 2)) { return $font }
+    $font.Dispose()
+  }
+  return [System.Drawing.Font]::new($Family, $MinimumSize, $Style, [System.Drawing.GraphicsUnit]::Pixel)
+}
+
+function Draw-CenteredBlockText {
   param(
     [System.Drawing.Graphics]$Graphics,
     [string]$Text,
@@ -187,11 +267,23 @@ try {
     $graphics.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
     $graphics.DrawImage($template, 0, 0, $canvas.Width, $canvas.Height)
 
-    $leagueName = if ($club.leagueLabel) { ([string]$club.leagueLabel).ToUpperInvariant() } else { [string]$leagueNames[[string]$card.leagueId] }
+    $leagueName = if ($leagueLabelsByClubId.ContainsKey([string]$card.id)) {
+      ([string]$leagueLabelsByClubId[[string]$card.id]).ToUpperInvariant()
+    } elseif ($club.leagueLabel) {
+      ([string]$club.leagueLabel).ToUpperInvariant()
+    } else {
+      [string]$leagueNames[[string]$card.leagueId]
+    }
     if (-not $leagueName) { throw "Missing league label: $($card.leagueId)" }
-    $leagueFont = New-FittedFont $graphics $leagueName 'Arial Black' 66 20 315 ([System.Drawing.FontStyle]::Bold)
+    $leagueBounds = [System.Drawing.RectangleF]::new(225, 42, 330, 120)
+    $leagueHeader = $leagueName
+    $singleLineProbe = New-FittedFont $graphics $leagueName 'Arial Black' 66 31 315 ([System.Drawing.FontStyle]::Bold)
+    $singleLineFits = $graphics.MeasureString($leagueName, $singleLineProbe).Width -le 315
+    $singleLineProbe.Dispose()
+    if (-not $singleLineFits) { $leagueHeader = Get-BalancedHeaderText $graphics $leagueName }
+    $leagueFont = New-FittedBlockFont $graphics $leagueHeader 'Arial Black' 66 22 $leagueBounds ([System.Drawing.FontStyle]::Bold)
     $numberFont = [System.Drawing.Font]::new('Arial Black', 112, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
-    Draw-CenteredText $graphics $leagueName $leagueFont $white ([System.Drawing.RectangleF]::new(225, 42, 330, 120))
+    Draw-CenteredBlockText $graphics $leagueHeader $leagueFont $white $leagueBounds
     Draw-CenteredText $graphics $card.cardNumber $numberFont $ink ([System.Drawing.RectangleF]::new(785, 37, 210, 145))
 
     $logoBounds = [System.Drawing.RectangleF]::new(287, 384, 450, 520)

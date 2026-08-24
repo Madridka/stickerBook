@@ -70,9 +70,15 @@ describe('spainClubsLogo journal UI', () => {
       props: { definition, pageNumber: 3 },
     })
     const links = wrapper.findAll('button')
-    expect(links).toHaveLength(27)
-    await links[26].trigger('click')
-    expect(wrapper.emitted('navigate')).toEqual([[58]])
+    expect(links).toHaveLength(9)
+    await links[8].trigger('click')
+    expect(wrapper.emitted('navigate')).toEqual([[24]])
+
+    await wrapper.setProps({ pageNumber: 5 })
+    const lastPageLinks = wrapper.findAll('button')
+    expect(lastPageLinks).toHaveLength(9)
+    await lastPageLinks[8].trigger('click')
+    expect(wrapper.emitted('navigate')?.at(-1)).toEqual([60])
   })
 
   it('shows the named slot and allows retrying a missing draft image', async () => {

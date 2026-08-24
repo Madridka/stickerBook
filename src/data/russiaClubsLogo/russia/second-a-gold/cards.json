@@ -13,7 +13,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-01-fc-alania-vladikavkaz.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -30,7 +30,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-02-volgar_astrakhan.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -47,7 +47,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-03-fk-dinamo-kirov.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -64,7 +64,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-04-fk-dinamo-bryansk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -81,7 +81,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-05-dynamo-vladivostok.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -98,7 +98,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-06-fk-kaluga.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-07-fk-mashuk-kmv-pyatigorsk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -132,7 +132,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-08-rodina-2.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -149,7 +149,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-09-fk-novosibirsk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -166,7 +166,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-gold/RUS3-GOLD-10-fk-sokol-saratov.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   }
 ]

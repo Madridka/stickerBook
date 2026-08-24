@@ -13,7 +13,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-02-aveley.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -30,7 +30,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-04-burgess-hill-town.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -47,7 +47,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-06-chatham-town.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -64,7 +64,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-09-dartford.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -81,7 +81,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-10-dulwich-hamlet.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -98,7 +98,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-11-eastbourne-borough.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-13-leatherhead.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -132,7 +132,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-14-lewes.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -149,7 +149,7 @@
     "image": "/englandClubsLogo/cards/england/isthmian-league-premier/ENG7-IP-17-st-albans-city.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   }
 ]

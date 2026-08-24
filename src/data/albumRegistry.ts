@@ -1,5 +1,9 @@
 import { ALBUM_VISIBILITY_CONFIG } from '@/config/albumConfig'
-import { BLISTER_CONFIGS, PACK_CONFIGS } from '@/config/gameBalance'
+import {
+  BLISTER_CONFIGS,
+  PACK_CONFIGS,
+  createClubLogoRarityOdds,
+} from '@/config/gameBalance'
 import { hasAlbumPageAsset } from './albumPageAssets'
 import infoGeometry from './info/album'
 import wc26Geometry from './wc-26/album'
@@ -39,6 +43,7 @@ const createSpreads = (albumId: AlbumId, pageIds: string[]): AlbumSpread[] =>
 
 const toBlisterDefinition = (
   config: (typeof BLISTER_CONFIGS)[keyof typeof BLISTER_CONFIGS],
+  rarityOdds: BlisterDefinition['rarityOdds'] = config.rarityOdds,
 ): BlisterDefinition => ({
   id: config.id,
   albumId: config.albumId,
@@ -50,9 +55,28 @@ const toBlisterDefinition = (
   cardCount: config.cardsPerPack,
   cooldownMs: config.cooldownMs,
   poolId: config.poolId,
-  rarityOdds: config.rarityOdds,
+  rarityOdds,
   pityEligible: config.pityEligible,
 })
+
+const spainClubsLogoRarityOdds = createClubLogoRarityOdds(spainClubsLogoCards)
+const russiaClubsLogoRarityOdds = createClubLogoRarityOdds(russiaClubsLogoCards)
+const englandClubsLogoRarityOdds = createClubLogoRarityOdds(englandClubsLogoCards)
+
+const shiftContentsPages = (
+  sections: NonNullable<AlbumEditorialPageDefinition['contentsSections']>,
+  offset: number,
+): NonNullable<AlbumEditorialPageDefinition['contentsSections']> =>
+  sections.map((section) => ({
+    ...section,
+    items: section.items.map((item) => ({
+      ...item,
+      pages: item.pages.replace(/\d+/g, (value) =>
+        String(Number(value) + offset).padStart(value.length, '0'),
+      ),
+      targetPage: item.targetPage + offset,
+    })),
+  }))
 
 const infoEditorialPages: AlbumEditorialPageDefinition[] = [
   {
@@ -472,7 +496,14 @@ const spainClubsLogoAlbum: AlbumDefinition = {
       eyebrow: 'album.editorial.spainClubsLogo.contents.eyebrow',
       title: 'album.editorial.spainClubsLogo.contents.title',
       description: 'album.editorial.spainClubsLogo.contents.description',
-      contentsSections: [
+      contentsVariant: 'logo-grid',
+      contentsFirstPage: 3,
+      contentsPageSize: 9,
+      continuationPageIds: [
+        'spain-clubs-logo-contents-2',
+        'spain-clubs-logo-contents-3',
+      ],
+      contentsSections: shiftContentsPages([
         {
           title: 'album.editorial.spainClubsLogo.contents.sections.main',
           items: [
@@ -507,7 +538,7 @@ const spainClubsLogoAlbum: AlbumDefinition = {
             targetPage: 42 + index * 2,
           })),
         },
-      ],
+      ], 2),
     },
   ],
   layout: {
@@ -515,9 +546,11 @@ const spainClubsLogoAlbum: AlbumDefinition = {
   },
   dropSettings: {
     poolId: 'spain-clubs-logo-development',
-    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+    rarityOdds: spainClubsLogoRarityOdds,
   },
-  blisters: [toBlisterDefinition(BLISTER_CONFIGS.spainLogos)],
+  blisters: [
+    toBlisterDefinition(BLISTER_CONFIGS.spainLogos, spainClubsLogoRarityOdds),
+  ],
   metadata: {
     kind: 'club-logos',
     countries: Array.from(
@@ -596,6 +629,7 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
       eyebrow: 'album.editorial.russiaClubsLogo.contents.eyebrow',
       title: 'album.editorial.russiaClubsLogo.contents.title',
       description: 'album.editorial.russiaClubsLogo.contents.description',
+      contentsVariant: 'logo-grid',
       contentsSections: [
         {
           title: 'album.editorial.russiaClubsLogo.contents.sections.national',
@@ -630,9 +664,11 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
   },
   dropSettings: {
     poolId: 'russia-clubs-logo-standard',
-    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+    rarityOdds: russiaClubsLogoRarityOdds,
   },
-  blisters: [toBlisterDefinition(BLISTER_CONFIGS.russiaLogos)],
+  blisters: [
+    toBlisterDefinition(BLISTER_CONFIGS.russiaLogos, russiaClubsLogoRarityOdds),
+  ],
   metadata: {
     kind: 'club-logos',
     season: '2026/27',
@@ -701,6 +737,13 @@ const englandClubsLogoAlbum: AlbumDefinition = {
       eyebrow: 'album.editorial.englandClubsLogo.contents.eyebrow',
       title: 'album.editorial.englandClubsLogo.contents.title',
       description: 'album.editorial.englandClubsLogo.fullIssue.contentsDescription',
+      contentsVariant: 'logo-grid',
+      contentsFirstPage: 3,
+      contentsPageSize: 18,
+      continuationPageIds: [
+        'england-clubs-logo-contents-2',
+        'england-clubs-logo-contents-3',
+      ],
       contentsSections: [
         { title: 'professional', levels: [1, 2, 3, 4] },
         { title: 'national', levels: [5, 6] },
@@ -725,9 +768,11 @@ const englandClubsLogoAlbum: AlbumDefinition = {
   layout: { openStartPage: 1 },
   dropSettings: {
     poolId: 'england-clubs-logo-standard',
-    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+    rarityOdds: englandClubsLogoRarityOdds,
   },
-  blisters: [toBlisterDefinition(BLISTER_CONFIGS.englandLogos)],
+  blisters: [
+    toBlisterDefinition(BLISTER_CONFIGS.englandLogos, englandClubsLogoRarityOdds),
+  ],
   metadata: {
     kind: 'club-logos',
     season: '2026/27',

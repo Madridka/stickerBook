@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import logoUrl from '../../../assets/game/wc-26/main/logo.webp'
+import logoUrl from '../../../assets/game/game/haaland.png'
 
 import ClickEffect from '@/components/Clicker/ClickEffect.vue'
 
@@ -29,7 +29,7 @@ const { t } = useI18n()
   <div class="relative flex min-h-0 w-full flex-1 items-center justify-center overflow-visible">
     <!-- Кнопка с логотипом, начисляющая coins при нажатии -->
     <button
-      class="group relative flex w-44 touch-manipulation select-none items-center justify-center p-4 text-center outline-none transition-transform duration-100 ease-out hover:scale-[1.03] active:translate-y-3 active:scale-[.96] focus-visible:ring-4 focus-visible:ring-coral/40 sm:w-56 sm:p-5"
+      class="group relative flex w-64 touch-manipulation select-none items-center justify-center p-2 text-center outline-none transition-transform duration-100 ease-out hover:scale-[1.03] active:translate-y-3 active:scale-[.96] focus-visible:ring-4 focus-visible:ring-coral/40 sm:w-80"
       type="button"
       :aria-label="label"
       :disabled="disabled"

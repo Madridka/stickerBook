@@ -13,7 +13,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-silver/RUS3-SILVER-01-amkar.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -30,7 +30,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-silver/RUS3-SILVER-02-dinamo-m-rez.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -47,7 +47,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-silver/RUS3-SILVER-03-dinamo-stavropol.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -64,7 +64,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-silver/RUS3-SILVER-04-zenit-2-st-peterburg.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -81,7 +81,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-silver/RUS3-SILVER-05-fk-irtysh.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -98,7 +98,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-silver/RUS3-SILVER-06-torpedo-miass.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-a-silver/RUS3-SILVER-07-tyumen.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   }
 ]

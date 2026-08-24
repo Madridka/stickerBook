@@ -23,4 +23,4 @@ export const ALBUM_VIEW_CONFIG = {
 }
 
 /** Показывает весь каталог как вклеенный, не изменяя данные игрока. */
-export const PLACE_ALL_COLLECTED_CARDS: boolean = true
+export const PLACE_ALL_COLLECTED_CARDS: boolean = false

@@ -81,7 +81,7 @@
     "image": "/russiaClubsLogo/cards/russia/rpl/RUS1-05-dinamo_m.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {
@@ -98,7 +98,7 @@
     "image": "/russiaClubsLogo/cards/russia/rpl/RUS1-06-zenit.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/russiaClubsLogo/cards/russia/rpl/RUS1-07-krasnodar.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {
@@ -149,7 +149,7 @@
     "image": "/russiaClubsLogo/cards/russia/rpl/RUS1-09-lokomotiv_moskva.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {
@@ -234,7 +234,7 @@
     "image": "/russiaClubsLogo/cards/russia/rpl/RUS1-14-fc_spartak_moskva.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {
@@ -268,7 +268,7 @@
     "image": "/russiaClubsLogo/cards/russia/rpl/RUS1-16-tsska_m.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   }
 ]

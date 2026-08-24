@@ -162,7 +162,7 @@ for (const division of structure.divisions) {
       image,
       series: 'base',
       finish: 'standard',
-      rarity: 'uncommon',
+      rarity: club.rarity ?? (division.level >= 3 ? 'common' : 'uncommon'),
       kind: 'team',
     })
     logoJobs.push({

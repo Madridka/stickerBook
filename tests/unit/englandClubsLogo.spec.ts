@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { requireAlbum } from '@/data/albumRegistry'
 
 describe('englandClubsLogo journal', () => {
-  it('publishes 795 cards and a league-by-league contents page', () => {
+  it('publishes 795 cards and a three-page logo contents', () => {
     const album = requireAlbum('englandClubsLogo')
     const contentsPage = album.editorialPages.find(
       ({ pageId }) => pageId === 'england-clubs-logo-contents',
@@ -14,8 +14,13 @@ describe('englandClubsLogo journal', () => {
     expect(album.metadata).not.toHaveProperty('pyramidClubs')
     expect(contentsPage?.contentsSections).toHaveLength(6)
     expect(items).toHaveLength(52)
-    expect(items?.[0]?.pages).toBe('04–05')
-    expect(items?.at(-1)?.pages).toBe('114–115')
+    expect(contentsPage?.contentsVariant).toBe('logo-grid')
+    expect(contentsPage?.continuationPageIds).toEqual([
+      'england-clubs-logo-contents-2',
+      'england-clubs-logo-contents-3',
+    ])
+    expect(items?.[0]?.pages).toBe('06–07')
+    expect(items?.at(-1)?.pages).toBe('116–117')
     expect(items?.every(({ logo }) => logo?.startsWith('/leagueLogos/england/'))).toBe(true)
   })
 })

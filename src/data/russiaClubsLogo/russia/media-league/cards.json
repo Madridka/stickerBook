@@ -13,7 +13,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-01-2drots.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -30,7 +30,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-02-amkal.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -47,7 +47,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-03-fc-10.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -64,7 +64,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-04-apsny.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -81,7 +81,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-05-broke-boys.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -98,7 +98,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-06-lit-energy.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-07-prime-squad.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -132,7 +132,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-08-narodnaya-komanda.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -149,7 +149,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-09-sindekat.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -166,7 +166,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-10-ska-rostov.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -183,7 +183,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-11-fc-vibe.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -200,7 +200,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-12-fc-match.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -217,7 +217,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-13-fc-unison.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -234,7 +234,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-14-egrisi.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -251,7 +251,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-15-fight-nights.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -268,7 +268,7 @@
     "image": "/russiaClubsLogo/cards/russia/media-league/RUSMFL-16-banka.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   }
 ]

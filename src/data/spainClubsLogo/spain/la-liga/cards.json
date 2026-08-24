@@ -30,7 +30,7 @@
     "image": "/spainClubsLogo/cards/spain/la-liga/ESP1-02-atletico-de-madrid.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/spainClubsLogo/cards/spain/la-liga/ESP1-07-fc-barcelona.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {
@@ -268,7 +268,7 @@
     "image": "/spainClubsLogo/cards/spain/la-liga/ESP1-16-real-madrid.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "rare",
     "kind": "team"
   },
   {

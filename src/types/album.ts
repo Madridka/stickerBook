@@ -59,6 +59,10 @@ export interface AlbumEditorialPageDefinition {
   description: string
   features?: AlbumEditorialFeature[]
   contentsSections?: AlbumEditorialContentsSection[]
+  contentsVariant?: 'list' | 'logo-grid'
+  contentsFirstPage?: number
+  contentsPageSize?: number
+  continuationPageIds?: PageId[]
   align?: AlbumEditorialPageAlign
   tone?: AlbumEditorialPageTone
   footer?: string

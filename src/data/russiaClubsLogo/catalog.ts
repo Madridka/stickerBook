@@ -24,7 +24,7 @@ export const catalogs: NormalizedCardCatalog[] = Object.values(catalogModules)
           collectionId: 'russiaClubsLogo',
           teamId,
           defaults: {
-            rarity: 'uncommon',
+            rarity: 'common',
             series: 'base',
             finish: 'standard',
             acquisition: [{ type: 'pack', poolId: 'russia-clubs-logo-standard' }],

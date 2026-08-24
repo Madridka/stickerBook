@@ -1,4 +1,5 @@
 import type { BlisterConfig, PackConfig } from '../types/gameConfig.ts'
+import type { CardRarity } from '../types/cardCatalog.ts'
 
 export type PackHuntRewardSelection = 'fixed' | 'random' | 'rotation'
 
@@ -45,6 +46,56 @@ export const PACK_CONFIGS = {
     },
   },
 } satisfies Record<string, PackConfig>
+
+const CARD_RARITIES: readonly CardRarity[] = [
+  'common',
+  'uncommon',
+  'rare',
+  'epic',
+  'legendary',
+]
+
+const CLUB_LOGO_CARD_DROP_WEIGHTS: Readonly<Record<CardRarity, number>> = {
+  common: 1,
+  uncommon: 0.35,
+  rare: 0.1,
+  epic: 0,
+  legendary: 0,
+}
+
+/** Builds rarity odds from the actual catalog size, preserving per-card drop ratios. */
+export const createClubLogoRarityOdds = (
+  cards: readonly { rarity: CardRarity }[],
+): PackConfig['rarityOdds'] => {
+  const counts: Record<CardRarity, number> = {
+    common: 0,
+    uncommon: 0,
+    rare: 0,
+    epic: 0,
+    legendary: 0,
+  }
+  for (const card of cards) counts[card.rarity] += 1
+
+  const totalWeight: number = CARD_RARITIES.reduce(
+    (total, rarity) => total + counts[rarity] * CLUB_LOGO_CARD_DROP_WEIGHTS[rarity],
+    0,
+  )
+  if (totalWeight <= 0) throw new Error('Club-logo catalog must contain weighted cards')
+
+  return Object.fromEntries(
+    CARD_RARITIES.map((rarity) => [
+      rarity,
+      ((counts[rarity] * CLUB_LOGO_CARD_DROP_WEIGHTS[rarity]) / totalWeight) * 100,
+    ]),
+  ) as PackConfig['rarityOdds']
+}
+
+const CLUB_LOGO_FALLBACK_RARITY_ODDS: PackConfig['rarityOdds'] =
+  createClubLogoRarityOdds([
+    { rarity: 'common' },
+    { rarity: 'uncommon' },
+    { rarity: 'rare' },
+  ])
 
 /** Экономика, содержимое и кулдауны покупаемых блистеров. */
 export const BLISTER_CONFIGS = {
@@ -116,7 +167,7 @@ export const BLISTER_CONFIGS = {
     cooldownMs: 0,
     poolId: 'spain-clubs-logo-development',
     pityEligible: true,
-    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+    rarityOdds: CLUB_LOGO_FALLBACK_RARITY_ODDS,
   },
   russiaLogos: {
     id: 'russia-logos',
@@ -130,7 +181,7 @@ export const BLISTER_CONFIGS = {
     cooldownMs: 0,
     poolId: 'russia-clubs-logo-standard',
     pityEligible: true,
-    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+    rarityOdds: CLUB_LOGO_FALLBACK_RARITY_ODDS,
   },
   englandLogos: {
     id: 'england-logos',
@@ -144,7 +195,7 @@ export const BLISTER_CONFIGS = {
     cooldownMs: 0,
     poolId: 'england-clubs-logo-standard',
     pityEligible: true,
-    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+    rarityOdds: CLUB_LOGO_FALLBACK_RARITY_ODDS,
   },
 } satisfies Record<string, BlisterConfig>
 

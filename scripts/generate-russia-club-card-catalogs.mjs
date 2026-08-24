@@ -11,6 +11,11 @@ const previewFileNames = {
   'rus1-04': 'RUS1-04-dynamo-makhachkala.webp',
 }
 
+const getDefaultRarity = (leagueId) => {
+  const divisionLevel = Number(leagueId.match(/(\d+)$/)?.[1])
+  return Number.isFinite(divisionLevel) && divisionLevel <= 2 ? 'uncommon' : 'common'
+}
+
 const sections = [
   'rpl',
   'first-league',
@@ -43,7 +48,7 @@ for (const section of sections) {
       image: `/russiaClubsLogo/cards/russia/${section}/${fileName}`,
       series: 'base',
       finish: 'standard',
-      rarity: 'uncommon',
+      rarity: club.rarity ?? getDefaultRarity(club.leagueId),
       kind: 'team',
     }
   })

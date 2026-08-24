@@ -13,7 +13,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-01-fk-akron-2-tolyatti.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -30,7 +30,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-02-fk-dinamo-barnaul.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -47,7 +47,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-03-zenit-izhevsk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -64,7 +64,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-04-kdv-tomsk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -81,7 +81,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-05-krylya-sovetov-ii.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -98,7 +98,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-06-fk-nosta-novotroitsk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-07-orenburg-2.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -132,7 +132,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-08-pobeda-nizhny-novgorod.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -149,7 +149,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-09-rubin-2-kazan.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -166,7 +166,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-10-ural-2.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -183,7 +183,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-11-khimik-dzerzhinsk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -200,7 +200,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g4/RUS4-G4-12-fc-chelyabinsk-2.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   }
 ]

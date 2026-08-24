@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ALBUM_VIEW_CONFIG } from '@/config/albumConfig'
-import type { AlbumEditorialPageDefinition } from '@/types'
+import type { AlbumEditorialContentsItem, AlbumEditorialPageDefinition } from '@/types'
 
 interface AlbumReleaseNote {
   version: string
@@ -17,7 +18,7 @@ interface Props {
   releases?: AlbumReleaseNote[]
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   logo: '',
   releaseSeries: '',
   releases: () => [],
@@ -28,6 +29,20 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
+
+const visibleContentsItems = computed((): AlbumEditorialContentsItem[] => {
+  const items = props.definition.contentsSections?.flatMap(({ items: sectionItems }) => sectionItems) ?? []
+  const pageSize = props.definition.contentsPageSize
+  if (!pageSize) return items
+
+  const pageIndex = props.pageNumber - (props.definition.contentsFirstPage ?? props.pageNumber)
+  return items.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize)
+})
+
+const getContentsItemLabel = (item: AlbumEditorialContentsItem): string => {
+  const label = item.translateLabel === false ? item.label : t(item.label)
+  return item.group ? `${label} · ${item.group}` : label
+}
 </script>
 
 <template>
@@ -110,6 +125,38 @@ const { t } = useI18n()
         </header>
 
         <div
+          v-if="definition.contentsVariant === 'logo-grid'"
+          class="mt-[1.8cqw] grid min-h-0 gap-[1.35cqw]"
+          :class="(definition.contentsPageSize ?? 0) > 15 ? 'grid-cols-6' : 'grid-cols-5'"
+        >
+          <button
+            v-for="item in visibleContentsItems"
+            :key="`${item.label}-${item.group ?? ''}`"
+            type="button"
+            class="group flex aspect-square min-w-0 cursor-pointer flex-col items-center rounded-[1.1cqw] border border-[#17212b]/10 bg-white/95 p-[0.8cqw] shadow-[0_0.45cqw_1.2cqw_rgb(23_33_43_/_10%)] transition duration-200 hover:-translate-y-[0.22cqw] hover:border-[#c83d36]/45 hover:shadow-[0_0.7cqw_1.6cqw_rgb(23_33_43_/_16%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c83d36]"
+            :aria-label="getContentsItemLabel(item)"
+            :title="getContentsItemLabel(item)"
+            @click.stop="emit('navigate', item.targetPage)"
+          >
+            <span class="flex min-h-0 w-full flex-1 items-center justify-center" aria-hidden="true">
+              <img
+                v-if="item.logo"
+                :src="item.logo"
+                alt=""
+                class="max-h-full w-[78%] object-contain transition-transform duration-200 group-hover:scale-105"
+              />
+              <span v-else class="text-[2cqw] font-black">{{ item.badge }}</span>
+            </span>
+            <strong
+              class="mt-[0.35cqw] line-clamp-2 w-full shrink-0 text-center text-[clamp(5px,0.76cqw,11px)] font-black leading-[1.08] text-[#17212b] group-hover:text-[#c83d36] max-md:text-[clamp(3.5px,0.76cqw,5px)]"
+            >
+              {{ getContentsItemLabel(item) }}
+            </strong>
+          </button>
+        </div>
+
+        <div
+          v-else
           class="mt-[1.5cqw] grid gap-[1.2cqw]"
           :class="(definition.contentsSections?.length ?? 0) === 1 ? 'grid-cols-6' : 'grid-cols-3'"
         >

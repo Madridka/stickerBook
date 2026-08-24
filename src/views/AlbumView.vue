@@ -104,9 +104,11 @@ album.selectAlbum(albumDefinition.id)
 const cards: CardDefinition[] = albumDefinition.cards
 const albumContentsTeams: AlbumContentsItem[] = albumDefinition.contents
 const editorialPages: Record<string, AlbumEditorialPageDefinition> = Object.fromEntries(
-  albumDefinition.editorialPages.map((page): [string, AlbumEditorialPageDefinition] => [
-    page.pageId,
-    page,
+  albumDefinition.editorialPages.flatMap((page): Array<[string, AlbumEditorialPageDefinition]> => [
+    [page.pageId, page],
+    ...(page.continuationPageIds ?? []).map(
+      (pageId): [string, AlbumEditorialPageDefinition] => [pageId, page],
+    ),
   ]),
 )
 const contentsPageSize: number =

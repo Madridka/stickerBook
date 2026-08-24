@@ -90,6 +90,22 @@ const pages: AlbumGeometryPage[] = [
     height: PAGE_HEIGHT,
     slots: [],
   },
+  {
+    id: 'spain-clubs-logo-contents-2',
+    number: 4,
+    image: 'info/info-left.webp',
+    width: PAGE_WIDTH,
+    height: PAGE_HEIGHT,
+    slots: [],
+  },
+  {
+    id: 'spain-clubs-logo-contents-3',
+    number: 5,
+    image: 'info/info-right.webp',
+    width: PAGE_WIDTH,
+    height: PAGE_HEIGHT,
+    slots: [],
+  },
 ]
 
 // После обложки и информационного разворота каждая лига или группа занимает

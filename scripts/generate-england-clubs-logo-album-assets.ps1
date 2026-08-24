@@ -132,9 +132,9 @@ foreach ($division in $structure.divisions) {
   $divisionTitle = ([string]$division.division).ToUpperInvariant()
   $leagueLogoPath = Join-Path $projectRoot ('public/' + (Get-LeagueLogoRelativePath ([string]$division.league)))
   $subtitle = if ($leagueTitle -eq $divisionTitle) {
-    "LEVEL $($division.level)  $([char]0x2022)  SEASON 2026/27"
+    "SEASON 2026/27"
   } else {
-    "$divisionTitle  $([char]0x2022)  LEVEL $($division.level)"
+    $divisionTitle
   }
   foreach ($side in @('left', 'right')) {
     $page = New-Canvas $paper
@@ -143,21 +143,45 @@ foreach ($division in $structure.divisions) {
     $redBrush = [System.Drawing.SolidBrush]::new($red)
     $whiteBrush = [System.Drawing.SolidBrush]::new($white)
     $mutedBrush = [System.Drawing.SolidBrush]::new($mutedRed)
+    $softRedBrush = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(16, $red))
+
+    # Match the continuous page surface used by the Russian and Spanish albums.
     $graphics.FillRectangle($darkBrush, 0, 0, 1536, 210)
     $graphics.FillRectangle($redBrush, 0, 210, 1536, 22)
+    $graphics.FillRectangle($softRedBrush, 0, 232, 1536, 968)
+    $graphics.FillEllipse($softRedBrush, 458, 308, 620, 620)
+
+    $fieldOutlinePen = [System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(55, $red), 4)
+    $fieldGuidePen = [System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(28, $dark), 2)
+    $graphics.DrawEllipse($fieldOutlinePen, 498, 348, 540, 540)
+    $graphics.DrawLine($fieldGuidePen, 52, 648, 1484, 648)
+    $graphics.DrawRectangle($fieldGuidePen, 16, 248, 1504, 936)
+
+    $gutterRectangle = if ($side -eq 'left') {
+      [System.Drawing.Rectangle]::new(1492, 0, 44, 1200)
+    } else {
+      [System.Drawing.Rectangle]::new(0, 0, 44, 1200)
+    }
+    $gutter = [System.Drawing.Drawing2D.LinearGradientBrush]::new(
+      $gutterRectangle,
+      [System.Drawing.Color]::FromArgb(0, $dark),
+      [System.Drawing.Color]::FromArgb(72, $dark),
+      [System.Drawing.Drawing2D.LinearGradientMode]::Horizontal
+    )
+    if ($side -eq 'left') { $gutter.RotateTransform(180) }
+    $graphics.FillRectangle($gutter, $gutterRectangle)
+
     Draw-LeagueLogo $graphics $leagueLogoPath
     $titleFont = New-FittedFont $graphics $leagueTitle 52 24 1220
     $subtitleFont = New-FittedFont $graphics $subtitle 27 17 1220
-    $graphics.DrawString($leagueTitle, $titleFont, $whiteBrush, 235, 35)
-    $graphics.DrawString($subtitle, $subtitleFont, $mutedBrush, 238, 125)
-    $slotPen = [System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(42, 207, 19, 43), 4)
-    foreach ($x in @(68, 368, 668, 968, 1268)) {
-      foreach ($y in @(258, 690)) {
-        $graphics.FillRectangle($mutedBrush, $x, $y, 200, 300)
-        $graphics.DrawRectangle($slotPen, $x, $y, 200, 300)
-      }
-    }
-    $slotPen.Dispose(); $subtitleFont.Dispose(); $titleFont.Dispose()
+    $headerFormat = [System.Drawing.StringFormat]::new()
+    $headerFormat.Alignment = [System.Drawing.StringAlignment]::Center
+    $headerFormat.LineAlignment = [System.Drawing.StringAlignment]::Center
+    $graphics.DrawString($leagueTitle, $titleFont, $whiteBrush, [System.Drawing.RectangleF]::new(230, 15, 1220, 112), $headerFormat)
+    $graphics.DrawString($subtitle, $subtitleFont, $mutedBrush, [System.Drawing.RectangleF]::new(230, 132, 1220, 54), $headerFormat)
+
+    $headerFormat.Dispose(); $subtitleFont.Dispose(); $titleFont.Dispose()
+    $gutter.Dispose(); $fieldGuidePen.Dispose(); $fieldOutlinePen.Dispose(); $softRedBrush.Dispose()
     $mutedBrush.Dispose(); $whiteBrush.Dispose(); $redBrush.Dispose(); $darkBrush.Dispose()
     $name = "england-$($division.section)-$side"
     $generated.Add((Save-Canvas $page $name (Join-Path $outputRoot "$name.webp")))

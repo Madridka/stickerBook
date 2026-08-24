@@ -13,7 +13,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-01-baltika-bfu-kaliningrad.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -30,7 +30,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-02-dinamo-sankt-peterburg.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -47,7 +47,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-03-dinamo-vologda.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -64,7 +64,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-04-yenisey-2-krasnoyarsk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -81,7 +81,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-05-zvezda-sankt-peterburg.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -98,7 +98,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-06-fc-irkutsk-2020.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -115,7 +115,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-07-iskra-smolensk.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -132,7 +132,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-08-cosmos-dolgoprudny.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -149,7 +149,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-09-luki-energiya.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -166,7 +166,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-10-fc-murom-murom.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -183,7 +183,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-11-spartak-2-moskva.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -200,7 +200,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-12-fc-tver.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -217,7 +217,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-13-fk-torpedo-vladimir.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -234,7 +234,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-14-fc-cherepovets-sshor-vityaz.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   },
   {
@@ -251,7 +251,7 @@
     "image": "/russiaClubsLogo/cards/russia/second-b-g2/RUS4-G2-15-chertanovo.webp",
     "series": "base",
     "finish": "standard",
-    "rarity": "uncommon",
+    "rarity": "common",
     "kind": "team"
   }
 ]

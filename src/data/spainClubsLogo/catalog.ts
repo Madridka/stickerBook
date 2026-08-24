@@ -49,7 +49,7 @@ export const catalogs: NormalizedCardCatalog[] = catalogSources.flatMap(
           collectionId: 'spainClubsLogo',
           teamId: leagueId,
           defaults: {
-            rarity: 'uncommon',
+            rarity: 'common',
             series: 'base',
             finish: 'standard',
             acquisition: [{ type: 'pack', poolId: 'spain-clubs-logo-development' }],

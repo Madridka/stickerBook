@@ -230,7 +230,7 @@ onBeforeUnmount((): void => {
 
       <!-- Совет и все доступные действия образуют одну точку входа для нового игрока. -->
       <section
-        class="order-2 min-w-0 border-2 border-ink bg-mint/20 p-3 shadow-[5px_5px_0_rgb(var(--color-coral)/0.28)] lg:col-start-2 lg:row-start-2"
+        class="order-3 min-w-0 border-2 border-ink bg-mint/20 p-3 shadow-[5px_5px_0_rgb(var(--color-coral)/0.28)] lg:col-start-2 lg:row-start-2"
         aria-labelledby="home-advice-title"
         data-home-advice
       >
@@ -299,7 +299,7 @@ onBeforeUnmount((): void => {
         </aside>
       </section>
 
-      <div class="order-3 min-w-0 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:min-h-0">
+      <div class="order-2 min-w-0 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:min-h-0">
         <section
           id="goal-clicker"
           class="flex min-h-[20rem] scroll-mt-20 flex-col items-center border border-dashed border-ink/20 bg-white/25 p-3 transition-opacity sm:min-h-[24rem] lg:h-full lg:min-h-0"

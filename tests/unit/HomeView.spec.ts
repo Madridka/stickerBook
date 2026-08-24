@@ -243,8 +243,7 @@ describe('HomeView', () => {
   it('защищает мобильную структуру от горизонтального overflow', () => {
     const wrapper = mountHome()
     expect(wrapper.get('[data-home-view]').classes()).toContain('overflow-x-hidden')
-    expect(wrapper.get('[data-current-goal]').element.compareDocumentPosition(
-      wrapper.get('[data-clicker]').element,
-    ) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    expect(wrapper.get('[data-clicker]').element.parentElement?.classList).toContain('order-2')
+    expect(wrapper.get('[data-home-advice]').classes()).toContain('order-3')
   })
 })

@@ -80,7 +80,13 @@ export const beginDailyTaskReward = async (
       }
       if (current.pendingReward) return { status: 'ready', state: current }
 
-      const album = getPlayerAlbumById(BLISTER_CONFIGS.standard.albumId)
+      const rewardAlbums = BLISTER_CONFIGS.mixed.albumIds.flatMap((albumId) => {
+        const album = getPlayerAlbumById(albumId)
+        return album && album.cards.length >= DAILY_TASK_CONFIG.rewardCandidateCount
+          ? [album]
+          : []
+      })
+      const album = rewardAlbums[Math.floor(Math.random() * rewardAlbums.length)]
       if (!album) return { status: 'not-completed', state: current }
       const pending: PendingDailyCardChoice = {
         albumId: album.id,
@@ -88,6 +94,8 @@ export const beginDailyTaskReward = async (
           album.catalogs,
           new Set<string>(),
           DAILY_TASK_CONFIG.rewardCandidateCount,
+          Math.random,
+          BLISTER_CONFIGS.mixed.poolId,
         ),
         createdAt: now,
       }

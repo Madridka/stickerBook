@@ -248,7 +248,7 @@ export class StickerBookServerDatabase {
                 request_id AS requestId
          FROM goal_claims WHERE user_id = ? AND goal_id = ?`,
       )
-      .get(userId, goalId) as StoredGoalClaim
+      .get(userId, goalId) as unknown as StoredGoalClaim
     const { requestId: storedRequestId, ...claim } = concurrent
     return {
       status: storedRequestId === requestId ? 'claimed' : 'already-claimed',

@@ -270,6 +270,7 @@ class CloudSaveService {
     if (!this.started || !this.dirty || !this.userId) return
     if (this.savePromise) {
       await this.savePromise
+      if (this.dirty) await this.flush()
       return
     }
     this.clearSaveTimers()

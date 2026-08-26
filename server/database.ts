@@ -21,6 +21,22 @@ export interface CloudSaveRecord {
   data: unknown
 }
 
+export interface GoalClaimRecord {
+  status: 'claimed' | 'already-claimed'
+  goalId: string
+  completedAt: number
+  claimedAt: number
+}
+
+interface StoredGoalClaim extends Omit<GoalClaimRecord, 'status'> {
+  requestId: string | null
+}
+
+interface CloudGoalState {
+  completedAt?: number
+  claimedAt?: number
+}
+
 export interface AdminUserRecord extends PublicUser {
   createdAt: number
   save: CloudSaveRecord | null
@@ -105,6 +121,15 @@ export class StickerBookServerDatabase {
         updated_at INTEGER NOT NULL,
         data_json TEXT NOT NULL
       );
+      CREATE TABLE IF NOT EXISTS goal_claims (
+        user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        goal_id TEXT NOT NULL,
+        completed_at INTEGER NOT NULL,
+        claimed_at INTEGER NOT NULL,
+        request_id TEXT,
+        PRIMARY KEY (user_id, goal_id)
+      );
+      CREATE INDEX IF NOT EXISTS goal_claims_user_id_index ON goal_claims(user_id);
     `)
   }
 
@@ -173,6 +198,96 @@ export class StickerBookServerDatabase {
       updatedAt: record.updated_at,
       data: JSON.parse(record.data_json) as unknown,
     }
+  }
+
+  claimGoalReward(
+    userId: string,
+    goalId: string,
+    requestId: string,
+  ): GoalClaimRecord | undefined {
+    const existing = this.database
+      .prepare(
+        `SELECT goal_id AS goalId, completed_at AS completedAt, claimed_at AS claimedAt,
+                request_id AS requestId
+         FROM goal_claims WHERE user_id = ? AND goal_id = ?`,
+      )
+      .get(userId, goalId) as StoredGoalClaim | undefined
+    if (existing) {
+      const { requestId: storedRequestId, ...claim } = existing
+      return {
+        status: storedRequestId === requestId ? 'claimed' : 'already-claimed',
+        ...claim,
+      }
+    }
+
+    const cloudState = this.findGoalStateInCloudSave(userId, goalId)
+    if (!cloudState?.completedAt) return undefined
+    const completedAt: number = cloudState.completedAt
+    const legacyClaimedAt: number | undefined = cloudState.claimedAt
+    const claimedAt: number = legacyClaimedAt ?? Date.now()
+    const result = this.database
+      .prepare(
+        `INSERT INTO goal_claims (user_id, goal_id, completed_at, claimed_at, request_id)
+         VALUES (?, ?, ?, ?, ?)
+         ON CONFLICT(user_id, goal_id) DO NOTHING`,
+      )
+      .run(userId, goalId, completedAt, claimedAt, legacyClaimedAt === undefined ? requestId : null)
+
+    if (result.changes === 1) {
+      return {
+        status: legacyClaimedAt === undefined ? 'claimed' : 'already-claimed',
+        goalId,
+        completedAt,
+        claimedAt,
+      }
+    }
+
+    const concurrent = this.database
+      .prepare(
+        `SELECT goal_id AS goalId, completed_at AS completedAt, claimed_at AS claimedAt,
+                request_id AS requestId
+         FROM goal_claims WHERE user_id = ? AND goal_id = ?`,
+      )
+      .get(userId, goalId) as StoredGoalClaim
+    const { requestId: storedRequestId, ...claim } = concurrent
+    return {
+      status: storedRequestId === requestId ? 'claimed' : 'already-claimed',
+      ...claim,
+    }
+  }
+
+  private findGoalStateInCloudSave(userId: string, goalId: string): CloudGoalState | undefined {
+    const save = this.getCloudSave(userId)
+    if (!save || !save.data || typeof save.data !== 'object') return undefined
+    const tables = (save.data as { tables?: unknown }).tables
+    if (!Array.isArray(tables)) return undefined
+    const goalStates = tables.find(
+      (table): boolean =>
+        Boolean(table) &&
+        typeof table === 'object' &&
+        (table as { name?: unknown }).name === 'goalStates',
+    ) as { rows?: unknown } | undefined
+    if (!Array.isArray(goalStates?.rows)) return undefined
+    const state = goalStates.rows.find(
+      (row): boolean =>
+        Boolean(row) &&
+        typeof row === 'object' &&
+        (row as { goalId?: unknown }).goalId === goalId,
+    ) as { completedAt?: unknown; claimedAt?: unknown } | undefined
+    if (!state) return undefined
+    const completedAt =
+      typeof state.completedAt === 'number' &&
+      Number.isFinite(state.completedAt) &&
+      state.completedAt > 0
+        ? state.completedAt
+        : undefined
+    const claimedAt =
+      typeof state.claimedAt === 'number' &&
+      Number.isFinite(state.claimedAt) &&
+      state.claimedAt > 0
+        ? state.claimedAt
+        : undefined
+    return { completedAt, claimedAt }
   }
 
   listUsers(search: string, limit: number, offset: number): {

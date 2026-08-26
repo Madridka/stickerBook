@@ -6,11 +6,75 @@ import {
 } from '@/db/database'
 import { CLICKER_CONFIG } from '@/config/gameBalance'
 import { createId } from '@/utils/createId'
+import { apiRequest } from '@/services/api'
 import type { GoalDefinition, GoalPlayerState } from './types'
 
 export type ClaimGoalRewardResult =
   | { status: 'claimed'; player: PlayerState; items: InventoryItem[] }
   | { status: 'already-claimed' | 'not-completed' }
+
+export interface GoalClaimReceipt {
+  status: 'claimed' | 'already-claimed'
+  goalId: string
+  completedAt: number
+  claimedAt: number
+}
+
+const CLAIM_REQUEST_PREFIX = 'sticker-book-goal-claim:'
+const volatileClaimRequests: Map<string, string> = new Map()
+
+const claimRequestKey = (userId: string, goalId: string): string =>
+  `${CLAIM_REQUEST_PREFIX}${encodeURIComponent(userId)}:${encodeURIComponent(goalId)}`
+
+export const prepareGoalClaim = async (
+  userId: string,
+  goalId: string,
+): Promise<string> => {
+  const key: string = claimRequestKey(userId, goalId)
+  let requestId: string | null = null
+  try {
+    requestId = localStorage.getItem(key)
+  } catch {
+    requestId = volatileClaimRequests.get(key) ?? null
+  }
+  if (requestId) return requestId
+  requestId = createId()
+  volatileClaimRequests.set(key, requestId)
+  try {
+    localStorage.setItem(key, requestId)
+  } catch {
+    // In-memory fallback keeps retries idempotent while this page remains open.
+  }
+  return requestId
+}
+
+export const clearGoalClaimRequest = (userId: string, goalId: string): void => {
+  const key: string = claimRequestKey(userId, goalId)
+  volatileClaimRequests.delete(key)
+  try {
+    localStorage.removeItem(key)
+  } catch {
+    // Nothing else is required for ephemeral browser storage.
+  }
+}
+
+export const reserveGoalReward = async (
+  goalId: string,
+  requestId: string,
+): Promise<GoalClaimReceipt> =>
+  apiRequest<GoalClaimReceipt>(`/api/goals/${encodeURIComponent(goalId)}/claim`, {
+    method: 'POST',
+    body: JSON.stringify({ requestId }),
+  })
+
+export const applyGoalClaimReceipt = async (receipt: GoalClaimReceipt): Promise<void> => {
+  const saved = await database.goalStates.get(receipt.goalId)
+  await database.goalStates.put({
+    goalId: receipt.goalId,
+    completedAt: saved?.completedAt ?? receipt.completedAt,
+    claimedAt: saved?.claimedAt ?? receipt.claimedAt,
+  })
+}
 
 const roundCoins = (value: number): number => {
   const multiplier = 10 ** CLICKER_CONFIG.rewardPrecision

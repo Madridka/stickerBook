@@ -194,6 +194,36 @@ const openApiDocument = {
         responses: { 200: { description: 'Сохранение записано' }, 409: { description: 'Конфликт версии' } },
       },
     },
+    '/api/goals/{goalId}/claim': {
+      post: {
+        tags: ['Save'],
+        summary: 'Атомарно зафиксировать получение награды за цель',
+        security: [{ cookieAuth: [] }],
+        parameters: [
+          { name: 'goalId', in: 'path', required: true, schema: { type: 'string' } },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                required: ['requestId'],
+                properties: {
+                  requestId: { type: 'string', minLength: 8, maxLength: 128 },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          200: { description: 'Награда зарезервирована или уже была получена' },
+          400: { description: 'Некорректная цель' },
+          401: { description: 'Нет сессии' },
+          409: { description: 'Цель ещё не завершена в облачном сохранении' },
+        },
+      },
+    },
     '/api/leaderboard': {
       get: {
         tags: ['Leaderboard'],

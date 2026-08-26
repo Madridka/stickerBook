@@ -1,13 +1,18 @@
 import { computed, onScopeDispose, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { database } from '@/db/database'
+import { cloudSave } from '@/services/cloudSave'
 import albumData from '@/data/wc-26/album'
 import { cardById } from '@/data/wc-26/catalog'
 import { goalDefinitions, GOAL_ALBUM_ID } from '@/features/goals/goalDefinitions'
 import { GOALS_CHANGED_EVENT } from '@/features/goals/goalCounterService'
 import { resolveGoals } from '@/features/goals/goalProgressResolver'
 import {
+  applyGoalClaimReceipt,
   claimGoalReward,
+  clearGoalClaimRequest,
+  prepareGoalClaim,
+  reserveGoalReward,
   type ClaimGoalRewardResult,
 } from '@/features/goals/goalRewardService'
 import type {
@@ -20,13 +25,15 @@ import type {
 import { useCollectionStore } from './collection'
 import { useInventoryStore } from './inventory'
 import { usePlayerStore } from './player'
+import { useAuthStore } from './auth'
 
-export type ClaimGoalResult = ClaimGoalRewardResult['status']
+export type ClaimGoalResult = ClaimGoalRewardResult['status'] | 'server-unavailable'
 
 export const useGoalsStore = defineStore('goals', () => {
   const collection = useCollectionStore()
   const inventory = useInventoryStore()
   const player = usePlayerStore()
+  const auth = useAuthStore()
   const playerStates: Ref<GoalPlayerState[]> = ref([])
   const counters: Ref<GoalCounter[]> = ref([])
   const isLoaded: Ref<boolean> = ref(false)
@@ -219,12 +226,30 @@ export const useGoalsStore = defineStore('goals', () => {
       const completedAt =
         playerStates.value.find((state) => state.goalId === goalId)?.completedAt ??
         Date.now()
+      if (auth.user) {
+        try {
+          const requestId = await prepareGoalClaim(auth.user.id, goalId)
+          await cloudSave.flush()
+          const receipt = await reserveGoalReward(goalId, requestId)
+          if (receipt.status === 'already-claimed') {
+            await applyGoalClaimReceipt(receipt)
+            playerStates.value = await database.goalStates.toArray()
+            clearGoalClaimRequest(auth.user.id, goalId)
+            return 'already-claimed'
+          }
+        } catch {
+          return 'server-unavailable'
+        }
+      }
       const result = await claimGoalReward(runtime.definition, completedAt)
       if (result.status === 'claimed') {
         player.applyPersistedState(result.player)
         for (const item of result.items) inventory.applyPersistedItem(item)
       }
       playerStates.value = await database.goalStates.toArray()
+      if (auth.user && result.status !== 'not-completed') {
+        clearGoalClaimRequest(auth.user.id, goalId)
+      }
       return result.status
     } finally {
       const next = new Set(claimingGoalIds.value)

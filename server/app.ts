@@ -32,10 +32,15 @@ interface SaveBody {
   data?: unknown
 }
 
+interface GoalClaimBody {
+  requestId?: unknown
+}
+
 const USERNAME_PATTERN: RegExp = /^[\p{L}\p{N}_.-]+$/u
 const MAX_SAVE_BYTES: number = 2 * 1024 * 1024
 const AUTH_RATE_WINDOW_MS: number = 15 * 60 * 1_000
 const REGISTRATION_RATE_WINDOW_MS: number = 60 * 60 * 1_000
+const GOAL_ID_PATTERN: RegExp = /^[a-z][a-z0-9-]{0,63}$/
 
 const normalizeUsername = (username: string): string => username.normalize('NFKC').toLowerCase()
 
@@ -220,6 +225,28 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
     if (!user) return reply.code(401).send({ code: 'unauthorized' })
     return { save: storage.getCloudSave(user.id) ?? null }
   })
+
+  server.post<{ Params: { goalId: string }; Body: GoalClaimBody }>(
+    '/api/goals/:goalId/claim',
+    async (request, reply) => {
+      const user: PublicUser | undefined = currentUser(request)
+      if (!user) return reply.code(401).send({ code: 'unauthorized' })
+      if (
+        !GOAL_ID_PATTERN.test(request.params.goalId) ||
+        typeof request.body?.requestId !== 'string' ||
+        request.body.requestId.length < 8 ||
+        request.body.requestId.length > 128
+      ) {
+        return reply.code(400).send({ code: 'invalid-goal-claim' })
+      }
+      const claim = storage.claimGoalReward(
+        user.id,
+        request.params.goalId,
+        request.body.requestId,
+      )
+      return claim ?? reply.code(409).send({ code: 'goal-not-completed' })
+    },
+  )
 
   server.put<{ Body: SaveBody }>('/api/save', async (request, reply) => {
     const user: PublicUser | undefined = currentUser(request)

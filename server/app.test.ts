@@ -82,11 +82,113 @@ test('rejects an invalid password', async (): Promise<void> => {
   assert.equal(response.statusCode, 401)
 })
 
+test('allows a goal reward to be claimed only once across sessions', async (): Promise<void> => {
+  const login = async (): Promise<string> => {
+    const response = await server.inject({
+      method: 'POST',
+      url: '/api/auth/login',
+      payload: { username: 'player-one', password: 'strong-password' },
+    })
+    assert.equal(response.statusCode, 200)
+    return response.cookies[0]?.value ?? ''
+  }
+  const [firstCookie, secondCookie] = await Promise.all([login(), login()])
+  const currentSave = await server.inject({
+    method: 'GET',
+    url: '/api/save',
+    cookies: { sticker_book_session: firstCookie },
+  })
+  const currentVersion: number = currentSave.json().save.version
+  const completedSave = await server.inject({
+    method: 'PUT',
+    url: '/api/save',
+    cookies: { sticker_book_session: firstCookie },
+    payload: {
+      baseVersion: currentVersion,
+      data: {
+        schemaVersion: 1,
+        tables: [
+          {
+            name: 'goalStates',
+            rows: [{ goalId: 'buy-first-pack', completedAt: 100 }],
+          },
+        ],
+      },
+    },
+  })
+  assert.equal(completedSave.statusCode, 200)
+
+  const first = await server.inject({
+    method: 'POST',
+    url: '/api/goals/buy-first-pack/claim',
+    cookies: { sticker_book_session: firstCookie },
+    payload: { requestId: 'first-device-request' },
+  })
+  const second = await server.inject({
+    method: 'POST',
+    url: '/api/goals/buy-first-pack/claim',
+    cookies: { sticker_book_session: secondCookie },
+    payload: { requestId: 'second-device-request' },
+  })
+
+  assert.equal(first.statusCode, 200)
+  assert.equal(first.json().status, 'claimed')
+  assert.equal(second.statusCode, 200)
+  assert.equal(second.json().status, 'already-claimed')
+  assert.equal(second.json().claimedAt, first.json().claimedAt)
+
+  const retry = await server.inject({
+    method: 'POST',
+    url: '/api/goals/buy-first-pack/claim',
+    cookies: { sticker_book_session: firstCookie },
+    payload: { requestId: 'first-device-request' },
+  })
+  assert.equal(retry.json().status, 'claimed')
+})
+
+test('recognizes goal rewards claimed before the server ledger was introduced', async (): Promise<void> => {
+  const registration = await server.inject({
+    method: 'POST',
+    url: '/api/auth/register',
+    payload: { username: 'legacy-goals-player', password: 'strong-password' },
+  })
+  const cookie: string = registration.cookies[0]?.value ?? ''
+  await server.inject({
+    method: 'PUT',
+    url: '/api/save',
+    cookies: { sticker_book_session: cookie },
+    payload: {
+      baseVersion: 0,
+      data: {
+        schemaVersion: 1,
+        tables: [
+          {
+            name: 'goalStates',
+            rows: [{ goalId: 'open-first-pack', completedAt: 10, claimedAt: 20 }],
+          },
+        ],
+      },
+    },
+  })
+
+  const claim = await server.inject({
+    method: 'POST',
+    url: '/api/goals/open-first-pack/claim',
+    cookies: { sticker_book_session: cookie },
+    payload: { requestId: 'legacy-device-request' },
+  })
+
+  assert.equal(claim.statusCode, 200)
+  assert.equal(claim.json().status, 'already-claimed')
+  assert.equal(claim.json().claimedAt, 20)
+})
+
 test('publishes an OpenAPI schema and Swagger UI', async (): Promise<void> => {
   const schema = await server.inject({ method: 'GET', url: '/api/docs/openapi.json' })
   assert.equal(schema.statusCode, 200)
   assert.equal(schema.json().openapi, '3.1.0')
   assert.ok(schema.json().paths['/api/save'])
+  assert.ok(schema.json().paths['/api/goals/{goalId}/claim'])
   assert.ok(schema.json().paths['/api/leaderboard'])
 
   const swagger = await server.inject({ method: 'GET', url: '/api/docs' })

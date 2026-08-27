@@ -5,11 +5,11 @@ import i18n from '@/plugins/usei18n/usei18n'
 const collection = vi.hoisted(() => ({
   getAlbumProgress: vi.fn((albumId: string) => ({
     albumId,
-    totalCards: albumId === 'ucl-26-27' ? 560 : 0,
+    totalCards: albumId === 'ucl-26-27' ? 720 : 0,
     collectedCards: albumId === 'ucl-26-27' ? 43 : 0,
     placedCards: 0,
     duplicateCards: 0,
-    completionPercent: albumId === 'ucl-26-27' ? 8 : 0,
+    completionPercent: albumId === 'ucl-26-27' ? 6 : 0,
   })),
 }))
 
@@ -36,8 +36,8 @@ describe('AlbumLibraryView', () => {
       .find((link) => link.props('to') === '/album/ucl-26-27')
 
     expect(uclAlbum).toBeDefined()
-    expect(uclAlbum?.text()).toContain('Заполнено: 8%')
-    expect(uclAlbum?.text()).toContain('Собрано 43 из 560')
-    expect(uclAlbum?.find('[style="width: 8%;"]').exists()).toBe(true)
+    expect(uclAlbum?.text()).toContain('Заполнено: 6%')
+    expect(uclAlbum?.text()).toContain('Собрано 43 из 720')
+    expect(uclAlbum?.find('[style="width: 6%;"]').exists()).toBe(true)
   })
 })

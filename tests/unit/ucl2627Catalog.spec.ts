@@ -1,24 +1,15 @@
 import { describe, expect, it } from 'vitest'
-import arsenal from '@/data/ucl-26-27/arsenal/cards.json'
-import barcelona from '@/data/ucl-26-27/barcelona/cards.json'
-import bayernMunich from '@/data/ucl-26-27/bayern-munich/cards.json'
-import borussiaDortmund from '@/data/ucl-26-27/borussia-dortmund/cards.json'
-import parisSaintGermain from '@/data/ucl-26-27/paris-saint-germain/cards.json'
-import realMadrid from '@/data/ucl-26-27/real-madrid/cards.json'
 import manifest from '@/data/ucl-26-27/manifest.json'
 import cards, { catalogs } from '@/data/ucl-26-27/catalog'
 import album from '@/data/ucl-26-27/album'
 import { loadCardCatalogs } from '@/data/cardCatalogLoader'
 import type { CardRarity, PlayerPosition } from '@/types/cardCatalog'
 
-const rawCatalogs: readonly unknown[] = [
-  arsenal,
-  barcelona,
-  bayernMunich,
-  borussiaDortmund,
-  parisSaintGermain,
-  realMadrid,
-]
+const rawCatalogModules = import.meta.glob<unknown>('../../src/data/ucl-26-27/*/cards.json', {
+  eager: true,
+  import: 'default',
+})
+const rawCatalogs: readonly unknown[] = Object.values(rawCatalogModules)
 
 const expectedPositions: Readonly<Record<PlayerPosition, number>> = {
   GK: 2,
@@ -34,8 +25,8 @@ const expectedRarities: Readonly<Record<CardRarity, number>> = {
   legendary: 1,
 }
 
-describe('UCL 2026/27 draft catalog', () => {
-  it('loads and normalizes all six catalogs without mutating JSON inputs', () => {
+describe('UCL 2026/27 catalog', () => {
+  it('loads and normalizes every club catalog without mutating JSON inputs', () => {
     const snapshot = JSON.stringify(rawCatalogs)
     const normalized = loadCardCatalogs(
       rawCatalogs,
@@ -86,10 +77,10 @@ describe('UCL 2026/27 draft catalog', () => {
   })
 
   it('builds a complete two-page spread for every club', () => {
-    const teamPages = album.pages.slice(3)
+    const teamPages = album.pages.slice(5)
     const slots = teamPages.flatMap((page) => page.slots)
 
-    expect(album.pages).toHaveLength(3 + manifest.expectedClubCount * 2)
+    expect(album.pages).toHaveLength(5 + manifest.expectedClubCount * 2)
     expect(teamPages).toHaveLength(manifest.expectedClubCount * 2)
     expect(teamPages.every((page) => page.slots.length === 10)).toBe(true)
     expect(slots).toHaveLength(manifest.baseCardCount)

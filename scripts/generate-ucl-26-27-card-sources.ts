@@ -36,6 +36,17 @@ const RENDER_CACHE = path.join(ROOT, 'tmp', 'ucl-26-27-render-cache')
 const TEMPLATE_WEBP = path.join(PUBLIC_ROOT, 'examples', 'ucl', 'ucl-26-27-clean-no-crest-source.webp')
 const TEMPLATE_PNG = path.join(RENDER_CACHE, 'ucl-26-27-clean-no-crest-source.png')
 const TEMPLATE = fs.existsSync(TEMPLATE_PNG) ? TEMPLATE_PNG : TEMPLATE_WEBP
+const REAL_MEDIA_REQUIRED_TEAMS = new Set([
+  'aek-athens',
+  'bodo-glimt',
+  'fenerbahce',
+  'lask',
+  'sabah',
+  'shakhtar-donetsk',
+  'slovan-bratislava',
+  'viking',
+])
+const requestedTeamIds = new Set(process.argv.slice(2))
 
 const xml = (value: string): string =>
   value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
@@ -64,6 +75,16 @@ const mediaByKey = (): Map<string, string> => {
     const filePath = path.join(PORTRAIT_CACHE, filename)
     if (!fs.statSync(filePath).isFile() || filename === 'sources.json') continue
     result.set(path.basename(filename, path.extname(filename)), filePath)
+  }
+  if (fs.existsSync(RENDER_CACHE)) {
+    for (const filename of fs.readdirSync(RENDER_CACHE)) {
+      if (!filename.endsWith('.png')) continue
+      const key = path.basename(filename, '.png')
+      const original = result.get(key)
+      if (original && path.extname(original).toLocaleLowerCase('en-US') === '.webp') {
+        result.set(key, path.join(RENDER_CACHE, filename))
+      }
+    }
   }
   return result
 }
@@ -212,17 +233,24 @@ let realLogos = 0
 
 for (const club of manifest.clubs) {
   if (club.teamId === 'real-madrid') continue
+  if (requestedTeamIds.size > 0 && !requestedTeamIds.has(club.teamId)) continue
   const catalogPath = path.join(DATA_ROOT, club.teamId, 'cards.json')
   const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8')) as CatalogFile
   const teamSourceRoot = path.join(SOURCE_ROOT, club.teamId)
   fs.mkdirSync(teamSourceRoot, { recursive: true })
   const logo = downloadedMedia.get(`${club.teamId}-team-logo`)
+  if (REAL_MEDIA_REQUIRED_TEAMS.has(club.teamId) && !logo) {
+    throw new Error(`Missing real crest media for ${club.teamId}`)
+  }
   if (logo) realLogos += 1
 
   for (const card of catalog.cards) {
     const onlinePortrait = card.personId ? downloadedMedia.get(card.personId) : undefined
     const localPortrait = card.personId ? localPortraits.get(card.personId) : undefined
     const portrait = onlinePortrait ?? localPortrait
+    if (REAL_MEDIA_REQUIRED_TEAMS.has(club.teamId) && card.kind !== 'team' && !portrait) {
+      throw new Error(`Missing real portrait media for ${club.teamId}/${card.personId ?? card.cardNumber}`)
+    }
     if (onlinePortrait) onlinePortraits += 1
     else if (localPortrait) reusedPortraits += 1
     else if (card.kind !== 'team') illustratedPortraits += 1

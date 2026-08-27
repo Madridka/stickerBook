@@ -1,4 +1,4 @@
-param()
+param([string[]]$TeamId = @())
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
@@ -7,6 +7,7 @@ $sourceRoot = Join-Path $root 'tmp/ucl-26-27-card-sources'
 $cardsRoot = Join-Path $root 'public/ucl-26-27/cards'
 $renderCache = Join-Path $root 'tmp/ucl-26-27-render-cache'
 $templatePng = Join-Path $renderCache 'ucl-26-27-clean-no-crest-source.png'
+$requestedTeamIds = @($TeamId | ForEach-Object { $_ -split ',' } | Where-Object { $_ })
 
 if (-not (Test-Path $templatePng)) {
   throw 'Render cache is missing. Convert the UCL template and reused WC portraits to PNG before rendering.'
@@ -14,12 +15,13 @@ if (-not (Test-Path $templatePng)) {
 
 Push-Location $root
 try {
-  & node --experimental-strip-types 'scripts/generate-ucl-26-27-card-sources.ts'
+  & node --experimental-strip-types 'scripts/generate-ucl-26-27-card-sources.ts' @requestedTeamIds
   if ($LASTEXITCODE -ne 0) { throw 'Could not generate UCL SVG sources.' }
 
-  $manifest = Get-Content -Raw (Join-Path $dataRoot 'manifest.json') | ConvertFrom-Json
+  $manifest = Get-Content -Raw -Encoding utf8 (Join-Path $dataRoot 'manifest.json') | ConvertFrom-Json
   foreach ($club in $manifest.clubs) {
     if ($club.teamId -eq 'real-madrid') { continue }
+    if ($requestedTeamIds.Count -gt 0 -and $club.teamId -notin $requestedTeamIds) { continue }
     $teamSourceRoot = Join-Path $sourceRoot $club.teamId
     $teamCardsRoot = Join-Path $cardsRoot $club.teamId
     $files = Get-ChildItem -LiteralPath $teamSourceRoot -File -Filter '*.svg' |

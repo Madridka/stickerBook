@@ -81,34 +81,42 @@
       "navigation": "Переход к клубам",
       "openClub": "Открыть клуб {club}",
       "teams": {
-        "real-madrid": "Real Madrid CF",
+        "aek-athens": "AEK Athens",
+        "arsenal": "Arsenal FC",
+        "roma": "AS Roma",
+        "aston-villa": "Aston Villa FC",
+        "atletico-madrid": "Atlético de Madrid",
+        "bodo-glimt": "Bodø/Glimt",
+        "borussia-dortmund": "Borussia Dortmund",
+        "club-brugge": "Club Brugge",
+        "como": "Como 1907",
         "barcelona": "FC Barcelona",
         "bayern-munich": "FC Bayern München",
-        "borussia-dortmund": "Borussia Dortmund",
-        "paris-saint-germain": "Paris Saint-Germain",
-        "arsenal": "Arsenal FC",
-        "aston-villa": "Aston Villa FC",
+        "porto": "FC Porto",
+        "fenerbahce": "Fenerbahçe",
+        "feyenoord": "Feyenoord",
+        "galatasaray": "Galatasaray",
+        "inter": "Inter",
+        "lask": "LASK",
         "liverpool": "Liverpool FC",
+        "lille": "LOSC Lille",
         "manchester-city": "Manchester City",
         "manchester-united": "Manchester United",
-        "atletico-madrid": "Atlético de Madrid",
-        "real-betis": "Real Betis",
-        "villarreal": "Villarreal CF",
-        "lens": "RC Lens",
-        "lille": "LOSC Lille",
-        "feyenoord": "Feyenoord",
+        "paris-saint-germain": "Paris Saint-Germain",
         "psv": "PSV Eindhoven",
-        "porto": "FC Porto",
-        "sporting": "Sporting CP",
-        "club-brugge": "Club Brugge",
-        "slavia-praha": "Slavia Praha",
-        "galatasaray": "Galatasaray",
-        "como": "Como 1907",
-        "inter": "Inter",
-        "napoli": "SSC Napoli",
-        "roma": "AS Roma",
         "rb-leipzig": "RB Leipzig",
-        "stuttgart": "VfB Stuttgart"
+        "lens": "RC Lens",
+        "real-betis": "Real Betis",
+        "real-madrid": "Real Madrid CF",
+        "sabah": "Sabah",
+        "shakhtar-donetsk": "Shakhtar Donetsk",
+        "slavia-praha": "Slavia Praha",
+        "slovan-bratislava": "Slovan Bratislava",
+        "sporting": "Sporting CP",
+        "napoli": "SSC Napoli",
+        "stuttgart": "VfB Stuttgart",
+        "viking": "Viking",
+        "villarreal": "Villarreal CF"
       }
     },
     "tomsk": {
@@ -203,7 +211,7 @@
       "ucl-26-27": {
         "title": "UCL 2026/27",
         "shortTitle": "UCL 26/27",
-        "description": "Коллекционный журнал 28 европейских клубов сезона 2026/27."
+        "description": "Коллекционный журнал 36 европейских клубов сезона 2026/27."
       },
       "tomsk": {
         "title": "Эпохи Томского футбола",
@@ -546,8 +554,8 @@
       "cover": {
         "eyebrow": "Коллекционный журнал · сезон 2026/27",
         "title": "UCL 26/27",
-        "description": "Двадцать восемь клубов, пятьдесят шесть командных страниц и 560 карточек в единой тёмно-синей коллекционной серии.",
-        "footer": "28 клубов · 560 карточек · ещё 8 участников определятся позже"
+        "description": "Тридцать шесть клубов, семьдесят две командные страницы и 720 карточек в единой тёмно-синей коллекционной серии.",
+        "footer": "36 клубов · 720 карточек · полный состав выпуска"
       },
       "contents": {
         "eyebrow": "02 / Оглавление",
@@ -564,14 +572,14 @@
       "season": {
         "eyebrow": "02 / Новый сезон",
         "title": "Европейские клубы в одном коллекционном выпуске",
-        "description": "Выпуск объединяет 28 определившихся составов; ещё восемь участников будут добавлены после завершения отбора.",
+        "description": "Выпуск объединяет все 36 составов клубной коллекции сезона 2026/27.",
         "features": {
           "clubs": {
-            "title": "28 клубов",
-            "description": "Все команды из текущего списка участников, без восьми ещё не определившихся мест."
+            "title": "36 клубов",
+            "description": "Полный список команд выпуска в едином алфавитном порядке."
           },
           "cards": {
-            "title": "560 карточек",
+            "title": "720 карточек",
             "description": "У каждого клуба есть эмблема, главный тренер и восемнадцать игроков."
           },
           "style": {
@@ -586,7 +594,7 @@
         "description": "Двадцать карточек клуба распределены по двум страницам, чтобы команда всегда открывалась цельным разворотом.",
         "features": {
           "spreads": {
-            "title": "12 командных страниц",
+            "title": "72 командные страницы",
             "description": "На каждой странице расположено десять вертикальных слотов формата 2:3."
           },
           "roster": {

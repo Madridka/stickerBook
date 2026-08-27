@@ -3,15 +3,24 @@
   "id": "ucl-26-27",
   "name": "UCL 2026/27",
   "season": "2026/27",
-  "status": "provisional",
+  "status": "complete",
   "qualificationStage": "league-phase",
-  "snapshotDate": "2026-08-11",
+  "snapshotDate": "2026-08-27",
   "finalClubCount": 36,
-  "pendingClubCount": 8,
-  "expectedClubCount": 28,
+  "pendingClubCount": 0,
+  "expectedClubCount": 36,
   "cardsPerClub": 20,
-  "baseCardCount": 560,
+  "baseCardCount": 720,
   "clubs": [
+    {
+      "teamId": "aek-athens",
+      "code": "AEK",
+      "displayName": "AEK Athens",
+      "countryCode": "GRE",
+      "status": "qualified",
+      "primaryColor": "#FFDE00",
+      "secondaryColor": "#111111"
+    },
     {
       "teamId": "arsenal",
       "code": "ARS",
@@ -47,6 +56,15 @@
       "status": "qualified",
       "primaryColor": "#CB3524",
       "secondaryColor": "#272E61"
+    },
+    {
+      "teamId": "bodo-glimt",
+      "code": "BOD",
+      "displayName": "Bodø/Glimt",
+      "countryCode": "NOR",
+      "status": "qualified",
+      "primaryColor": "#F9DC00",
+      "secondaryColor": "#111111"
     },
     {
       "teamId": "borussia-dortmund",
@@ -103,6 +121,15 @@
       "secondaryColor": "#FFFFFF"
     },
     {
+      "teamId": "fenerbahce",
+      "code": "FEN",
+      "displayName": "Fenerbahçe",
+      "countryCode": "TUR",
+      "status": "qualified",
+      "primaryColor": "#FFED00",
+      "secondaryColor": "#002D72"
+    },
+    {
       "teamId": "feyenoord",
       "code": "FEY",
       "displayName": "Feyenoord",
@@ -127,6 +154,15 @@
       "countryCode": "ITA",
       "status": "qualified",
       "primaryColor": "#0068A8",
+      "secondaryColor": "#111111"
+    },
+    {
+      "teamId": "lask",
+      "code": "LAS",
+      "displayName": "LASK",
+      "countryCode": "AUT",
+      "status": "qualified",
+      "primaryColor": "#FFFFFF",
       "secondaryColor": "#111111"
     },
     {
@@ -220,12 +256,39 @@
       "secondaryColor": "#00529F"
     },
     {
+      "teamId": "sabah",
+      "code": "SAB",
+      "displayName": "Sabah",
+      "countryCode": "AZE",
+      "status": "qualified",
+      "primaryColor": "#13233A",
+      "secondaryColor": "#D4AF37"
+    },
+    {
+      "teamId": "shakhtar-donetsk",
+      "code": "SHA",
+      "displayName": "Shakhtar Donetsk",
+      "countryCode": "UKR",
+      "status": "qualified",
+      "primaryColor": "#F36F21",
+      "secondaryColor": "#111111"
+    },
+    {
       "teamId": "slavia-praha",
       "code": "SLA",
       "displayName": "Slavia Praha",
       "countryCode": "CZE",
       "status": "qualified",
       "primaryColor": "#D71920",
+      "secondaryColor": "#FFFFFF"
+    },
+    {
+      "teamId": "slovan-bratislava",
+      "code": "SLO",
+      "displayName": "Slovan Bratislava",
+      "countryCode": "SVK",
+      "status": "qualified",
+      "primaryColor": "#5CB8E6",
       "secondaryColor": "#FFFFFF"
     },
     {
@@ -254,6 +317,15 @@
       "status": "qualified",
       "primaryColor": "#E32219",
       "secondaryColor": "#FFFFFF"
+    },
+    {
+      "teamId": "viking",
+      "code": "VIK",
+      "displayName": "Viking",
+      "countryCode": "NOR",
+      "status": "qualified",
+      "primaryColor": "#102A43",
+      "secondaryColor": "#C53030"
     },
     {
       "teamId": "villarreal",

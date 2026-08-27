@@ -1,4 +1,4 @@
-param()
+param([string[]]$TeamId = @())
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
@@ -8,6 +8,7 @@ $wcRoot = Join-Path $root 'public/wc-26/cards'
 $sourcesPath = Join-Path $dataRoot 'media-sources.json'
 $apiRoot = 'https://www.thesportsdb.com/api/v1/json/123'
 $headers = @{ 'User-Agent' = 'StickerBook/1.9 (UCL card asset collector; local development)' }
+$requestedTeamIds = @($TeamId | ForEach-Object { $_ -split ',' } | Where-Object { $_ })
 
 function Get-NormalizedName([string]$value) {
   $decomposed = $value.Normalize([Text.NormalizationForm]::FormD)
@@ -57,11 +58,12 @@ Get-ChildItem -LiteralPath $wcRoot -Directory | ForEach-Object {
   }
 }
 
-$manifest = Get-Content -Raw (Join-Path $dataRoot 'manifest.json') | ConvertFrom-Json
+$manifest = Get-Content -Raw -Encoding utf8 (Join-Path $dataRoot 'manifest.json') | ConvertFrom-Json
 $work = [System.Collections.Generic.List[object]]::new()
 foreach ($club in $manifest.clubs) {
   if ($club.teamId -eq 'real-madrid') { continue }
-  $catalog = Get-Content -Raw (Join-Path $dataRoot "$($club.teamId)/cards.json") | ConvertFrom-Json
+  if ($requestedTeamIds.Count -gt 0 -and $club.teamId -notin $requestedTeamIds) { continue }
+  $catalog = Get-Content -Raw -Encoding utf8 (Join-Path $dataRoot "$($club.teamId)/cards.json") | ConvertFrom-Json
   foreach ($card in $catalog.cards) {
     if (-not $card.personId) { continue }
     if (Find-CachedMedia $card.personId) { continue }
@@ -76,7 +78,7 @@ foreach ($club in $manifest.clubs) {
 
 $sourceByKey = @{}
 if (Test-Path $sourcesPath) {
-  foreach ($source in (Get-Content -Raw $sourcesPath | ConvertFrom-Json)) {
+  foreach ($source in (Get-Content -Raw -Encoding utf8 $sourcesPath | ConvertFrom-Json)) {
     $sourceByKey[$source.key] = $source
   }
 }

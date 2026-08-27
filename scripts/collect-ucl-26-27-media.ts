@@ -43,8 +43,10 @@ const SOURCES_PATH = path.join(DATA_ROOT, 'media-sources.json')
 const USER_AGENT = 'StickerBook/1.9 (UCL card asset collector; local development)'
 const WIKIPEDIA_API = 'https://en.wikipedia.org/w/api.php'
 const WIKIPEDIA_SUMMARY = 'https://en.wikipedia.org/api/rest_v1/page/summary'
+const requestedTeamIds = new Set(process.argv.slice(2))
 
 const clubSearchTitles: Record<string, string> = {
+  'aek-athens': 'AEK Athens F.C.',
   'real-madrid': 'Real Madrid CF',
   barcelona: 'FC Barcelona',
   'bayern-munich': 'FC Bayern Munich',
@@ -56,11 +58,13 @@ const clubSearchTitles: Record<string, string> = {
   'manchester-city': 'Manchester City F.C.',
   'manchester-united': 'Manchester United F.C.',
   'atletico-madrid': 'Atlético Madrid',
+  'bodo-glimt': 'FK Bodø/Glimt',
   'real-betis': 'Real Betis',
   villarreal: 'Villarreal CF',
   lens: 'RC Lens',
   lille: 'Lille OSC',
   feyenoord: 'Feyenoord',
+  fenerbahce: 'Fenerbahçe S.K. (football)',
   psv: 'PSV Eindhoven',
   porto: 'FC Porto',
   sporting: 'Sporting CP',
@@ -69,10 +73,15 @@ const clubSearchTitles: Record<string, string> = {
   galatasaray: 'Galatasaray S.K. (football)',
   como: 'Como 1907',
   inter: 'Inter Milan',
+  lask: 'LASK',
   napoli: 'SSC Napoli',
   roma: 'AS Roma',
   'rb-leipzig': 'RB Leipzig',
   stuttgart: 'VfB Stuttgart',
+  sabah: 'Sabah FC (Azerbaijan)',
+  'shakhtar-donetsk': 'FC Shakhtar Donetsk',
+  'slovan-bratislava': 'ŠK Slovan Bratislava',
+  viking: 'Viking FK',
 }
 
 const sleep = (milliseconds: number) => new Promise((resolve) => setTimeout(resolve, milliseconds))
@@ -242,6 +251,7 @@ const manifest = JSON.parse(
 const work: Array<{ key: string; displayName: string; kind: CatalogCard['kind'] }> = []
 for (const club of manifest.clubs) {
   if (club.teamId === 'real-madrid') continue
+  if (requestedTeamIds.size > 0 && !requestedTeamIds.has(club.teamId)) continue
   work.push({
     key: `${club.teamId}-team-logo`,
     displayName: clubSearchTitles[club.teamId] ?? club.displayName,
@@ -281,7 +291,12 @@ const worker = async () => {
 }
 
 await Promise.all(Array.from({ length: 3 }, () => worker()))
-fs.writeFileSync(SOURCES_PATH, `${JSON.stringify(results, null, 2)}\n`, 'utf8')
+const collectedKeys = new Set(results.map(({ key }) => key))
+const mergedResults = [
+  ...previous.filter(({ key }) => !collectedKeys.has(key)),
+  ...results,
+].sort((left, right) => left.key.localeCompare(right.key, 'en-US'))
+fs.writeFileSync(SOURCES_PATH, `${JSON.stringify(mergedResults, null, 2)}\n`, 'utf8')
 
 const usable = results.filter((source) => source.status === 'downloaded' || source.status === 'cached').length
 const missing = results.filter((source) => source.status === 'missing').length

@@ -1,4 +1,4 @@
-param()
+param([string[]]$TeamId = @())
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
@@ -7,6 +7,7 @@ $cacheRoot = Join-Path $root 'tmp/ucl-26-27-portrait-cache'
 $sourcesPath = Join-Path $dataRoot 'media-sources.json'
 $apiRoot = 'https://www.thesportsdb.com/api/v1/json/123'
 $headers = @{ 'User-Agent' = 'StickerBook/1.9 (UCL card asset collector; local development)' }
+$requestedTeamIds = @($TeamId | ForEach-Object { $_ -split ',' } | Where-Object { $_ })
 
 $teamQueries = @{
   'bayern-munich' = 'Bayern Munich'
@@ -51,10 +52,10 @@ function Save-RemoteImage([string]$key, [string]$url) {
 }
 
 New-Item -ItemType Directory -Force -Path $cacheRoot | Out-Null
-$manifest = Get-Content -Raw (Join-Path $dataRoot 'manifest.json') | ConvertFrom-Json
+$manifest = Get-Content -Raw -Encoding utf8 (Join-Path $dataRoot 'manifest.json') | ConvertFrom-Json
 $sourceByKey = @{}
 if (Test-Path $sourcesPath) {
-  foreach ($source in (Get-Content -Raw $sourcesPath | ConvertFrom-Json)) {
+  foreach ($source in (Get-Content -Raw -Encoding utf8 $sourcesPath | ConvertFrom-Json)) {
     $sourceByKey[$source.key] = $source
   }
 }
@@ -67,6 +68,7 @@ $clubIndex = 0
 foreach ($club in $manifest.clubs) {
   $clubIndex += 1
   if ($club.teamId -eq 'real-madrid') { continue }
+  if ($requestedTeamIds.Count -gt 0 -and $club.teamId -notin $requestedTeamIds) { continue }
   $query = if ($teamQueries.ContainsKey($club.teamId)) {
     $teamQueries[$club.teamId]
   } else {
@@ -104,7 +106,7 @@ foreach ($club in $manifest.clubs) {
       }
     }
 
-    $catalog = Get-Content -Raw (Join-Path $dataRoot "$($club.teamId)/cards.json") | ConvertFrom-Json
+    $catalog = Get-Content -Raw -Encoding utf8 (Join-Path $dataRoot "$($club.teamId)/cards.json") | ConvertFrom-Json
     foreach ($card in $catalog.cards) {
       if (-not $card.personId) { continue }
       $player = $playersByName[(Get-NormalizedName $card.displayName)]

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-08-27",
+  "clubs": [
+    {
+      "teamId": "aek-athens",
+      "rosterUrl": "https://football.aek.com/player/roster/105",
+      "secondaryUrl": "https://www.uefa.com/uefachampionsleague/clubs/50129--aek/squad/",
+      "selectionNote": "Senior 2026/27 roster; the most established first-team options fill the fixed positional slots."
+    },
+    {
+      "teamId": "bodo-glimt",
+      "rosterUrl": "https://www.glimt.no/lag",
+      "selectionNote": "Official men's first-team roster and head coach at the snapshot date."
+    },
+    {
+      "teamId": "fenerbahce",
+      "rosterUrl": "https://www.uefa.com/uefachampionsleague/clubs/52692--/squad/",
+      "selectionNote": "UEFA squad listing reconciled to the journal's fixed 2 GK, 6 DF, 5 MF and 5 FW structure."
+    },
+    {
+      "teamId": "lask",
+      "rosterUrl": "https://www.lask.at/de/m/teams/pros",
+      "selectionNote": "Official professional squad; wide midfielder Florian Flecker occupies an attacking slot."
+    },
+    {
+      "teamId": "sabah",
+      "rosterUrl": "https://sabahfc.az/teams",
+      "selectionNote": "Official first-team roster and coaching staff at the snapshot date."
+    },
+    {
+      "teamId": "shakhtar-donetsk",
+      "rosterUrl": "https://shakhtar.com/en/news/2026/july/1_news/1_shakhtar-squad/",
+      "selectionNote": "Official summer squad; attacking midfielders Alisson Santana and Eguinaldo occupy forward slots."
+    },
+    {
+      "teamId": "slovan-bratislava",
+      "rosterUrl": "https://www.skslovan.com/timy/?hrac=supiska.A",
+      "secondaryUrl": "https://www.skslovan.com/hraci/?hrac=staff",
+      "selectionNote": "Official senior roster and coaching-staff pages; Yaya Touré is used in the single head-coach slot."
+    },
+    {
+      "teamId": "viking",
+      "rosterUrl": "https://www.vikingfotball.no/lag",
+      "selectionNote": "Official senior roster; Bjarte Lunde Aarsheim represents the shared head-coach team in the single coach slot."
+    }
+  ]
+}

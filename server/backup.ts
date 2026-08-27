@@ -15,6 +15,7 @@ import type { StickerBookServerDatabase } from './database.ts'
 
 export interface DatabaseBackupRecord {
   createdAt: number
+  directory: string
   fileName: string
   reason: 'manual' | 'scheduled' | 'startup'
   sizeBytes: number
@@ -47,24 +48,43 @@ export class DatabaseBackupService {
 
   isEnabled = (): boolean => this.config.enabled && this.databasePath !== ':memory:'
 
+  private readonly backupDirectories = (): string[] =>
+    [...new Set([
+      this.config.directory,
+      ...(this.config.secondaryDirectory ? [this.config.secondaryDirectory] : []),
+    ])]
+
   list = (): DatabaseBackupRecord[] => {
     if (!this.isEnabled()) return []
-    mkdirSync(this.config.directory, { recursive: true })
-    return readdirSync(this.config.directory)
+    return this.backupDirectories()
+      .flatMap((directory): DatabaseBackupRecord[] => {
+        try {
+          return this.listDirectory(directory)
+        } catch (error: unknown) {
+          this.logger.warn({ directory, error }, 'Database backup directory is unavailable')
+          return []
+        }
+      })
+      .sort((left, right): number => right.createdAt - left.createdAt)
+  }
+
+  private readonly listDirectory = (directory: string): DatabaseBackupRecord[] => {
+    mkdirSync(directory, { recursive: true })
+    return readdirSync(directory)
       .filter((fileName): boolean => BACKUP_FILE_PATTERN.test(fileName))
       .flatMap((fileName): DatabaseBackupRecord[] => {
-        const path: string = join(this.config.directory, fileName)
+        const path: string = join(directory, fileName)
         const match: RegExpMatchArray | null = fileName.match(BACKUP_FILE_PATTERN)
         const stats = lstatSync(path)
         if (!match || !stats.isFile() || stats.isSymbolicLink()) return []
         return [{
           createdAt: stats.mtimeMs,
+          directory,
           fileName,
           reason: match[1] as DatabaseBackupRecord['reason'],
           sizeBytes: stats.size,
         }]
       })
-      .sort((left, right): number => right.createdAt - left.createdAt)
   }
 
   create = async (
@@ -98,10 +118,36 @@ export class DatabaseBackupService {
   private readonly createBackup = async (
     reason: DatabaseBackupRecord['reason'],
   ): Promise<DatabaseBackupRecord> => {
-    mkdirSync(this.config.directory, { recursive: true })
     const now: number = Date.now()
     const fileName: string = toBackupFileName(now, reason)
-    const targetPath: string = join(this.config.directory, fileName)
+    const records: DatabaseBackupRecord[] = []
+    const errors: unknown[] = []
+
+    for (const directory of this.backupDirectories()) {
+      try {
+        const record = await this.createBackupInDirectory(directory, fileName, reason)
+        records.push(record)
+        this.prune(directory)
+        this.logger.info({ backup: record }, 'Database backup created')
+      } catch (error: unknown) {
+        errors.push(error)
+        this.logger.error({ directory, error }, 'Database backup destination failed')
+      }
+    }
+
+    if (!records.length) {
+      throw new AggregateError(errors, 'Database backup failed in every configured directory')
+    }
+    return records.find(({ directory }): boolean => directory === this.config.directory) ?? records[0]!
+  }
+
+  private readonly createBackupInDirectory = async (
+    directory: string,
+    fileName: string,
+    reason: DatabaseBackupRecord['reason'],
+  ): Promise<DatabaseBackupRecord> => {
+    mkdirSync(directory, { recursive: true })
+    const targetPath: string = join(directory, fileName)
     const temporaryPath: string = `${targetPath}.tmp`
     try {
       await backup(this.storage.database, temporaryPath)
@@ -116,20 +162,21 @@ export class DatabaseBackupService {
     const stats = statSync(targetPath)
     const record: DatabaseBackupRecord = {
       createdAt: stats.mtimeMs,
+      directory,
       fileName: basename(targetPath),
       reason,
       sizeBytes: stats.size,
     }
-    this.prune()
-    this.logger.info({ backup: record }, 'Database backup created')
     return record
   }
 
   // Удаляет только распознанные backup-файлы сверх настроенного количества.
-  private readonly prune = (): void => {
-    const expired: DatabaseBackupRecord[] = this.list().slice(this.config.retentionCount)
+  private readonly prune = (directory: string): void => {
+    const expired: DatabaseBackupRecord[] = this.listDirectory(directory)
+      .sort((left, right): number => right.createdAt - left.createdAt)
+      .slice(this.config.retentionCount)
     for (const record of expired) {
-      const path: string = join(this.config.directory, record.fileName)
+      const path: string = join(directory, record.fileName)
       const stats = lstatSync(path)
       if (
         BACKUP_FILE_PATTERN.test(record.fileName) &&

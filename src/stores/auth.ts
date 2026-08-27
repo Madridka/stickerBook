@@ -66,10 +66,6 @@ export const useAuthStore = defineStore('auth', () => {
     }
     try {
       const response: AuthResponse = await apiRequest('/api/auth/session')
-      cacheUser(response.user)
-      user.value = response.user
-      isGuest.value = false
-      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
       try {
         // Если первый upload аккаунта прервался, локальный прогресс остаётся источником
         // изменений и будет догружен при восстановлении соединения.
@@ -78,6 +74,10 @@ export const useAuthStore = defineStore('auth', () => {
         await cloudSave.initializeOffline(response.user.id)
         errorCode.value = 'server-unavailable'
       }
+      cacheUser(response.user)
+      user.value = response.user
+      isGuest.value = false
+      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
     } catch (error: unknown) {
       if (error instanceof ApiError && error.status === 401) {
         cacheUser(null)
@@ -111,16 +111,16 @@ export const useAuthStore = defineStore('auth', () => {
           password: input.password,
         }),
       })
-      user.value = response.user
-      isGuest.value = false
-      cacheUser(response.user)
-      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
       try {
         await cloudSave.initialize(response.user.id, input.migrateLocalProgress)
       } catch {
         await cloudSave.initializeOffline(response.user.id)
         errorCode.value = 'server-unavailable'
       }
+      user.value = response.user
+      isGuest.value = false
+      cacheUser(response.user)
+      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
       return true
     } catch (error: unknown) {
       errorCode.value = error instanceof ApiError ? (error.body.code ?? 'request-failed') : 'server-unavailable'
@@ -138,16 +138,16 @@ export const useAuthStore = defineStore('auth', () => {
         method: 'POST',
         body: JSON.stringify(input),
       })
-      user.value = response.user
-      isGuest.value = false
-      cacheUser(response.user)
-      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
       try {
         await cloudSave.initialize(response.user.id, false)
       } catch {
         await cloudSave.initializeOffline(response.user.id)
         errorCode.value = 'server-unavailable'
       }
+      user.value = response.user
+      isGuest.value = false
+      cacheUser(response.user)
+      localStorage.removeItem(AUTH_UI_CONFIG.guestModeStorageKey)
       return true
     } catch (error: unknown) {
       errorCode.value = error instanceof ApiError ? (error.body.code ?? 'request-failed') : 'server-unavailable'

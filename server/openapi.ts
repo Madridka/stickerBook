@@ -50,9 +50,10 @@ const openApiDocument = {
       },
       Backup: {
         type: 'object',
-        required: ['createdAt', 'fileName', 'reason', 'sizeBytes'],
+        required: ['createdAt', 'directory', 'fileName', 'reason', 'sizeBytes'],
         properties: {
           createdAt: { type: 'number' },
+          directory: { type: 'string' },
           fileName: { type: 'string' },
           reason: { enum: ['manual', 'scheduled', 'startup'] },
           sizeBytes: { type: 'integer', minimum: 0 },

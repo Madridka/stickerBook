@@ -2,6 +2,7 @@ import { dirname, resolve } from 'node:path'
 
 export interface DatabaseBackupConfig {
   directory: string
+  secondaryDirectory?: string
   enabled: boolean
   intervalMs: number
   retentionCount: number
@@ -88,9 +89,12 @@ export const loadServerConfig = (): ServerConfig => {
       directory: resolve(
         process.env.STICKER_BOOK_BACKUP_DIRECTORY ?? `${dirname(databasePath)}/backups`,
       ),
+      secondaryDirectory: process.env.STICKER_BOOK_BACKUP_SECONDARY_DIRECTORY?.trim()
+        ? resolve(process.env.STICKER_BOOK_BACKUP_SECONDARY_DIRECTORY.trim())
+        : undefined,
       enabled: parseBoolean(process.env.STICKER_BOOK_BACKUP_ENABLED, true),
       intervalMs:
-        parsePositiveInteger(process.env.STICKER_BOOK_BACKUP_INTERVAL_HOURS, 24) * 60 * 60 * 1_000,
+        parsePositiveInteger(process.env.STICKER_BOOK_BACKUP_INTERVAL_HOURS, 1) * 60 * 60 * 1_000,
       retentionCount: parsePositiveInteger(process.env.STICKER_BOOK_BACKUP_RETENTION, 14),
     },
     databasePath,

@@ -82,6 +82,9 @@ export const parseSnapshot = (value: unknown): LocalSaveSnapshot => {
 const snapshotsEqual = (left: LocalSaveSnapshot, right: LocalSaveSnapshot): boolean =>
   JSON.stringify(left) === JSON.stringify(right)
 
+const snapshotHasData = (snapshot: LocalSaveSnapshot): boolean =>
+  snapshot.tables.some(({ rows }): boolean => rows.length > 0)
+
 const replaceLocalData = async (snapshot: LocalSaveSnapshot): Promise<void> => {
   const rowsByTable: Map<string, unknown[]> = new Map(
     snapshot.tables.map(({ name, rows }): [string, unknown[]] => [name, rows]),
@@ -171,24 +174,37 @@ class CloudSaveService {
     ])
     const ownsLocalData: boolean = getLocalOwner() === userId
     const hasLocalChanges: boolean = ownsLocalData && hasPendingSync(userId)
+    const localSnapshot: LocalSaveSnapshot | undefined = ownsLocalData
+      ? await exportLocalSave()
+      : undefined
+    const hasOwnedLocalData: boolean = Boolean(localSnapshot && snapshotHasData(localSnapshot))
     const remoteSnapshot: LocalSaveSnapshot | undefined = response.save
       ? parseSnapshot(response.save.data)
       : undefined
+    const recoverOwnedLocalData: boolean = Boolean(
+      remoteSnapshot &&
+      !snapshotHasData(remoteSnapshot) &&
+      hasOwnedLocalData &&
+      (!savedState || response.save!.version <= savedState.serverVersion),
+    )
 
     this.isApplyingRemote = true
     try {
-      if (remoteSnapshot && hasLocalChanges) {
-        const localSnapshot: LocalSaveSnapshot = await exportLocalSave()
-        const alreadySynchronized: boolean = snapshotsEqual(localSnapshot, remoteSnapshot)
+      if (remoteSnapshot && (hasLocalChanges || recoverOwnedLocalData)) {
+        const currentLocalSnapshot: LocalSaveSnapshot = localSnapshot ?? (await exportLocalSave())
+        const alreadySynchronized: boolean = snapshotsEqual(currentLocalSnapshot, remoteSnapshot)
         this.syncState = {
           userId,
           serverVersion: response.save!.version,
           serverSnapshot: remoteSnapshot,
           localBaseSnapshot: alreadySynchronized
             ? remoteSnapshot
-            : (savedState?.localBaseSnapshot ?? savedState?.serverSnapshot ?? EMPTY_SNAPSHOT),
+            : recoverOwnedLocalData
+              ? EMPTY_SNAPSHOT
+              : (savedState?.localBaseSnapshot ?? savedState?.serverSnapshot ?? EMPTY_SNAPSHOT),
         }
         this.dirty = !alreadySynchronized
+        if (this.dirty) setPendingSync(userId, true)
       } else if (remoteSnapshot) {
         await replaceLocalData(remoteSnapshot)
         this.syncState = {
@@ -197,7 +213,7 @@ class CloudSaveService {
           serverSnapshot: remoteSnapshot,
           localBaseSnapshot: remoteSnapshot,
         }
-      } else if (useLocalDataWhenEmpty) {
+      } else if (useLocalDataWhenEmpty || hasOwnedLocalData) {
         this.syncState = {
           userId,
           serverVersion: 0,

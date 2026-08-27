@@ -43,6 +43,8 @@ sticker-book-manual-2026-08-11T12-30-00-000Z.sqlite
 `STICKER_BOOK_BACKUP_INTERVAL_HOURS`. После успешной записи остаются последние
 `STICKER_BOOK_BACKUP_RETENTION` копий. Ротация рассматривает только обычные файлы,
 соответствующие этому шаблону; символические ссылки и посторонние файлы не удаляются.
+Если задана `STICKER_BOOK_BACKUP_SECONDARY_DIRECTORY`, каждая копия независимо
+создаётся в основном и дополнительном каталогах, а лимит хранения применяется к каждому.
 
 Ручной запуск доступен кнопкой в `/admin` и запросом:
 
@@ -74,7 +76,8 @@ Authorization: Basic ...
 | `STICKER_BOOK_DATABASE_PATH` | `server/data/sticker-book.sqlite` |
 | `STICKER_BOOK_BACKUP_ENABLED` | `true` |
 | `STICKER_BOOK_BACKUP_DIRECTORY` | каталог `backups` рядом с БД |
-| `STICKER_BOOK_BACKUP_INTERVAL_HOURS` | `24` |
+| `STICKER_BOOK_BACKUP_SECONDARY_DIRECTORY` | не задана |
+| `STICKER_BOOK_BACKUP_INTERVAL_HOURS` | `1` |
 | `STICKER_BOOK_BACKUP_RETENTION` | `14` |
 | `STICKER_BOOK_ADMIN_USERNAME` | `admin` |
 | `STICKER_BOOK_ADMIN_PASSWORD_HASH` | админка выключена |

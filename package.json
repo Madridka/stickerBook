@@ -16,6 +16,7 @@
     "preview": "vite preview --config vite.config.ts",
     "validate:data": "node --experimental-strip-types scripts/validate-data.ts",
     "validate:ucl": "node --experimental-strip-types scripts/validate-ucl-26-27-data.ts",
+    "validate:rpl": "node --experimental-strip-types scripts/validate-rpl-26-27-data.ts",
     "test:drop": "node --experimental-strip-types --test scripts/drop-engine.test.ts",
     "test:runtime-catalog": "node --experimental-strip-types --test scripts/runtime-catalog.test.ts",
     "test": "vitest run && node --experimental-strip-types --test server/app.test.ts",

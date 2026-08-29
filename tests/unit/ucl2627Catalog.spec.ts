@@ -77,10 +77,10 @@ describe('UCL 2026/27 catalog', () => {
   })
 
   it('builds a complete two-page spread for every club', () => {
-    const teamPages = album.pages.slice(5)
+    const teamPages = album.pages.slice(7)
     const slots = teamPages.flatMap((page) => page.slots)
 
-    expect(album.pages).toHaveLength(5 + manifest.expectedClubCount * 2)
+    expect(album.pages).toHaveLength(7 + manifest.expectedClubCount * 2)
     expect(teamPages).toHaveLength(manifest.expectedClubCount * 2)
     expect(teamPages.every((page) => page.slots.length === 10)).toBe(true)
     expect(slots).toHaveLength(manifest.baseCardCount)

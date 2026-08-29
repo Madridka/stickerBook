@@ -14,6 +14,8 @@ const CLIENT_ENV_ALLOWLIST: ReadonlySet<string> = new Set([
 const ALBUM_DATA_CHUNKS: ReadonlyArray<readonly [directory: string, chunk: string]> = [
   ['wc-26', 'album-wc-26'],
   ['ucl-26-27', 'album-ucl-26-27'],
+  ['russia', 'album-rpl-26-27'],
+  ['rpl-26-27', 'album-rpl-26-27'],
   ['tomsk', 'album-tomsk'],
   ['spainClubsLogo', 'album-spain-clubs-logo'],
   ['russiaClubsLogo', 'album-russia-clubs-logo'],

@@ -50,7 +50,7 @@ const pages: AlbumGeometryPage[] = [
     slots: [],
   },
   {
-    id: 'ucl-26-27-contents-2',
+    id: 'ucl-26-27-collection',
     number: 3,
     image: 'info/contents-right.webp',
     width: PAGE_WIDTH,
@@ -58,7 +58,7 @@ const pages: AlbumGeometryPage[] = [
     slots: [],
   },
   {
-    id: 'ucl-26-27-contents-3',
+    id: 'ucl-26-27-contents-1',
     number: 4,
     image: 'info/contents-left.webp',
     width: PAGE_WIDTH,
@@ -66,8 +66,24 @@ const pages: AlbumGeometryPage[] = [
     slots: [],
   },
   {
-    id: 'ucl-26-27-collection',
+    id: 'ucl-26-27-contents-2',
     number: 5,
+    image: 'info/contents-right.webp',
+    width: PAGE_WIDTH,
+    height: PAGE_HEIGHT,
+    slots: [],
+  },
+  {
+    id: 'ucl-26-27-contents-3',
+    number: 6,
+    image: 'info/contents-left.webp',
+    width: PAGE_WIDTH,
+    height: PAGE_HEIGHT,
+    slots: [],
+  },
+  {
+    id: 'ucl-26-27-contents-4',
+    number: 7,
     image: 'info/contents-right.webp',
     width: PAGE_WIDTH,
     height: PAGE_HEIGHT,

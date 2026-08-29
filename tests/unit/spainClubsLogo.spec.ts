@@ -58,7 +58,7 @@ describe('spainClubsLogo journal', () => {
 
   it('creates one unique album slot for every source card', () => {
     const slots = album.pages.flatMap(({ slots }) => slots)
-    expect(album.pages).toHaveLength(61)
+    expect(album.pages).toHaveLength(63)
     expect(slots).toHaveLength(rawCards.length)
     expect(new Set(slots.map(({ id }) => id)).size).toBe(slots.length)
     expect(new Set(slots.map(({ playerId }) => playerId))).toEqual(
@@ -72,7 +72,7 @@ describe('spainClubsLogo journal', () => {
         .replace(/-divider-(left|right)\.webp$/, '')
         .replace(/-(left|right)\.webp$/, '')
 
-    for (let pageIndex = 5; pageIndex < album.pages.length; pageIndex += 2) {
+    for (let pageIndex = 7; pageIndex < album.pages.length; pageIndex += 2) {
       const spread = album.pages.slice(pageIndex, pageIndex + 2)
       expect(spread).toHaveLength(2)
       expect(new Set(spread.map(({ image }) => sectionId(image))).size).toBe(1)
@@ -88,19 +88,21 @@ describe('spainClubsLogo journal', () => {
     }
   })
 
-  it('starts with a cover, an information page and three contents pages', () => {
-    expect(album.pages.slice(0, 5).map(({ id }) => id)).toEqual([
+  it('starts with a cover, two information pages and four contents pages', () => {
+    expect(album.pages.slice(0, 7).map(({ id }) => id)).toEqual([
       'spain-clubs-logo-cover',
       'spain-clubs-logo-history',
+      'spain-clubs-logo-guide',
       'spain-clubs-logo-contents',
       'spain-clubs-logo-contents-2',
       'spain-clubs-logo-contents-3',
+      'spain-clubs-logo-contents-4',
     ])
-    expect(album.pages.slice(0, 5).every(({ slots }) => slots.length === 0)).toBe(true)
-    expect(album.pages.slice(5, 7).flatMap(({ slots }) => slots)).toHaveLength(20)
+    expect(album.pages.slice(0, 7).every(({ slots }) => slots.length === 0)).toBe(true)
+    expect(album.pages.slice(7, 9).flatMap(({ slots }) => slots)).toHaveLength(20)
     expect(
       album.pages
-        .slice(5, 7)
+        .slice(7, 9)
         .flatMap(({ slots }) => slots)
         .every(({ playerId }) => playerId.startsWith('esp1-')),
     ).toBe(true)
@@ -133,6 +135,7 @@ describe('spainClubsLogo journal', () => {
     expect(definition.editorialPages.map(({ pageId }) => pageId)).toEqual([
       'spain-clubs-logo-cover',
       'spain-clubs-logo-history',
+      'spain-clubs-logo-guide',
       'spain-clubs-logo-contents',
     ])
 
@@ -145,10 +148,11 @@ describe('spainClubsLogo journal', () => {
     expect(contents?.continuationPageIds).toEqual([
       'spain-clubs-logo-contents-2',
       'spain-clubs-logo-contents-3',
+      'spain-clubs-logo-contents-4',
     ])
-    expect(contents?.contentsSections?.[0]?.items[0]?.pages).toBe('06–07')
-    expect(contents?.contentsSections?.[0]?.items[0]?.targetPage).toBe(6)
-    expect(contents?.contentsSections?.[2]?.items[8]?.pages).toBe('60–61')
-    expect(contents?.contentsSections?.[2]?.items[8]?.targetPage).toBe(60)
+    expect(contents?.contentsSections?.[0]?.items[0]?.pages).toBe('08–09')
+    expect(contents?.contentsSections?.[0]?.items[0]?.targetPage).toBe(8)
+    expect(contents?.contentsSections?.[2]?.items[8]?.pages).toBe('62–63')
+    expect(contents?.contentsSections?.[2]?.items[8]?.targetPage).toBe(62)
   })
 })

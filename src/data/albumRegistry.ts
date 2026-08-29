@@ -12,6 +12,9 @@ import wc26Contents from './wc-26/contents'
 import ucl2627Geometry from './ucl-26-27/album'
 import ucl2627Cards, { catalogs as ucl2627Catalogs } from './ucl-26-27/catalog'
 import ucl2627Contents from './ucl-26-27/contents'
+import rpl2627Geometry from './russia/album'
+import rpl2627Cards, { catalogs as rpl2627Catalogs } from './russia/catalog'
+import rpl2627Contents from './russia/contents'
 import tomskGeometry from './tomsk/album'
 import tomskCards, { catalogs as tomskCatalogs } from './tomsk/catalog'
 import tomskContents from './tomsk/contents'
@@ -283,7 +286,7 @@ const wc26Album: AlbumDefinition = {
     toBlisterDefinition(BLISTER_CONFIGS.mixed),
     toBlisterDefinition(BLISTER_CONFIGS.standard),
   ],
-  metadata: { edition: 1 },
+  metadata: { edition: 1, kind: 'squads' },
 }
 
 const tomskAlbum: AlbumDefinition = {
@@ -369,7 +372,7 @@ const tomskAlbum: AlbumDefinition = {
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   blisters: [toBlisterDefinition(BLISTER_CONFIGS.kdv)],
-  metadata: { club: 'tomsk', cardAssetAlbumIds: ['tomsk', 'kdv'] },
+  metadata: { club: 'tomsk', kind: 'history', cardAssetAlbumIds: ['tomsk', 'kdv'] },
 }
 
 const ucl2627Album: AlbumDefinition = {
@@ -400,6 +403,28 @@ const ucl2627Album: AlbumDefinition = {
       hideCoverCopy: true,
     },
     {
+      pageId: 'ucl-26-27-season',
+      kind: 'article',
+      eyebrow: 'album.editorial.ucl2627.season.eyebrow',
+      title: 'album.editorial.ucl2627.season.title',
+      description: 'album.editorial.ucl2627.season.description',
+      align: 'left',
+      features: [
+        {
+          title: 'album.editorial.ucl2627.season.features.clubs.title',
+          description: 'album.editorial.ucl2627.season.features.clubs.description',
+        },
+        {
+          title: 'album.editorial.ucl2627.season.features.cards.title',
+          description: 'album.editorial.ucl2627.season.features.cards.description',
+        },
+        {
+          title: 'album.editorial.ucl2627.season.features.style.title',
+          description: 'album.editorial.ucl2627.season.features.style.description',
+        },
+      ],
+    },
+    {
       pageId: 'ucl-26-27-collection',
       kind: 'article',
       eyebrow: 'album.editorial.ucl2627.collection.eyebrow',
@@ -424,17 +449,108 @@ const ucl2627Album: AlbumDefinition = {
   ],
   layout: {
     openStartPage: 1,
-    contentsFirstPage: 2,
-    contentsLastPage: 4,
-    contentsPageSize: 12,
+    contentsFirstPage: 4,
+    contentsLastPage: 7,
+    contentsPageSize: 9,
     contentsVariant: 'flat',
+    contentsColumns: 3,
   },
   dropSettings: {
     poolId: 'ucl-26-27-standard',
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
   blisters: [toBlisterDefinition(BLISTER_CONFIGS.ucl)],
-  metadata: { season: '2026/27', clubs: ucl2627Contents.length },
+  metadata: { kind: 'squads', season: '2026/27', clubs: ucl2627Contents.length },
+}
+
+const rpl2627Album: AlbumDefinition = {
+  id: 'rpl-26-27',
+  name: 'album.library.items.rpl-26-27.title',
+  shortName: 'album.library.items.rpl-26-27.shortTitle',
+  description: 'album.library.items.rpl-26-27.description',
+  route: '/album/rpl-26-27',
+  theme: {
+    coverImage: 'info/cover.webp',
+    previewImage: 'info/cover.webp',
+    accentClass: 'text-coral',
+  },
+  geometry: rpl2627Geometry,
+  pages: rpl2627Geometry.pages,
+  spreads: createSpreads('rpl-26-27', rpl2627Geometry.pages.map(({ id }) => id)),
+  cards: rpl2627Cards,
+  catalogs: rpl2627Catalogs,
+  contents: rpl2627Contents,
+  editorialPages: [
+    {
+      pageId: 'rpl-26-27-cover',
+      kind: 'cover',
+      eyebrow: 'album.editorial.rpl2627.cover.eyebrow',
+      title: 'album.editorial.rpl2627.cover.title',
+      description: 'album.editorial.rpl2627.cover.description',
+      footer: 'album.editorial.rpl2627.cover.footer',
+      tone: 'dark',
+    },
+    {
+      pageId: 'rpl-26-27-info',
+      kind: 'article',
+      eyebrow: 'album.editorial.rpl2627.info.eyebrow',
+      title: 'album.editorial.rpl2627.info.title',
+      description: 'album.editorial.rpl2627.info.description',
+      align: 'left',
+      features: [
+        {
+          title: 'album.editorial.rpl2627.info.features.clubs.title',
+          description: 'album.editorial.rpl2627.info.features.clubs.description',
+        },
+        {
+          title: 'album.editorial.rpl2627.info.features.cards.title',
+          description: 'album.editorial.rpl2627.info.features.cards.description',
+        },
+        {
+          title: 'album.editorial.rpl2627.info.features.format.title',
+          description: 'album.editorial.rpl2627.info.features.format.description',
+        },
+      ],
+    },
+    {
+      pageId: 'rpl-26-27-details',
+      kind: 'article',
+      eyebrow: 'album.editorial.rpl2627.details.eyebrow',
+      title: 'album.editorial.rpl2627.details.title',
+      description: 'album.editorial.rpl2627.details.description',
+      align: 'right',
+      features: [
+        {
+          title: 'album.editorial.rpl2627.details.features.spreads.title',
+          description: 'album.editorial.rpl2627.details.features.spreads.description',
+        },
+        {
+          title: 'album.editorial.rpl2627.details.features.rosters.title',
+          description: 'album.editorial.rpl2627.details.features.rosters.description',
+        },
+        {
+          title: 'album.editorial.rpl2627.details.features.navigation.title',
+          description: 'album.editorial.rpl2627.details.features.navigation.description',
+        },
+      ],
+    },
+  ],
+  layout: {
+    openStartPage: 1,
+    contentsFirstPage: 4,
+    contentsLastPage: 5,
+    contentsPageSize: 8,
+    contentsVariant: 'flat',
+    contentsColumns: 4,
+    contentsTone: 'dark',
+    contentsTranslationScope: 'rpl',
+  },
+  dropSettings: {
+    poolId: 'rpl-26-27-standard',
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  blisters: [toBlisterDefinition(BLISTER_CONFIGS.rpl)],
+  metadata: { kind: 'squads', season: '2026/27', clubs: rpl2627Contents.length },
 }
 
 const spainClubsLogoAlbum: AlbumDefinition = {
@@ -491,17 +607,40 @@ const spainClubsLogoAlbum: AlbumDefinition = {
       ],
     },
     {
+      pageId: 'spain-clubs-logo-guide',
+      kind: 'article',
+      eyebrow: 'album.editorial.spainClubsLogo.guide.eyebrow',
+      title: 'album.editorial.spainClubsLogo.guide.title',
+      description: 'album.editorial.spainClubsLogo.guide.description',
+      align: 'right',
+      features: [
+        {
+          title: 'album.editorial.spainClubsLogo.guide.features.sections.title',
+          description: 'album.editorial.spainClubsLogo.guide.features.sections.description',
+        },
+        {
+          title: 'album.editorial.spainClubsLogo.guide.features.spreads.title',
+          description: 'album.editorial.spainClubsLogo.guide.features.spreads.description',
+        },
+        {
+          title: 'album.editorial.spainClubsLogo.guide.features.navigation.title',
+          description: 'album.editorial.spainClubsLogo.guide.features.navigation.description',
+        },
+      ],
+    },
+    {
       pageId: 'spain-clubs-logo-contents',
       kind: 'contents',
       eyebrow: 'album.editorial.spainClubsLogo.contents.eyebrow',
       title: 'album.editorial.spainClubsLogo.contents.title',
       description: 'album.editorial.spainClubsLogo.contents.description',
       contentsVariant: 'logo-grid',
-      contentsFirstPage: 3,
-      contentsPageSize: 9,
+      contentsFirstPage: 4,
+      contentsPageSize: 7,
       continuationPageIds: [
         'spain-clubs-logo-contents-2',
         'spain-clubs-logo-contents-3',
+        'spain-clubs-logo-contents-4',
       ],
       contentsSections: shiftContentsPages([
         {
@@ -538,7 +677,7 @@ const spainClubsLogoAlbum: AlbumDefinition = {
             targetPage: 42 + index * 2,
           })),
         },
-      ], 2),
+      ], 4),
     },
   ],
   layout: {
@@ -624,13 +763,38 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
       ],
     },
     {
+      pageId: 'russia-clubs-logo-guide',
+      kind: 'article',
+      eyebrow: 'album.editorial.russiaClubsLogo.guide.eyebrow',
+      title: 'album.editorial.russiaClubsLogo.guide.title',
+      description: 'album.editorial.russiaClubsLogo.guide.description',
+      align: 'right',
+      features: [
+        {
+          title: 'album.editorial.russiaClubsLogo.guide.features.divisions.title',
+          description: 'album.editorial.russiaClubsLogo.guide.features.divisions.description',
+        },
+        {
+          title: 'album.editorial.russiaClubsLogo.guide.features.cards.title',
+          description: 'album.editorial.russiaClubsLogo.guide.features.cards.description',
+        },
+        {
+          title: 'album.editorial.russiaClubsLogo.guide.features.navigation.title',
+          description: 'album.editorial.russiaClubsLogo.guide.features.navigation.description',
+        },
+      ],
+    },
+    {
       pageId: 'russia-clubs-logo-contents',
       kind: 'contents',
       eyebrow: 'album.editorial.russiaClubsLogo.contents.eyebrow',
       title: 'album.editorial.russiaClubsLogo.contents.title',
       description: 'album.editorial.russiaClubsLogo.contents.description',
       contentsVariant: 'logo-grid',
-      contentsSections: [
+      contentsFirstPage: 4,
+      contentsPageSize: 5,
+      continuationPageIds: ['russia-clubs-logo-contents-2'],
+      contentsSections: shiftContentsPages([
         {
           title: 'album.editorial.russiaClubsLogo.contents.sections.national',
           items: [
@@ -656,7 +820,7 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
             { label: 'album.editorial.russiaClubsLogo.contents.labels.mediaLeague', logo: '/leagueLogos/russia/media-league.png', pages: '20–21', targetPage: 20 },
           ],
         },
-      ],
+      ], 2),
     },
   ],
   layout: {
@@ -732,17 +896,40 @@ const englandClubsLogoAlbum: AlbumDefinition = {
       ],
     },
     {
+      pageId: 'england-clubs-logo-guide',
+      kind: 'article',
+      eyebrow: 'album.editorial.englandClubsLogo.guide.eyebrow',
+      title: 'album.editorial.englandClubsLogo.guide.title',
+      description: 'album.editorial.englandClubsLogo.guide.description',
+      align: 'right',
+      features: [
+        {
+          title: 'album.editorial.englandClubsLogo.guide.features.levels.title',
+          description: 'album.editorial.englandClubsLogo.guide.features.levels.description',
+        },
+        {
+          title: 'album.editorial.englandClubsLogo.guide.features.issue.title',
+          description: 'album.editorial.englandClubsLogo.guide.features.issue.description',
+        },
+        {
+          title: 'album.editorial.englandClubsLogo.guide.features.navigation.title',
+          description: 'album.editorial.englandClubsLogo.guide.features.navigation.description',
+        },
+      ],
+    },
+    {
       pageId: 'england-clubs-logo-contents',
       kind: 'contents',
       eyebrow: 'album.editorial.englandClubsLogo.contents.eyebrow',
       title: 'album.editorial.englandClubsLogo.contents.title',
       description: 'album.editorial.englandClubsLogo.fullIssue.contentsDescription',
       contentsVariant: 'logo-grid',
-      contentsFirstPage: 3,
-      contentsPageSize: 18,
+      contentsFirstPage: 4,
+      contentsPageSize: 13,
       continuationPageIds: [
         'england-clubs-logo-contents-2',
         'england-clubs-logo-contents-3',
+        'england-clubs-logo-contents-4',
       ],
       contentsSections: [
         { title: 'professional', levels: [1, 2, 3, 4] },
@@ -786,6 +973,7 @@ const definitions: AlbumDefinition[] = [
   infoAlbum,
   wc26Album,
   ucl2627Album,
+  rpl2627Album,
   tomskAlbum,
   spainClubsLogoAlbum,
   russiaClubsLogoAlbum,

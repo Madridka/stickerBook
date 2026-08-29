@@ -207,13 +207,13 @@ test('publishes a cached leaderboard and profiles for qualified collectors', asy
     return registration.cookies[0]?.value ?? ''
   }
 
-  const [wc26AlbumId, uclAlbumId, tomskAlbumId, spainAlbumId] =
+  const [wc26AlbumId, uclAlbumId, rplAlbumId, tomskAlbumId] =
     LEADERBOARD_CONFIG.albumIds
   const albumIds = [
     ...Array<string>(20).fill(wc26AlbumId),
     ...Array<string>(12).fill(uclAlbumId),
-    ...Array<string>(10).fill(tomskAlbumId),
-    ...Array<string>(9).fill(spainAlbumId),
+    ...Array<string>(10).fill(rplAlbumId),
+    ...Array<string>(9).fill(tomskAlbumId),
   ]
   const placedIndexes = new Set([0, 20, 32, 42])
   const cards = albumIds.map((albumId, index) => ({
@@ -303,12 +303,13 @@ test('publishes a cached leaderboard and profiles for qualified collectors', asy
   assert.equal(body.players.some(({ username }: { username: string }) => username === 'under-fifty'), false)
   assert.equal(player.position, 1)
   assert.equal(player.username, 'ranked-player')
-  assert.equal(player.totalCards, 55)
+  assert.equal(player.totalCards, 51 + LEADERBOARD_CONFIG.albumIds.length)
   assert.deepEqual(player.albums, {
+    ...Object.fromEntries(LEADERBOARD_CONFIG.albumIds.map((albumId) => [albumId, 1])),
     [wc26AlbumId]: 21,
     [uclAlbumId]: 13,
-    [tomskAlbumId]: 11,
-    [spainAlbumId]: 10,
+    [rplAlbumId]: 11,
+    [tomskAlbumId]: 10,
   })
 
   const profile = await server.inject({
@@ -318,7 +319,7 @@ test('publishes a cached leaderboard and profiles for qualified collectors', asy
   assert.equal(profile.statusCode, 200)
   assert.equal(profile.json().player.placedCards, 4)
   assert.equal(profile.json().player.completedTasks, 4)
-  assert.equal(profile.json().player.albumDetails.length, 4)
+  assert.equal(profile.json().player.albumDetails.length, LEADERBOARD_CONFIG.albumIds.length)
 })
 
 test('logs out and invalidates the session', async (): Promise<void> => {

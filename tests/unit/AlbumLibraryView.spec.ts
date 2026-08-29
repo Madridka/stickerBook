@@ -1,5 +1,5 @@
 import { mount, RouterLinkStub } from '@vue/test-utils'
-import { describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import i18n from '@/plugins/usei18n/usei18n'
 
 const collection = vi.hoisted(() => ({
@@ -20,7 +20,11 @@ vi.mock('@/stores/collection', () => ({
 import AlbumLibraryView from '@/views/AlbumLibraryView.vue'
 
 describe('AlbumLibraryView', () => {
-  it('shows collection completion for UCL even when its cards are not placed yet', () => {
+  beforeEach(() => {
+    window.sessionStorage.clear()
+  })
+
+  it('switches real tabs and shows collection completion for UCL', async () => {
     const wrapper = mount(AlbumLibraryView, {
       global: {
         plugins: [i18n],
@@ -31,6 +35,15 @@ describe('AlbumLibraryView', () => {
       },
     })
 
+    const leaguesTab = wrapper
+      .findAll('[role="tab"]')
+      .find((tab) => tab.text().includes('Лиги'))
+
+    expect(leaguesTab).toBeDefined()
+    expect(wrapper.findAllComponents(RouterLinkStub).some((link) => link.props('to') === '/album/ucl-26-27')).toBe(false)
+    await leaguesTab?.trigger('click')
+    expect(leaguesTab?.attributes('aria-selected')).toBe('true')
+
     const uclAlbum = wrapper
       .findAllComponents(RouterLinkStub)
       .find((link) => link.props('to') === '/album/ucl-26-27')
@@ -39,5 +52,20 @@ describe('AlbumLibraryView', () => {
     expect(uclAlbum?.text()).toContain('Заполнено: 6%')
     expect(uclAlbum?.text()).toContain('Собрано 43 из 720')
     expect(uclAlbum?.find('[style="width: 6%;"]').exists()).toBe(true)
+
+    wrapper.unmount()
+    const reopened = mount(AlbumLibraryView, {
+      global: {
+        plugins: [i18n],
+        stubs: { RouterLink: RouterLinkStub, LoadableImage: true },
+      },
+    })
+    expect(
+      reopened.findAll('[role="tab"]').find((tab) => tab.text().includes('Лиги'))
+        ?.attributes('aria-selected'),
+    ).toBe('true')
+    expect(
+      reopened.findAllComponents(RouterLinkStub).some((link) => link.props('to') === '/album/tomsk'),
+    ).toBe(true)
   })
 })

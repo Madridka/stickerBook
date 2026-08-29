@@ -98,7 +98,7 @@ const pages: AlbumGeometryPage[] = [
     slots: [],
   },
   {
-    id: 'england-clubs-logo-contents',
+    id: 'england-clubs-logo-guide',
     number: 3,
     image: 'info/info-right.webp',
     width: PAGE_WIDTH,
@@ -106,7 +106,7 @@ const pages: AlbumGeometryPage[] = [
     slots: [],
   },
   {
-    id: 'england-clubs-logo-contents-2',
+    id: 'england-clubs-logo-contents',
     number: 4,
     image: 'info/info-left.webp',
     width: PAGE_WIDTH,
@@ -114,8 +114,24 @@ const pages: AlbumGeometryPage[] = [
     slots: [],
   },
   {
-    id: 'england-clubs-logo-contents-3',
+    id: 'england-clubs-logo-contents-2',
     number: 5,
+    image: 'info/info-right.webp',
+    width: PAGE_WIDTH,
+    height: PAGE_HEIGHT,
+    slots: [],
+  },
+  {
+    id: 'england-clubs-logo-contents-3',
+    number: 6,
+    image: 'info/info-left.webp',
+    width: PAGE_WIDTH,
+    height: PAGE_HEIGHT,
+    slots: [],
+  },
+  {
+    id: 'england-clubs-logo-contents-4',
+    number: 7,
     image: 'info/info-right.webp',
     width: PAGE_WIDTH,
     height: PAGE_HEIGHT,

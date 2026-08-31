@@ -654,6 +654,9 @@ onBeforeUnmount((): void => {
               :page-number="pages[pageIndex].geometry.number"
               :teams="getContentsTeams(pages[pageIndex].geometry.number)"
               :variant="albumDefinition.layout.contentsVariant"
+              :columns="albumDefinition.layout.contentsColumns"
+              :tone="albumDefinition.layout.contentsTone"
+              :translation-scope="albumDefinition.layout.contentsTranslationScope"
               @select="openTeam"
             />
             <template v-else>

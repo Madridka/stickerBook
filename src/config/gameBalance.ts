@@ -20,7 +20,7 @@ export const DROP_ENGINE_CONFIG = {
 /** Правила допуска в публичный рейтинг и отображаемые в нём журналы. */
 export const LEADERBOARD_CONFIG = {
   minimumCards: 50,
-  albumIds: ['wc-26', 'ucl-26-27', 'tomsk', 'spainClubsLogo', 'russiaClubsLogo', 'englandClubsLogo'],
+  albumIds: ['wc-26', 'ucl-26-27', 'rpl-26-27', 'tomsk', 'spainClubsLogo', 'russiaClubsLogo', 'englandClubsLogo'],
 } as const
 
 export type LeaderboardAlbumId = (typeof LEADERBOARD_CONFIG.albumIds)[number]
@@ -102,7 +102,7 @@ export const BLISTER_CONFIGS = {
   mixed: {
     id: 'mixed',
     albumId: 'wc-26',
-    albumIds: ['wc-26', 'tomsk', 'ucl-26-27', 'spainClubsLogo', 'russiaClubsLogo', 'englandClubsLogo'],
+    albumIds: ['wc-26', 'tomsk', 'ucl-26-27', 'rpl-26-27', 'spainClubsLogo', 'russiaClubsLogo', 'englandClubsLogo'],
     titleKey: 'shop.blisters.mixed.title',
     descriptionKey: 'shop.blisters.mixed.description',
     shortNameKey: 'shop.blisters.mixed.shortName',
@@ -152,6 +152,20 @@ export const BLISTER_CONFIGS = {
     cardsPerPack: 4,
     cooldownMs: 30 * 60 * 1_000,
     poolId: 'ucl-26-27-standard',
+    pityEligible: true,
+    rarityOdds: PACK_CONFIGS.standard.rarityOdds,
+  },
+  rpl: {
+    id: 'rpl',
+    albumId: 'rpl-26-27',
+    albumIds: ['rpl-26-27'],
+    titleKey: 'shop.blisters.rpl.title',
+    descriptionKey: 'shop.blisters.rpl.description',
+    shortNameKey: 'shop.blisters.rpl.shortName',
+    cost: 25,
+    cardsPerPack: 5,
+    cooldownMs: 0,
+    poolId: 'rpl-26-27-standard',
     pityEligible: true,
     rarityOdds: PACK_CONFIGS.standard.rarityOdds,
   },
@@ -211,6 +225,7 @@ export const PACK_HUNT_REWARD_CONFIG = {
     BLISTER_CONFIGS.mixed.id,
     BLISTER_CONFIGS.standard.id,
     BLISTER_CONFIGS.ucl.id,
+    BLISTER_CONFIGS.rpl.id,
     BLISTER_CONFIGS.kdv.id,
     BLISTER_CONFIGS.spainLogos.id,
     BLISTER_CONFIGS.russiaLogos.id,

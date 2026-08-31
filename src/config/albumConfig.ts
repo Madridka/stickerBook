@@ -4,6 +4,7 @@ export const ALBUM_VISIBILITY_CONFIG: Record<string, boolean> = {
   'wc-26': true,
   tomsk: true,
   'ucl-26-27': true,
+  'rpl-26-27': true,
   spainClubsLogo: true,
   russiaClubsLogo: true,
   englandClubsLogo: true,
@@ -23,4 +24,4 @@ export const ALBUM_VIEW_CONFIG = {
 }
 
 /** Показывает весь каталог как вклеенный, не изменяя данные игрока. */
-export const PLACE_ALL_COLLECTED_CARDS: boolean = false
+export const PLACE_ALL_COLLECTED_CARDS: boolean = true

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "rpl-26-27",
+  "name": "РПЛ 2026/27",
+  "season": "2026/27",
+  "status": "provisional",
+  "snapshotDate": "2026-08-28",
+  "expectedClubCount": 16,
+  "cardsPerClub": 20,
+  "baseCardCount": 320,
+  "placeholderAssetCount": 320,
+  "clubs": [
+    { "teamId": "akhmat-grozny", "code": "AKH", "displayName": "Ахмат" },
+    { "teamId": "akron", "code": "AKR", "displayName": "Акрон" },
+    { "teamId": "baltika-kaliningrad", "code": "BAL", "displayName": "Балтика" },
+    { "teamId": "cska-moscow", "code": "CSK", "displayName": "ЦСКА" },
+    { "teamId": "dynamo-makhachkala", "code": "DMH", "displayName": "Динамо Махачкала" },
+    { "teamId": "dynamo-moscow", "code": "DMO", "displayName": "Динамо Москва" },
+    { "teamId": "fakel-voronezh", "code": "FAK", "displayName": "Факел" },
+    { "teamId": "krasnodar", "code": "KRA", "displayName": "Краснодар" },
+    { "teamId": "krylya-sovetov", "code": "KRY", "displayName": "Крылья Советов" },
+    { "teamId": "lokomotiv-moscow", "code": "LOK", "displayName": "Локомотив" },
+    { "teamId": "orenburg", "code": "ORE", "displayName": "Оренбург" },
+    { "teamId": "rodina-moscow", "code": "ROD", "displayName": "Родина" },
+    { "teamId": "rostov", "code": "ROS", "displayName": "Ростов" },
+    { "teamId": "rubin-kazan", "code": "RUB", "displayName": "Рубин" },
+    { "teamId": "spartak-moscow", "code": "SPA", "displayName": "Спартак" },
+    { "teamId": "zenit", "code": "ZEN", "displayName": "Зенит" }
+  ]
+}

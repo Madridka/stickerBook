@@ -75,6 +75,9 @@ export interface AlbumLayout {
   contentsLastPage?: number
   contentsPageSize?: number
   contentsVariant?: 'grouped' | 'flat'
+  contentsColumns?: number
+  contentsTone?: AlbumEditorialPageTone
+  contentsTranslationScope?: 'ucl' | 'rpl'
 }
 
 export interface AlbumDropSettings {

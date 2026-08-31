@@ -18,9 +18,10 @@ describe('englandClubsLogo journal', () => {
     expect(contentsPage?.continuationPageIds).toEqual([
       'england-clubs-logo-contents-2',
       'england-clubs-logo-contents-3',
+      'england-clubs-logo-contents-4',
     ])
-    expect(items?.[0]?.pages).toBe('06–07')
-    expect(items?.at(-1)?.pages).toBe('116–117')
+    expect(items?.[0]?.pages).toBe('08–09')
+    expect(items?.at(-1)?.pages).toBe('118–119')
     expect(items?.every(({ logo }) => logo?.startsWith('/leagueLogos/england/'))).toBe(true)
   })
 })

@@ -8,6 +8,9 @@ interface Props {
   pageNumber: number
   teams: AlbumContentsItem[]
   variant?: 'grouped' | 'flat'
+  columns?: number
+  tone?: 'light' | 'dark'
+  translationScope?: 'ucl' | 'rpl'
 }
 
 interface Emits {
@@ -25,6 +28,12 @@ const { t } = useI18n()
 const isFlatContents: ComputedRef<boolean> = computed(
   (): boolean => props.variant === 'flat',
 )
+const isDarkContents: ComputedRef<boolean> = computed(
+  (): boolean => props.tone === 'dark',
+)
+const flatRowCount: ComputedRef<number> = computed(
+  (): number => Math.max(1, Math.ceil(props.teams.length / (props.columns ?? 4))),
+)
 const isTomskContents: ComputedRef<boolean> = computed((): boolean =>
   props.teams.some(({ id }): boolean => id === 'kdv' || /^tom(?:04|07|12|22)$/.test(id)),
 )
@@ -32,14 +41,14 @@ const hintKey: ComputedRef<string> = computed((): string =>
   isTomskContents.value
     ? 'album.contents.tomsk.hint'
     : isFlatContents.value
-      ? 'album.contents.ucl.hint'
+      ? `album.contents.${props.translationScope ?? 'ucl'}.hint`
       : 'album.contents.hint',
 )
 const navigationKey: ComputedRef<string> = computed((): string =>
   isTomskContents.value
     ? 'album.contents.tomsk.navigation'
     : isFlatContents.value
-      ? 'album.contents.ucl.navigation'
+      ? `album.contents.${props.translationScope ?? 'ucl'}.navigation`
       : 'album.contents.navigation',
 )
 
@@ -58,7 +67,8 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
 
 <template>
   <section
-    class="absolute inset-0 flex flex-col px-[10%] pb-[8%] pt-[7%] text-ink [container-type:inline-size]"
+    class="absolute inset-0 flex flex-col px-[10%] pb-[8%] pt-[7%] [container-type:inline-size]"
+    :class="isDarkContents ? 'text-white' : 'text-ink'"
     :aria-label="t('album.contents.aria', { page: pageNumber })"
   >
     <header class="shrink-0 text-center">
@@ -70,7 +80,10 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
       >
         {{ t('album.contents.title') }}
       </h2>
-      <p class="mt-[0.35cqw] text-[clamp(7px,1cqw,15px)] font-semibold text-ink/55">
+      <p
+        class="mt-[0.35cqw] text-[clamp(7px,1cqw,15px)] font-semibold"
+        :class="isDarkContents ? 'text-white/65' : 'text-ink/55'"
+      >
         {{ t(hintKey) }}
       </p>
     </header>
@@ -79,10 +92,18 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
       class="mx-auto mt-[1.8cqw] grid min-h-0 w-full flex-1 gap-[1.1cqw]"
       :class="
         isFlatContents
-          ? 'grid-cols-4 grid-rows-3 gap-[1.35cqw]'
+          ? 'gap-[0.9cqw]'
           : isTomskContents
             ? 'grid-rows-1'
             : 'grid-rows-3'
+      "
+      :style="
+        isFlatContents
+          ? {
+              gridTemplateColumns: `repeat(${columns ?? 4}, minmax(0, 1fr))`,
+              gridTemplateRows: `repeat(${flatRowCount}, minmax(0, 1fr))`,
+            }
+          : undefined
       "
       :aria-label="t(navigationKey)"
     >
@@ -92,7 +113,9 @@ const groupRows: ComputedRef<ContentsGroup[]> = computed((): ContentsGroup[] => 
         :key="team.id"
         class="group flex min-h-0 flex-col items-center rounded-[1.1cqw] border border-ink/10 bg-paper/95 px-[0.8cqw] pb-[0.65cqw] pt-[0.8cqw] shadow-[0_0.45cqw_1.2cqw_rgb(var(--color-ink)/0.1)] transition duration-200 hover:-translate-y-[0.25cqw] hover:border-coral/45 hover:bg-white hover:shadow-[0_0.7cqw_1.6cqw_rgb(var(--color-ink)/0.16)] focus-visible:outline focus-visible:outline-[0.3cqw] focus-visible:outline-offset-[0.25cqw] focus-visible:outline-gold"
         type="button"
-        :aria-label="t('album.contents.ucl.openClub', { club: t(team.nameKey) })"
+        :aria-label="
+          t(`album.contents.${translationScope ?? 'ucl'}.openClub`, { club: t(team.nameKey) })
+        "
         :title="t(team.nameKey)"
         @click="emit('select', team.pageId)"
       >

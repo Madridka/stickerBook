@@ -107,7 +107,7 @@ const validateCatalog = (
 const validateData = async (): Promise<void> => {
   const failures: string[] = []
   const manifest = JSON.parse(await readFile(path.join(dataDirectory, 'manifest.json'), 'utf8')) as RplManifest
-  const catalogPaths = await findFiles(path.join(dataDirectory, 'RPL'), 'cards.json')
+  const catalogPaths = await findFiles(path.join(dataDirectory, COLLECTION_ID), 'cards.json')
   const clubsByTeamId = new Map(manifest.clubs.map((club) => [club.teamId, club]))
   const catalogs: CardCatalog[] = []
 

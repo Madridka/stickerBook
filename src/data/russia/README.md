@@ -1,6 +1,6 @@
 # RPL 2026/27 journal
 
-The registered `rpl-26-27` journal uses the 16 editable catalogs in `RPL/*/cards.json`.
+The registered `rpl-26-27` journal uses the 16 editable catalogs in `rpl-26-27/*/cards.json`.
 Each club owns 20 base cards: one team card, one coach, two goalkeepers, six defenders,
 five midfielders and five forwards.
 

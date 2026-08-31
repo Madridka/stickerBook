@@ -2,7 +2,7 @@ import manifest from './manifest.json'
 import { loadCardCatalogs } from '../cardCatalogLoader.ts'
 import type { CardDefinition, NormalizedCardCatalog } from '../../types/cardCatalog.ts'
 
-const catalogModules = import.meta.glob<unknown>('./RPL/*/cards.json', {
+const catalogModules = import.meta.glob<unknown>('./rpl-26-27/*/cards.json', {
   eager: true,
   import: 'default',
 })

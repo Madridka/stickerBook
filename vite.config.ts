@@ -110,8 +110,14 @@ export default defineConfig(({ mode }) => {
       port: 4040,
       strictPort: true,
       proxy: {
-        '/api': 'http://127.0.0.1:4041',
-        '/admin': 'http://127.0.0.1:4041',
+        '/api': {
+          target: 'http://127.0.0.1:4041',
+          changeOrigin: false,
+        },
+        '/admin': {
+          target: 'http://127.0.0.1:4041',
+          changeOrigin: false,
+        },
       },
     },
     preview: {

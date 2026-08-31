@@ -4,6 +4,21 @@ import { createId } from '@/utils/createId'
 import type { AlbumId, StickerInstance } from '@/types'
 import { registerCardAcquisition, resetAlbumPity } from '@/features/pity/albumPityService'
 
+const getPersistedInstance = async (
+  instanceId: string,
+  albumId: AlbumId,
+  playerId: string,
+): Promise<StickerInstance | undefined> => {
+  const card: StickerInstance | undefined = await database.cards.get(instanceId)
+  const persisted: StickerInstance | undefined =
+    card ?? (await database.duplicates.get(instanceId))
+  if (!persisted) return undefined
+  if (persisted.albumId !== albumId || persisted.playerId !== playerId) {
+    throw new Error(`Sticker instance ${instanceId} belongs to another card`)
+  }
+  return persisted
+}
+
 // Добавляет карточку в коллекцию либо в повторки по единым правилам всех наград.
 export const storeCardInstance = async (
   albumId: AlbumId,
@@ -14,6 +29,13 @@ export const storeCardInstance = async (
   if (!targetAlbum?.cards.some(({ id }): boolean => id === playerId)) {
     throw new Error(`Unknown or inaccessible card ${albumId}:${playerId}`)
   }
+  const persisted: StickerInstance | undefined = await getPersistedInstance(
+    instanceId,
+    albumId,
+    playerId,
+  )
+  if (persisted) return persisted
+
   const instance: StickerInstance = {
     id: instanceId,
     albumId,

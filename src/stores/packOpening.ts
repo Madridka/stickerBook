@@ -317,10 +317,9 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
       }
 
       const completed = await finalize()
-      if (completed) {
-        notifyGoalsChanged()
-        notifyDailyTasksChanged()
-      }
+      if (!completed) return 'unavailable'
+      notifyGoalsChanged()
+      notifyDailyTasksChanged()
       session.value = { ...session.value, currentIndex: session.value.rewards.length }
       return 'completed'
     } finally {

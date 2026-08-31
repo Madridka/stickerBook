@@ -22,6 +22,7 @@ const collection = useCollectionStore()
 const packOpening = usePackOpeningStore()
 const isAnimationComplete: Ref<boolean> = ref(false)
 const isReady: Ref<boolean> = ref(false)
+const hasAdvanceError: Ref<boolean> = ref(false)
 const currentIndex: ComputedRef<number> = computed(
   (): number => packOpening.session?.currentIndex ?? 0,
 )
@@ -75,9 +76,17 @@ const handleAnimationComplete = async (): Promise<void> => {
 
 // Сохраняет прогресс; после последней карточки атомарно выдаёт все награды.
 const handleNextCard = async (): Promise<void> => {
-  const result: AdvancePackOpeningResult = await packOpening.advance()
-  if (result === 'completed') {
-    await Promise.all([inventory.load(), collection.load()])
+  hasAdvanceError.value = false
+  try {
+    const result: AdvancePackOpeningResult = await packOpening.advance()
+    if (result === 'completed') {
+      await Promise.all([inventory.load(), collection.load()])
+    } else if (result === 'unavailable') {
+      hasAdvanceError.value = true
+    }
+  } catch (error: unknown) {
+    hasAdvanceError.value = true
+    console.error('Failed to save pack opening progress', error)
   }
 }
 
@@ -135,6 +144,9 @@ watch(currentIndex, preloadRewardCards)
         :advancing="packOpening.isAdvancing"
         @next="handleNextCard"
       />
+      <p v-if="hasAdvanceError" class="mt-3 text-center text-sm font-bold text-coral" role="alert">
+        {{ t('packOpening.saveError') }}
+      </p>
     </template>
 
     <div v-else class="flex w-full flex-col items-center text-center">

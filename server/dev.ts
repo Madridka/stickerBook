@@ -1,6 +1,8 @@
-// `.env` contains production-safe defaults. The development entry point overrides
-// the mode before the server configuration is created, so localhost uses an
-// insecure session cookie and development logging regardless of `.env`.
+// `.env` also contains production paths. Keep localhost independent from
+// production-only resources (especially mapped/network backup drives), otherwise
+// a backup can block API requests while developing.
 process.env.NODE_ENV = 'development'
+process.env.STICKER_BOOK_BACKUP_ENABLED = 'false'
+delete process.env.STICKER_BOOK_BACKUP_SECONDARY_DIRECTORY
 
 await import('./index.ts')

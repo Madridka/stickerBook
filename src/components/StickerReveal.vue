@@ -19,7 +19,6 @@ const props: Props = withDefaults(defineProps<Props>(), { duplicate: false, adva
 const emit = defineEmits<{ next: [] }>()
 const { t } = useI18n()
 const isRevealed: Ref<boolean> = ref(false)
-const imageReady: Ref<boolean> = ref(false)
 const cardKindLabel: ComputedRef<string> = computed((): string =>
   props.card.kind === 'player'
     ? playerPositionLabels[props.card.position]
@@ -44,7 +43,6 @@ watch(
   () => props.card.id,
   (): void => {
     isRevealed.value = false
-    imageReady.value = false
   },
 )
 
@@ -55,12 +53,12 @@ const reveal = (): void => {
 }
 
 const showNext = (): void => {
-  if (!props.advancing && imageReady.value) emit('next')
+  if (!props.advancing) emit('next')
 }
 
 // Повторяет действия нижней кнопки при клике непосредственно по карточке
 const handleCardClick = (): void => {
-  if (isRevealed.value && imageReady.value) {
+  if (isRevealed.value) {
     showNext()
     return
   }
@@ -99,8 +97,6 @@ const handleCardClick = (): void => {
               eager
               detailed-error
               retryable
-              @load="imageReady = true"
-              @error="imageReady = false"
             />
             <span
               v-if="duplicate"
@@ -146,7 +142,7 @@ const handleCardClick = (): void => {
       class="mt-6"
       :label="t('packOpening.next')"
       icon="pi pi-arrow-right"
-      :disabled="advancing || !imageReady"
+      :disabled="advancing"
       :loading="advancing"
       type="button"
       @click="showNext"

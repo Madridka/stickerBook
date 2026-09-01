@@ -153,6 +153,23 @@
     "kind": "team"
   },
   {
+    "id": "eng1-pl-10",
+    "cardNumber": "10",
+    "albumSlot": 10,
+    "displayName": "Fulham",
+    "city": "Fulham, West London",
+    "country": "England",
+    "foundedYear": 1879,
+    "stadium": "Craven Cottage",
+    "leagueId": "eng1",
+    "countryCode": "ENG",
+    "image": "/englandClubsLogo/cards/england/premier-league/ENG1-PL-10-fulham.webp",
+    "series": "base",
+    "finish": "standard",
+    "rarity": "uncommon",
+    "kind": "team"
+  },
+  {
     "id": "eng1-pl-11",
     "cardNumber": "11",
     "albumSlot": 11,

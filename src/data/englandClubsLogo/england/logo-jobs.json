@@ -72,6 +72,14 @@
     "logo": "/englandClubsLogo/logos/england/premier-league/ENG1-PL-09-everton.png"
   },
   {
+    "id": "eng1-pl-10",
+    "slug": "fulham",
+    "section": "premier-league",
+    "displayName": "Fulham",
+    "leagueLabel": "Premier League",
+    "logo": "/englandClubsLogo/logos/england/premier-league/ENG1-PL-10-fulham.png"
+  },
+  {
     "id": "eng1-pl-11",
     "slug": "hull-city",
     "section": "premier-league",

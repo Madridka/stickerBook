@@ -72,6 +72,14 @@
     "articleTitle": "Everton F.C."
   },
   {
+    "id": "eng1-pl-10",
+    "displayName": "Fulham",
+    "foundedYear": 1879,
+    "stadium": "Craven Cottage",
+    "city": "Fulham, West London",
+    "articleTitle": "Fulham F.C."
+  },
+  {
     "id": "eng1-pl-11",
     "displayName": "Hull City",
     "foundedYear": 1904,

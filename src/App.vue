@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import AppShell from '@/components/AppShell.vue'
-import AuthView from '@/components/auth/AuthView.vue'
 import { useAuthStore } from '@/stores/auth'
 
 const { t } = useI18n()
@@ -17,6 +16,5 @@ void auth.initialize()
   >
     {{ t('auth.loading') }}
   </div>
-  <AppShell v-else-if="auth.user || auth.isGuest" />
-  <AuthView v-else />
+  <AppShell v-else />
 </template>

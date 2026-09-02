@@ -3,6 +3,7 @@ import type { AlbumId, DeletedCard, StickerInstance } from '@/types'
 import type { GoalCounter, GoalPlayerState } from '@/features/goals/types'
 import type { DailyTasksState } from '@/features/dailyTasks/types'
 import type { AlbumPityState } from '@/features/pity/types'
+import type { PickCandidateRef } from '@/types/pickShop'
 
 export const PLAYER_STATE_ID = 'current'
 
@@ -58,6 +59,23 @@ export interface DuplicateExchange {
   albumId: AlbumId
   candidatePlayerIds: string[]
   createdAt: number
+}
+
+export interface PickWalletState {
+  id: 'wallet'
+  tokens: number
+  randomDryPickCount: number
+  randomGuaranteeAt: number
+  updatedAt: number
+}
+
+export interface PickDraft {
+  id: 'pending'
+  offerId: string
+  candidates: PickCandidateRef[]
+  guaranteedNew: boolean
+  createdAt: number
+  updatedAt: number
 }
 
 export interface PackOpeningReward {
@@ -121,6 +139,8 @@ interface StickerBookDatabase extends Dexie {
   blisterCooldowns: Table<BlisterCooldown, string>
   dailyTasks: Table<DailyTasksState, string>
   albumPityStates: Table<AlbumPityState, AlbumId>
+  pickWallet: Table<PickWalletState, string>
+  pickDrafts: Table<PickDraft, string>
 }
 
 export const database: StickerBookDatabase = new Dexie('StickerBookDatabase') as StickerBookDatabase
@@ -410,3 +430,30 @@ database.version(17).upgrade(async (transaction): Promise<void> => {
 
 // Добавляет независимый сохраняемый счётчик неудачных паков для каждого журнала.
 database.version(18).stores({ albumPityStates: 'albumId, updatedAt' })
+
+// Общий кошелёк жетонов и незавершённый пик не привязаны к открытому журналу.
+database
+  .version(19)
+  .stores({
+    pickWallet: 'id, updatedAt',
+    pickDrafts: 'id, offerId, updatedAt',
+  })
+  .upgrade(async (transaction): Promise<void> => {
+    const legacy: DuplicateExchange | undefined = await transaction
+      .table('duplicateExchanges')
+      .get('pending')
+    if (!legacy) return
+    const timestamp: number = Date.now()
+    await transaction.table('pickDrafts').put({
+      id: 'pending',
+      offerId: 'legacy',
+      candidates: legacy.candidatePlayerIds.map((playerId): PickCandidateRef => ({
+        albumId: legacy.albumId,
+        playerId,
+      })),
+      guaranteedNew: false,
+      createdAt: legacy.createdAt,
+      updatedAt: timestamp,
+    } satisfies PickDraft)
+    await transaction.table('duplicateExchanges').delete('pending')
+  })

@@ -40,11 +40,17 @@ const effects: Ref<ClickEffectItem[]> = ref([])
 let nextEffectId: number = 0
 let completionTimer: number | undefined
 const completionNotice: Ref<boolean> = ref(false)
+const isOnboarding: ComputedRef<boolean> = computed((): boolean =>
+  recommendation.value.id.startsWith('guide-'),
+)
+const collectionProgress: ComputedRef<number> = computed(
+  (): number => collection.progress ?? 0,
+)
 
 const clickReward: ComputedRef<number> = computed((): number => {
-  const progressRatio: number = Math.min(1, Math.max(0, collection.albumProgress / 100))
+  const progressRatio: number = Math.min(1, Math.max(0, collectionProgress.value / 100))
   const rawReward: number =
-    CLICKER_CONFIG.baseReward * (1 + CLICKER_CONFIG.maxAlbumProgressBonus * progressRatio)
+    CLICKER_CONFIG.baseReward * (1 + CLICKER_CONFIG.maxCollectionProgressBonus * progressRatio)
   const multiplier: number = 10 ** CLICKER_CONFIG.rewardPrecision
   return Math.round((rawReward + Number.EPSILON) * multiplier) / multiplier
 })
@@ -62,6 +68,7 @@ const clickLabel: ComputedRef<string> = computed((): string =>
     : t('home.noEnergy'),
 )
 const orderedQuickActions: ComputedRef<QuickAction[]> = computed((): QuickAction[] => {
+  if (isOnboarding.value) return []
   const actions: QuickAction[] = player.canClick
     ? quickActions.value
     : [...quickActions.value].sort(
@@ -237,10 +244,10 @@ onBeforeUnmount((): void => {
         <div class="mb-2 flex items-center justify-between gap-3">
           <div>
             <p class="text-[10px] font-black uppercase tracking-[0.18em] text-coral">
-              {{ t('home.advice.eyebrow') }}
+              {{ t(isOnboarding ? 'home.onboarding.eyebrow' : 'home.advice.eyebrow') }}
             </p>
             <h2 id="home-advice-title" class="text-lg font-black">
-              {{ t('home.advice.title') }}
+              {{ t(isOnboarding ? 'home.onboarding.title' : 'home.advice.title') }}
             </h2>
           </div>
           <span
@@ -319,7 +326,7 @@ onBeforeUnmount((): void => {
             :limit="player.energyLimit"
             :percent="player.energyPercent"
             :milliseconds-until-next="player.millisecondsUntilNextEnergy"
-            :collection-progress="collection.albumProgress"
+            :collection-progress="collectionProgress"
             :reward="formattedClickReward"
           />
           <ClickArea
@@ -334,6 +341,7 @@ onBeforeUnmount((): void => {
 
       <!-- Вторичный прогресс расположен после игровой зоны и визуально разбит на карточки. -->
       <div
+        v-if="!isOnboarding"
         class="order-4 flex min-w-0 flex-col gap-4 lg:col-start-2 lg:row-start-3 lg:min-h-0 lg:overflow-y-auto lg:pr-1"
         data-home-progress
       >

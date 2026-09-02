@@ -72,6 +72,22 @@ const mergeChangedRow = (
     }
   }
 
+  if (tableName === 'pickWallet') {
+    const tokens: number | undefined = mergeAdditiveNumber(base, local, remote, 'tokens')
+    const localUpdatedAt: number = finiteNumber(local.updatedAt) ?? 0
+    const remoteUpdatedAt: number = finiteNumber(remote.updatedAt) ?? 0
+    const latest: SaveRow = localUpdatedAt >= remoteUpdatedAt ? local : remote
+    return {
+      ...remote,
+      ...latest,
+      tokens: Math.max(
+        0,
+        tokens ?? Math.max(finiteNumber(local.tokens) ?? 0, finiteNumber(remote.tokens) ?? 0),
+      ),
+      updatedAt: Math.max(localUpdatedAt, remoteUpdatedAt),
+    }
+  }
+
   if (tableName === 'goalStates') {
     const timestamps = (field: string): number | undefined => {
       const values: number[] = [local[field], remote[field]].filter(

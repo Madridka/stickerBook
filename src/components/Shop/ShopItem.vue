@@ -3,15 +3,16 @@ import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import { formatCountdown } from '@/utils/formatCountdown'
-import type { BlisterDefinition } from '@/types'
+import type { BlisterDefinition, PickShopOffer } from '@/types'
 
 import Button from 'primevue/button'
 import SelectButton from 'primevue/selectbutton'
 import BlisterShopCard from '@/components/Shop/BlisterShopCard.vue'
 
-type ShopSection = 'store' | 'packs' | 'free'
+type ShopSection = 'store' | 'picks' | 'packs' | 'free'
 
 interface Props {
+  initialSection?: ShopSection
   blisters: BlisterDefinition[]
   playerCoins: number
   purchasingById: Readonly<Record<string, boolean>>
@@ -22,6 +23,11 @@ interface Props {
   ownedPackIds: string[]
   ownedPackDetails: Record<string, { label: string; cardCount: number }>
   inventoryLoaded: boolean
+  pickOffers: readonly PickShopOffer[]
+  pickTokens: number
+  pickMissingCounts: Readonly<Record<string, number>>
+  picksLoaded: boolean
+  pickProcessing: boolean
 }
 
 interface ShopSectionOption {
@@ -31,20 +37,27 @@ interface ShopSectionOption {
   count?: number
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), { initialSection: 'store' })
 const emit = defineEmits<{
   purchase: [blisterId: string]
   play: []
   open: [packId: string]
+  pick: [offerId: string]
 }>()
 const { t } = useI18n()
-const activeSection: Ref<ShopSection> = ref('store')
+const activeSection: Ref<ShopSection> = ref(props.initialSection)
 const freeCooldownText: ComputedRef<string> = computed((): string =>
   formatCountdown(props.cooldownRemainingMs),
 )
 const freeCooldownPeriodText: string = formatCountdown(PACK_HUNT_CONFIG.cooldownMs)
 const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
   { value: 'store', label: t('shop.sections.store'), icon: 'pi pi-shopping-bag' },
+  {
+    value: 'picks',
+    label: t('shop.sections.picks'),
+    icon: 'pi pi-sparkles',
+    count: props.pickTokens,
+  },
   {
     value: 'packs',
     label: t('shop.sections.packs'),
@@ -97,6 +110,65 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
         @purchase="emit('purchase', blister.id)"
       />
     </div>
+
+    <section
+      v-else-if="activeSection === 'picks'"
+      class="mt-3 min-h-0 flex-1 overflow-y-auto sm:mt-4"
+      role="tabpanel"
+    >
+      <div class="mb-3 flex items-end justify-between gap-3 border border-mint/70 bg-mint/15 p-3">
+        <div>
+          <h2 class="text-xl font-black">{{ t('shop.pickStoreTitle') }}</h2>
+          <p class="mt-1 max-w-2xl text-xs text-ink/60">{{ t('shop.pickStoreText') }}</p>
+        </div>
+        <div class="shrink-0 text-right">
+          <p class="text-[9px] font-black uppercase text-ink/45">{{ t('shop.pickTokens') }}</p>
+          <strong class="text-3xl font-black tabular-nums">{{ pickTokens }}</strong>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+        <article
+          v-for="offer in pickOffers"
+          :key="offer.id"
+          class="flex min-h-52 flex-col border-2 border-ink/30 bg-paper p-3 shadow-[4px_4px_0_rgb(var(--color-ink)/0.1)]"
+        >
+          <div class="flex items-start justify-between gap-2">
+            <span class="grid size-9 shrink-0 place-items-center bg-ink text-paper">
+              <i :class="offer.kind === 'premium' ? 'pi pi-star' : offer.kind === 'random' ? 'pi pi-shuffle' : 'pi pi-book'" />
+            </span>
+            <strong class="text-lg tabular-nums">{{ offer.cost }} жет.</strong>
+          </div>
+          <h3 class="mt-3 text-base font-black leading-tight">{{ t(offer.titleKey) }}</h3>
+          <p class="mt-1 text-xs leading-relaxed text-ink/55">{{ t(offer.descriptionKey) }}</p>
+          <div class="mt-2 space-y-1 text-[10px] font-black uppercase">
+            <p v-if="offer.guaranteedNew" class="text-emerald-700">
+              <i class="pi pi-check-circle mr-1" />{{ t('shop.pickGuaranteed') }}
+            </p>
+            <p v-if="offer.guaranteedNew" class="text-coral">
+              <i class="pi pi-chart-line mr-1" />{{ t('shop.pickBoostedOdds') }}
+            </p>
+            <p v-else-if="offer.kind === 'premium'" class="text-coral">
+              <i class="pi pi-star mr-1" />{{ t('shop.pickRare') }}
+            </p>
+            <p v-if="offer.kind === 'album'" class="text-ink/45">
+              {{ pickMissingCounts[offer.id] > 0
+                ? t('shop.pickMissing', { count: pickMissingCounts[offer.id] })
+                : t('shop.pickCompleted') }}
+            </p>
+          </div>
+          <Button
+            class="mt-auto w-full pt-3"
+            :label="t('shop.pickBuy', { cost: offer.cost })"
+            icon="pi pi-sparkles"
+            size="small"
+            :disabled="!picksLoaded || pickTokens < offer.cost || (offer.kind === 'album' && pickMissingCounts[offer.id] === 0)"
+            :loading="pickProcessing"
+            @click="emit('pick', offer.id)"
+          />
+        </article>
+      </div>
+    </section>
 
     <section
       v-else-if="activeSection === 'free'"

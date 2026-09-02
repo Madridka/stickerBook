@@ -18,8 +18,15 @@ export const STICKER_PREPARATION_CONFIG = {
     handleMaxPercent: 93,
   },
   alignment: {
-    initialX: 38,
-    initialY: -30,
+    // Карточка 112×168 остаётся целиком внутри поля 256×256 даже на мобильном экране.
+    initialX: {
+      min: -72,
+      max: 72,
+    },
+    initialY: {
+      min: -44,
+      max: 44,
+    },
     accuracyBase: 101,
     accuracyDistanceDivisor: 2,
     cardWidth: 112,

@@ -15,6 +15,9 @@ import Textarea from 'primevue/textarea'
 
 type AuthMode = 'login' | 'register'
 
+const props = withDefaults(defineProps<{ embedded?: boolean }>(), { embedded: false })
+const emit = defineEmits<{ authenticated: [] }>()
+
 const { t } = useI18n()
 const auth = useAuthStore()
 const mode: Ref<AuthMode> = ref('login')
@@ -38,14 +41,16 @@ const setMode = (nextMode: AuthMode): void => {
 
 const submit = async (): Promise<void> => {
   if (mode.value === 'login') {
-    await auth.login({ username: username.value, password: password.value })
+    const success: boolean = await auth.login({ username: username.value, password: password.value })
+    if (success) emit('authenticated')
     return
   }
-  await auth.register({
+  const success: boolean = await auth.register({
     username: username.value,
     password: password.value,
     migrateLocalProgress: migrateLocalProgress.value,
   })
+  if (success) emit('authenticated')
 }
 
 // Показывает тот же снимок Dexie, который переносится в аккаунт при регистрации.
@@ -74,7 +79,10 @@ const continueAsGuest = (): void => {
 </script>
 
 <template>
-  <main class="flex min-h-dvh items-center justify-center bg-paper px-4 py-8 text-ink">
+  <div
+    class="flex items-center justify-center bg-paper text-ink"
+    :class="props.embedded ? 'w-full' : 'min-h-dvh px-4 py-8'"
+  >
     <section
       class="w-full max-w-md border-2 border-ink bg-paper p-5 shadow-[6px_6px_0_rgb(var(--color-gold)/0.55)] sm:p-7"
       :aria-label="t('auth.title')"
@@ -145,7 +153,7 @@ const continueAsGuest = (): void => {
         />
       </form>
 
-      <div class="mt-4 border-t border-ink/15 pt-4">
+      <div v-if="!props.embedded" class="mt-4 border-t border-ink/15 pt-4">
         <Button
           class="w-full"
           icon="pi pi-play"
@@ -215,5 +223,5 @@ const continueAsGuest = (): void => {
         spellcheck="false"
       />
     </Dialog>
-  </main>
+  </div>
 </template>

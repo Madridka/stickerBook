@@ -64,6 +64,15 @@ export const useAuthStore = defineStore('auth', () => {
       isInitializing.value = false
       return
     }
+    // Новый игрок сразу попадает в игру; сетевой вход остаётся осознанным действием в профиле.
+    if (!readCachedUser()) {
+      cloudSave.stop()
+      user.value = null
+      isGuest.value = true
+      localStorage.setItem(AUTH_UI_CONFIG.guestModeStorageKey, 'true')
+      isInitializing.value = false
+      return
+    }
     try {
       const response: AuthResponse = await apiRequest('/api/auth/session')
       try {
@@ -82,7 +91,9 @@ export const useAuthStore = defineStore('auth', () => {
       if (error instanceof ApiError && error.status === 401) {
         cacheUser(null)
         user.value = null
-        isGuest.value = false
+        isGuest.value = true
+        localStorage.setItem(AUTH_UI_CONFIG.guestModeStorageKey, 'true')
+        cloudSave.stop()
       } else {
         const cachedUser: AuthUser | null = readCachedUser()
         if (cachedUser) {
@@ -91,7 +102,9 @@ export const useAuthStore = defineStore('auth', () => {
           isGuest.value = false
         } else {
           user.value = null
-          isGuest.value = false
+          isGuest.value = true
+          localStorage.setItem(AUTH_UI_CONFIG.guestModeStorageKey, 'true')
+          cloudSave.stop()
         }
         errorCode.value = 'server-unavailable'
       }

@@ -30,7 +30,7 @@ import Button from 'primevue/button'
 import Select from 'primevue/select'
 
 import CollectionControls from '@/components/Collection/CollectionControls.vue'
-import DuplicateExchangePanel from '@/components/Collection/DuplicateExchangePanel.vue'
+import DuplicateExchangePanel from '@/components/Collection/DuplicateRecyclePanel.vue'
 import StickerPreviewDialog from '@/components/Sticker/StickerPreviewDialog.vue'
 import LoadableImage from '@/components/ui/LoadableImage.vue'
 
@@ -324,7 +324,7 @@ watch(
         </div>
         <div>
           <strong class="block text-lg font-black leading-none text-coral sm:text-2xl">{{
-            selectedProgress.duplicateCards
+            collection.duplicateTotal
           }}</strong>
           {{ t('album.duplicatesStored') }}
         </div>
@@ -332,6 +332,7 @@ watch(
     </div>
 
     <nav
+      v-if="activeTab !== 'duplicates'"
       class="mb-2 flex shrink-0 items-center gap-2 border-2 border-ink bg-paper p-2 shadow-[3px_3px_0_rgb(var(--color-coral)/0.45)] sm:mb-3 sm:gap-4 sm:p-3"
       :aria-label="t('album.collectionControls.albumLabel')"
     >
@@ -410,7 +411,7 @@ watch(
             <i class="pi pi-inbox" />
             <span class="hidden sm:inline">{{ t('album.duplicatesTab') }}</span>
             <span class="rounded-full bg-coral/15 px-2 py-0.5 text-xs text-coral">{{
-              selectedProgress.duplicateCards
+              collection.duplicateTotal
             }}</span>
           </span>
         </Tab>
@@ -554,7 +555,7 @@ watch(
         </TabPanel>
 
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="duplicates">
-          <DuplicateExchangePanel :album-id="activeAlbumId" />
+          <DuplicateExchangePanel />
         </TabPanel>
 
         <TabPanel class="h-full min-h-0 overflow-y-auto pr-2" value="deleted">

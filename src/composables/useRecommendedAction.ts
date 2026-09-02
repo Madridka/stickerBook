@@ -1,12 +1,13 @@
 import { computed, type ComputedRef } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
-import { DUPLICATE_EXCHANGE_CONFIG, PACK_PRICE } from '@/config/gameBalance'
+import { BLISTER_CONFIGS, DUPLICATE_EXCHANGE_CONFIG } from '@/config/gameBalance'
 import { useCollectionStore } from '@/stores/collection'
 import { useGameGuideStore, type GuideStepDefinition } from '@/stores/gameGuide'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackHuntStore } from '@/stores/packHunt'
 import { usePackOpeningStore } from '@/stores/packOpening'
 import { usePlayerStore } from '@/stores/player'
+import { usePickShopStore } from '@/stores/pickShop'
 
 export interface ActionProgress {
   current: number
@@ -36,6 +37,8 @@ export interface QuickAction {
   requiresEnergy: boolean
 }
 
+const FEATURED_PACK_PRICE: number = BLISTER_CONFIGS.ucl.cost
+
 export interface RecommendedActionSnapshot {
   coins: number
   energy: number
@@ -49,6 +52,7 @@ export interface RecommendedActionSnapshot {
   collectionCount: number
   albumCount: number
   guideStep?: GuideStepDefinition
+  preferredAlbumId?: string
 }
 
 const createAction = (
@@ -127,7 +131,7 @@ export const resolveRecommendedAction = (state: RecommendedActionSnapshot): Reco
       'home.actions.place.title',
       'home.actions.place.description',
       'home.actions.place.action',
-      { name: 'album-detail', params: { albumId: 'wc-26' } },
+      { name: 'album-detail', params: { albumId: state.preferredAlbumId ?? 'ucl-26-27' } },
       800,
     )
   }
@@ -141,7 +145,7 @@ export const resolveRecommendedAction = (state: RecommendedActionSnapshot): Reco
       700,
     )
   }
-  if (state.coins >= PACK_PRICE) {
+  if (state.coins >= FEATURED_PACK_PRICE) {
     return createAction(
       'buy-pack',
       'home.actions.buy.title',
@@ -177,7 +181,7 @@ export const resolveRecommendedAction = (state: RecommendedActionSnapshot): Reco
       'home.actions.earn.title',
       'home.actions.earn.description',
       300,
-      { current: Math.min(state.coins, PACK_PRICE), target: PACK_PRICE },
+      { current: Math.min(state.coins, FEATURED_PACK_PRICE), target: FEATURED_PACK_PRICE },
     )
   }
   if (state.cardsToPrepare > 0) {
@@ -219,7 +223,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       id: 'place-stickers',
       titleKey: 'home.quick.place',
       badge: state.preparedStickers,
-      route: { name: 'album-detail', params: { albumId: 'wc-26' } },
+      route: { name: 'album-detail', params: { albumId: state.preferredAlbumId ?? 'ucl-26-27' } },
       priority: 700,
       requiresEnergy: false,
     })
@@ -259,7 +263,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       id: 'album-slots',
       titleKey: 'home.quick.album',
       descriptionKey: 'home.quick.albumProgress',
-      route: { name: 'album-detail', params: { albumId: 'wc-26' } },
+      route: { name: 'album-detail', params: { albumId: state.preferredAlbumId ?? 'ucl-26-27' } },
       priority: 650,
       requiresEnergy: false,
     })
@@ -282,6 +286,7 @@ export const useRecommendedAction = (): RecommendedActions => {
   const packOpening = usePackOpeningStore()
   const packHunt = usePackHuntStore()
   const guide = useGameGuideStore()
+  const pickShop = usePickShopStore()
 
   const snapshot: ComputedRef<RecommendedActionSnapshot> = computed(() => {
     const placeable = collection.items.filter(({ instance }): boolean =>
@@ -299,12 +304,13 @@ export const useRecommendedAction = (): RecommendedActions => {
       preparedStickers: placeable.filter(({ instance }): boolean => Boolean(instance.preparation))
         .length,
       duplicateCount: collection.duplicateTotal,
-      hasPendingExchange: Boolean(collection.pendingExchange),
+      hasPendingExchange: Boolean(collection.pendingExchange || pickShop.pendingDraft),
       canPlayMiniGame: packHunt.canPlay,
       collectionCount: collection.items.length,
       albumCount: collection.items.filter(({ instance }): boolean => instance.location === 'album')
         .length,
       guideStep: guide.currentStep,
+      preferredAlbumId: placeable[0]?.instance.albumId,
     }
   })
 

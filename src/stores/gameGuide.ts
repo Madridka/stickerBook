@@ -2,7 +2,7 @@ import { computed, ref, watch, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { RouteLocationRaw } from 'vue-router'
 import { database, type GameGuideProgress } from '@/db/database'
-import { PACK_PRICE } from '@/config/gameBalance'
+import { BLISTER_CONFIGS } from '@/config/gameBalance'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackHuntStore } from '@/stores/packHunt'
@@ -29,6 +29,7 @@ export interface GuideStepDefinition {
 }
 
 const GUIDE_PROGRESS_ID: GameGuideProgress['id'] = 'first-steps'
+const FEATURED_PACK_PRICE: number = BLISTER_CONFIGS.ucl.cost
 const STEP_ORDER: GuideStepId[] = [
   'earn-first-pack',
   'buy-first-pack',
@@ -89,7 +90,7 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
     const downstreamPackProgress: boolean =
       inventory.packCount > 0 || hasUnfinishedOpening || hasCards.value
 
-    if (player.coins >= PACK_PRICE || downstreamPackProgress) completed.add('earn-first-pack')
+    if (player.coins >= FEATURED_PACK_PRICE || downstreamPackProgress) completed.add('earn-first-pack')
     if (downstreamPackProgress) completed.add('buy-first-pack')
     if (hasCards.value) completed.add('open-first-pack')
     if (viewedCollection.value) completed.add('view-first-collection')
@@ -142,8 +143,8 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
         id: next,
         titleKey: 'home.guide.earn.title',
         descriptionKey: 'home.guide.earn.description',
-        descriptionParams: { remaining: Math.max(0, PACK_PRICE - player.coins) },
-        progress: { current: Math.min(player.coins, PACK_PRICE), target: PACK_PRICE },
+        descriptionParams: { remaining: Math.max(0, FEATURED_PACK_PRICE - player.coins) },
+        progress: { current: Math.min(player.coins, FEATURED_PACK_PRICE), target: FEATURED_PACK_PRICE },
       },
       'buy-first-pack': {
         id: next,
@@ -178,7 +179,14 @@ export const useGameGuideStore = defineStore('gameGuide', () => {
         titleKey: 'home.guide.place.title',
         descriptionKey: 'home.guide.place.description',
         actionLabelKey: 'home.guide.place.action',
-        route: { name: 'album-detail', params: { albumId: 'wc-26' } },
+        route: {
+          name: 'album-detail',
+          params: {
+            albumId: collection.items.find(({ instance }): boolean =>
+              ['inventory', 'collection'].includes(instance.location),
+            )?.instance.albumId ?? BLISTER_CONFIGS.ucl.albumId,
+          },
+        },
       },
       'complete-first-minigame': {
         id: next,

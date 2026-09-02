@@ -52,6 +52,9 @@ const shufflePressZones = (): PressZone[] => {
   return zones
 }
 
+const randomBetween = (min: number, max: number): number =>
+  Math.round(min + Math.random() * (max - min))
+
 const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 const { t } = useI18n()
@@ -66,8 +69,12 @@ const peelOrigin: Ref<PeelOrigin | undefined> = ref(undefined)
 const peelTrackRef: Ref<HTMLElement | undefined> = ref(undefined)
 const peelTargetRef: Ref<HTMLElement | undefined> = ref(undefined)
 const peelHandleRef: Ref<HTMLElement | undefined> = ref(undefined)
-const alignX: Ref<number> = ref(alignmentConfig.initialX)
-const alignY: Ref<number> = ref(alignmentConfig.initialY)
+const alignX: Ref<number> = ref(
+  randomBetween(alignmentConfig.initialX.min, alignmentConfig.initialX.max),
+)
+const alignY: Ref<number> = ref(
+  randomBetween(alignmentConfig.initialY.min, alignmentConfig.initialY.max),
+)
 const alignOrigin: Ref<PointerOrigin | undefined> = ref(undefined)
 const pressedCount: Ref<number> = ref(0)
 const pressMistakes: Ref<number> = ref(0)
@@ -100,8 +107,11 @@ const clearPeelTimer = (): void => {
   peelTimer = undefined
 }
 
-const randomBetween = (min: number, max: number): number =>
-  Math.round(min + Math.random() * (max - min))
+const resetAlignment = (): void => {
+  alignX.value = randomBetween(alignmentConfig.initialX.min, alignmentConfig.initialX.max)
+  alignY.value = randomBetween(alignmentConfig.initialY.min, alignmentConfig.initialY.max)
+  alignOrigin.value = undefined
+}
 
 const movePeelTarget = (): void => {
   if (!props.visible || step.value !== 0 || peelResult.value !== 'playing') return
@@ -142,9 +152,7 @@ watch(
     }
     step.value = 0
     resetPeel()
-    alignX.value = alignmentConfig.initialX
-    alignY.value = alignmentConfig.initialY
-    alignOrigin.value = undefined
+    resetAlignment()
     pressedCount.value = 0
     pressMistakes.value = 0
     pressZones.value = shufflePressZones()

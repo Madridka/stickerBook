@@ -7,7 +7,8 @@ import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
 import { usePackOpeningStore } from '@/stores/packOpening'
 import { useBlistersStore } from '@/stores/blisters'
-import { BLISTER_CONFIGS } from '@/config/gameBalance'
+import { usePickShopStore } from '@/stores/pickShop'
+import { BLISTER_CONFIGS, BLISTER_SHOP_PRIORITY } from '@/config/gameBalance'
 import {
   getBlisters,
   getPlayerAlbumById,
@@ -29,10 +30,21 @@ const inventory = useInventoryStore()
 const packHunt = usePackHuntStore()
 const packOpening = usePackOpeningStore()
 const blisters = useBlistersStore()
-const availableBlisters: BlisterDefinition[] = [...getBlisters()]
+const pickShop = usePickShopStore()
+const availableBlisters: BlisterDefinition[] = [...getBlisters()].sort(
+  (left, right): number => {
+    const leftPriority: number = BLISTER_SHOP_PRIORITY.indexOf(left.id)
+    const rightPriority: number = BLISTER_SHOP_PRIORITY.indexOf(right.id)
+    return (leftPriority < 0 ? Number.MAX_SAFE_INTEGER : leftPriority) -
+      (rightPriority < 0 ? Number.MAX_SAFE_INTEGER : rightPriority)
+  },
+)
 const router = useRouter()
+const initialShopSection: 'store' | 'picks' =
+  router.currentRoute.value.query.section === 'picks' ? 'picks' : 'store'
 const purchasingById: Ref<Record<string, boolean>> = ref({})
 const hasPurchaseError: Ref<boolean> = ref(false)
+const hasPickError: Ref<boolean> = ref(false)
 
 const resolvePlayerBlister = (blisterId: string): BlisterDefinition | undefined =>
   getPlayerBlisterById(blisterId)
@@ -126,8 +138,14 @@ const openOwnedPack = async (packId: string): Promise<void> => {
   await router.push({ name: 'pack-opening', query: { pack: packId } })
 }
 
+const openPick = async (offerId: string): Promise<void> => {
+  hasPickError.value = false
+  const result = await pickShop.beginPick(offerId)
+  hasPickError.value = result !== 'started'
+}
+
 onMounted(async (): Promise<void> => {
-  await Promise.all([packHunt.load(), packOpening.load(), inventory.load(), blisters.load()])
+  await Promise.all([packHunt.load(), packOpening.load(), inventory.load(), blisters.load(), pickShop.load()])
 })
 </script>
 
@@ -158,6 +176,7 @@ onMounted(async (): Promise<void> => {
     <!-- Доступные товары магазина -->
     <ShopItem
       class="mt-3 sm:mt-4"
+      :initial-section="initialShopSection"
       :blisters="availableBlisters"
       :player-coins="player.coins"
       :purchasing-by-id="purchasingById"
@@ -168,9 +187,15 @@ onMounted(async (): Promise<void> => {
       :owned-pack-ids="ownedPackIds"
       :owned-pack-details="ownedPackDetails"
       :inventory-loaded="inventory.isLoaded"
+      :pick-offers="pickShop.offers"
+      :pick-tokens="pickShop.tokens"
+      :pick-missing-counts="pickShop.offerMissingCounts"
+      :picks-loaded="pickShop.isLoaded"
+      :pick-processing="pickShop.isProcessing"
       @purchase="buyBlister"
       @play="playPackHunt"
       @open="openOwnedPack"
+      @pick="openPick"
     />
     <p
       v-if="hasPurchaseError"
@@ -178,6 +203,9 @@ onMounted(async (): Promise<void> => {
       role="alert"
     >
       {{ t('shop.purchaseError') }}
+    </p>
+    <p v-if="hasPickError" class="mt-4 text-sm font-bold text-coral" role="alert">
+      {{ t('shop.pickError') }}
     </p>
   </section>
 </template>

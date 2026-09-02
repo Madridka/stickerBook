@@ -1,14 +1,14 @@
 {
   "eyebrow": "Вклейка",
   "clickTitle": "Забивай голы",
-  "clickDescription": "Нажимай на логотип, расходуя энергию. Журнал увеличивает награду",
+  "clickDescription": "Нажимай на логотип, расходуя энергию. Общий прогресс коллекции увеличивает награду",
   "clickPrompt": "Нажать и получить +{reward}",
   "noEnergy": "Энергия закончилась — дождись восстановления",
   "energyTitle": "Энергия",
   "energyValue": "{current} / {limit}",
   "energyFull": "Запас полон",
   "energyRecovery": "+1 через {time}",
-  "clickBonus": "Журнал ЧМ-2026: {progress}% · +{reward} за клик",
+  "clickBonus": "Общая коллекция: {progress}% · +{reward} за клик",
   "logoAlt": "Логотип «Вклейка»",
   "score": "Голы",
   "title": "Собирай моменты чемпионата",
@@ -30,6 +30,10 @@
   "goal": {
     "eyebrow": "Текущая цель",
     "progress": "Прогресс"
+  },
+  "onboarding": {
+    "eyebrow": "Первый матч",
+    "title": "Один понятный шаг за раз"
   },
   "advice": {
     "eyebrow": "Что делать дальше",

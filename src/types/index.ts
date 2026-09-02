@@ -22,9 +22,9 @@ export type {
   BlisterDefinition,
   CardId,
   PageId,
-} from './album'
+} from './album.js'
 
-export type { BlisterConfig, CardCatalogConfig, PackConfig } from './gameConfig'
+export type { BlisterConfig, CardCatalogConfig, PackConfig } from './gameConfig.js'
 
 export type {
   AlbumPickShopOffer,
@@ -32,7 +32,7 @@ export type {
   PickCandidateRef,
   PickOfferKind,
   PickShopOffer,
-} from './pickShop'
+} from './pickShop.js'
 
 export type {
   AcquisitionSource,
@@ -53,11 +53,11 @@ export type {
   PlayerCardDefinition,
   SpecialCard,
   TeamCard,
-} from './cardCatalog'
+} from './cardCatalog.js'
 
 export interface StickerInstance {
   id: string
-  albumId: import('./album').AlbumId
+  albumId: import('./album.js').AlbumId
   playerId: string
   quality: number
   location: StickerLocation
@@ -68,7 +68,7 @@ export interface StickerInstance {
 
 export interface DeletedCard {
   id: string
-  albumId: import('./album').AlbumId
+  albumId: import('./album.js').AlbumId
   instanceId: string
   playerId: string
   deletedAt: number
@@ -132,7 +132,7 @@ export interface StickerDropResult {
 }
 
 export interface StickerTrayItem {
-  card: import('./cardCatalog').CardDefinition
+  card: import('./cardCatalog.js').CardDefinition
   instance: StickerInstance
 }
 

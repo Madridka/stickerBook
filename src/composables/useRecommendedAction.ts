@@ -1,6 +1,6 @@
 import { computed, type ComputedRef } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
-import { BLISTER_CONFIGS, DUPLICATE_EXCHANGE_CONFIG } from '@/config/gameBalance'
+import { BLISTER_CONFIGS, PICK_SHOP_CONFIG } from '@/config/gameBalance'
 import { useCollectionStore } from '@/stores/collection'
 import { useGameGuideStore, type GuideStepDefinition } from '@/stores/gameGuide'
 import { useInventoryStore } from '@/stores/inventory'
@@ -165,7 +165,7 @@ export const resolveRecommendedAction = (state: RecommendedActionSnapshot): Reco
       500,
     )
   }
-  if (state.hasPendingExchange || state.duplicateCount >= DUPLICATE_EXCHANGE_CONFIG.tradeInCount) {
+  if (state.hasPendingExchange || state.duplicateCount >= PICK_SHOP_CONFIG.duplicatesPerToken) {
     return createAction(
       'exchange-duplicates',
       'home.actions.exchange.title',
@@ -248,7 +248,7 @@ export const resolveQuickActions = (state: RecommendedActionSnapshot): QuickActi
       requiresEnergy: false,
     })
   }
-  if (state.hasPendingExchange || state.duplicateCount >= DUPLICATE_EXCHANGE_CONFIG.tradeInCount) {
+  if (state.hasPendingExchange || state.duplicateCount >= PICK_SHOP_CONFIG.duplicatesPerToken) {
     actions.push({
       id: 'exchange',
       titleKey: 'home.quick.exchange',

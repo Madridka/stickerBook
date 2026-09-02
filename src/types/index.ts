@@ -26,7 +26,13 @@ export type {
 
 export type { BlisterConfig, CardCatalogConfig, PackConfig } from './gameConfig'
 
-export type { PickCandidateRef, PickOfferKind, PickShopOffer } from './pickShop'
+export type {
+  AlbumPickShopOffer,
+  CatalogPickShopOffer,
+  PickCandidateRef,
+  PickOfferKind,
+  PickShopOffer,
+} from './pickShop'
 
 export type {
   AcquisitionSource,

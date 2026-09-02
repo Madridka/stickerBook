@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { PICK_SHOP_CONFIG } from '@/config/gameBalance'
 import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import { formatCountdown } from '@/utils/formatCountdown'
 import type { BlisterDefinition, PickShopOffer } from '@/types'
@@ -46,6 +47,7 @@ const emit = defineEmits<{
 }>()
 const { t } = useI18n()
 const activeSection: Ref<ShopSection> = ref(props.initialSection)
+const pickCandidateCount: number = PICK_SHOP_CONFIG.candidateCount
 const freeCooldownText: ComputedRef<string> = computed((): string =>
   formatCountdown(props.cooldownRemainingMs),
 )
@@ -111,6 +113,7 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
       />
     </div>
 
+    <!-- Отдельная витрина пиков показывает стоимость и остаток коллекции до покупки. -->
     <section
       v-else-if="activeSection === 'picks'"
       class="mt-3 min-h-0 flex-1 overflow-y-auto sm:mt-4"
@@ -118,8 +121,12 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
     >
       <div class="mb-3 flex items-end justify-between gap-3 border border-mint/70 bg-mint/15 p-3">
         <div>
-          <h2 class="text-xl font-black">{{ t('shop.pickStoreTitle') }}</h2>
-          <p class="mt-1 max-w-2xl text-xs text-ink/60">{{ t('shop.pickStoreText') }}</p>
+          <h2 class="text-xl font-black">
+            {{ t('shop.pickStoreTitle', { count: pickCandidateCount }) }}
+          </h2>
+          <p class="mt-1 max-w-2xl text-xs text-ink/60">
+            {{ t('shop.pickStoreText', { count: pickCandidateCount }) }}
+          </p>
         </div>
         <div class="shrink-0 text-right">
           <p class="text-[9px] font-black uppercase text-ink/45">{{ t('shop.pickTokens') }}</p>
@@ -135,12 +142,22 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
         >
           <div class="flex items-start justify-between gap-2">
             <span class="grid size-9 shrink-0 place-items-center bg-ink text-paper">
-              <i :class="offer.kind === 'premium' ? 'pi pi-star' : offer.kind === 'random' ? 'pi pi-shuffle' : 'pi pi-book'" />
+              <i
+                :class="offer.kind === 'premium'
+                  ? 'pi pi-star'
+                  : offer.kind === 'random'
+                    ? 'pi pi-shuffle'
+                    : 'pi pi-book'"
+              />
             </span>
-            <strong class="text-lg tabular-nums">{{ offer.cost }} жет.</strong>
+            <strong class="text-lg tabular-nums">
+              {{ t('shop.pickCost', { cost: offer.cost }) }}
+            </strong>
           </div>
           <h3 class="mt-3 text-base font-black leading-tight">{{ t(offer.titleKey) }}</h3>
-          <p class="mt-1 text-xs leading-relaxed text-ink/55">{{ t(offer.descriptionKey) }}</p>
+          <p class="mt-1 text-xs leading-relaxed text-ink/55">
+            {{ t(offer.descriptionKey, { count: pickCandidateCount }) }}
+          </p>
           <div class="mt-2 space-y-1 text-[10px] font-black uppercase">
             <p v-if="offer.guaranteedNew" class="text-emerald-700">
               <i class="pi pi-check-circle mr-1" />{{ t('shop.pickGuaranteed') }}
@@ -162,7 +179,11 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
             :label="t('shop.pickBuy', { cost: offer.cost })"
             icon="pi pi-sparkles"
             size="small"
-            :disabled="!picksLoaded || pickTokens < offer.cost || (offer.kind === 'album' && pickMissingCounts[offer.id] === 0)"
+            :disabled="
+              !picksLoaded ||
+                pickTokens < offer.cost ||
+                (offer.kind === 'album' && pickMissingCounts[offer.id] === 0)
+            "
             :loading="pickProcessing"
             @click="emit('pick', offer.id)"
           />

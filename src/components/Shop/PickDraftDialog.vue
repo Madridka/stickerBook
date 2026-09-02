@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { PICK_SHOP_CONFIG } from '@/config/gameBalance'
 import { getAlbumCard, getPlayerAlbumById } from '@/data/albumRegistry'
 import { useCollectionStore } from '@/stores/collection'
 import { usePickShopStore } from '@/stores/pickShop'
@@ -23,6 +24,7 @@ const pickShop = usePickShopStore()
 const collection = useCollectionStore()
 const selectedKey: Ref<string | null> = ref(null)
 const error: Ref<boolean> = ref(false)
+const candidateCount: number = PICK_SHOP_CONFIG.candidateCount
 
 const candidates: ComputedRef<CandidateView[]> = computed(() =>
   (pickShop.pendingDraft?.candidates ?? []).flatMap((candidate): CandidateView[] => {
@@ -71,10 +73,11 @@ const claim = async (): Promise<void> => {
       {{
         pickShop.pendingDraft?.guaranteedNew
           ? t('shop.pickDialog.guaranteed')
-          : t('shop.pickDialog.description')
+          : t('shop.pickDialog.description', { count: candidateCount })
       }}
     </div>
 
+    <!-- Сохранённый draft не закрывается до подтверждения одного допустимого кандидата. -->
     <div class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
       <button
         v-for="candidate in candidates"

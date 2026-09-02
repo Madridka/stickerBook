@@ -78,7 +78,7 @@ const getOfferOdds = (offer: PickShopOffer): Readonly<Record<CardRarity, number>
     return PICK_SHOP_CONFIG.journalRarityOdds
   }
   if (offer.kind === 'premium') {
-    return { common: 0, uncommon: 0, rare: 70, epic: 21.5, legendary: 8.5 }
+    return PICK_SHOP_CONFIG.premiumRarityOdds
   }
   return PACK_CONFIGS.standard.rarityOdds
 }
@@ -104,7 +104,7 @@ export const usePickShopStore = defineStore('pickShop', () => {
   const isLoaded: Ref<boolean> = ref(false)
   const isProcessing: Ref<boolean> = ref(false)
   const sortedOffers: readonly PickShopOffer[] = [...PICK_SHOP_OFFERS].sort(
-    (left, right): number => left.cost - right.cost || left.priority - right.priority,
+    (left, right): number => left.priority - right.priority || left.cost - right.cost,
   )
 
   const load = async (): Promise<void> => {
@@ -135,6 +135,7 @@ export const usePickShopStore = defineStore('pickShop', () => {
     ),
   )
 
+  // Списывает выбранную валюту и фиксирует кандидатов одной транзакцией.
   const createDraft = async (
     offer: PickShopOffer,
     payment: 'tokens' | 'duplicates',
@@ -255,6 +256,7 @@ export const usePickShopStore = defineStore('pickShop', () => {
     return offer ? createDraft(offer, 'duplicates') : 'completed'
   }
 
+  // Сначала определяет реально доступное кратное количество, затем начисляет жетоны.
   const convertDuplicates = async (requestedCount: number): Promise<number> => {
     if (isProcessing.value) return 0
     const normalizedCount: number =
@@ -302,6 +304,7 @@ export const usePickShopStore = defineStore('pickShop', () => {
     }
   }
 
+  // Проверяет выбор по сохранённому draft, чтобы нельзя было подменить карточку из UI.
   const claimPick = async (candidate: PickCandidateRef): Promise<ClaimPickResult> => {
     if (isProcessing.value) return 'invalid-choice'
     isProcessing.value = true

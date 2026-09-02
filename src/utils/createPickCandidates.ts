@@ -1,7 +1,7 @@
-import type { CardDefinition, CardRarity, PickCandidateRef } from '@/types'
+import type { AlbumId, CardDefinition, CardRarity, PickCandidateRef } from '@/types'
 
 export interface PickPoolCard {
-  albumId: string
+  albumId: AlbumId
   card: CardDefinition
 }
 
@@ -9,6 +9,17 @@ const RARITIES: readonly CardRarity[] = ['common', 'uncommon', 'rare', 'epic', '
 
 const randomIndex = (length: number, randomSource: () => number): number =>
   Math.min(length - 1, Math.floor(randomSource() * length))
+
+const shuffle = <Value>(items: readonly Value[], randomSource: () => number): Value[] => {
+  const result: Value[] = [...items]
+  for (let index: number = result.length - 1; index > 0; index -= 1) {
+    const targetIndex: number = randomIndex(index + 1, randomSource)
+    const current: Value = result[index]
+    result[index] = result[targetIndex]
+    result[targetIndex] = current
+  }
+  return result
+}
 
 const selectWeighted = (
   pool: readonly PickPoolCard[],
@@ -52,6 +63,7 @@ const keyOf = ({ albumId, card }: PickPoolCard): string => `${albumId}:${card.id
 export const isPackCard = ({ card }: PickPoolCard): boolean =>
   card.acquisition.some(({ type }): boolean => type === 'pack')
 
+/** Создаёт уникальную пятёрку с управляемой редкостью и опциональной неповторкой. */
 export const createPickCandidates = (
   pool: readonly PickPoolCard[],
   count: number,
@@ -78,7 +90,6 @@ export const createPickCandidates = (
     remaining.splice(remaining.findIndex((item) => keyOf(item) === keyOf(candidate)), 1)
   }
 
-  return selected
-    .sort((): number => randomSource() - 0.5)
+  return shuffle(selected, randomSource)
     .map(({ albumId, card }): PickCandidateRef => ({ albumId, playerId: card.id }))
 }

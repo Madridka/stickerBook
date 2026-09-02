@@ -26,17 +26,23 @@ const pickShop = usePickShopStore()
 const selectedAmount: Ref<number> = ref(PICK_SHOP_CONFIG.duplicatesPerToken)
 const message: Ref<string> = ref('')
 const error: Ref<boolean> = ref(false)
+const exchangeUnit: number = PICK_SHOP_CONFIG.duplicatesPerToken
+const candidateCount: number = PICK_SHOP_CONFIG.candidateCount
 
 const maxConvertible: ComputedRef<number> = computed(() =>
   Math.floor(collection.duplicateTotal / PICK_SHOP_CONFIG.duplicatesPerToken) *
   PICK_SHOP_CONFIG.duplicatesPerToken,
 )
 const amountOptions: ComputedRef<Array<{ label: string; value: number }>> = computed(() => {
-  const values: number[] = [5, 25, 50, maxConvertible.value]
+  const configuredValues: number[] = PICK_SHOP_CONFIG.tokenExchangePresetMultipliers.map(
+    (multiplier): number => multiplier * exchangeUnit,
+  )
+  const largestPreset: number = configuredValues[configuredValues.length - 1] ?? exchangeUnit
+  const values: number[] = [...configuredValues, maxConvertible.value]
     .filter((value): boolean => value > 0 && value <= maxConvertible.value)
   return Array.from(new Set(values)).map((value) => ({
     value,
-    label: value === maxConvertible.value && value > 50
+    label: value === maxConvertible.value && value > largestPreset
       ? t('duplicateExchange.recycle.all', { count: value })
       : String(value),
   }))
@@ -117,22 +123,34 @@ const convert = async (): Promise<void> => {
         </div>
       </div>
 
+      <!-- Два сценария расхода повторок используют общий курс из gameBalance. -->
       <div class="mt-4 grid gap-3 md:grid-cols-2">
         <article class="border border-coral/30 bg-coral/5 p-3">
-          <strong class="text-sm">{{ t('duplicateExchange.recycle.mixedTitle') }}</strong>
-          <p class="mt-1 text-xs text-ink/55">{{ t('duplicateExchange.recycle.mixedText') }}</p>
+          <strong class="text-sm">
+            {{ t('duplicateExchange.recycle.mixedTitle', { count: candidateCount }) }}
+          </strong>
+          <p class="mt-1 text-xs text-ink/55">
+            {{
+              t('duplicateExchange.recycle.mixedText', {
+                tradeIn: exchangeUnit,
+                candidates: candidateCount,
+              })
+            }}
+          </p>
           <Button
             class="mt-3 w-full"
-            :label="t('duplicateExchange.recycle.openMixed')"
+            :label="t('duplicateExchange.recycle.openMixed', { count: exchangeUnit })"
             icon="pi pi-sparkles"
-            :disabled="collection.duplicateTotal < 5"
+            :disabled="collection.duplicateTotal < exchangeUnit"
             :loading="pickShop.isProcessing"
             @click="openMixedPick"
           />
         </article>
         <article class="border border-mint/70 bg-mint/10 p-3">
           <strong class="text-sm">{{ t('duplicateExchange.recycle.tokensTitle') }}</strong>
-          <p class="mt-1 text-xs text-ink/55">{{ t('duplicateExchange.recycle.rate') }}</p>
+          <p class="mt-1 text-xs text-ink/55">
+            {{ t('duplicateExchange.recycle.rate', { duplicates: exchangeUnit }) }}
+          </p>
           <div class="mt-3 flex flex-wrap items-center gap-2">
             <SelectButton
               v-model="selectedAmount"
@@ -144,9 +162,9 @@ const convert = async (): Promise<void> => {
             />
             <Button
               class="min-w-36 flex-1"
-              :label="t('duplicateExchange.recycle.convert', { count: Math.floor(selectedAmount / 5) })"
+              :label="t('duplicateExchange.recycle.convert', { count: Math.floor(selectedAmount / exchangeUnit) })"
               icon="pi pi-arrow-right-arrow-left"
-              :disabled="maxConvertible < 5"
+              :disabled="maxConvertible < exchangeUnit"
               :loading="pickShop.isProcessing"
               @click="convert"
             />
@@ -165,8 +183,13 @@ const convert = async (): Promise<void> => {
       <p v-if="error" class="mt-3 text-sm font-bold text-coral" role="alert">{{ t('duplicateExchange.recycle.error') }}</p>
     </div>
 
+    <!-- Группировка сохраняет видимость того, какие именно карточки будут переработаны. -->
     <div v-if="groups.length" class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
-      <article v-for="group in groups" :key="group.key" class="relative border-2 border-ink/25 bg-paper p-2">
+      <article
+        v-for="group in groups"
+        :key="group.key"
+        class="relative border-2 border-ink/25 bg-paper p-2"
+      >
         <span class="absolute right-3 top-3 z-10 rounded-full bg-coral px-2 py-1 text-xs font-black text-white">
           ×{{ group.instances.length }}
         </span>

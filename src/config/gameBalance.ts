@@ -238,7 +238,7 @@ export const PACK_HUNT_REWARD_CONFIG = {
 /** Баланс энергии и начислений кликера. */
 export const CLICKER_CONFIG = {
   baseReward: 1,
-  /** Максимальная прибавка к награде при полностью заполненном журнале: +50%. */
+  /** Максимальная прибавка к награде при полностью собранной коллекции: +50%. */
   maxCollectionProgressBonus: 0.5,
   energyLimit: 100,
   energyCostPerClick: 1,
@@ -247,19 +247,21 @@ export const CLICKER_CONFIG = {
   energyEpsilon: 0.000001,
 }
 
-/** Экономика обмена повторных карточек. */
-export const DUPLICATE_EXCHANGE_CONFIG = {
-  tradeInCount: 5,
-  candidateCount: 5,
-}
-
 /** Единая экономика повторок и пиков. */
 export const PICK_SHOP_CONFIG = {
   duplicatesPerToken: 5,
   candidateCount: 5,
+  tokenExchangePresetMultipliers: [1, 5, 10] as const,
   randomPityMinDryPicks: 4,
   randomPityMaxDryPicks: 7,
   premiumRarities: ['rare', 'epic', 'legendary'] as readonly CardRarity[],
+  premiumRarityOdds: {
+    common: 0,
+    uncommon: 0,
+    rare: 70,
+    epic: 21.5,
+    legendary: 8.5,
+  } satisfies Record<CardRarity, number>,
   journalRarityOdds: {
     common: 65,
     uncommon: 17,
@@ -267,6 +269,12 @@ export const PICK_SHOP_CONFIG = {
     epic: 4.5,
     legendary: 1.5,
   } satisfies Record<CardRarity, number>,
+} as const
+
+/** Совместимость прежнего обмена с едиными настройками экономики повторок. */
+export const DUPLICATE_EXCHANGE_CONFIG = {
+  tradeInCount: PICK_SHOP_CONFIG.duplicatesPerToken,
+  candidateCount: PICK_SHOP_CONFIG.candidateCount,
 } as const
 
 /** Порядок витрины: актуальные соревнования выше, локальная история — в конце. */
@@ -283,15 +291,94 @@ export const BLISTER_SHOP_PRIORITY: readonly string[] = [
 
 /** Журнальные пики стоят столько же, сколько соответствующие блистеры. */
 export const PICK_SHOP_OFFERS: readonly PickShopOffer[] = [
-  { id: 'ucl', kind: 'album', albumId: BLISTER_CONFIGS.ucl.albumId, cost: BLISTER_CONFIGS.ucl.cost, titleKey: 'shop.picks.ucl.title', descriptionKey: 'shop.picks.ucl.description', priority: 10, guaranteedNew: true },
-  { id: 'rpl', kind: 'album', albumId: BLISTER_CONFIGS.rpl.albumId, cost: BLISTER_CONFIGS.rpl.cost, titleKey: 'shop.picks.rpl.title', descriptionKey: 'shop.picks.rpl.description', priority: 20, guaranteedNew: true },
-  { id: 'wc', kind: 'album', albumId: BLISTER_CONFIGS.standard.albumId, cost: BLISTER_CONFIGS.standard.cost, titleKey: 'shop.picks.wc.title', descriptionKey: 'shop.picks.wc.description', priority: 30, guaranteedNew: true },
-  { id: 'premium', kind: 'premium', cost: 20, titleKey: 'shop.picks.premium.title', descriptionKey: 'shop.picks.premium.description', priority: 40, guaranteedNew: false },
-  { id: 'random', kind: 'random', cost: 1, titleKey: 'shop.picks.random.title', descriptionKey: 'shop.picks.random.description', priority: 50, guaranteedNew: false },
-  { id: 'spain-logos', kind: 'album', albumId: BLISTER_CONFIGS.spainLogos.albumId, cost: BLISTER_CONFIGS.spainLogos.cost, titleKey: 'shop.picks.spainLogos.title', descriptionKey: 'shop.picks.logos.description', priority: 60, guaranteedNew: true },
-  { id: 'russia-logos', kind: 'album', albumId: BLISTER_CONFIGS.russiaLogos.albumId, cost: BLISTER_CONFIGS.russiaLogos.cost, titleKey: 'shop.picks.russiaLogos.title', descriptionKey: 'shop.picks.logos.description', priority: 61, guaranteedNew: true },
-  { id: 'england-logos', kind: 'album', albumId: BLISTER_CONFIGS.englandLogos.albumId, cost: BLISTER_CONFIGS.englandLogos.cost, titleKey: 'shop.picks.englandLogos.title', descriptionKey: 'shop.picks.logos.description', priority: 62, guaranteedNew: true },
-  { id: 'tomsk', kind: 'album', albumId: BLISTER_CONFIGS.kdv.albumId, cost: BLISTER_CONFIGS.kdv.cost, titleKey: 'shop.picks.tomsk.title', descriptionKey: 'shop.picks.tomsk.description', priority: 100, guaranteedNew: true },
+  {
+    id: 'ucl',
+    kind: 'album',
+    albumId: BLISTER_CONFIGS.ucl.albumId,
+    cost: BLISTER_CONFIGS.ucl.cost,
+    titleKey: 'shop.picks.ucl.title',
+    descriptionKey: 'shop.picks.ucl.description',
+    priority: 10,
+    guaranteedNew: true,
+  },
+  {
+    id: 'rpl',
+    kind: 'album',
+    albumId: BLISTER_CONFIGS.rpl.albumId,
+    cost: BLISTER_CONFIGS.rpl.cost,
+    titleKey: 'shop.picks.rpl.title',
+    descriptionKey: 'shop.picks.rpl.description',
+    priority: 20,
+    guaranteedNew: true,
+  },
+  {
+    id: 'wc',
+    kind: 'album',
+    albumId: BLISTER_CONFIGS.standard.albumId,
+    cost: BLISTER_CONFIGS.standard.cost,
+    titleKey: 'shop.picks.wc.title',
+    descriptionKey: 'shop.picks.wc.description',
+    priority: 30,
+    guaranteedNew: true,
+  },
+  {
+    id: 'premium',
+    kind: 'premium',
+    cost: 20,
+    titleKey: 'shop.picks.premium.title',
+    descriptionKey: 'shop.picks.premium.description',
+    priority: 40,
+    guaranteedNew: false,
+  },
+  {
+    id: 'random',
+    kind: 'random',
+    cost: 1,
+    titleKey: 'shop.picks.random.title',
+    descriptionKey: 'shop.picks.random.description',
+    priority: 50,
+    guaranteedNew: false,
+  },
+  {
+    id: 'spain-logos',
+    kind: 'album',
+    albumId: BLISTER_CONFIGS.spainLogos.albumId,
+    cost: BLISTER_CONFIGS.spainLogos.cost,
+    titleKey: 'shop.picks.spainLogos.title',
+    descriptionKey: 'shop.picks.logos.description',
+    priority: 60,
+    guaranteedNew: true,
+  },
+  {
+    id: 'russia-logos',
+    kind: 'album',
+    albumId: BLISTER_CONFIGS.russiaLogos.albumId,
+    cost: BLISTER_CONFIGS.russiaLogos.cost,
+    titleKey: 'shop.picks.russiaLogos.title',
+    descriptionKey: 'shop.picks.logos.description',
+    priority: 61,
+    guaranteedNew: true,
+  },
+  {
+    id: 'england-logos',
+    kind: 'album',
+    albumId: BLISTER_CONFIGS.englandLogos.albumId,
+    cost: BLISTER_CONFIGS.englandLogos.cost,
+    titleKey: 'shop.picks.englandLogos.title',
+    descriptionKey: 'shop.picks.logos.description',
+    priority: 62,
+    guaranteedNew: true,
+  },
+  {
+    id: 'tomsk',
+    kind: 'album',
+    albumId: BLISTER_CONFIGS.kdv.albumId,
+    cost: BLISTER_CONFIGS.kdv.cost,
+    titleKey: 'shop.picks.tomsk.title',
+    descriptionKey: 'shop.picks.tomsk.description',
+    priority: 100,
+    guaranteedNew: true,
+  },
 ]
 
 /** Размер дневной ротации и выбора награды. */

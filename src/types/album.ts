@@ -1,5 +1,5 @@
-import type { NormalizedCardCatalog, CardDefinition, CardRarity } from './cardCatalog'
-import type { AlbumGeometryData, AlbumGeometryPage } from './index'
+import type { NormalizedCardCatalog, CardDefinition, CardRarity } from './cardCatalog.ts'
+import type { AlbumGeometryData, AlbumGeometryPage } from './index.js'
 
 export type AlbumId = string
 export type CardId = string
@@ -100,7 +100,9 @@ export interface BlisterDefinition {
   pityEligible: boolean
 }
 
-export interface AlbumDefinition<TMetadata extends Record<string, unknown> = Record<string, unknown>> {
+export interface AlbumDefinition<
+  TMetadata extends Record<string, unknown> = Record<string, unknown>,
+> {
   id: AlbumId
   name: string
   shortName: string

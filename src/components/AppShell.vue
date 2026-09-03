@@ -28,7 +28,6 @@ import Menu from 'primevue/menu'
 import Dialog from 'primevue/dialog'
 import Button from 'primevue/button'
 import PickDraftDialog from '@/components/Shop/PickDraftDialog.vue'
-import AuthView from '@/components/auth/AuthView.vue'
 
 const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()
@@ -52,7 +51,6 @@ const isRouteLoading: Ref<boolean> = ref(false)
 const desktopMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const mobileMenuRef: Ref<{ toggle: (event: Event) => void } | null> = ref(null)
 const isResetConfirmOpen: Ref<boolean> = ref(false)
-const isProfileOpen: Ref<boolean> = ref(false)
 const isResetting: Ref<boolean> = ref(false)
 let resourceTimer: number | undefined
 
@@ -104,7 +102,7 @@ const accountItem = computed(() => ({
   label: auth.isGuest ? t('auth.manageAccount') : (auth.user?.username ?? ''),
   icon: 'pi pi-user',
   command: (): void => {
-    isProfileOpen.value = true
+    void router.push({ name: 'profile' })
   },
 }))
 
@@ -256,8 +254,10 @@ onBeforeUnmount((): void => {
             data-resource-coins
           >
             <i class="pi pi-wallet text-coral" aria-hidden="true" />
-            <span>{{ t('home.summary.coins') }}</span>
             <span>{{ player.formattedCoins }}</span>
+            <span class="hidden text-[9px] uppercase tracking-wide text-ink/45 lg:inline">
+              {{ t('home.summary.coins') }}
+            </span>
           </div>
           <div
             class="flex items-center gap-1 rounded-full border border-ink/15 bg-coral/10 px-2 py-1 text-xs font-black tabular-nums sm:px-2.5"
@@ -305,6 +305,9 @@ onBeforeUnmount((): void => {
           }}</RouterLink>
           <RouterLink class="transition-colors hover:text-coral" to="/leaderboard">{{
             t('app.leaderboard')
+          }}</RouterLink>
+          <RouterLink class="transition-colors hover:text-coral" to="/profile">{{
+            t('app.profile')
           }}</RouterLink>
           <button
             class="theme-toggle__button"
@@ -406,42 +409,6 @@ onBeforeUnmount((): void => {
           @click="resetProgress"
         />
       </template>
-    </Dialog>
-    <Dialog
-      v-model:visible="isProfileOpen"
-      modal
-      class="w-[min(34rem,calc(100vw-2rem))]"
-      :header="t('auth.profileTitle')"
-    >
-      <div v-if="auth.user" class="border border-mint/70 bg-mint/15 p-4">
-        <div class="flex items-center gap-3">
-          <span class="grid size-11 place-items-center rounded-full bg-ink text-paper">
-            <i class="pi pi-user" />
-          </span>
-          <div>
-            <strong class="block text-lg">{{ auth.user.username }}</strong>
-            <p class="text-xs text-ink/55">{{ syncItem.label }}</p>
-          </div>
-        </div>
-        <p class="mt-3 text-sm leading-relaxed text-ink/65">
-          {{ t('auth.profileSignedIn', { username: auth.user.username }) }}
-        </p>
-        <Button
-          class="mt-4 w-full"
-          severity="secondary"
-          outlined
-          icon="pi pi-sign-out"
-          :label="t('auth.logout')"
-          :loading="auth.isSubmitting"
-          @click="auth.logout()"
-        />
-      </div>
-      <div v-else>
-        <p class="mb-4 border-l-4 border-coral bg-coral/10 p-3 text-sm leading-relaxed text-ink/65">
-          {{ t('auth.profileGuestText') }}
-        </p>
-        <AuthView embedded @authenticated="isProfileOpen = false" />
-      </div>
     </Dialog>
     <PickDraftDialog />
   </div>

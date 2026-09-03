@@ -7,6 +7,7 @@ import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
 import { usePackOpeningStore } from '@/stores/packOpening'
 import { useBlistersStore } from '@/stores/blisters'
+import { useCollectionStore } from '@/stores/collection'
 import { usePickShopStore } from '@/stores/pickShop'
 import { BLISTER_CONFIGS, BLISTER_SHOP_PRIORITY } from '@/config/gameBalance'
 import {
@@ -30,6 +31,7 @@ const inventory = useInventoryStore()
 const packHunt = usePackHuntStore()
 const packOpening = usePackOpeningStore()
 const blisters = useBlistersStore()
+const collection = useCollectionStore()
 const pickShop = usePickShopStore()
 const availableBlisters: BlisterDefinition[] = [...getBlisters()].sort(
   (left, right): number => {
@@ -145,7 +147,14 @@ const openPick = async (offerId: string): Promise<void> => {
 }
 
 onMounted(async (): Promise<void> => {
-  await Promise.all([packHunt.load(), packOpening.load(), inventory.load(), blisters.load(), pickShop.load()])
+  await Promise.all([
+    packHunt.load(),
+    packOpening.load(),
+    inventory.load(),
+    blisters.load(),
+    collection.load(),
+    pickShop.load(),
+  ])
 })
 </script>
 
@@ -190,7 +199,7 @@ onMounted(async (): Promise<void> => {
       :pick-offers="pickShop.offers"
       :pick-tokens="pickShop.tokens"
       :pick-missing-counts="pickShop.offerMissingCounts"
-      :picks-loaded="pickShop.isLoaded"
+      :picks-loaded="pickShop.isLoaded && collection.isLoaded"
       :pick-processing="pickShop.isProcessing"
       @purchase="buyBlister"
       @play="playPackHunt"

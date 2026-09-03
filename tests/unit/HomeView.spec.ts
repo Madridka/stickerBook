@@ -4,6 +4,7 @@ import i18n from '@/plugins/usei18n/usei18n'
 
 const testState = vi.hoisted(() => ({
   push: vi.fn(),
+  auth: { isGuest: false },
   player: {
     coins: 0,
     energy: 100,
@@ -50,6 +51,7 @@ vi.mock('vue-router', async (importOriginal) => {
   return { ...original, useRouter: () => ({ push: testState.push }) }
 })
 vi.mock('@/stores/player', () => ({ usePlayerStore: () => testState.player }))
+vi.mock('@/stores/auth', () => ({ useAuthStore: () => testState.auth }))
 vi.mock('@/stores/inventory', () => ({ useInventoryStore: () => testState.inventory }))
 vi.mock('@/stores/collection', () => ({ useCollectionStore: () => testState.collection }))
 vi.mock('@/stores/goals', () => ({ useGoalsStore: () => testState.goals }))
@@ -86,6 +88,7 @@ const mountHome = () =>
 describe('HomeView', () => {
   beforeEach(() => {
     testState.push.mockClear()
+    testState.auth.isGuest = false
     testState.player.canClick = true
     testState.player.availableEnergy = 100
     testState.player.millisecondsUntilNextEnergy = 0
@@ -104,6 +107,15 @@ describe('HomeView', () => {
     expect(wrapper.get('[data-current-goal]').text()).toContain('Забивай голы')
     expect(wrapper.find('[data-goal-action]').exists()).toBe(false)
     expect(testState.push).not.toHaveBeenCalled()
+  })
+
+  it('объясняет гостю, где сохранить прогресс через аккаунт', async () => {
+    testState.auth.isGuest = true
+    const wrapper = mountHome()
+
+    expect(wrapper.get('[data-account-prompt]').text()).toContain('только на этом устройстве')
+    await wrapper.get('[data-account-prompt]').trigger('click')
+    expect(testState.push).toHaveBeenCalledWith({ name: 'profile' })
   })
 
   it('показывает дневную тройку после совета и игровой зоны', () => {

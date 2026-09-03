@@ -10,6 +10,7 @@ import leaderboard from '@/lang/ru/leaderboard.json'
 import goals from '@/lang/ru/goals.json'
 import packOpening from '@/lang/ru/packOpening.json'
 import packHunt from '@/lang/ru/packHunt.json'
+import profile from '@/lang/ru/profile.json'
 import shop from '@/lang/ru/shop.json'
 import stickerTray from '@/lang/ru/stickerTray.json'
 import stickerPreview from '@/lang/ru/stickerPreview.json'
@@ -28,6 +29,7 @@ const messages: {
     goals: typeof goals
     packOpening: typeof packOpening
     packHunt: typeof packHunt
+    profile: typeof profile
     shop: typeof shop
     stickerTray: typeof stickerTray
     stickerPreview: typeof stickerPreview
@@ -45,6 +47,7 @@ const messages: {
     goals,
     packOpening,
     packHunt,
+    profile,
     shop,
     stickerTray,
     stickerPreview,

@@ -5,7 +5,7 @@ const openApiDocument = {
   openapi: '3.1.0',
   info: {
     title: 'StickerBook API',
-    version: '1.14.0',
+    version: '1.15.0',
     description: 'API аккаунтов, облачных сохранений и администрирования игры «Вклейка».',
   },
   servers: [{ url: '/', description: 'Текущий сервер' }],

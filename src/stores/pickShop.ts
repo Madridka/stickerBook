@@ -13,6 +13,7 @@ import {
   PICK_SHOP_OFFERS,
 } from '@/config/gameBalance'
 import { notifyGoalsChanged } from '@/features/goals/goalCounterService'
+import { useCollectionStore } from '@/stores/collection'
 import {
   createPickCandidates,
   isPackCard,
@@ -98,9 +99,9 @@ const selectDisposableDuplicates = (
     .slice(0, count)
 
 export const usePickShopStore = defineStore('pickShop', () => {
+  const collection = useCollectionStore()
   const wallet: Ref<PickWalletState> = ref(defaultWallet())
   const pendingDraft: Ref<PickDraft | undefined> = ref(undefined)
-  const ownedKeys: Ref<Set<string>> = ref(new Set())
   const isLoaded: Ref<boolean> = ref(false)
   const isProcessing: Ref<boolean> = ref(false)
   const sortedOffers: readonly PickShopOffer[] = [...PICK_SHOP_OFFERS].sort(
@@ -108,21 +109,24 @@ export const usePickShopStore = defineStore('pickShop', () => {
   )
 
   const load = async (): Promise<void> => {
-    const [storedWallet, draft, cards] = await Promise.all([
+    const [storedWallet, draft] = await Promise.all([
       database.pickWallet.get('wallet'),
       database.pickDrafts.get('pending'),
-      database.cards.toArray(),
     ])
     wallet.value = storedWallet ?? defaultWallet()
     if (!storedWallet) await database.pickWallet.put(wallet.value)
     pendingDraft.value = draft
-    ownedKeys.value = new Set(
-      cards
-        .filter(({ location }): boolean => location !== 'deleted')
-        .map(({ albumId, playerId }): string => `${albumId}:${playerId}`),
-    )
     isLoaded.value = true
   }
+
+  // Реактивно сверяет предложения магазина с актуальной коллекцией игрока.
+  const ownedKeys: ComputedRef<Set<string>> = computed(() =>
+    new Set(
+      collection.items
+        .filter(({ instance }): boolean => instance.location !== 'deleted')
+        .map(({ instance: { albumId, playerId } }): string => `${albumId}:${playerId}`),
+    ),
+  )
 
   const offerMissingCounts: ComputedRef<Record<string, number>> = computed(() =>
     Object.fromEntries(

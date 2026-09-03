@@ -91,6 +91,22 @@ const router: Router = createRouter({
       },
     },
     {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('@/views/ProfileView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('app.profile'),
+      },
+    },
+    {
+      path: '/profile/:userId',
+      name: 'public-profile',
+      component: () => import('@/views/ProfileView.vue'),
+      meta: {
+        title: (i18n.global.t as (key: string) => string)('app.profile'),
+      },
+    },
+    {
       path: '/pack-opening',
       name: 'pack-opening',
       component: () => import('@/views/PackOpeningView.vue'),

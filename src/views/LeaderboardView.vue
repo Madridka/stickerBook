@@ -1,30 +1,22 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 import LeaderboardTable from '@/components/leaderboard/LeaderboardTable.vue'
-import PlayerProfileDialog from '@/components/leaderboard/PlayerProfileDialog.vue'
 import { LEADERBOARD_CONFIG } from '@/config/gameBalance'
-import {
-  getLeaderboard,
-  getLeaderboardProfile,
-} from '@/services/leaderboard'
+import { getLeaderboard } from '@/services/leaderboard'
 import type {
   LeaderboardPlayer,
-  LeaderboardPlayerProfile,
   LeaderboardResponse,
 } from '@/types/leaderboard'
 
 const { t, locale } = useI18n()
+const router = useRouter()
 const leaderboard: Ref<LeaderboardResponse | null> = ref(null)
-const selectedProfile: Ref<LeaderboardPlayerProfile | null> = ref(null)
 const isLoading: Ref<boolean> = ref(true)
-const isProfileLoading: Ref<boolean> = ref(false)
-const isProfileOpen: Ref<boolean> = ref(false)
 const loadError: Ref<boolean> = ref(false)
-const profileError: Ref<boolean> = ref(false)
 let leaderboardController: AbortController | undefined
-let profileController: AbortController | undefined
 
 const timeFormatter = computed(
   (): Intl.DateTimeFormat =>
@@ -61,31 +53,9 @@ const loadLeaderboard = async (): Promise<void> => {
   }
 }
 
-// Открывает публичный профиль выбранной строки, защищаясь от гонки быстрых кликов.
-const openProfile = async (player: LeaderboardPlayer): Promise<void> => {
-  profileController?.abort()
-  const controller = new AbortController()
-  profileController = controller
-  selectedProfile.value = null
-  profileError.value = false
-  isProfileLoading.value = true
-  isProfileOpen.value = true
-
-  try {
-    const response = await getLeaderboardProfile(player.userId, controller.signal)
-    if (profileController === controller) selectedProfile.value = response.player
-  } catch (error: unknown) {
-    if (!isAbortError(error) && profileController === controller) profileError.value = true
-  } finally {
-    if (profileController === controller) isProfileLoading.value = false
-  }
-}
-
-const closeProfile = (): void => {
-  profileController?.abort()
-  profileController = undefined
-  selectedProfile.value = null
-  profileError.value = false
+// У каждого игрока есть собственный адрес профиля вместо временного диалога.
+const openProfile = (player: LeaderboardPlayer): void => {
+  void router.push({ name: 'public-profile', params: { userId: player.userId } })
 }
 
 onMounted((): void => {
@@ -94,7 +64,6 @@ onMounted((): void => {
 
 onBeforeUnmount((): void => {
   leaderboardController?.abort()
-  profileController?.abort()
 })
 </script>
 
@@ -182,13 +151,6 @@ onBeforeUnmount((): void => {
       @select="openProfile"
     />
 
-    <PlayerProfileDialog
-      v-model:visible="isProfileOpen"
-      :profile="selectedProfile"
-      :loading="isProfileLoading"
-      :error="profileError"
-      @after-hide="closeProfile"
-    />
   </section>
 </template>
 

@@ -45,10 +45,10 @@ const recoveryTime: ComputedRef<string> = computed((): string => {
     <ProgressBar class="click-energy-progress mt-1.5 h-2" :value="percent" :show-value="false" />
 
     <div class="mt-1.5 flex items-center justify-between gap-3 text-[11px] sm:text-xs">
-      <span class="text-ink/55">
+      <span class="whitespace-nowrap text-ink/55 tabular-nums">
         {{ isFull ? t('home.energyFull') : t('home.energyRecovery', { time: recoveryTime }) }}
       </span>
-      <span class="font-bold text-coral">
+      <span class="whitespace-nowrap text-right font-bold text-coral tabular-nums">
         {{
           t('home.clickBonus', {
             progress: collectionProgress,

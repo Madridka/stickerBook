@@ -8,6 +8,7 @@ import { CLICKER_CONFIG } from '@/config/gameBalance'
 import { HOME_VIEW_CONFIG } from '@/config/runtimeConfig'
 import { useRecommendedAction, type QuickAction } from '@/composables/useRecommendedAction'
 import { useCollectionStore } from '@/stores/collection'
+import { useAuthStore } from '@/stores/auth'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { useGoalsStore } from '@/stores/goals'
@@ -30,6 +31,7 @@ interface ClickEffectItem {
 
 const { t } = useI18n()
 const router = useRouter()
+const auth = useAuthStore()
 const player = usePlayerStore()
 const collection = useCollectionStore()
 const inventory = useInventoryStore()
@@ -154,6 +156,21 @@ onBeforeUnmount((): void => {
     data-home-view
   >
     <h1 class="sr-only">{{ t('home.hubTitle') }}</h1>
+
+    <button
+      v-if="auth.isGuest"
+      class="mb-2 flex w-full items-center gap-2 border border-coral/35 bg-coral/10 px-3 py-2 text-left transition hover:border-coral hover:bg-coral/15"
+      type="button"
+      data-account-prompt
+      @click="navigate({ name: 'profile' })"
+    >
+      <i class="pi pi-cloud-upload shrink-0 text-coral" aria-hidden="true" />
+      <span class="min-w-0 flex-1 truncate text-xs font-bold">
+        {{ t('home.accountPrompt.text') }}
+      </span>
+      <strong class="shrink-0 text-xs text-coral">{{ t('home.accountPrompt.action') }}</strong>
+      <i class="pi pi-chevron-right shrink-0 text-[10px] text-coral" aria-hidden="true" />
+    </button>
 
     <div
       class="grid min-h-full min-w-0 gap-4 pb-3 lg:h-full lg:min-h-0 lg:grid-cols-[minmax(0,1.12fr)_minmax(20rem,.88fr)] lg:grid-rows-[auto_auto_minmax(0,1fr)] lg:pb-0"

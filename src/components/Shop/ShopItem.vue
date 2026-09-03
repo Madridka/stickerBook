@@ -11,6 +11,7 @@ import SelectButton from 'primevue/selectbutton'
 import BlisterShopCard from '@/components/Shop/BlisterShopCard.vue'
 
 type ShopSection = 'store' | 'picks' | 'packs' | 'free'
+type PickViewTab = 'standard' | 'premium' | 'all'
 
 interface Props {
   initialSection?: ShopSection
@@ -47,6 +48,7 @@ const emit = defineEmits<{
 }>()
 const { t } = useI18n()
 const activeSection: Ref<ShopSection> = ref(props.initialSection)
+const activePickTab: Ref<PickViewTab> = ref('standard')
 const pickCandidateCount: number = PICK_SHOP_CONFIG.candidateCount
 const freeCooldownText: ComputedRef<string> = computed((): string =>
   formatCountdown(props.cooldownRemainingMs),
@@ -54,12 +56,7 @@ const freeCooldownText: ComputedRef<string> = computed((): string =>
 const freeCooldownPeriodText: string = formatCountdown(PACK_HUNT_CONFIG.cooldownMs)
 const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
   { value: 'store', label: t('shop.sections.store'), icon: 'pi pi-shopping-bag' },
-  {
-    value: 'picks',
-    label: t('shop.sections.picks'),
-    icon: 'pi pi-sparkles',
-    count: props.pickTokens,
-  },
+  { value: 'picks', label: t('shop.sections.picks'), icon: 'pi pi-sparkles' },
   {
     value: 'packs',
     label: t('shop.sections.packs'),
@@ -68,6 +65,18 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
   },
   { value: 'free', label: t('shop.sections.free'), icon: 'pi pi-bolt' },
 ])
+const pickTabOptions: ComputedRef<{ value: PickViewTab; label: string }[]> = computed(
+  () => [
+    { value: 'standard', label: t('shop.pickTabs.standard') },
+    { value: 'premium', label: t('shop.pickTabs.premium') },
+    { value: 'all', label: t('shop.pickTabs.all') },
+  ],
+)
+const visiblePickOffers: ComputedRef<readonly PickShopOffer[]> = computed(() =>
+  activePickTab.value === 'all'
+    ? props.pickOffers
+    : props.pickOffers.filter(({ tier }): boolean => tier === activePickTab.value),
+)
 </script>
 
 <template>
@@ -137,9 +146,22 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
         </div>
       </div>
 
+      <div class="mb-3 w-full overflow-x-auto overscroll-x-contain pb-1">
+        <SelectButton
+          v-model="activePickTab"
+          class="shop-section-switch w-max min-w-full"
+          :options="pickTabOptions"
+          option-label="label"
+          option-value="value"
+          size="small"
+          :allow-empty="false"
+          :aria-label="t('shop.pickTabs.ariaLabel')"
+        />
+      </div>
+
       <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         <article
-          v-for="offer in pickOffers"
+          v-for="offer in visiblePickOffers"
           :key="offer.id"
           class="flex min-h-48 flex-col border-2 border-ink/30 bg-paper p-3 shadow-[3px_3px_0_rgb(var(--color-ink)/0.1)] sm:min-h-52 sm:shadow-[4px_4px_0_rgb(var(--color-ink)/0.1)]"
         >
@@ -147,7 +169,7 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
             <span class="grid size-9 shrink-0 place-items-center bg-ink text-base text-paper">
               <i
                 :class="
-                  offer.kind === 'premium'
+                  offer.tier === 'premium'
                     ? 'pi pi-star'
                     : offer.kind === 'random'
                       ? 'pi pi-directions-alt'
@@ -167,13 +189,7 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
             <p v-if="offer.guaranteedNew" class="text-emerald-700">
               <i class="pi pi-check-circle mr-1" />{{ t('shop.pickGuaranteed') }}
             </p>
-            <p v-if="offer.guaranteedNew" class="text-coral">
-              <i class="pi pi-chart-line mr-1" />{{ t('shop.pickBoostedOdds') }}
-            </p>
-            <p v-else-if="offer.kind === 'premium'" class="text-coral">
-              <i class="pi pi-star mr-1" />{{ t('shop.pickRare') }}
-            </p>
-            <p v-if="offer.kind === 'album' && picksLoaded" class="text-ink/45">
+            <p v-if="offer.guaranteedNew && picksLoaded" class="text-ink/45">
               {{
                 pickMissingCounts[offer.id] > 0
                   ? t('shop.pickMissing', { count: pickMissingCounts[offer.id] })
@@ -189,7 +205,7 @@ const sectionOptions: ComputedRef<ShopSectionOption[]> = computed(() => [
             :disabled="
               !picksLoaded ||
               pickTokens < offer.cost ||
-              (offer.kind === 'album' && pickMissingCounts[offer.id] === 0)
+              (offer.guaranteedNew && pickMissingCounts[offer.id] === 0)
             "
             :loading="pickProcessing"
             @click="emit('pick', offer.id)"

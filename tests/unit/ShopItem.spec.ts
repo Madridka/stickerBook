@@ -22,6 +22,7 @@ describe('ShopItem', () => {
           {
             id: 'random',
             kind: 'random',
+            tier: 'standard',
             cost: 1,
             titleKey: 'shop.picks.random.title',
             descriptionKey: 'shop.picks.random.description',

@@ -31,6 +31,7 @@ export type {
   CatalogPickShopOffer,
   PickCandidateRef,
   PickOfferKind,
+  PickOfferTier,
   PickShopOffer,
 } from './pickShop.js'
 

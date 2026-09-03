@@ -99,7 +99,7 @@ const resetProgressItem = computed(() => ({
 }))
 
 const accountItem = computed(() => ({
-  label: auth.isGuest ? t('auth.manageAccount') : (auth.user?.username ?? ''),
+  label: t('app.profile'),
   icon: 'pi pi-user',
   command: (): void => {
     void router.push({ name: 'profile' })
@@ -305,9 +305,6 @@ onBeforeUnmount((): void => {
           }}</RouterLink>
           <RouterLink class="transition-colors hover:text-coral" to="/leaderboard">{{
             t('app.leaderboard')
-          }}</RouterLink>
-          <RouterLink class="transition-colors hover:text-coral" to="/profile">{{
-            t('app.profile')
           }}</RouterLink>
           <button
             class="theme-toggle__button"

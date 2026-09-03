@@ -65,21 +65,12 @@ const getOfferPool = (offer: PickShopOffer): PickPoolCard[] => {
   if (offer.kind === 'album') {
     return pool.filter(({ albumId }): boolean => albumId === offer.albumId)
   }
-  if (offer.kind === 'premium') {
-    return pool.filter(
-      ({ card }): boolean =>
-        PICK_SHOP_CONFIG.premiumRarities.includes(card.rarity) || card.series !== 'base',
-    )
-  }
   return pool
 }
 
 const getOfferOdds = (offer: PickShopOffer): Readonly<Record<CardRarity, number>> => {
   if (offer.kind === 'album') {
     return PICK_SHOP_CONFIG.journalRarityOdds
-  }
-  if (offer.kind === 'premium') {
-    return PICK_SHOP_CONFIG.premiumRarityOdds
   }
   return PACK_CONFIGS.standard.rarityOdds
 }
@@ -178,10 +169,12 @@ export const usePickShopStore = defineStore('pickShop', () => {
           const hasMissing: boolean = pool.some(
             ({ albumId, card }): boolean => !persistedOwnedKeys.has(`${albumId}:${card.id}`),
           )
-          if (offer.kind === 'album' && !hasMissing) return 'completed'
+          if (offer.guaranteedNew && !hasMissing) return 'completed'
 
+          const tracksRandomPity: boolean =
+            offer.kind === 'random' && offer.tier === 'standard'
           const pityGuarantee: boolean =
-            offer.kind === 'random' &&
+            tracksRandomPity &&
             hasMissing &&
             persistedWallet.randomDryPickCount + 1 >= persistedWallet.randomGuaranteeAt
           const candidates: PickCandidateRef[] = createPickCandidates(
@@ -202,11 +195,11 @@ export const usePickShopStore = defineStore('pickShop', () => {
             tokens: payment === 'tokens'
               ? Math.max(0, persistedWallet.tokens - offer.cost)
               : persistedWallet.tokens,
-            randomDryPickCount: offer.kind === 'random'
+            randomDryPickCount: tracksRandomPity
               ? containsNew ? 0 : persistedWallet.randomDryPickCount + 1
               : persistedWallet.randomDryPickCount,
             randomGuaranteeAt:
-              offer.kind === 'random' && containsNew
+              tracksRandomPity && containsNew
                 ? randomGuaranteeAt()
                 : persistedWallet.randomGuaranteeAt,
             updatedAt: timestamp,

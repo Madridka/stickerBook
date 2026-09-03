@@ -1,6 +1,7 @@
 import type { AlbumId } from './album.ts'
 
-export type PickOfferKind = 'random' | 'album' | 'premium'
+export type PickOfferKind = 'random' | 'album'
+export type PickOfferTier = 'standard' | 'premium'
 
 interface PickShopOfferBase {
   id: string
@@ -9,6 +10,7 @@ interface PickShopOfferBase {
   descriptionKey: string
   priority: number
   guaranteedNew: boolean
+  tier: PickOfferTier
 }
 
 export interface AlbumPickShopOffer extends PickShopOfferBase {
@@ -17,7 +19,7 @@ export interface AlbumPickShopOffer extends PickShopOfferBase {
 }
 
 export interface CatalogPickShopOffer extends PickShopOfferBase {
-  kind: Exclude<PickOfferKind, 'album'>
+  kind: 'random'
   albumId?: never
 }
 

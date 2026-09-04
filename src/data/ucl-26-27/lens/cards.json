@@ -124,6 +124,20 @@
       "nationality": "France"
     },
     {
+      "id": "ucl-26-27-len-8-1",
+      "cardNumber": "8.1",
+      "albumSlot": 8.1,
+      "displayName": "Souleymane Sagnan",
+      "image": "/ucl-26-27/cards/lens/UCL-LEN-8.1-souleymane-sagnan.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "souleymane-sagnan",
+      "position": "DF",
+      "nationality": "France"
+    },
+    {
       "id": "ucl-26-27-len-09",
       "cardNumber": "09",
       "albumSlot": 9,
@@ -148,6 +162,20 @@
       "rarity": "common",
       "kind": "player",
       "personId": "kyllian-antonio",
+      "position": "DF",
+      "nationality": "France"
+    },
+    {
+      "id": "ucl-26-27-len-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Jean-Clair Todibo",
+      "image": "/ucl-26-27/cards/lens/UCL-LEN-10.1-jean-clair-todibo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "jean-clair-todibo",
       "position": "DF",
       "nationality": "France"
     },
@@ -276,6 +304,20 @@
       "personId": "florian-thauvin",
       "position": "FW",
       "nationality": "France"
+    },
+    {
+      "id": "ucl-26-27-len-19-1",
+      "cardNumber": "19.1",
+      "albumSlot": 19.1,
+      "displayName": "Franjo Ivanović",
+      "image": "/ucl-26-27/cards/lens/UCL-LEN-19.1-franjo-ivanovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "franjo-ivanovic",
+      "position": "FW",
+      "nationality": "Croatia"
     },
     {
       "id": "ucl-26-27-len-20",

@@ -68,6 +68,20 @@
       "nationality": "Indonesia"
     },
     {
+      "id": "ucl-26-27-com-04-1",
+      "cardNumber": "04.1",
+      "albumSlot": 4.1,
+      "displayName": "Robert Sánchez",
+      "image": "/ucl-26-27/cards/como/UCL-COM-04.1-robert-sanchez.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "robert-sanchez",
+      "position": "GK",
+      "nationality": "Spain"
+    },
+    {
       "id": "ucl-26-27-com-05",
       "cardNumber": "05",
       "albumSlot": 5,
@@ -222,6 +236,20 @@
       "nationality": "France"
     },
     {
+      "id": "ucl-26-27-com-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Samuele Ricci",
+      "image": "/ucl-26-27/cards/como/UCL-COM-15.1-samuele-ricci.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "samuele-ricci",
+      "position": "MF",
+      "nationality": "Italy"
+    },
+    {
       "id": "ucl-26-27-com-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -290,6 +318,20 @@
       "personId": "nicolas-kuhn",
       "position": "FW",
       "nationality": "Germany"
+    },
+    {
+      "id": "ucl-26-27-com-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Moise Kean",
+      "image": "/ucl-26-27/cards/como/UCL-COM-20.1-moise-kean.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "moise-kean",
+      "position": "FW",
+      "nationality": "Italy"
     }
   ]
 }

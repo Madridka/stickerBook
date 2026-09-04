@@ -124,6 +124,20 @@
       "nationality": "Italy"
     },
     {
+      "id": "ucl-26-27-rom-8.1",
+      "cardNumber": "8.1",
+      "albumSlot": 8.1,
+      "displayName": "Leonardo Balerdi",
+      "image": "/ucl-26-27/cards/roma/UCL-ROM-08.1-leonardo-balerdi.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "leonardo-balerdi",
+      "position": "DF",
+      "nationality": "Argentina"
+    },
+    {
       "id": "ucl-26-27-rom-09",
       "cardNumber": "09",
       "albumSlot": 9,
@@ -150,6 +164,20 @@
       "personId": "jan-ziolkowski",
       "position": "DF",
       "nationality": "Poland"
+    },
+    {
+      "id": "ucl-26-27-rom-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Nahuel Molina",
+      "image": "/ucl-26-27/cards/roma/UCL-ROM-10.1-nahuel-molina.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "nahuel-molina",
+      "position": "DF",
+      "nationality": "Argentina"
     },
     {
       "id": "ucl-26-27-rom-11",
@@ -220,6 +248,20 @@
       "personId": "bryan-cristante",
       "position": "MF",
       "nationality": "Italy"
+    },
+    {
+      "id": "ucl-26-27-rom-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Marten de Roon",
+      "image": "/ucl-26-27/cards/roma/UCL-ROM-15.1-marten-de-roon.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "marten-de-roon",
+      "position": "MF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-rom-16",

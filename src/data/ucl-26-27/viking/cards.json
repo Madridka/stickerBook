@@ -63,6 +63,20 @@
       "nationality": "Norway"
     },
     {
+      "id": "ucl-26-27-vik-04-1",
+      "cardNumber": "04.1",
+      "albumSlot": 4.1,
+      "displayName": "Ľubomír Belko",
+      "image": "/ucl-26-27/cards/viking/UCL-VIK-04.1-lubomir-belko.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "lubomir-belko",
+      "position": "GK",
+      "nationality": "Slovakia"
+    },
+    {
       "id": "ucl-26-27-vik-05",
       "cardNumber": "05",
       "albumSlot": 5,
@@ -145,6 +159,20 @@
       "personId": "sondre-bjorshol",
       "position": "DF",
       "nationality": "Norway"
+    },
+    {
+      "id": "ucl-26-27-vik-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Essiën Bassey",
+      "image": "/ucl-26-27/cards/viking/UCL-VIK-10.1-essien-bassey.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "essien-bassey",
+      "position": "DF",
+      "nationality": "Netherlands"
     },
     {
       "id": "ucl-26-27-vik-11",
@@ -285,6 +313,20 @@
       "personId": "romano-postema",
       "position": "FW",
       "nationality": "Netherlands"
+    },
+    {
+      "id": "ucl-26-27-vik-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Erik Botheim",
+      "image": "/ucl-26-27/cards/viking/UCL-VIK-20.1-erik-botheim.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "erik-botheim",
+      "position": "FW",
+      "nationality": "Norway"
     }
   ]
 }

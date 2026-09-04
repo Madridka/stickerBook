@@ -222,6 +222,20 @@
       "nationality": "Mexico"
     },
     {
+      "id": "ucl-26-27-bet-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Dani Ceballos",
+      "image": "/ucl-26-27/cards/real-betis/UCL-BET-15.1-dani-ceballos.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "dani-ceballos",
+      "position": "MF",
+      "nationality": "Spain"
+    },
+    {
       "id": "ucl-26-27-bet-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -264,6 +278,20 @@
       "nationality": "Colombia"
     },
     {
+      "id": "ucl-26-27-bet-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Troy Parrott",
+      "image": "/ucl-26-27/cards/real-betis/UCL-BET-18.1-troy-parrott.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "troy-parrott",
+      "position": "FW",
+      "nationality": "Ireland"
+    },
+    {
       "id": "ucl-26-27-bet-19",
       "cardNumber": "19",
       "albumSlot": 19,
@@ -288,6 +316,20 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "rodrigo-riquelme",
+      "position": "FW",
+      "nationality": "Spain"
+    },
+    {
+      "id": "ucl-26-27-bet-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Aitor Ruibal",
+      "image": "/ucl-26-27/cards/real-betis/UCL-BET-20.1-aitor-ruibal.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "aitor-ruibal",
       "position": "FW",
       "nationality": "Spain"
     }

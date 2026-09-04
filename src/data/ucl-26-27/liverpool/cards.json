@@ -68,6 +68,20 @@
       "nationality": "Brazil"
     },
     {
+      "id": "ucl-26-27-liv-04-1",
+      "cardNumber": "04.1",
+      "albumSlot": 4.1,
+      "displayName": "Freddie Woodman",
+      "image": "/ucl-26-27/cards/liverpool/UCL-LIV-04.1-freddie-woodman.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "freddie-woodman",
+      "position": "GK",
+      "nationality": "England"
+    },
+    {
       "id": "ucl-26-27-liv-05",
       "cardNumber": "05",
       "albumSlot": 5,
@@ -150,6 +164,20 @@
       "personId": "ronald-araujo",
       "position": "DF",
       "nationality": "Uruguay"
+    },
+    {
+      "id": "ucl-26-27-liv-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Joe Gomez",
+      "image": "/ucl-26-27/cards/liverpool/UCL-LIV-10.1-joe-gomez.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "joe-gomez",
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-liv-11",
@@ -290,6 +318,20 @@
       "personId": "rio-ngumoha",
       "position": "FW",
       "nationality": "England"
+    },
+    {
+      "id": "ucl-26-27-liv-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Bradley Barcola",
+      "image": "/ucl-26-27/cards/liverpool/UCL-LIV-20.1-bradley-barcola.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "bradley-barcola",
+      "position": "FW",
+      "nationality": "France"
     }
   ]
 }

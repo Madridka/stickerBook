@@ -222,6 +222,20 @@
       "nationality": "Uruguay"
     },
     {
+      "id": "ucl-26-27-mun-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Carlos Baleba",
+      "image": "/ucl-26-27/cards/manchester-united/UCL-MUN-15.1-carlos-baleba.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "carlos-baleba",
+      "position": "MF",
+      "nationality": "Cameroon"
+    },
+    {
       "id": "ucl-26-27-mun-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -264,6 +278,20 @@
       "nationality": "Slovenia"
     },
     {
+      "id": "ucl-26-27-mun-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Mason Mount",
+      "image": "/ucl-26-27/cards/manchester-united/UCL-MUN-18.1-mason-mount.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "mason-mount",
+      "position": "MF",
+      "nationality": "England"
+    },
+    {
       "id": "ucl-26-27-mun-19",
       "cardNumber": "19",
       "albumSlot": 19,
@@ -288,6 +316,20 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "marcus-rashford",
+      "position": "FW",
+      "nationality": "England"
+    },
+    {
+      "id": "ucl-26-27-mun-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Tynan Thompson",
+      "image": "/ucl-26-27/cards/manchester-united/UCL-MUN-20.1-tynan-thompson.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "tynan-thompson",
       "position": "FW",
       "nationality": "England"
     }

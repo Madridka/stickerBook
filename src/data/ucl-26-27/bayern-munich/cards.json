@@ -221,6 +221,20 @@
       "nationality": "Germany"
     },
     {
+      "id": "ucl-26-27-bay-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Bara Sapoko Ndiaye",
+      "image": "/ucl-26-27/cards/bayern-munich/UCL-BAY-15.1-bara-sapoko-ndiaye.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "bara-sapoko-ndiaye",
+      "position": "MF",
+      "nationality": "Senegal"
+    },
+    {
       "id": "ucl-26-27-bay-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -263,6 +277,20 @@
       "nationality": "England"
     },
     {
+      "id": "ucl-26-27-bay-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Maycon Cardozo",
+      "image": "/ucl-26-27/cards/bayern-munich/UCL-BAY-18.1-maycon-cardozo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "maycon-cardozo",
+      "position": "FW",
+      "nationality": "Germany"
+    },
+    {
       "id": "ucl-26-27-bay-19",
       "cardNumber": "19",
       "albumSlot": 19,
@@ -287,6 +315,20 @@
       "rarity": "common",
       "kind": "player",
       "personId": "arijon-ibrahimovic",
+      "position": "FW",
+      "nationality": "Germany"
+    },
+    {
+      "id": "ucl-26-27-bay-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Bastian Assomo",
+      "image": "/ucl-26-27/cards/bayern-munich/UCL-BAY-20.1-bastian-assomo.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "bastian-assomo",
       "position": "FW",
       "nationality": "Germany"
     }

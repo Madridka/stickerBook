@@ -77,6 +77,20 @@
       "nationality": "Netherlands"
     },
     {
+      "id": "ucl-26-27-las-5-1",
+      "cardNumber": "5.1",
+      "albumSlot": 5.1,
+      "displayName": "Daniel Elfadli",
+      "image": "/ucl-26-27/cards/lask/UCL-LAS-5.1-daniel-elfadli.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "daniel-elfadli",
+      "position": "DF",
+      "nationality": "Libya"
+    },
+    {
       "id": "ucl-26-27-las-06",
       "cardNumber": "06",
       "albumSlot": 6,
@@ -159,6 +173,20 @@
       "personId": "sascha-horvath",
       "position": "MF",
       "nationality": "Austria"
+    },
+    {
+      "id": "ucl-26-27-las-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Manoël Verhaeghe",
+      "image": "/ucl-26-27/cards/lask/UCL-LAS-10.1-manoel-verhaeghe.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "manoel-verhaeghe",
+      "position": "DF",
+      "nationality": "Belgium"
     },
     {
       "id": "ucl-26-27-las-12",
@@ -245,6 +273,20 @@
       "nationality": "Nigeria"
     },
     {
+      "id": "ucl-26-27-las-17-1",
+      "cardNumber": "17.1",
+      "albumSlot": 17.1,
+      "displayName": "Nael Kane",
+      "image": "/ucl-26-27/cards/lask/UCL-LAS-17.1-nael-kane.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "nael-kane",
+      "position": "FW",
+      "nationality": "Canada"
+    },
+    {
       "id": "ucl-26-27-las-18",
       "cardNumber": "18",
       "albumSlot": 18,
@@ -283,6 +325,20 @@
       "rarity": "common",
       "kind": "player",
       "personId": "ramiz-harakate",
+      "position": "FW",
+      "nationality": "Austria"
+    },
+    {
+      "id": "ucl-26-27-las-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Sasa Kalajdzic",
+      "image": "/ucl-26-27/cards/lask/UCL-LAS-20.1-sasa-kalajdzic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "sasa-kalajdzic",
       "position": "FW",
       "nationality": "Austria"
     }

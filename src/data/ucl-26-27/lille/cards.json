@@ -110,6 +110,20 @@
       "nationality": "Portugal"
     },
     {
+      "id": "ucl-26-27-lil-7-1",
+      "cardNumber": "7.1",
+      "albumSlot": 7.1,
+      "displayName": "Tanguy Nianzou",
+      "image": "/ucl-26-27/cards/lille/UCL-LIL-7.1-tanguy-nianzou.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "tanguy-nianzou",
+      "position": "DF",
+      "nationality": "France"
+    },
+    {
       "id": "ucl-26-27-lil-08",
       "cardNumber": "08",
       "albumSlot": 8,
@@ -150,6 +164,20 @@
       "personId": "calvin-verdonk",
       "position": "DF",
       "nationality": "Indonesia"
+    },
+    {
+      "id": "ucl-26-27-lil-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Loun Srdanovic",
+      "image": "/ucl-26-27/cards/lille/UCL-LIL-10.1-loun-srdanovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "loun-srdanovic",
+      "position": "DF",
+      "nationality": "Switzerland"
     },
     {
       "id": "ucl-26-27-lil-11",
@@ -208,6 +236,20 @@
       "nationality": "Algeria"
     },
     {
+      "id": "ucl-26-27-lil-14-1",
+      "cardNumber": "14.1",
+      "albumSlot": 14.1,
+      "displayName": "Maurits Kjærgaard",
+      "image": "/ucl-26-27/cards/lille/UCL-LIL-14.1-maurits-kjaergaard.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "maurits-kjaergaard",
+      "position": "MF",
+      "nationality": "Denmark"
+    },
+    {
       "id": "ucl-26-27-lil-15",
       "cardNumber": "15",
       "albumSlot": 15,
@@ -262,6 +304,20 @@
       "personId": "felix-correia",
       "position": "FW",
       "nationality": "Portugal"
+    },
+    {
+      "id": "ucl-26-27-lil-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Ayase Ueda",
+      "image": "/ucl-26-27/cards/lille/UCL-LIL-18.1-ayase-ueda.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "ayase-ueda",
+      "position": "FW",
+      "nationality": "Japan"
     },
     {
       "id": "ucl-26-27-lil-19",

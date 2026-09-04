@@ -189,6 +189,20 @@
       "nationality": "Ukraine"
     },
     {
+      "id": "ucl-26-27-slo-13-1",
+      "cardNumber": "13.1",
+      "albumSlot": 13.1,
+      "displayName": "Cristian Martínez",
+      "image": "/ucl-26-27/cards/slovan-bratislava/UCL-SLO-13.1-cristian-martinez.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "cristian-martinez",
+      "position": "MF",
+      "nationality": "Panama"
+    },
+    {
       "id": "ucl-26-27-slo-14",
       "cardNumber": "14",
       "albumSlot": 14,
@@ -215,6 +229,20 @@
       "personId": "daiki-matsuoka",
       "position": "MF",
       "nationality": "Japan"
+    },
+    {
+      "id": "ucl-26-27-slo-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Peter Pokorný",
+      "image": "/ucl-26-27/cards/slovan-bratislava/UCL-SLO-15.1-peter-pokorny.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "peter-pokorny",
+      "position": "MF",
+      "nationality": "Slovakia"
     },
     {
       "id": "ucl-26-27-slo-16",
@@ -285,6 +313,20 @@
       "personId": "alasana-yirajang",
       "position": "FW",
       "nationality": "Gambia"
+    },
+    {
+      "id": "ucl-26-27-slo-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Roman Čerepkai",
+      "image": "/ucl-26-27/cards/slovan-bratislava/UCL-SLO-20.1-roman-cerepkai.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "roman-cerepkai",
+      "position": "FW",
+      "nationality": "Slovakia"
     }
   ]
 }

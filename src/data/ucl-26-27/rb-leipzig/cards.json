@@ -208,6 +208,20 @@
       "nationality": "Austria"
     },
     {
+      "id": "ucl-26-27-rbl-14-1",
+      "cardNumber": "14.1",
+      "albumSlot": 14.1,
+      "displayName": "Rocco Reitz",
+      "image": "/ucl-26-27/cards/rb-leipzig/UCL-RBL-14.1-rocco-reitz.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "rocco-reitz",
+      "position": "MF",
+      "nationality": "Germany"
+    },
+    {
       "id": "ucl-26-27-rbl-15",
       "cardNumber": "15",
       "albumSlot": 15,
@@ -220,6 +234,20 @@
       "personId": "arthur-vermeeren",
       "position": "MF",
       "nationality": "Belgium"
+    },
+    {
+      "id": "ucl-26-27-rbl-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Christopher Nkunku",
+      "image": "/ucl-26-27/cards/rb-leipzig/UCL-RBL-15.1-christopher-nkunku.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "christopher-nkunku",
+      "position": "MF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-rbl-16",
@@ -290,6 +318,20 @@
       "personId": "suleman-sani",
       "position": "FW",
       "nationality": "Nigeria"
+    },
+    {
+      "id": "ucl-26-27-rbl-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Marc Guiu",
+      "image": "/ucl-26-27/cards/rb-leipzig/UCL-RBL-20.1-marc-guiu.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "marc-guiu",
+      "position": "FW",
+      "nationality": "Spain"
     }
   ]
 }

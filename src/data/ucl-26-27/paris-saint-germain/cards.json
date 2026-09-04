@@ -151,6 +151,20 @@
       "nationality": "Brazil"
     },
     {
+      "id": "ucl-26-27-psg-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Lucas Digne",
+      "image": "/ucl-26-27/cards/paris-saint-germain/UCL-PSG-10.1-lucas-digne.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "lucas-digne",
+      "position": "DF",
+      "nationality": "France"
+    },
+    {
       "id": "ucl-26-27-psg-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -277,6 +291,20 @@
       "nationality": "France"
     },
     {
+      "id": "ucl-26-27-psg-19-1",
+      "cardNumber": "19.1",
+      "albumSlot": 19.1,
+      "displayName": "Mika Godts",
+      "image": "/ucl-26-27/cards/paris-saint-germain/UCL-PSG-19.1-mika-godts.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "mika-godts",
+      "position": "FW",
+      "nationality": "Belgium"
+    },
+    {
       "id": "ucl-26-27-psg-20",
       "cardNumber": "20",
       "albumSlot": 20,
@@ -289,6 +317,20 @@
       "personId": "maghnes-akliouche",
       "position": "FW",
       "nationality": "France"
+    },
+    {
+      "id": "ucl-26-27-psg-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Ferran Torres",
+      "image": "/ucl-26-27/cards/paris-saint-germain/UCL-PSG-20.1-ferran-torres.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "ferran-torres",
+      "position": "FW",
+      "nationality": "Spain"
     }
   ]
 }

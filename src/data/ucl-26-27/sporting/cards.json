@@ -180,6 +180,20 @@
       "nationality": "Spain"
     },
     {
+      "id": "ucl-26-27-scp-12-1",
+      "cardNumber": "12.1",
+      "albumSlot": 12.1,
+      "displayName": "Pedro Lima",
+      "image": "/ucl-26-27/cards/sporting/UCL-SCP-12.1-pedro-lima.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "pedro-lima",
+      "position": "MF",
+      "nationality": "Brazil"
+    },
+    {
       "id": "ucl-26-27-scp-13",
       "cardNumber": "13",
       "albumSlot": 13,
@@ -220,6 +234,20 @@
       "personId": "daniel-braganca",
       "position": "MF",
       "nationality": "Portugal"
+    },
+    {
+      "id": "ucl-26-27-scp-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Silas Andersen",
+      "image": "/ucl-26-27/cards/sporting/UCL-SCP-15.1-silas-andersen.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "silas-andersen",
+      "position": "MF",
+      "nationality": "Denmark"
     },
     {
       "id": "ucl-26-27-scp-16",
@@ -264,6 +292,20 @@
       "nationality": "Mozambique"
     },
     {
+      "id": "ucl-26-27-scp-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Jesse Derry",
+      "image": "/ucl-26-27/cards/sporting/UCL-SCP-18.1-jesse-derry.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "jesse-derry",
+      "position": "FW",
+      "nationality": "England"
+    },
+    {
       "id": "ucl-26-27-scp-19",
       "cardNumber": "19",
       "albumSlot": 19,
@@ -290,6 +332,20 @@
       "personId": "luis-guilherme",
       "position": "FW",
       "nationality": "Brazil"
+    },
+    {
+      "id": "ucl-26-27-scp-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Nestory Irankunda",
+      "image": "/ucl-26-27/cards/sporting/UCL-SCP-20.1-nestory-irankunda.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "nestory-irankunda",
+      "position": "FW",
+      "nationality": "Australia"
     }
   ]
 }

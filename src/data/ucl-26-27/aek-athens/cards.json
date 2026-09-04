@@ -203,6 +203,20 @@
       "nationality": "Honduras"
     },
     {
+      "id": "ucl-26-27-aek-14-2",
+      "cardNumber": "14.2",
+      "albumSlot": 14.2,
+      "displayName": "Milán Vitális",
+      "image": "/ucl-26-27/cards/aek-athens/UCL-AEK-14.2-milan-vitalis.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "milan-vitalis",
+      "position": "MF",
+      "nationality": "Hungary"
+    },
+    {
       "id": "ucl-26-27-aek-15",
       "cardNumber": "15",
       "albumSlot": 15,
@@ -215,6 +229,20 @@
       "personId": "petros-mantalos",
       "position": "MF",
       "nationality": "Greece"
+    },
+    {
+      "id": "ucl-26-27-aek-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Mijat Gaćinović",
+      "image": "/ucl-26-27/cards/aek-athens/UCL-AEK-15.1-mijat-gacinovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "mijat-gacinovic",
+      "position": "MF",
+      "nationality": "Serbia"
     },
     {
       "id": "ucl-26-27-aek-16",
@@ -273,6 +301,20 @@
       "nationality": "Ukraine"
     },
     {
+      "id": "ucl-26-27-aek-19-1",
+      "cardNumber": "19.1",
+      "albumSlot": 19.1,
+      "displayName": "Zini",
+      "image": "/ucl-26-27/cards/aek-athens/UCL-AEK-19.1-zini.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "zini",
+      "position": "FW",
+      "nationality": "Angola"
+    },
+    {
       "id": "ucl-26-27-aek-20",
       "cardNumber": "20",
       "albumSlot": 20,
@@ -285,6 +327,20 @@
       "personId": "dereck-kutesa",
       "position": "FW",
       "nationality": "Switzerland"
+    },
+    {
+      "id": "ucl-26-27-aek-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "João Mário",
+      "image": "/ucl-26-27/cards/aek-athens/UCL-AEK-20.1-joao-mario.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "joao-mario",
+      "position": "FW",
+      "nationality": "Portugal"
     }
   ]
 }

@@ -82,6 +82,20 @@
       "nationality": "Italy"
     },
     {
+      "id": "ucl-26-27-nap-5-1",
+      "cardNumber": "5.1",
+      "albumSlot": 5.1,
+      "displayName": "Leonardo Spinazzola",
+      "image": "/ucl-26-27/cards/napoli/UCL-NAP-5.1-leonardo-spinazzola.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "leonardo-spinazzola",
+      "position": "DF",
+      "nationality": "Italy"
+    },
+    {
       "id": "ucl-26-27-nap-06",
       "cardNumber": "06",
       "albumSlot": 6,
@@ -108,6 +122,20 @@
       "personId": "mathias-olivera",
       "position": "DF",
       "nationality": "Uruguay"
+    },
+    {
+      "id": "ucl-26-27-nap-7-1",
+      "cardNumber": "7.1",
+      "albumSlot": 7.1,
+      "displayName": "Benoît Badiashile",
+      "image": "/ucl-26-27/cards/napoli/UCL-NAP-7.1-benoit-badiashile.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "benoit-badiashile",
+      "position": "DF",
+      "nationality": "France"
     },
     {
       "id": "ucl-26-27-nap-08",
@@ -148,6 +176,20 @@
       "rarity": "rare",
       "kind": "player",
       "personId": "giovanni-di-lorenzo",
+      "position": "DF",
+      "nationality": "Italy"
+    },
+    {
+      "id": "ucl-26-27-nap-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Costantino Favasuli",
+      "image": "/ucl-26-27/cards/napoli/UCL-NAP-10.1-costantino-favasuli.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "costantino-favasuli",
       "position": "DF",
       "nationality": "Italy"
     },

@@ -147,6 +147,20 @@
       "nationality": "Türkiye"
     },
     {
+      "id": "ucl-26-27-fen-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Kojo Peprah Oppong",
+      "image": "/ucl-26-27/cards/fenerbahce/UCL-FEN-10.1-kojo-peprah-oppong.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "kojo-peprah-oppong",
+      "position": "DF",
+      "nationality": "Ghana"
+    },
+    {
       "id": "ucl-26-27-fen-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -217,6 +231,20 @@
       "nationality": "Türkiye"
     },
     {
+      "id": "ucl-26-27-fen-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Archie Brown",
+      "image": "/ucl-26-27/cards/fenerbahce/UCL-FEN-15.1-archie-brown.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "archie-brown",
+      "position": "MF",
+      "nationality": "England"
+    },
+    {
       "id": "ucl-26-27-fen-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -285,6 +313,20 @@
       "personId": "kerem-akturkoglu",
       "position": "FW",
       "nationality": "Türkiye"
+    },
+    {
+      "id": "ucl-26-27-fen-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Dorgeles Nene",
+      "image": "/ucl-26-27/cards/fenerbahce/UCL-FEN-20.1-dorgeles-nene.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "dorgeles-nene",
+      "position": "FW",
+      "nationality": "Mali"
     }
   ]
 }

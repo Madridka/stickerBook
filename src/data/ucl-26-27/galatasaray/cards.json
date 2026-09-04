@@ -152,6 +152,20 @@
       "nationality": "Denmark"
     },
     {
+      "id": "ucl-26-27-gal-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "El Chadaille Bitshiabu",
+      "image": "/ucl-26-27/cards/galatasaray/UCL-GAL-10.1-el-chadaille-bitshiabu.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "el-chadaille-bitshiabu",
+      "position": "DF",
+      "nationality": "France"
+    },
+    {
       "id": "ucl-26-27-gal-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -222,6 +236,20 @@
       "nationality": "Gabon"
     },
     {
+      "id": "ucl-26-27-gal-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Aleksei Batrakov",
+      "image": "/ucl-26-27/cards/galatasaray/UCL-GAL-15.1-aleksei-batrakov.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "aleksei-batrakov",
+      "position": "MF",
+      "nationality": "Russia"
+    },
+    {
       "id": "ucl-26-27-gal-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -278,6 +306,20 @@
       "nationality": "Türkiye"
     },
     {
+      "id": "ucl-26-27-gal-19-1",
+      "cardNumber": "19.1",
+      "albumSlot": 19.1,
+      "displayName": "Rafael Leão",
+      "image": "/ucl-26-27/cards/galatasaray/UCL-GAL-19.1-rafael-leao.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "rafael-leao",
+      "position": "FW",
+      "nationality": "Portugal"
+    },
+    {
       "id": "ucl-26-27-gal-20",
       "cardNumber": "20",
       "albumSlot": 20,
@@ -288,6 +330,20 @@
       "rarity": "common",
       "kind": "player",
       "personId": "berat-lus",
+      "position": "FW",
+      "nationality": "Türkiye"
+    },
+    {
+      "id": "ucl-26-27-gal-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Deniz Gül",
+      "image": "/ucl-26-27/cards/galatasaray/UCL-GAL-20.1-deniz-gul.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "deniz-gul",
       "position": "FW",
       "nationality": "Türkiye"
     }

@@ -217,6 +217,20 @@
       "nationality": "Norway"
     },
     {
+      "id": "ucl-26-27-bod-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Magnus Riisnæs",
+      "image": "/ucl-26-27/cards/bodo-glimt/UCL-BOD-15.1-magnus-riisnaes.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "magnus-riisnaes",
+      "position": "MF",
+      "nationality": "Norway"
+    },
+    {
       "id": "ucl-26-27-bod-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -229,6 +243,20 @@
       "personId": "jens-petter-hauge",
       "position": "FW",
       "nationality": "Norway"
+    },
+    {
+      "id": "ucl-26-27-bod-16-1",
+      "cardNumber": "16.1",
+      "albumSlot": 16.1,
+      "displayName": "Assan Sanyang",
+      "image": "/ucl-26-27/cards/bodo-glimt/UCL-BOD-16.1-assan-sanyang.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "assan-sanyang",
+      "position": "MF",
+      "nationality": "Gambia"
     },
     {
       "id": "ucl-26-27-bod-17",
@@ -259,6 +287,20 @@
       "nationality": "Norway"
     },
     {
+      "id": "ucl-26-27-bod-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Isak Määttä",
+      "image": "/ucl-26-27/cards/bodo-glimt/UCL-BOD-18.1-isak-maatta.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "isak-maatta",
+      "position": "FW",
+      "nationality": "Norway"
+    },
+    {
       "id": "ucl-26-27-bod-19",
       "cardNumber": "19",
       "albumSlot": 19,
@@ -283,6 +325,20 @@
       "rarity": "common",
       "kind": "player",
       "personId": "august-mikkelsen",
+      "position": "FW",
+      "nationality": "Norway"
+    },
+    {
+      "id": "ucl-26-27-bod-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Joel Mvuka",
+      "image": "/ucl-26-27/cards/bodo-glimt/UCL-BOD-20.1-joel-mvuka.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "joel-mvuka",
       "position": "FW",
       "nationality": "Norway"
     }

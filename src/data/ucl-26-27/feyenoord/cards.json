@@ -96,6 +96,20 @@
       "nationality": "Australia"
     },
     {
+      "id": "ucl-26-27-fey-6-1",
+      "cardNumber": "6.1",
+      "albumSlot": 6.1,
+      "displayName": "Jerry St. Juste",
+      "image": "/ucl-26-27/cards/feyenoord/UCL-FEY-6.1-jerry-st-juste.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "jerry-st-juste",
+      "position": "DF",
+      "nationality": "Netherlands"
+    },
+    {
       "id": "ucl-26-27-fey-07",
       "cardNumber": "07",
       "albumSlot": 7,
@@ -150,6 +164,20 @@
       "personId": "gijs-smal",
       "position": "DF",
       "nationality": "Netherlands"
+    },
+    {
+      "id": "ucl-26-27-fey-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Javi López",
+      "image": "/ucl-26-27/cards/feyenoord/UCL-FEY-10.1-javi-lopez.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "javi-lopez",
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-fey-11",
@@ -290,6 +318,20 @@
       "personId": "goncalo-borges",
       "position": "FW",
       "nationality": "Portugal"
+    },
+    {
+      "id": "ucl-26-27-fey-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Reiss Nelson",
+      "image": "/ucl-26-27/cards/feyenoord/UCL-FEY-20.1-reiss-nelson.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "reiss-nelson",
+      "position": "FW",
+      "nationality": "England"
     }
   ]
 }

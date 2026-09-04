@@ -68,6 +68,20 @@
       "nationality": "Italy"
     },
     {
+      "id": "ucl-26-27-int-04-1",
+      "cardNumber": "04.1",
+      "albumSlot": 4.1,
+      "displayName": "Raffaele Di Gennaro",
+      "image": "/ucl-26-27/cards/inter/UCL-INT-04.1-raffaele-di-gennaro.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "raffaele-di-gennaro",
+      "position": "GK",
+      "nationality": "Italy"
+    },
+    {
       "id": "ucl-26-27-int-05",
       "cardNumber": "05",
       "albumSlot": 5,
@@ -152,6 +166,20 @@
       "nationality": "England"
     },
     {
+      "id": "ucl-26-27-int-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Djed Spence",
+      "image": "/ucl-26-27/cards/inter/UCL-INT-10.1-djed-spence.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "djed-spence",
+      "position": "DF",
+      "nationality": "England"
+    },
+    {
       "id": "ucl-26-27-int-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -220,6 +248,20 @@
       "personId": "andy-diouf",
       "position": "MF",
       "nationality": "France"
+    },
+    {
+      "id": "ucl-26-27-int-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Curtis Jones",
+      "image": "/ucl-26-27/cards/inter/UCL-INT-15.1-curtis-jones.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "curtis-jones",
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-int-16",

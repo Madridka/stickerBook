@@ -180,6 +180,20 @@
       "nationality": "Czechia"
     },
     {
+      "id": "ucl-26-27-sla-12-1",
+      "cardNumber": "12.1",
+      "albumSlot": 12.1,
+      "displayName": "Danijel Šturm",
+      "image": "/ucl-26-27/cards/slavia-praha/UCL-SLA-12.1-danijel-sturm.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "danijel-sturm",
+      "position": "MF",
+      "nationality": "Slovenia"
+    },
+    {
       "id": "ucl-26-27-sla-13",
       "cardNumber": "13",
       "albumSlot": 13,
@@ -192,6 +206,20 @@
       "personId": "oscar",
       "position": "MF",
       "nationality": "Liberia"
+    },
+    {
+      "id": "ucl-26-27-sla-13-1",
+      "cardNumber": "13.1",
+      "albumSlot": 13.1,
+      "displayName": "Samuel Isife",
+      "image": "/ucl-26-27/cards/slavia-praha/UCL-SLA-13.1-samuel-isife.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "samuel-isife",
+      "position": "MF",
+      "nationality": "Nigeria"
     },
     {
       "id": "ucl-26-27-sla-14",
@@ -220,6 +248,20 @@
       "personId": "toumani-diakite",
       "position": "MF",
       "nationality": "Mali"
+    },
+    {
+      "id": "ucl-26-27-sla-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Oskar Kubiak",
+      "image": "/ucl-26-27/cards/slavia-praha/UCL-SLA-15.1-oskar-kubiak.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "oskar-kubiak",
+      "position": "MF",
+      "nationality": "Poland"
     },
     {
       "id": "ucl-26-27-sla-16",
@@ -290,6 +332,20 @@
       "personId": "danijel-sturm",
       "position": "FW",
       "nationality": "Slovenia"
+    },
+    {
+      "id": "ucl-26-27-sla-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Adonija Ouanda",
+      "image": "/ucl-26-27/cards/slavia-praha/UCL-SLA-20.1-adonija-ouanda.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "adonija-ouanda",
+      "position": "FW",
+      "nationality": "Canada"
     }
   ]
 }

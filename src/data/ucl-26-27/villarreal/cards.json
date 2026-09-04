@@ -68,6 +68,20 @@
       "nationality": "Hungary"
     },
     {
+      "id": "ucl-26-27-vil-04-1",
+      "cardNumber": "04.1",
+      "albumSlot": 4.1,
+      "displayName": "Yakiv Kinareikin",
+      "image": "/ucl-26-27/cards/villarreal/UCL-VIL-04.1-yakiv-kinareikin.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "yakiv-kinareikin",
+      "position": "GK",
+      "nationality": "Ukraine"
+    },
+    {
       "id": "ucl-26-27-vil-05",
       "cardNumber": "05",
       "albumSlot": 5,
@@ -194,6 +208,20 @@
       "nationality": "Spain"
     },
     {
+      "id": "ucl-26-27-vil-13-1",
+      "cardNumber": "13.1",
+      "albumSlot": 13.1,
+      "displayName": "Nizar El Jmili",
+      "image": "/ucl-26-27/cards/villarreal/UCL-VIL-13.1-nizar-el-jmili.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "nizar-el-jmili",
+      "position": "MF",
+      "nationality": "Spain"
+    },
+    {
       "id": "ucl-26-27-vil-14",
       "cardNumber": "14",
       "albumSlot": 14,
@@ -220,6 +248,20 @@
       "personId": "alassane-diatta",
       "position": "MF",
       "nationality": "Senegal"
+    },
+    {
+      "id": "ucl-26-27-vil-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Nathan Saliba",
+      "image": "/ucl-26-27/cards/villarreal/UCL-VIL-15.1-nathan-saliba.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "nathan-saliba",
+      "position": "MF",
+      "nationality": "Canada"
     },
     {
       "id": "ucl-26-27-vil-16",

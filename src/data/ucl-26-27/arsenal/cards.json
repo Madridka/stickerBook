@@ -67,6 +67,20 @@
       "nationality": "France"
     },
     {
+      "id": "ucl-26-27-ars-04-1",
+      "cardNumber": "04.1",
+      "albumSlot": 4.1,
+      "displayName": "Kepa Arrizabalaga",
+      "image": "/ucl-26-27/cards/arsenal/UCL-ARS-04.1-kepa-arrizabalaga.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "kepa-arrizabalaga",
+      "position": "GK",
+      "nationality": "Spain"
+    },
+    {
       "id": "ucl-26-27-ars-05",
       "cardNumber": "05",
       "albumSlot": 5,
@@ -151,6 +165,20 @@
       "nationality": "England"
     },
     {
+      "id": "ucl-26-27-ars-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Ezri Konsa",
+      "image": "/ucl-26-27/cards/arsenal/UCL-ARS-10.1-ezri-konsa.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "ezri-konsa",
+      "position": "DF",
+      "nationality": "England"
+    },
+    {
       "id": "ucl-26-27-ars-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -221,6 +249,20 @@
       "nationality": "England"
     },
     {
+      "id": "ucl-26-27-ars-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Mikel Merino",
+      "image": "/ucl-26-27/cards/arsenal/UCL-ARS-15.1-mikel-merino.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "mikel-merino",
+      "position": "MF",
+      "nationality": "Spain"
+    },
+    {
       "id": "ucl-26-27-ars-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -289,6 +331,20 @@
       "personId": "gabriel-martinelli",
       "position": "FW",
       "nationality": "Brazil"
+    },
+    {
+      "id": "ucl-26-27-ars-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Christos Tzolis",
+      "image": "/ucl-26-27/cards/arsenal/UCL-ARS-20.1-christos-tzolis.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "christos-tzolis",
+      "position": "FW",
+      "nationality": "Greece"
     }
   ]
 }

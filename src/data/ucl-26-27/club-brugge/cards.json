@@ -110,6 +110,20 @@
       "nationality": "Belgium"
     },
     {
+      "id": "ucl-26-27-bru-7-1",
+      "cardNumber": "7.1",
+      "albumSlot": 7.1,
+      "displayName": "Samba Coulibaly",
+      "image": "/ucl-26-27/cards/club-brugge/UCL-BRU-7.1-samba-coulibaly.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "samba-coulibaly",
+      "position": "DF",
+      "nationality": "France"
+    },
+    {
       "id": "ucl-26-27-bru-08",
       "cardNumber": "08",
       "albumSlot": 8,
@@ -150,6 +164,20 @@
       "personId": "jorne-spileers",
       "position": "DF",
       "nationality": "Belgium"
+    },
+    {
+      "id": "ucl-26-27-bru-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Andre Garcia",
+      "image": "/ucl-26-27/cards/club-brugge/UCL-BRU-10.1-andre-garcia.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "andre-garcia",
+      "position": "DF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-bru-11",
@@ -222,6 +250,20 @@
       "nationality": "Belgium"
     },
     {
+      "id": "ucl-26-27-bru-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Lynnt Audoor",
+      "image": "/ucl-26-27/cards/club-brugge/UCL-BRU-15.1-lynnt-audoor.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "lynnt-audoor",
+      "position": "MF",
+      "nationality": "Belgium"
+    },
+    {
       "id": "ucl-26-27-bru-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -290,6 +332,20 @@
       "personId": "mamadou-diakhon",
       "position": "FW",
       "nationality": "Senegal"
+    },
+    {
+      "id": "ucl-26-27-bru-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Wisdom Mike",
+      "image": "/ucl-26-27/cards/club-brugge/UCL-BRU-20.1-wisdom-mike.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "wisdom-mike",
+      "position": "FW",
+      "nationality": "Germany"
     }
   ]
 }

@@ -110,6 +110,20 @@
       "nationality": "Germany"
     },
     {
+      "id": "ucl-26-27-vfb-07-1",
+      "cardNumber": "07.1",
+      "albumSlot": 7.1,
+      "displayName": "Dominik Nothnagel",
+      "image": "/ucl-26-27/cards/stuttgart/UCL-VFB-07.1-dominik-nothnagel.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "dominik-nothnagel",
+      "position": "DF",
+      "nationality": "Germany"
+    },
+    {
       "id": "ucl-26-27-vfb-08",
       "cardNumber": "08",
       "albumSlot": 8,
@@ -148,6 +162,20 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "josha-vagnoman",
+      "position": "DF",
+      "nationality": "Germany"
+    },
+    {
+      "id": "ucl-26-27-vfb-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Alexander Groiß",
+      "image": "/ucl-26-27/cards/stuttgart/UCL-VFB-10.1-alexander-groiss.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "alexander-groiss",
       "position": "DF",
       "nationality": "Germany"
     },
@@ -194,6 +222,20 @@
       "nationality": "Spain"
     },
     {
+      "id": "ucl-26-27-vfb-13-1",
+      "cardNumber": "13.1",
+      "albumSlot": 13.1,
+      "displayName": "Leo Sauer",
+      "image": "/ucl-26-27/cards/stuttgart/UCL-VFB-13.1-leo-sauer.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "leo-sauer",
+      "position": "MF",
+      "nationality": "Slovakia"
+    },
+    {
       "id": "ucl-26-27-vfb-14",
       "cardNumber": "14",
       "albumSlot": 14,
@@ -220,6 +262,20 @@
       "personId": "atakan-karazor",
       "position": "MF",
       "nationality": "Türkiye"
+    },
+    {
+      "id": "ucl-26-27-vfb-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Grischa Prömel",
+      "image": "/ucl-26-27/cards/stuttgart/UCL-VFB-15.1-grischa-promel.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "grischa-promel",
+      "position": "MF",
+      "nationality": "Germany"
     },
     {
       "id": "ucl-26-27-vfb-16",
@@ -286,6 +342,20 @@
       "series": "base",
       "finish": "standard",
       "rarity": "common",
+      "kind": "player",
+      "personId": "dzenan-pejcinovic",
+      "position": "FW",
+      "nationality": "Germany"
+    },
+    {
+      "id": "ucl-26-27-vfb-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Dzenan Pejcinovic",
+      "image": "/ucl-26-27/cards/stuttgart/UCL-VFB-20.1-dzenan-pejcinovic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
       "kind": "player",
       "personId": "dzenan-pejcinovic",
       "position": "FW",

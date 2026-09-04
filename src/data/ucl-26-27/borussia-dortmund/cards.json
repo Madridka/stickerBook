@@ -151,6 +151,20 @@
       "nationality": "Italy"
     },
     {
+      "id": "ucl-26-27-bvb-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Kauã Prates",
+      "image": "/ucl-26-27/cards/borussia-dortmund/UCL-BVB-10.1-kaua-prates.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "kaua-prates",
+      "position": "DF",
+      "nationality": "Brazil"
+    },
+    {
       "id": "ucl-26-27-bvb-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -207,6 +221,20 @@
       "nationality": "Austria"
     },
     {
+      "id": "ucl-26-27-bvb-14-1",
+      "cardNumber": "14.1",
+      "albumSlot": 14.1,
+      "displayName": "Joey Veerman",
+      "image": "/ucl-26-27/cards/borussia-dortmund/UCL-BVB-14.1-joey-veerman.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "joey-veerman",
+      "position": "MF",
+      "nationality": "Netherlands"
+    },
+    {
       "id": "ucl-26-27-bvb-15",
       "cardNumber": "15",
       "albumSlot": 15,
@@ -219,6 +247,20 @@
       "personId": "marcel-sabitzer",
       "position": "MF",
       "nationality": "Austria"
+    },
+    {
+      "id": "ucl-26-27-bvb-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Ethan Nwaneri",
+      "image": "/ucl-26-27/cards/borussia-dortmund/UCL-BVB-15.1-ethan-nwaneri.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "ethan-nwaneri",
+      "position": "MF",
+      "nationality": "England"
     },
     {
       "id": "ucl-26-27-bvb-16",

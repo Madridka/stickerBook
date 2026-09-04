@@ -110,6 +110,20 @@
       "nationality": "Argentina"
     },
     {
+      "id": "ucl-26-27-atm-7-1",
+      "cardNumber": "7.1",
+      "albumSlot": 7.7,
+      "displayName": "Arnau Solà",
+      "image": "/ucl-26-27/cards/atletico-madrid/UCL-ATM-7.1-arnau-sola.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "arnau-sola",
+      "position": "DF",
+      "nationality": "Spain"
+    },
+    {
       "id": "ucl-26-27-atm-08",
       "cardNumber": "08",
       "albumSlot": 8,
@@ -148,6 +162,20 @@
       "rarity": "uncommon",
       "kind": "player",
       "personId": "marcos-llorente",
+      "position": "DF",
+      "nationality": "Spain"
+    },
+    {
+      "id": "ucl-26-27-atm-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Dani Martínez",
+      "image": "/ucl-26-27/cards/atletico-madrid/UCL-ATM-10.1-dani-martinez.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "dani-martinez",
       "position": "DF",
       "nationality": "Spain"
     },
@@ -222,6 +250,20 @@
       "nationality": "United States"
     },
     {
+      "id": "ucl-26-27-atm-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Obed Vargas",
+      "image": "/ucl-26-27/cards/atletico-madrid/UCL-ATM-15.1-obed-vargas.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "obed-vargas",
+      "position": "MF",
+      "nationality": "Mexico"
+    },
+    {
       "id": "ucl-26-27-atm-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -264,6 +306,20 @@
       "nationality": "Nigeria"
     },
     {
+      "id": "ucl-26-27-atm-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Arnau Ortiz",
+      "image": "/ucl-26-27/cards/atletico-madrid/UCL-ATM-18.1-arnau-ortiz.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "arnau-ortiz",
+      "position": "FW",
+      "nationality": "Spain"
+    },
+    {
       "id": "ucl-26-27-atm-19",
       "cardNumber": "19",
       "albumSlot": 19,
@@ -290,6 +346,20 @@
       "personId": "alexander-sorloth",
       "position": "FW",
       "nationality": "Norway"
+    },
+    {
+      "id": "ucl-26-27-atm-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Jonathan David",
+      "image": "/ucl-26-27/cards/atletico-madrid/UCL-ATM-20.1-jonathan-david.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "jonathan-david",
+      "position": "FW",
+      "nationality": "Canada"
     }
   ]
 }

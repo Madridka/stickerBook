@@ -152,6 +152,20 @@
       "nationality": "Portugal"
     },
     {
+      "id": "ucl-26-27-mci-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Rayan Aït-Nouri",
+      "image": "/ucl-26-27/cards/manchester-city/UCL-MCI-10.1-rayan-ait-nouri.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "rayan-ait-nouri",
+      "position": "DF",
+      "nationality": "Algeria"
+    },
+    {
       "id": "ucl-26-27-mci-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -208,6 +222,20 @@
       "nationality": "Spain"
     },
     {
+      "id": "ucl-26-27-mci-14-1",
+      "cardNumber": "14.1",
+      "albumSlot": 14.1,
+      "displayName": "Enzo Fernández",
+      "image": "/ucl-26-27/cards/manchester-city/UCL-MCI-14.1-enzo-fernandez.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "enzo-fernandez",
+      "position": "MF",
+      "nationality": "Argentina"
+    },
+    {
       "id": "ucl-26-27-mci-15",
       "cardNumber": "15",
       "albumSlot": 15,
@@ -220,6 +248,20 @@
       "personId": "tijjani-reijnders",
       "position": "MF",
       "nationality": "Netherlands"
+    },
+    {
+      "id": "ucl-26-27-mci-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Ayyoub Bouaddi",
+      "image": "/ucl-26-27/cards/manchester-city/UCL-MCI-15.1-ayyoub-bouaddi.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "ayyoub-bouaddi",
+      "position": "MF",
+      "nationality": "Morocco"
     },
     {
       "id": "ucl-26-27-mci-16",
@@ -264,6 +306,20 @@
       "nationality": "Belgium"
     },
     {
+      "id": "ucl-26-27-mci-18-1",
+      "cardNumber": "18.1",
+      "albumSlot": 18.1,
+      "displayName": "Allan Elias",
+      "image": "/ucl-26-27/cards/manchester-city/UCL-MCI-18.1-allan-elias.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "allan-elias",
+      "position": "FW",
+      "nationality": "Brazil"
+    },
+    {
       "id": "ucl-26-27-mci-19",
       "cardNumber": "19",
       "albumSlot": 19,
@@ -290,6 +346,20 @@
       "personId": "savinho",
       "position": "FW",
       "nationality": "Brazil"
+    },
+    {
+      "id": "ucl-26-27-mci-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Iliman Ndiaye",
+      "image": "/ucl-26-27/cards/manchester-city/UCL-MCI-20.1-iliman-ndiaye.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "iliman-ndiaye",
+      "position": "FW",
+      "nationality": "Senegal"
     }
   ]
 }

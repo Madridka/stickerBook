@@ -147,6 +147,20 @@
       "nationality": "Georgia"
     },
     {
+      "id": "ucl-26-27-sha-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Marlon Santos",
+      "image": "/ucl-26-27/cards/shakhtar-donetsk/UCL-SHA-10.1-marlon-santos.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "marlon-santos",
+      "position": "DF",
+      "nationality": "Brazil"
+    },
+    {
       "id": "ucl-26-27-sha-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -189,6 +203,20 @@
       "nationality": "Brazil"
     },
     {
+      "id": "ucl-26-27-sha-13.1",
+      "cardNumber": "13.1",
+      "albumSlot": 13.1,
+      "displayName": "Gleiker Mendoza",
+      "image": "/ucl-26-27/cards/shakhtar-donetsk/UCL-SHA-13.1-gleiker-mendoza.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "gleiker-mendoza",
+      "position": "MF",
+      "nationality": "Venezuela"
+    },
+    {
       "id": "ucl-26-27-sha-14",
       "cardNumber": "14",
       "albumSlot": 14,
@@ -203,6 +231,20 @@
       "nationality": "Ukraine"
     },
     {
+      "id": "ucl-26-27-sha-14-1",
+      "cardNumber": "14.1",
+      "albumSlot": 14.1,
+      "displayName": "Ryan Roberto",
+      "image": "/ucl-26-27/cards/shakhtar-donetsk/UCL-SHA-14.1-ryan-roberto.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "ryan-roberto",
+      "position": "MF",
+      "nationality": "Brazil"
+    },
+    {
       "id": "ucl-26-27-sha-15",
       "cardNumber": "15",
       "albumSlot": 15,
@@ -215,6 +257,20 @@
       "personId": "oleh-ocheretko",
       "position": "MF",
       "nationality": "Ukraine"
+    },
+    {
+      "id": "ucl-26-27-sha-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Gabriel Carvalho",
+      "image": "/ucl-26-27/cards/shakhtar-donetsk/UCL-SHA-15.1-gabriel-carvalho.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "gabriel-carvalho",
+      "position": "MF",
+      "nationality": "Brazil"
     },
     {
       "id": "ucl-26-27-sha-16",

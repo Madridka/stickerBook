@@ -81,6 +81,20 @@
       "nationality": "Spain"
     },
     {
+      "id": "ucl-26-27-rma-5-1",
+      "cardNumber": "5.1",
+      "albumSlot": 5.1,
+      "displayName": "Éder Militão",
+      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-5.1-eder-militao.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "eder-militao",
+      "position": "DF",
+      "nationality": "Brazil"
+    },
+    {
       "id": "ucl-26-27-rma-06",
       "cardNumber": "06",
       "albumSlot": 6,
@@ -109,6 +123,20 @@
       "nationality": "England"
     },
     {
+      "id": "ucl-26-27-rma-07-1",
+      "cardNumber": "07.1",
+      "albumSlot": 7.1,
+      "displayName": "Antonio Rüdiger",
+      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-07.1-antonio-rudiger.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "antonio-rudiger",
+      "position": "DF",
+      "nationality": "Germany"
+    },
+    {
       "id": "ucl-26-27-rma-08",
       "cardNumber": "08",
       "albumSlot": 8,
@@ -135,6 +163,20 @@
       "personId": "ibrahima-konate",
       "position": "DF",
       "nationality": "France"
+    },
+    {
+      "id": "ucl-26-27-rma-09-1",
+      "cardNumber": "09.1",
+      "albumSlot": 9.1,
+      "displayName": "Raúl Asencio",
+      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-10.2-raul-asencio.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "raul-asencio",
+      "position": "DF",
+      "nationality": "Spain"
     },
     {
       "id": "ucl-26-27-rma-10",
@@ -221,6 +263,20 @@
       "nationality": "France"
     },
     {
+      "id": "ucl-26-27-rma-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Bernardo Silva",
+      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-15.1-bernardo-silva.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "bernardo-silva",
+      "position": "MF",
+      "nationality": "Portugal"
+    },
+    {
       "id": "ucl-26-27-rma-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -289,6 +345,20 @@
       "personId": "endrick",
       "position": "FW",
       "nationality": "Brazil"
+    },
+    {
+      "id": "ucl-26-27-rma-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Brahim Díaz",
+      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-20.1-brahim-diaz.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "brahim-diaz",
+      "position": "FW",
+      "nationality": "Morocco"
     }
   ]
 }

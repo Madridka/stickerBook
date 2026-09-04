@@ -208,6 +208,20 @@
       "nationality": "Spain"
     },
     {
+      "id": "ucl-26-27-por-14-1",
+      "cardNumber": "14.1",
+      "albumSlot": 14.1,
+      "displayName": "Seko Fofana",
+      "image": "/ucl-26-27/cards/porto/UCL-POR-14.1-seko-fofana.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "seko-fofana",
+      "position": "MF",
+      "nationality": "Côte d'Ivoire"
+    },
+    {
       "id": "ucl-26-27-por-15",
       "cardNumber": "15",
       "albumSlot": 15,
@@ -220,6 +234,20 @@
       "personId": "pablo-rosario",
       "position": "MF",
       "nationality": "Netherlands"
+    },
+    {
+      "id": "ucl-26-27-por-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Inbeom Hwang",
+      "image": "/ucl-26-27/cards/porto/UCL-POR-15.1-inbeom-hwang.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "inbeom-hwang",
+      "position": "MF",
+      "nationality": "South Korea"
     },
     {
       "id": "ucl-26-27-por-16",
@@ -290,6 +318,20 @@
       "personId": "pepe",
       "position": "FW",
       "nationality": "Brazil"
+    },
+    {
+      "id": "ucl-26-27-por-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "André Silva",
+      "image": "/ucl-26-27/cards/porto/UCL-POR-20.1-andre-silva.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "andre-silva",
+      "position": "FW",
+      "nationality": "Portugal"
     }
   ]
 }

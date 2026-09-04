@@ -152,6 +152,20 @@
       "nationality": "Netherlands"
     },
     {
+      "id": "ucl-26-27-psv-10-1",
+      "cardNumber": "10.1",
+      "albumSlot": 10.1,
+      "displayName": "Filip Kostić",
+      "image": "/ucl-26-27/cards/psv/UCL-PSV-10.1-filip-kostic.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "filip-kostic",
+      "position": "DF",
+      "nationality": "Serbia"
+    },
+    {
       "id": "ucl-26-27-psv-11",
       "cardNumber": "11",
       "albumSlot": 11,
@@ -222,6 +236,20 @@
       "nationality": "Netherlands"
     },
     {
+      "id": "ucl-26-27-psv-15-1",
+      "cardNumber": "15.1",
+      "albumSlot": 15.1,
+      "displayName": "Kodai Sano",
+      "image": "/ucl-26-27/cards/psv/UCL-PSV-15.1-kodai-sano.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "kodai-sano",
+      "position": "MF",
+      "nationality": "Japan"
+    },
+    {
       "id": "ucl-26-27-psv-16",
       "cardNumber": "16",
       "albumSlot": 16,
@@ -290,6 +318,20 @@
       "personId": "couhaib-driouech",
       "position": "FW",
       "nationality": "Morocco"
+    },
+    {
+      "id": "ucl-26-27-psv-20-1",
+      "cardNumber": "20.1",
+      "albumSlot": 20.1,
+      "displayName": "Sam Lammers",
+      "image": "/ucl-26-27/cards/psv/UCL-PSV-20.1-sam-lammers.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "sam-lammers",
+      "position": "FW",
+      "nationality": "Netherlands"
     }
   ]
 }

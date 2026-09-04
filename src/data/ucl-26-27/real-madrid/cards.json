@@ -81,11 +81,11 @@
       "nationality": "Spain"
     },
     {
-      "id": "ucl-26-27-rma-5-1",
-      "cardNumber": "5.1",
+      "id": "ucl-26-27-rma-05-1",
+      "cardNumber": "05.1",
       "albumSlot": 5.1,
       "displayName": "Éder Militão",
-      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-5.1-eder-militao.webp",
+      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-05.1-eder-militao.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "epic",
@@ -169,7 +169,7 @@
       "cardNumber": "09.1",
       "albumSlot": 9.1,
       "displayName": "Raúl Asencio",
-      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-10.2-raul-asencio.webp",
+      "image": "/ucl-26-27/cards/real-madrid/UCL-RMA-09.1-raul-asencio.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "epic",

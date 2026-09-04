@@ -82,11 +82,11 @@
       "nationality": "Italy"
     },
     {
-      "id": "ucl-26-27-nap-5-1",
-      "cardNumber": "5.1",
+      "id": "ucl-26-27-nap-05-1",
+      "cardNumber": "05.1",
       "albumSlot": 5.1,
       "displayName": "Leonardo Spinazzola",
-      "image": "/ucl-26-27/cards/napoli/UCL-NAP-5.1-leonardo-spinazzola.webp",
+      "image": "/ucl-26-27/cards/napoli/UCL-NAP-05.1-leonardo-spinazzola.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "epic",
@@ -124,11 +124,11 @@
       "nationality": "Uruguay"
     },
     {
-      "id": "ucl-26-27-nap-7-1",
-      "cardNumber": "7.1",
+      "id": "ucl-26-27-nap-07-1",
+      "cardNumber": "07.1",
       "albumSlot": 7.1,
       "displayName": "Benoît Badiashile",
-      "image": "/ucl-26-27/cards/napoli/UCL-NAP-7.1-benoit-badiashile.webp",
+      "image": "/ucl-26-27/cards/napoli/UCL-NAP-07.1-benoit-badiashile.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "epic",

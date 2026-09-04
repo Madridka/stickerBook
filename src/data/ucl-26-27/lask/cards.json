@@ -77,11 +77,11 @@
       "nationality": "Netherlands"
     },
     {
-      "id": "ucl-26-27-las-5-1",
-      "cardNumber": "5.1",
+      "id": "ucl-26-27-las-05-1",
+      "cardNumber": "05.1",
       "albumSlot": 5.1,
       "displayName": "Daniel Elfadli",
-      "image": "/ucl-26-27/cards/lask/UCL-LAS-5.1-daniel-elfadli.webp",
+      "image": "/ucl-26-27/cards/lask/UCL-LAS-05.1-daniel-elfadli.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "epic",
@@ -161,20 +161,6 @@
       "nationality": "United States"
     },
     {
-      "id": "ucl-26-27-las-11",
-      "cardNumber": "11",
-      "albumSlot": 11,
-      "displayName": "Sascha Horvath",
-      "image": "/ucl-26-27/cards/lask/UCL-LAS-11-sascha-horvath.webp",
-      "series": "base",
-      "finish": "standard",
-      "rarity": "rare",
-      "kind": "player",
-      "personId": "sascha-horvath",
-      "position": "MF",
-      "nationality": "Austria"
-    },
-    {
       "id": "ucl-26-27-las-10-1",
       "cardNumber": "10.1",
       "albumSlot": 10.1,
@@ -187,6 +173,20 @@
       "personId": "manoel-verhaeghe",
       "position": "DF",
       "nationality": "Belgium"
+    },
+    {
+      "id": "ucl-26-27-las-11",
+      "cardNumber": "11",
+      "albumSlot": 11,
+      "displayName": "Sascha Horvath",
+      "image": "/ucl-26-27/cards/lask/UCL-LAS-11-sascha-horvath.webp",
+      "series": "base",
+      "finish": "standard",
+      "rarity": "rare",
+      "kind": "player",
+      "personId": "sascha-horvath",
+      "position": "MF",
+      "nationality": "Austria"
     },
     {
       "id": "ucl-26-27-las-12",

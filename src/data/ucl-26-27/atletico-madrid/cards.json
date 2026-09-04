@@ -110,11 +110,11 @@
       "nationality": "Argentina"
     },
     {
-      "id": "ucl-26-27-atm-7-1",
-      "cardNumber": "7.1",
-      "albumSlot": 7.7,
+      "id": "ucl-26-27-atm-07-1",
+      "cardNumber": "07.1",
+      "albumSlot": 7.1,
       "displayName": "Arnau Solà",
-      "image": "/ucl-26-27/cards/atletico-madrid/UCL-ATM-7.1-arnau-sola.webp",
+      "image": "/ucl-26-27/cards/atletico-madrid/UCL-ATM-07.1-arnau-sola.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "epic",

@@ -124,11 +124,11 @@
       "nationality": "France"
     },
     {
-      "id": "ucl-26-27-len-8-1",
-      "cardNumber": "8.1",
+      "id": "ucl-26-27-len-08-1",
+      "cardNumber": "08.1",
       "albumSlot": 8.1,
       "displayName": "Souleymane Sagnan",
-      "image": "/ucl-26-27/cards/lens/UCL-LEN-8.1-souleymane-sagnan.webp",
+      "image": "/ucl-26-27/cards/lens/UCL-LEN-08.1-souleymane-sagnan.webp",
       "series": "base",
       "finish": "standard",
       "rarity": "epic",

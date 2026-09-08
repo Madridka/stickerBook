@@ -321,5 +321,22 @@
     "finish": "standard",
     "rarity": "common",
     "kind": "team"
+  },
+  {
+    "id": "eng9-ccls-20",
+    "cardNumber": "20",
+    "albumSlot": 20,
+    "displayName": "Yateley United",
+    "city": "Yateley, Hampshire",
+    "country": "England",
+    "foundedYear": 2013,
+    "stadium": "Sean Devereux Park",
+    "leagueId": "eng9",
+    "countryCode": "ENG",
+    "image": "/englandClubsLogo/cards/england/combined-counties-football-league-premier-division-south-ccls/ENG9-CCLS-20-yateley-united.webp",
+    "series": "base",
+    "finish": "standard",
+    "rarity": "common",
+    "kind": "team"
   }
 ]

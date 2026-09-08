@@ -184,6 +184,14 @@
     "articleTitle": "Bolton Wanderers F.C."
   },
   {
+    "id": "eng2-ch-04",
+    "displayName": "Bristol City",
+    "foundedYear": 1894,
+    "stadium": "Ashton Gate",
+    "city": "Bristol",
+    "articleTitle": "Bristol City F.C."
+  },
+  {
     "id": "eng2-ch-05",
     "displayName": "Burnley",
     "foundedYear": 1882,
@@ -248,12 +256,28 @@
     "articleTitle": "Norwich City F.C."
   },
   {
+    "id": "eng2-ch-13",
+    "displayName": "Portsmouth",
+    "foundedYear": 1898,
+    "stadium": "Fratton Park",
+    "city": "Portsmouth, Hampshire",
+    "articleTitle": "Portsmouth F.C."
+  },
+  {
     "id": "eng2-ch-14",
     "displayName": "Preston North End",
     "foundedYear": 1880,
     "stadium": "Deepdale",
     "city": "Preston",
     "articleTitle": "Preston North End F.C."
+  },
+  {
+    "id": "eng2-ch-15",
+    "displayName": "Queens Park Rangers",
+    "foundedYear": 1882,
+    "stadium": "Loftus Road Stadium",
+    "city": "Shepherd's Bush / White City, West London",
+    "articleTitle": "Queens Park Rangers F.C."
   },
   {
     "id": "eng2-ch-16",
@@ -326,6 +350,14 @@
     "stadium": "Racecourse Ground",
     "city": "Wrexham, Wales",
     "articleTitle": "Wrexham A.F.C."
+  },
+  {
+    "id": "eng3-l1-01",
+    "displayName": "AFC Wimbledon",
+    "foundedYear": 2002,
+    "stadium": "Plough Lane",
+    "city": "Wimbledon, London Borough of Merton, London",
+    "articleTitle": "AFC Wimbledon"
   },
   {
     "id": "eng3-l1-02",
@@ -440,6 +472,22 @@
     "articleTitle": "Notts County F.C."
   },
   {
+    "id": "eng3-l1-16",
+    "displayName": "Oxford United",
+    "foundedYear": 1893,
+    "stadium": "Kassam Stadium",
+    "city": "Oxford",
+    "articleTitle": "Oxford United F.C."
+  },
+  {
+    "id": "eng3-l1-17",
+    "displayName": "Peterborough United",
+    "foundedYear": 1934,
+    "stadium": "London Road",
+    "city": "Peterborough, Cambridgeshire",
+    "articleTitle": "Peterborough United F.C."
+  },
+  {
     "id": "eng3-l1-18",
     "displayName": "Plymouth Argyle",
     "foundedYear": 1886,
@@ -454,6 +502,14 @@
     "stadium": "Madejski Stadium",
     "city": "Reading, Berkshire",
     "articleTitle": "Reading F.C."
+  },
+  {
+    "id": "eng3-l1-20",
+    "displayName": "Sheffield Wednesday",
+    "foundedYear": 1867,
+    "stadium": "Hillsborough Stadium",
+    "city": "Sheffield, South Yorkshire",
+    "articleTitle": "Sheffield Wednesday F.C."
   },
   {
     "id": "eng3-l1-21",
@@ -630,6 +686,14 @@
     "stadium": "New York Stadium",
     "city": "Rotherham, South Yorkshire",
     "articleTitle": "Rotherham United F.C."
+  },
+  {
+    "id": "eng4-l2-19",
+    "displayName": "Salford City",
+    "foundedYear": 1940,
+    "stadium": "Moor Lane",
+    "city": "Salford, Greater Manchester",
+    "articleTitle": "Salford City F.C."
   },
   {
     "id": "eng4-l2-20",
@@ -864,6 +928,30 @@
     "articleTitle": "Yeovil Town F.C."
   },
   {
+    "id": "eng6-nln-01",
+    "displayName": "AFC Telford United",
+    "foundedYear": 2004,
+    "stadium": "New Bucks Head",
+    "city": "Telford",
+    "articleTitle": "AFC Telford United"
+  },
+  {
+    "id": "eng6-nln-02",
+    "displayName": "Bedford Town",
+    "foundedYear": 1908,
+    "stadium": "The New Eyrie",
+    "city": "Bedford",
+    "articleTitle": "Bedford Town F.C."
+  },
+  {
+    "id": "eng6-nln-03",
+    "displayName": "Brackley Town",
+    "foundedYear": 1890,
+    "stadium": "St James Park",
+    "city": "Brackley",
+    "articleTitle": "Brackley Town F.C."
+  },
+  {
     "id": "eng6-nln-04",
     "displayName": "Buxton",
     "foundedYear": 1877,
@@ -894,6 +982,14 @@
     "stadium": "Blackwell Meadows",
     "city": "Darlington",
     "articleTitle": "Darlington F.C."
+  },
+  {
+    "id": "eng6-nln-08",
+    "displayName": "Harborough Town",
+    "foundedYear": 1975,
+    "stadium": "Bowden Park",
+    "city": "Market Harborough",
+    "articleTitle": "Harborough Town F.C."
   },
   {
     "id": "eng6-nln-09",
@@ -1008,6 +1104,14 @@
     "articleTitle": "Spalding United F.C."
   },
   {
+    "id": "eng6-nln-23",
+    "displayName": "Spennymoor Town",
+    "foundedYear": 2005,
+    "stadium": "The Brewery Field",
+    "city": "County Durham",
+    "articleTitle": "Spennymoor Town F.C."
+  },
+  {
     "id": "eng6-nln-24",
     "displayName": "Worksop Town",
     "foundedYear": 1857,
@@ -1022,6 +1126,14 @@
     "stadium": "Testwood Stadium",
     "city": "Totton",
     "articleTitle": "A.F.C. Totton"
+  },
+  {
+    "id": "eng6-nls-02",
+    "displayName": "Billericay Town",
+    "foundedYear": 1880,
+    "stadium": "New Lodge",
+    "city": "Billericay",
+    "articleTitle": "Billericay Town F.C."
   },
   {
     "id": "eng6-nls-03",
@@ -1064,12 +1176,36 @@
     "articleTitle": "Dorking Wanderers F.C."
   },
   {
+    "id": "eng6-nls-08",
+    "displayName": "Dover Athletic",
+    "foundedYear": 1983,
+    "stadium": "Crabble Athletic Ground",
+    "city": "the town of Dover, Kent",
+    "articleTitle": "Dover Athletic F.C."
+  },
+  {
     "id": "eng6-nls-09",
     "displayName": "Ebbsfleet United",
     "foundedYear": 1946,
     "stadium": "Stonebridge Road",
     "city": "Northfleet",
     "articleTitle": "Ebbsfleet United F.C."
+  },
+  {
+    "id": "eng6-nls-10",
+    "displayName": "Farnborough",
+    "foundedYear": 1967,
+    "stadium": "Cherrywood Road",
+    "city": "Farnborough",
+    "articleTitle": "Farnborough F.C."
+  },
+  {
+    "id": "eng6-nls-11",
+    "displayName": "Farnham Town",
+    "foundedYear": 1906,
+    "stadium": "The Memorial Ground",
+    "city": "Farnham",
+    "articleTitle": "Farnham Town F.C."
   },
   {
     "id": "eng6-nls-12",
@@ -1080,12 +1216,28 @@
     "articleTitle": "Folkestone Invicta F.C."
   },
   {
+    "id": "eng6-nls-13",
+    "displayName": "Hampton & Richmond Borough",
+    "foundedYear": 1921,
+    "stadium": "Beveree",
+    "city": "London",
+    "articleTitle": "Hampton & Richmond Borough F.C."
+  },
+  {
     "id": "eng6-nls-14",
     "displayName": "Hemel Hempstead Town",
     "foundedYear": 1885,
     "stadium": "Vauxhall Road",
     "city": "Hemel Hempstead",
     "articleTitle": "Hemel Hempstead Town F.C."
+  },
+  {
+    "id": "eng6-nls-15",
+    "displayName": "Horsham",
+    "foundedYear": 1881,
+    "stadium": "Hop Oast Stadium",
+    "city": "Horsham",
+    "articleTitle": "Horsham F.C."
   },
   {
     "id": "eng6-nls-16",
@@ -1102,6 +1254,14 @@
     "stadium": "Gallagher Stadium",
     "city": "Maidstone, Kent",
     "articleTitle": "Maidstone United F.C."
+  },
+  {
+    "id": "eng6-nls-18",
+    "displayName": "Salisbury",
+    "foundedYear": 2015,
+    "stadium": "The Raymond McEnhill Stadium",
+    "city": "Salisbury",
+    "articleTitle": "Salisbury F.C."
   },
   {
     "id": "eng6-nls-19",
@@ -1152,12 +1312,28 @@
     "articleTitle": "Weston-super-Mare A.F.C."
   },
   {
+    "id": "eng7-ip-01",
+    "displayName": "AFC Whyteleafe",
+    "foundedYear": 2021,
+    "stadium": "Flamingo Park",
+    "city": "Whyteleafe",
+    "articleTitle": "AFC Whyteleafe"
+  },
+  {
     "id": "eng7-ip-02",
     "displayName": "Aveley",
     "foundedYear": 1927,
     "stadium": "Parkside",
     "city": "Aveley",
     "articleTitle": "Aveley F.C."
+  },
+  {
+    "id": "eng7-ip-03",
+    "displayName": "Brentwood Town",
+    "foundedYear": 1954,
+    "stadium": "Brentwood Centre Arena",
+    "city": "Brentwood",
+    "articleTitle": "Brentwood Town F.C."
   },
   {
     "id": "eng7-ip-04",
@@ -1168,12 +1344,36 @@
     "articleTitle": "Burgess Hill Town F.C."
   },
   {
+    "id": "eng7-ip-05",
+    "displayName": "Carshalton Athletic",
+    "foundedYear": 1905,
+    "stadium": "War Memorial Sports Ground",
+    "city": "Carshalton",
+    "articleTitle": "Carshalton Athletic F.C."
+  },
+  {
     "id": "eng7-ip-06",
     "displayName": "Chatham Town",
     "foundedYear": 1882,
     "stadium": "The Bauvill Stadium",
     "city": "Chatham",
     "articleTitle": "Chatham Town F.C."
+  },
+  {
+    "id": "eng7-ip-07",
+    "displayName": "Cheshunt",
+    "foundedYear": 1946,
+    "stadium": "Theobalds Lane",
+    "city": "Cheshunt",
+    "articleTitle": "Cheshunt F.C."
+  },
+  {
+    "id": "eng7-ip-08",
+    "displayName": "Cray Wanderers",
+    "foundedYear": 1860,
+    "stadium": "Flamingo Park",
+    "city": "Chislehurst",
+    "articleTitle": "Cray Wanderers F.C."
   },
   {
     "id": "eng7-ip-09",
@@ -1200,6 +1400,14 @@
     "articleTitle": "Eastbourne Borough F.C."
   },
   {
+    "id": "eng7-ip-12",
+    "displayName": "Enfield Town",
+    "foundedYear": 2001,
+    "stadium": "Queen Elizabeth II Stadium",
+    "city": "Enfield",
+    "articleTitle": "Enfield Town F.C."
+  },
+  {
     "id": "eng7-ip-13",
     "displayName": "Leatherhead",
     "foundedYear": 1907,
@@ -1216,12 +1424,68 @@
     "articleTitle": "Lewes F.C."
   },
   {
+    "id": "eng7-ip-15",
+    "displayName": "Maldon & Tiptree",
+    "foundedYear": 1946,
+    "stadium": "Park Drive",
+    "city": "Maldon",
+    "articleTitle": "Maldon & Tiptree F.C."
+  },
+  {
+    "id": "eng7-ip-16",
+    "displayName": "Ramsgate",
+    "foundedYear": 1945,
+    "stadium": "[http://stable.toolserver.org/geohack/geohack.php?pagename=Southwood_Stadium&params=51_19_57_N_1_23_58_E_region:GB_type:landmark Southwood Stadium]",
+    "city": "Ramsgate",
+    "articleTitle": "Ramsgate F.C."
+  },
+  {
     "id": "eng7-ip-17",
     "displayName": "St Albans City",
     "foundedYear": 1908,
     "stadium": "Clarence Park",
     "city": "St Albans, Hertfordshire",
     "articleTitle": "St Albans City F.C."
+  },
+  {
+    "id": "eng7-ip-18",
+    "displayName": "Stanway Rovers Community",
+    "foundedYear": 1956,
+    "stadium": "Hawthorns",
+    "city": "Stanway",
+    "articleTitle": "Stanway Rovers F.C."
+  },
+  {
+    "id": "eng7-ip-19",
+    "displayName": "Three Bridges",
+    "foundedYear": 1901,
+    "stadium": "Jubilee Field",
+    "city": "Three Bridges",
+    "articleTitle": "Three Bridges F.C."
+  },
+  {
+    "id": "eng7-ip-20",
+    "displayName": "Welling United",
+    "foundedYear": 1963,
+    "stadium": "Park View Road",
+    "city": "Welling",
+    "articleTitle": "Welling United F.C."
+  },
+  {
+    "id": "eng7-ip-21",
+    "displayName": "Whitehawk",
+    "foundedYear": 1945,
+    "stadium": "McLaren Enclosed Ground",
+    "city": "Brighton",
+    "articleTitle": "Whitehawk F.C."
+  },
+  {
+    "id": "eng7-ip-22",
+    "displayName": "Wingate & Finchley",
+    "foundedYear": 1991,
+    "stadium": "The Maurice Rebak Stadium",
+    "city": "Finchley",
+    "articleTitle": "Wingate & Finchley F.C."
   },
   {
     "id": "eng7-npp-01",
@@ -1232,6 +1496,14 @@
     "articleTitle": "Alfreton Town F.C."
   },
   {
+    "id": "eng7-npp-02",
+    "displayName": "Ashton United",
+    "foundedYear": 1878,
+    "stadium": "Hurst Cross",
+    "city": "Ashton-under-Lyne",
+    "articleTitle": "Ashton United F.C."
+  },
+  {
     "id": "eng7-npp-03",
     "displayName": "Avro",
     "foundedYear": 1910,
@@ -1240,12 +1512,36 @@
     "articleTitle": "Avro"
   },
   {
+    "id": "eng7-npp-04",
+    "displayName": "Bamber Bridge",
+    "foundedYear": 1952,
+    "stadium": "Irongate",
+    "city": "Bamber Bridge",
+    "articleTitle": "Bamber Bridge F.C."
+  },
+  {
     "id": "eng7-npp-05",
     "displayName": "Bury",
     "foundedYear": 1885,
     "stadium": "Gigg Lane",
     "city": "Bury, Greater Manchester",
     "articleTitle": "Bury F.C."
+  },
+  {
+    "id": "eng7-npp-06",
+    "displayName": "Cleethorpes Town",
+    "foundedYear": 1998,
+    "stadium": "Linden Club",
+    "city": "Grimsby",
+    "articleTitle": "Cleethorpes Town F.C."
+  },
+  {
+    "id": "eng7-npp-07",
+    "displayName": "Curzon Ashton",
+    "foundedYear": 1963,
+    "stadium": "Tameside Stadium",
+    "city": "Ashton-under-Lyne, Greater Manchester",
+    "articleTitle": "Curzon Ashton F.C."
   },
   {
     "id": "eng7-npp-08",
@@ -1272,6 +1568,30 @@
     "articleTitle": "Gainsborough Trinity F.C."
   },
   {
+    "id": "eng7-npp-11",
+    "displayName": "Guiseley",
+    "foundedYear": 1909,
+    "stadium": "Nethermoor Park",
+    "city": "Guiseley",
+    "articleTitle": "Guiseley A.F.C."
+  },
+  {
+    "id": "eng7-npp-12",
+    "displayName": "Hyde United",
+    "foundedYear": 1919,
+    "stadium": "Ewen Fields",
+    "city": "Hyde",
+    "articleTitle": "Hyde United F.C."
+  },
+  {
+    "id": "eng7-npp-13",
+    "displayName": "Ilkeston Town",
+    "foundedYear": 2017,
+    "stadium": "New Manor Ground",
+    "city": "Ilkeston, Derbyshire",
+    "articleTitle": "Ilkeston Town F.C."
+  },
+  {
     "id": "eng7-npp-14",
     "displayName": "Lancaster City",
     "foundedYear": 1911,
@@ -1294,6 +1614,46 @@
     "stadium": "Farley Way Stadium",
     "city": "the village of Quorn, near Loughborough, Leicestershire",
     "articleTitle": "Quorn F.C."
+  },
+  {
+    "id": "eng7-npp-17",
+    "displayName": "Redcar Athletic",
+    "foundedYear": 1993,
+    "stadium": "Green Lane",
+    "city": "Redcar",
+    "articleTitle": "Redcar Athletic F.C."
+  },
+  {
+    "id": "eng7-npp-18",
+    "displayName": "Stockton Town",
+    "foundedYear": 1987,
+    "stadium": "Bishopton Road West",
+    "city": "Stockton-on-Tees",
+    "articleTitle": "Stockton Town F.C."
+  },
+  {
+    "id": "eng7-npp-19",
+    "displayName": "Warrington Rylands",
+    "foundedYear": 1906,
+    "stadium": "The Quickline Logistics Arena",
+    "city": "Warrington",
+    "articleTitle": "Warrington Rylands 1906 F.C."
+  },
+  {
+    "id": "eng7-npp-20",
+    "displayName": "Warrington Town",
+    "foundedYear": 1949,
+    "stadium": "Cantilever Park",
+    "city": "Warrington",
+    "articleTitle": "Warrington Town F.C."
+  },
+  {
+    "id": "eng7-npp-21",
+    "displayName": "Whitby Town",
+    "foundedYear": 1880,
+    "stadium": "[http://stable.toolserver.org/geohack/geohack.php?pagename=Turnbull_Ground&params=54_29_23.92_N_0_37_39.05_W_region:GB_type:landmark Turnbull Ground]",
+    "city": "North Yorkshire",
+    "articleTitle": "Whitby Town F.C."
   },
   {
     "id": "eng7-npp-22",
@@ -1326,6 +1686,22 @@
     "stadium": "Spencer Stadium",
     "city": "Banbury",
     "articleTitle": "Banbury United F.C."
+  },
+  {
+    "id": "eng7-spc-04",
+    "displayName": "Bishop’s Stortford",
+    "foundedYear": 1874,
+    "stadium": "Woodside Park",
+    "city": "Bishop's Stortford",
+    "articleTitle": "Bishop's Stortford F.C."
+  },
+  {
+    "id": "eng7-spc-05",
+    "displayName": "Bromsgrove Sporting",
+    "foundedYear": 2009,
+    "stadium": "Victoria Ground",
+    "city": "Bromsgrove, Worcestershire",
+    "articleTitle": "Bromsgrove Sporting F.C."
   },
   {
     "id": "eng7-spc-06",
@@ -1390,6 +1766,14 @@
     "stadium": "Bloomfields",
     "city": "Needham Market",
     "articleTitle": "Needham Market F.C."
+  },
+  {
+    "id": "eng7-spc-14",
+    "displayName": "Peterborough Sports",
+    "foundedYear": 1908,
+    "stadium": "Lincoln Road",
+    "city": "Peterborough",
+    "articleTitle": "Peterborough Sports F.C."
   },
   {
     "id": "eng7-spc-15",
@@ -1488,12 +1872,28 @@
     "articleTitle": "Bracknell Town F.C."
   },
   {
+    "id": "eng7-sps-05",
+    "displayName": "Chertsey Town",
+    "foundedYear": 1890,
+    "stadium": "Alwyns Lane",
+    "city": "Surrey",
+    "articleTitle": "Chertsey Town F.C."
+  },
+  {
     "id": "eng7-sps-06",
     "displayName": "Chichester City",
     "foundedYear": 2000,
     "stadium": "Oaklands Park",
     "city": "Chichester",
     "articleTitle": "Chichester City F.C."
+  },
+  {
+    "id": "eng7-sps-07",
+    "displayName": "Chippenham Town",
+    "foundedYear": 1884,
+    "stadium": "Hardenhuish Park",
+    "city": "Chippenham",
+    "articleTitle": "Chippenham Town F.C."
   },
   {
     "id": "eng7-sps-08",
@@ -1510,6 +1910,14 @@
     "stadium": "Badgers Hill",
     "city": "Frome",
     "articleTitle": "Frome Town F.C."
+  },
+  {
+    "id": "eng7-sps-10",
+    "displayName": "Gloucester City",
+    "foundedYear": 1883,
+    "stadium": "Meadow Park",
+    "city": "Hempsted, Gloucester",
+    "articleTitle": "Gloucester City F.C."
   },
   {
     "id": "eng7-sps-11",
@@ -1568,6 +1976,14 @@
     "articleTitle": "Poole Town F.C."
   },
   {
+    "id": "eng7-sps-18",
+    "displayName": "Sholing",
+    "foundedYear": 1960,
+    "stadium": "The Mortgage Decisions Stadium",
+    "city": "Sholing",
+    "articleTitle": "Sholing F.C."
+  },
+  {
     "id": "eng7-sps-19",
     "displayName": "Taunton Town",
     "foundedYear": 1947,
@@ -1608,12 +2024,28 @@
     "articleTitle": "A.F.C. Portchester"
   },
   {
+    "id": "eng8-isc-02",
+    "displayName": "AFC Stoneham",
+    "foundedYear": 1919,
+    "stadium": "Stoneham Football Complex",
+    "city": "Eastleigh",
+    "articleTitle": "A.F.C. Stoneham"
+  },
+  {
     "id": "eng8-isc-03",
     "displayName": "Ascot United",
     "foundedYear": 1965,
     "stadium": "The Racecourse Ground",
     "city": "Ascot",
     "articleTitle": "Ascot United F.C."
+  },
+  {
+    "id": "eng8-isc-04",
+    "displayName": "Ashford Town (Middlesex)",
+    "foundedYear": 1958,
+    "stadium": "Robert Parker Stadium",
+    "city": "Stanwell",
+    "articleTitle": "Ashford Town (Middlesex) F.C."
   },
   {
     "id": "eng8-isc-05",
@@ -1704,6 +2136,14 @@
     "articleTitle": "Kingstonian F.C."
   },
   {
+    "id": "eng8-isc-16",
+    "displayName": "Littlehampton Town",
+    "foundedYear": 1896,
+    "stadium": "The Sportsfield",
+    "city": "Littlehampton",
+    "articleTitle": "Littlehampton Town F.C."
+  },
+  {
     "id": "eng8-isc-17",
     "displayName": "Moneyfields",
     "foundedYear": 1987,
@@ -1728,6 +2168,30 @@
     "articleTitle": "Southall F.C."
   },
   {
+    "id": "eng8-isc-20",
+    "displayName": "Westfield",
+    "foundedYear": 1953,
+    "stadium": "Woking Park",
+    "city": "the Westfield area of Woking",
+    "articleTitle": "Westfield F.C. (Surrey)"
+  },
+  {
+    "id": "eng8-isc-21",
+    "displayName": "Winchester City",
+    "foundedYear": 1884,
+    "stadium": "City Ground",
+    "city": "Winchester",
+    "articleTitle": "Winchester City F.C."
+  },
+  {
+    "id": "eng8-isc-22",
+    "displayName": "Windsor & Eton",
+    "foundedYear": 1892,
+    "stadium": "Stag Meadow",
+    "city": "Windsor",
+    "articleTitle": "Windsor & Eton F.C. (2023)"
+  },
+  {
     "id": "eng8-in-01",
     "displayName": "AFC Sudbury",
     "foundedYear": 1999,
@@ -1750,6 +2214,14 @@
     "stadium": "North Road",
     "city": "Brightlingsea",
     "articleTitle": "Brightlingsea Regent F.C."
+  },
+  {
+    "id": "eng8-in-04",
+    "displayName": "Buckhurst Hill",
+    "foundedYear": 1985,
+    "stadium": "Roding Lane",
+    "city": "Buckhurst Hill",
+    "articleTitle": "Buckhurst Hill F.C."
   },
   {
     "id": "eng8-in-05",
@@ -1806,6 +2278,14 @@
     "stadium": "Chadfields",
     "city": "Tilbury",
     "articleTitle": "Grays Athletic F.C."
+  },
+  {
+    "id": "eng8-in-12",
+    "displayName": "Hashtag United",
+    "foundedYear": 2016,
+    "stadium": "Oakside Stadium",
+    "city": "Barkingside",
+    "articleTitle": "Hashtag United F.C."
   },
   {
     "id": "eng8-in-13",
@@ -1960,6 +2440,22 @@
     "articleTitle": "Faversham Town F.C."
   },
   {
+    "id": "eng8-ise-10",
+    "displayName": "Peacehaven & Telscombe",
+    "foundedYear": 1923,
+    "stadium": "The Sports Park",
+    "city": "Peacehaven",
+    "articleTitle": "Peacehaven & Telscombe F.C."
+  },
+  {
+    "id": "eng8-ise-11",
+    "displayName": "Hastings United",
+    "foundedYear": 1893,
+    "stadium": "The Pilot Field",
+    "city": "Hastings, East Sussex",
+    "articleTitle": "Hastings United F.C."
+  },
+  {
     "id": "eng8-ise-12",
     "displayName": "Herne Bay",
     "foundedYear": 1886,
@@ -2000,6 +2496,14 @@
     "articleTitle": "Punjab United F.C."
   },
   {
+    "id": "eng8-ise-17",
+    "displayName": "Sevenoaks Town",
+    "foundedYear": 1883,
+    "stadium": "Greatness Park",
+    "city": "Kent|",
+    "articleTitle": "Sevenoaks Town F.C."
+  },
+  {
     "id": "eng8-ise-18",
     "displayName": "Sheppey United",
     "foundedYear": 1890,
@@ -2014,6 +2518,14 @@
     "stadium": "The Staxson Stadium",
     "city": "Sittingbourne",
     "articleTitle": "Sittingbourne F.C."
+  },
+  {
+    "id": "eng8-ise-20",
+    "displayName": "South Park (Reigate)",
+    "foundedYear": 1897,
+    "stadium": "King George’s Field",
+    "city": "Reigate, Surrey",
+    "articleTitle": "South Park F.C."
   },
   {
     "id": "eng8-ise-21",
@@ -2054,6 +2566,14 @@
     "stadium": "Croft Park",
     "city": "Blyth",
     "articleTitle": "Blyth Spartans A.F.C."
+  },
+  {
+    "id": "eng8-npe-04",
+    "displayName": "Bradford (Park Avenue)",
+    "foundedYear": 1907,
+    "stadium": "Horsfall Stadium",
+    "city": "Bradford, West Yorkshire",
+    "articleTitle": "Bradford (Park Avenue) A.F.C."
   },
   {
     "id": "eng8-npe-05",
@@ -2192,6 +2712,22 @@
     "articleTitle": "Stocksbridge Park Steels F.C."
   },
   {
+    "id": "eng8-npe-22",
+    "displayName": "West Auckland Town",
+    "foundedYear": 1893,
+    "stadium": "The Northern Metal Recycling stadium (Darlington Road)",
+    "city": "West Auckland",
+    "articleTitle": "West Auckland Town F.C."
+  },
+  {
+    "id": "eng8-npw-01",
+    "displayName": "1874 Northwich",
+    "foundedYear": 2012,
+    "stadium": "Townfield",
+    "city": "Barnton",
+    "articleTitle": "1874 Northwich F.C."
+  },
+  {
     "id": "eng8-npw-02",
     "displayName": "Atherton Collieries",
     "foundedYear": 1916,
@@ -2214,6 +2750,22 @@
     "stadium": "The Scholars Ground",
     "city": "Burntwood",
     "articleTitle": "Chasetown F.C."
+  },
+  {
+    "id": "eng8-npw-05",
+    "displayName": "Clitheroe",
+    "foundedYear": 1924,
+    "stadium": "EcoGiants Stadium",
+    "city": "Clitheroe, Lancashire",
+    "articleTitle": "Clitheroe F.C."
+  },
+  {
+    "id": "eng8-npw-06",
+    "displayName": "Congleton Town",
+    "foundedYear": 1901,
+    "stadium": "Cleric Stadium (Since )",
+    "city": "Cleric Stadium",
+    "articleTitle": "Congleton Town F.C."
   },
   {
     "id": "eng8-npw-07",
@@ -2254,6 +2806,14 @@
     "stadium": "Mossley Recreation Grounds",
     "city": "Newtownabbey, County Antrim, and was formed in 1949",
     "articleTitle": "Mossley F.C."
+  },
+  {
+    "id": "eng8-npw-12",
+    "displayName": "Nantwich Town",
+    "foundedYear": 1884,
+    "stadium": "Swansway Stadium",
+    "city": "Nantwich",
+    "articleTitle": "Nantwich Town F.C."
   },
   {
     "id": "eng8-npw-13",
@@ -2336,6 +2896,22 @@
     "articleTitle": "Wythenshawe F.C."
   },
   {
+    "id": "eng8-npm-01",
+    "displayName": "AFC Rushden & Diamonds",
+    "foundedYear": 2011,
+    "stadium": "Hayden Road",
+    "city": "Rushden",
+    "articleTitle": "AFC Rushden & Diamonds"
+  },
+  {
+    "id": "eng8-npm-02",
+    "displayName": "Barwell",
+    "foundedYear": 1992,
+    "stadium": "Kirkby Road",
+    "city": "Barwell",
+    "articleTitle": "Barwell F.C."
+  },
+  {
     "id": "eng8-npm-03",
     "displayName": "Basford United",
     "foundedYear": 1900,
@@ -2358,6 +2934,14 @@
     "stadium": "Christchurch Meadow",
     "city": "Belper",
     "articleTitle": "Belper Town F.C."
+  },
+  {
+    "id": "eng8-npm-06",
+    "displayName": "Boldmere St Michael’s",
+    "foundedYear": 1883,
+    "stadium": "Boldmere Community Stadium",
+    "city": "Boldmere",
+    "articleTitle": "Boldmere St. Michaels F.C."
   },
   {
     "id": "eng8-npm-07",
@@ -2438,6 +3022,30 @@
     "stadium": "Station Road",
     "city": "Mickleover",
     "articleTitle": "Mickleover F.C."
+  },
+  {
+    "id": "eng8-npm-17",
+    "displayName": "Nuneaton Town",
+    "foundedYear": 1889,
+    "stadium": "The Oval (Groundshare with Bedworth United from 2024)",
+    "city": "The Oval",
+    "articleTitle": "Nuneaton Town F.C."
+  },
+  {
+    "id": "eng8-npm-18",
+    "displayName": "Rugby Borough",
+    "foundedYear": 2017,
+    "stadium": "Kilsby Lane",
+    "city": "Rugby",
+    "articleTitle": "Rugby Borough F.C."
+  },
+  {
+    "id": "eng8-npm-19",
+    "displayName": "Shepshed Dynamo",
+    "foundedYear": 1994,
+    "stadium": "The Dovecote Stadium",
+    "city": "the small town of Shepshed in the north west of Leicestershire",
+    "articleTitle": "Shepshed Dynamo F.C."
   },
   {
     "id": "eng8-npm-20",
@@ -2526,6 +3134,14 @@
     "stadium": "Brickfield Lane",
     "city": "Arkley",
     "articleTitle": "Hadley F.C."
+  },
+  {
+    "id": "eng8-slc-09",
+    "displayName": "Haringey Borough",
+    "foundedYear": 1973,
+    "stadium": "Coles Park",
+    "city": "Tottenham",
+    "articleTitle": "Haringey Borough F.C."
   },
   {
     "id": "eng8-slc-10",
@@ -2656,6 +3272,14 @@
     "articleTitle": "Bishop's Cleeve F.C."
   },
   {
+    "id": "eng8-sls-04",
+    "displayName": "Bristol Manor Farm",
+    "foundedYear": 1960,
+    "stadium": "The Creek",
+    "city": "Bristol",
+    "articleTitle": "Bristol Manor Farm F.C."
+  },
+  {
     "id": "eng8-sls-05",
     "displayName": "Dorchester Town",
     "foundedYear": 1880,
@@ -2670,6 +3294,22 @@
     "stadium": "Southern Road",
     "city": "Exmouth",
     "articleTitle": "Exmouth Town F.C."
+  },
+  {
+    "id": "eng8-sls-07",
+    "displayName": "Falmouth Town",
+    "foundedYear": 1949,
+    "stadium": "Bickland Park",
+    "city": "Falmouth",
+    "articleTitle": "Falmouth Town A.F.C."
+  },
+  {
+    "id": "eng8-sls-08",
+    "displayName": "Hartpury",
+    "foundedYear": 2020,
+    "stadium": "Hartpury University Stadium",
+    "city": "Hartpury",
+    "articleTitle": "Hartpury F.C."
   },
   {
     "id": "eng8-sls-09",
@@ -2702,6 +3342,38 @@
     "stadium": "First 4 Pools Stadium",
     "city": "Paulton",
     "articleTitle": "Paulton Rovers F.C."
+  },
+  {
+    "id": "eng8-sls-13",
+    "displayName": "Portland United",
+    "foundedYear": 1921,
+    "stadium": "Camp & Satherley Stadium",
+    "city": "Isle of Portland",
+    "articleTitle": "Portland United F.C."
+  },
+  {
+    "id": "eng8-sls-14",
+    "displayName": "Shaftesbury",
+    "foundedYear": 1888,
+    "stadium": "Cockrams",
+    "city": "Shaftesbury, Dorset",
+    "articleTitle": "Shaftesbury F.C."
+  },
+  {
+    "id": "eng8-sls-15",
+    "displayName": "Slimbridge",
+    "foundedYear": 1902,
+    "stadium": "Thornhill Park",
+    "city": "Gloucestershire",
+    "articleTitle": "Slimbridge A.F.C."
+  },
+  {
+    "id": "eng8-sls-16",
+    "displayName": "Sporting Club Inkberrow",
+    "foundedYear": 1978,
+    "stadium": "Sands Road",
+    "city": "Inkberrow",
+    "articleTitle": "Sporting Club Inkberrow F.C."
   },
   {
     "id": "eng8-sls-17",
@@ -2792,6 +3464,14 @@
     "articleTitle": "Broadfields United F.C."
   },
   {
+    "id": "eng9-ccln-06",
+    "displayName": "Burnham",
+    "foundedYear": 1878,
+    "stadium": "[http://stable.toolserver.org/geohack/geohack.php?pagename=The_Gore&params=51_32_16.32_N_0_40_00.45_W_region:GB_type:landmark The 1878 Stadium]",
+    "city": "Buckinghamshire",
+    "articleTitle": "Burnham F.C."
+  },
+  {
     "id": "eng9-ccln-07",
     "displayName": "Easington Sports",
     "foundedYear": 1946,
@@ -2806,6 +3486,14 @@
     "stadium": "Preston Park",
     "city": "Harefield",
     "articleTitle": "Harefield United F.C."
+  },
+  {
+    "id": "eng9-ccln-09",
+    "displayName": "Hilltop",
+    "foundedYear": 2005,
+    "stadium": "Silver Jubilee Park",
+    "city": "Hendon",
+    "articleTitle": "Hilltop F.C."
   },
   {
     "id": "eng9-ccln-10",
@@ -2872,12 +3560,52 @@
     "articleTitle": "Reading City F.C."
   },
   {
+    "id": "eng9-ccln-18",
+    "displayName": "Thatcham Town",
+    "foundedYear": 1894,
+    "stadium": "Waterside Park",
+    "city": "Thatcham",
+    "articleTitle": "Thatcham Town F.C."
+  },
+  {
+    "id": "eng9-ccln-19",
+    "displayName": "Wallingford & Crowmarsh",
+    "foundedYear": 1922,
+    "stadium": "Hithercroft",
+    "city": "Wallingford",
+    "articleTitle": "Wallingford & Crowmarsh F.C."
+  },
+  {
     "id": "eng9-ccln-20",
     "displayName": "Wokingham Town",
     "foundedYear": 1875,
     "stadium": "Lowther Road",
     "city": "Wokingham",
     "articleTitle": "Wokingham Town F.C."
+  },
+  {
+    "id": "eng10-ccl1-01",
+    "displayName": "Belstone",
+    "foundedYear": 1983,
+    "stadium": "Medburn Ground",
+    "city": "Radlett",
+    "articleTitle": "Belstone F.C."
+  },
+  {
+    "id": "eng10-ccl1-02",
+    "displayName": "Berks County",
+    "foundedYear": 2009,
+    "stadium": "The Racecourse",
+    "city": "Ascot",
+    "articleTitle": "Berks County F.C."
+  },
+  {
+    "id": "eng10-ccl1-03",
+    "displayName": "Bovingdon",
+    "foundedYear": 1910,
+    "stadium": "Green Lane",
+    "city": "Bovingdon",
+    "articleTitle": "Bovingdon F.C."
   },
   {
     "id": "eng10-ccl1-04",
@@ -2936,6 +3664,14 @@
     "articleTitle": "London Samurai Rovers F.C."
   },
   {
+    "id": "eng10-ccl1-11",
+    "displayName": "Maidenhead Town",
+    "foundedYear": null,
+    "stadium": "Club Ground",
+    "city": "Maidenhead",
+    "articleTitle": "Maidenhead Town F.C."
+  },
+  {
     "id": "eng10-ccl1-12",
     "displayName": "Molesey",
     "foundedYear": 1946,
@@ -2952,6 +3688,22 @@
     "articleTitle": "Oxhey Jets F.C."
   },
   {
+    "id": "eng10-ccl1-14",
+    "displayName": "PFC Victoria",
+    "foundedYear": 2016,
+    "stadium": "Robert Parker Stadium",
+    "city": "Stanwell",
+    "articleTitle": "PFC Victoria London"
+  },
+  {
+    "id": "eng10-ccl1-15",
+    "displayName": "Shepherd's Bush",
+    "foundedYear": 2012,
+    "stadium": "Northwood Park",
+    "city": "Northwood",
+    "articleTitle": "Shepherd's Bush F.C. (2021)"
+  },
+  {
     "id": "eng10-ccl1-16",
     "displayName": "Eagles Land Benfica",
     "foundedYear": 2019,
@@ -2960,12 +3712,44 @@
     "articleTitle": "Eagles Land Benfica FC"
   },
   {
+    "id": "eng10-ccl1-17",
+    "displayName": "Spartans Youth",
+    "foundedYear": 2006,
+    "stadium": "The Orchard",
+    "city": "Bedfont",
+    "articleTitle": "Spartans Youth F.C."
+  },
+  {
+    "id": "eng10-ccl1-18",
+    "displayName": "Spelthorne Sports Club",
+    "foundedYear": 1922,
+    "stadium": "Spelthorne Sports Club",
+    "city": "Middlesex",
+    "articleTitle": "Spelthorne Sports F.C."
+  },
+  {
+    "id": "eng10-ccl1-19",
+    "displayName": "Staines & Lammas (Middlesex)",
+    "foundedYear": 1926,
+    "stadium": "Spelthorne Sports Club",
+    "city": "TW15 1RY",
+    "articleTitle": "Staines & Lammas (Middlesex) F.C."
+  },
+  {
     "id": "eng10-ccl1-20",
     "displayName": "Wembley",
     "foundedYear": 1946,
     "stadium": "Vale Farm",
     "city": "Wembley, in the London Borough of Brent, London",
     "articleTitle": "Wembley F.C."
+  },
+  {
+    "id": "eng10-ccl1-21",
+    "displayName": "Westside",
+    "foundedYear": 1996,
+    "stadium": "Wibbandune (Colliers Wood Utd)",
+    "city": "Wibbandune",
+    "articleTitle": "Westside F.C. (England)"
   },
   {
     "id": "eng10-ccl1-22",
@@ -3128,6 +3912,22 @@
     "articleTitle": "Virginia Water F.C."
   },
   {
+    "id": "eng9-ccls-20",
+    "displayName": "Yateley United",
+    "foundedYear": 2013,
+    "stadium": "Sean Devereux Park",
+    "city": "Yateley, Hampshire",
+    "articleTitle": "Yateley United F.C."
+  },
+  {
+    "id": "eng9-eclp-01",
+    "displayName": "Brantham Athletic",
+    "foundedYear": 1887,
+    "stadium": "Brantham Leisure Centre",
+    "city": "Brantham",
+    "articleTitle": "Brantham Athletic F.C."
+  },
+  {
     "id": "eng9-eclp-02",
     "displayName": "Cornard United",
     "foundedYear": 1964,
@@ -3160,6 +3960,14 @@
     "articleTitle": "Ely City F.C."
   },
   {
+    "id": "eng9-eclp-06",
+    "displayName": "Great Yarmouth Town",
+    "foundedYear": 1897,
+    "stadium": "Wellesley Recreation Ground",
+    "city": "Great Yarmouth",
+    "articleTitle": "Great Yarmouth Town F.C."
+  },
+  {
     "id": "eng9-eclp-07",
     "displayName": "Harleston Town",
     "foundedYear": 1885,
@@ -3174,6 +3982,14 @@
     "stadium": "The New Croft",
     "city": "Haverhill",
     "articleTitle": "Haverhill Rovers F.C."
+  },
+  {
+    "id": "eng9-eclp-09",
+    "displayName": "Heacham",
+    "foundedYear": 1907,
+    "stadium": "Station Road",
+    "city": "Heacham",
+    "articleTitle": "Heacham F.C."
   },
   {
     "id": "eng9-eclp-10",
@@ -3198,6 +4014,14 @@
     "stadium": "The Nest",
     "city": "Lakenheath",
     "articleTitle": "Lakenheath F.C."
+  },
+  {
+    "id": "eng9-eclp-13",
+    "displayName": "March Town United",
+    "foundedYear": 1885,
+    "stadium": "GER Sports Ground",
+    "city": "March",
+    "articleTitle": "March Town United F.C."
   },
   {
     "id": "eng9-eclp-14",
@@ -3256,6 +4080,30 @@
     "articleTitle": "Woodbridge Town F.C."
   },
   {
+    "id": "eng10-ecln-01",
+    "displayName": "AFC Sudbury (Reserves)",
+    "foundedYear": 1999,
+    "stadium": "The Elite Travel Stadium",
+    "city": "Sudbury",
+    "articleTitle": "A.F.C. Sudbury"
+  },
+  {
+    "id": "eng10-ecln-02",
+    "displayName": "Diss Town",
+    "foundedYear": 1888,
+    "stadium": "Brewers Green Lane",
+    "city": "Diss",
+    "articleTitle": "Diss Town F.C."
+  },
+  {
+    "id": "eng10-ecln-03",
+    "displayName": "Dussindale & Hellesdon Rovers",
+    "foundedYear": 2020,
+    "stadium": "The Nest",
+    "city": "Horsford",
+    "articleTitle": "Dussindale & Hellesdon Rovers F.C."
+  },
+  {
     "id": "eng10-ecln-04",
     "displayName": "FC Clacton",
     "foundedYear": 1892,
@@ -3272,12 +4120,36 @@
     "articleTitle": "FC Parson Drove"
   },
   {
+    "id": "eng10-ecln-06",
+    "displayName": "Framlingham Town",
+    "foundedYear": 1887,
+    "stadium": "Badingham Road",
+    "city": "Framlingham",
+    "articleTitle": "Framlingham Town F.C."
+  },
+  {
+    "id": "eng10-ecln-07",
+    "displayName": "Gorleston (Reserves)",
+    "foundedYear": 1887,
+    "stadium": "Wellesley Recreation Ground",
+    "city": "Great Yarmouth",
+    "articleTitle": "Gorleston F.C."
+  },
+  {
     "id": "eng10-ecln-08",
     "displayName": "Hadleigh United",
     "foundedYear": 1892,
     "stadium": "Millfield",
     "city": "Hadleigh",
     "articleTitle": "Hadleigh United F.C."
+  },
+  {
+    "id": "eng10-ecln-09",
+    "displayName": "Halesworth Town",
+    "foundedYear": 1887,
+    "stadium": "Dairy Hill Sports Complex",
+    "city": "Halesworth, Suffolk",
+    "articleTitle": "Halesworth Town F.C."
   },
   {
     "id": "eng10-ecln-10",
@@ -3312,6 +4184,30 @@
     "articleTitle": "Long Melford F.C."
   },
   {
+    "id": "eng10-ecln-14",
+    "displayName": "Needham Market (Reserves)",
+    "foundedYear": 1919,
+    "stadium": "Bloomfields",
+    "city": "Needham Market",
+    "articleTitle": "Needham Market F.C."
+  },
+  {
+    "id": "eng10-ecln-15",
+    "displayName": "Netherton United",
+    "foundedYear": 1992,
+    "stadium": "The Grange",
+    "city": "Cambridgeshire",
+    "articleTitle": "Netherton United F.C."
+  },
+  {
+    "id": "eng10-ecln-16",
+    "displayName": "Newmarket Town Reserves",
+    "foundedYear": 1877,
+    "stadium": "Cricket Field Road",
+    "city": "Newmarket",
+    "articleTitle": "Newmarket Town F.C."
+  },
+  {
     "id": "eng10-ecln-17",
     "displayName": "Norwich United",
     "foundedYear": 1903,
@@ -3320,12 +4216,28 @@
     "articleTitle": "Norwich United F.C."
   },
   {
+    "id": "eng10-ecln-18",
+    "displayName": "Stanway Pegasus",
+    "foundedYear": 2018,
+    "stadium": "Coggeshall Town F.C.",
+    "city": "Stanway",
+    "articleTitle": "AFC Pegasus"
+  },
+  {
     "id": "eng10-ecln-19",
     "displayName": "Whittlesey Athletic",
     "foundedYear": 2014,
     "stadium": "Feldale Field",
     "city": "Whittlesey",
     "articleTitle": "Whittlesey Athletic F.C."
+  },
+  {
+    "id": "eng10-ecln-20",
+    "displayName": "Wroxham (Reserves)",
+    "foundedYear": 1892,
+    "stadium": "Trafford Park",
+    "city": "Wroxham",
+    "articleTitle": "Wroxham F.C."
   },
   {
     "id": "eng9-eslp-01",
@@ -3350,6 +4262,22 @@
     "stadium": "Woodside Stadium",
     "city": "South Benfleet",
     "articleTitle": "Benfleet F.C."
+  },
+  {
+    "id": "eng9-eslp-04",
+    "displayName": "Clapton Community",
+    "foundedYear": 2018,
+    "stadium": "The Old Spotted Dog Ground",
+    "city": "Forest Gate",
+    "articleTitle": "Clapton C.F.C."
+  },
+  {
+    "id": "eng9-eslp-05",
+    "displayName": "Frenford",
+    "foundedYear": 1942,
+    "stadium": "The Jack Carter Centre",
+    "city": "Ilford",
+    "articleTitle": "Frenford F.C."
   },
   {
     "id": "eng9-eslp-06",
@@ -3400,12 +4328,28 @@
     "articleTitle": "Hullbridge Sports F.C."
   },
   {
+    "id": "eng9-eslp-12",
+    "displayName": "Hutton",
+    "foundedYear": 1928,
+    "stadium": "New Lodge",
+    "city": "Billericay",
+    "articleTitle": "Hutton F.C."
+  },
+  {
     "id": "eng9-eslp-13",
     "displayName": "Ilford",
     "foundedYear": 1881,
     "stadium": "Cricklefield Stadium",
     "city": "Ilford",
     "articleTitle": "Ilford F.C."
+  },
+  {
+    "id": "eng9-eslp-14",
+    "displayName": "Romford",
+    "foundedYear": 1876,
+    "stadium": "Mayesbrook Park",
+    "city": "Dagenham",
+    "articleTitle": "Romford F.C."
   },
   {
     "id": "eng9-eslp-15",
@@ -3456,12 +4400,36 @@
     "articleTitle": "Woodford Town F.C."
   },
   {
+    "id": "eng10-esls-01",
+    "displayName": "AS London",
+    "foundedYear": 1991,
+    "stadium": "New River Stadium",
+    "city": "Wood Green",
+    "articleTitle": "AS London F.C."
+  },
+  {
     "id": "eng10-esls-02",
     "displayName": "Athletic Newham",
     "foundedYear": 2015,
     "stadium": "Bobby Moore Sports Hub",
     "city": "Dagenham",
     "articleTitle": "Athletic Newham F.C."
+  },
+  {
+    "id": "eng10-esls-03",
+    "displayName": "Basildon Town",
+    "foundedYear": 1946,
+    "stadium": "The Hive",
+    "city": "Gardiners Close Basildon",
+    "articleTitle": "Basildon Town F.C."
+  },
+  {
+    "id": "eng10-esls-04",
+    "displayName": "Brimsdown",
+    "foundedYear": 2013,
+    "stadium": "Parkside",
+    "city": "Aveley",
+    "articleTitle": "Brimsdown F.C."
   },
   {
     "id": "eng10-esls-05",
@@ -3472,12 +4440,36 @@
     "articleTitle": "Burnham Ramblers F.C."
   },
   {
+    "id": "eng10-esls-06",
+    "displayName": "Cannons Wood",
+    "foundedYear": 2019,
+    "stadium": "Parkside Stadium",
+    "city": "Aveley",
+    "articleTitle": "Cannons Wood F.C."
+  },
+  {
     "id": "eng10-esls-07",
     "displayName": "Coggeshall Town",
     "foundedYear": 1878,
     "stadium": "West Street",
     "city": "Coggeshall",
     "articleTitle": "Coggeshall Town F.C."
+  },
+  {
+    "id": "eng10-esls-08",
+    "displayName": "Dunmow Town",
+    "foundedYear": 2020,
+    "stadium": "Scraley Road Stadium (Heybridge Swifts FC)",
+    "city": "Scraley Road Stadium",
+    "articleTitle": "Dunmow Town F.C."
+  },
+  {
+    "id": "eng10-esls-09",
+    "displayName": "East Thurrock Community",
+    "foundedYear": 1969,
+    "stadium": "Rookery Hill",
+    "city": "Corringham",
+    "articleTitle": "East Thurrock Community F.C."
   },
   {
     "id": "eng10-esls-10",
@@ -3488,6 +4480,22 @@
     "articleTitle": "Enfield Borough F.C."
   },
   {
+    "id": "eng10-esls-11",
+    "displayName": "FC Baresi",
+    "foundedYear": 1997,
+    "stadium": "Wodson Park",
+    "city": "London",
+    "articleTitle": "FC Baresi"
+  },
+  {
+    "id": "eng10-esls-12",
+    "displayName": "Hertford Heath",
+    "foundedYear": 1907,
+    "stadium": "Trinity Road Playing Fields",
+    "city": "Stanstead St Margarets, Hertfordshire",
+    "articleTitle": "Hertford Heath F.C."
+  },
+  {
     "id": "eng10-esls-13",
     "displayName": "Hoddesdon Town",
     "foundedYear": 1879,
@@ -3496,12 +4504,60 @@
     "articleTitle": "Hoddesdon Town F.C."
   },
   {
+    "id": "eng10-esls-14",
+    "displayName": "London Fennecs",
+    "foundedYear": null,
+    "stadium": "Paddington Recreation Ground",
+    "city": "London",
+    "articleTitle": "London Fennecs F.C."
+  },
+  {
+    "id": "eng10-esls-15",
+    "displayName": "London Harts United",
+    "foundedYear": 2023,
+    "stadium": "The Harlow Arena",
+    "city": "Harlow",
+    "articleTitle": "London Harts United F.C."
+  },
+  {
     "id": "eng10-esls-16",
     "displayName": "Lymore Gardens",
     "foundedYear": 2016,
     "stadium": "Oakside Stadium",
     "city": "Barkingside",
     "articleTitle": "Lymore Gardens F.C."
+  },
+  {
+    "id": "eng10-esls-17",
+    "displayName": "May & Baker EC",
+    "foundedYear": 1923,
+    "stadium": "Bobby Moore Sports Hub",
+    "city": "Dagenham",
+    "articleTitle": "May & Baker F.C."
+  },
+  {
+    "id": "eng10-esls-18",
+    "displayName": "Marcelona",
+    "foundedYear": 2003,
+    "stadium": "Leslie Fields",
+    "city": "Burnham-on-Crouch",
+    "articleTitle": "Marcelona F.C."
+  },
+  {
+    "id": "eng10-esls-19",
+    "displayName": "NW London",
+    "foundedYear": 2015,
+    "stadium": "Arkley",
+    "city": "Arkley, London",
+    "articleTitle": "NW London F.C."
+  },
+  {
+    "id": "eng10-esls-20",
+    "displayName": "Rayleigh Town",
+    "foundedYear": 1897,
+    "stadium": "Len Salmon Stadium",
+    "city": "Pitsea",
+    "articleTitle": "Rayleigh Town F.C."
   },
   {
     "id": "eng10-esls-21",
@@ -3624,6 +4680,14 @@
     "articleTitle": "Mangotsfield United F.C."
   },
   {
+    "id": "eng9-hlp-14",
+    "displayName": "Pershore Town",
+    "foundedYear": 1988,
+    "stadium": "That Carpet Place Stadium",
+    "city": "Pershore",
+    "articleTitle": "Pershore Town F.C."
+  },
+  {
     "id": "eng9-hlp-15",
     "displayName": "Roman Glass St George",
     "foundedYear": 1872,
@@ -3638,6 +4702,30 @@
     "stadium": "New Gerard Buxton Sports Ground",
     "city": "SN4 8DS",
     "articleTitle": "Royal Wootton Bassett Town F.C."
+  },
+  {
+    "id": "eng9-hlp-17",
+    "displayName": "Stourport Swifts",
+    "foundedYear": 1882,
+    "stadium": "Walshes Meadow",
+    "city": "Worcestershire",
+    "articleTitle": "Stourport Swifts F.C."
+  },
+  {
+    "id": "eng9-hlp-18",
+    "displayName": "Thornbury Town",
+    "foundedYear": 1898,
+    "stadium": "Mundy Playing Fields",
+    "city": "Thornbury",
+    "articleTitle": "Thornbury Town F.C."
+  },
+  {
+    "id": "eng9-hlp-19",
+    "displayName": "Tuffley Rovers",
+    "foundedYear": 1929,
+    "stadium": "Glevum Park",
+    "city": "|",
+    "articleTitle": "Tuffley Rovers F.C."
   },
   {
     "id": "eng9-hlp-20",
@@ -3704,6 +4792,22 @@
     "articleTitle": "Chipping Sodbury Town F.C."
   },
   {
+    "id": "eng10-hl1-08",
+    "displayName": "Clanfield (85)",
+    "foundedYear": 1890,
+    "stadium": "[http://stable.toolserver.org/geohack/geohack.php?pagename=Radcot_Road&params=51_42_30.78_N_1_35_32.42_W_region:GB_type:landmark Radcot Road]",
+    "city": "Oxfordshire",
+    "articleTitle": "Clanfield F.C."
+  },
+  {
+    "id": "eng10-hl1-09",
+    "displayName": "Ludlow Town",
+    "foundedYear": 1890,
+    "stadium": "The SBS Stadium",
+    "city": "Shropshire |",
+    "articleTitle": "Ludlow Town F.C."
+  },
+  {
     "id": "eng10-hl1-10",
     "displayName": "Lydney Town",
     "foundedYear": 1911,
@@ -3726,6 +4830,14 @@
     "stadium": "The Cherry Tree Stadium",
     "city": "B97 6PB",
     "articleTitle": "Redditch Borough F.C."
+  },
+  {
+    "id": "eng10-hl1-13",
+    "displayName": "Sharpness",
+    "foundedYear": 1900,
+    "stadium": "Hamfields Leisure",
+    "city": "Berkeley, Gloucestershire",
+    "articleTitle": "Sharpness A.F.C."
   },
   {
     "id": "eng10-hl1-14",
@@ -3752,12 +4864,28 @@
     "articleTitle": "Studley F.C."
   },
   {
+    "id": "eng10-hl1-17",
+    "displayName": "Swindon Supermarine Res",
+    "foundedYear": 1992,
+    "stadium": "Imagine Cruising Stadium",
+    "city": "Swindon",
+    "articleTitle": "Swindon Supermarine F.C."
+  },
+  {
     "id": "eng10-hl1-18",
     "displayName": "Wantage Town",
     "foundedYear": 1892,
     "stadium": "Alfredian Park (3G pitch)",
     "city": "Wantage",
     "articleTitle": "Wantage Town F.C."
+  },
+  {
+    "id": "eng9-mlp-01",
+    "displayName": "AFC Wolverhampton City",
+    "foundedYear": 1922,
+    "stadium": "Castlecroft Stadium",
+    "city": "Wolverhampton",
+    "articleTitle": "A.F.C. Wolverhampton City"
   },
   {
     "id": "eng9-mlp-02",
@@ -3776,6 +4904,14 @@
     "articleTitle": "Brocton F.C."
   },
   {
+    "id": "eng9-mlp-04",
+    "displayName": "Cheadle Town",
+    "foundedYear": 1961,
+    "stadium": "Park Road Stadium",
+    "city": "Cheadle, a suburb of Stockport, Greater Manchester",
+    "articleTitle": "Cheadle Town F.C."
+  },
+  {
     "id": "eng9-mlp-05",
     "displayName": "Darlaston Town",
     "foundedYear": 1874,
@@ -3784,12 +4920,28 @@
     "articleTitle": "Darlaston Town F.C."
   },
   {
+    "id": "eng9-mlp-06",
+    "displayName": "Dudley Town",
+    "foundedYear": 1888,
+    "stadium": "Guardian Warehousing Arena",
+    "city": "Willenhall",
+    "articleTitle": "Dudley Town F.C."
+  },
+  {
     "id": "eng9-mlp-07",
     "displayName": "Lye Town",
     "foundedYear": 1930,
     "stadium": "The Sports Ground",
     "city": "Lye",
     "articleTitle": "Lye Town F.C."
+  },
+  {
+    "id": "eng9-mlp-08",
+    "displayName": "Northwich Victoria",
+    "foundedYear": 1874,
+    "stadium": "APEC Taxis Stadium (groundshare with Runcorn Linnets)",
+    "city": "APEC Taxis Stadium",
+    "articleTitle": "Northwich Victoria F.C."
   },
   {
     "id": "eng9-mlp-09",
@@ -3816,6 +4968,14 @@
     "articleTitle": "Sporting Khalsa F.C."
   },
   {
+    "id": "eng9-mlp-12",
+    "displayName": "Stockport Georgians",
+    "foundedYear": 1908,
+    "stadium": "Cromley Road",
+    "city": "Stockport",
+    "articleTitle": "Stockport Georgians A.F.C."
+  },
+  {
     "id": "eng9-mlp-13",
     "displayName": "Stone Old Alleynians",
     "foundedYear": 1962,
@@ -3838,6 +4998,14 @@
     "stadium": "[http://stable.toolserver.org/geohack/geohack.php?pagename=The_Beeches&params=52_30_38.38_N_2_03_00.64_W_region:GB_type:landmark The Beeches]",
     "city": "West Midlands",
     "articleTitle": "Tividale F.C."
+  },
+  {
+    "id": "eng9-mlp-16",
+    "displayName": "Uttoxeter Town",
+    "foundedYear": 1983,
+    "stadium": "Oldfields Sports Ground",
+    "city": "Uttoxeter",
+    "articleTitle": "Uttoxeter Town F.C."
   },
   {
     "id": "eng9-mlp-17",
@@ -3872,6 +5040,30 @@
     "articleTitle": "Wythenshawe Town F.C."
   },
   {
+    "id": "eng10-ml1-01",
+    "displayName": "AFC North Kilworth",
+    "foundedYear": null,
+    "stadium": "North Kilworth Sports Club",
+    "city": "North Kilworth",
+    "articleTitle": "A.F.C. North Kilworth"
+  },
+  {
+    "id": "eng10-ml1-02",
+    "displayName": "Anstey Town",
+    "foundedYear": null,
+    "stadium": "Beaumont Park",
+    "city": "Anstey, Leicestershire",
+    "articleTitle": "Anstey Town F.C."
+  },
+  {
+    "id": "eng10-ml1-03",
+    "displayName": "Birmingham OJM",
+    "foundedYear": 1996,
+    "stadium": "Triplex Sports Ground",
+    "city": "Kings Norton",
+    "articleTitle": "Birmingham OJM F.C."
+  },
+  {
     "id": "eng10-ml1-04",
     "displayName": "Birstall United Social",
     "foundedYear": 1961,
@@ -3904,6 +5096,14 @@
     "articleTitle": "Coalville Town F.C."
   },
   {
+    "id": "eng10-ml1-08",
+    "displayName": "Coventry Copsewood",
+    "foundedYear": 1922,
+    "stadium": "Allard Way",
+    "city": "Coventry |",
+    "articleTitle": "Coventry Copsewood F.C."
+  },
+  {
     "id": "eng10-ml1-09",
     "displayName": "Cradley Town",
     "foundedYear": 1970,
@@ -3920,12 +5120,28 @@
     "articleTitle": "FCV Grace Dieu"
   },
   {
+    "id": "eng10-ml1-11",
+    "displayName": "G.N.G Oadby Town",
+    "foundedYear": 1937,
+    "stadium": "Riverside / GNG FC Football Grounds",
+    "city": "Leicester",
+    "articleTitle": "GNG Oadby Town F.C."
+  },
+  {
     "id": "eng10-ml1-12",
     "displayName": "Gornal Athletic",
     "foundedYear": 1945,
     "stadium": "Garden Walk Stadium",
     "city": "Gornal",
     "articleTitle": "Gornal Athletic F.C."
+  },
+  {
+    "id": "eng10-ml1-13",
+    "displayName": "Heather St. John's",
+    "foundedYear": 1949,
+    "stadium": "St John's Park",
+    "city": "Heather",
+    "articleTitle": "Heather St John's F.C."
   },
   {
     "id": "eng10-ml1-14",
@@ -4064,6 +5280,30 @@
     "articleTitle": "Droylsden F.C."
   },
   {
+    "id": "eng9-nwcp-09",
+    "displayName": "Euxton Villa",
+    "foundedYear": 1907,
+    "stadium": "Jim Fowler Memorial Ground",
+    "city": "Euxton",
+    "articleTitle": "Euxton Villa F.C."
+  },
+  {
+    "id": "eng9-nwcp-10",
+    "displayName": "F.C. St. Helens",
+    "foundedYear": 2014,
+    "stadium": "The Kay Welding Stadium",
+    "city": "St. Helens",
+    "articleTitle": "F.C. St Helens"
+  },
+  {
+    "id": "eng9-nwcp-11",
+    "displayName": "FC Isle of Man",
+    "foundedYear": 2019,
+    "stadium": "The Bowl",
+    "city": "Douglas",
+    "articleTitle": "F.C. Isle of Man"
+  },
+  {
     "id": "eng9-nwcp-12",
     "displayName": "Glossop North End",
     "foundedYear": 1886,
@@ -4080,12 +5320,28 @@
     "articleTitle": "Irlam F.C."
   },
   {
+    "id": "eng9-nwcp-14",
+    "displayName": "Longridge Town",
+    "foundedYear": 1996,
+    "stadium": "Inglewhite Road",
+    "city": "Longridge, Lancashire",
+    "articleTitle": "Longridge Town F.C."
+  },
+  {
     "id": "eng9-nwcp-15",
     "displayName": "Nelson",
     "foundedYear": 1882,
     "stadium": "Victoria Park",
     "city": "Nelson",
     "articleTitle": "Nelson F.C."
+  },
+  {
+    "id": "eng9-nwcp-16",
+    "displayName": "Pilkington",
+    "foundedYear": 1938,
+    "stadium": "Ruskin Drive",
+    "city": "St Helens",
+    "articleTitle": "Pilkington F.C."
   },
   {
     "id": "eng9-nwcp-17",
@@ -4104,6 +5360,14 @@
     "articleTitle": "Ramsbottom United F.C."
   },
   {
+    "id": "eng9-nwcp-19",
+    "displayName": "South Liverpool",
+    "foundedYear": 1935,
+    "stadium": "Jericho Lane",
+    "city": "Aigburth, Liverpool, , founded as a phoenix club of a club of the same name",
+    "articleTitle": "South Liverpool F.C."
+  },
+  {
     "id": "eng9-nwcp-20",
     "displayName": "Trafford",
     "foundedYear": 1990,
@@ -4120,6 +5384,14 @@
     "articleTitle": "A.F.C. Blackpool"
   },
   {
+    "id": "eng10-nwcn-02",
+    "displayName": "AFC Knowsley",
+    "foundedYear": 1987,
+    "stadium": "Lord Derby Pavillion",
+    "city": "Knowsley, Merseyside",
+    "articleTitle": "A.F.C. Knowsley"
+  },
+  {
     "id": "eng10-nwcn-03",
     "displayName": "Ashton Athletic",
     "foundedYear": 1968,
@@ -4134,6 +5406,14 @@
     "stadium": "Edge Green Street",
     "city": "Ashton-in-Makerfield",
     "articleTitle": "Ashton Town F.C."
+  },
+  {
+    "id": "eng10-nwcn-05",
+    "displayName": "Ashville",
+    "foundedYear": 1949,
+    "stadium": "Villa Park (Ray Parker Stadium)",
+    "city": "Wallasey",
+    "articleTitle": "Ashville F.C."
   },
   {
     "id": "eng10-nwcn-06",
@@ -4168,12 +5448,44 @@
     "articleTitle": "Daisy Hill F.C."
   },
   {
+    "id": "eng10-nwcn-10",
+    "displayName": "Darwen",
+    "foundedYear": 2009,
+    "stadium": "Anchor Ground",
+    "city": "Darwen",
+    "articleTitle": "Darwen F.C."
+  },
+  {
     "id": "eng10-nwcn-11",
     "displayName": "Flixton",
     "foundedYear": 1960,
     "stadium": "Valley Road Stadium",
     "city": "Flixton",
     "articleTitle": "Flixton F.C."
+  },
+  {
+    "id": "eng10-nwcn-12",
+    "displayName": "Fulwood Amateur",
+    "foundedYear": 1924,
+    "stadium": "Lightfoot Lane",
+    "city": "Fulwood, Preston",
+    "articleTitle": "Fulwood Amateurs A.F.C."
+  },
+  {
+    "id": "eng10-nwcn-13",
+    "displayName": "Garstang",
+    "foundedYear": 1885,
+    "stadium": "The Riverside",
+    "city": "Garstang",
+    "articleTitle": "Garstang F.C."
+  },
+  {
+    "id": "eng10-nwcn-14",
+    "displayName": "Halewood Apollo",
+    "foundedYear": 2014,
+    "stadium": "Volair Halewood",
+    "city": "Halewood, Merseyside",
+    "articleTitle": "Halewood Apollo F.C."
   },
   {
     "id": "eng10-nwcn-15",
@@ -4184,12 +5496,28 @@
     "articleTitle": "Holker Old Boys A.F.C."
   },
   {
+    "id": "eng10-nwcn-16",
+    "displayName": "Litherland Remyca",
+    "foundedYear": 1959,
+    "stadium": "Litherland Sports Park",
+    "city": "Litherland",
+    "articleTitle": "Litherland REMYCA F.C."
+  },
+  {
     "id": "eng10-nwcn-17",
     "displayName": "Maghull",
     "foundedYear": 1921,
     "stadium": "DT Hughes Community Stadium",
     "city": "Maghull",
     "articleTitle": "Maghull F.C."
+  },
+  {
+    "id": "eng10-nwcn-18",
+    "displayName": "MSB Woolton",
+    "foundedYear": 1994,
+    "stadium": "Simpsons Football Ground",
+    "city": "Woolton, Liverpool",
+    "articleTitle": "MSB Woolton F.C."
   },
   {
     "id": "eng10-nwcn-19",
@@ -4208,6 +5536,38 @@
     "articleTitle": "Steeton A.F.C."
   },
   {
+    "id": "eng10-nwcn-21",
+    "displayName": "Thornton Cleveleys",
+    "foundedYear": 1987,
+    "stadium": "Gamble Road",
+    "city": "Thornton-Cleveleys",
+    "articleTitle": "Thornton Cleveleys F.C."
+  },
+  {
+    "id": "eng10-nwcn-22",
+    "displayName": "Uppermill",
+    "foundedYear": 1923,
+    "stadium": "Seel Park",
+    "city": "Mossley, Greater Manchester",
+    "articleTitle": "Uppermill F.C."
+  },
+  {
+    "id": "eng10-nwcs-01",
+    "displayName": "AFC Bridgnorth",
+    "foundedYear": 2013,
+    "stadium": "Crown Meadow",
+    "city": "the town of Bridgnorth, Shropshire",
+    "articleTitle": "A.F.C. Bridgnorth"
+  },
+  {
+    "id": "eng10-nwcs-02",
+    "displayName": "Allscott Heath",
+    "foundedYear": 2010,
+    "stadium": "Allscott Sports & Social Club",
+    "city": "Allscott",
+    "articleTitle": "Allscott Heath F.C."
+  },
+  {
     "id": "eng10-nwcs-03",
     "displayName": "Alsager Town",
     "foundedYear": 1968,
@@ -4222,6 +5582,14 @@
     "stadium": "Townfield",
     "city": "Barnton",
     "articleTitle": "Barnton F.C."
+  },
+  {
+    "id": "eng10-nwcs-05",
+    "displayName": "Bilston Town",
+    "foundedYear": 1894,
+    "stadium": "Queen Street Stadium",
+    "city": "Bilston",
+    "articleTitle": "Bilston Town F.C."
   },
   {
     "id": "eng10-nwcs-06",
@@ -4240,12 +5608,36 @@
     "articleTitle": "Cheadle Heath Nomads F.C."
   },
   {
+    "id": "eng10-nwcs-08",
+    "displayName": "Crewe",
+    "foundedYear": 1998,
+    "stadium": "The Excel",
+    "city": "Crewe FC Sports Pavilion",
+    "articleTitle": "Crewe F.C."
+  },
+  {
+    "id": "eng10-nwcs-09",
+    "displayName": "Dawley Town",
+    "foundedYear": 1970,
+    "stadium": "Hamer Leisure Theatre of Jockeys",
+    "city": "Dawley , Shropshire",
+    "articleTitle": "Dawley Town F.C."
+  },
+  {
     "id": "eng10-nwcs-10",
     "displayName": "Eccleshall",
     "foundedYear": 1971,
     "stadium": "Pershall Park",
     "city": "Eccleshall",
     "articleTitle": "Eccleshall F.C."
+  },
+  {
+    "id": "eng10-nwcs-11",
+    "displayName": "Foley Meir",
+    "foundedYear": 1947,
+    "stadium": "Trentham Foods Stadium",
+    "city": "Stoke-on-Trent",
+    "articleTitle": "Foley Meir F.C."
   },
   {
     "id": "eng10-nwcs-12",
@@ -4262,6 +5654,14 @@
     "stadium": "Church Lane",
     "city": "New Mills",
     "articleTitle": "New Mills F.C."
+  },
+  {
+    "id": "eng10-nwcs-14",
+    "displayName": "Sandbach United",
+    "foundedYear": 2004,
+    "stadium": "Sandbach Community Football Centre",
+    "city": "Sandbach",
+    "articleTitle": "Sandbach United F.C."
   },
   {
     "id": "eng10-nwcs-15",
@@ -4286,6 +5686,22 @@
     "stadium": "The Lionheart Security Services Stadium",
     "city": "Telford",
     "articleTitle": "Telford Town F.C."
+  },
+  {
+    "id": "eng10-nwcs-18",
+    "displayName": "Wednesfield Community",
+    "foundedYear": 1961,
+    "stadium": "Cottage Ground",
+    "city": "Wednesfield",
+    "articleTitle": "Wednesfield F.C."
+  },
+  {
+    "id": "eng10-nwcs-19",
+    "displayName": "Widnes Town",
+    "foundedYear": 2025,
+    "stadium": "Halton Stadium primary Rossett Park temporary",
+    "city": "Widnes, Cheshire",
+    "articleTitle": "Widnes Town F.C."
   },
   {
     "id": "eng10-nwcs-20",
@@ -4352,6 +5768,30 @@
     "articleTitle": "Golcar United F.C."
   },
   {
+    "id": "eng9-ncep-08",
+    "displayName": "Handsworth",
+    "foundedYear": 2014,
+    "stadium": "Olivers Mount",
+    "city": "Sheffield",
+    "articleTitle": "Handsworth F.C."
+  },
+  {
+    "id": "eng9-ncep-09",
+    "displayName": "Horbury Town",
+    "foundedYear": 1900,
+    "stadium": "Slazengers Sports Complex",
+    "city": "Horbury",
+    "articleTitle": "Horbury Town F.C."
+  },
+  {
+    "id": "eng9-ncep-10",
+    "displayName": "Keighley Town",
+    "foundedYear": 1948,
+    "stadium": "Cougar Park",
+    "city": "Keighley",
+    "articleTitle": "Keighley Town F.C."
+  },
+  {
     "id": "eng9-ncep-11",
     "displayName": "Knaresborough Town",
     "foundedYear": 1898,
@@ -4376,6 +5816,14 @@
     "articleTitle": "Penistone Church F.C."
   },
   {
+    "id": "eng9-ncep-14",
+    "displayName": "Pickering Town Community",
+    "foundedYear": 1888,
+    "stadium": "Mill Lane",
+    "city": "Pickering",
+    "articleTitle": "Pickering Town F.C."
+  },
+  {
     "id": "eng9-ncep-15",
     "displayName": "Retford",
     "foundedYear": 2015,
@@ -4384,12 +5832,36 @@
     "articleTitle": "Retford F.C."
   },
   {
+    "id": "eng9-ncep-16",
+    "displayName": "Retford United",
+    "foundedYear": 1987,
+    "stadium": "Cannon Park",
+    "city": "Retford",
+    "articleTitle": "Retford United F.C."
+  },
+  {
     "id": "eng9-ncep-17",
     "displayName": "Rossington Main",
     "foundedYear": 1919,
     "stadium": "Oxford Street",
     "city": "South Yorkshire",
     "articleTitle": "Rossington Main F.C."
+  },
+  {
+    "id": "eng9-ncep-18",
+    "displayName": "Tadcaster Albion",
+    "foundedYear": 1892,
+    "stadium": "Ings Lane",
+    "city": "Tadcaster|",
+    "articleTitle": "Tadcaster Albion A.F.C."
+  },
+  {
+    "id": "eng9-ncep-19",
+    "displayName": "Thackley Association",
+    "foundedYear": 1930,
+    "stadium": "Dennyfield Bradford",
+    "city": "Thackley, north Bradford, West Yorkshire",
+    "articleTitle": "Thackley A.F.C."
   },
   {
     "id": "eng9-ncep-20",
@@ -4424,6 +5896,14 @@
     "articleTitle": "Athersley Recreation F.C."
   },
   {
+    "id": "eng10-nce1-04",
+    "displayName": "Brigg Town FC CIC",
+    "foundedYear": 1864,
+    "stadium": "The Hawthorns",
+    "city": "Brigg",
+    "articleTitle": "Brigg Town F.C."
+  },
+  {
     "id": "eng10-nce1-05",
     "displayName": "Club Thorne Colliery",
     "foundedYear": 1927,
@@ -4446,6 +5926,14 @@
     "stadium": "Welfare Ground",
     "city": "Armthorpe",
     "articleTitle": "Doncaster City F.C."
+  },
+  {
+    "id": "eng10-nce1-08",
+    "displayName": "Field Olympic",
+    "foundedYear": 2005,
+    "stadium": "Olympic Park",
+    "city": "Bradford",
+    "articleTitle": "Field Olympic F.C."
   },
   {
     "id": "eng10-nce1-09",
@@ -4472,12 +5960,44 @@
     "articleTitle": "Hemsworth Miners Welfare F.C."
   },
   {
+    "id": "eng10-nce1-12",
+    "displayName": "Ilkley Town",
+    "foundedYear": 1994,
+    "stadium": "MPM Stadium",
+    "city": "Ilkley",
+    "articleTitle": "Ilkley Town A.F.C."
+  },
+  {
+    "id": "eng10-nce1-13",
+    "displayName": "Immingham Town",
+    "foundedYear": 2016,
+    "stadium": "Blossom Way Sports & Social Club",
+    "city": "Immingham",
+    "articleTitle": "Immingham Town F.C."
+  },
+  {
     "id": "eng10-nce1-14",
     "displayName": "Kinsley Boys",
     "foundedYear": 1962,
     "stadium": "Kinsley Playing Fields",
     "city": "Kinsley near Wakefield in West Yorkshire",
     "articleTitle": "Kinsley Boys F.C."
+  },
+  {
+    "id": "eng10-nce1-15",
+    "displayName": "LIV",
+    "foundedYear": 1998,
+    "stadium": "Haworth Park",
+    "city": "Kingston upon Hull, East Riding of Yorkshire",
+    "articleTitle": "LIV F.C."
+  },
+  {
+    "id": "eng10-nce1-16",
+    "displayName": "Route One Rovers",
+    "foundedYear": 2013,
+    "stadium": "Marley Stadium",
+    "city": "Keighley",
+    "articleTitle": "Route One Rovers F.C."
   },
   {
     "id": "eng10-nce1-17",
@@ -4494,6 +6014,14 @@
     "stadium": "South Leeds Stadium",
     "city": "Leeds, West Yorkshire",
     "articleTitle": "South Leeds F.C."
+  },
+  {
+    "id": "eng10-nce1-19",
+    "displayName": "Leeds UFCA",
+    "foundedYear": 2010,
+    "stadium": "Crofton Community Centre",
+    "city": "West Yorkshire",
+    "articleTitle": "Leeds U.F.C.A."
   },
   {
     "id": "eng10-nce1-20",
@@ -4526,6 +6054,14 @@
     "stadium": "Birtley Sports Complex",
     "city": "Birtley",
     "articleTitle": "Birtley Town F.C."
+  },
+  {
+    "id": "eng9-nl1-02",
+    "displayName": "Bishop Auckland",
+    "foundedYear": 1886,
+    "stadium": "Heritage Park",
+    "city": "Bishop Auckland",
+    "articleTitle": "Bishop Auckland F.C."
   },
   {
     "id": "eng9-nl1-03",
@@ -4568,6 +6104,14 @@
     "articleTitle": "Easington Colliery A.F.C."
   },
   {
+    "id": "eng9-nl1-08",
+    "displayName": "Horden Community Welfare",
+    "foundedYear": 1907,
+    "stadium": "Welfare Park",
+    "city": "Horden, County Durham",
+    "articleTitle": "Horden Community Welfare F.C."
+  },
+  {
     "id": "eng9-nl1-09",
     "displayName": "Kendal Town",
     "foundedYear": 1919,
@@ -4590,6 +6134,14 @@
     "stadium": "Sam Smith's Park",
     "city": "Newcastle upon Tyne",
     "articleTitle": "Newcastle Benfield F.C."
+  },
+  {
+    "id": "eng9-nl1-12",
+    "displayName": "Newcastle Blue Star",
+    "foundedYear": 1930,
+    "stadium": "Scotswood",
+    "city": "Newcastle upon Tyne",
+    "articleTitle": "Newcastle Blue Star F.C."
   },
   {
     "id": "eng9-nl1-13",
@@ -4624,6 +6176,14 @@
     "articleTitle": "Penrith A.F.C."
   },
   {
+    "id": "eng9-nl1-17",
+    "displayName": "Redcar Town",
+    "foundedYear": 1997,
+    "stadium": "Mo Mowlam Memorial Park",
+    "city": "Redcar",
+    "articleTitle": "Redcar Town F.C."
+  },
+  {
     "id": "eng9-nl1-18",
     "displayName": "Shildon",
     "foundedYear": 1890,
@@ -4656,6 +6216,22 @@
     "articleTitle": "Whitley Bay F.C."
   },
   {
+    "id": "eng9-nl1-22",
+    "displayName": "Yarm & Eaglescliffe",
+    "foundedYear": 2017,
+    "stadium": "Bedford Terrace",
+    "city": "Billingham",
+    "articleTitle": "Yarm & Eaglescliffe F.C."
+  },
+  {
+    "id": "eng10-nl2-01",
+    "displayName": "AFC Newbiggin",
+    "foundedYear": 2011,
+    "stadium": "Newbiggin Sports Centre",
+    "city": "Newbiggin-by-the-Sea",
+    "articleTitle": "A.F.C. Newbiggin"
+  },
+  {
     "id": "eng10-nl2-02",
     "displayName": "Alnwick Town",
     "foundedYear": 1879,
@@ -4678,6 +6254,54 @@
     "stadium": "Bedford Terrace",
     "city": "Billingham",
     "articleTitle": "Billingham Town F.C."
+  },
+  {
+    "id": "eng10-nl2-05",
+    "displayName": "Boldon C.A.",
+    "foundedYear": 1892,
+    "stadium": "Boldon Colliery Welfare Ground",
+    "city": "NE35 9AN",
+    "articleTitle": "Boldon Community Association F.C."
+  },
+  {
+    "id": "eng10-nl2-06",
+    "displayName": "Chester Le Street Town",
+    "foundedYear": 1972,
+    "stadium": "Moor Park",
+    "city": "Chester-le-Street",
+    "articleTitle": "Chester-le-Street Town F.C."
+  },
+  {
+    "id": "eng10-nl2-07",
+    "displayName": "Chester le Street United",
+    "foundedYear": 2020,
+    "stadium": "Riverside",
+    "city": "Chester-le-Street",
+    "articleTitle": "Park View A.F.C."
+  },
+  {
+    "id": "eng10-nl2-08",
+    "displayName": "Darlington Town",
+    "foundedYear": 2018,
+    "stadium": "Eastbourne Community Stadium Darlington",
+    "city": "Darlington, in County Durham",
+    "articleTitle": "Darlington Town F.C."
+  },
+  {
+    "id": "eng10-nl2-09",
+    "displayName": "Durham United",
+    "foundedYear": 2012,
+    "stadium": "Club Ground",
+    "city": "Durham",
+    "articleTitle": "Durham United F.C."
+  },
+  {
+    "id": "eng10-nl2-10",
+    "displayName": "Grangetown Boys Club",
+    "foundedYear": 1941,
+    "stadium": "B & W Lifting Stadium",
+    "city": "North Yorkshire",
+    "articleTitle": "Grangetown Boys Club F.C."
   },
   {
     "id": "eng10-nl2-11",
@@ -4704,6 +6328,22 @@
     "articleTitle": "Newcastle University F.C."
   },
   {
+    "id": "eng10-nl2-14",
+    "displayName": "Prudhoe Youth Club",
+    "foundedYear": 1969,
+    "stadium": "Essity Park",
+    "city": "Prudhoe",
+    "articleTitle": "Prudhoe Youth Club F.C."
+  },
+  {
+    "id": "eng10-nl2-15",
+    "displayName": "Ryton & Crawcrook Albion",
+    "foundedYear": 1970,
+    "stadium": "Kingsley Park",
+    "city": "NE40 3SN",
+    "articleTitle": "Ryton & Crawcrook Albion F.C."
+  },
+  {
     "id": "eng10-nl2-16",
     "displayName": "Seaham Red Star",
     "foundedYear": 1973,
@@ -4712,12 +6352,28 @@
     "articleTitle": "Seaham Red Star F.C."
   },
   {
+    "id": "eng10-nl2-17",
+    "displayName": "Seaton Carew",
+    "foundedYear": 1998,
+    "stadium": "Hornby Park",
+    "city": "Seaton Carew",
+    "articleTitle": "Seaton Carew F.C."
+  },
+  {
     "id": "eng10-nl2-18",
     "displayName": "Stokesley Sports Club",
     "foundedYear": 1920,
     "stadium": "Stokesley Sports Club",
     "city": "Stokesley",
     "articleTitle": "Stokesley Sports Club F.C."
+  },
+  {
+    "id": "eng10-nl2-19",
+    "displayName": "Sunderland RCA (Sat)",
+    "foundedYear": 1963,
+    "stadium": "Meadow Park",
+    "city": "Sunderland |",
+    "articleTitle": "Sunderland Ryhope Community Association F.C."
   },
   {
     "id": "eng10-nl2-20",
@@ -4736,6 +6392,14 @@
     "articleTitle": "A.F.C. St Austell"
   },
   {
+    "id": "eng10-swpw-02",
+    "displayName": "Bude Town",
+    "foundedYear": 1901,
+    "stadium": "Broadclose Park",
+    "city": "Bude",
+    "articleTitle": "Bude Town F.C."
+  },
+  {
     "id": "eng10-swpw-03",
     "displayName": "Callington Town",
     "foundedYear": 1989,
@@ -4750,6 +6414,30 @@
     "stadium": "Trefrew Park",
     "city": "Camelford",
     "articleTitle": "Camelford F.C."
+  },
+  {
+    "id": "eng10-swpw-05",
+    "displayName": "Dobwalls",
+    "foundedYear": 1922,
+    "stadium": "Lantoom Park",
+    "city": "Dobwalls",
+    "articleTitle": "Dobwalls F.C."
+  },
+  {
+    "id": "eng10-swpw-06",
+    "displayName": "Falmouth Town (Reserves)",
+    "foundedYear": 1949,
+    "stadium": "Bickland Park",
+    "city": "Falmouth",
+    "articleTitle": "Falmouth Town A.F.C."
+  },
+  {
+    "id": "eng10-swpw-07",
+    "displayName": "Hayle",
+    "foundedYear": null,
+    "stadium": "Club Ground",
+    "city": "Hayle",
+    "articleTitle": "Hayle F.C."
   },
   {
     "id": "eng10-swpw-08",
@@ -4800,6 +6488,22 @@
     "articleTitle": "Penzance A.F.C."
   },
   {
+    "id": "eng10-swpw-14",
+    "displayName": "St Day",
+    "foundedYear": 1949,
+    "stadium": "Vogue Park",
+    "city": "St Day",
+    "articleTitle": "St Day A.F.C."
+  },
+  {
+    "id": "eng10-swpw-15",
+    "displayName": "St Mawgan",
+    "foundedYear": 1984,
+    "stadium": "Trevarrian Park",
+    "city": "Mawgan Porth",
+    "articleTitle": "St Mawgan F.C."
+  },
+  {
     "id": "eng10-swpw-16",
     "displayName": "Sticker",
     "foundedYear": 1900,
@@ -4814,6 +6518,14 @@
     "stadium": "Bodieve Park",
     "city": "Wadebridge",
     "articleTitle": "Wadebridge Town F.C."
+  },
+  {
+    "id": "eng10-swpw-18",
+    "displayName": "Wendron United",
+    "foundedYear": 1986,
+    "stadium": "The Underlane",
+    "city": "Wendron",
+    "articleTitle": "Wendron United F.C."
   },
   {
     "id": "eng10-swpe-01",
@@ -4864,12 +6576,36 @@
     "articleTitle": "Elburton Villa F.C."
   },
   {
+    "id": "eng10-swpe-07",
+    "displayName": "Honiton Town",
+    "foundedYear": 1950,
+    "stadium": "Mountbatten Park",
+    "city": "Honiton",
+    "articleTitle": "Honiton Town F.C."
+  },
+  {
     "id": "eng10-swpe-08",
     "displayName": "Ilfracombe Town",
     "foundedYear": 1902,
     "stadium": "Marlborough Park",
     "city": "Ilfracombe",
     "articleTitle": "Ilfracombe Town A.F.C."
+  },
+  {
+    "id": "eng10-swpe-09",
+    "displayName": "Ilminster Town",
+    "foundedYear": 1920,
+    "stadium": "The Recreation Ground",
+    "city": "Ilminster",
+    "articleTitle": "Ilminster Town F.C."
+  },
+  {
+    "id": "eng10-swpe-10",
+    "displayName": "Middlezoy Rovers",
+    "foundedYear": 1973,
+    "stadium": "The Aerodrome",
+    "city": "Westonzoyland",
+    "articleTitle": "Middlezoy Rovers F.C."
   },
   {
     "id": "eng10-swpe-11",
@@ -4880,12 +6616,52 @@
     "articleTitle": "Newton Abbot Spurs A.F.C."
   },
   {
+    "id": "eng10-swpe-12",
+    "displayName": "Okehampton Argyle",
+    "foundedYear": 1926,
+    "stadium": "Simmons Park",
+    "city": "Okehampton",
+    "articleTitle": "Okehampton Argyle F.C."
+  },
+  {
+    "id": "eng10-swpe-13",
+    "displayName": "Stoke Gabriel & Torbay Police",
+    "foundedYear": 1905,
+    "stadium": "Broadley Lane",
+    "city": "Stoke Gabriel",
+    "articleTitle": "Stoke Gabriel & Torbay Police F.C."
+  },
+  {
+    "id": "eng10-swpe-14",
+    "displayName": "Teignmouth",
+    "foundedYear": 1946,
+    "stadium": "Coombe Valley",
+    "city": "Teignmouth",
+    "articleTitle": "Teignmouth A.F.C."
+  },
+  {
+    "id": "eng10-swpe-15",
+    "displayName": "Torridgeside",
+    "foundedYear": 1989,
+    "stadium": "Donnacroft",
+    "city": "Great Torrington",
+    "articleTitle": "Torridgeside A.F.C."
+  },
+  {
     "id": "eng10-swpe-16",
     "displayName": "Torrington",
     "foundedYear": 1908,
     "stadium": "Vicarage Field",
     "city": "Great Torrington, Devon",
     "articleTitle": "Torrington F.C."
+  },
+  {
+    "id": "eng10-swpe-17",
+    "displayName": "University of Exeter",
+    "foundedYear": 1900,
+    "stadium": "Club Ground",
+    "city": "University of Exeter",
+    "articleTitle": "University of Exeter"
   },
   {
     "id": "eng9-scp-01",
@@ -4928,6 +6704,30 @@
     "articleTitle": "East Grinstead Town F.C."
   },
   {
+    "id": "eng9-scp-06",
+    "displayName": "Eastbourne United Association",
+    "foundedYear": 2003,
+    "stadium": "The Oval",
+    "city": "Eastbourne",
+    "articleTitle": "Eastbourne United A.F.C."
+  },
+  {
+    "id": "eng9-scp-07",
+    "displayName": "Forest Row",
+    "foundedYear": 1892,
+    "stadium": "Jubilee Field",
+    "city": "Three Bridges",
+    "articleTitle": "Forest Row F.C."
+  },
+  {
+    "id": "eng9-scp-08",
+    "displayName": "Guernsey",
+    "foundedYear": 2011,
+    "stadium": "Victoria Park",
+    "city": "Guernsey",
+    "articleTitle": "Guernsey F.C."
+  },
+  {
     "id": "eng9-scp-09",
     "displayName": "Hassocks",
     "foundedYear": 1902,
@@ -4942,6 +6742,14 @@
     "stadium": "Hanbury Park",
     "city": "Haywards Heath",
     "articleTitle": "Haywards Heath Town F.C."
+  },
+  {
+    "id": "eng9-scp-11",
+    "displayName": "Horsham YMCA",
+    "foundedYear": 1898,
+    "stadium": "Gorings Mead",
+    "city": "Horsham",
+    "articleTitle": "Horsham YM F.C."
   },
   {
     "id": "eng9-scp-12",
@@ -4992,12 +6800,36 @@
     "articleTitle": "Pagham F.C."
   },
   {
+    "id": "eng9-scp-18",
+    "displayName": "Roffey",
+    "foundedYear": 1901,
+    "stadium": "Hop Oast Stadium",
+    "city": "Horsham",
+    "articleTitle": "Roffey F.C."
+  },
+  {
     "id": "eng9-scp-19",
     "displayName": "Seaford Town",
     "foundedYear": 1932,
     "stadium": "The Crouch",
     "city": "Seaford",
     "articleTitle": "Seaford Town F.C."
+  },
+  {
+    "id": "eng9-scp-20",
+    "displayName": "Wick",
+    "foundedYear": 1892,
+    "stadium": "Crabtree Park",
+    "city": "Wick",
+    "articleTitle": "Wick F.C."
+  },
+  {
+    "id": "eng10-sc1-01",
+    "displayName": "AFC Walcountians",
+    "foundedYear": 1997,
+    "stadium": "Walcountians Sports Club",
+    "city": "Woodmansterne",
+    "articleTitle": "AFC Walcountians"
   },
   {
     "id": "eng10-sc1-02",
@@ -5024,6 +6856,14 @@
     "articleTitle": "Dial Square F.C."
   },
   {
+    "id": "eng10-sc1-05",
+    "displayName": "Dorking Wanderers ('B')",
+    "foundedYear": 1999,
+    "stadium": "Meadowbank",
+    "city": "Dorking",
+    "articleTitle": "Dorking Wanderers F.C."
+  },
+  {
     "id": "eng10-sc1-06",
     "displayName": "East Preston",
     "foundedYear": 1966,
@@ -5038,6 +6878,22 @@
     "stadium": "Spectrum Football Ground",
     "city": "Guildford",
     "articleTitle": "Guildford City F.C."
+  },
+  {
+    "id": "eng10-sc1-08",
+    "displayName": "Hailsham Town",
+    "foundedYear": 1885,
+    "stadium": "The Beaconsfield",
+    "city": "Hailsham",
+    "articleTitle": "Hailsham Town F.C."
+  },
+  {
+    "id": "eng10-sc1-09",
+    "displayName": "Infinity",
+    "foundedYear": 2006,
+    "stadium": "Sidlesham Recreation Ground",
+    "city": "Sidlesham, West Sussex",
+    "articleTitle": "Infinity F.C."
   },
   {
     "id": "eng10-sc1-10",
@@ -5112,6 +6968,30 @@
     "articleTitle": "Shoreham F.C."
   },
   {
+    "id": "eng10-sc1-19",
+    "displayName": "Westfield",
+    "foundedYear": 1911,
+    "stadium": "[http://toolserver.org/~geohack/geohack.php?pagename=The_Parish_Field&params=50_54_50_N_0_34_45_E_region:GB_type:landmark The Parish Field]",
+    "city": "Westfield",
+    "articleTitle": "Westfield F.C. (Sussex)"
+  },
+  {
+    "id": "eng10-sc1-20",
+    "displayName": "Worthing United",
+    "foundedYear": 1988,
+    "stadium": "Robert Albon Memorial Ground",
+    "city": "Worthing",
+    "articleTitle": "Worthing United F.C."
+  },
+  {
+    "id": "eng9-scep-01",
+    "displayName": "AFC Greenwich Borough",
+    "foundedYear": 2023,
+    "stadium": "Oakley Road",
+    "city": "Bromley",
+    "articleTitle": "A.F.C. Greenwich Borough"
+  },
+  {
     "id": "eng9-scep-02",
     "displayName": "Bearsted",
     "foundedYear": 1895,
@@ -5152,12 +7032,28 @@
     "articleTitle": "Erith & Belvedere F.C."
   },
   {
+    "id": "eng9-scep-07",
+    "displayName": "Faversham Strike Force",
+    "foundedYear": 1999,
+    "stadium": "The Belmont Ground",
+    "city": "Kent",
+    "articleTitle": "Faversham Strike Force F.C."
+  },
+  {
     "id": "eng9-scep-08",
     "displayName": "Fisher",
     "foundedYear": 2009,
     "stadium": "St Paul's Sports Ground",
     "city": "Rotherhithe",
     "articleTitle": "Fisher F.C."
+  },
+  {
+    "id": "eng9-scep-09",
+    "displayName": "Hollands And Blair",
+    "foundedYear": 1970,
+    "stadium": "Star Meadow",
+    "city": "Gillingham",
+    "articleTitle": "Hollands & Blair F.C."
   },
   {
     "id": "eng9-scep-10",
@@ -5176,6 +7072,14 @@
     "articleTitle": "Kennington F.C."
   },
   {
+    "id": "eng9-scep-12",
+    "displayName": "Larkfield And New Hythe",
+    "foundedYear": 1961,
+    "stadium": "Larkfield & New Hythe Sports Club",
+    "city": "New Hythe",
+    "articleTitle": "Larkfield & New Hythe Wanderers F.C."
+  },
+  {
     "id": "eng9-scep-13",
     "displayName": "Phoenix Sports",
     "foundedYear": 1935,
@@ -5190,6 +7094,14 @@
     "stadium": "The Jockey Farm Stadium",
     "city": "Royal Tunbridge Wells",
     "articleTitle": "Rusthall F.C."
+  },
+  {
+    "id": "eng9-scep-15",
+    "displayName": "SE Dons",
+    "foundedYear": 2014,
+    "stadium": "Old Road",
+    "city": "Bexleyheath",
+    "articleTitle": "SE Dons F.C."
   },
   {
     "id": "eng9-scep-16",
@@ -5240,6 +7152,14 @@
     "articleTitle": "Croydon F.C."
   },
   {
+    "id": "eng10-sce1-04",
+    "displayName": "FC Elmstead (1958)",
+    "foundedYear": 1958,
+    "stadium": "Lower Road",
+    "city": "Hextable",
+    "articleTitle": "F.C. Elmstead"
+  },
+  {
     "id": "eng10-sce1-05",
     "displayName": "Greenways",
     "foundedYear": 1965,
@@ -5248,12 +7168,28 @@
     "articleTitle": "Greenways F.C."
   },
   {
+    "id": "eng10-sce1-06",
+    "displayName": "Halls",
+    "foundedYear": 1919,
+    "stadium": "Princes Park",
+    "city": "Kent",
+    "articleTitle": "Halls Athletic F.C."
+  },
+  {
     "id": "eng10-sce1-07",
     "displayName": "Hythe Town",
     "foundedYear": 1910,
     "stadium": "Reachfields Stadium",
     "city": "Hythe",
     "articleTitle": "Hythe Town F.C."
+  },
+  {
+    "id": "eng10-sce1-08",
+    "displayName": "Lewisham Borough Community",
+    "foundedYear": 2003,
+    "stadium": "Ladywell Arena",
+    "city": "Catford",
+    "articleTitle": "Lewisham Borough F.C."
   },
   {
     "id": "eng10-sce1-09",
@@ -5272,6 +7208,14 @@
     "articleTitle": "Lydd Town F.C."
   },
   {
+    "id": "eng10-sce1-11",
+    "displayName": "Minster",
+    "foundedYear": 1911,
+    "stadium": "Hartsdown Park",
+    "city": "Minster-in-Thanet, Kent",
+    "articleTitle": "Minster F.C."
+  },
+  {
     "id": "eng10-sce1-12",
     "displayName": "Rochester United",
     "foundedYear": 1982,
@@ -5288,12 +7232,28 @@
     "articleTitle": "Sheppey Sports F.C."
   },
   {
+    "id": "eng10-sce1-14",
+    "displayName": "Sporting Club Thamesmead",
+    "foundedYear": 1900,
+    "stadium": "Bayliss Avenue",
+    "city": "Thamesmead",
+    "articleTitle": "Sporting Club Thamesmead F.C."
+  },
+  {
     "id": "eng10-sce1-15",
     "displayName": "Stansfeld",
     "foundedYear": 1897,
     "stadium": "Badgers Sports Ground",
     "city": "Eltham",
     "articleTitle": "Stansfeld F.C."
+  },
+  {
+    "id": "eng10-sce1-16",
+    "displayName": "Staplehurst Monarchs United",
+    "foundedYear": 1893,
+    "stadium": "Jubilee Sports Ground",
+    "city": "Staplehurst",
+    "articleTitle": "Staplehurst Monarchs F.C."
   },
   {
     "id": "eng10-sce1-17",
@@ -5376,6 +7336,22 @@
     "articleTitle": "Dunstable F.C."
   },
   {
+    "id": "eng9-ssmp-09",
+    "displayName": "Enfield",
+    "foundedYear": 1893,
+    "stadium": "Hertingfordbury Park",
+    "city": "Hertford",
+    "articleTitle": "Enfield F.C."
+  },
+  {
+    "id": "eng9-ssmp-10",
+    "displayName": "Everett Rovers",
+    "foundedYear": 1997,
+    "stadium": "Leggatts Playing Field",
+    "city": "Dodd Road",
+    "articleTitle": "Everett Rovers F.C."
+  },
+  {
     "id": "eng9-ssmp-11",
     "displayName": "Harlow Town",
     "foundedYear": 1879,
@@ -5398,6 +7374,14 @@
     "stadium": "Hillgrounds Leisure",
     "city": "Kempston",
     "articleTitle": "Kempston Rovers F.C."
+  },
+  {
+    "id": "eng9-ssmp-14",
+    "displayName": "Kings Langley",
+    "foundedYear": 1886,
+    "stadium": "Gaywood Park",
+    "city": "Kings Langley",
+    "articleTitle": "Kings Langley F.C."
   },
   {
     "id": "eng9-ssmp-15",
@@ -5488,6 +7472,14 @@
     "articleTitle": "Crawley Green F.C."
   },
   {
+    "id": "eng10-ssm1-06",
+    "displayName": "Eaton Socon",
+    "foundedYear": 1867,
+    "stadium": "River Road",
+    "city": "St Neots",
+    "articleTitle": "Eaton Socon F.C."
+  },
+  {
     "id": "eng10-ssm1-07",
     "displayName": "Huntingdon Town",
     "foundedYear": 1980,
@@ -5512,6 +7504,22 @@
     "articleTitle": "Langford F.C."
   },
   {
+    "id": "eng10-ssm1-10",
+    "displayName": "Leighton Town Reserves",
+    "foundedYear": 1885,
+    "stadium": "Bell Close",
+    "city": "Leighton Buzzard",
+    "articleTitle": "Leighton Town F.C."
+  },
+  {
+    "id": "eng10-ssm1-11",
+    "displayName": "Letchworth Garden City Eagles",
+    "foundedYear": 1979,
+    "stadium": "Pixmore Pitches",
+    "city": "Letchworth",
+    "articleTitle": "Letchworth Garden City Eagles F.C."
+  },
+  {
     "id": "eng10-ssm1-12",
     "displayName": "Long Buckby",
     "foundedYear": 1937,
@@ -5526,6 +7534,14 @@
     "stadium": "The Recreation Ground",
     "city": "New Bradwell",
     "articleTitle": "New Bradwell St Peter F.C."
+  },
+  {
+    "id": "eng10-ssm1-14",
+    "displayName": "Rothwell Corinthians",
+    "foundedYear": 1934,
+    "stadium": "Sergeants Lawn",
+    "city": "Rothwell",
+    "articleTitle": "Rothwell Corinthians F.C."
   },
   {
     "id": "eng10-ssm1-15",
@@ -5616,12 +7632,44 @@
     "articleTitle": "Clay Cross Town F.C."
   },
   {
+    "id": "eng9-ucln-07",
+    "displayName": "Deeping Rangers",
+    "foundedYear": 1966,
+    "stadium": "[http://stable.toolserver.org/geohack/geohack.php?pagename=Deeping_Sports_Club&params=52_41_19_N_0_18_20_W_region:GB_type:landmark The Haydon Whitham Stadium]",
+    "city": "Market Deeping",
+    "articleTitle": "Deeping Rangers F.C."
+  },
+  {
+    "id": "eng9-ucln-08",
+    "displayName": "Eastwood Community",
+    "foundedYear": 2014,
+    "stadium": "Coronation Park",
+    "city": "Eastwood",
+    "articleTitle": "Eastwood C.F.C."
+  },
+  {
+    "id": "eng9-ucln-09",
+    "displayName": "Gresley Rovers",
+    "foundedYear": 1882,
+    "stadium": "Moat Ground",
+    "city": "Church Gresley",
+    "articleTitle": "Gresley Rovers F.C."
+  },
+  {
     "id": "eng9-ucln-10",
     "displayName": "Heanor Town",
     "foundedYear": 1883,
     "stadium": "Town Ground",
     "city": "Heanor",
     "articleTitle": "Heanor Town F.C."
+  },
+  {
+    "id": "eng9-ucln-11",
+    "displayName": "Hinckley AFC",
+    "foundedYear": 2014,
+    "stadium": "Kirkby Road",
+    "city": "Leicestershire |",
+    "articleTitle": "Hinckley A.F.C."
   },
   {
     "id": "eng9-ucln-12",
@@ -5656,6 +7704,14 @@
     "articleTitle": "Newark Town F.C."
   },
   {
+    "id": "eng9-ucln-16",
+    "displayName": "Sheffield",
+    "foundedYear": 1857,
+    "stadium": "Home of Football Ground",
+    "city": "Derbyshire",
+    "articleTitle": "Sheffield F.C."
+  },
+  {
     "id": "eng9-ucln-17",
     "displayName": "Sherwood Colliery",
     "foundedYear": 2008,
@@ -5664,12 +7720,36 @@
     "articleTitle": "Sherwood Colliery F.C."
   },
   {
+    "id": "eng9-ucln-18",
+    "displayName": "Skegness Town",
+    "foundedYear": 1947,
+    "stadium": "Vertigo Stadium",
+    "city": "Skegness",
+    "articleTitle": "Skegness Town A.F.C."
+  },
+  {
     "id": "eng10-ucl1-01",
     "displayName": "Clifton All Whites",
     "foundedYear": 1963,
     "stadium": "Norman Archer Memorial",
     "city": "Clifton",
     "articleTitle": "Clifton All Whites F.C."
+  },
+  {
+    "id": "eng10-ucl1-02",
+    "displayName": "Clipstone",
+    "foundedYear": 1928,
+    "stadium": "Lido Ground",
+    "city": "Clipstone",
+    "articleTitle": "Clipstone F.C."
+  },
+  {
+    "id": "eng10-ucl1-03",
+    "displayName": "Cotgrave",
+    "foundedYear": 1946,
+    "stadium": "Cotgrave Welfare",
+    "city": "Cotgrave, Nottinghamshire",
+    "articleTitle": "Cotgrave F.C."
   },
   {
     "id": "eng10-ucl1-04",
@@ -5744,6 +7824,14 @@
     "articleTitle": "Radford F.C."
   },
   {
+    "id": "eng10-ucl1-13",
+    "displayName": "Sandiacre Town",
+    "foundedYear": 1978,
+    "stadium": "St Giles Park",
+    "city": "Sandiacre",
+    "articleTitle": "Sandiacre Town F.C."
+  },
+  {
     "id": "eng10-ucl1-14",
     "displayName": "Selston",
     "foundedYear": 1968,
@@ -5776,6 +7864,14 @@
     "articleTitle": "South Normanton Athletic F.C."
   },
   {
+    "id": "eng10-ucl1-18",
+    "displayName": "Southwell City",
+    "foundedYear": 1893,
+    "stadium": "Centenary Sports Ground",
+    "city": "Nottinghamshire",
+    "articleTitle": "Southwell City F.C."
+  },
+  {
     "id": "eng10-ucl1-19",
     "displayName": "Stapleford Town",
     "foundedYear": 2013,
@@ -5800,12 +7896,36 @@
     "articleTitle": "Swallownest F.C."
   },
   {
+    "id": "eng10-ucl1-22",
+    "displayName": "West Bridgford Colts",
+    "foundedYear": 1990,
+    "stadium": "Regatta Way Sports Ground",
+    "city": "West Bridgford",
+    "articleTitle": "West Bridgford F.C."
+  },
+  {
     "id": "eng9-ucls-01",
     "displayName": "Atherstone Town",
     "foundedYear": 1887,
     "stadium": "Sheepy Road",
     "city": "Atherstone",
     "articleTitle": "Atherstone Town F.C."
+  },
+  {
+    "id": "eng9-ucls-02",
+    "displayName": "Bugbrooke St Michael",
+    "foundedYear": 1929,
+    "stadium": "Birds Close",
+    "city": "Bugbrooke",
+    "articleTitle": "Bugbrooke St Michaels F.C."
+  },
+  {
+    "id": "eng9-ucls-03",
+    "displayName": "Coton Green Saturday",
+    "foundedYear": 1982,
+    "stadium": "The Dave Henderson Memorial Ground",
+    "city": "Fazeley",
+    "articleTitle": "Coton Green F.C."
   },
   {
     "id": "eng9-ucls-04",
@@ -5838,6 +7958,22 @@
     "stadium": "Alfred Hall Memorial Ground",
     "city": "Eynesbury",
     "articleTitle": "Eynesbury Rovers F.C."
+  },
+  {
+    "id": "eng9-ucls-08",
+    "displayName": "FC Stratford",
+    "foundedYear": 2007,
+    "stadium": "Arden Garages Stadium",
+    "city": "Tiddington",
+    "articleTitle": "FC Stratford"
+  },
+  {
+    "id": "eng9-ucls-09",
+    "displayName": "FC Peterborough",
+    "foundedYear": 2014,
+    "stadium": "The Focus Centre",
+    "city": "Peterborough",
+    "articleTitle": "F.C. Peterborough"
   },
   {
     "id": "eng9-ucls-10",
@@ -5878,6 +8014,22 @@
     "stadium": "Dunley Way",
     "city": "Lutterworth",
     "articleTitle": "Lutterworth Town A.F.C."
+  },
+  {
+    "id": "eng9-ucls-15",
+    "displayName": "Moulton",
+    "foundedYear": 1896,
+    "stadium": "Brunting Road",
+    "city": "Moulton",
+    "articleTitle": "Moulton F.C."
+  },
+  {
+    "id": "eng9-ucls-16",
+    "displayName": "Northampton O.N.Chenecks",
+    "foundedYear": 1946,
+    "stadium": "The Old Northamptonians Sports Ground",
+    "city": "Northampton",
+    "articleTitle": "Northampton ON Chenecks F.C."
   },
   {
     "id": "eng9-ucls-17",
@@ -5944,6 +8096,14 @@
     "articleTitle": "Bemerton Heath Harlequins F.C."
   },
   {
+    "id": "eng9-wxp-05",
+    "displayName": "Bournemouth Poppies",
+    "foundedYear": 1875,
+    "stadium": "Victoria Park",
+    "city": "Bournemouth",
+    "articleTitle": "Bournemouth F.C."
+  },
+  {
     "id": "eng9-wxp-06",
     "displayName": "Brockenhurst",
     "foundedYear": 1898,
@@ -5992,12 +8152,28 @@
     "articleTitle": "Fareham Town F.C."
   },
   {
+    "id": "eng9-wxp-12",
+    "displayName": "Fleetlands",
+    "foundedYear": 1947,
+    "stadium": "Lederle Lane",
+    "city": "Gosport",
+    "articleTitle": "Fleetlands F.C."
+  },
+  {
     "id": "eng9-wxp-13",
     "displayName": "Hamble Club",
     "foundedYear": 1969,
     "stadium": "The SWP Arena",
     "city": "Hamble-le-Rice",
     "articleTitle": "Hamble Club F.C."
+  },
+  {
+    "id": "eng9-wxp-14",
+    "displayName": "Hamworthy Recreation",
+    "foundedYear": 1948,
+    "stadium": "Magna Road",
+    "city": "Merley",
+    "articleTitle": "Hamworthy Recreation F.C."
   },
   {
     "id": "eng9-wxp-15",
@@ -6048,6 +8224,14 @@
     "articleTitle": "Sherborne Town F.C."
   },
   {
+    "id": "eng9-wxp-21",
+    "displayName": "Sturminster Newton United",
+    "foundedYear": 1871,
+    "stadium": "Barnetts Field",
+    "city": "Sturminster Newton",
+    "articleTitle": "Sturminster Newton United F.C."
+  },
+  {
     "id": "eng9-wxp-22",
     "displayName": "Wincanton Town",
     "foundedYear": 1890,
@@ -6064,6 +8248,30 @@
     "articleTitle": "A.F.C. Aldermaston"
   },
   {
+    "id": "eng10-wx1-02",
+    "displayName": "Alresford Town",
+    "foundedYear": 1898,
+    "stadium": "Alrebury Park",
+    "city": "New Alresford",
+    "articleTitle": "Alresford Town F.C."
+  },
+  {
+    "id": "eng10-wx1-03",
+    "displayName": "Ash United",
+    "foundedYear": 1911,
+    "stadium": "Shawfield Stadium",
+    "city": "Ash",
+    "articleTitle": "Ash United F.C."
+  },
+  {
+    "id": "eng10-wx1-04",
+    "displayName": "Blandford United",
+    "foundedYear": 1893,
+    "stadium": "Blandford Recreation Ground",
+    "city": "Blandford Forum",
+    "articleTitle": "Blandford United F.C."
+  },
+  {
     "id": "eng10-wx1-05",
     "displayName": "Colden Common",
     "foundedYear": 1898,
@@ -6072,12 +8280,28 @@
     "articleTitle": "Colden Common F.C."
   },
   {
+    "id": "eng10-wx1-06",
+    "displayName": "Cove",
+    "foundedYear": 1897,
+    "stadium": "Oak Farm",
+    "city": "Cove",
+    "articleTitle": "Cove F.C."
+  },
+  {
     "id": "eng10-wx1-07",
     "displayName": "Fawley",
     "foundedYear": 1923,
     "stadium": "Waterside Sports & Social Club",
     "city": "Holbury",
     "articleTitle": "Fawley A.F.C."
+  },
+  {
+    "id": "eng10-wx1-08",
+    "displayName": "Folland Sports",
+    "foundedYear": 1938,
+    "stadium": "Folland Park",
+    "city": "Hamble-le-Rice",
+    "articleTitle": "Folland Sports F.C."
   },
   {
     "id": "eng10-wx1-09",
@@ -6104,6 +8328,14 @@
     "articleTitle": "Hedge End Rangers F.C."
   },
   {
+    "id": "eng10-wx1-12",
+    "displayName": "Kintbury Rangers",
+    "foundedYear": 1890,
+    "stadium": "The Recreation Ground",
+    "city": "Kintbury",
+    "articleTitle": "Kintbury Rangers F.C."
+  },
+  {
     "id": "eng10-wx1-13",
     "displayName": "Lymington Town",
     "foundedYear": 1876,
@@ -6126,6 +8358,30 @@
     "stadium": "[http://stable.toolserver.org/geohack/geohack.php?pagename=Westwood_Park&params=50_45_31_N_1_18_32_W_region:GB_type:landmark Westwood Park]",
     "city": "Cowes",
     "articleTitle": "Newport (IOW) F.C."
+  },
+  {
+    "id": "eng10-wx1-16",
+    "displayName": "Ringwood Town",
+    "foundedYear": 1879,
+    "stadium": "Macra Community Stadium Long Lane",
+    "city": "Ringwood",
+    "articleTitle": "Ringwood Town F.C."
+  },
+  {
+    "id": "eng10-wx1-17",
+    "displayName": "Romsey Town",
+    "foundedYear": 1886,
+    "stadium": "The AEC Protection Ground",
+    "city": "Romsey",
+    "articleTitle": "Romsey Town F.C."
+  },
+  {
+    "id": "eng10-wx1-18",
+    "displayName": "Sandhurst Town",
+    "foundedYear": 1910,
+    "stadium": "Bottom Meadow",
+    "city": "Sandhurst",
+    "articleTitle": "Sandhurst Town F.C."
   },
   {
     "id": "eng10-wx1-19",
@@ -6174,6 +8430,14 @@
     "stadium": "Brislington Stadium",
     "city": "Brislington",
     "articleTitle": "Brislington F.C."
+  },
+  {
+    "id": "eng9-wlp-05",
+    "displayName": "Brixham",
+    "foundedYear": 2012,
+    "stadium": "Wall Park",
+    "city": "Brixham",
+    "articleTitle": "Brixham A.F.C."
   },
   {
     "id": "eng9-wlp-06",
@@ -6248,6 +8512,14 @@
     "articleTitle": "Shepton Mallet F.C."
   },
   {
+    "id": "eng9-wlp-15",
+    "displayName": "Sidmouth Town",
+    "foundedYear": 1895,
+    "stadium": "Manstone Lane",
+    "city": "Sidmouth",
+    "articleTitle": "Sidmouth Town A.F.C."
+  },
+  {
     "id": "eng9-wlp-16",
     "displayName": "St Blazey",
     "foundedYear": 1896,
@@ -6262,6 +8534,14 @@
     "stadium": "The Tannery",
     "city": "Street",
     "articleTitle": "Street F.C."
+  },
+  {
+    "id": "eng9-wlp-18",
+    "displayName": "Tavistock Association",
+    "foundedYear": 1888,
+    "stadium": "Langsford Park",
+    "city": "Tavistock",
+    "articleTitle": "Tavistock A.F.C."
   },
   {
     "id": "eng9-wlp-19",
@@ -6280,6 +8560,14 @@
     "articleTitle": "Wellington A.F.C."
   },
   {
+    "id": "eng10-wl1-01",
+    "displayName": "AEK Boco",
+    "foundedYear": 2003,
+    "stadium": "Shield Pavillion Greenbank Road",
+    "city": "Bristol",
+    "articleTitle": "AEK Boco F.C."
+  },
+  {
     "id": "eng10-wl1-02",
     "displayName": "Almondsbury",
     "foundedYear": 1969,
@@ -6294,6 +8582,14 @@
     "stadium": "Bonnymead Park",
     "city": "Amesbury",
     "articleTitle": "Amesbury Town F.C."
+  },
+  {
+    "id": "eng10-wl1-04",
+    "displayName": "Avonmouth",
+    "foundedYear": 1919,
+    "stadium": "King George V Recreation Ground",
+    "city": "Bristol",
+    "articleTitle": "Avonmouth F.C."
   },
   {
     "id": "eng10-wl1-05",
@@ -6344,6 +8640,30 @@
     "articleTitle": "Longwell Green Sports F.C."
   },
   {
+    "id": "eng10-wl1-11",
+    "displayName": "Mendip Broadwalk",
+    "foundedYear": 2015,
+    "stadium": "Filwood Fields",
+    "city": "Bristol",
+    "articleTitle": "Mendip Broadwalk F.C."
+  },
+  {
+    "id": "eng10-wl1-12",
+    "displayName": "Nailsea United",
+    "foundedYear": 1897,
+    "stadium": "South West Civils Community Stadium",
+    "city": "Nailsea",
+    "articleTitle": "Nailsea United F.C."
+  },
+  {
+    "id": "eng10-wl1-13",
+    "displayName": "Odd Down (BATH)",
+    "foundedYear": 1901,
+    "stadium": "Lew Hill Memorial Ground",
+    "city": "Bath",
+    "articleTitle": "Odd Down A.F.C."
+  },
+  {
     "id": "eng10-wl1-14",
     "displayName": "Radstock Town",
     "foundedYear": 1895,
@@ -6352,12 +8672,28 @@
     "articleTitle": "Radstock Town F.C."
   },
   {
+    "id": "eng10-wl1-15",
+    "displayName": "Shirehampton",
+    "foundedYear": 1952,
+    "stadium": "Penpole Lane",
+    "city": "Bristol",
+    "articleTitle": "Shirehampton F.C."
+  },
+  {
     "id": "eng10-wl1-16",
     "displayName": "Warminster Town",
     "foundedYear": 1878,
     "stadium": "Weymouth Street",
     "city": "Warminster",
     "articleTitle": "Warminster Town F.C."
+  },
+  {
+    "id": "eng10-wl1-17",
+    "displayName": "Wells City",
+    "foundedYear": 1890,
+    "stadium": "The Athletic Ground",
+    "city": "Wells",
+    "articleTitle": "Wells City F.C."
   },
   {
     "id": "eng10-wl1-18",

@@ -234,7 +234,10 @@
     "displayName": "Bristol City",
     "level": 2,
     "section": "efl-championship",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bristol City F.C.",
+    "imageTitle": "Bristol_City_crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f5/Bristol_City_crest.svg/1280px-Bristol_City_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng2-ch-05",
@@ -321,7 +324,10 @@
     "displayName": "Portsmouth",
     "level": 2,
     "section": "efl-championship",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Portsmouth F.C.",
+    "imageTitle": "Portsmouth_FC_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/38/Portsmouth_FC_logo.svg/1280px-Portsmouth_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng2-ch-14",
@@ -338,7 +344,10 @@
     "displayName": "Queens Park Rangers",
     "level": 2,
     "section": "efl-championship",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Queens Park Rangers F.C.",
+    "imageTitle": "Queens_Park_Rangers_crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/Queens_Park_Rangers_crest.svg/1280px-Queens_Park_Rangers_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng2-ch-16",
@@ -435,7 +444,10 @@
     "displayName": "AFC Wimbledon",
     "level": 3,
     "section": "efl-league-one",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AFC Wimbledon",
+    "imageTitle": "AFC_Wimbledon_(2020)_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1b/AFC_Wimbledon_%282020%29_logo.svg/1280px-AFC_Wimbledon_%282020%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng3-l1-02",
@@ -582,14 +594,20 @@
     "displayName": "Oxford United",
     "level": 3,
     "section": "efl-league-one",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Oxford United F.C.",
+    "imageTitle": "Oxford_United_FC_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3e/Oxford_United_FC_logo.svg/1280px-Oxford_United_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng3-l1-17",
     "displayName": "Peterborough United",
     "level": 3,
     "section": "efl-league-one",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Peterborough United F.C.",
+    "imageTitle": "Peterborough United FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9a/Peterborough_United_FC_crest.svg/1280px-Peterborough_United_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng3-l1-18",
@@ -616,7 +634,10 @@
     "displayName": "Sheffield Wednesday",
     "level": 3,
     "section": "efl-league-one",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sheffield Wednesday F.C.",
+    "imageTitle": "Sheffield Wednesday FC 2026 crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b8/Sheffield_Wednesday_FC_2026_crest.svg/1280px-Sheffield_Wednesday_FC_2026_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng3-l1-21",
@@ -843,7 +864,10 @@
     "displayName": "Salford City",
     "level": 4,
     "section": "efl-league-two",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Salford City F.C.",
+    "imageTitle": "Salford_City_F.C._new_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Salford_City_F.C._new_logo.svg/1280px-Salford_City_F.C._new_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng4-l2-20",
@@ -1140,21 +1164,30 @@
     "displayName": "AFC Telford United",
     "level": 6,
     "section": "national-league-north",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AFC Telford United",
+    "imageTitle": "AFC_Telford_United_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e9/AFC_Telford_United_logo.svg/1280px-AFC_Telford_United_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nln-02",
     "displayName": "Bedford Town",
     "level": 6,
     "section": "national-league-north",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bedford Town F.C.",
+    "imageTitle": "Bedford_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a1/Bedford_Town_F.C._logo.svg/1280px-Bedford_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nln-03",
     "displayName": "Brackley Town",
     "level": 6,
     "section": "national-league-north",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Brackley Town F.C.",
+    "imageTitle": "Brackley_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/67/Brackley_Town_F.C._logo.svg/1280px-Brackley_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nln-04",
@@ -1201,7 +1234,10 @@
     "displayName": "Harborough Town",
     "level": 6,
     "section": "national-league-north",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Harborough Town F.C.",
+    "imageTitle": "Harborough_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/Harborough_Town_F.C._logo.svg/1280px-Harborough_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nln-09",
@@ -1348,7 +1384,10 @@
     "displayName": "Spennymoor Town",
     "level": 6,
     "section": "national-league-north",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Spennymoor Town F.C.",
+    "imageTitle": "Spennymoor_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Spennymoor_Town_F.C._logo.svg/1280px-Spennymoor_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nln-24",
@@ -1375,7 +1414,10 @@
     "displayName": "Billericay Town",
     "level": 6,
     "section": "national-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Billericay Town F.C.",
+    "imageTitle": "Billericay_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e0/Billericay_Town_F.C._logo.svg/1280px-Billericay_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nls-03",
@@ -1432,7 +1474,10 @@
     "displayName": "Dover Athletic",
     "level": 6,
     "section": "national-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Dover Athletic F.C.",
+    "imageTitle": "Dover Athletic FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c8/Dover_Athletic_FC_crest.svg/1280px-Dover_Athletic_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nls-09",
@@ -1449,14 +1494,20 @@
     "displayName": "Farnborough",
     "level": 6,
     "section": "national-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Farnborough F.C.",
+    "imageTitle": "Farnborough_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3a/Farnborough_F.C._logo.svg/1280px-Farnborough_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nls-11",
     "displayName": "Farnham Town",
     "level": 6,
     "section": "national-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Farnham Town F.C.",
+    "imageTitle": "Farnham_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/Farnham_Town_F.C._logo.svg/1280px-Farnham_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nls-12",
@@ -1473,7 +1524,10 @@
     "displayName": "Hampton & Richmond Borough",
     "level": 6,
     "section": "national-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hampton & Richmond Borough F.C.",
+    "imageTitle": "Hampton_&_Richmond_Borough_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/df/Hampton_%26_Richmond_Borough_F.C._logo.svg/1280px-Hampton_%26_Richmond_Borough_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nls-14",
@@ -1490,7 +1544,10 @@
     "displayName": "Horsham",
     "level": 6,
     "section": "national-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Horsham F.C.",
+    "imageTitle": "Horsham_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e9/Horsham_F.C._logo.svg/1280px-Horsham_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nls-16",
@@ -1517,7 +1574,10 @@
     "displayName": "Salisbury",
     "level": 6,
     "section": "national-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Salisbury F.C.",
+    "imageTitle": "Salisbury_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/80/Salisbury_F.C._logo.svg/1280px-Salisbury_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng6-nls-19",
@@ -1584,7 +1644,10 @@
     "displayName": "AFC Whyteleafe",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AFC Whyteleafe",
+    "imageTitle": "AFC_Whyteleafe_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/63/AFC_Whyteleafe_logo.svg/1280px-AFC_Whyteleafe_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-02",
@@ -1601,7 +1664,10 @@
     "displayName": "Brentwood Town",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Brentwood Town F.C.",
+    "imageTitle": "Brentwood_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/50/Brentwood_Town_F.C._logo.svg/1280px-Brentwood_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-04",
@@ -1618,7 +1684,10 @@
     "displayName": "Carshalton Athletic",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Carshalton Athletic F.C.",
+    "imageTitle": "Carshalton_Athletic_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/69/Carshalton_Athletic_F.C._logo.svg/1280px-Carshalton_Athletic_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-06",
@@ -1635,14 +1704,20 @@
     "displayName": "Cheshunt",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Cheshunt F.C.",
+    "imageTitle": "Cheshunt_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3a/Cheshunt_F.C._logo.svg/1280px-Cheshunt_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-08",
     "displayName": "Cray Wanderers",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Cray Wanderers F.C.",
+    "imageTitle": "Cray_Wanderers_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/Cray_Wanderers_F.C._logo.svg/1280px-Cray_Wanderers_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-09",
@@ -1679,7 +1754,10 @@
     "displayName": "Enfield Town",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Enfield Town F.C.",
+    "imageTitle": "Enfield_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d1/Enfield_Town_F.C._logo.svg/1280px-Enfield_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-13",
@@ -1706,14 +1784,20 @@
     "displayName": "Maldon & Tiptree",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Maldon & Tiptree F.C.",
+    "imageTitle": "Maldon_&_Tiptree_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a1/Maldon_%26_Tiptree_F.C._logo.svg/1280px-Maldon_%26_Tiptree_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-16",
     "displayName": "Ramsgate",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ramsgate F.C.",
+    "imageTitle": "Ramsgate_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8b/Ramsgate_F.C._logo.svg/1280px-Ramsgate_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-17",
@@ -1730,35 +1814,50 @@
     "displayName": "Stanway Rovers Community",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Stanway Rovers F.C.",
+    "imageTitle": "Stanway Rovers FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/12/Stanway_Rovers_FC_crest.svg/1280px-Stanway_Rovers_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-19",
     "displayName": "Three Bridges",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Three Bridges F.C.",
+    "imageTitle": "Three_Bridges_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/07/Three_Bridges_F.C._logo.svg/1280px-Three_Bridges_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-20",
     "displayName": "Welling United",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Welling United F.C.",
+    "imageTitle": "Welling_United_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3e/Welling_United_F.C._logo.svg/1280px-Welling_United_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-21",
     "displayName": "Whitehawk",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Whitehawk F.C.",
+    "imageTitle": "Whitehawk_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0c/Whitehawk_F.C._logo.svg/1280px-Whitehawk_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-ip-22",
     "displayName": "Wingate & Finchley",
     "level": 7,
     "section": "isthmian-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Wingate & Finchley F.C.",
+    "imageTitle": "Wingate_&_Finchley_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e1/Wingate_%26_Finchley_F.C._logo.svg/1280px-Wingate_%26_Finchley_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-01",
@@ -1775,7 +1874,10 @@
     "displayName": "Ashton United",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ashton United F.C.",
+    "imageTitle": "Ashton_United_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d6/Ashton_United_F.C._logo.svg/1280px-Ashton_United_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-03",
@@ -1792,7 +1894,10 @@
     "displayName": "Bamber Bridge",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bamber Bridge F.C.",
+    "imageTitle": "Bamber_Bridge_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6e/Bamber_Bridge_F.C._logo.svg/1280px-Bamber_Bridge_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-05",
@@ -1809,14 +1914,20 @@
     "displayName": "Cleethorpes Town",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Cleethorpes Town F.C.",
+    "imageTitle": "Cleethorpes_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d8/Cleethorpes_Town_F.C._logo.svg/1280px-Cleethorpes_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-07",
     "displayName": "Curzon Ashton",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Curzon Ashton F.C.",
+    "imageTitle": "Curzon_Ashton_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/83/Curzon_Ashton_F.C._logo.svg/1280px-Curzon_Ashton_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-08",
@@ -1853,21 +1964,30 @@
     "displayName": "Guiseley",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Guiseley A.F.C.",
+    "imageTitle": "Guiseley_A.F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d9/Guiseley_A.F.C._logo.svg/1280px-Guiseley_A.F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-12",
     "displayName": "Hyde United",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hyde United F.C.",
+    "imageTitle": "Hyde_United_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/af/Hyde_United_F.C._logo.svg/1280px-Hyde_United_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-13",
     "displayName": "Ilkeston Town",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ilkeston Town F.C.",
+    "imageTitle": "Ilkeston_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/Ilkeston_Town_F.C._logo.svg/1280px-Ilkeston_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-14",
@@ -1904,35 +2024,50 @@
     "displayName": "Redcar Athletic",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Redcar Athletic F.C.",
+    "imageTitle": "Redcar_Athletic_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/ff/Redcar_Athletic_F.C._logo.svg/1280px-Redcar_Athletic_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-18",
     "displayName": "Stockton Town",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Stockton Town F.C.",
+    "imageTitle": "Stockton_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7c/Stockton_Town_F.C._logo.svg/1280px-Stockton_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-19",
     "displayName": "Warrington Rylands",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Warrington Rylands 1906 F.C.",
+    "imageTitle": "Warrington_Rylands_1906_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f4/Warrington_Rylands_1906_F.C._logo.svg/1280px-Warrington_Rylands_1906_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-20",
     "displayName": "Warrington Town",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Warrington Town F.C.",
+    "imageTitle": "Warrington_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/49/Warrington_Town_F.C._logo.svg/1280px-Warrington_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-21",
     "displayName": "Whitby Town",
     "level": 7,
     "section": "northern-premier-league-premier",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Whitby Town F.C.",
+    "imageTitle": "Whitby_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c7/Whitby_Town_F.C._logo.svg/1280px-Whitby_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-npp-22",
@@ -1979,14 +2114,20 @@
     "displayName": "Bishop’s Stortford",
     "level": 7,
     "section": "southern-league-premier-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bishop's Stortford F.C.",
+    "imageTitle": "Bishop's Stortford FC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b2/Bishop%27s_Stortford_FC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng7-spc-05",
     "displayName": "Bromsgrove Sporting",
     "level": 7,
     "section": "southern-league-premier-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bromsgrove Sporting F.C.",
+    "imageTitle": "Bromsgrove_Sporting_FC_Logo_2026.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6b/Bromsgrove_Sporting_FC_Logo_2026.svg/1280px-Bromsgrove_Sporting_FC_Logo_2026.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-spc-06",
@@ -2073,7 +2214,10 @@
     "displayName": "Peterborough Sports",
     "level": 7,
     "section": "southern-league-premier-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Peterborough Sports F.C.",
+    "imageTitle": "Peterborough_Sports_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/19/Peterborough_Sports_F.C._logo.svg/1280px-Peterborough_Sports_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-spc-15",
@@ -2200,7 +2344,10 @@
     "displayName": "Chertsey Town",
     "level": 7,
     "section": "southern-league-premier-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Chertsey Town F.C.",
+    "imageTitle": "Chertsey_Town_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/d3/Chertsey_Town_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng7-sps-06",
@@ -2217,7 +2364,10 @@
     "displayName": "Chippenham Town",
     "level": 7,
     "section": "southern-league-premier-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Chippenham Town F.C.",
+    "imageTitle": "Chippenham_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/Chippenham_Town_F.C._logo.svg/1280px-Chippenham_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-sps-08",
@@ -2244,7 +2394,10 @@
     "displayName": "Gloucester City",
     "level": 7,
     "section": "southern-league-premier-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Gloucester City F.C.",
+    "sourceUrl": "https://static.wixstatic.com/media/8014bb_830897fff68f437d9fdf02c02b972158~mv2.jpg",
+    "sourcePage": "https://www.gloucestercityafc.com/"
   },
   {
     "id": "eng7-sps-11",
@@ -2321,7 +2474,10 @@
     "displayName": "Sholing",
     "level": 7,
     "section": "southern-league-premier-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sholing F.C.",
+    "imageTitle": "Sholing_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/43/Sholing_F.C._logo.svg/1280px-Sholing_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng7-sps-19",
@@ -2378,7 +2534,10 @@
     "displayName": "AFC Stoneham",
     "level": 8,
     "section": "isthmian-league-south-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. Stoneham",
+    "imageTitle": "A.F.C._Stoneham_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f4/A.F.C._Stoneham_logo.svg/1280px-A.F.C._Stoneham_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng8-isc-03",
@@ -2392,10 +2551,13 @@
   },
   {
     "id": "eng8-isc-04",
-    "displayName": "Ashford Town (Middx)",
+    "displayName": "Ashford Town (Middlesex)",
     "level": 8,
     "section": "isthmian-league-south-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ashford Town (Middlesex) F.C.",
+    "imageTitle": "Ashford Town FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/47/Ashford_Town_FC_crest.svg/1280px-Ashford_Town_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng8-isc-05",
@@ -2509,10 +2671,13 @@
   },
   {
     "id": "eng8-isc-16",
-    "displayName": "Littlehampton Town *",
+    "displayName": "Littlehampton Town",
     "level": 8,
     "section": "isthmian-league-south-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Littlehampton Town F.C.",
+    "imageTitle": "Littlehampton Town F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a0/Littlehampton_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-isc-17",
@@ -2549,21 +2714,30 @@
     "displayName": "Westfield",
     "level": 8,
     "section": "isthmian-league-south-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Westfield F.C. (Surrey)",
+    "imageTitle": "Westfield F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a2/Westfield_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-isc-21",
     "displayName": "Winchester City",
     "level": 8,
     "section": "isthmian-league-south-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Winchester City F.C.",
+    "imageTitle": "Winchester_City_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/00/Winchester_City_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-isc-22",
     "displayName": "Windsor & Eton",
     "level": 8,
     "section": "isthmian-league-south-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Windsor & Eton F.C. (2023)",
+    "imageTitle": "Windsor_&_Eton_F.C._(2023)_Logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/94/Windsor_%26_Eton_F.C._%282023%29_Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-in-01",
@@ -2600,7 +2774,10 @@
     "displayName": "Buckhurst Hill",
     "level": 8,
     "section": "isthmian-league-north",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Buckhurst Hill F.C.",
+    "imageTitle": "Buckhurst_Hill_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a8/Buckhurst_Hill_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-in-05",
@@ -2677,7 +2854,10 @@
     "displayName": "Hashtag United",
     "level": 8,
     "section": "isthmian-league-north",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hashtag United F.C.",
+    "imageTitle": "Hashtag_United_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3e/Hashtag_United_F.C._logo.svg/1280px-Hashtag_United_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng8-in-13",
@@ -2871,17 +3051,23 @@
   },
   {
     "id": "eng8-ise-10",
-    "displayName": "Guernsey or Peacehaven & Telscombe",
+    "displayName": "Peacehaven & Telscombe",
     "level": 8,
     "section": "isthmian-league-south-east",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Peacehaven & Telscombe F.C.",
+    "imageTitle": "Peacehaven and Telscombe FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4d/Peacehaven_and_Telscombe_FC_crest.svg/1280px-Peacehaven_and_Telscombe_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng8-ise-11",
     "displayName": "Hastings United",
     "level": 8,
     "section": "isthmian-league-south-east",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hastings United F.C.",
+    "imageTitle": "Hastings_United_F.C._2020_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/03/Hastings_United_F.C._2020_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-ise-12",
@@ -2938,7 +3124,10 @@
     "displayName": "Sevenoaks Town",
     "level": 8,
     "section": "isthmian-league-south-east",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sevenoaks Town F.C.",
+    "imageTitle": "Sevenoaks Town F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/27/Sevenoaks_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-ise-18",
@@ -2965,7 +3154,10 @@
     "displayName": "South Park (Reigate)",
     "level": 8,
     "section": "isthmian-league-south-east",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "South Park F.C.",
+    "sourceUrl": "https://static.wixstatic.com/media/530bbc_b639bb50bb244bbeb5e5ed997f3cda05~mv2.png",
+    "sourcePage": "https://www.southparkreigatefc.co.uk/club"
   },
   {
     "id": "eng8-ise-21",
@@ -3022,7 +3214,10 @@
     "displayName": "Bradford (Park Avenue)",
     "level": 8,
     "section": "northern-premier-league-east",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bradford (Park Avenue) A.F.C.",
+    "imageTitle": "Bradford_(Park_Avenue)_A.F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/62/Bradford_%28Park_Avenue%29_A.F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npe-05",
@@ -3196,17 +3391,23 @@
   },
   {
     "id": "eng8-npe-22",
-    "displayName": "West Aukland Town",
+    "displayName": "West Auckland Town",
     "level": 8,
     "section": "northern-premier-league-east",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "West Auckland Town F.C.",
+    "imageTitle": "West auckland fc logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/West_auckland_fc_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npw-01",
     "displayName": "1874 Northwich",
     "level": 8,
     "section": "northern-premier-league-west",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "1874 Northwich F.C.",
+    "imageTitle": "1874_Northwich_FC_badge_(new).png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/8/8d/1874_Northwich_FC_badge_%28new%29.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npw-02",
@@ -3243,14 +3444,20 @@
     "displayName": "Clitheroe",
     "level": 8,
     "section": "northern-premier-league-west",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Clitheroe F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/clitheroe.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/clitheroe"
   },
   {
     "id": "eng8-npw-06",
     "displayName": "Congleton Town",
     "level": 8,
     "section": "northern-premier-league-west",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Congleton Town F.C.",
+    "imageTitle": "Congleton_Town_F.C._badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/c8/Congleton_Town_F.C._badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npw-07",
@@ -3307,7 +3514,10 @@
     "displayName": "Nantwich Town",
     "level": 8,
     "section": "northern-premier-league-west",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Nantwich Town F.C.",
+    "imageTitle": "Nantwich_Town.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Nantwich_Town.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npw-13",
@@ -3414,14 +3624,20 @@
     "displayName": "AFC Rushden & Diamonds",
     "level": 8,
     "section": "northern-premier-league-midlands",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AFC Rushden & Diamonds",
+    "imageTitle": "AFC_Rushden_and_Diamonds_Logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9c/AFC_Rushden_and_Diamonds_Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npm-02",
     "displayName": "Barwell",
     "level": 8,
     "section": "northern-premier-league-midlands",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Barwell F.C.",
+    "imageTitle": "Barwell_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a9/Barwell_F.C._logo.svg/1280px-Barwell_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng8-npm-03",
@@ -3458,7 +3674,10 @@
     "displayName": "Boldmere St Michael’s",
     "level": 8,
     "section": "northern-premier-league-midlands",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Boldmere St. Michaels F.C.",
+    "imageTitle": "BoldmereSM.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/74/BoldmereSM.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npm-07",
@@ -3565,21 +3784,30 @@
     "displayName": "Nuneaton Town",
     "level": 8,
     "section": "northern-premier-league-midlands",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Nuneaton Town F.C.",
+    "imageTitle": "Nuneaton_Town_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/Nuneaton_Town_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npm-18",
     "displayName": "Rugby Borough",
     "level": 8,
     "section": "northern-premier-league-midlands",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Rugby Borough F.C.",
+    "imageTitle": "Rugby Borough FC club badge.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/75/Rugby_Borough_FC_club_badge.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npm-19",
     "displayName": "Shepshed Dynamo",
     "level": 8,
     "section": "northern-premier-league-midlands",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Shepshed Dynamo F.C.",
+    "imageTitle": "Dynamo Badge pdf.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Dynamo_Badge_pdf.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-npm-20",
@@ -3696,7 +3924,10 @@
     "displayName": "Haringey Borough",
     "level": 8,
     "section": "southern-league-central",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Haringey Borough F.C.",
+    "imageTitle": "Boro-300px.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Boro-300px.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-slc-10",
@@ -3863,7 +4094,10 @@
     "displayName": "Bristol Manor Farm",
     "level": 8,
     "section": "southern-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bristol Manor Farm F.C.",
+    "imageTitle": "Bristol_Manor_Farm_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/32/Bristol_Manor_Farm_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-sls-05",
@@ -3890,14 +4124,20 @@
     "displayName": "Falmouth Town",
     "level": 8,
     "section": "southern-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Falmouth Town A.F.C.",
+    "imageTitle": "Falmouth_town_afc_2023.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/57/Falmouth_town_afc_2023.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-sls-08",
     "displayName": "Hartpury",
     "level": 8,
     "section": "southern-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hartpury F.C.",
+    "imageTitle": "Hartpury_University_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/09/Hartpury_University_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-sls-09",
@@ -3944,28 +4184,40 @@
     "displayName": "Portland United",
     "level": 8,
     "section": "southern-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Portland United F.C.",
+    "imageTitle": "Portland United Dorset FC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/c2/Portland_United_Dorset_FC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-sls-14",
     "displayName": "Shaftesbury",
     "level": 8,
     "section": "southern-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Shaftesbury F.C.",
+    "imageTitle": "Shaftesbury_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/15/Shaftesbury_F.C._logo.svg/1280px-Shaftesbury_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng8-sls-15",
     "displayName": "Slimbridge",
     "level": 8,
     "section": "southern-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Slimbridge A.F.C.",
+    "imageTitle": "Slimbridge_AFC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/aa/Slimbridge_AFC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-sls-16",
     "displayName": "Sporting Club Inkberrow",
     "level": 8,
     "section": "southern-league-south",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sporting Club Inkberrow F.C.",
+    "imageTitle": "Sporting_Club_Inkberrow_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/ac/Sporting_Club_Inkberrow_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng8-sls-17",
@@ -4082,7 +4334,10 @@
     "displayName": "Burnham",
     "level": 9,
     "section": "combined-counties-football-league-premier-division-north-ccln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Burnham F.C.",
+    "imageTitle": "Burnham_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/3a/Burnham_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ccln-07",
@@ -4109,7 +4364,10 @@
     "displayName": "Hilltop",
     "level": 9,
     "section": "combined-counties-football-league-premier-division-north-ccln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hilltop F.C.",
+    "imageTitle": "Hilltop_FC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/1b/Hilltop_FC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ccln-10",
@@ -4193,17 +4451,23 @@
   },
   {
     "id": "eng9-ccln-18",
-    "displayName": "Thatcham Town CCLN",
+    "displayName": "Thatcham Town",
     "level": 9,
     "section": "combined-counties-football-league-premier-division-north-ccln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Thatcham Town F.C.",
+    "imageTitle": "Thatcham Town.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Thatcham_Town.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ccln-19",
     "displayName": "Wallingford & Crowmarsh",
     "level": 9,
     "section": "combined-counties-football-league-premier-division-north-ccln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Wallingford & Crowmarsh F.C.",
+    "imageTitle": "Wallingford_&_Crowmarsh_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Wallingford_%26_Crowmarsh_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ccln-20",
@@ -4220,21 +4484,30 @@
     "displayName": "Belstone",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Belstone F.C.",
+    "sourceUrl": "https://images.pitchero.com/club_logos/72555/KqCM8OJuRgKM0rMYICow_Black and white printsrn from Jason jpg.jpg",
+    "sourcePage": "https://www.belstonefc.com/"
   },
   {
     "id": "eng10-ccl1-02",
     "displayName": "Berks County",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Berks County F.C.",
+    "imageTitle": "Berks_County_F.C.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f7/Berks_County_F.C.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ccl1-03",
     "displayName": "Bovingdon",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bovingdon F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/bovingdon.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/bovingdon"
   },
   {
     "id": "eng10-ccl1-04",
@@ -4311,7 +4584,10 @@
     "displayName": "Maidenhead Town",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Maidenhead Town F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/maidenhead-town.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/maidenhead-town"
   },
   {
     "id": "eng10-ccl1-12",
@@ -4338,14 +4614,20 @@
     "displayName": "PFC Victoria",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "PFC Victoria London",
+    "imageTitle": "PFC Victoria London Logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f4/PFC_Victoria_London_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ccl1-15",
-    "displayName": "Rising Ballers Kensington",
+    "displayName": "Shepherd's Bush",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Shepherd's Bush F.C. (2021)",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/shepherds-bush.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/shepherds-bush"
   },
   {
     "id": "eng10-ccl1-16",
@@ -4362,21 +4644,30 @@
     "displayName": "Spartans Youth",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Spartans Youth F.C.",
+    "imageTitle": "Spartans_Youth_F.C.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e8/Spartans_Youth_F.C.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ccl1-18",
     "displayName": "Spelthorne Sports Club",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Spelthorne Sports F.C.",
+    "imageTitle": "Spelthorne Sports F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e7/Spelthorne_Sports_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ccl1-19",
-    "displayName": "Staines & Lammas (Middx)",
+    "displayName": "Staines & Lammas (Middlesex)",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Staines & Lammas (Middlesex) F.C.",
+    "imageTitle": "Staines & Lammas (Middlesex) F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/ab/Staines_%26_Lammas_%28Middlesex%29_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ccl1-20",
@@ -4393,7 +4684,10 @@
     "displayName": "Westside",
     "level": 10,
     "section": "combined-counties-football-league-division-one-ccl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Westside F.C. (England)",
+    "imageTitle": "Westside FC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/68/Westside_FC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ccl1-22",
@@ -4600,14 +4894,20 @@
     "displayName": "Yateley United",
     "level": 9,
     "section": "combined-counties-football-league-premier-division-south-ccls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Yateley United F.C.",
+    "imageTitle": "Yateley_United_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/30/Yateley_United_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eclp-01",
     "displayName": "Brantham Athletic",
     "level": 9,
     "section": "eastern-counties-football-league-premier-division-eclp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Brantham Athletic F.C.",
+    "imageTitle": "Brantham Athletic FC.PNG",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/ef/Brantham_Athletic_FC.PNG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eclp-02",
@@ -4654,7 +4954,10 @@
     "displayName": "Great Yarmouth Town",
     "level": 9,
     "section": "eastern-counties-football-league-premier-division-eclp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Great Yarmouth Town F.C.",
+    "imageTitle": "Gytown_fc.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/Gytown_fc.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eclp-07",
@@ -4681,7 +4984,10 @@
     "displayName": "Heacham",
     "level": 9,
     "section": "eastern-counties-football-league-premier-division-eclp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Heacham F.C.",
+    "imageTitle": "Heacham_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/Heacham_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eclp-10",
@@ -4715,10 +5021,13 @@
   },
   {
     "id": "eng9-eclp-13",
-    "displayName": "March Town United UCLS",
+    "displayName": "March Town United",
     "level": 9,
     "section": "eastern-counties-football-league-premier-division-eclp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "March Town United F.C.",
+    "imageTitle": "MarchTownUnitedLogo.PNG",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/8/86/MarchTownUnitedLogo.PNG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eclp-14",
@@ -4795,21 +5104,30 @@
     "displayName": "AFC Sudbury (Reserves)",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. Sudbury",
+    "imageTitle": "AFC Sudbury Logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/49/AFC_Sudbury_Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ecln-02",
     "displayName": "Diss Town",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Diss Town F.C.",
+    "imageTitle": "Diss_Town_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1b/Diss_Town_F.C._logo.svg/1280px-Diss_Town_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng10-ecln-03",
-    "displayName": "Dussindale & Hellesdon Rov",
+    "displayName": "Dussindale & Hellesdon Rovers",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Dussindale & Hellesdon Rovers F.C.",
+    "imageTitle": "Dussindale_&_Hellesdon_Rovers_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/02/Dussindale_%26_Hellesdon_Rovers_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ecln-04",
@@ -4836,14 +5154,20 @@
     "displayName": "Framlingham Town",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Framlingham Town F.C.",
+    "imageTitle": "Framlingham Town FC.PNG",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/bb/Framlingham_Town_FC.PNG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ecln-07",
     "displayName": "Gorleston (Reserves)",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Gorleston F.C.",
+    "imageTitle": "Gorleston FC.PNG",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Gorleston_FC.PNG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ecln-08",
@@ -4860,7 +5184,10 @@
     "displayName": "Halesworth Town",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Halesworth Town F.C.",
+    "imageTitle": "Halesworth_Town_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f1/Halesworth_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ecln-10",
@@ -4907,21 +5234,30 @@
     "displayName": "Needham Market (Reserves)",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Needham Market F.C.",
+    "imageTitle": "Needham Market FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/72/Needham_Market_FC_crest.svg/1280px-Needham_Market_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng10-ecln-15",
     "displayName": "Netherton United",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Netherton United F.C.",
+    "sourceUrl": "https://images.pitchero.com/club_logos/51145/IqMfOQ2hSb2VgzFzSlAM_Netherton new colour.png",
+    "sourcePage": "https://www.pitchero.com/clubs/nethertonunited/"
   },
   {
     "id": "eng10-ecln-16",
     "displayName": "Newmarket Town Reserves",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Newmarket Town F.C.",
+    "imageTitle": "Newmarket Town FC.PNG",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/29/Newmarket_Town_FC.PNG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ecln-17",
@@ -4938,7 +5274,10 @@
     "displayName": "Stanway Pegasus",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AFC Pegasus",
+    "imageTitle": "AFC_Pegasus_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/cf/AFC_Pegasus_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ecln-19",
@@ -4955,7 +5294,10 @@
     "displayName": "Wroxham (Reserves)",
     "level": 10,
     "section": "eastern-counties-football-league-division-one-ecln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Wroxham F.C.",
+    "imageTitle": "Wroxham.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Wroxham.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eslp-01",
@@ -4992,14 +5334,20 @@
     "displayName": "Clapton Community",
     "level": 9,
     "section": "essex-senior-football-league-premier-division-eslp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Clapton C.F.C.",
+    "imageTitle": "Clapton_new.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Clapton_new.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eslp-05",
     "displayName": "Frenford",
     "level": 9,
     "section": "essex-senior-football-league-premier-division-eslp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Frenford F.C.",
+    "imageTitle": "Frenford F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/c1/Frenford_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eslp-06",
@@ -5066,7 +5414,10 @@
     "displayName": "Hutton",
     "level": 9,
     "section": "essex-senior-football-league-premier-division-eslp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hutton F.C.",
+    "imageTitle": "Hutton_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a1/Hutton_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-eslp-13",
@@ -5083,7 +5434,10 @@
     "displayName": "Romford",
     "level": 9,
     "section": "essex-senior-football-league-premier-division-eslp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Romford F.C.",
+    "imageTitle": "Romford_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7f/Romford_F.C._logo.svg/1280px-Romford_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-eslp-15",
@@ -5150,7 +5504,10 @@
     "displayName": "AS London",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AS London F.C.",
+    "imageTitle": "AS_London_Logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/fe/AS_London_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-02",
@@ -5167,14 +5524,20 @@
     "displayName": "Basildon Town",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Basildon Town F.C.",
+    "imageTitle": "Basildon_Town_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/2f/Basildon_Town_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-04",
     "displayName": "Brimsdown",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Brimsdown F.C.",
+    "imageTitle": "Brimsdown_FC_Crest.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Brimsdown_FC_Crest.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-05",
@@ -5191,7 +5554,10 @@
     "displayName": "Cannons Wood",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Cannons Wood F.C.",
+    "imageTitle": "Cannons_Wood_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b3/Cannons_Wood_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-07",
@@ -5208,14 +5574,20 @@
     "displayName": "Dunmow Town",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Dunmow Town F.C.",
+    "sourceUrl": "https://resources.thefa.com/images/ftimages/data/league958158630/478.jpg",
+    "sourcePage": "https://fulltime.thefa.com/index.html?league=958158630"
   },
   {
     "id": "eng10-esls-09",
     "displayName": "East Thurrock Community",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "East Thurrock Community F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/east-thurrock-community.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/east-thurrock-community"
   },
   {
     "id": "eng10-esls-10",
@@ -5232,14 +5604,20 @@
     "displayName": "FC Baresi",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "FC Baresi",
+    "imageTitle": "FC_Baresi_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/54/FC_Baresi_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-12",
     "displayName": "Hertford Heath",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hertford Heath F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/hertford-heath.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/hertford-heath"
   },
   {
     "id": "eng10-esls-13",
@@ -5256,14 +5634,20 @@
     "displayName": "London Fennecs",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "London Fennecs F.C.",
+    "sourceUrl": "https://resources.thefa.com/images/ftimages/data/league958158630/76610.jpg",
+    "sourcePage": "https://fulltime.thefa.com/index.html?league=958158630"
   },
   {
     "id": "eng10-esls-15",
     "displayName": "London Harts United",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "London Harts United F.C.",
+    "sourceUrl": "https://resources.thefa.com/images/ftimages/data/league958158630/94202.jpg",
+    "sourcePage": "https://fulltime.thefa.com/index.html?league=958158630"
   },
   {
     "id": "eng10-esls-16",
@@ -5280,28 +5664,40 @@
     "displayName": "May & Baker EC",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "May & Baker F.C.",
+    "imageTitle": "May & Baker FC logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/ad/May_%26_Baker_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-18",
-    "displayName": "Newbury Forest",
+    "displayName": "Marcelona",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Marcelona F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/marcelona.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/marcelona"
   },
   {
     "id": "eng10-esls-19",
     "displayName": "NW London",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "NW London F.C.",
+    "imageTitle": "NW_London_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a8/NW_London_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-20",
     "displayName": "Rayleigh Town",
     "level": 10,
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Rayleigh Town F.C.",
+    "imageTitle": "Rayleigh_Town_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/Rayleigh_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-esls-21",
@@ -5455,10 +5851,13 @@
   },
   {
     "id": "eng9-hlp-14",
-    "displayName": "Pershore Town 88",
+    "displayName": "Pershore Town",
     "level": 9,
     "section": "hellenic-football-league-premier-division-hlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Pershore Town F.C.",
+    "imageTitle": "Pershore_Town_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/d4/Pershore_Town_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-hlp-15",
@@ -5482,24 +5881,33 @@
   },
   {
     "id": "eng9-hlp-17",
-    "displayName": "Stourport Swifts MLP",
+    "displayName": "Stourport Swifts",
     "level": 9,
     "section": "hellenic-football-league-premier-division-hlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Stourport Swifts F.C.",
+    "imageTitle": "Stourport Swifts F.C.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/5e/Stourport_Swifts_F.C.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-hlp-18",
     "displayName": "Thornbury Town",
     "level": 9,
     "section": "hellenic-football-league-premier-division-hlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Thornbury Town F.C.",
+    "imageTitle": "Thornbury Town F.C. Logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/29/Thornbury_Town_F.C._Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-hlp-19",
     "displayName": "Tuffley Rovers",
     "level": 9,
     "section": "hellenic-football-league-premier-division-hlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Tuffley Rovers F.C.",
+    "imageTitle": "Tuffley Rovers F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/2d/Tuffley_Rovers_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-hlp-20",
@@ -5586,14 +5994,20 @@
     "displayName": "Clanfield (85)",
     "level": 10,
     "section": "hellenic-football-league-division-one-hl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Clanfield F.C.",
+    "imageTitle": "Clanfield 85 logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/6c/Clanfield_85_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-hl1-09",
     "displayName": "Ludlow Town",
     "level": 10,
     "section": "hellenic-football-league-division-one-hl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ludlow Town F.C.",
+    "imageTitle": "Ludlow  Town FC.JPG",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/Ludlow_Town_FC.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-hl1-10",
@@ -5630,7 +6044,10 @@
     "displayName": "Sharpness",
     "level": 10,
     "section": "hellenic-football-league-division-one-hl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sharpness A.F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/sharpness.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/sharpness"
   },
   {
     "id": "eng10-hl1-14",
@@ -5667,7 +6084,10 @@
     "displayName": "Swindon Supermarine Res",
     "level": 10,
     "section": "hellenic-football-league-division-one-hl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Swindon Supermarine F.C.",
+    "imageTitle": "Swindon Supermarine new crest.jpeg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b6/Swindon_Supermarine_new_crest.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-hl1-18",
@@ -5681,10 +6101,13 @@
   },
   {
     "id": "eng9-mlp-01",
-    "displayName": "A F C Wolverhampton City",
+    "displayName": "AFC Wolverhampton City",
     "level": 9,
     "section": "midland-football-league-premier-division-mlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. Wolverhampton City",
+    "imageTitle": "A.F.C. Wulfrunians logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/ca/A.F.C._Wulfrunians_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-mlp-02",
@@ -5711,7 +6134,10 @@
     "displayName": "Cheadle Town",
     "level": 9,
     "section": "midland-football-league-premier-division-mlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Cheadle Town F.C.",
+    "imageTitle": "Cheadle_Town_F.C.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/Cheadle_Town_F.C.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-mlp-05",
@@ -5728,7 +6154,10 @@
     "displayName": "Dudley Town",
     "level": 9,
     "section": "midland-football-league-premier-division-mlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Dudley Town F.C.",
+    "imageTitle": "Dudley_Town_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/46/Dudley_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-mlp-07",
@@ -5745,7 +6174,10 @@
     "displayName": "Northwich Victoria",
     "level": 9,
     "section": "midland-football-league-premier-division-mlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Northwich Victoria F.C.",
+    "imageTitle": "Northwich_Victoria_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/59/Northwich_Victoria_F.C._logo.svg/1280px-Northwich_Victoria_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-mlp-09",
@@ -5782,7 +6214,10 @@
     "displayName": "Stockport Georgians",
     "level": 9,
     "section": "midland-football-league-premier-division-mlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Stockport Georgians A.F.C.",
+    "imageTitle": "Stockport_Georgians_AFC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/ab/Stockport_Georgians_AFC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-mlp-13",
@@ -5819,7 +6254,10 @@
     "displayName": "Uttoxeter Town",
     "level": 9,
     "section": "midland-football-league-premier-division-mlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Uttoxeter Town F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/uttoxeter-town.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/uttoxeter-town"
   },
   {
     "id": "eng9-mlp-17",
@@ -5866,21 +6304,30 @@
     "displayName": "AFC North Kilworth",
     "level": 10,
     "section": "midland-football-league-division-one-ml1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. North Kilworth",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/afc-north-kilworth.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/afc-north-kilworth"
   },
   {
     "id": "eng10-ml1-02",
     "displayName": "Anstey Town",
     "level": 10,
     "section": "midland-football-league-division-one-ml1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Anstey Town F.C.",
+    "sourceUrl": "https://images.pitchero.com/club_logos/90946/tCzHkCKpTR1QXlG2Itk0_ATFC Logo 2026 3.jpg",
+    "sourcePage": "https://www.pitchero.com/clubs/ansteytownfootballclub/"
   },
   {
     "id": "eng10-ml1-03",
-    "displayName": "Birmingham O J M",
+    "displayName": "Birmingham OJM",
     "level": 10,
     "section": "midland-football-league-division-one-ml1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Birmingham OJM F.C.",
+    "imageTitle": "Black Country Rangers F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/ee/Black_Country_Rangers_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ml1-04",
@@ -5927,7 +6374,10 @@
     "displayName": "Coventry Copsewood",
     "level": 10,
     "section": "midland-football-league-division-one-ml1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Coventry Copsewood F.C.",
+    "imageTitle": "Coventry Copsewood F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/8/8f/Coventry_Copsewood_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ml1-09",
@@ -5954,7 +6404,10 @@
     "displayName": "G.N.G Oadby Town",
     "level": 10,
     "section": "midland-football-league-division-one-ml1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "GNG Oadby Town F.C.",
+    "imageTitle": "Oadby Town F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/25/Oadby_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ml1-12",
@@ -5971,7 +6424,10 @@
     "displayName": "Heather St. John's",
     "level": 10,
     "section": "midland-football-league-division-one-ml1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Heather St John's F.C.",
+    "imageTitle": "Heather St John's F.C.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9c/Heather_St_John%27s_F.C.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ml1-14",
@@ -6148,21 +6604,30 @@
     "displayName": "Euxton Villa",
     "level": 9,
     "section": "north-west-counties-league-premier-division-nwcp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Euxton Villa F.C.",
+    "imageTitle": "Euxton_Villa_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/16/Euxton_Villa_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-nwcp-10",
     "displayName": "F.C. St. Helens",
     "level": 9,
     "section": "north-west-counties-league-premier-division-nwcp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "F.C. St Helens",
+    "imageTitle": "F.C._St_Helens_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c4/F.C._St_Helens_logo.svg/1280px-F.C._St_Helens_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-nwcp-11",
     "displayName": "FC Isle of Man",
     "level": 9,
     "section": "north-west-counties-league-premier-division-nwcp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "F.C. Isle of Man",
+    "imageTitle": "FC Isle of Man crest.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/23/FC_Isle_of_Man_crest.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-nwcp-12",
@@ -6189,7 +6654,10 @@
     "displayName": "Longridge Town",
     "level": 9,
     "section": "north-west-counties-league-premier-division-nwcp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Longridge Town F.C.",
+    "imageTitle": "LongridgeTownFC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/01/LongridgeTownFC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-nwcp-15",
@@ -6206,7 +6674,10 @@
     "displayName": "Pilkington",
     "level": 9,
     "section": "north-west-counties-league-premier-division-nwcp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Pilkington F.C.",
+    "imageTitle": "Pilkington_F.C._logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/35/Pilkington_F.C._logo.svg/1280px-Pilkington_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-nwcp-17",
@@ -6233,7 +6704,10 @@
     "displayName": "South Liverpool",
     "level": 9,
     "section": "north-west-counties-league-premier-division-nwcp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "South Liverpool F.C.",
+    "imageTitle": "South_Liverpool_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/28/South_Liverpool_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-nwcp-20",
@@ -6260,7 +6734,10 @@
     "displayName": "AFC Knowsley",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. Knowsley",
+    "sourceUrl": "https://www.afcknowsley.co.uk/wp-content/uploads/2022/06/cropped-clubbadgetransparent.png",
+    "sourcePage": "https://www.afcknowsley.co.uk/"
   },
   {
     "id": "eng10-nwcn-03",
@@ -6287,7 +6764,10 @@
     "displayName": "Ashville",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ashville F.C.",
+    "imageTitle": "Ashville_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/0f/Ashville_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcn-06",
@@ -6334,7 +6814,10 @@
     "displayName": "Darwen",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Darwen F.C.",
+    "imageTitle": "Darwen FC Badge.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Darwen_FC_Badge.svg/1280px-Darwen_FC_Badge.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng10-nwcn-11",
@@ -6351,21 +6834,30 @@
     "displayName": "Fulwood Amateur",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Fulwood Amateurs A.F.C.",
+    "imageTitle": "Fulwood_Amateurs_A.F.C._Logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/26/Fulwood_Amateurs_A.F.C._Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcn-13",
     "displayName": "Garstang",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Garstang F.C.",
+    "imageTitle": "GarstangFC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b3/GarstangFC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcn-14",
     "displayName": "Halewood Apollo",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Halewood Apollo F.C.",
+    "sourceUrl": "https://www.nwcfl.com/images/crests/transparent/951.png",
+    "sourcePage": "https://www.nwcfl.com/clubpage.php?id=951"
   },
   {
     "id": "eng10-nwcn-15",
@@ -6382,7 +6874,10 @@
     "displayName": "Litherland Remyca",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Litherland REMYCA F.C.",
+    "imageTitle": "Litherland REMYCA F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/ae/Litherland_REMYCA_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcn-17",
@@ -6399,7 +6894,10 @@
     "displayName": "MSB Woolton",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "MSB Woolton F.C.",
+    "imageTitle": "MSB Woolton F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/dc/MSB_Woolton_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcn-19",
@@ -6426,28 +6924,40 @@
     "displayName": "Thornton Cleveleys",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Thornton Cleveleys F.C.",
+    "imageTitle": "Thornton_Cleveleys_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/51/Thornton_Cleveleys_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcn-22",
     "displayName": "Uppermill",
     "level": 10,
     "section": "north-west-counties-league-division-one-north-nwcn",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Uppermill F.C.",
+    "sourceUrl": "https://static.wixstatic.com/media/339f44_312bbeb5a5db4ef88be6d0d17bda305b~mv2_d_1912_1912_s_2.png",
+    "sourcePage": "https://www.uppermillafc.co.uk/"
   },
   {
     "id": "eng10-nwcs-01",
-    "displayName": "AFC Bridgnorth ML1",
+    "displayName": "AFC Bridgnorth",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. Bridgnorth",
+    "imageTitle": "A.F.C. Bridgnorth logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/7d/A.F.C._Bridgnorth_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcs-02",
     "displayName": "Allscott Heath",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Allscott Heath F.C.",
+    "imageTitle": "Allscott_Heath_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Allscott_Heath_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcs-03",
@@ -6471,10 +6981,13 @@
   },
   {
     "id": "eng10-nwcs-05",
-    "displayName": "Bilston Town ML1",
+    "displayName": "Bilston Town",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bilston Town F.C.",
+    "imageTitle": "Bilston Town F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/c8/Bilston_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcs-06",
@@ -6501,14 +7014,20 @@
     "displayName": "Crewe",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Crewe F.C.",
+    "sourceUrl": "https://www.nwcfl.com/images/crests/transparent/591.png",
+    "sourcePage": "https://www.nwcfl.com/clubpage.php?id=591"
   },
   {
     "id": "eng10-nwcs-09",
     "displayName": "Dawley Town",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Dawley Town F.C.",
+    "sourceUrl": "https://www.nwcfl.com/images/crests/transparent/635.png",
+    "sourcePage": "https://www.nwcfl.com/clubpage.php?id=635"
   },
   {
     "id": "eng10-nwcs-10",
@@ -6525,7 +7044,10 @@
     "displayName": "Foley Meir",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Foley Meir F.C.",
+    "imageTitle": "Foley_Meir_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/29/Foley_Meir_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcs-12",
@@ -6552,7 +7074,10 @@
     "displayName": "Sandbach United",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sandbach United F.C.",
+    "imageTitle": "Sandbach_United_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/31/Sandbach_United_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcs-15",
@@ -6589,14 +7114,20 @@
     "displayName": "Wednesfield Community",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Wednesfield F.C.",
+    "imageTitle": "WednesfieldFC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/33/WednesfieldFC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nwcs-19",
     "displayName": "Widnes Town",
     "level": 10,
     "section": "north-west-counties-league-first-division-south-nwcs",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Widnes Town F.C.",
+    "sourceUrl": "https://www.nwcfl.com/images/crests/transparent/868.png",
+    "sourcePage": "https://www.nwcfl.com/clubpage.php?id=868"
   },
   {
     "id": "eng10-nwcs-20",
@@ -6683,21 +7214,30 @@
     "displayName": "Handsworth",
     "level": 9,
     "section": "northern-counties-east-football-league-premier-division-ncep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Handsworth F.C.",
+    "imageTitle": "Handsworth Parramore logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/d3/Handsworth_Parramore_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ncep-09",
     "displayName": "Horbury Town",
     "level": 9,
     "section": "northern-counties-east-football-league-premier-division-ncep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Horbury Town F.C.",
+    "imageTitle": "Horbury_Town_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/1e/Horbury_Town_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ncep-10",
     "displayName": "Keighley Town",
     "level": 9,
     "section": "northern-counties-east-football-league-premier-division-ncep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Keighley Town F.C.",
+    "sourceUrl": "https://ncefl.org.uk/images/clubbadges/Keighley%20Town.png",
+    "sourcePage": "https://ncefl.org.uk/teams/"
   },
   {
     "id": "eng9-ncep-11",
@@ -6734,7 +7274,10 @@
     "displayName": "Pickering Town Community",
     "level": 9,
     "section": "northern-counties-east-football-league-premier-division-ncep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Pickering Town F.C.",
+    "imageTitle": "Pickering Town FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Pickering_Town_FC_crest.svg/1280px-Pickering_Town_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-ncep-15",
@@ -6751,7 +7294,10 @@
     "displayName": "Retford United",
     "level": 9,
     "section": "northern-counties-east-football-league-premier-division-ncep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Retford United F.C.",
+    "imageTitle": "Retford_United_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/7d/Retford_United_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ncep-17",
@@ -6768,14 +7314,20 @@
     "displayName": "Tadcaster Albion",
     "level": 9,
     "section": "northern-counties-east-football-league-premier-division-ncep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Tadcaster Albion A.F.C.",
+    "imageTitle": "Tadcaster Albion A.F.C.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/55/Tadcaster_Albion_A.F.C.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ncep-19",
     "displayName": "Thackley Association",
     "level": 9,
     "section": "northern-counties-east-football-league-premier-division-ncep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Thackley A.F.C.",
+    "imageTitle": "Thackley AFC Club Crest.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Thackley_AFC_Club_Crest.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ncep-20",
@@ -6822,7 +7374,10 @@
     "displayName": "Brigg Town FC CIC",
     "level": 10,
     "section": "northern-counties-east-football-league-division-one-nce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Brigg Town F.C.",
+    "imageTitle": "Briggtownfc.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9b/Briggtownfc.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nce1-05",
@@ -6859,7 +7414,10 @@
     "displayName": "Field Olympic",
     "level": 10,
     "section": "northern-counties-east-football-league-division-one-nce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Field Olympic F.C.",
+    "sourceUrl": "https://ncefl.org.uk/images/clubbadges/Field%20Olympic.png",
+    "sourcePage": "https://ncefl.org.uk/teams/"
   },
   {
     "id": "eng10-nce1-09",
@@ -6896,14 +7454,20 @@
     "displayName": "Ilkley Town",
     "level": 10,
     "section": "northern-counties-east-football-league-division-one-nce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ilkley Town A.F.C.",
+    "imageTitle": "Ilkley_Town_AFC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/7a/Ilkley_Town_AFC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nce1-13",
     "displayName": "Immingham Town",
     "level": 10,
     "section": "northern-counties-east-football-league-division-one-nce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Immingham Town F.C.",
+    "sourceUrl": "https://ncefl.org.uk/images/clubbadges/Immingham%20Town.png",
+    "sourcePage": "https://ncefl.org.uk/teams/"
   },
   {
     "id": "eng10-nce1-14",
@@ -6920,14 +7484,20 @@
     "displayName": "LIV",
     "level": 10,
     "section": "northern-counties-east-football-league-division-one-nce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "LIV F.C.",
+    "sourceUrl": "https://ncefl.org.uk/images/clubbadges/LIV.png",
+    "sourcePage": "https://ncefl.org.uk/teams/"
   },
   {
     "id": "eng10-nce1-16",
     "displayName": "Route One Rovers",
     "level": 10,
     "section": "northern-counties-east-football-league-division-one-nce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Route One Rovers F.C.",
+    "imageTitle": "Route_One_Rovers_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/64/Route_One_Rovers_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nce1-17",
@@ -6951,10 +7521,13 @@
   },
   {
     "id": "eng10-nce1-19",
-    "displayName": "UFCA",
+    "displayName": "Leeds UFCA",
     "level": 10,
     "section": "northern-counties-east-football-league-division-one-nce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Leeds U.F.C.A.",
+    "sourceUrl": "https://ncefl.org.uk/images/clubbadges/Leeds%20UFCA.png",
+    "sourcePage": "https://ncefl.org.uk/teams/"
   },
   {
     "id": "eng10-nce1-20",
@@ -7001,7 +7574,10 @@
     "displayName": "Bishop Auckland",
     "level": 9,
     "section": "northern-football-league-division-one-nl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bishop Auckland F.C.",
+    "imageTitle": "Bishop Auckland F.C. welcome sign.jpg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Bishop_Auckland_F.C._welcome_sign.jpg/1280px-Bishop_Auckland_F.C._welcome_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-nl1-03",
@@ -7058,7 +7634,10 @@
     "displayName": "Horden Community Welfare",
     "level": 9,
     "section": "northern-football-league-division-one-nl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Horden Community Welfare F.C.",
+    "imageTitle": "Horden_Community_Welfare_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Horden_Community_Welfare_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-nl1-09",
@@ -7095,7 +7674,10 @@
     "displayName": "Newcastle Blue Star",
     "level": 9,
     "section": "northern-football-league-division-one-nl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Newcastle Blue Star F.C.",
+    "imageTitle": "NBSFC_logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f9/NBSFC_logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-nl1-13",
@@ -7142,7 +7724,10 @@
     "displayName": "Redcar Town",
     "level": 9,
     "section": "northern-football-league-division-one-nl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Redcar Town F.C.",
+    "imageTitle": "Redcar_Town_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/35/Redcar_Town_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-nl1-18",
@@ -7189,14 +7774,20 @@
     "displayName": "Yarm & Eaglescliffe",
     "level": 9,
     "section": "northern-football-league-division-one-nl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Yarm & Eaglescliffe F.C.",
+    "imageTitle": "Yarm_&_Eaglescliffe_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/22/Yarm_%26_Eaglescliffe_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-01",
     "displayName": "AFC Newbiggin",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. Newbiggin",
+    "imageTitle": "A.F.C. Newbiggin logo.jpeg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/ca/A.F.C._Newbiggin_logo.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-02",
@@ -7233,42 +7824,60 @@
     "displayName": "Boldon C.A.",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Boldon Community Association F.C.",
+    "imageTitle": "Boldon_Community_Association_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f9/Boldon_Community_Association_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-06",
     "displayName": "Chester Le Street Town",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Chester-le-Street Town F.C.",
+    "imageTitle": "Chester-le-Street FC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9d/Chester-le-Street_FC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-07",
     "displayName": "Chester le Street United",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Park View A.F.C.",
+    "imageTitle": "Chester-le-Street_United_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/45/Chester-le-Street_United_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-08",
     "displayName": "Darlington Town",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Darlington Town F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/darlington-town.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/darlington-town"
   },
   {
     "id": "eng10-nl2-09",
     "displayName": "Durham United",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Durham United F.C.",
+    "imageTitle": "Durham United FC (England) logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f9/Durham_United_FC_%28England%29_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-10",
     "displayName": "Grangetown Boys Club",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Grangetown Boys Club F.C.",
+    "imageTitle": "Grangetown_Boys_Club_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e6/Grangetown_Boys_Club_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-11",
@@ -7305,14 +7914,20 @@
     "displayName": "Prudhoe Youth Club",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Prudhoe Youth Club F.C.",
+    "imageTitle": "Prudhoe_Youth_Club_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/6f/Prudhoe_Youth_Club_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-15",
     "displayName": "Ryton & Crawcrook Albion",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ryton & Crawcrook Albion F.C.",
+    "imageTitle": "Ryton_&_Crawcrook_Albion_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/Ryton_%26_Crawcrook_Albion_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-16",
@@ -7329,7 +7944,10 @@
     "displayName": "Seaton Carew",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Seaton Carew F.C.",
+    "imageTitle": "Seaton Carew FC Logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/66/Seaton_Carew_FC_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-18",
@@ -7346,7 +7964,10 @@
     "displayName": "Sunderland RCA (Sat)",
     "level": 10,
     "section": "northern-football-league-division-two-nl2",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sunderland Ryhope Community Association F.C.",
+    "imageTitle": "Sunderland Ryhope Community Association F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/00/Sunderland_Ryhope_Community_Association_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-nl2-20",
@@ -7373,7 +7994,10 @@
     "displayName": "Bude Town",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bude Town F.C.",
+    "imageTitle": "Bude_Town_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/Bude_Town_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpw-03",
@@ -7400,21 +8024,30 @@
     "displayName": "Dobwalls",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Dobwalls F.C.",
+    "imageTitle": "Dobwalls_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/c8/Dobwalls_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpw-06",
     "displayName": "Falmouth Town (Reserves)",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Falmouth Town A.F.C.",
+    "imageTitle": "Falmouth_town_afc_2023.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/57/Falmouth_town_afc_2023.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpw-07",
     "displayName": "Hayle",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hayle F.C.",
+    "sourceUrl": "https://www.swpleague.co.uk/wp-content/uploads/2026/05/Hayle-logo.jpg",
+    "sourcePage": "https://www.swpleague.co.uk/div-1-east/west-club-directory/"
   },
   {
     "id": "eng10-swpw-08",
@@ -7481,14 +8114,20 @@
     "displayName": "St Day",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "St Day A.F.C.",
+    "imageTitle": "St_Day_A.F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/68/St_Day_A.F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpw-15",
     "displayName": "St Mawgan",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "St Mawgan F.C.",
+    "sourceUrl": "https://www.swpleague.co.uk/wp-content/uploads/2026/05/st-mawgan.jpg",
+    "sourcePage": "https://www.swpleague.co.uk/div-1-east/west-club-directory/"
   },
   {
     "id": "eng10-swpw-16",
@@ -7515,7 +8154,10 @@
     "displayName": "Wendron United",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Wendron United F.C.",
+    "imageTitle": "Wendron_United_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/91/Wendron_United_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpe-01",
@@ -7582,7 +8224,10 @@
     "displayName": "Honiton Town",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Honiton Town F.C.",
+    "imageTitle": "Honiton_Town_FC_logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/d/d7/Honiton_Town_FC_logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpe-08",
@@ -7599,14 +8244,20 @@
     "displayName": "Ilminster Town",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ilminster Town F.C.",
+    "sourceUrl": "https://www.swpleague.co.uk/wp-content/uploads/2025/06/ilminster.jpg",
+    "sourcePage": "https://www.swpleague.co.uk/premier/premier-club-directory/"
   },
   {
     "id": "eng10-swpe-10",
     "displayName": "Middlezoy Rovers",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Middlezoy Rovers F.C.",
+    "imageTitle": "Middlezoy_Rovers_logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/11/Middlezoy_Rovers_logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpe-11",
@@ -7623,28 +8274,40 @@
     "displayName": "Okehampton Argyle",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Okehampton Argyle F.C.",
+    "imageTitle": "Okehampton_Argyle_FC_logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c7/Okehampton_Argyle_FC_logo.svg/1280px-Okehampton_Argyle_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng10-swpe-13",
     "displayName": "Stoke Gabriel & Torbay Police",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Stoke Gabriel & Torbay Police F.C.",
+    "imageTitle": "Stoke Gabriel & Torbay Police FC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Stoke_Gabriel_%26_Torbay_Police_FC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpe-14",
     "displayName": "Teignmouth",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Teignmouth A.F.C.",
+    "imageTitle": "Teignmouth_AFC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/99/Teignmouth_AFC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpe-15",
     "displayName": "Torridgeside",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Torridgeside A.F.C.",
+    "imageTitle": "Torridgeside_AFC_logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/3b/Torridgeside_AFC_logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-swpe-16",
@@ -7661,7 +8324,10 @@
     "displayName": "University of Exeter",
     "level": 10,
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "University of Exeter",
+    "imageTitle": "University of Exeter arms.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Arms_of_the_University_of_Exeter.svg/1280px-Arms_of_the_University_of_Exeter.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-scp-01",
@@ -7715,24 +8381,33 @@
   },
   {
     "id": "eng9-scp-06",
-    "displayName": "Eastbourne United Ass’n",
+    "displayName": "Eastbourne United Association",
     "level": 9,
     "section": "southern-combination-premier-division-scp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Eastbourne United A.F.C.",
+    "imageTitle": "Eastbourne United afc badge.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/3d/Eastbourne_United_afc_badge.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scp-07",
     "displayName": "Forest Row",
     "level": 9,
     "section": "southern-combination-premier-division-scp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Forest Row F.C.",
+    "imageTitle": "Forest_Row_FC_Logo.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/73/Forest_Row_FC_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scp-08",
-    "displayName": "Guernsey OR Peacehaven & T",
+    "displayName": "Guernsey",
     "level": 9,
     "section": "southern-combination-premier-division-scp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Guernsey F.C.",
+    "imageTitle": "Guernsey F.C..svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Guernsey_F.C..svg/1280px-Guernsey_F.C..svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-scp-09",
@@ -7759,7 +8434,10 @@
     "displayName": "Horsham YMCA",
     "level": 9,
     "section": "southern-combination-premier-division-scp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Horsham YM F.C.",
+    "imageTitle": "Horsham_YMCA_FC_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e8/Horsham_YMCA_FC_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scp-12",
@@ -7826,7 +8504,10 @@
     "displayName": "Roffey",
     "level": 9,
     "section": "southern-combination-premier-division-scp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Roffey F.C.",
+    "imageTitle": "Roffey_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/02/Roffey_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scp-19",
@@ -7843,14 +8524,20 @@
     "displayName": "Wick",
     "level": 9,
     "section": "southern-combination-premier-division-scp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Wick F.C.",
+    "imageTitle": "Wick_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/42/Wick_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sc1-01",
     "displayName": "AFC Walcountians",
     "level": 10,
     "section": "southern-combination-division-one-sc1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AFC Walcountians",
+    "imageTitle": "AFC_Walcountians_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/73/AFC_Walcountians_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sc1-02",
@@ -7887,7 +8574,10 @@
     "displayName": "Dorking Wanderers ('B')",
     "level": 10,
     "section": "southern-combination-division-one-sc1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Dorking Wanderers F.C.",
+    "imageTitle": "Dorking Wanderers FC crest.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2d/Dorking_Wanderers_FC_crest.svg/1280px-Dorking_Wanderers_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng10-sc1-06",
@@ -7911,17 +8601,23 @@
   },
   {
     "id": "eng10-sc1-08",
-    "displayName": "Halisham Town",
+    "displayName": "Hailsham Town",
     "level": 10,
     "section": "southern-combination-division-one-sc1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hailsham Town F.C.",
+    "imageTitle": "Hailsham Town F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/fb/Hailsham_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sc1-09",
     "displayName": "Infinity",
     "level": 10,
     "section": "southern-combination-division-one-sc1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Infinity F.C.",
+    "imageTitle": "Infinity_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/ff/Infinity_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sc1-10",
@@ -8018,21 +8714,30 @@
     "displayName": "Westfield",
     "level": 10,
     "section": "southern-combination-division-one-sc1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Westfield F.C. (Sussex)",
+    "imageTitle": "Westfield Football Club Sussex.jpg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Westfield_Football_Club_Sussex.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sc1-20",
     "displayName": "Worthing United",
     "level": 10,
     "section": "southern-combination-division-one-sc1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Worthing United F.C.",
+    "imageTitle": "Worthing_United_FC_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/5d/Worthing_United_FC_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scep-01",
     "displayName": "AFC Greenwich Borough",
     "level": 9,
     "section": "southern-counties-east-football-league-premier-division-scep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "A.F.C. Greenwich Borough",
+    "imageTitle": "AFC Greenwich Borough.webp",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/AFC_Greenwich_Borough.webp?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scep-02",
@@ -8089,7 +8794,10 @@
     "displayName": "Faversham Strike Force",
     "level": 9,
     "section": "southern-counties-east-football-league-premier-division-scep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Faversham Strike Force F.C.",
+    "imageTitle": "Faversham_Strike_Force_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/51/Faversham_Strike_Force_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scep-08",
@@ -8106,7 +8814,10 @@
     "displayName": "Hollands And Blair",
     "level": 9,
     "section": "southern-counties-east-football-league-premier-division-scep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hollands & Blair F.C.",
+    "imageTitle": "Hollands & Blair F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/8/8c/Hollands_%26_Blair_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scep-10",
@@ -8133,7 +8844,10 @@
     "displayName": "Larkfield And New Hythe",
     "level": 9,
     "section": "southern-counties-east-football-league-premier-division-scep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Larkfield & New Hythe Wanderers F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/larkfield-and-new-hythe.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/larkfield-and-new-hythe"
   },
   {
     "id": "eng9-scep-13",
@@ -8157,10 +8871,13 @@
   },
   {
     "id": "eng9-scep-15",
-    "displayName": "S E Dons",
+    "displayName": "SE Dons",
     "level": 9,
     "section": "southern-counties-east-football-league-premier-division-scep",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "SE Dons F.C.",
+    "imageTitle": "SE_Dons_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/98/SE_Dons_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-scep-16",
@@ -8227,7 +8944,10 @@
     "displayName": "FC Elmstead (1958)",
     "level": 10,
     "section": "southern-counties-east-football-league-division-one-sce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "F.C. Elmstead",
+    "imageTitle": "FCElmsetadlogo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/41/FCElmsetadlogo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sce1-05",
@@ -8244,7 +8964,10 @@
     "displayName": "Halls",
     "level": 10,
     "section": "southern-counties-east-football-league-division-one-sce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Halls Athletic F.C.",
+    "imageTitle": "Halls_Athletic_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e4/Halls_Athletic_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sce1-07",
@@ -8261,7 +8984,10 @@
     "displayName": "Lewisham Borough Community",
     "level": 10,
     "section": "southern-counties-east-football-league-division-one-sce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Lewisham Borough F.C.",
+    "imageTitle": "Lewisham Borough F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f4/Lewisham_Borough_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sce1-09",
@@ -8288,7 +9014,10 @@
     "displayName": "Minster",
     "level": 10,
     "section": "southern-counties-east-football-league-division-one-sce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Minster F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/minster.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/minster"
   },
   {
     "id": "eng10-sce1-12",
@@ -8315,7 +9044,10 @@
     "displayName": "Sporting Club Thamesmead",
     "level": 10,
     "section": "southern-counties-east-football-league-division-one-sce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sporting Club Thamesmead F.C.",
+    "imageTitle": "Seven Acre & Sidcup F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e9/Sporting_Club_Thamesmead_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-sce1-15",
@@ -8332,7 +9064,10 @@
     "displayName": "Staplehurst Monarchs United",
     "level": 10,
     "section": "southern-counties-east-football-league-division-one-sce1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Staplehurst Monarchs F.C.",
+    "imageTitle": "Staplehurst Monarchs FC Logo.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Staplehurst_Monarchs_FC_Logo.png/1280px-Staplehurst_Monarchs_FC_Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng10-sce1-17",
@@ -8439,14 +9174,20 @@
     "displayName": "Enfield",
     "level": 9,
     "section": "spartan-south-midlands-football-league-premier-division-ssmp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Enfield F.C.",
+    "imageTitle": "Enfield_1893_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a1/Enfield_1893_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ssmp-10",
     "displayName": "Everett Rovers",
     "level": 9,
     "section": "spartan-south-midlands-football-league-premier-division-ssmp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Everett Rovers F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/everett-rovers.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/everett-rovers"
   },
   {
     "id": "eng9-ssmp-11",
@@ -8483,7 +9224,10 @@
     "displayName": "Kings Langley",
     "level": 9,
     "section": "spartan-south-midlands-football-league-premier-division-ssmp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Kings Langley F.C.",
+    "imageTitle": "Kings_Langley_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b9/Kings_Langley_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ssmp-15",
@@ -8600,7 +9344,10 @@
     "displayName": "Eaton Socon",
     "level": 10,
     "section": "spartan-south-midlands-football-league-division-one-ssm1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Eaton Socon F.C.",
+    "imageTitle": "Eaton_Socon_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b8/Eaton_Socon_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ssm1-07",
@@ -8637,14 +9384,20 @@
     "displayName": "Leighton Town Reserves",
     "level": 10,
     "section": "spartan-south-midlands-football-league-division-one-ssm1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Leighton Town F.C.",
+    "imageTitle": "Leighton Town F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/62/Leighton_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ssm1-11",
     "displayName": "Letchworth Garden City Eagles",
     "level": 10,
     "section": "spartan-south-midlands-football-league-division-one-ssm1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Letchworth Garden City Eagles F.C.",
+    "imageTitle": "Letchworth_Garden_City_Eagles_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/be/Letchworth_Garden_City_Eagles_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ssm1-12",
@@ -8671,7 +9424,10 @@
     "displayName": "Rothwell Corinthians",
     "level": 10,
     "section": "spartan-south-midlands-football-league-division-one-ssm1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Rothwell Corinthians F.C.",
+    "imageTitle": "Rothwell Corinthians F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e4/Rothwell_Corinthians_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ssm1-15",
@@ -8788,21 +9544,30 @@
     "displayName": "Deeping Rangers",
     "level": 9,
     "section": "united-counties-football-league-premier-division-north-ucln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Deeping Rangers F.C.",
+    "imageTitle": "Deeping Rangers F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a3/Deeping_Rangers_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucln-08",
     "displayName": "Eastwood Community",
     "level": 9,
     "section": "united-counties-football-league-premier-division-north-ucln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Eastwood C.F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/eastwood.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/eastwood"
   },
   {
     "id": "eng9-ucln-09",
     "displayName": "Gresley Rovers",
     "level": 9,
     "section": "united-counties-football-league-premier-division-north-ucln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Gresley Rovers F.C.",
+    "imageTitle": "Gresley_Rovers_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/2f/Gresley_Rovers_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucln-10",
@@ -8816,10 +9581,13 @@
   },
   {
     "id": "eng9-ucln-11",
-    "displayName": "Hinckley AFC UCLS",
+    "displayName": "Hinckley AFC",
     "level": 9,
     "section": "united-counties-football-league-premier-division-north-ucln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hinckley A.F.C.",
+    "imageTitle": "Hinckley A.F.C. logo.svg",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Hinckley_A.F.C._logo.svg/1280px-Hinckley_A.F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "eng9-ucln-12",
@@ -8863,10 +9631,13 @@
   },
   {
     "id": "eng9-ucln-16",
-    "displayName": "NCEP",
+    "displayName": "Sheffield",
     "level": 9,
     "section": "united-counties-football-league-premier-division-north-ucln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sheffield F.C.",
+    "imageTitle": "Sheffield fc logo26.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e6/Sheffield_fc_logo26.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucln-17",
@@ -8883,7 +9654,10 @@
     "displayName": "Skegness Town",
     "level": 9,
     "section": "united-counties-football-league-premier-division-north-ucln",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Skegness Town A.F.C.",
+    "imageTitle": "Skegness_Town_A.F.C._Logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/Skegness_Town_A.F.C._Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ucl1-01",
@@ -8900,14 +9674,20 @@
     "displayName": "Clipstone",
     "level": 10,
     "section": "united-counties-football-league-division-one-ucl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Clipstone F.C.",
+    "imageTitle": "Clipstone Welfare F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/6c/Clipstone_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ucl1-03",
     "displayName": "Cotgrave",
     "level": 10,
     "section": "united-counties-football-league-division-one-ucl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Cotgrave F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/cotgrave.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/cotgrave"
   },
   {
     "id": "eng10-ucl1-04",
@@ -9004,7 +9784,10 @@
     "displayName": "Sandiacre Town",
     "level": 10,
     "section": "united-counties-football-league-division-one-ucl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sandiacre Town F.C.",
+    "imageTitle": "Sandiacre_Town_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/0/03/Sandiacre_Town_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ucl1-14",
@@ -9051,7 +9834,10 @@
     "displayName": "Southwell City",
     "level": 10,
     "section": "united-counties-football-league-division-one-ucl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Southwell City F.C.",
+    "imageTitle": "Southwell_City_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/fc/Southwell_City_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-ucl1-19",
@@ -9088,7 +9874,10 @@
     "displayName": "West Bridgford Colts",
     "level": 10,
     "section": "united-counties-football-league-division-one-ucl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "West Bridgford F.C.",
+    "imageTitle": "WestBridgfordFC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/35/WestBridgfordFC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucls-01",
@@ -9105,14 +9894,20 @@
     "displayName": "Bugbrooke St Michael",
     "level": 9,
     "section": "united-counties-football-league-premier-division-south-ucls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bugbrooke St Michaels F.C.",
+    "imageTitle": "Bugbrooke St Michaels F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Bugbrooke_St_Michaels_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucls-03",
     "displayName": "Coton Green Saturday",
     "level": 9,
     "section": "united-counties-football-league-premier-division-south-ucls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Coton Green F.C.",
+    "imageTitle": "CotonGreenFC.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/1a/CotonGreenFC.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucls-04",
@@ -9159,14 +9954,20 @@
     "displayName": "FC Stratford",
     "level": 9,
     "section": "united-counties-football-league-premier-division-south-ucls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "FC Stratford",
+    "imageTitle": "FC_Stratford_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/FC_Stratford_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucls-09",
     "displayName": "FC Peterborough",
     "level": 9,
     "section": "united-counties-football-league-premier-division-south-ucls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "F.C. Peterborough",
+    "imageTitle": "F.C._Peterborough_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f1/F.C._Peterborough_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucls-10",
@@ -9223,14 +10024,20 @@
     "displayName": "Moulton",
     "level": 9,
     "section": "united-counties-football-league-premier-division-south-ucls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Moulton F.C.",
+    "imageTitle": "Moulton_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/b/b1/Moulton_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-ucls-16",
     "displayName": "Northampton O.N.Chenecks",
     "level": 9,
     "section": "united-counties-football-league-premier-division-south-ucls",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Northampton ON Chenecks F.C.",
+    "sourceUrl": "https://www.footballwebpages.co.uk/graphics/teams/64/northampton-on-chenecks.png",
+    "sourcePage": "https://www.footballwebpages.co.uk/northampton-on-chenecks"
   },
   {
     "id": "eng9-ucls-17",
@@ -9317,7 +10124,10 @@
     "displayName": "Bournemouth Poppies",
     "level": 9,
     "section": "wessex-football-league-premier-division-wxp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Bournemouth F.C.",
+    "imageTitle": "Bournemouth_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/4e/Bournemouth_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-wxp-06",
@@ -9384,7 +10194,10 @@
     "displayName": "Fleetlands",
     "level": 9,
     "section": "wessex-football-league-premier-division-wxp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Fleetlands F.C.",
+    "imageTitle": "Fleetlands_F.C._badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e2/Fleetlands_F.C._badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-wxp-13",
@@ -9401,7 +10214,10 @@
     "displayName": "Hamworthy Recreation",
     "level": 9,
     "section": "wessex-football-league-premier-division-wxp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Hamworthy Recreation F.C.",
+    "imageTitle": "Hamworthy_Recreation_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/e0/Hamworthy_Recreation_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-wxp-15",
@@ -9468,7 +10284,10 @@
     "displayName": "Sturminster Newton United",
     "level": 9,
     "section": "wessex-football-league-premier-division-wxp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sturminster Newton United F.C.",
+    "imageTitle": "Sturminster_Newton_United_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/77/Sturminster_Newton_United_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-wxp-22",
@@ -9495,21 +10314,30 @@
     "displayName": "Alresford Town",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Alresford Town F.C.",
+    "imageTitle": "Alresford_Town_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/68/Alresford_Town_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-03",
     "displayName": "Ash United",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ash United F.C.",
+    "imageTitle": "Ash_United_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/70/Ash_United_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-04",
     "displayName": "Blandford United",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Blandford United F.C.",
+    "imageTitle": "Blandford_United_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/6/64/Blandford_United_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-05",
@@ -9526,7 +10354,10 @@
     "displayName": "Cove",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Cove F.C.",
+    "imageTitle": "Cove F.C. logo (Association).png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a5/Cove_F.C._logo_%28Association%29.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-07",
@@ -9543,7 +10374,10 @@
     "displayName": "Folland Sports",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Folland Sports F.C.",
+    "imageTitle": "Folland Sports F.C. Logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/25/Folland_Sports_F.C._Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-09",
@@ -9580,7 +10414,10 @@
     "displayName": "Kintbury Rangers",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Kintbury Rangers F.C.",
+    "imageTitle": "Kintbury_Rangers_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/5/5a/Kintbury_Rangers_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-13",
@@ -9617,21 +10454,30 @@
     "displayName": "Ringwood Town",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Ringwood Town F.C.",
+    "imageTitle": "Ringwood_Town_FC_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/10/Ringwood_Town_FC_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-17",
     "displayName": "Romsey Town",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Romsey Town F.C.",
+    "imageTitle": "Romsey_Town_FC_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/12/Romsey_Town_FC_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-18",
-    "displayName": "Sandhurst Town CCL1",
+    "displayName": "Sandhurst Town",
     "level": 10,
     "section": "wessex-football-league-division-one-wx1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sandhurst Town F.C.",
+    "imageTitle": "Sandhurst_Town_badge.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/f/f8/Sandhurst_Town_badge.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wx1-19",
@@ -9698,7 +10544,10 @@
     "displayName": "Brixham",
     "level": 9,
     "section": "western-football-league-premier-division-wlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Brixham A.F.C.",
+    "imageTitle": "Brixham_AFC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/8/87/Brixham_AFC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-wlp-06",
@@ -9795,7 +10644,10 @@
     "displayName": "Sidmouth Town",
     "level": 9,
     "section": "western-football-league-premier-division-wlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Sidmouth Town A.F.C.",
+    "imageTitle": "Sidmouth_Town_AFC_logo.jpeg",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/26/Sidmouth_Town_AFC_logo.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-wlp-16",
@@ -9822,7 +10674,10 @@
     "displayName": "Tavistock Association",
     "level": 9,
     "section": "western-football-league-premier-division-wlp",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Tavistock A.F.C.",
+    "imageTitle": "Tavistock A.F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/1/18/Tavistock_A.F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng9-wlp-19",
@@ -9849,7 +10704,10 @@
     "displayName": "AEK Boco",
     "level": 10,
     "section": "western-football-league-premier-division-wl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "AEK Boco F.C.",
+    "imageTitle": "AEK_Boco_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/e/ee/AEK_Boco_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wl1-02",
@@ -9876,7 +10734,10 @@
     "displayName": "Avonmouth",
     "level": 10,
     "section": "western-football-league-premier-division-wl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Avonmouth F.C.",
+    "imageTitle": "Avonmouth_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/2/24/Avonmouth_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wl1-05",
@@ -9943,21 +10804,30 @@
     "displayName": "Mendip Broadwalk",
     "level": 10,
     "section": "western-football-league-premier-division-wl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Mendip Broadwalk F.C.",
+    "imageTitle": "Mendip_Broadwalk_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/4/4a/Mendip_Broadwalk_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wl1-12",
     "displayName": "Nailsea United",
     "level": 10,
     "section": "western-football-league-premier-division-wl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Nailsea United F.C.",
+    "sourceUrl": "https://nailseaunited.co.uk/wp-content/uploads/2026/06/nufc.jpg",
+    "sourcePage": "https://nailseaunited.co.uk/"
   },
   {
     "id": "eng10-wl1-13",
     "displayName": "Odd Down (BATH)",
     "level": 10,
     "section": "western-football-league-premier-division-wl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Odd Down A.F.C.",
+    "imageTitle": "Odd Down F.C. logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/ac/Odd_Down_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wl1-14",
@@ -9974,7 +10844,10 @@
     "displayName": "Shirehampton",
     "level": 10,
     "section": "western-football-league-premier-division-wl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Shirehampton F.C.",
+    "imageTitle": "Shirehampton_FC_logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/7/7f/Shirehampton_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wl1-16",
@@ -9991,7 +10864,10 @@
     "displayName": "Wells City",
     "level": 10,
     "section": "western-football-league-premier-division-wl1",
-    "status": "unresolved"
+    "status": "resolved",
+    "articleTitle": "Wells City F.C.",
+    "imageTitle": "Wells_City_F.C._logo.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/en/a/a7/Wells_City_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   {
     "id": "eng10-wl1-18",

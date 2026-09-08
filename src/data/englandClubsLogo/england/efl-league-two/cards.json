@@ -306,6 +306,23 @@
     "kind": "team"
   },
   {
+    "id": "eng4-l2-19",
+    "cardNumber": "19",
+    "albumSlot": 19,
+    "displayName": "Salford City",
+    "city": "Salford, Greater Manchester",
+    "country": "England",
+    "foundedYear": 1940,
+    "stadium": "Moor Lane",
+    "leagueId": "eng4",
+    "countryCode": "ENG",
+    "image": "/englandClubsLogo/cards/england/efl-league-two/ENG4-L2-19-salford-city.webp",
+    "series": "base",
+    "finish": "standard",
+    "rarity": "common",
+    "kind": "team"
+  },
+  {
     "id": "eng4-l2-20",
     "cardNumber": "20",
     "albumSlot": 20,

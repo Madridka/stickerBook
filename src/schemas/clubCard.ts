@@ -9,7 +9,7 @@ const clubCardSchema = z.strictObject({
   displayName: z.string().min(1),
   city: z.string().min(1),
   country: z.string().min(1),
-  foundedYear: z.number().int().positive(),
+  foundedYear: z.number().int().positive().optional(),
   stadium: z.string().min(1),
   leagueId: z.string().min(1),
   countryCode: z.string().length(3),

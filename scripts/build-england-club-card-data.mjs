@@ -46,7 +46,7 @@ const stripWikiMarkup = (value = '') => decodeEntities(value)
   .trim()
 
 const getInfoboxField = (content, field) => {
-  const match = content.match(new RegExp(`^\\|\\s*${field}\\s*=\\s*(.*)$`, 'im'))
+  const match = content.match(new RegExp(`^[ \\t]*\\|?[ \\t]*${field}[ \\t]*=[ \\t]*(.*)$`, 'im'))
   return match?.[1]?.trim() ?? ''
 }
 
@@ -97,10 +97,14 @@ const fetchPageContents = async (titles) => {
     const response = await fetch(url, { headers: { 'user-agent': 'StickerBook/1.10 (club card metadata)' } })
     if (response.ok) {
       const result = await response.json()
-      return new Map((result.query?.pages ?? []).map((page) => [
+      const contents = new Map((result.query?.pages ?? []).map((page) => [
         page.title,
         page.revisions?.[0]?.slots?.main?.content ?? '',
       ]))
+      for (const alias of [...(result.query?.normalized ?? []), ...(result.query?.redirects ?? [])].reverse()) {
+        if (contents.has(alias.to)) contents.set(alias.from, contents.get(alias.to))
+      }
+      return contents
     }
     if (attempt === 5) throw new Error(`Metadata request failed: ${response.status}`)
     await delay(attempt * 2_000)
@@ -126,7 +130,7 @@ for (const [batchIndex, batch] of chunks(pendingSources, 40).entries()) {
     metadataById.set(source.id, {
       id: source.id,
       displayName: club.displayName,
-      foundedYear: getFoundedYear(content) ?? 1900,
+      foundedYear: getFoundedYear(content),
       stadium,
       city,
       articleTitle: source.articleTitle,
@@ -136,6 +140,18 @@ for (const [batchIndex, batch] of chunks(pendingSources, 40).entries()) {
   await fs.writeFile(metadataPath, `${JSON.stringify(metadata, null, 2)}\n`, 'utf8')
   console.log(`metadata batch=${batchIndex + 1}/${Math.ceil(pendingSources.length / 40)} entries=${metadata.length}`)
   await delay(1_000)
+}
+
+const metadataOverrides = JSON.parse(await fs.readFile(path.join(dataRoot, 'metadata-overrides.json'), 'utf8'))
+for (const [id, override] of Object.entries(metadataOverrides)) {
+  if (!clubsById.has(id)) throw new Error(`Unknown metadata override: ${id}`)
+  metadataById.set(id, { ...metadataById.get(id), ...override, id })
+}
+await fs.writeFile(metadataPath, `${JSON.stringify(clubs.map(({ id }) => metadataById.get(id)).filter(Boolean), null, 2)}\n`, 'utf8')
+
+const missingClubs = clubs.filter(({ id }) => !resolvedSources.some((source) => source.id === id) || !metadataById.has(id))
+if (missingClubs.length) {
+  throw new Error(`Incomplete England catalog; existing cards were preserved. Missing: ${missingClubs.map(({ id }) => id).join(', ')}`)
 }
 
 const logoJobs = []
@@ -155,7 +171,7 @@ for (const division of structure.divisions) {
       displayName: club.displayName,
       city: clubMetadata.city,
       country: 'England',
-      foundedYear: clubMetadata.foundedYear,
+      ...(clubMetadata.foundedYear ? { foundedYear: clubMetadata.foundedYear } : {}),
       stadium: clubMetadata.stadium,
       leagueId: `eng${division.level}`,
       countryCode: 'ENG',

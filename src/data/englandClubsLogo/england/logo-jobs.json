@@ -184,6 +184,14 @@
     "logo": "/englandClubsLogo/logos/england/efl-championship/ENG2-CH-03-bolton-wanderers.png"
   },
   {
+    "id": "eng2-ch-04",
+    "slug": "bristol-city",
+    "section": "efl-championship",
+    "displayName": "Bristol City",
+    "leagueLabel": "EFL Championship",
+    "logo": "/englandClubsLogo/logos/england/efl-championship/ENG2-CH-04-bristol-city.png"
+  },
+  {
     "id": "eng2-ch-05",
     "slug": "burnley",
     "section": "efl-championship",
@@ -248,12 +256,28 @@
     "logo": "/englandClubsLogo/logos/england/efl-championship/ENG2-CH-12-norwich-city.png"
   },
   {
+    "id": "eng2-ch-13",
+    "slug": "portsmouth",
+    "section": "efl-championship",
+    "displayName": "Portsmouth",
+    "leagueLabel": "EFL Championship",
+    "logo": "/englandClubsLogo/logos/england/efl-championship/ENG2-CH-13-portsmouth.png"
+  },
+  {
     "id": "eng2-ch-14",
     "slug": "preston-north-end",
     "section": "efl-championship",
     "displayName": "Preston North End",
     "leagueLabel": "EFL Championship",
     "logo": "/englandClubsLogo/logos/england/efl-championship/ENG2-CH-14-preston-north-end.png"
+  },
+  {
+    "id": "eng2-ch-15",
+    "slug": "queens-park-rangers",
+    "section": "efl-championship",
+    "displayName": "Queens Park Rangers",
+    "leagueLabel": "EFL Championship",
+    "logo": "/englandClubsLogo/logos/england/efl-championship/ENG2-CH-15-queens-park-rangers.png"
   },
   {
     "id": "eng2-ch-16",
@@ -326,6 +350,14 @@
     "displayName": "Wrexham",
     "leagueLabel": "EFL Championship",
     "logo": "/englandClubsLogo/logos/england/efl-championship/ENG2-CH-24-wrexham.png"
+  },
+  {
+    "id": "eng3-l1-01",
+    "slug": "afc-wimbledon",
+    "section": "efl-league-one",
+    "displayName": "AFC Wimbledon",
+    "leagueLabel": "EFL League One",
+    "logo": "/englandClubsLogo/logos/england/efl-league-one/ENG3-L1-01-afc-wimbledon.png"
   },
   {
     "id": "eng3-l1-02",
@@ -440,6 +472,22 @@
     "logo": "/englandClubsLogo/logos/england/efl-league-one/ENG3-L1-15-notts-county.png"
   },
   {
+    "id": "eng3-l1-16",
+    "slug": "oxford-united",
+    "section": "efl-league-one",
+    "displayName": "Oxford United",
+    "leagueLabel": "EFL League One",
+    "logo": "/englandClubsLogo/logos/england/efl-league-one/ENG3-L1-16-oxford-united.png"
+  },
+  {
+    "id": "eng3-l1-17",
+    "slug": "peterborough-united",
+    "section": "efl-league-one",
+    "displayName": "Peterborough United",
+    "leagueLabel": "EFL League One",
+    "logo": "/englandClubsLogo/logos/england/efl-league-one/ENG3-L1-17-peterborough-united.png"
+  },
+  {
     "id": "eng3-l1-18",
     "slug": "plymouth-argyle",
     "section": "efl-league-one",
@@ -454,6 +502,14 @@
     "displayName": "Reading",
     "leagueLabel": "EFL League One",
     "logo": "/englandClubsLogo/logos/england/efl-league-one/ENG3-L1-19-reading.png"
+  },
+  {
+    "id": "eng3-l1-20",
+    "slug": "sheffield-wednesday",
+    "section": "efl-league-one",
+    "displayName": "Sheffield Wednesday",
+    "leagueLabel": "EFL League One",
+    "logo": "/englandClubsLogo/logos/england/efl-league-one/ENG3-L1-20-sheffield-wednesday.png"
   },
   {
     "id": "eng3-l1-21",
@@ -630,6 +686,14 @@
     "displayName": "Rotherham United",
     "leagueLabel": "EFL League Two",
     "logo": "/englandClubsLogo/logos/england/efl-league-two/ENG4-L2-18-rotherham-united.png"
+  },
+  {
+    "id": "eng4-l2-19",
+    "slug": "salford-city",
+    "section": "efl-league-two",
+    "displayName": "Salford City",
+    "leagueLabel": "EFL League Two",
+    "logo": "/englandClubsLogo/logos/england/efl-league-two/ENG4-L2-19-salford-city.png"
   },
   {
     "id": "eng4-l2-20",
@@ -864,6 +928,30 @@
     "logo": "/englandClubsLogo/logos/england/national-league/ENG5-NL-24-yeovil-town.png"
   },
   {
+    "id": "eng6-nln-01",
+    "slug": "afc-telford-united",
+    "section": "national-league-north",
+    "displayName": "AFC Telford United",
+    "leagueLabel": "National League North",
+    "logo": "/englandClubsLogo/logos/england/national-league-north/ENG6-NLN-01-afc-telford-united.png"
+  },
+  {
+    "id": "eng6-nln-02",
+    "slug": "bedford-town",
+    "section": "national-league-north",
+    "displayName": "Bedford Town",
+    "leagueLabel": "National League North",
+    "logo": "/englandClubsLogo/logos/england/national-league-north/ENG6-NLN-02-bedford-town.png"
+  },
+  {
+    "id": "eng6-nln-03",
+    "slug": "brackley-town",
+    "section": "national-league-north",
+    "displayName": "Brackley Town",
+    "leagueLabel": "National League North",
+    "logo": "/englandClubsLogo/logos/england/national-league-north/ENG6-NLN-03-brackley-town.png"
+  },
+  {
     "id": "eng6-nln-04",
     "slug": "buxton",
     "section": "national-league-north",
@@ -894,6 +982,14 @@
     "displayName": "Darlington",
     "leagueLabel": "National League North",
     "logo": "/englandClubsLogo/logos/england/national-league-north/ENG6-NLN-07-darlington.png"
+  },
+  {
+    "id": "eng6-nln-08",
+    "slug": "harborough-town",
+    "section": "national-league-north",
+    "displayName": "Harborough Town",
+    "leagueLabel": "National League North",
+    "logo": "/englandClubsLogo/logos/england/national-league-north/ENG6-NLN-08-harborough-town.png"
   },
   {
     "id": "eng6-nln-09",
@@ -1008,6 +1104,14 @@
     "logo": "/englandClubsLogo/logos/england/national-league-north/ENG6-NLN-22-spalding-united.png"
   },
   {
+    "id": "eng6-nln-23",
+    "slug": "spennymoor-town",
+    "section": "national-league-north",
+    "displayName": "Spennymoor Town",
+    "leagueLabel": "National League North",
+    "logo": "/englandClubsLogo/logos/england/national-league-north/ENG6-NLN-23-spennymoor-town.png"
+  },
+  {
     "id": "eng6-nln-24",
     "slug": "worksop-town",
     "section": "national-league-north",
@@ -1022,6 +1126,14 @@
     "displayName": "AFC Totton",
     "leagueLabel": "National League South",
     "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-01-afc-totton.png"
+  },
+  {
+    "id": "eng6-nls-02",
+    "slug": "billericay-town",
+    "section": "national-league-south",
+    "displayName": "Billericay Town",
+    "leagueLabel": "National League South",
+    "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-02-billericay-town.png"
   },
   {
     "id": "eng6-nls-03",
@@ -1064,12 +1176,36 @@
     "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-07-dorking-wanderers.png"
   },
   {
+    "id": "eng6-nls-08",
+    "slug": "dover-athletic",
+    "section": "national-league-south",
+    "displayName": "Dover Athletic",
+    "leagueLabel": "National League South",
+    "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-08-dover-athletic.png"
+  },
+  {
     "id": "eng6-nls-09",
     "slug": "ebbsfleet-united",
     "section": "national-league-south",
     "displayName": "Ebbsfleet United",
     "leagueLabel": "National League South",
     "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-09-ebbsfleet-united.png"
+  },
+  {
+    "id": "eng6-nls-10",
+    "slug": "farnborough",
+    "section": "national-league-south",
+    "displayName": "Farnborough",
+    "leagueLabel": "National League South",
+    "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-10-farnborough.png"
+  },
+  {
+    "id": "eng6-nls-11",
+    "slug": "farnham-town",
+    "section": "national-league-south",
+    "displayName": "Farnham Town",
+    "leagueLabel": "National League South",
+    "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-11-farnham-town.png"
   },
   {
     "id": "eng6-nls-12",
@@ -1080,12 +1216,28 @@
     "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-12-folkestone-invicta.png"
   },
   {
+    "id": "eng6-nls-13",
+    "slug": "hampton-and-richmond-borough",
+    "section": "national-league-south",
+    "displayName": "Hampton & Richmond Borough",
+    "leagueLabel": "National League South",
+    "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-13-hampton-and-richmond-borough.png"
+  },
+  {
     "id": "eng6-nls-14",
     "slug": "hemel-hempstead-town",
     "section": "national-league-south",
     "displayName": "Hemel Hempstead Town",
     "leagueLabel": "National League South",
     "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-14-hemel-hempstead-town.png"
+  },
+  {
+    "id": "eng6-nls-15",
+    "slug": "horsham",
+    "section": "national-league-south",
+    "displayName": "Horsham",
+    "leagueLabel": "National League South",
+    "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-15-horsham.png"
   },
   {
     "id": "eng6-nls-16",
@@ -1102,6 +1254,14 @@
     "displayName": "Maidstone United",
     "leagueLabel": "National League South",
     "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-17-maidstone-united.png"
+  },
+  {
+    "id": "eng6-nls-18",
+    "slug": "salisbury",
+    "section": "national-league-south",
+    "displayName": "Salisbury",
+    "leagueLabel": "National League South",
+    "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-18-salisbury.png"
   },
   {
     "id": "eng6-nls-19",
@@ -1152,12 +1312,28 @@
     "logo": "/englandClubsLogo/logos/england/national-league-south/ENG6-NLS-24-weston-super-mare.png"
   },
   {
+    "id": "eng7-ip-01",
+    "slug": "afc-whyteleafe",
+    "section": "isthmian-league-premier",
+    "displayName": "AFC Whyteleafe",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-01-afc-whyteleafe.png"
+  },
+  {
     "id": "eng7-ip-02",
     "slug": "aveley",
     "section": "isthmian-league-premier",
     "displayName": "Aveley",
     "leagueLabel": "Isthmian League - Premier",
     "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-02-aveley.png"
+  },
+  {
+    "id": "eng7-ip-03",
+    "slug": "brentwood-town",
+    "section": "isthmian-league-premier",
+    "displayName": "Brentwood Town",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-03-brentwood-town.png"
   },
   {
     "id": "eng7-ip-04",
@@ -1168,12 +1344,36 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-04-burgess-hill-town.png"
   },
   {
+    "id": "eng7-ip-05",
+    "slug": "carshalton-athletic",
+    "section": "isthmian-league-premier",
+    "displayName": "Carshalton Athletic",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-05-carshalton-athletic.png"
+  },
+  {
     "id": "eng7-ip-06",
     "slug": "chatham-town",
     "section": "isthmian-league-premier",
     "displayName": "Chatham Town",
     "leagueLabel": "Isthmian League - Premier",
     "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-06-chatham-town.png"
+  },
+  {
+    "id": "eng7-ip-07",
+    "slug": "cheshunt",
+    "section": "isthmian-league-premier",
+    "displayName": "Cheshunt",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-07-cheshunt.png"
+  },
+  {
+    "id": "eng7-ip-08",
+    "slug": "cray-wanderers",
+    "section": "isthmian-league-premier",
+    "displayName": "Cray Wanderers",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-08-cray-wanderers.png"
   },
   {
     "id": "eng7-ip-09",
@@ -1200,6 +1400,14 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-11-eastbourne-borough.png"
   },
   {
+    "id": "eng7-ip-12",
+    "slug": "enfield-town",
+    "section": "isthmian-league-premier",
+    "displayName": "Enfield Town",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-12-enfield-town.png"
+  },
+  {
     "id": "eng7-ip-13",
     "slug": "leatherhead",
     "section": "isthmian-league-premier",
@@ -1216,12 +1424,68 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-14-lewes.png"
   },
   {
+    "id": "eng7-ip-15",
+    "slug": "maldon-and-tiptree",
+    "section": "isthmian-league-premier",
+    "displayName": "Maldon & Tiptree",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-15-maldon-and-tiptree.png"
+  },
+  {
+    "id": "eng7-ip-16",
+    "slug": "ramsgate",
+    "section": "isthmian-league-premier",
+    "displayName": "Ramsgate",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-16-ramsgate.png"
+  },
+  {
     "id": "eng7-ip-17",
     "slug": "st-albans-city",
     "section": "isthmian-league-premier",
     "displayName": "St Albans City",
     "leagueLabel": "Isthmian League - Premier",
     "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-17-st-albans-city.png"
+  },
+  {
+    "id": "eng7-ip-18",
+    "slug": "stanway-rovers-community",
+    "section": "isthmian-league-premier",
+    "displayName": "Stanway Rovers Community",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-18-stanway-rovers-community.png"
+  },
+  {
+    "id": "eng7-ip-19",
+    "slug": "three-bridges",
+    "section": "isthmian-league-premier",
+    "displayName": "Three Bridges",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-19-three-bridges.png"
+  },
+  {
+    "id": "eng7-ip-20",
+    "slug": "welling-united",
+    "section": "isthmian-league-premier",
+    "displayName": "Welling United",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-20-welling-united.png"
+  },
+  {
+    "id": "eng7-ip-21",
+    "slug": "whitehawk",
+    "section": "isthmian-league-premier",
+    "displayName": "Whitehawk",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-21-whitehawk.png"
+  },
+  {
+    "id": "eng7-ip-22",
+    "slug": "wingate-and-finchley",
+    "section": "isthmian-league-premier",
+    "displayName": "Wingate & Finchley",
+    "leagueLabel": "Isthmian League - Premier",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-premier/ENG7-IP-22-wingate-and-finchley.png"
   },
   {
     "id": "eng7-npp-01",
@@ -1232,6 +1496,14 @@
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-01-alfreton-town.png"
   },
   {
+    "id": "eng7-npp-02",
+    "slug": "ashton-united",
+    "section": "northern-premier-league-premier",
+    "displayName": "Ashton United",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-02-ashton-united.png"
+  },
+  {
     "id": "eng7-npp-03",
     "slug": "avro",
     "section": "northern-premier-league-premier",
@@ -1240,12 +1512,36 @@
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-03-avro.png"
   },
   {
+    "id": "eng7-npp-04",
+    "slug": "bamber-bridge",
+    "section": "northern-premier-league-premier",
+    "displayName": "Bamber Bridge",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-04-bamber-bridge.png"
+  },
+  {
     "id": "eng7-npp-05",
     "slug": "bury",
     "section": "northern-premier-league-premier",
     "displayName": "Bury",
     "leagueLabel": "Northern Premier League - Premier",
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-05-bury.png"
+  },
+  {
+    "id": "eng7-npp-06",
+    "slug": "cleethorpes-town",
+    "section": "northern-premier-league-premier",
+    "displayName": "Cleethorpes Town",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-06-cleethorpes-town.png"
+  },
+  {
+    "id": "eng7-npp-07",
+    "slug": "curzon-ashton",
+    "section": "northern-premier-league-premier",
+    "displayName": "Curzon Ashton",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-07-curzon-ashton.png"
   },
   {
     "id": "eng7-npp-08",
@@ -1272,6 +1568,30 @@
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-10-gainsborough-trinity.png"
   },
   {
+    "id": "eng7-npp-11",
+    "slug": "guiseley",
+    "section": "northern-premier-league-premier",
+    "displayName": "Guiseley",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-11-guiseley.png"
+  },
+  {
+    "id": "eng7-npp-12",
+    "slug": "hyde-united",
+    "section": "northern-premier-league-premier",
+    "displayName": "Hyde United",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-12-hyde-united.png"
+  },
+  {
+    "id": "eng7-npp-13",
+    "slug": "ilkeston-town",
+    "section": "northern-premier-league-premier",
+    "displayName": "Ilkeston Town",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-13-ilkeston-town.png"
+  },
+  {
     "id": "eng7-npp-14",
     "slug": "lancaster-city",
     "section": "northern-premier-league-premier",
@@ -1294,6 +1614,46 @@
     "displayName": "Quorn",
     "leagueLabel": "Northern Premier League - Premier",
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-16-quorn.png"
+  },
+  {
+    "id": "eng7-npp-17",
+    "slug": "redcar-athletic",
+    "section": "northern-premier-league-premier",
+    "displayName": "Redcar Athletic",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-17-redcar-athletic.png"
+  },
+  {
+    "id": "eng7-npp-18",
+    "slug": "stockton-town",
+    "section": "northern-premier-league-premier",
+    "displayName": "Stockton Town",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-18-stockton-town.png"
+  },
+  {
+    "id": "eng7-npp-19",
+    "slug": "warrington-rylands",
+    "section": "northern-premier-league-premier",
+    "displayName": "Warrington Rylands",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-19-warrington-rylands.png"
+  },
+  {
+    "id": "eng7-npp-20",
+    "slug": "warrington-town",
+    "section": "northern-premier-league-premier",
+    "displayName": "Warrington Town",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-20-warrington-town.png"
+  },
+  {
+    "id": "eng7-npp-21",
+    "slug": "whitby-town",
+    "section": "northern-premier-league-premier",
+    "displayName": "Whitby Town",
+    "leagueLabel": "Northern Premier League - Premier",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-premier/ENG7-NPP-21-whitby-town.png"
   },
   {
     "id": "eng7-npp-22",
@@ -1326,6 +1686,22 @@
     "displayName": "Banbury United",
     "leagueLabel": "Southern League - Premier Central",
     "logo": "/englandClubsLogo/logos/england/southern-league-premier-central/ENG7-SPC-03-banbury-united.png"
+  },
+  {
+    "id": "eng7-spc-04",
+    "slug": "bishops-stortford",
+    "section": "southern-league-premier-central",
+    "displayName": "Bishop’s Stortford",
+    "leagueLabel": "Southern League - Premier Central",
+    "logo": "/englandClubsLogo/logos/england/southern-league-premier-central/ENG7-SPC-04-bishops-stortford.png"
+  },
+  {
+    "id": "eng7-spc-05",
+    "slug": "bromsgrove-sporting",
+    "section": "southern-league-premier-central",
+    "displayName": "Bromsgrove Sporting",
+    "leagueLabel": "Southern League - Premier Central",
+    "logo": "/englandClubsLogo/logos/england/southern-league-premier-central/ENG7-SPC-05-bromsgrove-sporting.png"
   },
   {
     "id": "eng7-spc-06",
@@ -1390,6 +1766,14 @@
     "displayName": "Needham Market",
     "leagueLabel": "Southern League - Premier Central",
     "logo": "/englandClubsLogo/logos/england/southern-league-premier-central/ENG7-SPC-13-needham-market.png"
+  },
+  {
+    "id": "eng7-spc-14",
+    "slug": "peterborough-sports",
+    "section": "southern-league-premier-central",
+    "displayName": "Peterborough Sports",
+    "leagueLabel": "Southern League - Premier Central",
+    "logo": "/englandClubsLogo/logos/england/southern-league-premier-central/ENG7-SPC-14-peterborough-sports.png"
   },
   {
     "id": "eng7-spc-15",
@@ -1488,12 +1872,28 @@
     "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-04-bracknell-town.png"
   },
   {
+    "id": "eng7-sps-05",
+    "slug": "chertsey-town",
+    "section": "southern-league-premier-south",
+    "displayName": "Chertsey Town",
+    "leagueLabel": "Southern League - Premier South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-05-chertsey-town.png"
+  },
+  {
     "id": "eng7-sps-06",
     "slug": "chichester-city",
     "section": "southern-league-premier-south",
     "displayName": "Chichester City",
     "leagueLabel": "Southern League - Premier South",
     "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-06-chichester-city.png"
+  },
+  {
+    "id": "eng7-sps-07",
+    "slug": "chippenham-town",
+    "section": "southern-league-premier-south",
+    "displayName": "Chippenham Town",
+    "leagueLabel": "Southern League - Premier South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-07-chippenham-town.png"
   },
   {
     "id": "eng7-sps-08",
@@ -1510,6 +1910,14 @@
     "displayName": "Frome Town",
     "leagueLabel": "Southern League - Premier South",
     "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-09-frome-town.png"
+  },
+  {
+    "id": "eng7-sps-10",
+    "slug": "gloucester-city",
+    "section": "southern-league-premier-south",
+    "displayName": "Gloucester City",
+    "leagueLabel": "Southern League - Premier South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-10-gloucester-city.png"
   },
   {
     "id": "eng7-sps-11",
@@ -1568,6 +1976,14 @@
     "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-17-poole-town.png"
   },
   {
+    "id": "eng7-sps-18",
+    "slug": "sholing",
+    "section": "southern-league-premier-south",
+    "displayName": "Sholing",
+    "leagueLabel": "Southern League - Premier South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-premier-south/ENG7-SPS-18-sholing.png"
+  },
+  {
     "id": "eng7-sps-19",
     "slug": "taunton-town",
     "section": "southern-league-premier-south",
@@ -1608,12 +2024,28 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-01-afc-portchester.png"
   },
   {
+    "id": "eng8-isc-02",
+    "slug": "afc-stoneham",
+    "section": "isthmian-league-south-central",
+    "displayName": "AFC Stoneham",
+    "leagueLabel": "Isthmian League - South Central",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-02-afc-stoneham.png"
+  },
+  {
     "id": "eng8-isc-03",
     "slug": "ascot-united",
     "section": "isthmian-league-south-central",
     "displayName": "Ascot United",
     "leagueLabel": "Isthmian League - South Central",
     "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-03-ascot-united.png"
+  },
+  {
+    "id": "eng8-isc-04",
+    "slug": "ashford-town-middx",
+    "section": "isthmian-league-south-central",
+    "displayName": "Ashford Town (Middlesex)",
+    "leagueLabel": "Isthmian League - South Central",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-04-ashford-town-middx.png"
   },
   {
     "id": "eng8-isc-05",
@@ -1704,6 +2136,14 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-15-kingstonian.png"
   },
   {
+    "id": "eng8-isc-16",
+    "slug": "littlehampton-town",
+    "section": "isthmian-league-south-central",
+    "displayName": "Littlehampton Town",
+    "leagueLabel": "Isthmian League - South Central",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-16-littlehampton-town.png"
+  },
+  {
     "id": "eng8-isc-17",
     "slug": "moneyfields",
     "section": "isthmian-league-south-central",
@@ -1728,6 +2168,30 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-19-southall.png"
   },
   {
+    "id": "eng8-isc-20",
+    "slug": "westfield",
+    "section": "isthmian-league-south-central",
+    "displayName": "Westfield",
+    "leagueLabel": "Isthmian League - South Central",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-20-westfield.png"
+  },
+  {
+    "id": "eng8-isc-21",
+    "slug": "winchester-city",
+    "section": "isthmian-league-south-central",
+    "displayName": "Winchester City",
+    "leagueLabel": "Isthmian League - South Central",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-21-winchester-city.png"
+  },
+  {
+    "id": "eng8-isc-22",
+    "slug": "windsor-and-eton",
+    "section": "isthmian-league-south-central",
+    "displayName": "Windsor & Eton",
+    "leagueLabel": "Isthmian League - South Central",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-central/ENG8-ISC-22-windsor-and-eton.png"
+  },
+  {
     "id": "eng8-in-01",
     "slug": "afc-sudbury",
     "section": "isthmian-league-north",
@@ -1750,6 +2214,14 @@
     "displayName": "Brightlingsea Regent",
     "leagueLabel": "Isthmian League - North",
     "logo": "/englandClubsLogo/logos/england/isthmian-league-north/ENG8-IN-03-brightlingsea-regent.png"
+  },
+  {
+    "id": "eng8-in-04",
+    "slug": "buckhurst-hill",
+    "section": "isthmian-league-north",
+    "displayName": "Buckhurst Hill",
+    "leagueLabel": "Isthmian League - North",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-north/ENG8-IN-04-buckhurst-hill.png"
   },
   {
     "id": "eng8-in-05",
@@ -1806,6 +2278,14 @@
     "displayName": "Grays Athletic",
     "leagueLabel": "Isthmian League - North",
     "logo": "/englandClubsLogo/logos/england/isthmian-league-north/ENG8-IN-11-grays-athletic.png"
+  },
+  {
+    "id": "eng8-in-12",
+    "slug": "hashtag-united",
+    "section": "isthmian-league-north",
+    "displayName": "Hashtag United",
+    "leagueLabel": "Isthmian League - North",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-north/ENG8-IN-12-hashtag-united.png"
   },
   {
     "id": "eng8-in-13",
@@ -1960,6 +2440,22 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-south-east/ENG8-ISE-09-faversham-town.png"
   },
   {
+    "id": "eng8-ise-10",
+    "slug": "guernsey-or-peacehaven-and-telscombe",
+    "section": "isthmian-league-south-east",
+    "displayName": "Peacehaven & Telscombe",
+    "leagueLabel": "Isthmian League - South East",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-east/ENG8-ISE-10-guernsey-or-peacehaven-and-telscombe.png"
+  },
+  {
+    "id": "eng8-ise-11",
+    "slug": "hastings-united",
+    "section": "isthmian-league-south-east",
+    "displayName": "Hastings United",
+    "leagueLabel": "Isthmian League - South East",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-east/ENG8-ISE-11-hastings-united.png"
+  },
+  {
     "id": "eng8-ise-12",
     "slug": "herne-bay",
     "section": "isthmian-league-south-east",
@@ -2000,6 +2496,14 @@
     "logo": "/englandClubsLogo/logos/england/isthmian-league-south-east/ENG8-ISE-16-punjab-united.png"
   },
   {
+    "id": "eng8-ise-17",
+    "slug": "sevenoaks-town",
+    "section": "isthmian-league-south-east",
+    "displayName": "Sevenoaks Town",
+    "leagueLabel": "Isthmian League - South East",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-east/ENG8-ISE-17-sevenoaks-town.png"
+  },
+  {
     "id": "eng8-ise-18",
     "slug": "sheppey-united",
     "section": "isthmian-league-south-east",
@@ -2014,6 +2518,14 @@
     "displayName": "Sittingbourne",
     "leagueLabel": "Isthmian League - South East",
     "logo": "/englandClubsLogo/logos/england/isthmian-league-south-east/ENG8-ISE-19-sittingbourne.png"
+  },
+  {
+    "id": "eng8-ise-20",
+    "slug": "south-park-reigate",
+    "section": "isthmian-league-south-east",
+    "displayName": "South Park (Reigate)",
+    "leagueLabel": "Isthmian League - South East",
+    "logo": "/englandClubsLogo/logos/england/isthmian-league-south-east/ENG8-ISE-20-south-park-reigate.png"
   },
   {
     "id": "eng8-ise-21",
@@ -2054,6 +2566,14 @@
     "displayName": "Blyth Spartans",
     "leagueLabel": "Northern Premier League - East",
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-east/ENG8-NPE-03-blyth-spartans.png"
+  },
+  {
+    "id": "eng8-npe-04",
+    "slug": "bradford-park-avenue",
+    "section": "northern-premier-league-east",
+    "displayName": "Bradford (Park Avenue)",
+    "leagueLabel": "Northern Premier League - East",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-east/ENG8-NPE-04-bradford-park-avenue.png"
   },
   {
     "id": "eng8-npe-05",
@@ -2192,6 +2712,22 @@
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-east/ENG8-NPE-21-stocksbridge-park-steels.png"
   },
   {
+    "id": "eng8-npe-22",
+    "slug": "west-aukland-town",
+    "section": "northern-premier-league-east",
+    "displayName": "West Auckland Town",
+    "leagueLabel": "Northern Premier League - East",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-east/ENG8-NPE-22-west-aukland-town.png"
+  },
+  {
+    "id": "eng8-npw-01",
+    "slug": "1874-northwich",
+    "section": "northern-premier-league-west",
+    "displayName": "1874 Northwich",
+    "leagueLabel": "Northern Premier League - West",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-west/ENG8-NPW-01-1874-northwich.png"
+  },
+  {
     "id": "eng8-npw-02",
     "slug": "atherton-collieries",
     "section": "northern-premier-league-west",
@@ -2214,6 +2750,22 @@
     "displayName": "Chasetown",
     "leagueLabel": "Northern Premier League - West",
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-west/ENG8-NPW-04-chasetown.png"
+  },
+  {
+    "id": "eng8-npw-05",
+    "slug": "clitheroe",
+    "section": "northern-premier-league-west",
+    "displayName": "Clitheroe",
+    "leagueLabel": "Northern Premier League - West",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-west/ENG8-NPW-05-clitheroe.png"
+  },
+  {
+    "id": "eng8-npw-06",
+    "slug": "congleton-town",
+    "section": "northern-premier-league-west",
+    "displayName": "Congleton Town",
+    "leagueLabel": "Northern Premier League - West",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-west/ENG8-NPW-06-congleton-town.png"
   },
   {
     "id": "eng8-npw-07",
@@ -2254,6 +2806,14 @@
     "displayName": "Mossley",
     "leagueLabel": "Northern Premier League - West",
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-west/ENG8-NPW-11-mossley.png"
+  },
+  {
+    "id": "eng8-npw-12",
+    "slug": "nantwich-town",
+    "section": "northern-premier-league-west",
+    "displayName": "Nantwich Town",
+    "leagueLabel": "Northern Premier League - West",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-west/ENG8-NPW-12-nantwich-town.png"
   },
   {
     "id": "eng8-npw-13",
@@ -2336,6 +2896,22 @@
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-west/ENG8-NPW-22-wythenshawe.png"
   },
   {
+    "id": "eng8-npm-01",
+    "slug": "afc-rushden-and-diamonds",
+    "section": "northern-premier-league-midlands",
+    "displayName": "AFC Rushden & Diamonds",
+    "leagueLabel": "Northern Premier League - Midlands",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-01-afc-rushden-and-diamonds.png"
+  },
+  {
+    "id": "eng8-npm-02",
+    "slug": "barwell",
+    "section": "northern-premier-league-midlands",
+    "displayName": "Barwell",
+    "leagueLabel": "Northern Premier League - Midlands",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-02-barwell.png"
+  },
+  {
     "id": "eng8-npm-03",
     "slug": "basford-united",
     "section": "northern-premier-league-midlands",
@@ -2358,6 +2934,14 @@
     "displayName": "Belper Town",
     "leagueLabel": "Northern Premier League - Midlands",
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-05-belper-town.png"
+  },
+  {
+    "id": "eng8-npm-06",
+    "slug": "boldmere-st-michaels",
+    "section": "northern-premier-league-midlands",
+    "displayName": "Boldmere St Michael’s",
+    "leagueLabel": "Northern Premier League - Midlands",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-06-boldmere-st-michaels.png"
   },
   {
     "id": "eng8-npm-07",
@@ -2438,6 +3022,30 @@
     "displayName": "Mickleover",
     "leagueLabel": "Northern Premier League - Midlands",
     "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-16-mickleover.png"
+  },
+  {
+    "id": "eng8-npm-17",
+    "slug": "nuneaton-town",
+    "section": "northern-premier-league-midlands",
+    "displayName": "Nuneaton Town",
+    "leagueLabel": "Northern Premier League - Midlands",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-17-nuneaton-town.png"
+  },
+  {
+    "id": "eng8-npm-18",
+    "slug": "rugby-borough",
+    "section": "northern-premier-league-midlands",
+    "displayName": "Rugby Borough",
+    "leagueLabel": "Northern Premier League - Midlands",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-18-rugby-borough.png"
+  },
+  {
+    "id": "eng8-npm-19",
+    "slug": "shepshed-dynamo",
+    "section": "northern-premier-league-midlands",
+    "displayName": "Shepshed Dynamo",
+    "leagueLabel": "Northern Premier League - Midlands",
+    "logo": "/englandClubsLogo/logos/england/northern-premier-league-midlands/ENG8-NPM-19-shepshed-dynamo.png"
   },
   {
     "id": "eng8-npm-20",
@@ -2526,6 +3134,14 @@
     "displayName": "Hadley",
     "leagueLabel": "Southern League - Central",
     "logo": "/englandClubsLogo/logos/england/southern-league-central/ENG8-SLC-08-hadley.png"
+  },
+  {
+    "id": "eng8-slc-09",
+    "slug": "haringey-borough",
+    "section": "southern-league-central",
+    "displayName": "Haringey Borough",
+    "leagueLabel": "Southern League - Central",
+    "logo": "/englandClubsLogo/logos/england/southern-league-central/ENG8-SLC-09-haringey-borough.png"
   },
   {
     "id": "eng8-slc-10",
@@ -2656,6 +3272,14 @@
     "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-03-bishops-cleeve.png"
   },
   {
+    "id": "eng8-sls-04",
+    "slug": "bristol-manor-farm",
+    "section": "southern-league-south",
+    "displayName": "Bristol Manor Farm",
+    "leagueLabel": "Southern League - South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-04-bristol-manor-farm.png"
+  },
+  {
     "id": "eng8-sls-05",
     "slug": "dorchester-town",
     "section": "southern-league-south",
@@ -2670,6 +3294,22 @@
     "displayName": "Exmouth Town",
     "leagueLabel": "Southern League - South",
     "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-06-exmouth-town.png"
+  },
+  {
+    "id": "eng8-sls-07",
+    "slug": "falmouth-town",
+    "section": "southern-league-south",
+    "displayName": "Falmouth Town",
+    "leagueLabel": "Southern League - South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-07-falmouth-town.png"
+  },
+  {
+    "id": "eng8-sls-08",
+    "slug": "hartpury",
+    "section": "southern-league-south",
+    "displayName": "Hartpury",
+    "leagueLabel": "Southern League - South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-08-hartpury.png"
   },
   {
     "id": "eng8-sls-09",
@@ -2702,6 +3342,38 @@
     "displayName": "Paulton Rovers",
     "leagueLabel": "Southern League - South",
     "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-12-paulton-rovers.png"
+  },
+  {
+    "id": "eng8-sls-13",
+    "slug": "portland-united",
+    "section": "southern-league-south",
+    "displayName": "Portland United",
+    "leagueLabel": "Southern League - South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-13-portland-united.png"
+  },
+  {
+    "id": "eng8-sls-14",
+    "slug": "shaftesbury",
+    "section": "southern-league-south",
+    "displayName": "Shaftesbury",
+    "leagueLabel": "Southern League - South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-14-shaftesbury.png"
+  },
+  {
+    "id": "eng8-sls-15",
+    "slug": "slimbridge",
+    "section": "southern-league-south",
+    "displayName": "Slimbridge",
+    "leagueLabel": "Southern League - South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-15-slimbridge.png"
+  },
+  {
+    "id": "eng8-sls-16",
+    "slug": "sporting-club-inkberrow",
+    "section": "southern-league-south",
+    "displayName": "Sporting Club Inkberrow",
+    "leagueLabel": "Southern League - South",
+    "logo": "/englandClubsLogo/logos/england/southern-league-south/ENG8-SLS-16-sporting-club-inkberrow.png"
   },
   {
     "id": "eng8-sls-17",
@@ -2792,6 +3464,14 @@
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-05-broadfields-united.png"
   },
   {
+    "id": "eng9-ccln-06",
+    "slug": "burnham",
+    "section": "combined-counties-football-league-premier-division-north-ccln",
+    "displayName": "Burnham",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-06-burnham.png"
+  },
+  {
     "id": "eng9-ccln-07",
     "slug": "easington-sports",
     "section": "combined-counties-football-league-premier-division-north-ccln",
@@ -2806,6 +3486,14 @@
     "displayName": "Harefield United",
     "leagueLabel": "Combined Counties Football League",
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-08-harefield-united.png"
+  },
+  {
+    "id": "eng9-ccln-09",
+    "slug": "hilltop",
+    "section": "combined-counties-football-league-premier-division-north-ccln",
+    "displayName": "Hilltop",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-09-hilltop.png"
   },
   {
     "id": "eng9-ccln-10",
@@ -2872,12 +3560,52 @@
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-17-reading-city.png"
   },
   {
+    "id": "eng9-ccln-18",
+    "slug": "thatcham-town-ccln",
+    "section": "combined-counties-football-league-premier-division-north-ccln",
+    "displayName": "Thatcham Town",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-18-thatcham-town-ccln.png"
+  },
+  {
+    "id": "eng9-ccln-19",
+    "slug": "wallingford-and-crowmarsh",
+    "section": "combined-counties-football-league-premier-division-north-ccln",
+    "displayName": "Wallingford & Crowmarsh",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-19-wallingford-and-crowmarsh.png"
+  },
+  {
     "id": "eng9-ccln-20",
     "slug": "wokingham-town",
     "section": "combined-counties-football-league-premier-division-north-ccln",
     "displayName": "Wokingham Town",
     "leagueLabel": "Combined Counties Football League",
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-north-ccln/ENG9-CCLN-20-wokingham-town.png"
+  },
+  {
+    "id": "eng10-ccl1-01",
+    "slug": "belstone",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Belstone",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-01-belstone.png"
+  },
+  {
+    "id": "eng10-ccl1-02",
+    "slug": "berks-county",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Berks County",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-02-berks-county.png"
+  },
+  {
+    "id": "eng10-ccl1-03",
+    "slug": "bovingdon",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Bovingdon",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-03-bovingdon.png"
   },
   {
     "id": "eng10-ccl1-04",
@@ -2936,6 +3664,14 @@
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-10-london-samurai-rovers.png"
   },
   {
+    "id": "eng10-ccl1-11",
+    "slug": "maidenhead-town",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Maidenhead Town",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-11-maidenhead-town.png"
+  },
+  {
     "id": "eng10-ccl1-12",
     "slug": "molesey",
     "section": "combined-counties-football-league-division-one-ccl1",
@@ -2952,6 +3688,22 @@
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-13-oxhey-jets.png"
   },
   {
+    "id": "eng10-ccl1-14",
+    "slug": "pfc-victoria",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "PFC Victoria",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-14-pfc-victoria.png"
+  },
+  {
+    "id": "eng10-ccl1-15",
+    "slug": "rising-ballers-kensington",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Shepherd's Bush",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-15-rising-ballers-kensington.png"
+  },
+  {
     "id": "eng10-ccl1-16",
     "slug": "eagles-land-benfica",
     "section": "combined-counties-football-league-division-one-ccl1",
@@ -2960,12 +3712,44 @@
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-16-eagles-land-benfica.png"
   },
   {
+    "id": "eng10-ccl1-17",
+    "slug": "spartans-youth",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Spartans Youth",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-17-spartans-youth.png"
+  },
+  {
+    "id": "eng10-ccl1-18",
+    "slug": "spelthorne-sports-club",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Spelthorne Sports Club",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-18-spelthorne-sports-club.png"
+  },
+  {
+    "id": "eng10-ccl1-19",
+    "slug": "staines-and-lammas-middx",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Staines & Lammas (Middlesex)",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-19-staines-and-lammas-middx.png"
+  },
+  {
     "id": "eng10-ccl1-20",
     "slug": "wembley",
     "section": "combined-counties-football-league-division-one-ccl1",
     "displayName": "Wembley",
     "leagueLabel": "Combined Counties Football League",
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-20-wembley.png"
+  },
+  {
+    "id": "eng10-ccl1-21",
+    "slug": "westside",
+    "section": "combined-counties-football-league-division-one-ccl1",
+    "displayName": "Westside",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-division-one-ccl1/ENG10-CCL1-21-westside.png"
   },
   {
     "id": "eng10-ccl1-22",
@@ -3128,6 +3912,22 @@
     "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-south-ccls/ENG9-CCLS-19-virginia-water.png"
   },
   {
+    "id": "eng9-ccls-20",
+    "slug": "yateley-united",
+    "section": "combined-counties-football-league-premier-division-south-ccls",
+    "displayName": "Yateley United",
+    "leagueLabel": "Combined Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/combined-counties-football-league-premier-division-south-ccls/ENG9-CCLS-20-yateley-united.png"
+  },
+  {
+    "id": "eng9-eclp-01",
+    "slug": "brantham-athletic",
+    "section": "eastern-counties-football-league-premier-division-eclp",
+    "displayName": "Brantham Athletic",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-01-brantham-athletic.png"
+  },
+  {
     "id": "eng9-eclp-02",
     "slug": "cornard-united",
     "section": "eastern-counties-football-league-premier-division-eclp",
@@ -3160,6 +3960,14 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-05-ely-city.png"
   },
   {
+    "id": "eng9-eclp-06",
+    "slug": "great-yarmouth-town",
+    "section": "eastern-counties-football-league-premier-division-eclp",
+    "displayName": "Great Yarmouth Town",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-06-great-yarmouth-town.png"
+  },
+  {
     "id": "eng9-eclp-07",
     "slug": "harleston-town",
     "section": "eastern-counties-football-league-premier-division-eclp",
@@ -3174,6 +3982,14 @@
     "displayName": "Haverhill Rovers",
     "leagueLabel": "Eastern Counties Football League",
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-08-haverhill-rovers.png"
+  },
+  {
+    "id": "eng9-eclp-09",
+    "slug": "heacham",
+    "section": "eastern-counties-football-league-premier-division-eclp",
+    "displayName": "Heacham",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-09-heacham.png"
   },
   {
     "id": "eng9-eclp-10",
@@ -3198,6 +4014,14 @@
     "displayName": "Lakenheath",
     "leagueLabel": "Eastern Counties Football League",
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-12-lakenheath.png"
+  },
+  {
+    "id": "eng9-eclp-13",
+    "slug": "march-town-united-ucls",
+    "section": "eastern-counties-football-league-premier-division-eclp",
+    "displayName": "March Town United",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-13-march-town-united-ucls.png"
   },
   {
     "id": "eng9-eclp-14",
@@ -3256,6 +4080,30 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-premier-division-eclp/ENG9-ECLP-20-woodbridge-town.png"
   },
   {
+    "id": "eng10-ecln-01",
+    "slug": "afc-sudbury-reserves",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "AFC Sudbury (Reserves)",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-01-afc-sudbury-reserves.png"
+  },
+  {
+    "id": "eng10-ecln-02",
+    "slug": "diss-town",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Diss Town",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-02-diss-town.png"
+  },
+  {
+    "id": "eng10-ecln-03",
+    "slug": "dussindale-and-hellesdon-rov",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Dussindale & Hellesdon Rovers",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-03-dussindale-and-hellesdon-rov.png"
+  },
+  {
     "id": "eng10-ecln-04",
     "slug": "fc-clacton",
     "section": "eastern-counties-football-league-division-one-ecln",
@@ -3272,12 +4120,36 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-05-fc-parson-drove.png"
   },
   {
+    "id": "eng10-ecln-06",
+    "slug": "framlingham-town",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Framlingham Town",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-06-framlingham-town.png"
+  },
+  {
+    "id": "eng10-ecln-07",
+    "slug": "gorleston-reserves",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Gorleston (Reserves)",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-07-gorleston-reserves.png"
+  },
+  {
     "id": "eng10-ecln-08",
     "slug": "hadleigh-united",
     "section": "eastern-counties-football-league-division-one-ecln",
     "displayName": "Hadleigh United",
     "leagueLabel": "Eastern Counties Football League",
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-08-hadleigh-united.png"
+  },
+  {
+    "id": "eng10-ecln-09",
+    "slug": "halesworth-town",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Halesworth Town",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-09-halesworth-town.png"
   },
   {
     "id": "eng10-ecln-10",
@@ -3312,6 +4184,30 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-13-long-melford.png"
   },
   {
+    "id": "eng10-ecln-14",
+    "slug": "needham-market-reserves",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Needham Market (Reserves)",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-14-needham-market-reserves.png"
+  },
+  {
+    "id": "eng10-ecln-15",
+    "slug": "netherton-united",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Netherton United",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-15-netherton-united.png"
+  },
+  {
+    "id": "eng10-ecln-16",
+    "slug": "newmarket-town-reserves",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Newmarket Town Reserves",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-16-newmarket-town-reserves.png"
+  },
+  {
     "id": "eng10-ecln-17",
     "slug": "norwich-united",
     "section": "eastern-counties-football-league-division-one-ecln",
@@ -3320,12 +4216,28 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-17-norwich-united.png"
   },
   {
+    "id": "eng10-ecln-18",
+    "slug": "stanway-pegasus",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Stanway Pegasus",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-18-stanway-pegasus.png"
+  },
+  {
     "id": "eng10-ecln-19",
     "slug": "whittlesey-athletic",
     "section": "eastern-counties-football-league-division-one-ecln",
     "displayName": "Whittlesey Athletic",
     "leagueLabel": "Eastern Counties Football League",
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-19-whittlesey-athletic.png"
+  },
+  {
+    "id": "eng10-ecln-20",
+    "slug": "wroxham-reserves",
+    "section": "eastern-counties-football-league-division-one-ecln",
+    "displayName": "Wroxham (Reserves)",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-division-one-ecln/ENG10-ECLN-20-wroxham-reserves.png"
   },
   {
     "id": "eng9-eslp-01",
@@ -3350,6 +4262,22 @@
     "displayName": "Benfleet",
     "leagueLabel": "Essex Senior Football League",
     "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-03-benfleet.png"
+  },
+  {
+    "id": "eng9-eslp-04",
+    "slug": "clapton-community",
+    "section": "essex-senior-football-league-premier-division-eslp",
+    "displayName": "Clapton Community",
+    "leagueLabel": "Essex Senior Football League",
+    "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-04-clapton-community.png"
+  },
+  {
+    "id": "eng9-eslp-05",
+    "slug": "frenford",
+    "section": "essex-senior-football-league-premier-division-eslp",
+    "displayName": "Frenford",
+    "leagueLabel": "Essex Senior Football League",
+    "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-05-frenford.png"
   },
   {
     "id": "eng9-eslp-06",
@@ -3400,12 +4328,28 @@
     "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-11-hullbridge-sports.png"
   },
   {
+    "id": "eng9-eslp-12",
+    "slug": "hutton",
+    "section": "essex-senior-football-league-premier-division-eslp",
+    "displayName": "Hutton",
+    "leagueLabel": "Essex Senior Football League",
+    "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-12-hutton.png"
+  },
+  {
     "id": "eng9-eslp-13",
     "slug": "ilford",
     "section": "essex-senior-football-league-premier-division-eslp",
     "displayName": "Ilford",
     "leagueLabel": "Essex Senior Football League",
     "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-13-ilford.png"
+  },
+  {
+    "id": "eng9-eslp-14",
+    "slug": "romford",
+    "section": "essex-senior-football-league-premier-division-eslp",
+    "displayName": "Romford",
+    "leagueLabel": "Essex Senior Football League",
+    "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-14-romford.png"
   },
   {
     "id": "eng9-eslp-15",
@@ -3456,12 +4400,36 @@
     "logo": "/englandClubsLogo/logos/england/essex-senior-football-league-premier-division-eslp/ENG9-ESLP-20-woodford-town.png"
   },
   {
+    "id": "eng10-esls-01",
+    "slug": "as-london",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "AS London",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-01-as-london.png"
+  },
+  {
     "id": "eng10-esls-02",
     "slug": "athletic-newham",
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
     "displayName": "Athletic Newham",
     "leagueLabel": "Eastern Counties Football League",
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-02-athletic-newham.png"
+  },
+  {
+    "id": "eng10-esls-03",
+    "slug": "basildon-town",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "Basildon Town",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-03-basildon-town.png"
+  },
+  {
+    "id": "eng10-esls-04",
+    "slug": "brimsdown",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "Brimsdown",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-04-brimsdown.png"
   },
   {
     "id": "eng10-esls-05",
@@ -3472,12 +4440,36 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-05-burnham-ramblers.png"
   },
   {
+    "id": "eng10-esls-06",
+    "slug": "cannons-wood",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "Cannons Wood",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-06-cannons-wood.png"
+  },
+  {
     "id": "eng10-esls-07",
     "slug": "coggeshall-town",
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
     "displayName": "Coggeshall Town",
     "leagueLabel": "Eastern Counties Football League",
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-07-coggeshall-town.png"
+  },
+  {
+    "id": "eng10-esls-08",
+    "slug": "dunmow-town",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "Dunmow Town",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-08-dunmow-town.png"
+  },
+  {
+    "id": "eng10-esls-09",
+    "slug": "east-thurrock-community",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "East Thurrock Community",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-09-east-thurrock-community.png"
   },
   {
     "id": "eng10-esls-10",
@@ -3488,6 +4480,22 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-10-enfield-borough.png"
   },
   {
+    "id": "eng10-esls-11",
+    "slug": "fc-baresi",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "FC Baresi",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-11-fc-baresi.png"
+  },
+  {
+    "id": "eng10-esls-12",
+    "slug": "hertford-heath",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "Hertford Heath",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-12-hertford-heath.png"
+  },
+  {
     "id": "eng10-esls-13",
     "slug": "hoddesdon-town",
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
@@ -3496,12 +4504,60 @@
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-13-hoddesdon-town.png"
   },
   {
+    "id": "eng10-esls-14",
+    "slug": "london-fennecs",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "London Fennecs",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-14-london-fennecs.png"
+  },
+  {
+    "id": "eng10-esls-15",
+    "slug": "london-harts-united",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "London Harts United",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-15-london-harts-united.png"
+  },
+  {
     "id": "eng10-esls-16",
     "slug": "lymore-gardens",
     "section": "eastern-counties-football-league-eastern-senior-league-esls",
     "displayName": "Lymore Gardens",
     "leagueLabel": "Eastern Counties Football League",
     "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-16-lymore-gardens.png"
+  },
+  {
+    "id": "eng10-esls-17",
+    "slug": "may-and-baker-ec",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "May & Baker EC",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-17-may-and-baker-ec.png"
+  },
+  {
+    "id": "eng10-esls-18",
+    "slug": "newbury-forest",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "Marcelona",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-18-newbury-forest.png"
+  },
+  {
+    "id": "eng10-esls-19",
+    "slug": "nw-london",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "NW London",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-19-nw-london.png"
+  },
+  {
+    "id": "eng10-esls-20",
+    "slug": "rayleigh-town",
+    "section": "eastern-counties-football-league-eastern-senior-league-esls",
+    "displayName": "Rayleigh Town",
+    "leagueLabel": "Eastern Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/eastern-counties-football-league-eastern-senior-league-esls/ENG10-ESLS-20-rayleigh-town.png"
   },
   {
     "id": "eng10-esls-21",
@@ -3624,6 +4680,14 @@
     "logo": "/englandClubsLogo/logos/england/hellenic-football-league-premier-division-hlp/ENG9-HLP-13-mangotsfield-united.png"
   },
   {
+    "id": "eng9-hlp-14",
+    "slug": "pershore-town-88",
+    "section": "hellenic-football-league-premier-division-hlp",
+    "displayName": "Pershore Town",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-premier-division-hlp/ENG9-HLP-14-pershore-town-88.png"
+  },
+  {
     "id": "eng9-hlp-15",
     "slug": "roman-glass-st-george",
     "section": "hellenic-football-league-premier-division-hlp",
@@ -3638,6 +4702,30 @@
     "displayName": "Royal Wootton Bassett Town",
     "leagueLabel": "Hellenic Football League",
     "logo": "/englandClubsLogo/logos/england/hellenic-football-league-premier-division-hlp/ENG9-HLP-16-royal-wootton-bassett-town.png"
+  },
+  {
+    "id": "eng9-hlp-17",
+    "slug": "stourport-swifts-mlp",
+    "section": "hellenic-football-league-premier-division-hlp",
+    "displayName": "Stourport Swifts",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-premier-division-hlp/ENG9-HLP-17-stourport-swifts-mlp.png"
+  },
+  {
+    "id": "eng9-hlp-18",
+    "slug": "thornbury-town",
+    "section": "hellenic-football-league-premier-division-hlp",
+    "displayName": "Thornbury Town",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-premier-division-hlp/ENG9-HLP-18-thornbury-town.png"
+  },
+  {
+    "id": "eng9-hlp-19",
+    "slug": "tuffley-rovers",
+    "section": "hellenic-football-league-premier-division-hlp",
+    "displayName": "Tuffley Rovers",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-premier-division-hlp/ENG9-HLP-19-tuffley-rovers.png"
   },
   {
     "id": "eng9-hlp-20",
@@ -3704,6 +4792,22 @@
     "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-07-chipping-sodbury-town.png"
   },
   {
+    "id": "eng10-hl1-08",
+    "slug": "clanfield-85",
+    "section": "hellenic-football-league-division-one-hl1",
+    "displayName": "Clanfield (85)",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-08-clanfield-85.png"
+  },
+  {
+    "id": "eng10-hl1-09",
+    "slug": "ludlow-town",
+    "section": "hellenic-football-league-division-one-hl1",
+    "displayName": "Ludlow Town",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-09-ludlow-town.png"
+  },
+  {
     "id": "eng10-hl1-10",
     "slug": "lydney-town",
     "section": "hellenic-football-league-division-one-hl1",
@@ -3726,6 +4830,14 @@
     "displayName": "Redditch Borough",
     "leagueLabel": "Hellenic Football League",
     "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-12-redditch-borough.png"
+  },
+  {
+    "id": "eng10-hl1-13",
+    "slug": "sharpness",
+    "section": "hellenic-football-league-division-one-hl1",
+    "displayName": "Sharpness",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-13-sharpness.png"
   },
   {
     "id": "eng10-hl1-14",
@@ -3752,12 +4864,28 @@
     "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-16-studley.png"
   },
   {
+    "id": "eng10-hl1-17",
+    "slug": "swindon-supermarine-res",
+    "section": "hellenic-football-league-division-one-hl1",
+    "displayName": "Swindon Supermarine Res",
+    "leagueLabel": "Hellenic Football League",
+    "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-17-swindon-supermarine-res.png"
+  },
+  {
     "id": "eng10-hl1-18",
     "slug": "wantage-town",
     "section": "hellenic-football-league-division-one-hl1",
     "displayName": "Wantage Town",
     "leagueLabel": "Hellenic Football League",
     "logo": "/englandClubsLogo/logos/england/hellenic-football-league-division-one-hl1/ENG10-HL1-18-wantage-town.png"
+  },
+  {
+    "id": "eng9-mlp-01",
+    "slug": "a-f-c-wolverhampton-city",
+    "section": "midland-football-league-premier-division-mlp",
+    "displayName": "AFC Wolverhampton City",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-01-a-f-c-wolverhampton-city.png"
   },
   {
     "id": "eng9-mlp-02",
@@ -3776,6 +4904,14 @@
     "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-03-brocton.png"
   },
   {
+    "id": "eng9-mlp-04",
+    "slug": "cheadle-town",
+    "section": "midland-football-league-premier-division-mlp",
+    "displayName": "Cheadle Town",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-04-cheadle-town.png"
+  },
+  {
     "id": "eng9-mlp-05",
     "slug": "darlaston-town",
     "section": "midland-football-league-premier-division-mlp",
@@ -3784,12 +4920,28 @@
     "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-05-darlaston-town.png"
   },
   {
+    "id": "eng9-mlp-06",
+    "slug": "dudley-town",
+    "section": "midland-football-league-premier-division-mlp",
+    "displayName": "Dudley Town",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-06-dudley-town.png"
+  },
+  {
     "id": "eng9-mlp-07",
     "slug": "lye-town",
     "section": "midland-football-league-premier-division-mlp",
     "displayName": "Lye Town",
     "leagueLabel": "Midland Football League",
     "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-07-lye-town.png"
+  },
+  {
+    "id": "eng9-mlp-08",
+    "slug": "northwich-victoria",
+    "section": "midland-football-league-premier-division-mlp",
+    "displayName": "Northwich Victoria",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-08-northwich-victoria.png"
   },
   {
     "id": "eng9-mlp-09",
@@ -3816,6 +4968,14 @@
     "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-11-sporting-khalsa.png"
   },
   {
+    "id": "eng9-mlp-12",
+    "slug": "stockport-georgians",
+    "section": "midland-football-league-premier-division-mlp",
+    "displayName": "Stockport Georgians",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-12-stockport-georgians.png"
+  },
+  {
     "id": "eng9-mlp-13",
     "slug": "stone-old-alleynians",
     "section": "midland-football-league-premier-division-mlp",
@@ -3838,6 +4998,14 @@
     "displayName": "Tividale",
     "leagueLabel": "Midland Football League",
     "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-15-tividale.png"
+  },
+  {
+    "id": "eng9-mlp-16",
+    "slug": "uttoxeter-town",
+    "section": "midland-football-league-premier-division-mlp",
+    "displayName": "Uttoxeter Town",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-16-uttoxeter-town.png"
   },
   {
     "id": "eng9-mlp-17",
@@ -3872,6 +5040,30 @@
     "logo": "/englandClubsLogo/logos/england/midland-football-league-premier-division-mlp/ENG9-MLP-20-wythenshawe-town.png"
   },
   {
+    "id": "eng10-ml1-01",
+    "slug": "afc-north-kilworth",
+    "section": "midland-football-league-division-one-ml1",
+    "displayName": "AFC North Kilworth",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-01-afc-north-kilworth.png"
+  },
+  {
+    "id": "eng10-ml1-02",
+    "slug": "anstey-town",
+    "section": "midland-football-league-division-one-ml1",
+    "displayName": "Anstey Town",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-02-anstey-town.png"
+  },
+  {
+    "id": "eng10-ml1-03",
+    "slug": "birmingham-o-j-m",
+    "section": "midland-football-league-division-one-ml1",
+    "displayName": "Birmingham OJM",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-03-birmingham-o-j-m.png"
+  },
+  {
     "id": "eng10-ml1-04",
     "slug": "birstall-united-social",
     "section": "midland-football-league-division-one-ml1",
@@ -3904,6 +5096,14 @@
     "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-07-coalville-town.png"
   },
   {
+    "id": "eng10-ml1-08",
+    "slug": "coventry-copsewood",
+    "section": "midland-football-league-division-one-ml1",
+    "displayName": "Coventry Copsewood",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-08-coventry-copsewood.png"
+  },
+  {
     "id": "eng10-ml1-09",
     "slug": "cradley-town",
     "section": "midland-football-league-division-one-ml1",
@@ -3920,12 +5120,28 @@
     "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-10-fcv-grace-dieu.png"
   },
   {
+    "id": "eng10-ml1-11",
+    "slug": "g-n-g-oadby-town",
+    "section": "midland-football-league-division-one-ml1",
+    "displayName": "G.N.G Oadby Town",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-11-g-n-g-oadby-town.png"
+  },
+  {
     "id": "eng10-ml1-12",
     "slug": "gornal-athletic",
     "section": "midland-football-league-division-one-ml1",
     "displayName": "Gornal Athletic",
     "leagueLabel": "Midland Football League",
     "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-12-gornal-athletic.png"
+  },
+  {
+    "id": "eng10-ml1-13",
+    "slug": "heather-st-johns",
+    "section": "midland-football-league-division-one-ml1",
+    "displayName": "Heather St. John's",
+    "leagueLabel": "Midland Football League",
+    "logo": "/englandClubsLogo/logos/england/midland-football-league-division-one-ml1/ENG10-ML1-13-heather-st-johns.png"
   },
   {
     "id": "eng10-ml1-14",
@@ -4064,6 +5280,30 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-08-droylsden.png"
   },
   {
+    "id": "eng9-nwcp-09",
+    "slug": "euxton-villa",
+    "section": "north-west-counties-league-premier-division-nwcp",
+    "displayName": "Euxton Villa",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-09-euxton-villa.png"
+  },
+  {
+    "id": "eng9-nwcp-10",
+    "slug": "f-c-st-helens",
+    "section": "north-west-counties-league-premier-division-nwcp",
+    "displayName": "F.C. St. Helens",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-10-f-c-st-helens.png"
+  },
+  {
+    "id": "eng9-nwcp-11",
+    "slug": "fc-isle-of-man",
+    "section": "north-west-counties-league-premier-division-nwcp",
+    "displayName": "FC Isle of Man",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-11-fc-isle-of-man.png"
+  },
+  {
     "id": "eng9-nwcp-12",
     "slug": "glossop-north-end",
     "section": "north-west-counties-league-premier-division-nwcp",
@@ -4080,12 +5320,28 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-13-irlam.png"
   },
   {
+    "id": "eng9-nwcp-14",
+    "slug": "longridge-town",
+    "section": "north-west-counties-league-premier-division-nwcp",
+    "displayName": "Longridge Town",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-14-longridge-town.png"
+  },
+  {
     "id": "eng9-nwcp-15",
     "slug": "nelson",
     "section": "north-west-counties-league-premier-division-nwcp",
     "displayName": "Nelson",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-15-nelson.png"
+  },
+  {
+    "id": "eng9-nwcp-16",
+    "slug": "pilkington",
+    "section": "north-west-counties-league-premier-division-nwcp",
+    "displayName": "Pilkington",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-16-pilkington.png"
   },
   {
     "id": "eng9-nwcp-17",
@@ -4104,6 +5360,14 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-18-ramsbottom-united.png"
   },
   {
+    "id": "eng9-nwcp-19",
+    "slug": "south-liverpool",
+    "section": "north-west-counties-league-premier-division-nwcp",
+    "displayName": "South Liverpool",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-premier-division-nwcp/ENG9-NWCP-19-south-liverpool.png"
+  },
+  {
     "id": "eng9-nwcp-20",
     "slug": "trafford",
     "section": "north-west-counties-league-premier-division-nwcp",
@@ -4120,6 +5384,14 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-01-afc-blackpool.png"
   },
   {
+    "id": "eng10-nwcn-02",
+    "slug": "afc-knowsley",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "AFC Knowsley",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-02-afc-knowsley.png"
+  },
+  {
     "id": "eng10-nwcn-03",
     "slug": "ashton-athletic",
     "section": "north-west-counties-league-division-one-north-nwcn",
@@ -4134,6 +5406,14 @@
     "displayName": "Ashton Town",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-04-ashton-town.png"
+  },
+  {
+    "id": "eng10-nwcn-05",
+    "slug": "ashville",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Ashville",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-05-ashville.png"
   },
   {
     "id": "eng10-nwcn-06",
@@ -4168,12 +5448,44 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-09-daisy-hill.png"
   },
   {
+    "id": "eng10-nwcn-10",
+    "slug": "darwen",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Darwen",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-10-darwen.png"
+  },
+  {
     "id": "eng10-nwcn-11",
     "slug": "flixton",
     "section": "north-west-counties-league-division-one-north-nwcn",
     "displayName": "Flixton",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-11-flixton.png"
+  },
+  {
+    "id": "eng10-nwcn-12",
+    "slug": "fulwood-amateur",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Fulwood Amateur",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-12-fulwood-amateur.png"
+  },
+  {
+    "id": "eng10-nwcn-13",
+    "slug": "garstang",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Garstang",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-13-garstang.png"
+  },
+  {
+    "id": "eng10-nwcn-14",
+    "slug": "halewood-apollo",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Halewood Apollo",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-14-halewood-apollo.png"
   },
   {
     "id": "eng10-nwcn-15",
@@ -4184,12 +5496,28 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-15-holker-old-boys.png"
   },
   {
+    "id": "eng10-nwcn-16",
+    "slug": "litherland-remyca",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Litherland Remyca",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-16-litherland-remyca.png"
+  },
+  {
     "id": "eng10-nwcn-17",
     "slug": "maghull",
     "section": "north-west-counties-league-division-one-north-nwcn",
     "displayName": "Maghull",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-17-maghull.png"
+  },
+  {
+    "id": "eng10-nwcn-18",
+    "slug": "msb-woolton",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "MSB Woolton",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-18-msb-woolton.png"
   },
   {
     "id": "eng10-nwcn-19",
@@ -4208,6 +5536,38 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-20-steeton.png"
   },
   {
+    "id": "eng10-nwcn-21",
+    "slug": "thornton-cleveleys",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Thornton Cleveleys",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-21-thornton-cleveleys.png"
+  },
+  {
+    "id": "eng10-nwcn-22",
+    "slug": "uppermill",
+    "section": "north-west-counties-league-division-one-north-nwcn",
+    "displayName": "Uppermill",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-division-one-north-nwcn/ENG10-NWCN-22-uppermill.png"
+  },
+  {
+    "id": "eng10-nwcs-01",
+    "slug": "afc-bridgnorth-ml1",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "AFC Bridgnorth",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-01-afc-bridgnorth-ml1.png"
+  },
+  {
+    "id": "eng10-nwcs-02",
+    "slug": "allscott-heath",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Allscott Heath",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-02-allscott-heath.png"
+  },
+  {
     "id": "eng10-nwcs-03",
     "slug": "alsager-town",
     "section": "north-west-counties-league-first-division-south-nwcs",
@@ -4222,6 +5582,14 @@
     "displayName": "Barnton",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-04-barnton.png"
+  },
+  {
+    "id": "eng10-nwcs-05",
+    "slug": "bilston-town-ml1",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Bilston Town",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-05-bilston-town-ml1.png"
   },
   {
     "id": "eng10-nwcs-06",
@@ -4240,12 +5608,36 @@
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-07-cheadle-heath-nomads.png"
   },
   {
+    "id": "eng10-nwcs-08",
+    "slug": "crewe",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Crewe",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-08-crewe.png"
+  },
+  {
+    "id": "eng10-nwcs-09",
+    "slug": "dawley-town",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Dawley Town",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-09-dawley-town.png"
+  },
+  {
     "id": "eng10-nwcs-10",
     "slug": "eccleshall",
     "section": "north-west-counties-league-first-division-south-nwcs",
     "displayName": "Eccleshall",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-10-eccleshall.png"
+  },
+  {
+    "id": "eng10-nwcs-11",
+    "slug": "foley-meir",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Foley Meir",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-11-foley-meir.png"
   },
   {
     "id": "eng10-nwcs-12",
@@ -4262,6 +5654,14 @@
     "displayName": "New Mills",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-13-new-mills.png"
+  },
+  {
+    "id": "eng10-nwcs-14",
+    "slug": "sandbach-united",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Sandbach United",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-14-sandbach-united.png"
   },
   {
     "id": "eng10-nwcs-15",
@@ -4286,6 +5686,22 @@
     "displayName": "Telford Town",
     "leagueLabel": "North West Counties League",
     "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-17-telford-town.png"
+  },
+  {
+    "id": "eng10-nwcs-18",
+    "slug": "wednesfield-community",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Wednesfield Community",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-18-wednesfield-community.png"
+  },
+  {
+    "id": "eng10-nwcs-19",
+    "slug": "widnes-town",
+    "section": "north-west-counties-league-first-division-south-nwcs",
+    "displayName": "Widnes Town",
+    "leagueLabel": "North West Counties League",
+    "logo": "/englandClubsLogo/logos/england/north-west-counties-league-first-division-south-nwcs/ENG10-NWCS-19-widnes-town.png"
   },
   {
     "id": "eng10-nwcs-20",
@@ -4352,6 +5768,30 @@
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-07-golcar-united.png"
   },
   {
+    "id": "eng9-ncep-08",
+    "slug": "handsworth",
+    "section": "northern-counties-east-football-league-premier-division-ncep",
+    "displayName": "Handsworth",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-08-handsworth.png"
+  },
+  {
+    "id": "eng9-ncep-09",
+    "slug": "horbury-town",
+    "section": "northern-counties-east-football-league-premier-division-ncep",
+    "displayName": "Horbury Town",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-09-horbury-town.png"
+  },
+  {
+    "id": "eng9-ncep-10",
+    "slug": "keighley-town",
+    "section": "northern-counties-east-football-league-premier-division-ncep",
+    "displayName": "Keighley Town",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-10-keighley-town.png"
+  },
+  {
     "id": "eng9-ncep-11",
     "slug": "knaresborough-town",
     "section": "northern-counties-east-football-league-premier-division-ncep",
@@ -4376,6 +5816,14 @@
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-13-penistone-church.png"
   },
   {
+    "id": "eng9-ncep-14",
+    "slug": "pickering-town-community",
+    "section": "northern-counties-east-football-league-premier-division-ncep",
+    "displayName": "Pickering Town Community",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-14-pickering-town-community.png"
+  },
+  {
     "id": "eng9-ncep-15",
     "slug": "retford",
     "section": "northern-counties-east-football-league-premier-division-ncep",
@@ -4384,12 +5832,36 @@
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-15-retford.png"
   },
   {
+    "id": "eng9-ncep-16",
+    "slug": "retford-united",
+    "section": "northern-counties-east-football-league-premier-division-ncep",
+    "displayName": "Retford United",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-16-retford-united.png"
+  },
+  {
     "id": "eng9-ncep-17",
     "slug": "rossington-main",
     "section": "northern-counties-east-football-league-premier-division-ncep",
     "displayName": "Rossington Main",
     "leagueLabel": "Northern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-17-rossington-main.png"
+  },
+  {
+    "id": "eng9-ncep-18",
+    "slug": "tadcaster-albion",
+    "section": "northern-counties-east-football-league-premier-division-ncep",
+    "displayName": "Tadcaster Albion",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-18-tadcaster-albion.png"
+  },
+  {
+    "id": "eng9-ncep-19",
+    "slug": "thackley-association",
+    "section": "northern-counties-east-football-league-premier-division-ncep",
+    "displayName": "Thackley Association",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-premier-division-ncep/ENG9-NCEP-19-thackley-association.png"
   },
   {
     "id": "eng9-ncep-20",
@@ -4424,6 +5896,14 @@
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-03-athersley-recreation.png"
   },
   {
+    "id": "eng10-nce1-04",
+    "slug": "brigg-town-fc-cic",
+    "section": "northern-counties-east-football-league-division-one-nce1",
+    "displayName": "Brigg Town FC CIC",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-04-brigg-town-fc-cic.png"
+  },
+  {
     "id": "eng10-nce1-05",
     "slug": "club-thorne-colliery",
     "section": "northern-counties-east-football-league-division-one-nce1",
@@ -4446,6 +5926,14 @@
     "displayName": "Doncaster City",
     "leagueLabel": "Northern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-07-doncaster-city.png"
+  },
+  {
+    "id": "eng10-nce1-08",
+    "slug": "field-olympic",
+    "section": "northern-counties-east-football-league-division-one-nce1",
+    "displayName": "Field Olympic",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-08-field-olympic.png"
   },
   {
     "id": "eng10-nce1-09",
@@ -4472,12 +5960,44 @@
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-11-hemsworth-miners-welfare.png"
   },
   {
+    "id": "eng10-nce1-12",
+    "slug": "ilkley-town",
+    "section": "northern-counties-east-football-league-division-one-nce1",
+    "displayName": "Ilkley Town",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-12-ilkley-town.png"
+  },
+  {
+    "id": "eng10-nce1-13",
+    "slug": "immingham-town",
+    "section": "northern-counties-east-football-league-division-one-nce1",
+    "displayName": "Immingham Town",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-13-immingham-town.png"
+  },
+  {
     "id": "eng10-nce1-14",
     "slug": "kinsley-boys",
     "section": "northern-counties-east-football-league-division-one-nce1",
     "displayName": "Kinsley Boys",
     "leagueLabel": "Northern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-14-kinsley-boys.png"
+  },
+  {
+    "id": "eng10-nce1-15",
+    "slug": "liv",
+    "section": "northern-counties-east-football-league-division-one-nce1",
+    "displayName": "LIV",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-15-liv.png"
+  },
+  {
+    "id": "eng10-nce1-16",
+    "slug": "route-one-rovers",
+    "section": "northern-counties-east-football-league-division-one-nce1",
+    "displayName": "Route One Rovers",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-16-route-one-rovers.png"
   },
   {
     "id": "eng10-nce1-17",
@@ -4494,6 +6014,14 @@
     "displayName": "South Leeds",
     "leagueLabel": "Northern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-18-south-leeds.png"
+  },
+  {
+    "id": "eng10-nce1-19",
+    "slug": "ufca",
+    "section": "northern-counties-east-football-league-division-one-nce1",
+    "displayName": "Leeds UFCA",
+    "leagueLabel": "Northern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-counties-east-football-league-division-one-nce1/ENG10-NCE1-19-ufca.png"
   },
   {
     "id": "eng10-nce1-20",
@@ -4526,6 +6054,14 @@
     "displayName": "Birtley Town",
     "leagueLabel": "Northern Football League",
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-01-birtley-town.png"
+  },
+  {
+    "id": "eng9-nl1-02",
+    "slug": "bishop-auckland",
+    "section": "northern-football-league-division-one-nl1",
+    "displayName": "Bishop Auckland",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-02-bishop-auckland.png"
   },
   {
     "id": "eng9-nl1-03",
@@ -4568,6 +6104,14 @@
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-07-easington-colliery.png"
   },
   {
+    "id": "eng9-nl1-08",
+    "slug": "horden-community-welfare",
+    "section": "northern-football-league-division-one-nl1",
+    "displayName": "Horden Community Welfare",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-08-horden-community-welfare.png"
+  },
+  {
     "id": "eng9-nl1-09",
     "slug": "kendal-town",
     "section": "northern-football-league-division-one-nl1",
@@ -4590,6 +6134,14 @@
     "displayName": "Newcastle Benfield",
     "leagueLabel": "Northern Football League",
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-11-newcastle-benfield.png"
+  },
+  {
+    "id": "eng9-nl1-12",
+    "slug": "newcastle-blue-star",
+    "section": "northern-football-league-division-one-nl1",
+    "displayName": "Newcastle Blue Star",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-12-newcastle-blue-star.png"
   },
   {
     "id": "eng9-nl1-13",
@@ -4624,6 +6176,14 @@
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-16-penrith.png"
   },
   {
+    "id": "eng9-nl1-17",
+    "slug": "redcar-town",
+    "section": "northern-football-league-division-one-nl1",
+    "displayName": "Redcar Town",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-17-redcar-town.png"
+  },
+  {
     "id": "eng9-nl1-18",
     "slug": "shildon",
     "section": "northern-football-league-division-one-nl1",
@@ -4656,6 +6216,22 @@
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-21-whitley-bay.png"
   },
   {
+    "id": "eng9-nl1-22",
+    "slug": "yarm-and-eaglescliffe",
+    "section": "northern-football-league-division-one-nl1",
+    "displayName": "Yarm & Eaglescliffe",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-one-nl1/ENG9-NL1-22-yarm-and-eaglescliffe.png"
+  },
+  {
+    "id": "eng10-nl2-01",
+    "slug": "afc-newbiggin",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "AFC Newbiggin",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-01-afc-newbiggin.png"
+  },
+  {
     "id": "eng10-nl2-02",
     "slug": "alnwick-town",
     "section": "northern-football-league-division-two-nl2",
@@ -4678,6 +6254,54 @@
     "displayName": "Billingham Town",
     "leagueLabel": "Northern Football League",
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-04-billingham-town.png"
+  },
+  {
+    "id": "eng10-nl2-05",
+    "slug": "boldon-c-a",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Boldon C.A.",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-05-boldon-c-a.png"
+  },
+  {
+    "id": "eng10-nl2-06",
+    "slug": "chester-le-street-town",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Chester Le Street Town",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-06-chester-le-street-town.png"
+  },
+  {
+    "id": "eng10-nl2-07",
+    "slug": "chester-le-street-united",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Chester le Street United",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-07-chester-le-street-united.png"
+  },
+  {
+    "id": "eng10-nl2-08",
+    "slug": "darlington-town",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Darlington Town",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-08-darlington-town.png"
+  },
+  {
+    "id": "eng10-nl2-09",
+    "slug": "durham-united",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Durham United",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-09-durham-united.png"
+  },
+  {
+    "id": "eng10-nl2-10",
+    "slug": "grangetown-boys-club",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Grangetown Boys Club",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-10-grangetown-boys-club.png"
   },
   {
     "id": "eng10-nl2-11",
@@ -4704,6 +6328,22 @@
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-13-newcastle-university.png"
   },
   {
+    "id": "eng10-nl2-14",
+    "slug": "prudhoe-youth-club",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Prudhoe Youth Club",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-14-prudhoe-youth-club.png"
+  },
+  {
+    "id": "eng10-nl2-15",
+    "slug": "ryton-and-crawcrook-albion",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Ryton & Crawcrook Albion",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-15-ryton-and-crawcrook-albion.png"
+  },
+  {
     "id": "eng10-nl2-16",
     "slug": "seaham-red-star",
     "section": "northern-football-league-division-two-nl2",
@@ -4712,12 +6352,28 @@
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-16-seaham-red-star.png"
   },
   {
+    "id": "eng10-nl2-17",
+    "slug": "seaton-carew",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Seaton Carew",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-17-seaton-carew.png"
+  },
+  {
     "id": "eng10-nl2-18",
     "slug": "stokesley-sports-club",
     "section": "northern-football-league-division-two-nl2",
     "displayName": "Stokesley Sports Club",
     "leagueLabel": "Northern Football League",
     "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-18-stokesley-sports-club.png"
+  },
+  {
+    "id": "eng10-nl2-19",
+    "slug": "sunderland-rca-sat",
+    "section": "northern-football-league-division-two-nl2",
+    "displayName": "Sunderland RCA (Sat)",
+    "leagueLabel": "Northern Football League",
+    "logo": "/englandClubsLogo/logos/england/northern-football-league-division-two-nl2/ENG10-NL2-19-sunderland-rca-sat.png"
   },
   {
     "id": "eng10-nl2-20",
@@ -4736,6 +6392,14 @@
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-01-afc-st-austell.png"
   },
   {
+    "id": "eng10-swpw-02",
+    "slug": "bude-town",
+    "section": "south-west-peninsula-football-league-premier-division-west-swpw",
+    "displayName": "Bude Town",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-02-bude-town.png"
+  },
+  {
     "id": "eng10-swpw-03",
     "slug": "callington-town",
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
@@ -4750,6 +6414,30 @@
     "displayName": "Camelford",
     "leagueLabel": "South West Peninsula Football League",
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-04-camelford.png"
+  },
+  {
+    "id": "eng10-swpw-05",
+    "slug": "dobwalls",
+    "section": "south-west-peninsula-football-league-premier-division-west-swpw",
+    "displayName": "Dobwalls",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-05-dobwalls.png"
+  },
+  {
+    "id": "eng10-swpw-06",
+    "slug": "falmouth-town-reserves",
+    "section": "south-west-peninsula-football-league-premier-division-west-swpw",
+    "displayName": "Falmouth Town (Reserves)",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-06-falmouth-town-reserves.png"
+  },
+  {
+    "id": "eng10-swpw-07",
+    "slug": "hayle",
+    "section": "south-west-peninsula-football-league-premier-division-west-swpw",
+    "displayName": "Hayle",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-07-hayle.png"
   },
   {
     "id": "eng10-swpw-08",
@@ -4800,6 +6488,22 @@
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-13-penzance.png"
   },
   {
+    "id": "eng10-swpw-14",
+    "slug": "st-day",
+    "section": "south-west-peninsula-football-league-premier-division-west-swpw",
+    "displayName": "St Day",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-14-st-day.png"
+  },
+  {
+    "id": "eng10-swpw-15",
+    "slug": "st-mawgan",
+    "section": "south-west-peninsula-football-league-premier-division-west-swpw",
+    "displayName": "St Mawgan",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-15-st-mawgan.png"
+  },
+  {
     "id": "eng10-swpw-16",
     "slug": "sticker",
     "section": "south-west-peninsula-football-league-premier-division-west-swpw",
@@ -4814,6 +6518,14 @@
     "displayName": "Wadebridge Town",
     "leagueLabel": "South West Peninsula Football League",
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-17-wadebridge-town.png"
+  },
+  {
+    "id": "eng10-swpw-18",
+    "slug": "wendron-united",
+    "section": "south-west-peninsula-football-league-premier-division-west-swpw",
+    "displayName": "Wendron United",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-west-swpw/ENG10-SWPW-18-wendron-united.png"
   },
   {
     "id": "eng10-swpe-01",
@@ -4864,12 +6576,36 @@
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-06-elburton-villa.png"
   },
   {
+    "id": "eng10-swpe-07",
+    "slug": "honiton-town",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "Honiton Town",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-07-honiton-town.png"
+  },
+  {
     "id": "eng10-swpe-08",
     "slug": "ilfracombe-town",
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
     "displayName": "Ilfracombe Town",
     "leagueLabel": "South West Peninsula Football League",
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-08-ilfracombe-town.png"
+  },
+  {
+    "id": "eng10-swpe-09",
+    "slug": "ilminster-town",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "Ilminster Town",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-09-ilminster-town.png"
+  },
+  {
+    "id": "eng10-swpe-10",
+    "slug": "middlezoy-rovers",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "Middlezoy Rovers",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-10-middlezoy-rovers.png"
   },
   {
     "id": "eng10-swpe-11",
@@ -4880,12 +6616,52 @@
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-11-newton-abbot-spurs.png"
   },
   {
+    "id": "eng10-swpe-12",
+    "slug": "okehampton-argyle",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "Okehampton Argyle",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-12-okehampton-argyle.png"
+  },
+  {
+    "id": "eng10-swpe-13",
+    "slug": "stoke-gabriel-and-torbay-police",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "Stoke Gabriel & Torbay Police",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-13-stoke-gabriel-and-torbay-police.png"
+  },
+  {
+    "id": "eng10-swpe-14",
+    "slug": "teignmouth",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "Teignmouth",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-14-teignmouth.png"
+  },
+  {
+    "id": "eng10-swpe-15",
+    "slug": "torridgeside",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "Torridgeside",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-15-torridgeside.png"
+  },
+  {
     "id": "eng10-swpe-16",
     "slug": "torrington",
     "section": "south-west-peninsula-football-league-premier-division-east-swpe",
     "displayName": "Torrington",
     "leagueLabel": "South West Peninsula Football League",
     "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-16-torrington.png"
+  },
+  {
+    "id": "eng10-swpe-17",
+    "slug": "university-of-exeter",
+    "section": "south-west-peninsula-football-league-premier-division-east-swpe",
+    "displayName": "University of Exeter",
+    "leagueLabel": "South West Peninsula Football League",
+    "logo": "/englandClubsLogo/logos/england/south-west-peninsula-football-league-premier-division-east-swpe/ENG10-SWPE-17-university-of-exeter.png"
   },
   {
     "id": "eng9-scp-01",
@@ -4928,6 +6704,30 @@
     "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-05-east-grinstead-town.png"
   },
   {
+    "id": "eng9-scp-06",
+    "slug": "eastbourne-united-assn",
+    "section": "southern-combination-premier-division-scp",
+    "displayName": "Eastbourne United Association",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-06-eastbourne-united-assn.png"
+  },
+  {
+    "id": "eng9-scp-07",
+    "slug": "forest-row",
+    "section": "southern-combination-premier-division-scp",
+    "displayName": "Forest Row",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-07-forest-row.png"
+  },
+  {
+    "id": "eng9-scp-08",
+    "slug": "guernsey-or-peacehaven-and-t",
+    "section": "southern-combination-premier-division-scp",
+    "displayName": "Guernsey",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-08-guernsey-or-peacehaven-and-t.png"
+  },
+  {
     "id": "eng9-scp-09",
     "slug": "hassocks",
     "section": "southern-combination-premier-division-scp",
@@ -4942,6 +6742,14 @@
     "displayName": "Haywards Heath Town",
     "leagueLabel": "Southern Combination",
     "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-10-haywards-heath-town.png"
+  },
+  {
+    "id": "eng9-scp-11",
+    "slug": "horsham-ymca",
+    "section": "southern-combination-premier-division-scp",
+    "displayName": "Horsham YMCA",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-11-horsham-ymca.png"
   },
   {
     "id": "eng9-scp-12",
@@ -4992,12 +6800,36 @@
     "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-17-pagham.png"
   },
   {
+    "id": "eng9-scp-18",
+    "slug": "roffey",
+    "section": "southern-combination-premier-division-scp",
+    "displayName": "Roffey",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-18-roffey.png"
+  },
+  {
     "id": "eng9-scp-19",
     "slug": "seaford-town",
     "section": "southern-combination-premier-division-scp",
     "displayName": "Seaford Town",
     "leagueLabel": "Southern Combination",
     "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-19-seaford-town.png"
+  },
+  {
+    "id": "eng9-scp-20",
+    "slug": "wick",
+    "section": "southern-combination-premier-division-scp",
+    "displayName": "Wick",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-premier-division-scp/ENG9-SCP-20-wick.png"
+  },
+  {
+    "id": "eng10-sc1-01",
+    "slug": "afc-walcountians",
+    "section": "southern-combination-division-one-sc1",
+    "displayName": "AFC Walcountians",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-01-afc-walcountians.png"
   },
   {
     "id": "eng10-sc1-02",
@@ -5024,6 +6856,14 @@
     "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-04-dial-square.png"
   },
   {
+    "id": "eng10-sc1-05",
+    "slug": "dorking-wanderers-b",
+    "section": "southern-combination-division-one-sc1",
+    "displayName": "Dorking Wanderers ('B')",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-05-dorking-wanderers-b.png"
+  },
+  {
     "id": "eng10-sc1-06",
     "slug": "east-preston",
     "section": "southern-combination-division-one-sc1",
@@ -5038,6 +6878,22 @@
     "displayName": "Guildford City",
     "leagueLabel": "Southern Combination",
     "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-07-guildford-city.png"
+  },
+  {
+    "id": "eng10-sc1-08",
+    "slug": "halisham-town",
+    "section": "southern-combination-division-one-sc1",
+    "displayName": "Hailsham Town",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-08-halisham-town.png"
+  },
+  {
+    "id": "eng10-sc1-09",
+    "slug": "infinity",
+    "section": "southern-combination-division-one-sc1",
+    "displayName": "Infinity",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-09-infinity.png"
   },
   {
     "id": "eng10-sc1-10",
@@ -5112,6 +6968,30 @@
     "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-18-shoreham.png"
   },
   {
+    "id": "eng10-sc1-19",
+    "slug": "westfield",
+    "section": "southern-combination-division-one-sc1",
+    "displayName": "Westfield",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-19-westfield.png"
+  },
+  {
+    "id": "eng10-sc1-20",
+    "slug": "worthing-united",
+    "section": "southern-combination-division-one-sc1",
+    "displayName": "Worthing United",
+    "leagueLabel": "Southern Combination",
+    "logo": "/englandClubsLogo/logos/england/southern-combination-division-one-sc1/ENG10-SC1-20-worthing-united.png"
+  },
+  {
+    "id": "eng9-scep-01",
+    "slug": "afc-greenwich-borough",
+    "section": "southern-counties-east-football-league-premier-division-scep",
+    "displayName": "AFC Greenwich Borough",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-01-afc-greenwich-borough.png"
+  },
+  {
     "id": "eng9-scep-02",
     "slug": "bearsted",
     "section": "southern-counties-east-football-league-premier-division-scep",
@@ -5152,12 +7032,28 @@
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-06-erith-and-belvedere.png"
   },
   {
+    "id": "eng9-scep-07",
+    "slug": "faversham-strike-force",
+    "section": "southern-counties-east-football-league-premier-division-scep",
+    "displayName": "Faversham Strike Force",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-07-faversham-strike-force.png"
+  },
+  {
     "id": "eng9-scep-08",
     "slug": "fisher",
     "section": "southern-counties-east-football-league-premier-division-scep",
     "displayName": "Fisher",
     "leagueLabel": "Southern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-08-fisher.png"
+  },
+  {
+    "id": "eng9-scep-09",
+    "slug": "hollands-and-blair",
+    "section": "southern-counties-east-football-league-premier-division-scep",
+    "displayName": "Hollands And Blair",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-09-hollands-and-blair.png"
   },
   {
     "id": "eng9-scep-10",
@@ -5176,6 +7072,14 @@
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-11-kennington.png"
   },
   {
+    "id": "eng9-scep-12",
+    "slug": "larkfield-and-new-hythe",
+    "section": "southern-counties-east-football-league-premier-division-scep",
+    "displayName": "Larkfield And New Hythe",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-12-larkfield-and-new-hythe.png"
+  },
+  {
     "id": "eng9-scep-13",
     "slug": "phoenix-sports",
     "section": "southern-counties-east-football-league-premier-division-scep",
@@ -5190,6 +7094,14 @@
     "displayName": "Rusthall",
     "leagueLabel": "Southern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-14-rusthall.png"
+  },
+  {
+    "id": "eng9-scep-15",
+    "slug": "s-e-dons",
+    "section": "southern-counties-east-football-league-premier-division-scep",
+    "displayName": "SE Dons",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-premier-division-scep/ENG9-SCEP-15-s-e-dons.png"
   },
   {
     "id": "eng9-scep-16",
@@ -5240,6 +7152,14 @@
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-03-croydon.png"
   },
   {
+    "id": "eng10-sce1-04",
+    "slug": "fc-elmstead-1958",
+    "section": "southern-counties-east-football-league-division-one-sce1",
+    "displayName": "FC Elmstead (1958)",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-04-fc-elmstead-1958.png"
+  },
+  {
     "id": "eng10-sce1-05",
     "slug": "greenways",
     "section": "southern-counties-east-football-league-division-one-sce1",
@@ -5248,12 +7168,28 @@
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-05-greenways.png"
   },
   {
+    "id": "eng10-sce1-06",
+    "slug": "halls",
+    "section": "southern-counties-east-football-league-division-one-sce1",
+    "displayName": "Halls",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-06-halls.png"
+  },
+  {
     "id": "eng10-sce1-07",
     "slug": "hythe-town",
     "section": "southern-counties-east-football-league-division-one-sce1",
     "displayName": "Hythe Town",
     "leagueLabel": "Southern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-07-hythe-town.png"
+  },
+  {
+    "id": "eng10-sce1-08",
+    "slug": "lewisham-borough-community",
+    "section": "southern-counties-east-football-league-division-one-sce1",
+    "displayName": "Lewisham Borough Community",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-08-lewisham-borough-community.png"
   },
   {
     "id": "eng10-sce1-09",
@@ -5272,6 +7208,14 @@
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-10-lydd-town.png"
   },
   {
+    "id": "eng10-sce1-11",
+    "slug": "minster",
+    "section": "southern-counties-east-football-league-division-one-sce1",
+    "displayName": "Minster",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-11-minster.png"
+  },
+  {
     "id": "eng10-sce1-12",
     "slug": "rochester-united",
     "section": "southern-counties-east-football-league-division-one-sce1",
@@ -5288,12 +7232,28 @@
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-13-sheppey-sports.png"
   },
   {
+    "id": "eng10-sce1-14",
+    "slug": "sporting-club-thamesmead",
+    "section": "southern-counties-east-football-league-division-one-sce1",
+    "displayName": "Sporting Club Thamesmead",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-14-sporting-club-thamesmead.png"
+  },
+  {
     "id": "eng10-sce1-15",
     "slug": "stansfeld",
     "section": "southern-counties-east-football-league-division-one-sce1",
     "displayName": "Stansfeld",
     "leagueLabel": "Southern Counties East Football League",
     "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-15-stansfeld.png"
+  },
+  {
+    "id": "eng10-sce1-16",
+    "slug": "staplehurst-monarchs-united",
+    "section": "southern-counties-east-football-league-division-one-sce1",
+    "displayName": "Staplehurst Monarchs United",
+    "leagueLabel": "Southern Counties East Football League",
+    "logo": "/englandClubsLogo/logos/england/southern-counties-east-football-league-division-one-sce1/ENG10-SCE1-16-staplehurst-monarchs-united.png"
   },
   {
     "id": "eng10-sce1-17",
@@ -5376,6 +7336,22 @@
     "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-premier-division-ssmp/ENG9-SSMP-08-dunstable.png"
   },
   {
+    "id": "eng9-ssmp-09",
+    "slug": "enfield",
+    "section": "spartan-south-midlands-football-league-premier-division-ssmp",
+    "displayName": "Enfield",
+    "leagueLabel": "Spartan South Midlands Football League",
+    "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-premier-division-ssmp/ENG9-SSMP-09-enfield.png"
+  },
+  {
+    "id": "eng9-ssmp-10",
+    "slug": "everett-rovers",
+    "section": "spartan-south-midlands-football-league-premier-division-ssmp",
+    "displayName": "Everett Rovers",
+    "leagueLabel": "Spartan South Midlands Football League",
+    "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-premier-division-ssmp/ENG9-SSMP-10-everett-rovers.png"
+  },
+  {
     "id": "eng9-ssmp-11",
     "slug": "harlow-town",
     "section": "spartan-south-midlands-football-league-premier-division-ssmp",
@@ -5398,6 +7374,14 @@
     "displayName": "Kempston Rovers",
     "leagueLabel": "Spartan South Midlands Football League",
     "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-premier-division-ssmp/ENG9-SSMP-13-kempston-rovers.png"
+  },
+  {
+    "id": "eng9-ssmp-14",
+    "slug": "kings-langley",
+    "section": "spartan-south-midlands-football-league-premier-division-ssmp",
+    "displayName": "Kings Langley",
+    "leagueLabel": "Spartan South Midlands Football League",
+    "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-premier-division-ssmp/ENG9-SSMP-14-kings-langley.png"
   },
   {
     "id": "eng9-ssmp-15",
@@ -5488,6 +7472,14 @@
     "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-division-one-ssm1/ENG10-SSM1-05-crawley-green.png"
   },
   {
+    "id": "eng10-ssm1-06",
+    "slug": "eaton-socon",
+    "section": "spartan-south-midlands-football-league-division-one-ssm1",
+    "displayName": "Eaton Socon",
+    "leagueLabel": "Spartan South Midlands Football League",
+    "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-division-one-ssm1/ENG10-SSM1-06-eaton-socon.png"
+  },
+  {
     "id": "eng10-ssm1-07",
     "slug": "huntingdon-town",
     "section": "spartan-south-midlands-football-league-division-one-ssm1",
@@ -5512,6 +7504,22 @@
     "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-division-one-ssm1/ENG10-SSM1-09-langford.png"
   },
   {
+    "id": "eng10-ssm1-10",
+    "slug": "leighton-town-reserves",
+    "section": "spartan-south-midlands-football-league-division-one-ssm1",
+    "displayName": "Leighton Town Reserves",
+    "leagueLabel": "Spartan South Midlands Football League",
+    "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-division-one-ssm1/ENG10-SSM1-10-leighton-town-reserves.png"
+  },
+  {
+    "id": "eng10-ssm1-11",
+    "slug": "letchworth-garden-city-eagles",
+    "section": "spartan-south-midlands-football-league-division-one-ssm1",
+    "displayName": "Letchworth Garden City Eagles",
+    "leagueLabel": "Spartan South Midlands Football League",
+    "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-division-one-ssm1/ENG10-SSM1-11-letchworth-garden-city-eagles.png"
+  },
+  {
     "id": "eng10-ssm1-12",
     "slug": "long-buckby",
     "section": "spartan-south-midlands-football-league-division-one-ssm1",
@@ -5526,6 +7534,14 @@
     "displayName": "New Bradwell St Peter",
     "leagueLabel": "Spartan South Midlands Football League",
     "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-division-one-ssm1/ENG10-SSM1-13-new-bradwell-st-peter.png"
+  },
+  {
+    "id": "eng10-ssm1-14",
+    "slug": "rothwell-corinthians",
+    "section": "spartan-south-midlands-football-league-division-one-ssm1",
+    "displayName": "Rothwell Corinthians",
+    "leagueLabel": "Spartan South Midlands Football League",
+    "logo": "/englandClubsLogo/logos/england/spartan-south-midlands-football-league-division-one-ssm1/ENG10-SSM1-14-rothwell-corinthians.png"
   },
   {
     "id": "eng10-ssm1-15",
@@ -5616,12 +7632,44 @@
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-06-clay-cross-town.png"
   },
   {
+    "id": "eng9-ucln-07",
+    "slug": "deeping-rangers",
+    "section": "united-counties-football-league-premier-division-north-ucln",
+    "displayName": "Deeping Rangers",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-07-deeping-rangers.png"
+  },
+  {
+    "id": "eng9-ucln-08",
+    "slug": "eastwood-community",
+    "section": "united-counties-football-league-premier-division-north-ucln",
+    "displayName": "Eastwood Community",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-08-eastwood-community.png"
+  },
+  {
+    "id": "eng9-ucln-09",
+    "slug": "gresley-rovers",
+    "section": "united-counties-football-league-premier-division-north-ucln",
+    "displayName": "Gresley Rovers",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-09-gresley-rovers.png"
+  },
+  {
     "id": "eng9-ucln-10",
     "slug": "heanor-town",
     "section": "united-counties-football-league-premier-division-north-ucln",
     "displayName": "Heanor Town",
     "leagueLabel": "United Counties Football League",
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-10-heanor-town.png"
+  },
+  {
+    "id": "eng9-ucln-11",
+    "slug": "hinckley-afc-ucls",
+    "section": "united-counties-football-league-premier-division-north-ucln",
+    "displayName": "Hinckley AFC",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-11-hinckley-afc-ucls.png"
   },
   {
     "id": "eng9-ucln-12",
@@ -5656,6 +7704,14 @@
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-15-newark-town.png"
   },
   {
+    "id": "eng9-ucln-16",
+    "slug": "ncep",
+    "section": "united-counties-football-league-premier-division-north-ucln",
+    "displayName": "Sheffield",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-16-ncep.png"
+  },
+  {
     "id": "eng9-ucln-17",
     "slug": "sherwood-colliery",
     "section": "united-counties-football-league-premier-division-north-ucln",
@@ -5664,12 +7720,36 @@
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-17-sherwood-colliery.png"
   },
   {
+    "id": "eng9-ucln-18",
+    "slug": "skegness-town",
+    "section": "united-counties-football-league-premier-division-north-ucln",
+    "displayName": "Skegness Town",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-north-ucln/ENG9-UCLN-18-skegness-town.png"
+  },
+  {
     "id": "eng10-ucl1-01",
     "slug": "clifton-all-whites",
     "section": "united-counties-football-league-division-one-ucl1",
     "displayName": "Clifton All Whites",
     "leagueLabel": "United Counties Football League",
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-01-clifton-all-whites.png"
+  },
+  {
+    "id": "eng10-ucl1-02",
+    "slug": "clipstone",
+    "section": "united-counties-football-league-division-one-ucl1",
+    "displayName": "Clipstone",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-02-clipstone.png"
+  },
+  {
+    "id": "eng10-ucl1-03",
+    "slug": "cotgrave",
+    "section": "united-counties-football-league-division-one-ucl1",
+    "displayName": "Cotgrave",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-03-cotgrave.png"
   },
   {
     "id": "eng10-ucl1-04",
@@ -5744,6 +7824,14 @@
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-12-radford.png"
   },
   {
+    "id": "eng10-ucl1-13",
+    "slug": "sandiacre-town",
+    "section": "united-counties-football-league-division-one-ucl1",
+    "displayName": "Sandiacre Town",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-13-sandiacre-town.png"
+  },
+  {
     "id": "eng10-ucl1-14",
     "slug": "selston",
     "section": "united-counties-football-league-division-one-ucl1",
@@ -5776,6 +7864,14 @@
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-17-south-normanton-athletic.png"
   },
   {
+    "id": "eng10-ucl1-18",
+    "slug": "southwell-city",
+    "section": "united-counties-football-league-division-one-ucl1",
+    "displayName": "Southwell City",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-18-southwell-city.png"
+  },
+  {
     "id": "eng10-ucl1-19",
     "slug": "stapleford-town",
     "section": "united-counties-football-league-division-one-ucl1",
@@ -5800,12 +7896,36 @@
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-21-swallownest.png"
   },
   {
+    "id": "eng10-ucl1-22",
+    "slug": "west-bridgford-colts",
+    "section": "united-counties-football-league-division-one-ucl1",
+    "displayName": "West Bridgford Colts",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-division-one-ucl1/ENG10-UCL1-22-west-bridgford-colts.png"
+  },
+  {
     "id": "eng9-ucls-01",
     "slug": "atherstone-town",
     "section": "united-counties-football-league-premier-division-south-ucls",
     "displayName": "Atherstone Town",
     "leagueLabel": "United Counties Football League",
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-01-atherstone-town.png"
+  },
+  {
+    "id": "eng9-ucls-02",
+    "slug": "bugbrooke-st-michael",
+    "section": "united-counties-football-league-premier-division-south-ucls",
+    "displayName": "Bugbrooke St Michael",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-02-bugbrooke-st-michael.png"
+  },
+  {
+    "id": "eng9-ucls-03",
+    "slug": "coton-green-saturday",
+    "section": "united-counties-football-league-premier-division-south-ucls",
+    "displayName": "Coton Green Saturday",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-03-coton-green-saturday.png"
   },
   {
     "id": "eng9-ucls-04",
@@ -5838,6 +7958,22 @@
     "displayName": "Eynesbury Rovers",
     "leagueLabel": "United Counties Football League",
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-07-eynesbury-rovers.png"
+  },
+  {
+    "id": "eng9-ucls-08",
+    "slug": "fc-stratford",
+    "section": "united-counties-football-league-premier-division-south-ucls",
+    "displayName": "FC Stratford",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-08-fc-stratford.png"
+  },
+  {
+    "id": "eng9-ucls-09",
+    "slug": "fc-peterborough",
+    "section": "united-counties-football-league-premier-division-south-ucls",
+    "displayName": "FC Peterborough",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-09-fc-peterborough.png"
   },
   {
     "id": "eng9-ucls-10",
@@ -5878,6 +8014,22 @@
     "displayName": "Lutterworth Town",
     "leagueLabel": "United Counties Football League",
     "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-14-lutterworth-town.png"
+  },
+  {
+    "id": "eng9-ucls-15",
+    "slug": "moulton",
+    "section": "united-counties-football-league-premier-division-south-ucls",
+    "displayName": "Moulton",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-15-moulton.png"
+  },
+  {
+    "id": "eng9-ucls-16",
+    "slug": "northampton-o-n-chenecks",
+    "section": "united-counties-football-league-premier-division-south-ucls",
+    "displayName": "Northampton O.N.Chenecks",
+    "leagueLabel": "United Counties Football League",
+    "logo": "/englandClubsLogo/logos/england/united-counties-football-league-premier-division-south-ucls/ENG9-UCLS-16-northampton-o-n-chenecks.png"
   },
   {
     "id": "eng9-ucls-17",
@@ -5944,6 +8096,14 @@
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-04-bemerton-heath-harlequins.png"
   },
   {
+    "id": "eng9-wxp-05",
+    "slug": "bournemouth-poppies",
+    "section": "wessex-football-league-premier-division-wxp",
+    "displayName": "Bournemouth Poppies",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-05-bournemouth-poppies.png"
+  },
+  {
     "id": "eng9-wxp-06",
     "slug": "brockenhurst",
     "section": "wessex-football-league-premier-division-wxp",
@@ -5992,12 +8152,28 @@
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-11-fareham-town.png"
   },
   {
+    "id": "eng9-wxp-12",
+    "slug": "fleetlands",
+    "section": "wessex-football-league-premier-division-wxp",
+    "displayName": "Fleetlands",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-12-fleetlands.png"
+  },
+  {
     "id": "eng9-wxp-13",
     "slug": "hamble-club",
     "section": "wessex-football-league-premier-division-wxp",
     "displayName": "Hamble Club",
     "leagueLabel": "Wessex Football League",
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-13-hamble-club.png"
+  },
+  {
+    "id": "eng9-wxp-14",
+    "slug": "hamworthy-recreation",
+    "section": "wessex-football-league-premier-division-wxp",
+    "displayName": "Hamworthy Recreation",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-14-hamworthy-recreation.png"
   },
   {
     "id": "eng9-wxp-15",
@@ -6048,6 +8224,14 @@
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-20-sherborne-town.png"
   },
   {
+    "id": "eng9-wxp-21",
+    "slug": "sturminster-newton-united",
+    "section": "wessex-football-league-premier-division-wxp",
+    "displayName": "Sturminster Newton United",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-premier-division-wxp/ENG9-WXP-21-sturminster-newton-united.png"
+  },
+  {
     "id": "eng9-wxp-22",
     "slug": "wincanton-town",
     "section": "wessex-football-league-premier-division-wxp",
@@ -6064,6 +8248,30 @@
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-01-afc-aldermaston.png"
   },
   {
+    "id": "eng10-wx1-02",
+    "slug": "alresford-town",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Alresford Town",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-02-alresford-town.png"
+  },
+  {
+    "id": "eng10-wx1-03",
+    "slug": "ash-united",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Ash United",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-03-ash-united.png"
+  },
+  {
+    "id": "eng10-wx1-04",
+    "slug": "blandford-united",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Blandford United",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-04-blandford-united.png"
+  },
+  {
     "id": "eng10-wx1-05",
     "slug": "colden-common",
     "section": "wessex-football-league-division-one-wx1",
@@ -6072,12 +8280,28 @@
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-05-colden-common.png"
   },
   {
+    "id": "eng10-wx1-06",
+    "slug": "cove",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Cove",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-06-cove.png"
+  },
+  {
     "id": "eng10-wx1-07",
     "slug": "fawley",
     "section": "wessex-football-league-division-one-wx1",
     "displayName": "Fawley",
     "leagueLabel": "Wessex Football League",
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-07-fawley.png"
+  },
+  {
+    "id": "eng10-wx1-08",
+    "slug": "folland-sports",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Folland Sports",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-08-folland-sports.png"
   },
   {
     "id": "eng10-wx1-09",
@@ -6104,6 +8328,14 @@
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-11-hedge-end-rangers.png"
   },
   {
+    "id": "eng10-wx1-12",
+    "slug": "kintbury-rangers",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Kintbury Rangers",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-12-kintbury-rangers.png"
+  },
+  {
     "id": "eng10-wx1-13",
     "slug": "lymington-town",
     "section": "wessex-football-league-division-one-wx1",
@@ -6126,6 +8358,30 @@
     "displayName": "Newport (IOW)",
     "leagueLabel": "Wessex Football League",
     "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-15-newport-iow.png"
+  },
+  {
+    "id": "eng10-wx1-16",
+    "slug": "ringwood-town",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Ringwood Town",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-16-ringwood-town.png"
+  },
+  {
+    "id": "eng10-wx1-17",
+    "slug": "romsey-town",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Romsey Town",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-17-romsey-town.png"
+  },
+  {
+    "id": "eng10-wx1-18",
+    "slug": "sandhurst-town-ccl1",
+    "section": "wessex-football-league-division-one-wx1",
+    "displayName": "Sandhurst Town",
+    "leagueLabel": "Wessex Football League",
+    "logo": "/englandClubsLogo/logos/england/wessex-football-league-division-one-wx1/ENG10-WX1-18-sandhurst-town-ccl1.png"
   },
   {
     "id": "eng10-wx1-19",
@@ -6174,6 +8430,14 @@
     "displayName": "Brislington",
     "leagueLabel": "Western Football League",
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wlp/ENG9-WLP-04-brislington.png"
+  },
+  {
+    "id": "eng9-wlp-05",
+    "slug": "brixham",
+    "section": "western-football-league-premier-division-wlp",
+    "displayName": "Brixham",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wlp/ENG9-WLP-05-brixham.png"
   },
   {
     "id": "eng9-wlp-06",
@@ -6248,6 +8512,14 @@
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wlp/ENG9-WLP-14-shepton-mallet.png"
   },
   {
+    "id": "eng9-wlp-15",
+    "slug": "sidmouth-town",
+    "section": "western-football-league-premier-division-wlp",
+    "displayName": "Sidmouth Town",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wlp/ENG9-WLP-15-sidmouth-town.png"
+  },
+  {
     "id": "eng9-wlp-16",
     "slug": "st-blazey",
     "section": "western-football-league-premier-division-wlp",
@@ -6262,6 +8534,14 @@
     "displayName": "Street",
     "leagueLabel": "Western Football League",
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wlp/ENG9-WLP-17-street.png"
+  },
+  {
+    "id": "eng9-wlp-18",
+    "slug": "tavistock-association",
+    "section": "western-football-league-premier-division-wlp",
+    "displayName": "Tavistock Association",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wlp/ENG9-WLP-18-tavistock-association.png"
   },
   {
     "id": "eng9-wlp-19",
@@ -6280,6 +8560,14 @@
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wlp/ENG9-WLP-20-wellington.png"
   },
   {
+    "id": "eng10-wl1-01",
+    "slug": "aek-boco",
+    "section": "western-football-league-premier-division-wl1",
+    "displayName": "AEK Boco",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-01-aek-boco.png"
+  },
+  {
     "id": "eng10-wl1-02",
     "slug": "almondsbury",
     "section": "western-football-league-premier-division-wl1",
@@ -6294,6 +8582,14 @@
     "displayName": "Amesbury Town",
     "leagueLabel": "Western Football League",
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-03-amesbury-town.png"
+  },
+  {
+    "id": "eng10-wl1-04",
+    "slug": "avonmouth",
+    "section": "western-football-league-premier-division-wl1",
+    "displayName": "Avonmouth",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-04-avonmouth.png"
   },
   {
     "id": "eng10-wl1-05",
@@ -6344,6 +8640,30 @@
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-10-longwell-green-sports.png"
   },
   {
+    "id": "eng10-wl1-11",
+    "slug": "mendip-broadwalk",
+    "section": "western-football-league-premier-division-wl1",
+    "displayName": "Mendip Broadwalk",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-11-mendip-broadwalk.png"
+  },
+  {
+    "id": "eng10-wl1-12",
+    "slug": "nailsea-united",
+    "section": "western-football-league-premier-division-wl1",
+    "displayName": "Nailsea United",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-12-nailsea-united.png"
+  },
+  {
+    "id": "eng10-wl1-13",
+    "slug": "odd-down-bath",
+    "section": "western-football-league-premier-division-wl1",
+    "displayName": "Odd Down (BATH)",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-13-odd-down-bath.png"
+  },
+  {
     "id": "eng10-wl1-14",
     "slug": "radstock-town",
     "section": "western-football-league-premier-division-wl1",
@@ -6352,12 +8672,28 @@
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-14-radstock-town.png"
   },
   {
+    "id": "eng10-wl1-15",
+    "slug": "shirehampton",
+    "section": "western-football-league-premier-division-wl1",
+    "displayName": "Shirehampton",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-15-shirehampton.png"
+  },
+  {
     "id": "eng10-wl1-16",
     "slug": "warminster-town",
     "section": "western-football-league-premier-division-wl1",
     "displayName": "Warminster Town",
     "leagueLabel": "Western Football League",
     "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-16-warminster-town.png"
+  },
+  {
+    "id": "eng10-wl1-17",
+    "slug": "wells-city",
+    "section": "western-football-league-premier-division-wl1",
+    "displayName": "Wells City",
+    "leagueLabel": "Western Football League",
+    "logo": "/englandClubsLogo/logos/england/western-football-league-premier-division-wl1/ENG10-WL1-17-wells-city.png"
   },
   {
     "id": "eng10-wl1-18",

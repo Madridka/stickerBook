@@ -22,6 +22,7 @@ const delay = (milliseconds) => new Promise((resolve) => setTimeout(resolve, mil
 // 1280 px thumbnail only bloats the repository and triggers much stricter
 // throttling, so downloads use a clean 512 px derivative where one is exposed.
 const getDownloadUrls = (sourceUrl) => {
+  if (!new URL(sourceUrl).hostname.endsWith('wikimedia.org')) return [sourceUrl]
   const cleanUrl = sourceUrl.replace(/\?.*$/, '')
   const parsedUrl = new URL(cleanUrl)
   const thumbMarker = parsedUrl.pathname.indexOf('/thumb/')
@@ -139,6 +140,8 @@ const queryTitleBatch = async (entries) => {
   return entries.map((entry) => ({ entry, page: pages.get(followAlias(entry.title)) }))
 }
 
+const normalizeImageTitle = (title) => title.replace(/^File:/i, '').replace(/_/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase()
+
 const queryImageBatch = async (imageTitles) => {
   const url = new URL('https://en.wikipedia.org/w/api.php')
   url.search = new URLSearchParams({
@@ -153,14 +156,19 @@ const queryImageBatch = async (imageTitles) => {
     origin: '*',
   })
   const result = await fetchJson(url)
-  return new Map((result.query?.pages ?? [])
+  const images = new Map((result.query?.pages ?? [])
     .filter((page) => page.imageinfo?.[0]?.url)
-    .map((page) => [page.title.replace(/^File:/, '').toLowerCase(), page.imageinfo[0].thumburl ?? page.imageinfo[0].url]))
+    .map((page) => [normalizeImageTitle(page.title), page.imageinfo[0].thumburl ?? page.imageinfo[0].url]))
+  for (const alias of [...(result.query?.redirects ?? [])].reverse()) {
+    const image = images.get(normalizeImageTitle(alias.to))
+    if (image) images.set(normalizeImageTitle(alias.from), image)
+  }
+  return images
 }
 
 const getInfoboxImageTitle = (page) => {
   const content = page?.revisions?.[0]?.slots?.main?.content ?? ''
-  const match = content.match(/^\|\s*(?:image|logo)\s*=\s*(?:\[\[\s*(?:File:|Image:))?([^\n|\]}]+)/im)
+  const match = content.match(/^[ \t]*\|?[ \t]*(?:image|logo)[ \t]*=[ \t]*(?:\[\[[ \t]*)?(?:(?:File|Image):)?([^\r\n|\]}]+)/im)
   return match?.[1]?.trim().replace(/\s+\d+px$/i, '') ?? ''
 }
 
@@ -168,6 +176,14 @@ const candidateFactoriesByRound = {
   primary: (club) => club.articleTitle || `${club.displayName} F.C.`,
   afc: (club) => `${club.displayName} A.F.C.`,
   plain: (club) => club.displayName,
+  normalized: (club) => club.articleTitle || `${club.displayName
+    .replace(/[’‘]/g, "'")
+    .replace(/\s+(?:CCLN|CCL1|UCLS|MLP|ML1|88|\*)$/g, '')
+    .replace(/\s*\((?:Reserves|Middx|BATH|85|1958)\)|\s+(?:Reserves|Res)$/gi, '')
+    .replace(/ Community$| Association$| FC CIC$/g, '')
+    .replace(/^AFC /, 'A.F.C. ')
+    .replace(/^FC /, 'F.C. ')
+    .trim()}${/^(?:AFC|FC) /.test(club.displayName) ? '' : ' F.C.'}`,
 }
 const candidateFactories = roundArgument === 'all'
   ? Object.values(candidateFactoriesByRound)
@@ -198,6 +214,16 @@ try {
   if (error.code !== 'ENOENT') throw error
 }
 
+const overrides = JSON.parse(await fs.readFile(path.join(path.dirname(manifestPath), 'logo-overrides.json'), 'utf8'))
+for (const [id, source] of Object.entries(overrides)) {
+  const club = clubs.find((club) => club.id === id)
+  if (!club) throw new Error(`Unknown logo override: ${id}`)
+  resolved.set(id, {
+    articleTitle: club.articleTitle || `${club.displayName} F.C.`,
+    ...source,
+  })
+}
+
 for (const candidateFactory of candidateFactories) {
   const pending = clubs.filter((club) => !resolved.has(club.id))
   const entries = pending.map((club) => ({ club, title: candidateFactory(club) }))
@@ -211,7 +237,7 @@ for (const candidateFactory of candidateFactories) {
     const imageUrls = await queryImageBatch(pageImages)
     for (const { entry, page } of results) {
       const imageTitle = getInfoboxImageTitle(page)
-      const sourceUrl = imageUrls.get(imageTitle.toLowerCase())
+      const sourceUrl = imageUrls.get(normalizeImageTitle(imageTitle))
       if (!page?.missing && sourceUrl) {
         resolved.set(entry.club.id, {
           articleTitle: page.title,
@@ -234,6 +260,11 @@ await fs.writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8
 if (shouldDownload) {
   await fs.mkdir(sourceRoot, { recursive: true })
   const existingIds = new Set((await fs.readdir(sourceRoot)).map((fileName) => fileName.split('.')[0]))
+  const publicLogoRoot = path.join(projectRoot, 'public/englandClubsLogo/logos/england')
+  for (const fileName of await fs.readdir(publicLogoRoot, { recursive: true })) {
+    const id = path.basename(fileName).match(/^(eng\d+-[^-]+-\d+)-.*\.png$/i)?.[1]
+    if (id) existingIds.add(id.toLowerCase())
+  }
   const resolvedEntries = manifest.filter(({ status, id }) => status === 'resolved' && !existingIds.has(id))
   let downloadCursor = 0
   const downloadEntry = async (entry) => {

@@ -1,4 +1,4 @@
-param([string]$CardIdPrefix = '')
+param([string]$CardIdPrefix = '', [switch]$OnlyMissing)
 
 $ErrorActionPreference = 'Stop'
 
@@ -10,4 +10,5 @@ $ErrorActionPreference = 'Stop'
   -TemporaryName 'englandClubsLogo-cards' `
   -SkipAlphaCrop `
   -SkipMissingLogos `
-  -CardIdPrefix $CardIdPrefix
+  -CardIdPrefix $CardIdPrefix `
+  -OnlyMissing:$OnlyMissing

@@ -1964,7 +1964,8 @@
         {
           "id": "eng8-isc-04",
           "albumSlot": 4,
-          "displayName": "Ashford Town (Middx)",
+          "displayName": "Ashford Town (Middlesex)",
+          "articleTitle": "Ashford Town (Middlesex) F.C.",
           "slug": "ashford-town-middx"
         },
         {
@@ -2036,7 +2037,7 @@
         {
           "id": "eng8-isc-16",
           "albumSlot": 16,
-          "displayName": "Littlehampton Town *",
+          "displayName": "Littlehampton Town",
           "slug": "littlehampton-town"
         },
         {
@@ -2059,6 +2060,7 @@
         },
         {
           "id": "eng8-isc-20",
+          "articleTitle": "Westfield F.C. (Surrey)",
           "albumSlot": 20,
           "displayName": "Westfield",
           "slug": "westfield"
@@ -2288,7 +2290,8 @@
         {
           "id": "eng8-ise-10",
           "albumSlot": 10,
-          "displayName": "Guernsey or Peacehaven & Telscombe",
+          "displayName": "Peacehaven & Telscombe",
+          "articleTitle": "Peacehaven & Telscombe F.C.",
           "slug": "guernsey-or-peacehaven-and-telscombe"
         },
         {
@@ -2347,6 +2350,7 @@
         },
         {
           "id": "eng8-ise-20",
+          "articleTitle": "South Park F.C.",
           "albumSlot": 20,
           "displayName": "South Park (Reigate)",
           "slug": "south-park-reigate"
@@ -2504,7 +2508,7 @@
         {
           "id": "eng8-npe-22",
           "albumSlot": 22,
-          "displayName": "West Aukland Town",
+          "displayName": "West Auckland Town",
           "slug": "west-aukland-town"
         }
       ],
@@ -2695,6 +2699,7 @@
         },
         {
           "id": "eng8-npm-06",
+          "articleTitle": "Boldmere St. Michaels F.C.",
           "albumSlot": 6,
           "displayName": "Boldmere St Michael’s",
           "slug": "boldmere-st-michaels"
@@ -3200,7 +3205,7 @@
         {
           "id": "eng9-ccln-18",
           "albumSlot": 18,
-          "displayName": "Thatcham Town CCLN",
+          "displayName": "Thatcham Town",
           "slug": "thatcham-town-ccln"
         },
         {
@@ -3307,14 +3312,16 @@
         },
         {
           "id": "eng10-ccl1-14",
+          "articleTitle": "PFC Victoria London",
           "albumSlot": 14,
           "displayName": "PFC Victoria",
           "slug": "pfc-victoria"
         },
         {
           "id": "eng10-ccl1-15",
+          "articleTitle": "Shepherd's Bush F.C. (2021)",
           "albumSlot": 15,
-          "displayName": "Rising Ballers Kensington",
+          "displayName": "Shepherd's Bush",
           "slug": "rising-ballers-kensington"
         },
         {
@@ -3331,6 +3338,7 @@
         },
         {
           "id": "eng10-ccl1-18",
+          "articleTitle": "Spelthorne Sports F.C.",
           "albumSlot": 18,
           "displayName": "Spelthorne Sports Club",
           "slug": "spelthorne-sports-club"
@@ -3338,7 +3346,8 @@
         {
           "id": "eng10-ccl1-19",
           "albumSlot": 19,
-          "displayName": "Staines & Lammas (Middx)",
+          "displayName": "Staines & Lammas (Middlesex)",
+          "articleTitle": "Staines & Lammas (Middlesex) F.C.",
           "slug": "staines-and-lammas-middx"
         },
         {
@@ -3349,6 +3358,7 @@
         },
         {
           "id": "eng10-ccl1-21",
+          "articleTitle": "Westside F.C. (England)",
           "albumSlot": 21,
           "displayName": "Westside",
           "slug": "westside"
@@ -3578,7 +3588,7 @@
         {
           "id": "eng9-eclp-13",
           "albumSlot": 13,
-          "displayName": "March Town United UCLS",
+          "displayName": "March Town United",
           "slug": "march-town-united-ucls"
         },
         {
@@ -3650,7 +3660,7 @@
         {
           "id": "eng10-ecln-03",
           "albumSlot": 3,
-          "displayName": "Dussindale & Hellesdon Rov",
+          "displayName": "Dussindale & Hellesdon Rovers",
           "slug": "dussindale-and-hellesdon-rov"
         },
         {
@@ -3997,14 +4007,16 @@
         },
         {
           "id": "eng10-esls-17",
+          "articleTitle": "May & Baker F.C.",
           "albumSlot": 17,
           "displayName": "May & Baker EC",
           "slug": "may-and-baker-ec"
         },
         {
           "id": "eng10-esls-18",
+          "articleTitle": "Marcelona F.C.",
           "albumSlot": 18,
-          "displayName": "Newbury Forest",
+          "displayName": "Marcelona",
           "slug": "newbury-forest"
         },
         {
@@ -4124,7 +4136,7 @@
         {
           "id": "eng9-hlp-14",
           "albumSlot": 14,
-          "displayName": "Pershore Town 88",
+          "displayName": "Pershore Town",
           "slug": "pershore-town-88"
         },
         {
@@ -4142,7 +4154,7 @@
         {
           "id": "eng9-hlp-17",
           "albumSlot": 17,
-          "displayName": "Stourport Swifts MLP",
+          "displayName": "Stourport Swifts",
           "slug": "stourport-swifts-mlp"
         },
         {
@@ -4249,6 +4261,7 @@
         },
         {
           "id": "eng10-hl1-13",
+          "articleTitle": "Sharpness A.F.C.",
           "albumSlot": 13,
           "displayName": "Sharpness",
           "slug": "sharpness"
@@ -4298,7 +4311,8 @@
         {
           "id": "eng9-mlp-01",
           "albumSlot": 1,
-          "displayName": "A F C Wolverhampton City",
+          "displayName": "AFC Wolverhampton City",
+          "articleTitle": "A.F.C. Wolverhampton City",
           "slug": "a-f-c-wolverhampton-city"
         },
         {
@@ -4429,6 +4443,7 @@
       "clubs": [
         {
           "id": "eng10-ml1-01",
+          "articleTitle": "A.F.C. North Kilworth",
           "albumSlot": 1,
           "displayName": "AFC North Kilworth",
           "slug": "afc-north-kilworth"
@@ -4442,7 +4457,8 @@
         {
           "id": "eng10-ml1-03",
           "albumSlot": 3,
-          "displayName": "Birmingham O J M",
+          "displayName": "Birmingham OJM",
+          "articleTitle": "Birmingham OJM F.C.",
           "slug": "birmingham-o-j-m"
         },
         {
@@ -4489,6 +4505,7 @@
         },
         {
           "id": "eng10-ml1-11",
+          "articleTitle": "GNG Oadby Town F.C.",
           "albumSlot": 11,
           "displayName": "G.N.G Oadby Town",
           "slug": "g-n-g-oadby-town"
@@ -4501,6 +4518,7 @@
         },
         {
           "id": "eng10-ml1-13",
+          "articleTitle": "Heather St John's F.C.",
           "albumSlot": 13,
           "displayName": "Heather St. John's",
           "slug": "heather-st-johns"
@@ -4627,6 +4645,7 @@
         },
         {
           "id": "eng9-nwcp-10",
+          "articleTitle": "F.C. St Helens",
           "albumSlot": 10,
           "displayName": "F.C. St. Helens",
           "slug": "f-c-st-helens"
@@ -4711,6 +4730,7 @@
         },
         {
           "id": "eng10-nwcn-02",
+          "articleTitle": "A.F.C. Knowsley",
           "albumSlot": 2,
           "displayName": "AFC Knowsley",
           "slug": "afc-knowsley"
@@ -4771,6 +4791,7 @@
         },
         {
           "id": "eng10-nwcn-12",
+          "articleTitle": "Fulwood Amateurs A.F.C.",
           "albumSlot": 12,
           "displayName": "Fulwood Amateur",
           "slug": "fulwood-amateur"
@@ -4795,6 +4816,7 @@
         },
         {
           "id": "eng10-nwcn-16",
+          "articleTitle": "Litherland REMYCA F.C.",
           "albumSlot": 16,
           "displayName": "Litherland Remyca",
           "slug": "litherland-remyca"
@@ -4850,7 +4872,7 @@
         {
           "id": "eng10-nwcs-01",
           "albumSlot": 1,
-          "displayName": "AFC Bridgnorth ML1",
+          "displayName": "AFC Bridgnorth",
           "slug": "afc-bridgnorth-ml1"
         },
         {
@@ -4874,7 +4896,7 @@
         {
           "id": "eng10-nwcs-05",
           "albumSlot": 5,
-          "displayName": "Bilston Town ML1",
+          "displayName": "Bilston Town",
           "slug": "bilston-town-ml1"
         },
         {
@@ -4891,6 +4913,7 @@
         },
         {
           "id": "eng10-nwcs-08",
+          "articleTitle": "Crewe F.C.",
           "albumSlot": 8,
           "displayName": "Crewe",
           "slug": "crewe"
@@ -5083,6 +5106,7 @@
         },
         {
           "id": "eng9-ncep-18",
+          "articleTitle": "Tadcaster Albion A.F.C.",
           "albumSlot": 18,
           "displayName": "Tadcaster Albion",
           "slug": "tadcaster-albion"
@@ -5221,8 +5245,9 @@
         },
         {
           "id": "eng10-nce1-19",
+          "articleTitle": "Leeds U.F.C.A.",
           "albumSlot": 19,
-          "displayName": "UFCA",
+          "displayName": "Leeds UFCA",
           "slug": "ufca"
         },
         {
@@ -5425,18 +5450,21 @@
         },
         {
           "id": "eng10-nl2-05",
+          "articleTitle": "Boldon Community Association F.C.",
           "albumSlot": 5,
           "displayName": "Boldon C.A.",
           "slug": "boldon-c-a"
         },
         {
           "id": "eng10-nl2-06",
+          "articleTitle": "Chester-le-Street Town F.C.",
           "albumSlot": 6,
           "displayName": "Chester Le Street Town",
           "slug": "chester-le-street-town"
         },
         {
           "id": "eng10-nl2-07",
+          "articleTitle": "Chester-le-Street United F.C.",
           "albumSlot": 7,
           "displayName": "Chester le Street United",
           "slug": "chester-le-street-united"
@@ -5509,6 +5537,7 @@
         },
         {
           "id": "eng10-nl2-19",
+          "articleTitle": "Sunderland Ryhope Community Association F.C.",
           "albumSlot": 19,
           "displayName": "Sunderland RCA (Sat)",
           "slug": "sunderland-rca-sat"
@@ -5798,7 +5827,8 @@
         {
           "id": "eng9-scp-06",
           "albumSlot": 6,
-          "displayName": "Eastbourne United Ass’n",
+          "displayName": "Eastbourne United Association",
+          "articleTitle": "Eastbourne United Association F.C.",
           "slug": "eastbourne-united-assn"
         },
         {
@@ -5810,7 +5840,8 @@
         {
           "id": "eng9-scp-08",
           "albumSlot": 8,
-          "displayName": "Guernsey OR Peacehaven & T",
+          "displayName": "Guernsey",
+          "articleTitle": "Guernsey F.C.",
           "slug": "guernsey-or-peacehaven-and-t"
         },
         {
@@ -5923,6 +5954,7 @@
         },
         {
           "id": "eng10-sc1-05",
+          "articleTitle": "Dorking Wanderers F.C.",
           "albumSlot": 5,
           "displayName": "Dorking Wanderers ('B')",
           "slug": "dorking-wanderers-b"
@@ -5942,7 +5974,7 @@
         {
           "id": "eng10-sc1-08",
           "albumSlot": 8,
-          "displayName": "Halisham Town",
+          "displayName": "Hailsham Town",
           "slug": "halisham-town"
         },
         {
@@ -6007,6 +6039,7 @@
         },
         {
           "id": "eng10-sc1-19",
+          "articleTitle": "Westfield F.C. (Sussex)",
           "albumSlot": 19,
           "displayName": "Westfield",
           "slug": "westfield"
@@ -6079,6 +6112,7 @@
         },
         {
           "id": "eng9-scep-09",
+          "articleTitle": "Hollands & Blair F.C.",
           "albumSlot": 9,
           "displayName": "Hollands And Blair",
           "slug": "hollands-and-blair"
@@ -6097,6 +6131,7 @@
         },
         {
           "id": "eng9-scep-12",
+          "articleTitle": "Larkfield & New Hythe Wanderers F.C.",
           "albumSlot": 12,
           "displayName": "Larkfield And New Hythe",
           "slug": "larkfield-and-new-hythe"
@@ -6116,7 +6151,8 @@
         {
           "id": "eng9-scep-15",
           "albumSlot": 15,
-          "displayName": "S E Dons",
+          "displayName": "SE Dons",
+          "articleTitle": "SE Dons F.C.",
           "slug": "s-e-dons"
         },
         {
@@ -6181,6 +6217,7 @@
         },
         {
           "id": "eng10-sce1-06",
+          "articleTitle": "Halls Athletic F.C.",
           "albumSlot": 6,
           "displayName": "Halls",
           "slug": "halls"
@@ -6241,6 +6278,7 @@
         },
         {
           "id": "eng10-sce1-16",
+          "articleTitle": "Staplehurst Monarchs F.C.",
           "albumSlot": 16,
           "displayName": "Staplehurst Monarchs United",
           "slug": "staplehurst-monarchs-united"
@@ -6571,6 +6609,7 @@
         },
         {
           "id": "eng9-ucln-08",
+          "articleTitle": "Eastwood C.F.C.",
           "albumSlot": 8,
           "displayName": "Eastwood Community",
           "slug": "eastwood-community"
@@ -6590,7 +6629,8 @@
         {
           "id": "eng9-ucln-11",
           "albumSlot": 11,
-          "displayName": "Hinckley AFC UCLS",
+          "displayName": "Hinckley AFC",
+          "articleTitle": "Hinckley A.F.C.",
           "slug": "hinckley-afc-ucls"
         },
         {
@@ -6620,7 +6660,8 @@
         {
           "id": "eng9-ucln-16",
           "albumSlot": 16,
-          "displayName": "NCEP",
+          "displayName": "Sheffield",
+          "articleTitle": "Sheffield F.C.",
           "slug": "ncep"
         },
         {
@@ -6775,6 +6816,7 @@
         },
         {
           "id": "eng10-ucl1-22",
+          "articleTitle": "West Bridgford F.C.",
           "albumSlot": 22,
           "displayName": "West Bridgford Colts",
           "slug": "west-bridgford-colts"
@@ -6799,12 +6841,14 @@
         },
         {
           "id": "eng9-ucls-02",
+          "articleTitle": "Bugbrooke St Michaels F.C.",
           "albumSlot": 2,
           "displayName": "Bugbrooke St Michael",
           "slug": "bugbrooke-st-michael"
         },
         {
           "id": "eng9-ucls-03",
+          "articleTitle": "Coton Green F.C.",
           "albumSlot": 3,
           "displayName": "Coton Green Saturday",
           "slug": "coton-green-saturday"
@@ -6883,6 +6927,7 @@
         },
         {
           "id": "eng9-ucls-16",
+          "articleTitle": "Northampton ON Chenecks F.C.",
           "albumSlot": 16,
           "displayName": "Northampton O.N.Chenecks",
           "slug": "northampton-o-n-chenecks"
@@ -7172,7 +7217,7 @@
         {
           "id": "eng10-wx1-18",
           "albumSlot": 18,
-          "displayName": "Sandhurst Town CCL1",
+          "displayName": "Sandhurst Town",
           "slug": "sandhurst-town-ccl1"
         },
         {

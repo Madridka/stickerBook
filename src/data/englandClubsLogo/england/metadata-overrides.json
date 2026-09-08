@@ -1,0 +1,20 @@
+{
+  "eng10-ccl1-11": {
+    "foundedYear": 2004,
+    "stadium": "The 1878 Stadium",
+    "city": "Maidenhead",
+    "sourceUrl": "https://www.maidenheadtownfc.co.uk/"
+  },
+  "eng10-swpw-07": {
+    "foundedYear": 1974,
+    "stadium": "Trevassack Park",
+    "city": "Hayle",
+    "sourceUrl": "https://www.swpleague.co.uk/div-1-east/west-club-directory/"
+  },
+  "eng10-swpe-17": {
+    "foundedYear": 1977,
+    "stadium": "Exwick Sports Hub",
+    "city": "Exeter",
+    "sourceUrl": "https://www.swpleague.co.uk/premier/premier-club-directory/"
+  }
+}

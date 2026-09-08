@@ -6,7 +6,8 @@ param(
   [string]$StructurePath = '',
   [switch]$SkipAlphaCrop,
   [switch]$SkipMissingLogos,
-  [string]$CardIdPrefix = ''
+  [string]$CardIdPrefix = '',
+  [switch]$OnlyMissing
 )
 
 $ErrorActionPreference = 'Stop'
@@ -251,6 +252,8 @@ $generated = [Collections.Generic.List[object]]::new()
 
 try {
   foreach ($card in $cards) {
+    $targetPath = Join-Path $projectRoot ('public' + ([string]$card.image -replace '/', '\'))
+    if ($OnlyMissing -and (Test-Path -LiteralPath $targetPath)) { continue }
     $club = $clubsById[$card.id]
     if (-not $club) { throw "Missing club metadata: $($card.id)" }
     $logoPath = Join-Path $projectRoot ('public' + ([string]$club.logo -replace '/', '\'))
@@ -298,7 +301,8 @@ try {
     $stadiumFont = New-FittedFont $graphics $stadium 'Arial Narrow' 32 18 480 ([System.Drawing.FontStyle]::Bold)
     Draw-LeftText $graphics $stadium $stadiumFont $white ([System.Drawing.RectangleF]::new(335, 1138, 480, 100))
 
-    $clubLine = "$(([string]$card.displayName).ToUpperInvariant())  $separator  $($card.foundedYear)"
+    $clubLine = ([string]$card.displayName).ToUpperInvariant()
+    if ($card.foundedYear) { $clubLine += "  $separator  $($card.foundedYear)" }
     $clubFont = New-FittedFont $graphics $clubLine 'Arial Black' 92 28 895 ([System.Drawing.FontStyle]::Bold)
     Draw-CenteredText $graphics $clubLine $clubFont $ink ([System.Drawing.RectangleF]::new(62, 1255, 895, 150))
 

@@ -136,6 +136,23 @@
     "kind": "team"
   },
   {
+    "id": "eng8-slc-09",
+    "cardNumber": "09",
+    "albumSlot": 9,
+    "displayName": "Haringey Borough",
+    "city": "Tottenham",
+    "country": "England",
+    "foundedYear": 1973,
+    "stadium": "Coles Park",
+    "leagueId": "eng8",
+    "countryCode": "ENG",
+    "image": "/englandClubsLogo/cards/england/southern-league-central/ENG8-SLC-09-haringey-borough.webp",
+    "series": "base",
+    "finish": "standard",
+    "rarity": "common",
+    "kind": "team"
+  },
+  {
     "id": "eng8-slc-10",
     "cardNumber": "10",
     "albumSlot": 10,

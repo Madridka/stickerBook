@@ -3666,10 +3666,11 @@
   {
     "id": "eng10-ccl1-11",
     "displayName": "Maidenhead Town",
-    "foundedYear": null,
-    "stadium": "Club Ground",
+    "foundedYear": 2004,
+    "stadium": "The 1878 Stadium",
     "city": "Maidenhead",
-    "articleTitle": "Maidenhead Town F.C."
+    "articleTitle": "Maidenhead Town F.C.",
+    "sourceUrl": "https://www.maidenheadtownfc.co.uk/"
   },
   {
     "id": "eng10-ccl1-12",
@@ -6434,10 +6435,11 @@
   {
     "id": "eng10-swpw-07",
     "displayName": "Hayle",
-    "foundedYear": null,
-    "stadium": "Club Ground",
+    "foundedYear": 1974,
+    "stadium": "Trevassack Park",
     "city": "Hayle",
-    "articleTitle": "Hayle F.C."
+    "articleTitle": "Hayle F.C.",
+    "sourceUrl": "https://www.swpleague.co.uk/div-1-east/west-club-directory/"
   },
   {
     "id": "eng10-swpw-08",
@@ -6658,10 +6660,11 @@
   {
     "id": "eng10-swpe-17",
     "displayName": "University of Exeter",
-    "foundedYear": 1900,
-    "stadium": "Club Ground",
-    "city": "University of Exeter",
-    "articleTitle": "University of Exeter"
+    "foundedYear": 1977,
+    "stadium": "Exwick Sports Hub",
+    "city": "Exeter",
+    "articleTitle": "University of Exeter",
+    "sourceUrl": "https://www.swpleague.co.uk/premier/premier-club-directory/"
   },
   {
     "id": "eng9-scp-01",

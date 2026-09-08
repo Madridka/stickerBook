@@ -692,6 +692,7 @@ const spainClubsLogoAlbum: AlbumDefinition = {
   ],
   metadata: {
     kind: 'club-logos',
+    clubs: spainClubsLogoCards.length,
     countries: Array.from(
       new Set(
         spainClubsLogoCards.flatMap((card) =>
@@ -838,7 +839,7 @@ const russiaClubsLogoAlbum: AlbumDefinition = {
     season: '2026/27',
     countries: ['Россия', 'Абхазия'],
     leagues: ['rus1', 'rus2', 'rus3', 'rus4', 'rusmfl'],
-    clubs: 125,
+    clubs: russiaClubsLogoCards.length,
   },
 }
 
@@ -965,7 +966,7 @@ const englandClubsLogoAlbum: AlbumDefinition = {
     season: '2026/27',
     countries: ['England'],
     leagues: ['eng1', 'eng2', 'eng3', 'eng4', 'eng5', 'eng6', 'eng7', 'eng8', 'eng9', 'eng10'],
-    clubs: 795,
+    clubs: englandClubsLogoCards.length,
   },
 }
 

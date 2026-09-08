@@ -9,11 +9,8 @@ const catalogModules = import.meta.glob<unknown>('./**/cards.json', {
 
 export const catalogs: NormalizedCardCatalog[] = Object.values(catalogModules)
   .map((source): { teamId: string; cards: TeamCard[] } => {
-    const sourceCards: TeamCard[] = parseClubCards(source)
-    const teamId: string = sourceCards[0].id.replace(/-\d+$/, '')
-    const cards: TeamCard[] = sourceCards.map(
-      (card, index): TeamCard => ({ ...card, albumSlot: index + 1 }),
-    )
+    const cards: TeamCard[] = parseClubCards(source)
+    const teamId: string = cards[0].id.replace(/-\d+$/, '')
     return { teamId, cards }
   })
   .sort((left, right): number => left.teamId.localeCompare(right.teamId, 'en', { numeric: true }))

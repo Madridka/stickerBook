@@ -9,6 +9,5 @@ $ErrorActionPreference = 'Stop'
   -TemplatePath 'public/examples/clubLogos/template_england.webp' `
   -TemporaryName 'englandClubsLogo-cards' `
   -SkipAlphaCrop `
-  -SkipMissingLogos `
   -CardIdPrefix $CardIdPrefix `
   -OnlyMissing:$OnlyMissing

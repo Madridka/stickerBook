@@ -1,3 +1,5 @@
+param([switch]$OnlyMissing)
+
 $ErrorActionPreference = 'Stop'
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
@@ -11,7 +13,10 @@ $sourceById = @{}
 Get-ChildItem -LiteralPath $sourceRoot -File | ForEach-Object {
   $sourceById[[IO.Path]::GetFileNameWithoutExtension($_.Name)] = $_.FullName
 }
-$availableJobs = @($jobs | Where-Object { $sourceById.ContainsKey([string]$_.id) })
+$availableJobs = @($jobs | Where-Object {
+  $targetPath = Join-Path $projectRoot ('public' + ([string]$_.logo -replace '/', '\'))
+  $sourceById.ContainsKey([string]$_.id) -and (-not $OnlyMissing -or -not (Test-Path -LiteralPath $targetPath))
+})
 $inputPaths = @($availableJobs | ForEach-Object { $sourceById[[string]$_.id] })
 
 for ($batchStart = 0; $batchStart -lt $inputPaths.Count; $batchStart += 40) {

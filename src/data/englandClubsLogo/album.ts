@@ -142,13 +142,12 @@ const pages: AlbumGeometryPage[] = [
 export const englandDivisionPageRanges: EnglandDivisionPageRange[] = []
 
 // Every division starts on the left and occupies a whole number of spreads.
-// Clubs without a verified crest stay in structure.json but do not receive a
-// collectible slot or a misleading placeholder card.
 divisions.forEach((division): void => {
-  const divisionCards = division.clubs
-    .map(({ id }) => cardById.get(id))
-    .filter((card): card is CardDefinition => Boolean(card))
-  if (divisionCards.length === 0) return
+  const divisionCards = division.clubs.map(({ id }): CardDefinition => {
+    const card = cardById.get(id)
+    if (!card) throw new Error(`Missing England club card: ${division.section}/${id}`)
+    return card
+  })
 
   const cardPageCount = Math.ceil(divisionCards.length / CARDS_PER_PAGE)
   const divisionPageCount = cardPageCount + (cardPageCount % 2)

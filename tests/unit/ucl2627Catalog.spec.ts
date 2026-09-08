@@ -34,12 +34,15 @@ describe('UCL 2026/27 catalog', () => {
       manifest.expectedClubCount,
       manifest.cardsPerClub,
     )
+    const normalizedCards = normalized.flatMap(({ cards: catalogCards }) => catalogCards)
 
     expect(JSON.stringify(rawCatalogs)).toBe(snapshot)
     expect(normalized).toHaveLength(manifest.expectedClubCount)
-    expect(normalized.flatMap(({ cards }) => cards)).toHaveLength(manifest.baseCardCount)
+    expect(normalizedCards.filter(({ series }) => series === 'base')).toHaveLength(
+      manifest.baseCardCount,
+    )
     expect(
-      normalized.flatMap(({ cards }) => cards).every(({ image }) => image.startsWith('/game/ucl-26-27/cards/')),
+      normalizedCards.every(({ image }) => image.startsWith('/game/ucl-26-27/cards/')),
     ).toBe(true)
   })
 
@@ -79,6 +82,8 @@ describe('UCL 2026/27 catalog', () => {
   it('builds a complete two-page spread for every club', () => {
     const teamPages = album.pages.slice(7)
     const slots = teamPages.flatMap((page) => page.slots)
+    const baseCards = cards.filter(({ series }) => series === 'base')
+    const additionalCards = cards.filter(({ series }) => series !== 'base')
 
     expect(album.pages).toHaveLength(7 + manifest.expectedClubCount * 2)
     expect(teamPages).toHaveLength(manifest.expectedClubCount * 2)
@@ -86,7 +91,19 @@ describe('UCL 2026/27 catalog', () => {
     expect(slots).toHaveLength(manifest.baseCardCount)
     expect(new Set(slots.map(({ id }) => id)).size).toBe(slots.length)
     expect(new Set(slots.map(({ playerId }) => playerId))).toEqual(
-      new Set(cards.map(({ id }) => id)),
+      new Set(baseCards.map(({ id }) => id)),
     )
+    expect(
+      additionalCards.every(
+        ({ baseCardId }) =>
+          baseCardId !== undefined && slots.some(({ playerId }) => playerId === baseCardId),
+      ),
+    ).toBe(true)
+
+    const atleticoSlotIds = teamPages
+      .filter(({ id }) => id.startsWith('atletico-madrid-'))
+      .flatMap(({ slots: pageSlots }) => pageSlots.map(({ playerId }) => playerId))
+    expect(atleticoSlotIds).toHaveLength(manifest.cardsPerClub)
+    expect(atleticoSlotIds.at(-1)).toBe('ucl-26-27-atm-20')
   })
 })

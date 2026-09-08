@@ -33,7 +33,15 @@ export const DROP_ENGINE_CONFIG = {
 /** Правила допуска в публичный рейтинг и отображаемые в нём журналы. */
 export const LEADERBOARD_CONFIG = {
   minimumCards: 50,
-  albumIds: ['wc-26', 'ucl-26-27', 'rpl-26-27', 'tomsk', 'spainClubsLogo', 'russiaClubsLogo', 'englandClubsLogo'],
+  albumIds: [
+    'wc-26',
+    'ucl-26-27',
+    'rpl-26-27',
+    'tomsk',
+    'spainClubsLogo',
+    'russiaClubsLogo',
+    'englandClubsLogo',
+  ],
 } as const
 
 export type LeaderboardAlbumId = (typeof LEADERBOARD_CONFIG.albumIds)[number]
@@ -60,13 +68,7 @@ export const PACK_CONFIGS = {
   },
 } satisfies Record<string, PackConfig>
 
-const CARD_RARITIES: readonly CardRarity[] = [
-  'common',
-  'uncommon',
-  'rare',
-  'epic',
-  'legendary',
-]
+const CARD_RARITIES: readonly CardRarity[] = ['common', 'uncommon', 'rare', 'epic', 'legendary']
 
 const CLUB_LOGO_CARD_DROP_WEIGHTS: Readonly<Record<CardRarity, number>> = {
   common: 1,
@@ -103,19 +105,26 @@ export const createClubLogoRarityOdds = (
   ) as PackConfig['rarityOdds']
 }
 
-const CLUB_LOGO_FALLBACK_RARITY_ODDS: PackConfig['rarityOdds'] =
-  createClubLogoRarityOdds([
-    { rarity: 'common' },
-    { rarity: 'uncommon' },
-    { rarity: 'rare' },
-  ])
+const CLUB_LOGO_FALLBACK_RARITY_ODDS: PackConfig['rarityOdds'] = createClubLogoRarityOdds([
+  { rarity: 'common' },
+  { rarity: 'uncommon' },
+  { rarity: 'rare' },
+])
 
 /** Экономика, содержимое и кулдауны покупаемых блистеров. */
 export const BLISTER_CONFIGS = {
   mixed: {
     id: 'mixed',
     albumId: 'wc-26',
-    albumIds: ['wc-26', 'tomsk', 'ucl-26-27', 'rpl-26-27', 'spainClubsLogo', 'russiaClubsLogo', 'englandClubsLogo'],
+    albumIds: [
+      'wc-26',
+      'tomsk',
+      'ucl-26-27',
+      'rpl-26-27',
+      'spainClubsLogo',
+      'russiaClubsLogo',
+      'englandClubsLogo',
+    ],
     titleKey: 'shop.blisters.mixed.title',
     descriptionKey: 'shop.blisters.mixed.description',
     shortNameKey: 'shop.blisters.mixed.shortName',
@@ -233,7 +242,7 @@ export const PACK_HUNT_REWARD_CONFIG = {
    * random — случайный блистер из списка;
    * rotation — смена блистера по времени с начала локального дня.
    */
-  selection: 'fixed' as PackHuntRewardSelection,
+  selection: 'random' as PackHuntRewardSelection,
   blisterIds: [
     BLISTER_CONFIGS.ucl.id,
     BLISTER_CONFIGS.rpl.id,

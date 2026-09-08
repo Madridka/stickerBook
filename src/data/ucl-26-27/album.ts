@@ -93,8 +93,8 @@ const pages: AlbumGeometryPage[] = [
 
 manifest.clubs.forEach((club): void => {
   const clubCards = cards
-    .filter((card): boolean => card.teamId === club.teamId)
-    .sort((left, right): number => Number(left.cardNumber) - Number(right.cardNumber))
+    .filter((card): boolean => card.teamId === club.teamId && card.series === 'base')
+    .sort((left, right): number => (left.albumSlot ?? 0) - (right.albumSlot ?? 0))
 
   for (let pageIndex = 0; pageIndex < 2; pageIndex += 1) {
     const pageCards = clubCards.slice(pageIndex * CARDS_PER_PAGE, (pageIndex + 1) * CARDS_PER_PAGE)

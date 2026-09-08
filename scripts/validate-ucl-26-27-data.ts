@@ -113,7 +113,6 @@ const validateCatalog = (
   const personIds = new Set<string>()
   for (const card of catalog.cards) {
     if (PLACEHOLDER_PATTERN.test(card.displayName)) failures.push(`${card.id}: placeholder displayName`)
-    if (card.series !== 'base') failures.push(`${card.id}: series must be base`)
     if (card.finish !== 'standard') failures.push(`${card.id}: finish must be standard`)
     if (!card.image.startsWith(`/${COLLECTION_ID}/cards/`) || card.image.includes('..')) failures.push(`${card.id}: invalid image root`)
     if (club && !card.image.startsWith(`/${COLLECTION_ID}/cards/${catalog.teamId}/UCL-${club.code}-${card.cardNumber}-`)) {
@@ -158,7 +157,10 @@ const validateData = async (): Promise<void> => {
   }
 
   const cards: Card[] = catalogs.flatMap(({ cards }) => cards)
-  if (cards.length !== manifest.baseCardCount) failures.push(`Expected ${manifest.baseCardCount} cards, found ${cards.length}`)
+  const baseCards = cards.filter(({ series }) => series === 'base')
+  if (baseCards.length !== manifest.baseCardCount) {
+    failures.push(`Expected ${manifest.baseCardCount} base cards, found ${baseCards.length}`)
+  }
   const idCounts = countBy(cards.map(({ id }) => id))
   for (const [id, count] of idCounts) if (count > 1) failures.push(`${id}: duplicate global id`)
   for (const card of cards) {
@@ -175,7 +177,9 @@ const validateData = async (): Promise<void> => {
   }
 
   if (failures.length > 0) throw new Error(`UCL catalog validation failed:\n${failures.join('\n')}`)
-  console.log(`Validated ${catalogPaths.length} UCL catalogs and ${cards.length} base cards.`)
+  console.log(
+    `Validated ${catalogPaths.length} UCL catalogs, ${baseCards.length} base cards and ${cards.length - baseCards.length} additional cards.`,
+  )
 }
 
 validateData().catch((error: unknown) => {

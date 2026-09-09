@@ -28,6 +28,7 @@ import Menu from 'primevue/menu'
 import Dialog from 'primevue/dialog'
 import Button from 'primevue/button'
 import PickDraftDialog from '@/components/Shop/PickDraftDialog.vue'
+import ReleaseWelcomeDialog from '@/components/ReleaseWelcomeDialog.vue'
 
 const { t } = useI18n()
 const { isEmeraldPink, toggleTheme } = useTheme()
@@ -407,6 +408,7 @@ onBeforeUnmount((): void => {
         />
       </template>
     </Dialog>
+    <ReleaseWelcomeDialog />
     <PickDraftDialog />
   </div>
 </template>

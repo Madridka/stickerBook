@@ -1,5 +1,6 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
+import { reportClientEvent } from '@/services/clientLogger'
 import { database, type DuplicateExchange } from '@/db/database'
 import { reconcileOrphanedDuplicates, storeCardInstance } from '@/db/stickerLifecycle'
 import type {
@@ -206,7 +207,10 @@ export const useCollectionStore = defineStore('collection', () => {
           return 'claimed'
         },
       )
-      if (result === 'claimed') notifyGoalsChanged()
+      if (result === 'claimed') {
+        notifyGoalsChanged()
+        reportClientEvent('duplicate-exchange.claimed', { cardId: playerId })
+      }
       await load()
       return result
     } finally {
@@ -241,7 +245,13 @@ export const useCollectionStore = defineStore('collection', () => {
           ? { ...item, instance: { ...item.instance, ...changes } }
           : item,
     )
-    if (isNewPlacement) notifyDailyTasksChanged()
+    if (isNewPlacement) {
+      notifyDailyTasksChanged()
+      reportClientEvent('card.placed', {
+        albumId: current?.instance.albumId,
+        cardId: current?.instance.playerId,
+      })
+    }
   }
 
   const setAlbumDisplay = async (instanceId: string, slotId: string): Promise<void> => {

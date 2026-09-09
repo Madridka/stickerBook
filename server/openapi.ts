@@ -11,6 +11,7 @@ const openApiDocument = {
   servers: [{ url: '/', description: 'Текущий сервер' }],
   tags: [
     { name: 'System' },
+    { name: 'Diagnostics' },
     { name: 'Auth' },
     { name: 'Save' },
     { name: 'Leaderboard' },
@@ -129,6 +130,28 @@ const openApiDocument = {
         tags: ['System'],
         summary: 'Проверить состояние сервера',
         responses: { 200: { description: 'Сервер доступен' } },
+      },
+    },
+    '/api/client-errors': {
+      post: {
+        tags: ['Diagnostics'],
+        summary: 'Записать диагностическую ошибку клиентского приложения',
+        responses: {
+          204: { description: 'Ошибка записана' },
+          400: { description: 'Некорректный отчёт' },
+          429: { description: 'Слишком много отчётов' },
+        },
+      },
+    },
+    '/api/client-events': {
+      post: {
+        tags: ['Diagnostics'],
+        summary: 'Записать ключевое действие игрока',
+        responses: {
+          204: { description: 'Событие записано' },
+          400: { description: 'Некорректное событие' },
+          429: { description: 'Слишком много событий' },
+        },
       },
     },
     '/api/auth/register': {

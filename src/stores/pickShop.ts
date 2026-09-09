@@ -1,5 +1,6 @@
 import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
+import { reportClientEvent } from '@/services/clientLogger'
 import {
   database,
   type PickDraft,
@@ -323,6 +324,12 @@ export const usePickShopStore = defineStore('pickShop', () => {
           return 'claimed'
         },
       )
+      if (result === 'claimed') {
+        reportClientEvent('pick.claimed', {
+          albumId: candidate.albumId,
+          cardId: candidate.playerId,
+        })
+      }
       await load()
       return result
     } finally {

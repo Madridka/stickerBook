@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch, type ComputedRef, type Ref } from 'vue
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { getPlayerAlbumCard } from '@/data/albumRegistry'
+import { reportClientError } from '@/services/clientLogger'
 import { useCollectionStore } from '@/stores/collection'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackOpeningStore, type AdvancePackOpeningResult } from '@/stores/packOpening'
@@ -86,7 +87,7 @@ const handleNextCard = async (): Promise<void> => {
     }
   } catch (error: unknown) {
     hasAdvanceError.value = true
-    console.error('Failed to save pack opening progress', error)
+    reportClientError('runtime-error', error, { source: 'pack-opening.advance' })
   }
 }
 

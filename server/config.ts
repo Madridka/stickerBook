@@ -18,6 +18,7 @@ export interface ServerConfig {
   distPath: string
   host: string
   isProduction?: boolean
+  logFile?: string
   logLevel?: 'silent' | 'info' | 'warn' | 'error'
   port: number
   secureCookie: boolean
@@ -66,15 +67,22 @@ export const loadServerConfig = (): ServerConfig => {
     process.env.STICKER_BOOK_DATABASE_PATH ?? 'server/data/sticker-book.sqlite',
   )
   const configuredLogLevel = process.env.STICKER_BOOK_LOG_LEVEL?.trim().toLowerCase()
-  const logLevel: ServerConfig['logLevel'] = isProduction
-    ? configuredLogLevel === 'silent' || configuredLogLevel === 'error'
-      ? configuredLogLevel
-      : 'warn'
-    : configuredLogLevel === 'silent' ||
-        configuredLogLevel === 'warn' ||
-        configuredLogLevel === 'error'
+  const logLevel: ServerConfig['logLevel'] =
+    configuredLogLevel === 'silent' ||
+    configuredLogLevel === 'warn' ||
+    configuredLogLevel === 'error' ||
+    configuredLogLevel === 'info'
       ? configuredLogLevel
       : 'info'
+  const configuredLogFile: string | undefined = process.env.STICKER_BOOK_LOG_FILE?.trim()
+  const logFile: string | undefined =
+    configuredLogFile?.toLowerCase() === 'off'
+      ? undefined
+      : configuredLogFile
+        ? resolve(configuredLogFile)
+        : isProduction
+          ? resolve(dirname(databasePath), 'logs/sticker-book.ndjson')
+          : undefined
   const allowedOrigins: string[] = (process.env.STICKER_BOOK_ALLOWED_ORIGINS ?? '')
     .split(',')
     .map((origin): string => origin.trim())
@@ -101,6 +109,7 @@ export const loadServerConfig = (): ServerConfig => {
     distPath: resolve('dist'),
     host: process.env.STICKER_BOOK_HOST ?? '0.0.0.0',
     isProduction,
+    logFile,
     logLevel,
     port: parsePort(process.env.STICKER_BOOK_PORT),
     secureCookie: isProduction,

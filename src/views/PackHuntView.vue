@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, watch, type Component, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
+import { reportClientError } from '@/services/clientLogger'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePackHuntStore, type PackHuntClaimResult } from '@/stores/packHunt'
 import { formatCountdown } from '@/utils/formatCountdown'
@@ -70,8 +71,9 @@ const saveReward = async (): Promise<void> => {
     }
     await inventory.load()
     phase.value = 'won'
-  } catch {
+  } catch (error: unknown) {
     phase.value = 'error'
+    reportClientError('runtime-error', error, { source: 'pack-hunt.claim' })
   }
 }
 

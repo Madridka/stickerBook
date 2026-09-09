@@ -83,8 +83,23 @@ Authorization: Basic ...
 | `STICKER_BOOK_ADMIN_PASSWORD_HASH` | админка выключена |
 | `STICKER_BOOK_ALLOWED_ORIGINS` | только origin текущего Host |
 | `STICKER_BOOK_API_DOCS_ENABLED` | `false` в production |
-| `STICKER_BOOK_LOG_LEVEL` | `warn` в production |
+| `STICKER_BOOK_LOG_LEVEL` | `info` |
+| `STICKER_BOOK_LOG_FILE` | `logs/sticker-book.ndjson` рядом с БД в production; `off` отключает файл |
 | `STICKER_BOOK_TRUST_PROXY` | `false` |
 
 Backup-каталог не следует размещать внутри публичного `dist`. Для внешнего `/admin` и
 Swagger с административной авторизацией требуется HTTPS reverse proxy.
+
+## Журналирование
+
+Production-сервер выводит структурированные записи в консоль процесса и сохраняет
+по одной JSON-записи на строку в `logs/sticker-book.ndjson` рядом с SQLite-файлом.
+В журнал входят HTTP-запросы,
+серверные исключения, результаты облачного сохранения, входы, получение наград,
+покупки и открытия наборов, вклейка карточек, мини-игры и ошибки Vue/API,
+отправленные браузером. Пароли, cookie,
+authorization-заголовки и содержимое облачных сохранений не записываются.
+
+Путь меняется через `STICKER_BOOK_LOG_FILE`, уровень — через
+`STICKER_BOOK_LOG_LEVEL`. Ротацию и срок хранения файла следует настроить средствами
+операционной системы; каталог логов нельзя публиковать через `dist`.

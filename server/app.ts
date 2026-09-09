@@ -21,6 +21,7 @@ import { registerOpenApi } from './openapi.ts'
 import { registerLeaderboard } from './leaderboard.ts'
 import { parseSaveSnapshot } from './save-validation.ts'
 import { registerSecurity, RequestRateLimiter, sendRateLimit } from './security.ts'
+import { createServerLogStream } from './logging.ts'
 
 interface AuthBody {
   username?: unknown
@@ -36,11 +37,125 @@ interface GoalClaimBody {
   requestId?: unknown
 }
 
+interface ClientErrorBody {
+  detail?: unknown
+  kind?: unknown
+  message?: unknown
+  name?: unknown
+  route?: unknown
+  source?: unknown
+  stack?: unknown
+  userAgent?: unknown
+}
+
+interface ClientEventBody {
+  albumId?: unknown
+  cardId?: unknown
+  count?: unknown
+  event?: unknown
+  packId?: unknown
+  route?: unknown
+  value?: unknown
+}
+
+interface ClientErrorReport {
+  detail?: string
+  kind: 'api-error' | 'runtime-error' | 'unhandled-rejection' | 'vue-error'
+  message: string
+  name?: string
+  route?: string
+  source: string
+  stack?: string
+  userAgent?: string
+}
+
+interface ClientEventReport {
+  albumId?: string
+  cardId?: string
+  count?: number
+  event:
+    | 'card.placed'
+    | 'daily-task.reward-claimed'
+    | 'duplicate-exchange.claimed'
+    | 'minigame.reward-claimed'
+    | 'pack.opened'
+    | 'pack.purchased'
+    | 'pick.claimed'
+  packId?: string
+  route?: string
+  value?: number
+}
+
 const USERNAME_PATTERN: RegExp = /^[\p{L}\p{N}_.-]+$/u
 const MAX_SAVE_BYTES: number = 2 * 1024 * 1024
 const AUTH_RATE_WINDOW_MS: number = 15 * 60 * 1_000
 const REGISTRATION_RATE_WINDOW_MS: number = 60 * 60 * 1_000
 const GOAL_ID_PATTERN: RegExp = /^[a-z][a-z0-9-]{0,63}$/
+const CLIENT_ERROR_RATE_WINDOW_MS: number = 60_000
+const CLIENT_ERROR_KINDS: ReadonlySet<ClientErrorReport['kind']> = new Set([
+  'api-error',
+  'runtime-error',
+  'unhandled-rejection',
+  'vue-error',
+])
+const CLIENT_EVENTS: ReadonlySet<ClientEventReport['event']> = new Set([
+  'card.placed',
+  'daily-task.reward-claimed',
+  'duplicate-exchange.claimed',
+  'minigame.reward-claimed',
+  'pack.opened',
+  'pack.purchased',
+  'pick.claimed',
+])
+
+const readClientText = (value: unknown, maximumLength: number): string | undefined => {
+  if (typeof value !== 'string') return undefined
+  const normalized: string = value.trim()
+  return normalized ? normalized.slice(0, maximumLength) : undefined
+}
+
+const parseClientError = (body: ClientErrorBody): ClientErrorReport | undefined => {
+  const kind: ClientErrorReport['kind'] | undefined =
+    typeof body.kind === 'string' && CLIENT_ERROR_KINDS.has(body.kind as ClientErrorReport['kind'])
+      ? body.kind as ClientErrorReport['kind']
+      : undefined
+  const message: string | undefined = readClientText(body.message, 1_000)
+  const source: string | undefined = readClientText(body.source, 128)
+  if (!kind || !message || !source) return undefined
+
+  return {
+    detail: readClientText(body.detail, 512),
+    kind,
+    message,
+    name: readClientText(body.name, 128),
+    route: readClientText(body.route, 512),
+    source,
+    stack: readClientText(body.stack, 8_000),
+    userAgent: readClientText(body.userAgent, 512),
+  }
+}
+
+const readClientNumber = (value: unknown): number | undefined =>
+  typeof value === 'number' && Number.isFinite(value) && Math.abs(value) <= 1_000_000_000
+    ? value
+    : undefined
+
+const parseClientEvent = (body: ClientEventBody): ClientEventReport | undefined => {
+  const event: ClientEventReport['event'] | undefined =
+    typeof body.event === 'string' && CLIENT_EVENTS.has(body.event as ClientEventReport['event'])
+      ? body.event as ClientEventReport['event']
+      : undefined
+  if (!event) return undefined
+  return {
+    albumId: readClientText(body.albumId, 128),
+    cardId: readClientText(body.cardId, 128),
+    count: readClientNumber(body.count),
+    event,
+    packId: readClientText(body.packId, 128),
+    route: readClientText(body.route, 512),
+    value: readClientNumber(body.value),
+  }
+}
 
 const normalizeUsername = (username: string): string => username.normalize('NFKC').toLowerCase()
 
@@ -80,10 +195,30 @@ const setSessionCookie = (
 
 export const createServer = async (config: ServerConfig): Promise<FastifyInstance> => {
   const isProduction: boolean = config.isProduction ?? config.secureCookie
-  const logLevel = config.logLevel ?? (isProduction ? 'warn' : 'info')
+  const logLevel = config.logLevel ?? 'info'
+  const logStream =
+    config.logFile && logLevel !== 'silent'
+      ? createServerLogStream(config.logFile)
+      : undefined
   const server: FastifyInstance = Fastify({
     bodyLimit: MAX_SAVE_BYTES,
-    logger: logLevel === 'silent' ? false : { level: logLevel },
+    logger: logLevel === 'silent'
+      ? false
+      : {
+          level: logLevel,
+          ...(logStream ? { stream: logStream } : {}),
+          redact: {
+            paths: [
+              'req.headers.authorization',
+              'req.headers.cookie',
+              'password',
+              '*.password',
+            ],
+            censor: '[REDACTED]',
+          },
+        },
+    disableRequestLogging: (request): boolean =>
+      request.url === '/api/client-errors' || request.url === '/api/client-events',
     trustProxy: config.trustProxy ?? false,
   })
   const sessionCookie: string = config.secureCookie
@@ -101,7 +236,7 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
   await server.register(cookie)
   registerSecurity(server, config)
 
-  server.setErrorHandler(async (error, _request, reply): Promise<void> => {
+  server.setErrorHandler(async (error, request, reply): Promise<void> => {
     const errorStatusCode =
       typeof error === 'object' && error !== null && 'statusCode' in error
         ? error.statusCode
@@ -110,7 +245,9 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
       typeof errorStatusCode === 'number' && errorStatusCode >= 400 && errorStatusCode < 600
         ? errorStatusCode
         : 500
-    if (statusCode >= 500) server.log.error({ error }, 'Unhandled server error')
+    if (statusCode >= 500) {
+      request.log.error({ err: error, event: 'server.unhandled-error' }, 'Unhandled server error')
+    }
     await reply.code(statusCode).send({
       code:
         statusCode === 413
@@ -149,6 +286,48 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
 
   server.get('/api/health', async (): Promise<{ status: 'ok' }> => ({ status: 'ok' }))
 
+  server.post<{ Body: ClientErrorBody }>('/api/client-errors', async (request, reply) => {
+    if (
+      await applyRateLimit(
+        `client-error:${request.ip}`,
+        30,
+        CLIENT_ERROR_RATE_WINDOW_MS,
+        reply,
+      )
+    ) {
+      return
+    }
+    const report: ClientErrorReport | undefined = parseClientError(request.body ?? {})
+    if (!report) return reply.code(400).send({ code: 'invalid-client-error' })
+    const user: PublicUser | undefined = currentUser(request)
+    request.log.error(
+      { client: report, event: 'client.error', userId: user?.id },
+      'Client application error',
+    )
+    return reply.code(204).send()
+  })
+
+  server.post<{ Body: ClientEventBody }>('/api/client-events', async (request, reply) => {
+    if (
+      await applyRateLimit(
+        `client-event:${request.ip}`,
+        120,
+        CLIENT_ERROR_RATE_WINDOW_MS,
+        reply,
+      )
+    ) {
+      return
+    }
+    const report: ClientEventReport | undefined = parseClientEvent(request.body ?? {})
+    if (!report) return reply.code(400).send({ code: 'invalid-client-event' })
+    const user: PublicUser | undefined = currentUser(request)
+    request.log.info(
+      { client: report, event: `client.${report.event}`, userId: user?.id },
+      'Player action',
+    )
+    return reply.code(204).send()
+  })
+
   if (config.apiDocsEnabled ?? !isProduction) registerOpenApi(server)
   registerAdmin(server, storage, backupService, config)
   registerLeaderboard(server, storage)
@@ -181,6 +360,7 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
     }
     const session = storage.createSession(user.id)
     setSessionCookie(reply, sessionCookie, session.token, session.expiresAt, config.secureCookie)
+    request.log.info({ event: 'auth.registered', userId: user.id }, 'Player registered')
     return reply.code(201).send({ user })
   })
 
@@ -199,16 +379,19 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
       user?.passwordHash ?? invalidPasswordHash,
     )
     if (!user || !passwordMatches) {
+      request.log.warn({ event: 'auth.login-failed' }, 'Player login failed')
       return reply.code(401).send({ code: 'invalid-login' })
     }
     const session = storage.createSession(user.id)
     setSessionCookie(reply, sessionCookie, session.token, session.expiresAt, config.secureCookie)
     authLimiter.reset(rateKey)
     authLimiter.reset(accountRateKey)
+    request.log.info({ event: 'auth.logged-in', userId: user.id }, 'Player logged in')
     return { user: { id: user.id, username: user.username } }
   })
 
   server.post('/api/auth/logout', async (request, reply) => {
+    const user: PublicUser | undefined = currentUser(request)
     const token: string | undefined = request.cookies[sessionCookie]
     if (token) storage.deleteSession(token)
     reply.clearCookie(sessionCookie, {
@@ -217,6 +400,7 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
       sameSite: 'lax',
       secure: config.secureCookie,
     })
+    request.log.info({ event: 'auth.logged-out', userId: user?.id }, 'Player logged out')
     return reply.code(204).send()
   })
 
@@ -244,6 +428,15 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
         request.params.goalId,
         request.body.requestId,
       )
+      request.log.info(
+        {
+          event: 'goal.claimed',
+          goalId: request.params.goalId,
+          status: claim?.status ?? 'not-completed',
+          userId: user.id,
+        },
+        'Goal reward claim processed',
+      )
       return claim ?? reply.code(409).send({ code: 'goal-not-completed' })
     },
   )
@@ -262,14 +455,22 @@ export const createServer = async (config: ServerConfig): Promise<FastifyInstanc
       snapshot,
     )
     if (!save) {
+      request.log.warn(
+        { baseVersion: Number(baseVersion), event: 'save.conflict', userId: user.id },
+        'Cloud save version conflict',
+      )
       return reply.code(409).send({ code: 'save-conflict', save: storage.getCloudSave(user.id) })
     }
+    request.log.info(
+      { event: 'save.persisted', userId: user.id, version: save.version },
+      'Cloud save persisted',
+    )
     return { save }
   })
 
   storage.deleteExpiredSessions()
   await backupService.start().catch((error: unknown): void => {
-    server.log.error({ error }, 'Initial database backup failed')
+    server.log.error({ err: error, event: 'backup.startup-failed' }, 'Initial database backup failed')
   })
 
   if (existsSync(config.distPath)) {

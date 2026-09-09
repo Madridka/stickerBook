@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, type ComputedRef, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+import { reportClientError } from '@/services/clientLogger'
 import { useInventoryStore } from '@/stores/inventory'
 import { usePlayerStore } from '@/stores/player'
 import { usePackHuntStore } from '@/stores/packHunt'
@@ -122,8 +123,9 @@ const buyBlister = async (blisterId: string): Promise<void> => {
     packOpening.applyPersistedSession(result.session)
     await blisters.load()
     await router.push({ name: 'pack-opening', query: { pack: result.item.id } })
-  } catch {
+  } catch (error: unknown) {
     hasPurchaseError.value = true
+    reportClientError('runtime-error', error, { source: 'shop.purchase' })
   } finally {
     purchasingById.value = { ...purchasingById.value, [blisterId]: false }
   }

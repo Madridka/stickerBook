@@ -61,7 +61,7 @@ export class DatabaseBackupService {
         try {
           return this.listDirectory(directory)
         } catch (error: unknown) {
-          this.logger.warn({ directory, error }, 'Database backup directory is unavailable')
+          this.logger.warn({ directory, err: error }, 'Database backup directory is unavailable')
           return []
         }
       })
@@ -102,7 +102,7 @@ export class DatabaseBackupService {
     if (!this.isEnabled()) return
     this.interval = setInterval((): void => {
       void this.create('scheduled').catch((error: unknown): void => {
-        this.logger.error({ error }, 'Scheduled database backup failed')
+        this.logger.error({ err: error }, 'Scheduled database backup failed')
       })
     }, this.config.intervalMs)
     this.interval.unref()
@@ -131,7 +131,7 @@ export class DatabaseBackupService {
         this.logger.info({ backup: record }, 'Database backup created')
       } catch (error: unknown) {
         errors.push(error)
-        this.logger.error({ directory, error }, 'Database backup destination failed')
+        this.logger.error({ directory, err: error }, 'Database backup destination failed')
       }
     }
 

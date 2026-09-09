@@ -1,5 +1,6 @@
 import { ref, type Ref } from 'vue'
 import { defineStore } from 'pinia'
+import { reportClientEvent } from '@/services/clientLogger'
 import {
   database,
   type InventoryItem,
@@ -305,14 +306,15 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
 
   // Фиксирует просмотр карточки; последняя карточка завершает всю транзакцию открытия.
   const advance = async (): Promise<AdvancePackOpeningResult> => {
-    if (!session.value || isAdvancing.value) return 'unavailable'
+    const activeSession: PackOpeningSession | undefined = session.value
+    if (!activeSession || isAdvancing.value) return 'unavailable'
     isAdvancing.value = true
 
     try {
-      const nextIndex: number = session.value.currentIndex + 1
-      if (nextIndex < session.value.rewards.length) {
+      const nextIndex: number = activeSession.currentIndex + 1
+      if (nextIndex < activeSession.rewards.length) {
         await database.packOpeningSessions.update('pending', { currentIndex: nextIndex })
-        session.value = { ...session.value, currentIndex: nextIndex }
+        session.value = { ...activeSession, currentIndex: nextIndex }
         return 'advanced'
       }
 
@@ -320,7 +322,12 @@ export const usePackOpeningStore = defineStore('packOpening', () => {
       if (!completed) return 'unavailable'
       notifyGoalsChanged()
       notifyDailyTasksChanged()
-      session.value = { ...session.value, currentIndex: session.value.rewards.length }
+      reportClientEvent('pack.opened', {
+        albumId: activeSession.albumId,
+        count: activeSession.rewards.length,
+        packId: activeSession.blisterId,
+      })
+      session.value = { ...activeSession, currentIndex: activeSession.rewards.length }
       return 'completed'
     } finally {
       isAdvancing.value = false

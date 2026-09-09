@@ -188,12 +188,53 @@ test('publishes an OpenAPI schema and Swagger UI', async (): Promise<void> => {
   assert.equal(schema.statusCode, 200)
   assert.equal(schema.json().openapi, '3.1.0')
   assert.ok(schema.json().paths['/api/save'])
+  assert.ok(schema.json().paths['/api/client-errors'])
+  assert.ok(schema.json().paths['/api/client-events'])
   assert.ok(schema.json().paths['/api/goals/{goalId}/claim'])
   assert.ok(schema.json().paths['/api/leaderboard'])
 
   const swagger = await server.inject({ method: 'GET', url: '/api/docs' })
   assert.equal(swagger.statusCode, 200)
   assert.match(swagger.body, /SwaggerUIBundle/)
+})
+
+test('accepts sanitized client error reports', async (): Promise<void> => {
+  const response = await server.inject({
+    method: 'POST',
+    url: '/api/client-errors',
+    payload: {
+      kind: 'vue-error',
+      message: 'Component render failed',
+      route: '/album',
+      source: 'vue',
+      stack: 'Error: Component render failed',
+      userAgent: 'test-browser',
+    },
+  })
+  assert.equal(response.statusCode, 204)
+
+  const invalid = await server.inject({
+    method: 'POST',
+    url: '/api/client-errors',
+    payload: { kind: 'unknown', message: 'invalid', source: 'test' },
+  })
+  assert.equal(invalid.statusCode, 400)
+})
+
+test('accepts allowlisted player events', async (): Promise<void> => {
+  const response = await server.inject({
+    method: 'POST',
+    url: '/api/client-events',
+    payload: { event: 'pack.opened', packId: 'standard', count: 5, route: '/packs/open' },
+  })
+  assert.equal(response.statusCode, 204)
+
+  const invalid = await server.inject({
+    method: 'POST',
+    url: '/api/client-events',
+    payload: { event: 'password.submitted' },
+  })
+  assert.equal(invalid.statusCode, 400)
 })
 
 test('publishes a cached leaderboard and profiles for qualified collectors', async (): Promise<void> => {

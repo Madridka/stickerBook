@@ -14,6 +14,7 @@ import {
 } from '@/features/dailyTasks/dailyTaskService'
 import { selectCardV2 } from '@/utils/dropEngine'
 import { resolveBlisterCooldownEnd } from '@/utils/blisterCooldown'
+import { reportClientEvent } from '@/services/clientLogger'
 import type {
   PackOpeningReward,
   PackOpeningSession,
@@ -104,6 +105,11 @@ export const purchasePack = async (price: number): Promise<PurchasePackResult> =
   if (result.status === 'purchased') {
     notifyGoalsChanged()
     notifyDailyTasksChanged()
+    reportClientEvent('pack.purchased', {
+      albumId: result.item.albumId,
+      packId: result.item.packId,
+      value: price,
+    })
   }
   return result
 }
@@ -243,6 +249,12 @@ export const purchaseBlister = async (
   if (result.status === 'purchased') {
     notifyGoalsChanged()
     notifyDailyTasksChanged()
+    reportClientEvent('pack.purchased', {
+      albumId: result.item.albumId,
+      count: result.session.rewards.length,
+      packId: result.item.packId,
+      value: blister.cost,
+    })
   }
   return result
 }

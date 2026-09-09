@@ -3,6 +3,7 @@ import { ref, type Ref } from 'vue'
 import { SERVER_SYNC_CONFIG } from '@/config/runtimeConfig'
 import { database } from '@/db/database'
 import { ApiError, apiRequest } from '@/services/api'
+import { reportClientError } from '@/services/clientLogger'
 import { mergeSaveSnapshots } from '@/services/saveMerge'
 import {
   getLocalOwner,
@@ -414,6 +415,9 @@ class CloudSaveService {
       throw new Error('Cloud save changed too many times during synchronization')
     } catch (error: unknown) {
       if (!this.isCurrentLifecycle(userId, lifecycleRevision)) return
+      if (!(error instanceof ApiError)) {
+        reportClientError('runtime-error', error, { source: 'cloud-save.persist' })
+      }
       this.dirty = true
       setPendingSync(userId, true)
       this.retryDelayMs = Math.min(
@@ -455,7 +459,10 @@ class CloudSaveService {
       } finally {
         this.isApplyingRemote = false
       }
-    } catch {
+    } catch (error: unknown) {
+      if (!(error instanceof ApiError)) {
+        reportClientError('runtime-error', error, { source: 'cloud-save.poll' })
+      }
       cloudSyncStatus.value = 'offline'
     }
   }

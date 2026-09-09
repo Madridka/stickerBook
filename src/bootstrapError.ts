@@ -1,3 +1,5 @@
+import { reportClientError } from '@/services/clientLogger'
+
 const BOOTSTRAP_TIMEOUT_MS = 15_000
 
 const getBootstrapRoot = (): HTMLElement | null => {
@@ -41,13 +43,25 @@ const showBootstrapError = (reason: unknown): void => {
 }
 
 window.addEventListener('error', (event: ErrorEvent): void => {
+  reportClientError('runtime-error', event.error ?? event.message, {
+    source: 'window.error',
+    detail: event.filename
+      ? `${event.filename}:${event.lineno}:${event.colno}`
+      : undefined,
+  })
   showBootstrapError(event.error ?? event.message)
 })
 
 window.addEventListener('unhandledrejection', (event: PromiseRejectionEvent): void => {
+  reportClientError('unhandled-rejection', event.reason, {
+    source: 'window.unhandledrejection',
+  })
   showBootstrapError(event.reason)
 })
 
 window.setTimeout((): void => {
-  showBootstrapError('Превышено время ожидания начального экрана')
+  if (!getBootstrapRoot()) return
+  const error = new Error('Превышено время ожидания начального экрана')
+  reportClientError('runtime-error', error, { source: 'bootstrap.timeout' })
+  showBootstrapError(error)
 }, BOOTSTRAP_TIMEOUT_MS)

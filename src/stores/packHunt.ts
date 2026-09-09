@@ -1,5 +1,6 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
+import { reportClientEvent } from '@/services/clientLogger'
 import { database, type InventoryItem, type PackHuntProgress } from '@/db/database'
 import { PACK_HUNT_CONFIG } from '@/config/miniGameConfig'
 import { CLOCK_CONFIG } from '@/config/runtimeConfig'
@@ -109,6 +110,10 @@ export const usePackHuntStore = defineStore('packHunt', () => {
       if (result.status === 'claimed') {
         claimedPackId.value = result.item.id
         notifyGoalsChanged()
+        reportClientEvent('minigame.reward-claimed', {
+          albumId: result.item.albumId,
+          packId: result.item.packId,
+        })
       }
       await load()
       return result.status

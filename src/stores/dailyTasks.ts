@@ -1,5 +1,6 @@
 import { computed, onScopeDispose, ref, type ComputedRef, type Ref } from 'vue'
 import { defineStore } from 'pinia'
+import { reportClientEvent } from '@/services/clientLogger'
 import { getLocalDateKey } from '@/utils/dailyDateKey'
 import { DAILY_TASK_CONFIG } from '@/config/gameBalance'
 import { CLOCK_CONFIG } from '@/config/runtimeConfig'
@@ -116,6 +117,7 @@ export const useDailyTasksStore = defineStore('dailyTasks', () => {
       state.value = result.state
       if (result.status !== 'claimed') return false
       await collection.load()
+      reportClientEvent('daily-task.reward-claimed', { cardId })
       isRewardOpen.value = false
       selectedCardId.value = null
       return true

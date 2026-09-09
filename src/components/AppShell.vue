@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { useTheme } from '@/composables/useTheme'
 import { HOME_VIEW_CONFIG } from '@/config/runtimeConfig'
+import { reportClientError } from '@/services/clientLogger'
 import {
   clearLocalGameData,
   cloudSave,
@@ -87,8 +88,9 @@ const removeRouteLoadingStart = router.beforeEach((): void => {
 const removeRouteLoadingEnd = router.afterEach((): void => {
   isRouteLoading.value = false
 })
-const removeRouteLoadingError = router.onError((): void => {
+const removeRouteLoadingError = router.onError((error: unknown): void => {
   isRouteLoading.value = false
+  reportClientError('runtime-error', error, { source: 'router' })
 })
 
 const resetProgressItem = computed(() => ({

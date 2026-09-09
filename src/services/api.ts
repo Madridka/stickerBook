@@ -1,4 +1,5 @@
 import { SERVER_SYNC_CONFIG } from '@/config/runtimeConfig'
+import { reportClientError } from '@/services/clientLogger'
 
 export interface ApiErrorBody {
   code?: string
@@ -41,12 +42,27 @@ export const apiRequest = async <T>(path: string, init?: RequestInit): Promise<T
     if (response.status === 204) return undefined as T
     const body: unknown = await response.json().catch((): null => null)
     if (!response.ok) {
-      throw new ApiError(
+      const error = new ApiError(
         response.status,
         body && typeof body === 'object' ? (body as ApiErrorBody) : {},
       )
+      if (response.status >= 500) {
+        reportClientError('api-error', error, {
+          source: 'api.response',
+          detail: `${init?.method ?? 'GET'} ${path}`,
+        })
+      }
+      throw error
     }
     return body as T
+  } catch (error: unknown) {
+    if (!(error instanceof ApiError)) {
+      reportClientError('api-error', error, {
+        source: 'api.request',
+        detail: `${init?.method ?? 'GET'} ${path}`,
+      })
+    }
+    throw error
   } finally {
     window.clearTimeout(timeoutId)
     init?.signal?.removeEventListener('abort', abortRequest)

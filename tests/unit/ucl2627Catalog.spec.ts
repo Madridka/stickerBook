@@ -48,7 +48,7 @@ describe('UCL 2026/27 catalog', () => {
 
   it('exports complete catalogs with unique collection-scoped identities', () => {
     expect(catalogs).toHaveLength(manifest.expectedClubCount)
-    expect(cards).toHaveLength(manifest.baseCardCount)
+    expect(cards).toHaveLength(manifest.totalCardCount)
     expect(new Set(cards.map(({ id }) => id)).size).toBe(cards.length)
     expect(cards.every(({ collectionId }) => collectionId === manifest.id)).toBe(true)
     expect(new Set(catalogs.map(({ teamId }) => teamId))).toEqual(

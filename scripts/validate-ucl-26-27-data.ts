@@ -25,6 +25,7 @@ interface UclManifest {
   expectedClubCount: number
   cardsPerClub: number
   baseCardCount: number
+  totalCardCount: number
   clubs: ManifestClub[]
 }
 
@@ -160,6 +161,9 @@ const validateData = async (): Promise<void> => {
   const baseCards = cards.filter(({ series }) => series === 'base')
   if (baseCards.length !== manifest.baseCardCount) {
     failures.push(`Expected ${manifest.baseCardCount} base cards, found ${baseCards.length}`)
+  }
+  if (cards.length !== manifest.totalCardCount) {
+    failures.push(`Expected ${manifest.totalCardCount} total cards, found ${cards.length}`)
   }
   const idCounts = countBy(cards.map(({ id }) => id))
   for (const [id, count] of idCounts) if (count > 1) failures.push(`${id}: duplicate global id`)

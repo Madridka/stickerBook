@@ -5,7 +5,7 @@ This directory powers the registered `ucl-26-27` journal at `/album/ucl-26-27`. 
 ## Snapshot
 
 - Snapshot date: `2026-08-27`.
-- Status: `complete`; all 36 clubs and 720 base cards are represented.
+- Status: `complete`; all 36 clubs and 851 cards (720 base + 131 special) are represented.
 - Final additions: AEK Athens, Bodø/Glimt, Fenerbahçe, LASK, Sabah, Shakhtar Donetsk, Slovan Bratislava and Viking.
 - Participation source: UEFA's official [2026/27 competition overview and access list](https://www.uefa.com/uefachampionsleague/news/02a6-20d57cfcd03e-407c22a7f465-1000--2026-27-champions-league-teams-dates-draws-format-final/).
 - Squad sources: official first-team pages for [Real Madrid](https://www.realmadrid.com/en-US/football/first-team/players), [Barcelona](https://www.fcbarcelona.com/en/football/first-team/squad), [Bayern](https://fcbayern.com/en/teams/first-team), [Dortmund](https://www.bvb.de/de/en.html), [Paris](https://www.psg.fr/football-masculin/effectif) and [Arsenal](https://www.arsenal.com/men/players), plus official club transfer and pre-season announcements where the overview was provisional or not fully updated.

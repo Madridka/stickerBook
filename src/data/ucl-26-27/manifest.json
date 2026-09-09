@@ -11,6 +11,7 @@
   "expectedClubCount": 36,
   "cardsPerClub": 20,
   "baseCardCount": 720,
+  "totalCardCount": 851,
   "clubs": [
     {
       "teamId": "aek-athens",

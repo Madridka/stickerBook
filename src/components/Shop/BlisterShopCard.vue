@@ -65,7 +65,7 @@ const toneClass: ComputedRef<string> = computed(
         {{
           cooldownRemainingMs > 0
             ? t('shop.blisterCooldown', { time: cooldown })
-            : t(blister.descriptionKey)
+            : t(blister.descriptionKey, { count: blister.cardCount })
         }}
       </p>
       <Button

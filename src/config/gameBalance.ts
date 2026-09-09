@@ -171,7 +171,7 @@ export const BLISTER_CONFIGS = {
     descriptionKey: 'shop.blisters.ucl.description',
     shortNameKey: 'shop.blisters.ucl.shortName',
     cost: BLISTER_PRICES.ucl,
-    cardsPerPack: 4,
+    cardsPerPack: 5,
     cooldownMs: 0,
     poolId: 'ucl-26-27-standard',
     pityEligible: true,

@@ -24,6 +24,10 @@ import PackPuzzleGame from '@/components/MiniGame/PackPuzzleGame.vue'
 import PackCatchGame from '@/components/MiniGame/PackCatchGame.vue'
 import PackMemoryGame from '@/components/MiniGame/PackMemoryGame.vue'
 import PackPassComboGame from '@/components/MiniGame/PackPassComboGame.vue'
+import PackPenaltyGame from '@/components/MiniGame/PackPenaltyGame.vue'
+import PackSortGame from '@/components/MiniGame/PackSortGame.vue'
+import PackUnblockGame from '@/components/MiniGame/PackUnblockGame.vue'
+import PackOddGame from '@/components/MiniGame/PackOddGame.vue'
 
 type HuntPhase = 'loading' | 'playing' | 'saving' | 'won' | 'cooldown' | 'error'
 
@@ -48,6 +52,10 @@ const gameComponents: Record<PackMiniGameId, Component> = {
   catch: PackCatchGame,
   memory: PackMemoryGame,
   passCombo: PackPassComboGame,
+  penalty: PackPenaltyGame,
+  sort: PackSortGame,
+  unblock: PackUnblockGame,
+  odd: PackOddGame,
 }
 const selectedGameComponent: ComputedRef<Component> = computed(
   (): Component => gameComponents[selectedGame.value],

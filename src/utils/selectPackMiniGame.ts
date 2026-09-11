@@ -9,6 +9,10 @@ export type PackMiniGameId =
   | 'catch'
   | 'memory'
   | 'passCombo'
+  | 'penalty'
+  | 'sort'
+  | 'unblock'
+  | 'odd'
 
 interface PackMiniGameOption {
   id: PackMiniGameId
@@ -23,7 +27,11 @@ export const isPackMiniGameId = (value: unknown): value is PackMiniGameId =>
   value === 'puzzle' ||
   value === 'catch' ||
   value === 'memory' ||
-  value === 'passCombo'
+  value === 'passCombo' ||
+  value === 'penalty' ||
+  value === 'sort' ||
+  value === 'unblock' ||
+  value === 'odd'
 
 // Выбирает мини-игру по настраиваемым весам из игровых данных.
 export const getEnabledPackMiniGameIds = (): PackMiniGameId[] =>

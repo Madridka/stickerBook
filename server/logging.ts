@@ -1,11 +1,19 @@
-import { createWriteStream, mkdirSync, type WriteStream } from 'node:fs'
-import { dirname } from 'node:path'
+import { createWriteStream, mkdirSync, statSync, type WriteStream } from 'node:fs'
+import { dirname, join } from 'node:path'
 import { PassThrough } from 'node:stream'
 
+const DEFAULT_LOG_FILE_NAME = 'sticker-book.ndjson'
+
+export const resolveServerLogFilePath = (configuredPath: string): string => {
+  const stats = statSync(configuredPath, { throwIfNoEntry: false })
+  return stats?.isDirectory() ? join(configuredPath, DEFAULT_LOG_FILE_NAME) : configuredPath
+}
+
 export const createServerLogStream = (filePath: string): PassThrough => {
-  mkdirSync(dirname(filePath), { recursive: true })
+  const resolvedFilePath: string = resolveServerLogFilePath(filePath)
+  mkdirSync(dirname(resolvedFilePath), { recursive: true })
   const stream = new PassThrough()
-  const file: WriteStream = createWriteStream(filePath, { flags: 'a' })
+  const file: WriteStream = createWriteStream(resolvedFilePath, { flags: 'a' })
 
   stream.pipe(process.stdout, { end: false })
   stream.pipe(file)

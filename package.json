@@ -19,7 +19,7 @@
     "validate:rpl": "node --experimental-strip-types scripts/validate-rpl-26-27-data.ts",
     "test:drop": "node --experimental-strip-types --test scripts/drop-engine.test.ts",
     "test:runtime-catalog": "node --experimental-strip-types --test scripts/runtime-catalog.test.ts",
-    "test": "vitest run && node --experimental-strip-types --test server/app.test.ts",
+    "test": "vitest run && node --experimental-strip-types --test server/app.test.ts server/logging.test.ts",
     "test:unit": "vitest run tests/unit"
   },
   "dependencies": {

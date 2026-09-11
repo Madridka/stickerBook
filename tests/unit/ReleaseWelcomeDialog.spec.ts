@@ -34,8 +34,11 @@ describe('ReleaseWelcomeDialog', () => {
     const wrapper = mountDialog()
     await nextTick()
 
-    expect(wrapper.text()).toContain('+131 карточка ЛЧ')
-    expect(wrapper.text()).toContain('+292 эмблемы Англии')
+    expect(wrapper.text()).toContain('Четыре новые мини-игры')
+    expect(wrapper.text()).toContain(
+      'Добавлены «Пенальти», «Сортировщик наклеек», «Освободи пак» и «Лишняя наклейка»',
+    )
+    expect(wrapper.text()).not.toContain('+131 карточка ЛЧ')
 
     await wrapper.get('button').trigger('click')
 

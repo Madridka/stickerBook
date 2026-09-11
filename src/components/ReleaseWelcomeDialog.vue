@@ -4,11 +4,43 @@ import { useI18n } from 'vue-i18n'
 import Dialog from 'primevue/dialog'
 import Button from 'primevue/button'
 import packageMetadata from '../../package.json'
+import changelogMarkdown from '@/change-log/CHANGELOG.md?raw'
+
+interface ReleaseNote {
+  title: string
+  items: string[]
+}
 
 const { t } = useI18n()
 const releaseVersion: string = packageMetadata.version
 const storageKey: string = 'sticker-book:last-seen-release'
 const isVisible: Ref<boolean> = ref(false)
+
+const toPlainText = (value: string): string =>
+  value
+    .replace(/\[([^\]]+)]\([^)]+\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .trim()
+
+const readReleaseNote = (markdown: string, version: string): ReleaseNote | null => {
+  const escapedVersion: string = version.replace(/\./g, '\\.')
+  const headingPattern = new RegExp(
+    `^##\\s+${escapedVersion}\\s+—\\s+(.+)\\r?\\n([\\s\\S]*?)(?=^##\\s+|(?![\\s\\S]))`,
+    'm',
+  )
+  const match: RegExpMatchArray | null = markdown.match(headingPattern)
+  if (match === null) return null
+
+  const items: string[] = match[2]
+    .split(/\r?\n/)
+    .filter((line: string): boolean => /^-\s+/.test(line))
+    .map((line: string): string => toPlainText(line.replace(/^-\s+/, '')))
+
+  return { title: toPlainText(match[1]), items }
+}
+
+const releaseNote: ReleaseNote | null = readReleaseNote(changelogMarkdown, releaseVersion)
 
 const readLastSeenRelease = (): string | null => {
   try {
@@ -52,38 +84,22 @@ onMounted((): void => {
           {{ t('app.releaseWelcome.version', { version: releaseVersion }) }}
         </p>
         <p class="mt-1 text-sm leading-relaxed text-ink/70">
-          {{ t('app.releaseWelcome.intro') }}
+          {{ releaseNote?.title ?? t('app.releaseWelcome.intro') }}
         </p>
       </div>
 
-      <ul class="grid gap-2 sm:grid-cols-2" :aria-label="t('app.releaseWelcome.featuresLabel')">
-        <li class="border border-ink/15 bg-paper p-3">
-          <i class="pi pi-id-card mb-2 block text-xl text-coral" aria-hidden="true" />
-          <strong class="block text-sm">{{ t('app.releaseWelcome.features.ucl.title') }}</strong>
-          <span class="mt-1 block text-xs leading-relaxed text-ink/60">
-            {{ t('app.releaseWelcome.features.ucl.description') }}
-          </span>
-        </li>
-        <li class="border border-ink/15 bg-paper p-3">
-          <i class="pi pi-shield mb-2 block text-xl text-coral" aria-hidden="true" />
-          <strong class="block text-sm">{{ t('app.releaseWelcome.features.england.title') }}</strong>
-          <span class="mt-1 block text-xs leading-relaxed text-ink/60">
-            {{ t('app.releaseWelcome.features.england.description') }}
-          </span>
-        </li>
-        <li class="border border-ink/15 bg-paper p-3">
-          <i class="pi pi-user mb-2 block text-xl text-coral" aria-hidden="true" />
-          <strong class="block text-sm">{{ t('app.releaseWelcome.features.profile.title') }}</strong>
-          <span class="mt-1 block text-xs leading-relaxed text-ink/60">
-            {{ t('app.releaseWelcome.features.profile.description') }}
-          </span>
-        </li>
-        <li class="border border-ink/15 bg-paper p-3">
-          <i class="pi pi-sparkles mb-2 block text-xl text-coral" aria-hidden="true" />
-          <strong class="block text-sm">{{ t('app.releaseWelcome.features.picks.title') }}</strong>
-          <span class="mt-1 block text-xs leading-relaxed text-ink/60">
-            {{ t('app.releaseWelcome.features.picks.description') }}
-          </span>
+      <ul
+        v-if="releaseNote?.items.length"
+        class="grid gap-2 sm:grid-cols-2"
+        :aria-label="t('app.releaseWelcome.featuresLabel')"
+      >
+        <li
+          v-for="item in releaseNote.items"
+          :key="item"
+          class="flex gap-3 border border-ink/15 bg-paper p-3"
+        >
+          <i class="pi pi-sparkles mt-0.5 text-coral" aria-hidden="true" />
+          <span class="text-xs leading-relaxed text-ink/70">{{ item }}</span>
         </li>
       </ul>
     </div>

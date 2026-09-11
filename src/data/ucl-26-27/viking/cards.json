@@ -63,20 +63,6 @@
       "nationality": "Norway"
     },
     {
-      "id": "ucl-26-27-vik-04-1",
-      "cardNumber": "04.1",
-      "displayName": "Ľubomír Belko",
-      "image": "/ucl-26-27/cards/viking/UCL-VIK-04.1-lubomir-belko.webp",
-      "series": "special",
-      "finish": "standard",
-      "baseCardId": "ucl-26-27-vik-04",
-      "rarity": "epic",
-      "kind": "player",
-      "personId": "lubomir-belko",
-      "position": "GK",
-      "nationality": "Slovakia"
-    },
-    {
       "id": "ucl-26-27-vik-05",
       "cardNumber": "05",
       "albumSlot": 5,
@@ -89,6 +75,20 @@
       "personId": "anders-baertelsen",
       "position": "DF",
       "nationality": "Denmark"
+    },
+    {
+      "id": "ucl-26-27-vik-05-1",
+      "cardNumber": "05.1",
+      "displayName": "Herman Haugen",
+      "image": "/ucl-26-27/cards/viking/UCL-VIK-05.1-herman-haugen.webp",
+      "series": "special",
+      "finish": "standard",
+      "baseCardId": "ucl-26-27-vik-05",
+      "rarity": "epic",
+      "kind": "player",
+      "personId": "herman-haugen",
+      "position": "DF",
+      "nationality": "Norway"
     },
     {
       "id": "ucl-26-27-vik-06",
